@@ -1,6 +1,6 @@
 # Las Deliciosas
 
-> Fuente importada desde `Las Deliciosas 383938ab020580caab4ce9e4e584f7a8.html` · hash `62e551d2fbcdb729`
+> Fuente importada desde `Las Deliciosas 383938ab020580caab4ce9e4e584f7a8.html` · hash `a4383527dbecf25b`
 
 - **Rubro inferido:** Restaurante
 - **Fecha del documento:** June 18, 2026

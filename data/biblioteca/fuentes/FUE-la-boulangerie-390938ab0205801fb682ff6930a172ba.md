@@ -1,6 +1,6 @@
 # La Boulangerie
 
-> Fuente importada desde `La Boulangerie 390938ab0205801fb682ff6930a172ba.html` · hash `f81f1b74b7336d3c`
+> Fuente importada desde `La Boulangerie 390938ab0205801fb682ff6930a172ba.html` · hash `2be1149ca8c99e09`
 
 - **Rubro inferido:** Cafetería
 - **Fecha del documento:** July 1, 2026

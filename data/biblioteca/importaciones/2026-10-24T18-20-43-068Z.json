@@ -1,0 +1,102 @@
+{
+  "ok": true,
+  "fuente_dir": "D:\\Dev\\ee-mentor\\casos",
+  "fuentes": 13,
+  "nuevos_candidatos": 0,
+  "candidatos_actualizados": 163,
+  "total_candidatos": 147,
+  "errores": [],
+  "detalle": [
+    {
+      "archivo": "Café Colores 382938ab020580c59ae6d8d19349a7b0.html",
+      "titulo": "Café Colores",
+      "rubro": "Cafetería",
+      "hallazgos": 4,
+      "recomendaciones": 5
+    },
+    {
+      "archivo": "Ecosuper 383938ab020580828338cbfee1143fd0.html",
+      "titulo": "Ecosuper",
+      "rubro": "Comercio minorista",
+      "hallazgos": 4,
+      "recomendaciones": 5
+    },
+    {
+      "archivo": "Hotel Asturias 383938ab0205806999a2c62923829735.html",
+      "titulo": "Hotel Asturias",
+      "rubro": "Hotel pequeño",
+      "hallazgos": 4,
+      "recomendaciones": 5
+    },
+    {
+      "archivo": "La Boulangerie 390938ab0205801fb682ff6930a172ba.html",
+      "titulo": "La Boulangerie",
+      "rubro": "Cafetería",
+      "hallazgos": 8,
+      "recomendaciones": 8
+    },
+    {
+      "archivo": "La Crepería Rapa Nui 392938ab020580b2b86bcfcf44bbaa1b.html",
+      "titulo": "La Crepería Rapa Nui",
+      "rubro": "Cafetería",
+      "hallazgos": 9,
+      "recomendaciones": 8
+    },
+    {
+      "archivo": "Las Deliciosas 383938ab020580caab4ce9e4e584f7a8.html",
+      "titulo": "Las Deliciosas",
+      "rubro": "Restaurante",
+      "hallazgos": 6,
+      "recomendaciones": 5
+    },
+    {
+      "archivo": "Le Flaneur Spa 382938ab020580538763e1812d2fc12e.html",
+      "titulo": "Le Flaneur Spa",
+      "rubro": "Cafetería",
+      "hallazgos": 3,
+      "recomendaciones": 0
+    },
+    {
+      "archivo": "Marcoffee cl 382938ab0205803990d9ca01572d5b71.html",
+      "titulo": "Marcoffee.cl",
+      "rubro": "Cafetería",
+      "hallazgos": 4,
+      "recomendaciones": 3
+    },
+    {
+      "archivo": "Minimarket y Café Toñita 392938ab02058043b56ae724eac2586a.html",
+      "titulo": "Minimarket y Café Toñita",
+      "rubro": "Cafetería",
+      "hallazgos": 9,
+      "recomendaciones": 9
+    },
+    {
+      "archivo": "Pizzería Plaggio 382938ab020580efa40bf9d41e53074b.html",
+      "titulo": "Pizzería Plaggio",
+      "rubro": "Pizzería",
+      "hallazgos": 4,
+      "recomendaciones": 8
+    },
+    {
+      "archivo": "Rito Mata 390938ab0205809584b2c563debd6138.html",
+      "titulo": "Rito Mata",
+      "rubro": "Restaurante",
+      "hallazgos": 11,
+      "recomendaciones": 12
+    },
+    {
+      "archivo": "Stefymar 382938ab0205804e85d2cd29aa1f7eb1.html",
+      "titulo": "Stefymar",
+      "rubro": "No especificado",
+      "hallazgos": 7,
+      "recomendaciones": 9
+    },
+    {
+      "archivo": "Vijon Pastelería 382938ab02058081bcb6de5c89055ba8.html",
+      "titulo": "Vijon Pastelería",
+      "rubro": "Pastelería",
+      "hallazgos": 5,
+      "recomendaciones": 8
+    }
+  ]
+}

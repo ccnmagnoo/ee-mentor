@@ -1,6 +1,6 @@
 # La Crepería Rapa Nui
 
-> Fuente importada desde `La Crepería Rapa Nui 392938ab020580b2b86bcfcf44bbaa1b.html` · hash `3de1230b2d2221d3`
+> Fuente importada desde `La Crepería Rapa Nui 392938ab020580b2b86bcfcf44bbaa1b.html` · hash `f386aa0a8c5fcd1c`
 
 - **Rubro inferido:** Cafetería
 - **Fecha del documento:** July 3, 2026

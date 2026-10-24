@@ -1,6 +1,6 @@
 # Vijon Pastelería
 
-> Fuente importada desde `Vijon Pastelería 382938ab02058081bcb6de5c89055ba8.html` · hash `569900a3da4798a8`
+> Fuente importada desde `Vijon Pastelería 382938ab02058081bcb6de5c89055ba8.html` · hash `65d664286d4f5fb3`
 
 - **Rubro inferido:** Pastelería
 - **Fecha del documento:** June 17, 2026

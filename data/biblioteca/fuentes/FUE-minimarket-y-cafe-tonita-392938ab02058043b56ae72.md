@@ -1,6 +1,6 @@
 # Minimarket y Café Toñita
 
-> Fuente importada desde `Minimarket y Café Toñita 392938ab02058043b56ae724eac2586a.html` · hash `baba1919bc7dba99`
+> Fuente importada desde `Minimarket y Café Toñita 392938ab02058043b56ae724eac2586a.html` · hash `dd2155e9affb84e3`
 
 - **Rubro inferido:** Cafetería
 - **Fecha del documento:** July 3, 2026

@@ -1,6 +1,6 @@
 # Pizzería Plaggio
 
-> Fuente importada desde `Pizzería Plaggio 382938ab020580efa40bf9d41e53074b.html` · hash `639352be745244e0`
+> Fuente importada desde `Pizzería Plaggio 382938ab020580efa40bf9d41e53074b.html` · hash `cecf99d92c781815`
 
 - **Rubro inferido:** Pizzería
 - **Fecha del documento:** June 17, 2026
