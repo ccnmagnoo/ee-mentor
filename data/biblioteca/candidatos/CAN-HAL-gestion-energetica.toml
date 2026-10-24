@@ -1,0 +1,13 @@
+id = "CAN-HAL-gestion-energetica"
+tipo = "hallazgo"
+titulo = "Gestión Energética"
+descripcion = "No se evidencia la existencia de un responsable designado ni de un sistema formal de gestión de la energía dentro de la empresa, lo que limita la capacidad para monitorear, analizar y optimizar el consumo energético. Si bien existe algunos indicios que apuntan al desarrollo de este sistema de gestión, esta ausencia sin una sistematización dedicada, dificulta la identificación oportuna de ineficiencias, la implementación de medidas correctivas y el seguimiento de indicadores clave, generando una gestión más bien reactiva que estratégica en materia energética, que permita un desarrollo permanente en el tiempo que apunte a una mejora continua de sus procesos energéticos."
+categoria = "gestion_energetica"
+impacto = "medio"
+inversion = "baja"
+dificultad = "baja"
+origen = "casos:Cafetería; casos:Restaurante; casos:No especificado"
+fuente_id = "FUE-stefymar-382938ab0205804e85d2cd29aa1f7eb1"
+estado = "pendiente"
+created_at = "2026-10-24T17:57:09.258Z"
+

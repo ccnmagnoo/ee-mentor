@@ -1,0 +1,13 @@
+id = "CAN-REC-avanzar-en-profesionalizacion-de-la-gestio"
+tipo = "recomendacion"
+titulo = "Avanzar en profesionalización de la gestión de la energía"
+descripcion = "Se propone fortalecer las capacidades internas mediante acciones de educación energética estructurada , incorporación de prácticas de gestión y seguimiento del consumo, y acompañamiento técnico que permita integrar la eficiencia energética en los procesos operativos y de toma de decisiones, contribuyendo así a una gestión más eficiente, sostenible y competitiva. En complemento a lo anterior, se propone implementar un plan de acompañamiento progresivo , que considere capacitaciones prácticas en uso eficiente de la energía, levantamiento y análisis básico de consumos, definición de responsables internos y establecimiento de indicadores de seguimiento. Estas acciones permitirán fortalecer la gestión energética de Pizzería Plaggio, promoviendo la adopción de buenas prácticas operativas, la toma de decisiones informadas y la consolidación de una cultura de eficiencia energética alineada con los objetivos productivos de la empresa."
+categoria = "gestion_operacional"
+impacto = "medio"
+inversion = "baja"
+dificultad = "media"
+origen = "casos:Comercio minorista; casos:Pizzería"
+fuente_id = "FUE-pizzeria-plaggio-382938ab020580efa40bf9d41e53074"
+estado = "pendiente"
+created_at = "2026-10-24T17:57:09.126Z"
+

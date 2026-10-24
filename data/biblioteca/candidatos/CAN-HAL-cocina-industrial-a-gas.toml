@@ -1,0 +1,13 @@
+id = "CAN-HAL-cocina-industrial-a-gas"
+tipo = "hallazgo"
+titulo = "Cocina Industrial a gas"
+descripcion = "La empresa utiliza una cocina industrial a gas licuado como principal fuente energética para la elaboración de alimentos, lo que resulta adecuado para procesos gastronómicos intensivos debido a su rapidez y control de temperatura. Sin embargo, una potencial problemática corresponde a pérdidas de eficiencia por quemadores sucios, fugas de gas o una combustión deficiente, situaciones que pueden aumentar los costos operacionales y generar riesgos de seguridad."
+categoria = "gestion_operacional"
+impacto = "alto"
+inversion = "baja"
+dificultad = "baja"
+origen = "casos:Restaurante"
+fuente_id = "FUE-rito-mata-390938ab0205809584b2c563debd6138"
+estado = "pendiente"
+created_at = "2026-10-24T17:57:09.920Z"
+

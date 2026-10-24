@@ -1,0 +1,13 @@
+id = "CAN-REC-setpoint-de-equipos-de-refrigeracion"
+tipo = "recomendacion"
+titulo = "Setpoint de equipos de refrigeración"
+descripcion = "Se recomienda ajuste de setpoint por tipo de equipo: \n• Refrigeradores: mantener entre 2°C y 5°C .\n• Congeladores: entre -18°C y -20°C .\n• Evitar configuraciones más bajas, ya que aumentan innecesariamente el consumo energético sin beneficios sanitarios relevantes."
+categoria = "congelacion"
+impacto = "medio"
+inversion = "baja"
+dificultad = "media"
+origen = "casos:Pizzería"
+fuente_id = "FUE-pizzeria-plaggio-382938ab020580efa40bf9d41e53074"
+estado = "pendiente"
+created_at = "2026-10-24T17:57:09.877Z"
+

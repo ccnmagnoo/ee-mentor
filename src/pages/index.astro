@@ -1,0 +1,201 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import Icon from '@/components/ui/Icon.astro';
+import PageHeader from '@/components/ui/PageHeader.astro';
+import StatCard from '@/components/ui/StatCard.astro';
+import EmptyState from '@/components/ui/EmptyState.astro';
+import { getDashboardData, puntajeRedondeado } from '@/lib/services/analytics';
+import { formatFechaCorta } from '@/lib/config';
+
+const data = await getDashboardData();
+
+const mesLabel = (key: string): string => {
+  const [year, month] = key.split('-').map(Number);
+  const date = new Date(year ?? 2026, (month ?? 1) - 1, 1);
+  return new Intl.DateTimeFormat('es-CL', { month: 'short' }).format(date).replace('.', '');
+};
+const maxMes = Math.max(1, ...data.porMes.map((item) => item.count));
+---
+
+<Layout title="Dashboard" description="Panel de control de asesorías y diagnósticos energéticos">
+  <PageHeader
+    eyebrow="Panel de control"
+    title="Diagnósticos energéticos"
+    subtitle="Estado de la cartera de empresas, visitas realizadas y oportunidades de mejora más frecuentes."
+  >
+    <Fragment slot="actions">
+      <a href="/biblioteca" class="btn-secondary">
+        <Icon name="brain" size={16} /> Biblioteca
+      </a>
+      <a href="/empresas/nueva" class="btn-primary">
+        <Icon name="plus" size={16} /> Nueva empresa
+      </a>
+    </Fragment>
+  </PageHeader>
+
+  <div class="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
+    <StatCard label="Empresas registradas" value={data.totalEmpresas} hint={`${data.empresasSinVisita} sin visita registrada`} tone="brand">
+      <Icon slot="icon" name="building" size={20} />
+    </StatCard>
+    <StatCard label="Asesorías realizadas" value={data.totalVisitas} hint={`${data.visitasMes} en el mes actual`} tone="sky">
+      <Icon slot="icon" name="file" size={20} />
+    </StatCard>
+    <StatCard
+      label="Puntaje promedio"
+      value={data.promedioGlobal !== null ? `${puntajeRedondeado(data.promedioGlobal)}/5` : '—'}
+      hint={data.clasificacionGlobal}
+      tone="amber"
+    >
+      <Icon slot="icon" name="gauge" size={20} />
+    </StatCard>
+    <StatCard
+      label="Hallazgos distintos"
+      value={data.totalHallazgos}
+      hint={`${data.totalRecomendaciones} recomendaciones aplicadas`}
+      tone="slate"
+    >
+      <Icon slot="icon" name="alert" size={20} />
+    </StatCard>
+  </div>
+
+  {data.totalEmpresas === 0 ? (
+    <div class="mt-6">
+      <EmptyState
+        title="Aún no hay empresas registradas"
+        description="Comienza creando la ficha de una empresa y luego registra la primera visita para generar el informe automáticamente."
+      >
+        <Icon slot="icon" name="building" size={22} />
+        <a href="/empresas/nueva" class="btn-primary">
+          <Icon name="plus" size={16} /> Crear primera empresa
+        </a>
+      </EmptyState>
+    </div>
+  ) : (
+    <div class="mt-6 grid gap-5 xl:grid-cols-3">
+      <section class="card overflow-hidden xl:col-span-2">
+        <div class="card-header">
+          <div>
+            <h2 class="text-sm font-semibold text-slate-900">Últimas asesorías</h2>
+            <p class="text-xs text-slate-500">Visitas ordenadas por fecha, con acceso al informe.</p>
+          </div>
+          <a href="/empresas" class="btn-ghost btn-sm">Ver todas <Icon name="arrowRight" size={14} /></a>
+        </div>
+        {data.recientes.length === 0 ? (
+          <div class="p-6">
+            <p class="text-sm text-slate-500">No hay visitas registradas todavía.</p>
+          </div>
+        ) : (
+          <div class="table-wrap">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Empresa</th>
+                  <th>Fecha</th>
+                  <th>Asesor</th>
+                  <th class="text-right">Acciones</th>
+                </tr>
+              </thead>
+              <tbody>
+                {data.recientes.map(({ empresa, visita }) => (
+                  <tr>
+                    <td>
+                      <a href={`/empresas/${empresa.id}`} class="font-medium text-slate-900 hover:text-brand-700">{empresa.nombre}</a>
+                      <p class="text-xs text-slate-500">{empresa.rubro} · {empresa.comuna || 'Sin comuna'}</p>
+                    </td>
+                    <td class="whitespace-nowrap text-slate-600">{formatFechaCorta(visita.fecha)}</td>
+                    <td class="text-slate-600">{visita.asesor}</td>
+                    <td class="text-right">
+                      <div class="flex justify-end gap-1">
+                        <a href={`/empresas/${empresa.id}/visitas/${visita.id}`} class="btn-ghost btn-sm" title="Ver visita">Ver</a>
+                        <a href={`/empresas/${empresa.id}/visitas/${visita.id}/informe`} class="btn-ghost btn-sm" title="Ver informe">Informe</a>
+                      </div>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        )}
+      </section>
+
+      <section class="card">
+        <div class="card-header">
+          <h2 class="text-sm font-semibold text-slate-900">Actividad últimos 6 meses</h2>
+        </div>
+        <div class="p-5 sm:p-6">
+          <div class="flex h-36 items-end justify-between gap-2">
+            {data.porMes.map((item) => (
+              <div class="flex flex-1 flex-col items-center justify-end gap-2">
+                <span class="text-[11px] font-semibold text-slate-500">{item.count}</span>
+                <div
+                  class:list={['w-full rounded-t-md', item.count > 0 ? 'bg-brand-500' : 'bg-slate-200']}
+                  style={`height: ${Math.max(4, (item.count / maxMes) * 100)}px`}
+                />
+                <span class="text-[10px] uppercase tracking-wide text-slate-400">{mesLabel(item.mes)}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section class="card">
+        <div class="card-header">
+          <h2 class="text-sm font-semibold text-slate-900">Rubros atendidos</h2>
+        </div>
+        <div class="space-y-3 p-5 sm:p-6">
+          {data.rubros.length === 0 && <p class="text-sm text-slate-500">Sin datos.</p>}
+          {data.rubros.map((item) => {
+            const pct = Math.round((item.count / Math.max(1, data.totalEmpresas)) * 100);
+            return (
+              <div>
+                <div class="flex items-center justify-between text-xs">
+                  <span class="font-medium text-slate-700">{item.rubro}</span>
+                  <span class="text-slate-500">{item.count}</span>
+                </div>
+                <div class="mt-1 h-1.5 overflow-hidden rounded-full bg-slate-100">
+                  <div class="h-full rounded-full bg-brand-500" style={`width: ${pct}%`}></div>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </section>
+
+      <section class="card">
+        <div class="card-header">
+          <h2 class="text-sm font-semibold text-slate-900">Hallazgos más frecuentes</h2>
+        </div>
+        <div class="divide-y divide-slate-100">
+          {data.topHallazgos.length === 0 && <p class="p-5 text-sm text-slate-500">Sin datos.</p>}
+          {data.topHallazgos.map((item) => (
+            <div class="flex items-start justify-between gap-3 px-5 py-3">
+              <div class="min-w-0">
+                <p class="truncate text-sm font-medium text-slate-800">{item.titulo}</p>
+                <p class="text-xs text-slate-500">{item.codigo} · {item.detalle}</p>
+              </div>
+              <span class="badge-brand shrink-0">{item.count}</span>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section class="card">
+        <div class="card-header">
+          <h2 class="text-sm font-semibold text-slate-900">Recomendaciones más emitidas</h2>
+        </div>
+        <div class="divide-y divide-slate-100">
+          {data.topRecomendaciones.length === 0 && <p class="p-5 text-sm text-slate-500">Sin datos.</p>}
+          {data.topRecomendaciones.map((item) => (
+            <div class="flex items-start justify-between gap-3 px-5 py-3">
+              <div class="min-w-0">
+                <p class="truncate text-sm font-medium text-slate-800">{item.titulo}</p>
+                <p class="text-xs text-slate-500">{item.codigo} · {item.detalle}</p>
+              </div>
+              <span class="badge-sky shrink-0">{item.count}</span>
+            </div>
+          ))}
+        </div>
+      </section>
+    </div>
+  )}
+</Layout>

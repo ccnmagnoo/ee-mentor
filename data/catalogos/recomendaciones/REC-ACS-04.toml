@@ -1,0 +1,20 @@
+schema_version = 1
+id = "REC-ACS-04"
+codigo = "REC-ACS-04"
+titulo = "Control horario de percoladores y agua caliente"
+categoria = "acs"
+descripcion = "Encender los equipos según la demanda esperada, incorporar temporizadores y apagarlos durante pausas prolongadas y al cierre."
+beneficio = "Reduce el consumo evitable de los equipos que mantienen agua caliente sin demanda real."
+inversion = "baja"
+dificultad = "baja"
+prioridad = "media"
+ahorro_estimado = "5-15% del consumo de equipos de agua caliente"
+plazo = "Inmediato (0-30 días)"
+energetico = "electricidad"
+hallazgos_relacionados = [ "HAL-ACS-04" ]
+tags = [ "acs", "percolador", "temporizador" ]
+activo = true
+origen = "catalogo_base"
+created_at = "2026-01-01T00:00:00.000Z"
+updated_at = "2026-01-01T00:00:00.000Z"
+

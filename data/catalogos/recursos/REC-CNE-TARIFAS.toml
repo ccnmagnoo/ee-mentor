@@ -1,0 +1,9 @@
+schema_version = 1
+id = "REC-CNE-TARIFAS"
+categoria = "tarifas"
+nombre = "Comisión Nacional de Energía — Tarifas"
+descripcion = "Información oficial sobre tarifas eléctricas, cargos regulados y normativa del sector."
+url = "https://www.cne.cl/tarificacion/electrica/"
+orden = 110
+activo = true
+

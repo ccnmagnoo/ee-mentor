@@ -1,0 +1,20 @@
+schema_version = 1
+id = "REC-ACS-02"
+codigo = "REC-ACS-02"
+titulo = "Aislación térmica de tuberías de agua caliente"
+categoria = "acs"
+descripcion = "Aislar los tramos accesibles de tubería de agua caliente, reparar filtraciones y reducir recorridos innecesarios entre la fuente y los puntos de consumo."
+beneficio = "Disminuye las pérdidas térmicas, permite reducir la temperatura de consigna y mejora el confort de uso."
+inversion = "baja"
+dificultad = "baja"
+prioridad = "media"
+ahorro_estimado = "3-8% del consumo de ACS"
+plazo = "Corto plazo (1-3 meses)"
+energetico = "glp"
+hallazgos_relacionados = [ "HAL-ACS-02" ]
+tags = [ "acs", "aislacion", "tuberias" ]
+activo = true
+origen = "catalogo_base"
+created_at = "2026-01-01T00:00:00.000Z"
+updated_at = "2026-01-01T00:00:00.000Z"
+

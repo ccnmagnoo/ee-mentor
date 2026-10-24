@@ -1,0 +1,16 @@
+schema_version = 1
+id = "HAL-ILUM-02"
+codigo = "ILUM-02"
+titulo = "Presencia de iluminación halógena o incandescente"
+categoria = "iluminacion"
+descripcion = "Se identifican ampolletas halógenas o incandescentes en sectores de exhibición, baños, bodegas o iluminación decorativa. Estos equipos transforman una fracción importante de la electricidad en calor y tienen una vida útil reducida."
+justificacion = "Una ampolleta halógena puede consumir entre tres y cinco veces más que una LED equivalente. Además, la carga térmica adicional aumenta la necesidad de climatización en verano."
+impacto = "alto"
+energetico = "electricidad"
+recomendacion_id = "REC-ILUM-01"
+tags = [ "iluminacion", "halogena", "led" ]
+activo = true
+origen = "catalogo_base"
+created_at = "2026-01-01T00:00:00.000Z"
+updated_at = "2026-01-01T00:00:00.000Z"
+

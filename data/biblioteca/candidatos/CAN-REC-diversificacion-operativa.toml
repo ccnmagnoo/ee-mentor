@@ -1,0 +1,13 @@
+id = "CAN-REC-diversificacion-operativa"
+tipo = "recomendacion"
+titulo = "Diversificación operativa"
+descripcion = "El cliente considera la opción de fraccionar el equipamiento de cocción a leña, donde la cocción en alto volumen se concentre en un segundo horno con mejor ubicación. En dicho escenario se aconseja implementar una programación operativa del uso del horno, concentrando la producción en horarios definidos y evitando funcionamiento innecesario fuera de periodos de alta demanda. Esta medida permite reducir el calor residual acumulado en el ambiente, mejorar la eficiencia energética global del proceso y optimizar el uso del recurso térmico."
+categoria = "equipos_productivos"
+impacto = "medio"
+inversion = "media"
+dificultad = "media"
+origen = "casos:Pizzería"
+fuente_id = "FUE-pizzeria-plaggio-382938ab020580efa40bf9d41e53074"
+estado = "pendiente"
+created_at = "2026-10-24T17:57:09.869Z"
+

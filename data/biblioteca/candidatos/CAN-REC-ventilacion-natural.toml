@@ -1,0 +1,13 @@
+id = "CAN-REC-ventilacion-natural"
+tipo = "recomendacion"
+titulo = "Ventilación natural"
+descripcion = "Se sugiere optimizar la ventilación natural del recinto mediante estrategias como ventilación cruzada, apertura controlada de vanos y uso de extractores complementarios. Esto favorece la renovación del aire interior, disminuyendo la acumulación de calor producido por el horno, sin recurrir exclusivamente a sistemas de climatización eléctrica de mayor consumo energético."
+categoria = "ventilacion"
+impacto = "medio"
+inversion = "alta"
+dificultad = "alta"
+origen = "casos:Pizzería"
+fuente_id = "FUE-pizzeria-plaggio-382938ab020580efa40bf9d41e53074"
+estado = "pendiente"
+created_at = "2026-10-24T17:57:09.851Z"
+

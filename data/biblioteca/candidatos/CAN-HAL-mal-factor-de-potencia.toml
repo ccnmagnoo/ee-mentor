@@ -1,0 +1,13 @@
+id = "CAN-HAL-mal-factor-de-potencia"
+tipo = "hallazgo"
+titulo = "Mal factor de potencia"
+descripcion = "Registro de un bajo factor de potencia (penalización asociada del 6,4%) en la cuenta BT3PPP indica que la instalación eléctrica del cliente está presentando un uso ineficiente de la energía , debido a la presencia de potencia reactiva elevada en relación con la potencia activa consumida. Este fenómeno es común en instalaciones que operan con equipos como motores eléctricos, compresores de refrigeración, sistemas de climatización y transformadores , todos presentes en operaciones como cafeterías o fábricas de alimentos.\nUn factor de potencia bajo implica que la red debe suministrar más corriente de la realmente necesaria para realizar el trabajo útil, lo que genera mayores pérdidas eléctricas, sobrecarga de conductores y transformadores , y una menor capacidad disponible de la instalación. En términos económicos, esto se traduce en cargos adicionales en la facturación eléctrica , como ocurre en este caso, afectando directamente los costos operacionales. Además, puede ser indicativo de falta de compensación reactiva (ausencia o mal estado de bancos de condensadores) o de una operación poco eficiente de los equipos eléctricos."
+categoria = "tarifas"
+impacto = "alto"
+inversion = "baja"
+dificultad = "baja"
+origen = "casos:Restaurante"
+fuente_id = "FUE-las-deliciosas-383938ab020580caab4ce9e4e584f7a8"
+estado = "pendiente"
+created_at = "2026-10-24T17:57:09.478Z"
+

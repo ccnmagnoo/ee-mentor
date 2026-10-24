@@ -1,0 +1,20 @@
+schema_version = 1
+id = "REC-CONG-02"
+codigo = "REC-CONG-02"
+titulo = "Protocolo de apertura y cortinas para congelación"
+categoria = "congelacion"
+descripcion = "Definir horarios y responsables para el retiro de productos, incorporar cortinas de tiras en cámaras de alta rotación y señalizar la importancia de cerrar puertas."
+beneficio = "Reduce la entrada de aire caliente y la formación de escarcha, con una inversión mínima y participación directa del personal."
+inversion = "baja"
+dificultad = "baja"
+prioridad = "media"
+ahorro_estimado = "3-8% del consumo de congelación"
+plazo = "Corto plazo (1-3 meses)"
+energetico = "electricidad"
+hallazgos_relacionados = [ "HAL-CONG-02" ]
+tags = [ "congelacion", "operacion", "cortinas" ]
+activo = true
+origen = "catalogo_base"
+created_at = "2026-01-01T00:00:00.000Z"
+updated_at = "2026-01-01T00:00:00.000Z"
+

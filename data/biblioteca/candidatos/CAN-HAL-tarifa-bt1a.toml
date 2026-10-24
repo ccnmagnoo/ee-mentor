@@ -1,0 +1,13 @@
+id = "CAN-HAL-tarifa-bt1a"
+tipo = "hallazgo"
+titulo = "Tarifa BT1A"
+descripcion = "La tarifa BT1A corresponde a un suministro en baja tensión con cobro principalmente por energía consumida (kWh), sin diferenciación relevante por potencia demandada ni por bloques horarios. La tarifa BT1A corresponde a un suministro en baja tensión con cobro principalmente por energía consumida (kWh), sin diferenciación relevante por potencia demandada ni por bloques horarios.\nSe recomienda cambio de tarifa a AT4.3 inicialmente, pero que requerirá análisis acabado por un especialista certificado SEC clase D o E. Ver apartado de enlaces de utilidad."
+categoria = "tarifas"
+impacto = "medio"
+inversion = "baja"
+dificultad = "baja"
+origen = "casos:No especificado"
+fuente_id = "FUE-stefymar-382938ab0205804e85d2cd29aa1f7eb1"
+estado = "pendiente"
+created_at = "2026-10-24T17:57:10.152Z"
+

@@ -1,0 +1,13 @@
+id = "CAN-HAL-iluminacion-led"
+tipo = "hallazgo"
+titulo = "Iluminación LED"
+descripcion = "Todas las dependencias cuentan con iluminación LED, constituyendo una buena práctica de eficiencia energética ya implementada por la empresa. No obstante, podrían existir oportunidades de mejora asociadas a horarios de funcionamiento innecesarios o luminarias encendidas en espacios desocupados."
+categoria = "iluminacion"
+impacto = "medio"
+inversion = "baja"
+dificultad = "baja"
+origen = "casos:Restaurante"
+fuente_id = "FUE-rito-mata-390938ab0205809584b2c563debd6138"
+estado = "pendiente"
+created_at = "2026-10-24T17:57:09.996Z"
+

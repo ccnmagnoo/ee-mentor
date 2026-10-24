@@ -1,0 +1,20 @@
+schema_version = 1
+id = "REC-GEST-04"
+codigo = "REC-GEST-04"
+titulo = "Protocolo de cierre y control de horarios"
+categoria = "gestion_operacional"
+descripcion = "Crear una lista de verificación de cierre que incluya luces, climatización, equipos de cocción, letreros y equipos en standby. Asignar un responsable y registrar el cumplimiento."
+beneficio = "Reduce el consumo fuera de horario, evita riesgos operacionales y genera hábitos sostenibles."
+inversion = "baja"
+dificultad = "baja"
+prioridad = "alta"
+ahorro_estimado = "3-10% del consumo total"
+plazo = "Inmediato (0-30 días)"
+energetico = "electricidad"
+hallazgos_relacionados = [ "HAL-GEST-04" ]
+tags = [ "gestion", "horario", "cierre" ]
+activo = true
+origen = "catalogo_base"
+created_at = "2026-01-01T00:00:00.000Z"
+updated_at = "2026-01-01T00:00:00.000Z"
+

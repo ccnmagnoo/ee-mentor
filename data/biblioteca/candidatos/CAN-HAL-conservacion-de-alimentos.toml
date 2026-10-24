@@ -1,0 +1,13 @@
+id = "CAN-HAL-conservacion-de-alimentos"
+tipo = "hallazgo"
+titulo = "Conservación de alimentos"
+descripcion = "Cuenta con dos cámaras de frío de 5 °C utilizadas para la conservación de alimentos refrigerados presentan desafíos energéticos relevantes asociados principalmente a su operación continua (24/7) . Este tipo de sistemas requiere mantener condiciones térmicas estables, lo que implica un consumo constante de electricidad, incluso fuera del horario productivo."
+categoria = "refrigeracion"
+impacto = "medio"
+inversion = "baja"
+dificultad = "baja"
+origen = "casos:Restaurante"
+fuente_id = "FUE-las-deliciosas-383938ab020580caab4ce9e4e584f7a8"
+estado = "pendiente"
+created_at = "2026-10-24T17:57:09.454Z"
+

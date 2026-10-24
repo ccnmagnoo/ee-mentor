@@ -1,0 +1,13 @@
+id = "CAN-REC-vc-cooler"
+tipo = "recomendacion"
+titulo = "VC cooler"
+descripcion = "Revisar periódicamente los burletes o sellos de gomas para verificar su estado , al menos dos veces al año. Otro punto clave es mantener limpios los sistemas de refrigeración de acumulación polvo una vez cada 2 o un mes, la obstrucción de estos incrementarán notoriamente los consumos energéticos para refrigeración. También idealmente minimizar el tiempo de apertura de puertas y evitar su instalación cercana a fuentes de calor, esto incluye otros artefactos de refrigeración ya que los compresores son una fuente intensa de calor."
+categoria = "envolvente"
+impacto = "medio"
+inversion = "baja"
+dificultad = "media"
+origen = "casos:Restaurante"
+fuente_id = "FUE-rito-mata-390938ab0205809584b2c563debd6138"
+estado = "pendiente"
+created_at = "2026-10-24T17:57:10.032Z"
+

@@ -1,0 +1,13 @@
+id = "CAN-HAL-no-cuenta-con-gestion-energetica-profesion"
+tipo = "hallazgo"
+titulo = "No cuenta con gestión energética profesionalizada ni indicadores de gestión energética"
+descripcion = "En gestión energética una situación típica de instalaciones productivas de menor escala: dispone de ciertas prácticas de sensibilización energética impulsadas directamente por los dueños, pero carece de un sistema formal y estructurado de gestión energética. Esta condición implica que, si bien existe conciencia respecto al uso eficiente de la energía, las acciones implementadas son esporádicas, no sistemáticas y sin seguimiento técnico que permita evaluar su impacto real. En consecuencia, es probable que existan ineficiencias operativas, especialmente en procesos intensivos en energía como la cocción (hornos), refrigeración, climatización y uso de equipos auxiliares.\nDesde una perspectiva técnica, la ausencia de una gestión profesionalizada se traduce en la falta de indicadores clave de desempeño energético, inexistencia de líneas base, y una limitada capacidad de identificar consumos anómalos o oportunidades de mejora."
+categoria = "gestion_energetica"
+impacto = "medio"
+inversion = "baja"
+dificultad = "baja"
+origen = "casos:Pastelería"
+fuente_id = "FUE-vijon-pasteleria-382938ab02058081bcb6de5c89055ba"
+estado = "pendiente"
+created_at = "2026-10-24T17:57:10.296Z"
+

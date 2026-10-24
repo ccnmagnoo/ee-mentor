@@ -1,0 +1,13 @@
+id = "CAN-HAL-congeladores-para-materias-primas-y-produc"
+tipo = "hallazgo"
+titulo = "Congeladores para materias primas y productos"
+descripcion = "El establecimiento dispone de un congelador vertical y otro horizontal para el almacenamiento de materias primas y productos terminados. Los principales riesgos energéticos se relacionan con aperturas frecuentes de puertas, deterioro de sellos, acumulación de escarcha y pérdidas de frío que obligan a los equipos a trabajar durante más tiempo para mantener las temperaturas requeridas."
+categoria = "congelacion"
+impacto = "alto"
+inversion = "baja"
+dificultad = "baja"
+origen = "casos:Cafetería"
+fuente_id = "FUE-la-creperia-rapa-nui-392938ab020580b2b86bcfcf44b"
+estado = "pendiente"
+created_at = "2026-10-24T17:57:09.344Z"
+

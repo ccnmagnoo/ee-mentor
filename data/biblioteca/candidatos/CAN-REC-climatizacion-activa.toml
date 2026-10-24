@@ -1,0 +1,13 @@
+id = "CAN-REC-climatizacion-activa"
+tipo = "recomendacion"
+titulo = "Climatización activa"
+descripcion = "Se recomienda evaluar la incorporación de sistemas de climatización eficientes, como bombas de calor inverter, que permitan compensar el exceso térmico generado en verano. Es importante que estos sistemas sean correctamente dimensionados y operados, evitando el sobreconsumo eléctrico y mejorando el confort térmico en las zonas de atención y permanencia del público."
+categoria = "climatizacion"
+impacto = "medio"
+inversion = "media"
+dificultad = "media"
+origen = "casos:Pizzería"
+fuente_id = "FUE-pizzeria-plaggio-382938ab020580efa40bf9d41e53074"
+estado = "pendiente"
+created_at = "2026-10-24T17:57:09.860Z"
+

@@ -1,0 +1,17 @@
+schema_version = 1
+id = "EMP-002"
+nombre = "Pastelería Los Aromos"
+rut = "77.105.842-K"
+direccion = "Calle Blanco 845"
+comuna = "Quilpué"
+region = "Valparaíso"
+rubro = "Pequeña fábrica de alimentos"
+contacto = "Rodrigo Salinas"
+telefono = "+56 9 7845 1120"
+correo = "ventas@losaromos.cl"
+trabajadores = 9
+superficie_m2 = 135
+observaciones = "Fábrica y punto de venta. Produce tortas y masas durante la madrugada; cuenta con dos cámaras de frío y tres hornos eléctricos."
+created_at = "2026-07-20T10:00:00.000Z"
+updated_at = "2026-01-01T00:00:00.000Z"
+

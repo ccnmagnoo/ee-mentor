@@ -1,0 +1,16 @@
+schema_version = 1
+id = "HAL-GEST-02"
+codigo = "GEST-02"
+titulo = "Falta de medición y monitoreo de consumos"
+categoria = "gestion_energetica"
+descripcion = "Se dispone solo de la facturación mensual o de remarcadores sin registro sistemático. No se separan consumos por área, proceso o equipo, ni se comparan mes a mes."
+justificacion = "Lo que no se mide no se gestiona. El monitoreo permite verificar el efecto de las medidas y detectar sobreconsumos o fallas de equipos."
+impacto = "alto"
+energetico = "electricidad"
+recomendacion_id = "REC-GEST-02"
+tags = [ "gestion", "medicion", "monitoreo" ]
+activo = true
+origen = "catalogo_base"
+created_at = "2026-01-01T00:00:00.000Z"
+updated_at = "2026-01-01T00:00:00.000Z"
+

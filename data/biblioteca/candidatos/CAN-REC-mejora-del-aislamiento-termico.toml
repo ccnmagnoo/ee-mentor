@@ -1,0 +1,13 @@
+id = "CAN-REC-mejora-del-aislamiento-termico"
+tipo = "recomendacion"
+titulo = "Mejora del aislamiento térmico"
+descripcion = "Se recomienda incorporar soluciones de bajo costo como películas de control solar para ventanas, cortinas térmicas o sellos perimetrales que contribuyan a reducir las transferencias térmicas y mejorar el desempeño energético del inmueble. Estos sellos son de bajo costo y se pueden instalar en puertas y ventanas."
+categoria = "envolvente"
+impacto = "medio"
+inversion = "baja"
+dificultad = "media"
+origen = "casos:Comercio minorista; casos:Restaurante"
+fuente_id = "FUE-rito-mata-390938ab0205809584b2c563debd6138"
+estado = "pendiente"
+created_at = "2026-10-24T17:57:09.131Z"
+

@@ -1,0 +1,13 @@
+id = "CAN-REC-mejoramiento-funcionamiento-base-de-equipo"
+tipo = "recomendacion"
+titulo = "Mejoramiento funcionamiento base de equipos enfriamiento de bajo costo de inversión"
+descripcion = "Se recomienda evaluar la incorporación de cobertores térmicos o reflectantes removibles para vitrinas refrigeradas y enfriadores verticales durante los horarios de cierre. Esta medida contribuye a reducir el ingreso de calor, disminuir la frecuencia de operación de los compresores y mejorar el rendimiento energético de los equipos. La aplicación de esta solución resulta especialmente interesante cuando se decide mantener los equipos energizados durante la noche mediante estrategias de ahorro energético, ya que permite reducir consumos sin comprometer la cadena de frío ni la vida útil de los artefactos."
+categoria = "gestion_operacional"
+impacto = "medio"
+inversion = "media"
+dificultad = "media"
+origen = "casos:Cafetería"
+fuente_id = "FUE-minimarket-y-cafe-tonita-392938ab02058043b56ae72"
+estado = "pendiente"
+created_at = "2026-10-24T17:57:09.746Z"
+

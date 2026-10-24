@@ -1,0 +1,20 @@
+schema_version = 1
+id = "REC-REFR-05"
+codigo = "REC-REFR-05"
+titulo = "Renovación planificada de equipos de frío ineficientes"
+categoria = "refrigeracion"
+descripcion = "Elaborar un plan de recambio por etapas, priorizando los equipos con mayor antigüedad y horas de operación. Especificar clase energética, refrigerante de bajo GWP y servicio técnico disponible."
+beneficio = "Reduce el consumo, mejora la confiabilidad y disminuye las emisiones directas e indirectas. Requiere evaluación económica caso a caso."
+inversion = "alta"
+dificultad = "alta"
+prioridad = "media"
+ahorro_estimado = "20-40% del consumo de refrigeración"
+plazo = "Largo plazo (6-12 meses)"
+energetico = "electricidad"
+hallazgos_relacionados = [ "HAL-REFR-05" ]
+tags = [ "refrigeracion", "renovacion", "etiqueta energetica" ]
+activo = true
+origen = "catalogo_base"
+created_at = "2026-01-01T00:00:00.000Z"
+updated_at = "2026-01-01T00:00:00.000Z"
+

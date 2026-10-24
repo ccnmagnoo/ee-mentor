@@ -1,0 +1,13 @@
+id = "CAN-REC-uso-diferenciado-de-refrigeracion"
+tipo = "recomendacion"
+titulo = "Uso diferenciado de refrigeración"
+descripcion = "Se recomienda implementar una gestión diferenciada de los equipos de refrigeración tipo perfil de producto y proceso de la sala de ventas , considerando su diseño, función y condiciones óptimas de operación, con el fin de mejorar la eficiencia energética y preservar la calidad de los productos.\nLas vitrinas refrigeradas están diseñadas principalmente para:\n• Exhibición comercial de productos .\n• Mantención de alimentos de consumo inmediato o venta en el corto plazo.\nEstos equipos no deben utilizarse como equipos de almacenamiento de largo plazo , ya que presentan mayor intercambio térmico con el ambiente (aperturas frecuentes, menor hermeticidad). También estos presentan menor capacidad de control térmico homogéneo que cámaras o refrigeradores cerrados.\nSu uso indebido incrementa el consumo energético y puede afectar la inocuidad de los alimentos.\nSe debe disponer de equipos específicos para almacenamiento (cámaras frigoríficas o refrigeradores cerrados) para productos que requieran conservación prolongada."
+categoria = "refrigeracion"
+impacto = "medio"
+inversion = "baja"
+dificultad = "media"
+origen = "casos:Pastelería"
+fuente_id = "FUE-vijon-pasteleria-382938ab02058081bcb6de5c89055ba"
+estado = "pendiente"
+created_at = "2026-10-24T17:57:10.340Z"
+

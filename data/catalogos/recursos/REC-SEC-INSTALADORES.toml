@@ -1,0 +1,9 @@
+schema_version = 1
+id = "REC-SEC-INSTALADORES"
+categoria = "eficiencia_energetica"
+nombre = "Buscador de instaladores certificados SEC"
+descripcion = "Listado oficial de instaladores eléctricos y de gas certificados para regularizaciones, proyectos y modificaciones."
+url = "https://www.sec.cl/area-ciudadana/nuevo-buscador-de-instaladores-e-instaladoras/"
+orden = 50
+activo = true
+

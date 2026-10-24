@@ -1,0 +1,43 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import PageHeader from '@/components/ui/PageHeader.astro';
+import VisitaForm from '@/components/visitas/VisitaForm.astro';
+import { ASSESSOR_DEFAULT } from '@/lib/config';
+import { catalogos, empresas, visitas } from '@/lib/repositories';
+
+const { id, visitaId } = Astro.params;
+if (!id || !visitaId) return Astro.redirect('/empresas');
+
+const [empresa, visita] = await Promise.all([empresas.get(id), visitas.get(id, visitaId)]);
+if (!empresa || !visita) return Astro.redirect(`/empresas/${id}`);
+
+const [hallazgos, recomendaciones] = await Promise.all([
+  catalogos.listHallazgos(),
+  catalogos.listRecomendaciones(),
+]);
+---
+
+<Layout title={`Editar ${visita.id} · ${empresa.nombre}`}>
+  <PageHeader
+    eyebrow="Visita energética"
+    title={`Editar ${visita.id}`}
+    subtitle={`${empresa.nombre} · ${visita.fecha}. Al guardar se regenera el informe Markdown con los nuevos datos.`}
+    breadcrumbs={[
+      { label: 'Empresas', href: '/empresas' },
+      { label: empresa.nombre, href: `/empresas/${empresa.id}` },
+      { label: visita.id, href: `/empresas/${empresa.id}/visitas/${visita.id}` },
+      { label: 'Editar' },
+    ]}
+  />
+
+  <VisitaForm
+    empresa={empresa}
+    action={`/api/empresas/${empresa.id}/visitas/${visita.id}`}
+    visita={visita}
+    hallazgos={hallazgos}
+    recomendaciones={recomendaciones}
+    asesorDefault={ASSESSOR_DEFAULT}
+    submitLabel="Guardar cambios y regenerar informe"
+    cancelHref={`/empresas/${empresa.id}/visitas/${visita.id}`}
+  />
+</Layout>

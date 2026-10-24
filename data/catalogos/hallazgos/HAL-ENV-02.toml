@@ -1,0 +1,16 @@
+schema_version = 1
+id = "HAL-ENV-02"
+codigo = "ENV-02"
+titulo = "Infiltraciones de aire en puertas y ventanas"
+categoria = "envolvente"
+descripcion = "Se detectan corrientes de aire, holguras y falta de burletes en puertas y ventanas. Las puertas de acceso permanecen abiertas durante la operación y no existen cortinas de aire."
+justificacion = "Las infiltraciones aumentan la carga de climatización y afectan el confort. El sellamiento perimetral es una de las medidas de menor costo y mayor impacto relativo."
+impacto = "medio"
+energetico = "electricidad"
+recomendacion_id = "REC-ENV-02"
+tags = [ "envolvente", "infiltraciones", "sellos" ]
+activo = true
+origen = "catalogo_base"
+created_at = "2026-01-01T00:00:00.000Z"
+updated_at = "2026-01-01T00:00:00.000Z"
+

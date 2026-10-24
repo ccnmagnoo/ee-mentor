@@ -1,0 +1,16 @@
+schema_version = 1
+id = "HAL-ILUM-03"
+codigo = "ILUM-03"
+titulo = "Iluminación sin zonificación ni control de presencia"
+categoria = "iluminacion"
+descripcion = "La iluminación permanece encendida de forma homogénea durante toda la jornada, incluso en sectores sin ocupación como bodegas, baños, vitrinas o áreas de preparación cerradas. No se observan sensores, temporizadores ni circuitos independientes."
+justificacion = "La iluminación es una carga base relevante en comercios pequeños. Zonificar y automatizar el encendido reduce horas de operación innecesarias sin afectar la atención al público."
+impacto = "medio"
+energetico = "electricidad"
+recomendacion_id = "REC-ILUM-02"
+tags = [ "iluminacion", "control", "automatizacion" ]
+activo = true
+origen = "catalogo_base"
+created_at = "2026-01-01T00:00:00.000Z"
+updated_at = "2026-01-01T00:00:00.000Z"
+

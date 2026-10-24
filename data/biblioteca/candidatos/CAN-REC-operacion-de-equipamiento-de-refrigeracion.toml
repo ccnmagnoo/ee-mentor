@@ -1,0 +1,13 @@
+id = "CAN-REC-operacion-de-equipamiento-de-refrigeracion"
+tipo = "recomendacion"
+titulo = "Operación de equipamiento de refrigeración"
+descripcion = "Ajuste de setpoint por temporada: \n• Verano: Mantener setpoint dentro del rango seguro, evitando sobreexigencia (no menos de 2°C en refrigeración). Revisar sellos y condensadores para mejorar rendimiento.\n• Invierno: Permitir setpoints ligeramente más altos (por ejemplo 4–5°C en refrigeración), reduciendo la carga del compresor.\n Gestión por ciclo día–noche: \n• Horario de operación: Mantener temperaturas estándar para asegurar cadena de frío. También minimizar aperturas prolongadas de puertas.\n• Horario nocturno o baja actividad: Aumentar ligeramente el setpoint (1–2°C en refrigeración). Evitar aperturas y mantener puertas completamente selladas. En equipos tipo cooler, apagar iluminación interna si no es necesaria."
+categoria = "refrigeracion"
+impacto = "medio"
+inversion = "baja"
+dificultad = "media"
+origen = "casos:Pizzería"
+fuente_id = "FUE-pizzeria-plaggio-382938ab020580efa40bf9d41e53074"
+estado = "pendiente"
+created_at = "2026-10-24T17:57:09.885Z"
+

@@ -1,0 +1,13 @@
+id = "CAN-REC-mejora-del-proceso-de-congelado-y-refriger"
+tipo = "recomendacion"
+titulo = "Mejora del proceso de congelado y refrigerado"
+descripcion = "Para el mediano plazo , y bajo una planificación estratégica de crecimiento de la empresa, se propone la mejora futura de un sistema integrado de congelación mediante cámaras de congelado estáticas optimizadas o túneles de congelación de tipo dinámico (blast freezer o túnel continuo). Para productos de pastelería, donde es clave preservar la textura, humedad y estructura, se recomienda priorizar soluciones de congelado rápido que minimicen la formación de cristales de hielo grandes, asegurando así la calidad final.\nEn una primera etapa, se sugiere la instalación de un equipo compacto tipo “blast freezer”, diseñado para congelación rápida por aire forzado, con capacidad ajustada a la producción diaria actual. Este sistema debe ser dimensionado en base a variables como kilogramos por hora, temperatura de entrada del producto, temperatura objetivo y tiempos de proceso requeridos. Un correcto dimensionamiento permitirá evitar tanto subutilización como sobrecarga del equipo, optimizando el consumo energético y la vida útil del sistema."
+categoria = "equipos_productivos"
+impacto = "medio"
+inversion = "media"
+dificultad = "media"
+origen = "casos:Pastelería"
+fuente_id = "FUE-vijon-pasteleria-382938ab02058081bcb6de5c89055ba"
+estado = "pendiente"
+created_at = "2026-10-24T17:57:10.349Z"
+

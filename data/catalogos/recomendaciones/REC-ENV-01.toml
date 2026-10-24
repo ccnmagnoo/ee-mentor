@@ -1,0 +1,20 @@
+schema_version = 1
+id = "REC-ENV-01"
+codigo = "REC-ENV-01"
+titulo = "Mejoramiento de vidrios y control solar"
+categoria = "envolvente"
+descripcion = "Evaluar doble vidriado hermético, láminas de control solar, aleros o persianas en las fachadas con mayor exposición. Priorizar las superficies con mayor ganancia o pérdida térmica."
+beneficio = "Mejora el confort, reduce la demanda de climatización y protege los productos y mobiliario de la radiación solar."
+inversion = "alta"
+dificultad = "alta"
+prioridad = "media"
+ahorro_estimado = "10-25% del consumo de climatización"
+plazo = "Largo plazo (6-12 meses)"
+energetico = "electricidad"
+hallazgos_relacionados = [ "HAL-ENV-01" ]
+tags = [ "envolvente", "dvh", "control solar" ]
+activo = true
+origen = "catalogo_base"
+created_at = "2026-01-01T00:00:00.000Z"
+updated_at = "2026-01-01T00:00:00.000Z"
+

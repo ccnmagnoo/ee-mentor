@@ -1,0 +1,13 @@
+id = "CAN-REC-gestion-activa-de-ventilacion-y-acondicion"
+tipo = "recomendacion"
+titulo = "Gestión activa de ventilación y acondicionamiento de espacios"
+descripcion = "Actualmente el riesgo es bajo; sin embargo, la incorporación futura de equipos de climatización para enfrentar aumentos de temperatura podría elevar significativamente la demanda eléctrica, especialmente en verano. Algunas recomendaciones d e mejora en el cualquier escenario, es potenciar ventilación natural durante horas de menor temperatura exterior. Mantener sombreados los sectores expuestos a radiación solar, y mejorar el aislamiento de puertas y ventanas en futuras remodelacione s, o de forma provisoria, mediante sellos y láminas térmicas de puertas y ventanas .En caso de requerir climatización, seleccionar equipos inverter de alta eficiencia energética clase A++."
+categoria = "climatizacion"
+impacto = "alto"
+inversion = "baja"
+dificultad = "media"
+origen = "casos:Cafetería"
+fuente_id = "FUE-la-boulangerie-390938ab0205801fb682ff6930a172ba"
+estado = "pendiente"
+created_at = "2026-10-24T17:57:09.298Z"
+

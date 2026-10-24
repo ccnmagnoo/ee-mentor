@@ -1,0 +1,16 @@
+schema_version = 1
+id = "HAL-GEN-02"
+codigo = "GEN-02"
+titulo = "Posibles fugas de refrigerante"
+categoria = "refrigeracion"
+descripcion = "Se observan equipos de frío con bajo rendimiento, formación excesiva de hielo o registros de carga de refrigerante sin trazabilidad. No se cuenta con un programa de detección de fugas."
+justificacion = "Las fugas de refrigerante reducen la capacidad del equipo, aumentan el consumo y generan emisiones de gases de efecto invernadero. Su detección y reparación es prioritaria."
+impacto = "alto"
+energetico = "electricidad"
+recomendacion_id = "REC-GEN-02"
+tags = [ "refrigeracion", "refrigerante", "ambiente" ]
+activo = true
+origen = "catalogo_base"
+created_at = "2026-01-01T00:00:00.000Z"
+updated_at = "2026-01-01T00:00:00.000Z"
+

@@ -1,0 +1,32 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import PageHeader from '@/components/ui/PageHeader.astro';
+import CatalogoForm from '@/components/catalogos/CatalogoForm.astro';
+import { catalogos } from '@/lib/repositories';
+
+const { id } = Astro.params;
+const recomendacion = id ? await catalogos.getRecomendacion(id) : null;
+if (!recomendacion) return Astro.redirect('/catalogos?tab=recomendaciones');
+---
+
+<Layout title={`Editar ${recomendacion.codigo}`} description="Editar recomendación del catálogo">
+  <PageHeader
+    eyebrow="Catálogos · Recomendaciones"
+    title={`Editar ${recomendacion.codigo}`}
+    subtitle={recomendacion.titulo}
+    breadcrumbs={[
+      { label: 'Catálogos', href: '/catalogos' },
+      { label: 'Recomendaciones', href: '/catalogos?tab=recomendaciones' },
+      { label: recomendacion.codigo },
+    ]}
+  />
+
+  <div class="max-w-4xl">
+    <CatalogoForm
+      tipo="recomendacion"
+      action="/api/catalogos/recomendaciones"
+      item={recomendacion}
+      cancelHref="/catalogos?tab=recomendaciones"
+    />
+  </div>
+</Layout>

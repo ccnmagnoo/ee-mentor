@@ -1,0 +1,798 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Minimarket y Café Toñita</title><meta name="data-notion-page-icon" content="🛒"/><link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20100%20100%22%3E%3Ctext%20y%3D%22.9em%22%20font-size%3D%2290%22%3E%F0%9F%9B%92%3C%2Ftext%3E%3C%2Fsvg%3E"/><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+/* Override strong tags inside headings to maintain consistent weight */
+h1 strong,
+h2 strong,
+h3 strong {
+	font-weight: 600;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 10px;
+	padding: 1rem;
+	/* Paint a complete callout box on every PDF page fragment. */
+	-webkit-box-decoration-break: clone;
+	box-decoration-break: clone;
+}
+
+/* For default-background callouts, render the border outline. */
+.callout.block-color-default_background {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+/*
+ * Toggles and callouts hold arbitrary content, so they can easily be taller
+ * than a page. They must stay breakable: avoiding breaks inside them makes
+ * Chromium push the whole block onto the next page, which leaves the previous
+ * page mostly empty before every long toggle.
+ */
+details,
+aside {
+	margin: 1.25em 0;
+}
+
+/* Keep a toggle's title on the same page as the start of its content. */
+summary {
+	page-break-after: avoid;
+	break-after: avoid;
+}
+
+/*
+ * Toggle headings render as <h1/h2/h3 style="display:inline-block"> inside
+ * <summary>. Without this reset, the heading's margin-top pushes it below the
+ * ::marker (▼), so the triangle and the title appear on separate lines.
+ */
+summary h1,
+summary h2,
+summary h3,
+summary h4 {
+	margin-top: 0;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+
+	table.collection-content {
+		width: 100%;
+		table-layout: fixed;
+	}
+
+	table.collection-content th,
+	table.collection-content td {
+		overflow-wrap: anywhere;
+	}
+
+	table.collection-content td > .user,
+	table.collection-content td > time {
+		white-space: pre-wrap;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content-wrapper {
+	overflow-x: auto;
+}
+
+@media only print {
+	.collection-content-wrapper {
+		overflow-x: visible;
+	}
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.collection-content td {
+	white-space: pre-wrap;
+	word-break: break-word;
+}
+
+.column-list {
+	display: flex;
+	gap: 46px;
+}
+
+.column {
+	min-width: 0;
+	overflow: hidden;
+}
+
+.column > *:first-child {
+	margin-top: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding-inline: 0.125rem;
+	padding-block: 0.375rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+table {
+	border-collapse: collapse;
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol.numbered-list.numbered-list-digits-2 {
+	padding-inline-start: 2em;
+}
+
+ol.numbered-list.numbered-list-digits-3plus {
+	padding-inline-start: 2.4em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+/*
+ * Render emoji icons using a ::before pseudo-element to keep the glyph
+ * out of the DOM textContent traversal. This avoids double-rendering icons
+ * in callouts and page titles.
+ * NOTE(slim/html-export-pseudo-icons): I can't tagref this because it will
+ * flag as a duplicate tag after codegen.
+ */
+.icon[data-emoji]::before {
+	content: attr(data-emoji);
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.callout img.notion-static-icon {
+	width: 1em;
+	height: 1em;
+}
+
+.callout p {
+	margin: 0;
+}
+
+.callout h1,
+.callout h2,
+.callout h3 {
+	margin: 0 0 0.6rem;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	margin-right: 0.4em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+blockquote.quote-large {
+	font-size: 1.25em;
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.tab {
+	margin: 1.25em 0;
+	padding-inline: 1rem;
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.highlight-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.highlight-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.highlight-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.highlight-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.highlight-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.highlight-default_background {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray_background {
+	background: rgba(42, 28, 0, 0.07);
+}
+.highlight-brown_background {
+	background: rgba(139, 46, 0, 0.086);
+}
+.highlight-orange_background {
+	background: rgba(224, 101, 1, 0.129);
+}
+.highlight-yellow_background {
+	background: rgba(211, 168, 0, 0.137);
+}
+.highlight-teal_background {
+	background: rgba(0, 100, 45, 0.09);
+}
+.highlight-blue_background {
+	background: rgba(0, 124, 215, 0.094);
+}
+.highlight-purple_background {
+	background: rgba(102, 0, 178, 0.078);
+}
+.highlight-pink_background {
+	background: rgba(197, 0, 93, 0.086);
+}
+.highlight-red_background {
+	background: rgba(223, 22, 0, 0.094);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.block-color-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.block-color-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.block-color-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.block-color-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.block-color-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(240, 239, 237, 1);
+}
+.block-color-brown_background {
+	background: rgba(245, 237, 233, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 235, 222, 1);
+}
+.block-color-yellow_background {
+	background: rgba(249, 243, 220, 1);
+}
+.block-color-teal_background {
+	background: rgba(232, 241, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(229, 242, 252, 1);
+}
+.block-color-purple_background {
+	background: rgba(243, 235, 249, 1);
+}
+.block-color-pink_background {
+	background: rgba(250, 233, 241, 1);
+}
+.block-color-red_background {
+	background: rgba(252, 233, 231, 1);
+}
+.select-value-color-default { background-color: rgba(42, 28, 0, 0.07); }
+.select-value-color-gray { background-color: rgba(28, 19, 1, 0.11); }
+.select-value-color-brown { background-color: rgba(127, 51, 0, 0.156); }
+.select-value-color-orange { background-color: rgba(196, 88, 0, 0.203); }
+.select-value-color-yellow { background-color: rgba(209, 156, 0, 0.282); }
+.select-value-color-green { background-color: rgba(0, 96, 38, 0.156); }
+.select-value-color-blue { background-color: rgba(0, 118, 217, 0.203); }
+.select-value-color-purple { background-color: rgba(92, 0, 163, 0.141); }
+.select-value-color-pink { background-color: rgba(183, 0, 78, 0.152); }
+.select-value-color-red { background-color: rgba(206, 24, 0, 0.164); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style><style>@import url('https://cdn.jsdelivr.net/npm/katex@0.16.25/dist/katex-swap.min.css')</style></head><body><article id="392938ab-0205-8043-b56a-e724eac2586a" class="page sans" data-notion-page-icon="🛒"><header><div class="page-header-icon undefined"><span class="icon" data-emoji="🛒"></span></div><h1 class="page-title" dir="auto">Minimarket y Café Toñita</h1><p class="page-description" dir="auto"></p><table class="properties"><tbody><tr class="property-row property-row-created_time"><th><span class="icon property-icon"><img src="https://app.notion.com/icons/clock_gray.svg" style="width:14px;height:14px;display:block"/></span>Fecha</th><td><time datetime="2026-07-03T13:08">July 3, 2026 1:08 PM</time></td></tr><tr class="property-row property-row-select"><th><span class="icon property-icon"><img src="https://app.notion.com/icons/arrow-circle-down_gray.svg" style="width:14px;height:14px;display:block"/></span>Negocio</th><td><span class="selected-value select-value-color-green">Comercio</span></td></tr><tr class="property-row property-row-select"><th><span class="icon property-icon"><img src="https://app.notion.com/icons/arrow-circle-down_gray.svg" style="width:14px;height:14px;display:block"/></span>Grado consumos</th><td><span class="selected-value select-value-color-blue">Ligero</span></td></tr><tr class="property-row property-row-text"><th><span class="icon property-icon"><img src="https://app.notion.com/icons/description_gray.svg" style="width:14px;height:14px;display:block"/></span>Usuario</th><td>Antonia Ika Pakarati</td></tr><tr class="property-row property-row-phone_number"><th><span class="icon property-icon"><img src="https://app.notion.com/icons/phone-call_gray.svg" style="width:14px;height:14px;display:block"/></span>Teléfono</th><td><a href="+56992977574" class="url-value">+56992977574</a></td></tr><tr class="property-row property-row-email"><th><span class="icon property-icon"><img src="https://app.notion.com/icons/username_gray.svg" style="width:14px;height:14px;display:block"/></span>Correo electrónico</th><td><a href="antoniaika17@gmail.com" class="url-value">antoniaika17@gmail.com</a></td></tr><tr class="property-row property-row-select"><th><span class="icon property-icon"><img src="https://app.notion.com/icons/arrow-circle-down_gray.svg" style="width:14px;height:14px;display:block"/></span>Contraparte</th><td><span class="selected-value select-value-color-green">Tāpa&#x27;o Ritomata</span></td></tr><tr class="property-row property-row-url"><th><span class="icon property-icon"><img src="https://app.notion.com/icons/link_gray.svg" style="width:14px;height:14px;display:block"/></span>gmaps</th><td><a href="https://maps.app.goo.gl/E4ZsM7yPujmGQyLX8" class="url-value">https://maps.app.goo.gl/E4ZsM7yPujmGQyLX8</a></td></tr></tbody></table></header><div class="page-body"><div id="397938ab-0205-8088-a868-e1c384ed6475" class="column-list" data-notion-column-list="" dir="auto"><div id="397938ab-0205-805f-a7e6-fa48437ecd26" style="width:18.75%" class="column" data-notion-column-ratio="0.1875" dir="auto"><figure id="397938ab-0205-80c3-ab02-f08d1ae3b97c" class="image" data-notion-image="SEREMI_logo_SQR_Lowpoly.svg" dir="ltr"><a href="SEREMI_logo_SQR_Lowpoly.svg"><img style="width:120px" src="SEREMI_logo_SQR_Lowpoly.svg"/></a></figure></div><div id="397938ab-0205-800d-892e-ee04fb0b47ca" style="width:81.25%" class="column" data-notion-column-ratio="0.8125" dir="auto"><figure id="397938ab-0205-8014-a702-db74b28134b7" class="image" data-notion-image="LOGO_REDONDO_FONDO_BLANCO.png" dir="ltr"><a href="LOGO_REDONDO_FONDO_BLANCO.png"><img style="width:132px" src="LOGO_REDONDO_FONDO_BLANCO.png"/></a></figure></div></div><h1 id="2cb938ab-0205-826e-8ac7-81e197b02903" class="" dir="auto">ACTA de seguimiento Asesoría/Mentoría</h1><h2 id="e17938ab-0205-821b-a2b0-81ee67a1b581" class="" dir="auto">Información del contacto y cliente (negocio)</h2><table id="4b2938ab-0205-8263-89dc-810864b42efe" class="simple-table" dir="ltr"><tbody><tr id="b94938ab-0205-821b-bc0b-81a22cb3801a" dir="ltr"><td id="jEMl" class="" style="width:150.875px">Nombre del contacto</td><td id="lP]a" class="" style="width:126.8125px">Antonia Ika Pakarati</td><td id="xV[;" class="" style="width:67.875px">RUT</td><td id="GpK:" class="">n/i</td></tr><tr id="d9a938ab-0205-8241-b305-81dd5372b0b5" dir="ltr"><td id="jEMl" class="" style="width:150.875px">Nombre del negocio</td><td id="lP]a" class="" style="width:126.8125px">Minimarket y Café Toñita</td><td id="xV[;" class="" style="width:67.875px">ROL</td><td id="GpK:" class="">n/i</td></tr><tr id="0ac938ab-0205-821b-b64b-81dbec021d56" dir="ltr"><td id="jEMl" class="" style="width:150.875px">Asesor asignado</td><td id="lP]a" class="" style="width:126.8125px">Carlos Campos N</td><td id="xV[;" class="" style="width:67.875px">Servicio</td><td id="GpK:" class="">Seremi Energía</td></tr></tbody></table><h2 id="0d9938ab-0205-831e-aca4-81cfb50954be" class="" dir="auto">Descripción</h2><p id="397938ab-0205-80a0-ba2f-ca92411f27e5" class="" dir="auto">Minimarket y Café Toñita corresponde a un pequeño establecimiento comercial de carácter familiar orientado principalmente a la atención de residentes locales y, en menor medida, de turistas. El negocio funciona desde una propiedad de uso habitacional, donde se combina la venta de abarrotes y alimentos con la comercialización de artesanías, incluyendo collares, pulseras y otros productos de elaboración local. La administración se encuentra a cargo de la señora Antonia Ika Pakarati, quien desarrolla sus actividades comerciales desde el domicilio donde opera el establecimiento.</p><p id="397938ab-0205-80da-a6a2-cf002ed63258" class="" dir="auto">Desde el punto de vista energético, el negocio presenta un perfil de consumo predominantemente asociado a la refrigeración comercial, característica habitual en establecimientos dedicados a la venta de alimentos y productos perecibles. El equipamiento identificado incluye cuatro enfriadores verticales tipo VC Cooler con puertas de vidrio, dos congeladores horizontales con tapa de vidrio y una vitrina refrigerada para la conservación de quesos, jamones y otros productos refrigerados. Estos equipos operan durante gran parte del día y constituyen la principal fuente de demanda eléctrica del local.</p><p id="397938ab-0205-8044-bfbd-f89cc71b3083" class="" dir="auto">Adicionalmente, el establecimiento cuenta con un equipo de aire acondicionado clasificado con eficiencia energética tipo D, utilizado principalmente durante la temporada estival para mantener condiciones adecuadas de confort térmico. Se observó también que la puerta principal permanece abierta durante la atención al público, situación que puede incrementar las cargas térmicas sobre los sistemas de climatización y refrigeración.</p><p id="397938ab-0205-80b3-995a-c2da5ba45cf0" class="" dir="auto">El consumo eléctrico estimado alcanza aproximadamente 343 kWh mensuales, con un gasto cercano a $150.000 mensuales. No se identificó la existencia de sistemas de energías renovables ni de una gestión energética formalizada; sin embargo, se observaron algunas prácticas orientadas al control del consumo, tales como la desconexión nocturna de determinados equipos de refrigeración y el uso acotado del aire acondicionado según las necesidades operativas del negocio. Estas condiciones permiten identificar oportunidades de mejora tanto en eficiencia energética como en incorporación de generación solar para autoconsumo.</p><h3 id="397938ab-0205-8026-8751-dd3ba7a848d2" class="" dir="auto">Localización</h3><figure id="397938ab-0205-805b-a2bf-dca536a797d7" dir="ltr"><a href="https://maps.app.goo.gl/E4ZsM7yPujmGQyLX8" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Google Maps</div><div class="bookmark-description">Find local businesses, view maps and get driving directions in Google Maps.</div></div><div class="bookmark-href"><img src="https://www.google.com/images/branding/product/ico/web_maps_icon_32dp.ico" class="icon bookmark-icon"/>https://maps.app.goo.gl/E4ZsM7yPujmGQyLX8</div></div><img src="https://maps.google.com/maps/api/staticmap?center=-27.1408342%2C-109.4257688&amp;zoom=19&amp;size=900x900&amp;language=en&amp;sensor=false&amp;key=AIzaSyBoYjeRtfVI0Jd8Q_9mnflo9i4sOYpShB0&amp;signature=_vXBvmeRalkTpleXy09OB80vZkw" class="bookmark-image"/></a></figure><h3 id="a32938ab-0205-83c6-89c2-0166d9f13c08" class="" dir="auto">Acometidas</h3><table id="a2b938ab-0205-83fc-b221-815eedb18f0b" class="simple-table" dir="ltr"><tbody><tr id="f5a938ab-0205-8250-95dc-01044c25fd02" dir="ltr"><td id="UI[G" class="" style="width:235.66666666666666px">Cliente</td><td id="Kmw|" class="" style="width:130.65625px">n/i</td><td id="`_sH" class="" style="width:111.65625px"></td></tr><tr id="fda938ab-0205-8223-bef2-81e7bf02ba46" dir="ltr"><td id="UI[G" class="" style="width:235.66666666666666px">Propietario</td><td id="Kmw|" class="" style="width:130.65625px">Antonia Ika</td><td id="`_sH" class="" style="width:111.65625px"></td></tr><tr id="ef8938ab-0205-83c0-8aac-811bbc23f9ce" dir="ltr"><td id="UI[G" class="" style="width:235.66666666666666px">Distribuidora</td><td id="Kmw|" class="" style="width:130.65625px">Sasipa</td><td id="`_sH" class="" style="width:111.65625px"></td></tr><tr id="767938ab-0205-826a-9b1b-01b9e3c0914c" dir="ltr"><td id="UI[G" class="" style="width:235.66666666666666px">Consumo kWh</td><td id="Kmw|" class="" style="width:130.65625px">343  (estimado)</td><td id="`_sH" class="" style="width:111.65625px">kWh</td></tr><tr id="9ca938ab-0205-824b-9535-81e5e3e52d69" dir="ltr"><td id="UI[G" class="" style="width:235.66666666666666px">Gasto nominal </td><td id="Kmw|" class="" style="width:130.65625px">150.000</td><td id="`_sH" class="" style="width:111.65625px">$CLP</td></tr></tbody></table><div id="a9d938ab-0205-82c0-9ee3-0141e681a416" class="collection-content" dir="ltr"><h4 class="collection-title">Hallazgos</h4><div class="collection-content-wrapper"><table class="collection-content"><colgroup><col style="width:28.177641653905056%"/><col style="width:19.142419601837673%"/><col style="width:52.67993874425727%"/></colgroup><thead><tr><th><span class="icon property-icon"><img src="https://app.notion.com/icons/font_gray.svg" style="width:14px;height:14px;display:block"/></span>Referencia</th><th><span class="icon property-icon"><img src="https://app.notion.com/icons/arrow-circle-down_gray.svg" style="width:14px;height:14px;display:block"/></span>Servicio</th><th><span class="icon property-icon"><img src="https://app.notion.com/icons/description_gray.svg" style="width:14px;height:14px;display:block"/></span>Descripción</th></tr></thead><tbody><tr id="9e6938ab-0205-82e0-917d-81f7dedfb597"><td class="cell-title"><a href="Uso%20intensivo%20de%20equipos%20de%20refrigeraci%C3%B3n%20comercia%209e6938ab020582e0917d81f7dedfb597.html" data-notion-page-id="9e6938ab-0205-82e0-917d-81f7dedfb597" data-notion-space-id="242b1b81-4cab-4ab7-a7cd-3ea69f052ca2">Uso intensivo de equipos de refrigeración comercial</a></td><td class="cell-egc;"><span class="selected-value select-value-color-pink">refrigeración</span></td><td class="cell-blSE">El negocio cuenta con cuatro enfriadores verticales de puerta de vidrio, dos congeladores horizontales con tapa de vidrio y una vitrina refrigerada para productos lácteos y embutidos. La concentración de equipos de refrigeración representa la principal fuente de consumo energético del establecimiento. Si bien se indica que algunos equipos son desconectados durante la noche, no se evidencia la existencia de un control sistemático de temperaturas ni de un programa formal de mantenimiento preventivo, situación que podría derivar en pérdidas de eficiencia energética y mayores tiempos de funcionamiento de los compresores.</td></tr><tr id="397938ab-0205-805a-b098-c67c15c8ba28"><td class="cell-title"><a href="Desconexi%C3%B3n%20nocturna%20de%20equipos%20de%20refrigeraci%C3%B3n%20c%20397938ab0205805ab098c67c15c8ba28.html" data-notion-page-id="397938ab-0205-805a-b098-c67c15c8ba28" data-notion-space-id="242b1b81-4cab-4ab7-a7cd-3ea69f052ca2">Desconexión nocturna de equipos de refrigeración como estrategia de control de consumo</a></td><td class="cell-egc;"><span class="selected-value select-value-color-pink">refrigeración</span></td><td class="cell-blSE">Se identificó que los enfriadores verticales (VC Coolers) son desconectados durante la noche con el objetivo de reducir el consumo eléctrico. Si bien esta práctica puede generar una disminución temporal del gasto energético, también puede producir incrementos importantes de temperatura en los productos almacenados, mayores demandas de potencia al momento del reencendido y un aumento del desgaste de compresores y componentes eléctricos debido a los ciclos de parada y arranque. Además, dependiendo del tiempo fuera de servicio y del tipo de producto almacenado, esta práctica podría afectar la continuidad de la cadena de frío.</td></tr><tr id="397938ab-0205-80c2-a459-e026349a3680"><td class="cell-title"><a href="Alto%20tr%C3%A1nsito%20acceso%20principal%20397938ab020580c2a459e026349a3680.html" data-notion-page-id="397938ab-0205-80c2-a459-e026349a3680" data-notion-space-id="242b1b81-4cab-4ab7-a7cd-3ea69f052ca2">Alto tránsito acceso principal</a></td><td class="cell-egc;"><span class="selected-value select-value-color-blue">clima</span></td><td class="cell-blSE">Durante la entrevista se identificó que la puerta principal permanece abierta de manera habitual para facilitar el ingreso de clientes. Esta condición puede incrementar significativamente las ganancias de calor al interior del local, especialmente durante períodos de altas temperaturas, aumentando la carga térmica sobre los equipos de refrigeración y el sistema de aire acondicionado.</td></tr><tr id="397938ab-0205-80fd-9c5b-dfe8d775f8c6"><td class="cell-title"><a href="Utilizaci%C3%B3n%20de%20aire%20acondicionado%20con%20eficiencia%20e%20397938ab020580fd9c5bdfe8d775f8c6.html" data-notion-page-id="397938ab-0205-80fd-9c5b-dfe8d775f8c6" data-notion-space-id="242b1b81-4cab-4ab7-a7cd-3ea69f052ca2">Utilización de aire acondicionado con eficiencia energética limitada</a></td><td class="cell-egc;"><span class="selected-value select-value-color-blue">clima</span></td><td class="cell-blSE">El establecimiento dispone de un equipo de aire acondicionado clasificado con eficiencia energética tipo D, utilizado principalmente durante el verano. Aunque su uso es estacional, este nivel de eficiencia es inferior al disponible actualmente en el mercado, pudiendo representar consumos mayores para entregar la misma capacidad de climatización.</td></tr><tr id="397938ab-0205-8001-8da3-e023d8a3f3cb"><td class="cell-title"><a href="Envolvente%20t%C3%A9rmica%20de%20puertas%20y%20ventanas%20397938ab020580018da3e023d8a3f3cb.html" data-notion-page-id="397938ab-0205-8001-8da3-e023d8a3f3cb" data-notion-space-id="242b1b81-4cab-4ab7-a7cd-3ea69f052ca2">Envolvente térmica de puertas y ventanas</a></td><td class="cell-egc;"><span class="selected-value select-value-color-blue">clima</span></td><td class="cell-blSE">El negocio presenta condiciones típicas de un establecimiento comercial integrado a una vivienda, con puertas y ventanas que pueden constituir puntos de intercambio térmico entre el interior y el exterior. No se observaron elementos específicos destinados a mejorar la hermeticidad de la envolvente, por lo que es posible que existan infiltraciones de aire que incrementen la carga térmica de los equipos de refrigeración y climatización.</td></tr><tr id="397938ab-0205-8014-9d55-c0ebf764b293"><td class="cell-title"><a href="Ausencia%20de%20elementos%20de%20aislamiento%20temporal%20en%20v%20397938ab020580149d55c0ebf764b293.html" data-notion-page-id="397938ab-0205-8014-9d55-c0ebf764b293" data-notion-space-id="242b1b81-4cab-4ab7-a7cd-3ea69f052ca2">Ausencia de elementos de aislamiento temporal en vitrinas y equipos de refrigeración durante periodos de cierre</a></td><td class="cell-egc;"><span class="selected-value select-value-color-pink">refrigeración</span></td><td class="cell-blSE">No se identificó el uso de cobertores térmicos o reflectantes para vitrinas refrigeradas ni para los equipos verticales de exhibición durante los períodos en que el local permanece cerrado al público. Esta condición favorece la transferencia de calor hacia el interior de los equipos, obligando a los sistemas de refrigeración a realizar un mayor esfuerzo para mantener las temperaturas de conservación.</td></tr><tr id="397938ab-0205-80e5-980b-e56e3e5de2c3"><td class="cell-title"><a href="Ausencia%20de%20monitoreo%20y%20seguimiento%20sistem%C3%A1tico%20de%20397938ab020580e5980be56e3e5de2c3.html" data-notion-page-id="397938ab-0205-80e5-980b-e56e3e5de2c3" data-notion-space-id="242b1b81-4cab-4ab7-a7cd-3ea69f052ca2"> Ausencia de monitoreo y seguimiento sistemático de los consumos energéticos</a></td><td class="cell-egc;"><span class="selected-value select-value-color-gray">gestión</span></td><td class="cell-blSE">No se observaron registros formales de consumo eléctrico ni indicadores de desempeño energético que permitan identificar tendencias, aumentos de consumo o evaluar el impacto de medidas de ahorro. Esta situación dificulta detectar oportunidades de mejora y cuantificar resultados.</td></tr><tr id="397938ab-0205-8090-bff5-e2fcc4a34fdb"><td class="cell-title"><a href="Gesti%C3%B3n%20Energ%C3%A9tica%20397938ab02058090bff5e2fcc4a34fdb.html" data-notion-page-id="397938ab-0205-8090-bff5-e2fcc4a34fdb" data-notion-space-id="242b1b81-4cab-4ab7-a7cd-3ea69f052ca2">Gestión Energética
+</a></td><td class="cell-egc;"><span class="selected-value select-value-color-gray">gestión</span></td><td class="cell-blSE">No se evidenció la existencia de una gestión energética formalizada, entendida como procedimientos, registros o metas enfocadas en el control y mejora continua del consumo de energía. Sin embargo, se observan algunos indicios de buenas prácticas que reflejan una preocupación por contener los costos energéticos. Entre ellas destaca la desconexión nocturna de algunos equipos de refrigeración y el uso restringido del aire acondicionado principalmente durante períodos de mayor necesidad. Estas acciones constituyen una base positiva sobre la cual se pueden desarrollar medidas de gestión más sistemáticas en el futuro.</td></tr><tr id="397938ab-0205-806c-bf45-ee2451a6feb2"><td class="cell-title"><a href="Energ%C3%ADas%20Renovables%20397938ab0205806cbf45ee2451a6feb2.html" data-notion-page-id="397938ab-0205-806c-bf45-ee2451a6feb2" data-notion-space-id="242b1b81-4cab-4ab7-a7cd-3ea69f052ca2">Energías Renovables</a></td><td class="cell-egc;"><span class="selected-value select-value-color-green">renovables</span></td><td class="cell-blSE">Durante la entrevista no se identificó la incorporación de tecnologías de energías renovables para autoconsumo, tales como sistemas solares fotovoltaicos o soluciones de calentamiento solar. Considerando las condiciones de irradiación solar presentes en Rapa Nui y que gran parte del consumo corresponde a equipos eléctricos permanentes, existe una oportunidad futura para evaluar alternativas de generación distribuida que contribuyan a reducir costos operacionales y dependencia de la red eléctrica.</td></tr></tbody></table></div><br/><br/></div><div id="b59938ab-0205-825b-9ff8-0114935ceb74" class="collection-content" dir="ltr"><h4 class="collection-title">Recomendaciones</h4><div class="collection-content-wrapper"><table class="collection-content"><colgroup><col style="width:23.919753086419753%"/><col style="width:76.08024691358025%"/></colgroup><thead><tr><th><span class="icon property-icon"><img src="https://app.notion.com/icons/font_gray.svg" style="width:14px;height:14px;display:block"/></span>nombre</th><th><span class="icon property-icon"><img src="https://app.notion.com/icons/description_gray.svg" style="width:14px;height:14px;display:block"/></span>Recomendación</th></tr></thead><tbody><tr id="012938ab-0205-82a8-a18c-01646dd02c9b"><td class="cell-title"><a href="Control%20activo%20de%20puntos%20de%20temperatura%20equipos%20de%20012938ab020582a8a18c01646dd02c9b.html" data-notion-page-id="012938ab-0205-82a8-a18c-01646dd02c9b" data-notion-space-id="242b1b81-4cab-4ab7-a7cd-3ea69f052ca2">Control activo de puntos de temperatura equipos de refrigeración</a></td><td class="cell-;voQ">Realizar un control periódico de las temperaturas de conservación y establecer un plan de mantenimiento preventivo para los equipos de refrigeración. Se recomienda además verificar el estado de sellos, burletes y condensadores, manteniendo estos últimos limpios para optimizar el rendimiento energético. Asimismo, evaluar la necesidad real de mantener todos los equipos operativos de manera permanente según la demanda efectiva de productos.</td></tr><tr id="397938ab-0205-804b-8846-ce75ed3d12f4"><td class="cell-title"><a href="Gesti%C3%B3n%20activa%20de%20regulaci%C3%B3n%20t%C3%A9rmica%20de%20artefactos%20397938ab0205804b8846ce75ed3d12f4.html" data-notion-page-id="397938ab-0205-804b-8846-ce75ed3d12f4" data-notion-space-id="242b1b81-4cab-4ab7-a7cd-3ea69f052ca2">Gestión activa de regulación térmica de artefactos de frío.</a></td><td class="cell-;voQ">Se recomienda evaluar la configuración de los controladores de temperatura de los equipos, privilegiando una estrategia de operación en modo de ahorro energético durante horarios de cierre, en lugar de la desconexión completa. El ajuste de setpoints nocturnos a temperaturas levemente superiores, compatibles con la conservación segura de los productos, puede permitir una reducción del consumo energético manteniendo la estabilidad térmica y disminuyendo el estrés operacional de los equipos. Asimismo, se recomienda revisar la programación de deshielos automáticos y verificar que cada equipo opere de acuerdo con las especificaciones del fabricante, contribuyendo a extender su vida útil y mejorar su desempeño energético. Para facilitar la medición activa de rendimiento de los equipos y seteos, se recomienda adquirir los siguientes instrumentos de medición:<br/>  • <a href="https://www.mercadolibre.cl/gm320-termometro-infrarrojo-digital-hasta-380-grados/p/MLC2089776504#reco_item_pos=0&amp;reco_backend=item_decorator&amp;reco_backend_type=function&amp;reco_client=home_items-decorator-legacy&amp;reco_id=4cf427ee-4a07-4fa9-a1d6-0c9b18bead2d&amp;reco_model=&amp;c_id=/home/navigation-recommendations-seed/element&amp;c_uid=2a4f7f5f-ad1d-4e8d-9f40-dad4c90ae18f&amp;da_id=navigation&amp;da_position=0&amp;id_origin=/home/dynamic_access&amp;da_sort_algorithm=ranker">termómetro infrarrojo digital</a><br/>  • <a href="https://www.mercadolibre.cl/termometro-digital-de-cocina-gastronomico/p/MLC24456352#reco_item_pos=1&amp;reco_backend=item_decorator&amp;reco_backend_type=function&amp;reco_client=home_items-decorator-legacy&amp;reco_id=0319eae4-e9b7-4b3a-8a7d-69bf934becc3&amp;reco_model=&amp;c_id=/home/navigation-trends-recommendations/element&amp;c_uid=9f4d2b48-463c-431f-a507-e5af467bc1ac&amp;da_id=navigation_trend&amp;da_position=1&amp;id_origin=/home/dynamic_access&amp;da_sort_algorithm=ranker">termómetro digital de cocina</a></td></tr><tr id="397938ab-0205-80e6-9ec1-eba538712811"><td class="cell-title"><a href="Sistema%20de%20auto%20cierre%20mec%C3%A1nico%20397938ab020580e69ec1eba538712811.html" data-notion-page-id="397938ab-0205-80e6-9ec1-eba538712811" data-notion-space-id="242b1b81-4cab-4ab7-a7cd-3ea69f052ca2">Sistema de auto cierre mecánico</a></td><td class="cell-;voQ">Evaluar la implementación de medidas que permitan compatibilizar la atención de público con la eficiencia energética, tales como sistemas de cierre autónomo mecánico, cortinas de aire o protocolos de apertura parcial según la afluencia de clientes. Estas medidas contribuyen a reducir el ingreso de aire caliente y a disminuir exposición de los equipos de refrigeración y congelado del local</td></tr><tr id="397938ab-0205-80be-89b2-ddac0aab25ff"><td class="cell-title"><a href="Aislamiento%20t%C3%A9rmico%20de%20bajo%20costo%20de%20implementaci%C3%B3%20397938ab020580be89b2ddac0aab25ff.html" data-notion-page-id="397938ab-0205-80be-89b2-ddac0aab25ff" data-notion-space-id="242b1b81-4cab-4ab7-a7cd-3ea69f052ca2">Aislamiento térmico de bajo costo de implementación</a></td><td class="cell-;voQ">Se recomienda evaluar la instalación de sellos térmicos en puertas y ventanas para reducir infiltraciones no controladas de aire exterior. Estas medidas suelen ser de bajo costo y permiten mejorar el confort interior, disminuir las ganancias de calor y reducir el tiempo de funcionamiento de los equipos de refrigeración y aire acondicionado. Adicionalmente, resulta conveniente verificar periódicamente el estado de los burletes y elementos de cierre para asegurar un adecuado desempeño en el tiempo.</td></tr><tr id="397938ab-0205-80c9-a6c1-e36e9da2f55c"><td class="cell-title"><a href="Mejoramiento%20funcionamiento%20base%20de%20equipos%20enfria%20397938ab020580c9a6c1e36e9da2f55c.html" data-notion-page-id="397938ab-0205-80c9-a6c1-e36e9da2f55c" data-notion-space-id="242b1b81-4cab-4ab7-a7cd-3ea69f052ca2">Mejoramiento funcionamiento base de equipos enfriamiento de bajo costo de inversión</a></td><td class="cell-;voQ">Se recomienda evaluar la incorporación de cobertores térmicos o reflectantes removibles para vitrinas refrigeradas y enfriadores verticales durante los horarios de cierre. Esta medida contribuye a reducir el ingreso de calor, disminuir la frecuencia de operación de los compresores y mejorar el rendimiento energético de los equipos. La aplicación de esta solución resulta especialmente interesante cuando se decide mantener los equipos energizados durante la noche mediante estrategias de ahorro energético, ya que permite reducir consumos sin comprometer la cadena de frío ni la vida útil de los artefactos.</td></tr><tr id="397938ab-0205-808a-88f2-d813a46a8663"><td class="cell-title"><a href="Mantenimiento%20preventivo%20de%20aire%20acondicionado%20397938ab0205808a88f2d813a46a8663.html" data-notion-page-id="397938ab-0205-808a-88f2-d813a46a8663" data-notion-space-id="242b1b81-4cab-4ab7-a7cd-3ea69f052ca2">Mantenimiento preventivo de aire acondicionado</a></td><td class="cell-;voQ">Mantener una adecuada limpieza de filtros y realizar revisiones periódicas del equipo. En caso de renovación futura, se recomienda evaluar la adquisición de equipos con clasificación energética superior y tecnología inverter, los cuales permiten reducir el consumo eléctrico manteniendo condiciones adecuadas de confort.</td></tr><tr id="397938ab-0205-8021-a7f1-dfe3904fac51"><td class="cell-title"><a href="Seguimiento%20sistem%C3%A1tico%20de%20los%20consumos%20energ%C3%A9tico%20397938ab02058021a7f1dfe3904fac51.html" data-notion-page-id="397938ab-0205-8021-a7f1-dfe3904fac51" data-notion-space-id="242b1b81-4cab-4ab7-a7cd-3ea69f052ca2"> Seguimiento sistemático de los consumos energéticos</a></td><td class="cell-;voQ">Implementar un registro mensual de consumo eléctrico utilizando la información contenida en las boletas de energía. A partir de estos datos se pueden establecer indicadores simples, como costo mensual, consumo por período y variaciones estacionales, facilitando la toma de decisiones relacionadas con el uso eficiente de la energía.</td></tr><tr id="397938ab-0205-8075-afc8-c6be80c03b11"><td class="cell-title"><a href="Avanzar%20a%20una%20gesti%C3%B3n%20energ%C3%A9tica%20adecuada%20al%20negoc%20397938ab02058075afc8c6be80c03b11.html" data-notion-page-id="397938ab-0205-8075-afc8-c6be80c03b11" data-notion-space-id="242b1b81-4cab-4ab7-a7cd-3ea69f052ca2">Avanzar a una gestión energética adecuada al negocio.</a></td><td class="cell-;voQ">Se recomienda avanzar gradualmente hacia una gestión energética básica mediante el seguimiento de consumos, la planificación de mantenimientos y la evaluación periódica de oportunidades de ahorro, permitiendo consolidar las buenas prácticas ya presentes en el negocio, como herramienta de valorización y valor agregado al negocio.</td></tr><tr id="397938ab-0205-8078-a0a2-ec5e1834de25"><td class="cell-title"><a href="Pre-evaluaci%C3%B3n%20de%20sistema%20Fotovoltaico%20397938ab02058078a0a2ec5e1834de25.html" data-notion-page-id="397938ab-0205-8078-a0a2-ec5e1834de25" data-notion-space-id="242b1b81-4cab-4ab7-a7cd-3ea69f052ca2">Pre-evaluación de sistema Fotovoltaico</a></td><td class="cell-;voQ">Se evaluó preliminarmente la factibilidad técnica de incorporar un sistema solar fotovoltaico en el Minimarket y Café Toñita, identificándose una superficie disponible en techumbre de aproximadamente <strong>70 m²</strong>, suficiente para la instalación de un sistema de <strong>3 kWp</strong> con almacenamiento mediante baterías de respaldo.<br/>La solución propuesta corresponde a un <strong>sistema híbrido</strong>, diseñado para generar alrededor de <strong>3.837 kWh al año</strong>, equivalentes a una producción promedio de <strong>10,51 kWh diarios</strong>. De acuerdo con las estimaciones realizadas, la instalación alcanzaría un <strong>factor de utilización cercano al 15%</strong>, valor consistente con las condiciones de recurso solar disponibles en la zona.<br/>Desde la perspectiva del consumo energético del negocio, la generación proyectada permitiría cubrir aproximadamente <strong>el 67% de la demanda eléctrica durante los meses de invierno</strong>, particularmente en junio y julio, cuando la producción solar es menor. Durante los meses de mayor radiación solar y alta actividad comercial, el sistema podría aportar <strong>más del 90% de los consumos eléctricos mensuales</strong>, reduciendo significativamente la dependencia de la red y los costos de operación.<br/>La incorporación de baterías permitiría almacenar parte de la energía generada durante el día para su utilización en horarios nocturnos, aportando mayor autonomía energética y capacidad de respaldo frente a eventuales interrupciones del suministro eléctrico, aspecto particularmente relevante para un negocio con alta dependencia de equipos de refrigeración.<br/>Considerando suministro de equipos, estructuras, inversor, sistema de almacenamiento, protecciones eléctricas e instalación, la inversión referencial para este proyecto se estima entre <strong>$6,5 millones y $9,0 millones de pesos</strong>, dependiendo de la capacidad final de almacenamiento y especificaciones de los equipos seleccionados.<br/>En virtud de los antecedentes revisados, la alternativa presenta una <strong>prefactibilidad técnica favorable</strong>, recomendándose avanzar hacia una evaluación de ingeniería de detalle para validar los aspectos estructurales, eléctricos y económicos del proyecto, con fondos de financiamiento adecuados para el perfil de la usuaria y el negocio. <a href="https://app.notion.com/p/Proveedores-Energ-ticos-pub-383938ab02058045b8e9c07564e3dca9?pvs=21">Se adjunta y complementa información de proveedores de servicios energéticos renovables en la isla aquí.</a></td></tr></tbody></table></div><br/><br/></div><h2 id="4b0938ab-0205-83db-b9cd-01a747bfe1cd" class="" dir="auto">Temas adicionales</h2><p id="6b0938ab-0205-8251-be5e-01d00fbfe7c8" class="" dir="auto">Como parte de las oportunidades de mejora identificadas durante la asesoría, se considera pertinente evaluar la incorporación del Minimarket y Café Toñita a un proceso de acompañamiento orientado a la obtención del <strong>Sello de Excelencia Energética para MiPyMEs</strong>, iniciativa impulsada por el Ministerio de Energía. Esta herramienta permite reconocer formalmente los esfuerzos realizados en materia de eficiencia energética, promover la mejora continua de la gestión de la energía y visibilizar el compromiso del negocio con la sostenibilidad y el uso responsable de los recursos energéticos. Asimismo, el proceso representa una oportunidad para estructurar y fortalecer las prácticas de gestión energética que actualmente se desarrollan de manera informal en el establecimiento.</p><h2 id="a74938ab-0205-83b5-b2b4-81c177022a66" class="" dir="auto">Acuerdos</h2><p id="fcc938ab-0205-83f0-be27-811994baf7bd" class="" dir="auto">e acuerda proponer e incorporar al Minimarket y Café Toñita en un proceso de acompañamiento técnico para la postulación y obtención del <strong>Sello de Excelencia Energética para MiPyMEs</strong>, entregando orientación sobre los requisitos, herramientas disponibles y acciones recomendadas para avanzar en el fortalecimiento de su gestión energética.</p><p id="397938ab-0205-80e6-aca2-e6dbae3eafdf" class="" dir="auto">Asimismo, desde la asesoría de la Seremi de Energía se compromete apoyo técnico para la revisión de antecedentes, identificación de medidas de eficiencia energética y acompañamiento general durante las distintas etapas del proceso, con el objetivo de facilitar la adopción de buenas prácticas y contribuir al mejoramiento continuo del desempeño energético del negocio en conjunto con el Sello Tāpa&#x27;o Ritomata.</p><h2 id="efc938ab-0205-82e7-b0ba-815e3d7f8dd2" class="" dir="auto">Información de utilidad</h2><div dir="auto"><table id="384938ab-0205-80a5-b49a-d5b2c2461a24" class="simple-table" dir="ltr"><tbody><tr id="384938ab-0205-80f3-a638-ca33cbe6de6d" dir="ltr"><td id="h_NM" class="" style="width:170.25px">👩‍🦰Instaladoras</td><td id="r;IE" class="" style="width:303px">Red de mujeres <strong>Instaladoras</strong> certificadas SEC, para regularización eléctrica y gas, análisis de tarifas, expansiones y proyectos</td><td id="{Bve" class="" style="width:237px"><a href="https://app.notion.com/p/Instaladoras-383938ab02058099998cfbfc8342a16b?pvs=21">Instaladoras SEC Certificadas</a></td></tr><tr id="384938ab-0205-807c-ac74-c74d0ac2c3e8" dir="ltr"><td id="h_NM" class="" style="width:170.25px">👷‍♂️Portal SEC de instaladores</td><td id="r;IE" class="" style="width:303px">Listado de profesionales certificados SEC oficial.</td><td id="{Bve" class="" style="width:237px"><a href="https://www.sec.cl/area-ciudadana/nuevo-buscador-de-instaladores-e-instaladoras/">Instaladoras e Instaladores Certificados por SEC</a></td></tr><tr id="384938ab-0205-80cc-9388-e492d52b5b9e" dir="ltr"><td id="h_NM" class="" style="width:170.25px">🏭Proveedores</td><td id="r;IE" class="" style="width:303px">Listado referencial proveedores de equipamiento renovable, no implica recomendación y es responsabilidad del mandante asegurar su cumplimiento y calidad.</td><td id="{Bve" class="" style="width:237px"><a href="https://app.notion.com/p/Proveedores-Energ-ticos-pub-383938ab02058045b8e9c07564e3dca9?pvs=21">Proveedores Energéticos (pub)</a></td></tr><tr id="384938ab-0205-80f6-9aed-fd6b371de3ec" dir="ltr"><td id="h_NM" class="" style="width:170.25px">🧠Registro de <strong>Consultores</strong></td><td id="r;IE" class="" style="width:303px">Plataforma digital  para conectar a profesionales y empresas que prestan servicios en eficiencia energética y energías renovables</td><td id="{Bve" class="" style="width:237px"><a href="https://consultores.registroenergetico.cl/">Registro de Consultores</a></td></tr><tr id="384938ab-0205-80f0-aef3-d5b57d6ed1e5" dir="ltr"><td id="h_NM" class="" style="width:170.25px">📚Biblioteca <strong>AgenciaSE</strong></td><td id="r;IE" class="" style="width:303px">Material Bibliográfico sobre Eficiencia Energética y Sistemas de Gestión de la Energía</td><td id="{Bve" class="" style="width:237px"><a href="https://www.agenciase.org/biblioteca/">Biblioteca – Agencia de Sostenibilidad Energética</a></td></tr><tr id="384938ab-0205-8062-a3d2-fa41f69aba5a" dir="ltr"><td id="h_NM" class="" style="width:170.25px">🛡️Sello EE</td><td id="r;IE" class="" style="width:303px">Sello de Eficiencia Energética, <mark class="highlight-yellow" data-notion-highlight="yellow">gratuito </mark>para MiPyMes</td><td id="{Bve" class="" style="width:237px"><a href="https://plataforma.selloee.cl/">SelloEE - Sello de Excelencia Energética</a></td></tr><tr id="384938ab-0205-809d-9b50-f796ebb5a884" dir="ltr"><td id="h_NM" class="" style="width:170.25px">🎯Gestiona Energía <strong>MiPyME</strong></td><td id="r;IE" class="" style="width:303px">El Ministerio de Energía ha desarrollado una serie de herramientas de fácil uso para que las MiPyMES puedan estimar el uso y generación de energía a lo largo del país.</td><td id="{Bve" class="" style="width:237px"><a href="https://mipymes.gestionaenergia.cl/herramientas">Herramientas | Gestiona Energía MiPyMEs</a></td></tr><tr id="384938ab-0205-804f-a419-d8f2ed643595" dir="ltr"><td id="h_NM" class="" style="width:170.25px">⚡Calculadora de <strong>ahorro energéticos</strong></td><td id="r;IE" class="" style="width:303px">Herramienta para calcular una primera aproximación de ahorros y beneficios</td><td id="{Bve" class="" style="width:237px"><a href="https://mipyme.agenciase.org/plataforma/">Plataforma Gestiona Energía</a></td></tr><tr id="388938ab-0205-80a5-8e2e-e3feda28e98f" dir="ltr"><td id="h_NM" class="" style="width:170.25px">🌿Calculadora de Energías Renovables</td><td id="r;IE" class="" style="width:303px">Calculadora de Ahorro para calcular de forma rápida el ahorro que podría obtener al instalar un sistema solar fotovoltaico y conectarlo a la red, de acuerdo a la Ley de Generación Distribuida.</td><td id="{Bve" class="" style="width:237px"><a href="https://solar.minenergia.cl/">Explorador Solar</a></td></tr><tr id="384938ab-0205-80ec-a59f-fc9e907e5b42" dir="ltr"><td id="h_NM" class="" style="width:170.25px">🧾Servicio de Diagnóstico ONLINE</td><td id="r;IE" class="" style="width:303px">Servicio de <strong>diagnóstico energético gratuito</strong> que, a partir de una revisión energética de la empresa, entrega recomendaciones sobre medidas de eficiencia energética y energía renovable</td><td id="{Bve" class="" style="width:237px"><a href="https://mipymes.gestionaenergia.cl/unidad-de-asistencia-tecnica">Asistencia Técnica Gratuita</a></td></tr><tr id="392938ab-0205-8064-8cbe-dba408471bda" dir="ltr"><td id="h_NM" class="" style="width:170.25px">❄️Cero Fugas PNUD</td><td id="r;IE" class="" style="width:303px">Apoyo técnico y cofinanciamiento para empresas con sistemas de refrigeración HCFC.</td><td id="{Bve" class="" style="width:237px"><a href="https://www.undp.org/es/chile/programa-cero-fugas">Programa Cero Fugas | Programa De Las Naciones Unidas Para El Desarrollo</a></td></tr></tbody></table></div><hr id="11c938ab-0205-83e5-bf7a-8102bfb06943" dir="auto"/><p id="718938ab-0205-833d-a18c-810d48933566" class="" dir="auto"><mark class="highlight-blue" data-notion-highlight="blue">━━━━━━</mark><mark class="highlight-red" data-notion-highlight="red">━━━━━━━━━━</mark></p><p id="8c7938ab-0205-82da-86e5-01624e3c9420" class="" dir="auto"><strong>Carlos Campos<br/></strong><mark class="highlight-gray" data-notion-highlight="gray">Analista Regional Eficiencia Energética<br/></mark>Seremi de Energía Región de Valparaíso <br/><mark class="highlight-purple" data-notion-highlight="purple">ccamposn@minenergia.cl</mark></p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>

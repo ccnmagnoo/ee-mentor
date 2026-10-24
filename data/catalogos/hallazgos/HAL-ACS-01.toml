@@ -1,0 +1,16 @@
+schema_version = 1
+id = "HAL-ACS-01"
+codigo = "ACS-01"
+titulo = "Calefón o termo eléctrico ineficiente y sobredimensionado"
+categoria = "acs"
+descripcion = "El sistema de agua caliente sanitaria está compuesto por calefones o termos eléctricos de tecnología antigua, con capacidad superior a la demanda real y sin aislación adicional."
+justificacion = "Un equipo sobredimensionado opera con ciclos ineficientes y mayores pérdidas de acumulación. La renovación por equipos de alta eficiencia reduce el consumo de combustible o electricidad."
+impacto = "alto"
+energetico = "glp"
+recomendacion_id = "REC-ACS-01"
+tags = [ "acs", "calefon", "termo" ]
+activo = true
+origen = "catalogo_base"
+created_at = "2026-01-01T00:00:00.000Z"
+updated_at = "2026-01-01T00:00:00.000Z"
+

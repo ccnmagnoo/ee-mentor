@@ -1,0 +1,20 @@
+schema_version = 1
+id = "REC-ENV-03"
+codigo = "REC-ENV-03"
+titulo = "Aislación térmica de cubierta y muros"
+categoria = "envolvente"
+descripcion = "Incorporar aislación térmica en cubierta y muros priorizando las áreas con mayor pérdida, y corregir puentes térmicos y condensaciones."
+beneficio = "Reduce la demanda de climatización de forma sostenida, mejora el confort y puede disminuir el riesgo de humedad y deterioro estructural."
+inversion = "alta"
+dificultad = "alta"
+prioridad = "media"
+ahorro_estimado = "10-20% del consumo de climatización"
+plazo = "Largo plazo (6-12 meses)"
+energetico = "electricidad"
+hallazgos_relacionados = [ "HAL-ENV-03" ]
+tags = [ "envolvente", "aislacion", "cubierta" ]
+activo = true
+origen = "catalogo_base"
+created_at = "2026-01-01T00:00:00.000Z"
+updated_at = "2026-01-01T00:00:00.000Z"
+

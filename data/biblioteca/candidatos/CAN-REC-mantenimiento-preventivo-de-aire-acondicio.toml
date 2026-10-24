@@ -1,0 +1,13 @@
+id = "CAN-REC-mantenimiento-preventivo-de-aire-acondicio"
+tipo = "recomendacion"
+titulo = "Mantenimiento preventivo de aire acondicionado"
+descripcion = "Mantener una adecuada limpieza de filtros y realizar revisiones periódicas del equipo. En caso de renovación futura, se recomienda evaluar la adquisición de equipos con clasificación energética superior y tecnología inverter, los cuales permiten reducir el consumo eléctrico manteniendo condiciones adecuadas de confort."
+categoria = "mantencion"
+impacto = "medio"
+inversion = "baja"
+dificultad = "media"
+origen = "casos:Cafetería"
+fuente_id = "FUE-minimarket-y-cafe-tonita-392938ab02058043b56ae72"
+estado = "pendiente"
+created_at = "2026-10-24T17:57:09.753Z"
+

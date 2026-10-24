@@ -1,0 +1,20 @@
+schema_version = 1
+id = "REC-ILUM-03"
+codigo = "REC-ILUM-03"
+titulo = "Plan de mantención y limpieza de luminarias"
+categoria = "iluminacion"
+descripcion = "Establecer una pauta semestral de limpieza de luminarias y difusores, revisión de conexiones y reemplazo de equipos con parpadeo o baja intensidad."
+beneficio = "Recupera los niveles de iluminación diseñados, evita sobredimensionar la potencia instalada y prolonga la vida útil de los equipos."
+inversion = "baja"
+dificultad = "baja"
+prioridad = "media"
+ahorro_estimado = "5-15% del consumo de iluminación"
+plazo = "Inmediato (0-30 días)"
+energetico = "electricidad"
+hallazgos_relacionados = [ "HAL-ILUM-04" ]
+tags = [ "iluminacion", "mantencion", "limpieza" ]
+activo = true
+origen = "catalogo_base"
+created_at = "2026-01-01T00:00:00.000Z"
+updated_at = "2026-01-01T00:00:00.000Z"
+

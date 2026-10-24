@@ -1,0 +1,13 @@
+id = "CAN-HAL-congeladores-verticales"
+tipo = "hallazgo"
+titulo = "Congeladores verticales"
+descripcion = "Cuenta con 3 congeladores verticales, los cuales operan de forma continua durante todo el año, constituyendo una carga base permanente. Su aporte al consumo energético es relevante debido a las bajas temperaturas requeridas para la conservación de productos entre -20 o -18°C. Algunos riesgos detectados son la acumulación de escarcha en evaporadores. Aperturas frecuentes de puertas. Eventual degradación de los equipos con un deterioro de sellos de aislamiento, además de la sobrecarga de productos que dificulta la circulación del aire frío. Otro riesgo es la potencial ubicación cercana a fuentes de calor o lugares con escaza ventilación."
+categoria = "envolvente"
+impacto = "alto"
+inversion = "baja"
+dificultad = "baja"
+origen = "casos:Cafetería"
+fuente_id = "FUE-la-boulangerie-390938ab0205801fb682ff6930a172ba"
+estado = "pendiente"
+created_at = "2026-10-24T17:57:09.230Z"
+

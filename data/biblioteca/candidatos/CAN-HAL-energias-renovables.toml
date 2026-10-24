@@ -1,0 +1,13 @@
+id = "CAN-HAL-energias-renovables"
+tipo = "hallazgo"
+titulo = "Energías Renovables"
+descripcion = "La empresa no cuenta con integración de energías renovables, lo que implica una dependencia total de fuentes convencionales. Si bien la actual intensidad del consumo energético del proceso productivo podría limitar el impacto técnico de estas soluciones, existe una brecha estratégica relevante en términos de sostenibilidad, especialmente considerando las exigencias del cliente mayoritario el cuál tiene especial interés en la sostenibilidad de sus proveedores. La falta de iniciativas en este ámbito puede afectar la competitividad, la imagen corporativa y el cumplimiento de compromisos ambientales en el mediano y corto plazo."
+categoria = "ernc"
+impacto = "medio"
+inversion = "baja"
+dificultad = "baja"
+origen = "casos:Cafetería; casos:Restaurante; casos:No especificado; casos:Pastelería"
+fuente_id = "FUE-vijon-pasteleria-382938ab02058081bcb6de5c89055ba"
+estado = "pendiente"
+created_at = "2026-10-24T17:57:09.374Z"
+

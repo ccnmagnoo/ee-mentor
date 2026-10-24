@@ -1,0 +1,9 @@
+schema_version = 1
+id = "REC-REGISTRO-CONSULTORES"
+categoria = "eficiencia_energetica"
+nombre = "Registro de Consultores Energéticos"
+descripcion = "Plataforma para contactar profesionales y empresas que prestan servicios de eficiencia energética y energías renovables."
+url = "https://consultores.registroenergetico.cl/"
+orden = 60
+activo = true
+

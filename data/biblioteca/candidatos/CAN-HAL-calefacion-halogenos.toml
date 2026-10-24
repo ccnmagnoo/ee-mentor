@@ -1,0 +1,13 @@
+id = "CAN-HAL-calefacion-halogenos"
+tipo = "hallazgo"
+titulo = "Calefación halógenos"
+descripcion = "El hotel no cuenta con un sistema de calefacción centralizado , utilizando calefactores eléctricos halógenos , siendo los de las habitaciones más grandes de 2 kW de potencia , lo que genera un consumo eléctrico relevante y concentrado en períodos de mayor demanda térmica"
+categoria = "calderas"
+impacto = "medio"
+inversion = "baja"
+dificultad = "baja"
+origen = "casos:Hotel pequeño"
+fuente_id = "FUE-hotel-asturias-383938ab0205806999a2c62923829735"
+estado = "pendiente"
+created_at = "2026-10-24T17:57:09.162Z"
+

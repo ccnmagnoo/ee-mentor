@@ -1,0 +1,9 @@
+schema_version = 1
+id = "REC-MINENERGIA-EE"
+categoria = "ministerio_energia"
+nombre = "Ministerio de Energía — Eficiencia Energética"
+descripcion = "Políticas, programas y material de apoyo sobre eficiencia energética en Chile."
+url = "https://www.energia.gob.cl/eficiencia-energetica"
+orden = 120
+activo = true
+

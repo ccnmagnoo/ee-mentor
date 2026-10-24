@@ -1,0 +1,13 @@
+id = "CAN-HAL-uso-domiciliario"
+tipo = "hallazgo"
+titulo = "Uso domiciliario"
+descripcion = "Existe un uso de una tarifa BT1 para una fábrica procesadora de alimentos , donde además se alimentan dos viviendas , constituye una falencia relevante en la gestión energética y contractual del suministro eléctrico . La tarifa BT1 está diseñada para consumos residenciales o de muy baja escala , sin considerar perfiles de carga productivos ni usos intensivos de energía."
+categoria = "gestion_energetica"
+impacto = "medio"
+inversion = "baja"
+dificultad = "baja"
+origen = "casos:Pastelería"
+fuente_id = "FUE-vijon-pasteleria-382938ab02058081bcb6de5c89055ba"
+estado = "pendiente"
+created_at = "2026-10-24T17:57:10.286Z"
+

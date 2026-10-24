@@ -1,0 +1,13 @@
+id = "CAN-REC-mejoramiento-operativo-camaras-congelado"
+tipo = "recomendacion"
+titulo = "Mejoramiento operativo cámaras congelado"
+descripcion = "Se recomienda mantener una diferenciación clara y estricta de uso entre ambas cámaras, optimizando su operación según el tipo de producto. La cámara de materias primas debe orientarse a almacenamiento de baja rotación, minimizando aperturas y asegurando una organización interna eficiente (sistema FIFO, orden por tipo de producto). En cambio, la cámara de productos terminados debe operar con una lógica de alta rotación, con un layout que facilite un acceso rápido y reduzca el tiempo de apertura de puertas."
+categoria = "gestion_operacional"
+impacto = "medio"
+inversion = "media"
+dificultad = "media"
+origen = "casos:Restaurante; casos:No especificado"
+fuente_id = "FUE-stefymar-382938ab0205804e85d2cd29aa1f7eb1"
+estado = "pendiente"
+created_at = "2026-10-24T17:57:09.508Z"
+

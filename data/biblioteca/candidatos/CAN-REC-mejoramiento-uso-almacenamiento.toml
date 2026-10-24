@@ -1,0 +1,13 @@
+id = "CAN-REC-mejoramiento-uso-almacenamiento"
+tipo = "recomendacion"
+titulo = "Mejoramiento uso almacenamiento"
+descripcion = "Se recomienda implementar una diferenciación clara de usos entre equipos de almacenamiento y equipos de operación para refrigerados y congelados , estableciendo que el mesón refrigerado sea utilizado exclusivamente como superficie de trabajo con apoyo de conservación temporal (alta rotación), mientras que el almacenamiento principal de alimentos debe realizarse en refrigeradores o cámaras diseñadas para conservación prolongada . Estos equipos presentan mejor aislación térmica, menor variación de temperatura y mayor eficiencia energética para este propósito.\nAdicionalmente, se sugiere establecer un protocolo interno de gestión de alimentos , que incluya: traslado periódico desde almacenamiento a mesón según demanda (sistema FIFO), minimización de aperturas innecesarias, y control de temperaturas de ambos equipos. Desde la perspectiva energética, esta medida permite reducir el consumo eléctrico, optimizar la operación de los equipos y prolongar su vida útil , contribuyendo a una gestión más eficiente y sostenible del local."
+categoria = "refrigeracion"
+impacto = "medio"
+inversion = "baja"
+dificultad = "media"
+origen = "casos:Cafetería"
+fuente_id = "FUE-cafe-colores-382938ab020580c59ae6d8d19349a7b0"
+estado = "pendiente"
+created_at = "2026-10-24T17:57:09.040Z"
+

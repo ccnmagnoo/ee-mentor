@@ -1,0 +1,17 @@
+schema_version = 1
+id = "EMP-003"
+nombre = "Hostal Brisa Marina"
+rut = "76.221.604-8"
+direccion = "Los Pinos 48"
+comuna = "Concón"
+region = "Valparaíso"
+rubro = "Hostal"
+contacto = "Paula Reyes"
+telefono = "+56 9 5544 7781"
+correo = "reservas@brisamarina.cl"
+trabajadores = 6
+superficie_m2 = 185
+observaciones = "Hostal de 9 habitaciones con desayuno incluido. Mayor ocupación entre diciembre y marzo; calefacción con equipos individuales."
+created_at = "2026-09-01T10:00:00.000Z"
+updated_at = "2026-01-01T00:00:00.000Z"
+

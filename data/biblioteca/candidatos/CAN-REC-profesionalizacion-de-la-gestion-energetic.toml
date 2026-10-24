@@ -1,0 +1,13 @@
+id = "CAN-REC-profesionalizacion-de-la-gestion-energetic"
+tipo = "recomendacion"
+titulo = "Profesionalización de la Gestión Energética"
+descripcion = "Se recomienda implementar un proceso de profesionalización de la gestión energética en el rubro Hotelero , orientado a establecer una administración sistemática, continua y basada en indicadores del uso de la energía. Este enfoque implica la designación de un encargado o equipo responsable , junto con la adopción de herramientas de monitoreo, control y análisis que permitan gestionar eficientemente consumos en sistemas críticos como climatización, iluminación, equipos de lavandería y servicio de agua caliente.\nLa incorporación de una gestión energética formal permite identificar oportunidades de mejora, reducir costos operacionales y aumentar la confiabilidad de las instalaciones , aspectos clave en entornos hospitalarios donde la continuidad de servicio es fundamental. Asimismo, avanzar hacia esquemas estructurados —como la implementación de buenas prácticas o incluso sistemas basados en estándares (por ejemplo, ISO 50.001)— contribuye a fortalecer la sostenibilidad, la eficiencia y la toma de decisiones informadas dentro de la organización. Puede Revisar en \n Guía de Gestión Energética Sector Hotelero"
+categoria = "gestion_operacional"
+impacto = "alto"
+inversion = "baja"
+dificultad = "media"
+origen = "casos:Hotel pequeño"
+fuente_id = "FUE-hotel-asturias-383938ab0205806999a2c62923829735"
+estado = "pendiente"
+created_at = "2026-10-24T17:57:09.179Z"
+

@@ -1,0 +1,20 @@
+schema_version = 1
+id = "REC-GEST-02"
+codigo = "REC-GEST-02"
+titulo = "Medición y monitoreo de consumos"
+categoria = "gestion_energetica"
+descripcion = "Registrar mensualmente la facturación y, si es posible, instalar remarcadores o medidores por área. Mantener una planilla con consumos, costos, producción y observaciones."
+beneficio = "Permite verificar el impacto de las medidas, comparar períodos y priorizar nuevas acciones con información confiable."
+inversion = "baja"
+dificultad = "media"
+prioridad = "alta"
+ahorro_estimado = "5-10% del consumo total"
+plazo = "Corto plazo (1-3 meses)"
+energetico = "electricidad"
+hallazgos_relacionados = [ "HAL-GEST-02" ]
+tags = [ "gestion", "medicion", "remarcador" ]
+activo = true
+origen = "catalogo_base"
+created_at = "2026-01-01T00:00:00.000Z"
+updated_at = "2026-01-01T00:00:00.000Z"
+

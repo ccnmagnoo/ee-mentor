@@ -1,0 +1,16 @@
+schema_version = 1
+id = "HAL-MOT-02"
+codigo = "MOT-02"
+titulo = "Falta de mantención de motores y transmisiones"
+categoria = "motores"
+descripcion = "Se observan correas flojas, poleas desalineadas, rodamientos con ruido o motores con acumulación de suciedad. No existe un plan de mantención mecánica documentado."
+justificacion = "La fricción y desalineación aumentan las pérdidas mecánicas y el consumo. La mantención preventiva es de bajo costo y prolonga la vida útil de los equipos."
+impacto = "medio"
+energetico = "electricidad"
+recomendacion_id = "REC-MOT-02"
+tags = [ "motores", "mantencion", "correas" ]
+activo = true
+origen = "catalogo_base"
+created_at = "2026-01-01T00:00:00.000Z"
+updated_at = "2026-01-01T00:00:00.000Z"
+

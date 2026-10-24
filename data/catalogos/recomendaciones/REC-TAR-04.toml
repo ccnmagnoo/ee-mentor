@@ -1,0 +1,20 @@
+schema_version = 1
+id = "REC-TAR-04"
+codigo = "REC-TAR-04"
+titulo = "Segregación de medidores y regularización"
+categoria = "tarifas"
+descripcion = "Separar los consumos productivos, administrativos y residenciales en medidores independientes, con proyecto y ejecución por instaladores certificados SEC."
+beneficio = "Permite aplicar la tarifa correcta, transparentar costos por área y evitar subsidios cruzados."
+inversion = "media"
+dificultad = "alta"
+prioridad = "media"
+ahorro_estimado = "5-15% de la factura eléctrica"
+plazo = "Mediano plazo (3-6 meses)"
+energetico = "electricidad"
+hallazgos_relacionados = [ "HAL-TAR-04" ]
+tags = [ "tarifa", "medidor", "regularizacion" ]
+activo = true
+origen = "catalogo_base"
+created_at = "2026-01-01T00:00:00.000Z"
+updated_at = "2026-01-01T00:00:00.000Z"
+

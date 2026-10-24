@@ -1,0 +1,65 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import PageHeader from '@/components/ui/PageHeader.astro';
+import VisitaForm from '@/components/visitas/VisitaForm.astro';
+import { ASSESSOR_DEFAULT, todayISO } from '@/lib/config';
+import { catalogos, empresas, visitas } from '@/lib/repositories';
+
+const { id } = Astro.params;
+if (!id) return Astro.redirect('/empresas');
+const empresa = await empresas.get(id);
+if (!empresa) return Astro.redirect('/empresas');
+
+const [hallazgos, recomendaciones, historial] = await Promise.all([
+  catalogos.listHallazgos(),
+  catalogos.listRecomendaciones(),
+  visitas.listByEmpresa(empresa.id),
+]);
+
+const ultima = historial[0] ?? null;
+const plantilla = ultima ? { ...ultima, fecha: todayISO(), proxima_visita: '' } : null;
+const reutiliza = Boolean(ultima);
+---
+
+<Layout title={`Nueva visita · ${empresa.nombre}`}>
+  <PageHeader
+    eyebrow="Visita energética"
+    title={`Nueva visita · ${empresa.nombre}`}
+    subtitle={
+      reutiliza
+        ? `Se precargó la configuración de la visita ${ultima?.id} (${ultima?.fecha}). Revisa y ajusta los datos antes de guardar.`
+        : 'Completa la pauta de diagnóstico. Al guardar se genera el informe Markdown automáticamente.'
+    }
+    breadcrumbs={[
+      { label: 'Empresas', href: '/empresas' },
+      { label: empresa.nombre, href: `/empresas/${empresa.id}` },
+      { label: 'Nueva visita' },
+    ]}
+  />
+
+  {reutiliza && (
+    <div class="mb-5 flex items-start gap-3 rounded-xl border border-sky-200 bg-sky-50 px-4 py-3 text-sm text-sky-900">
+      <span class="mt-0.5 text-sky-600">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 12a9 9 0 1 1-9-9c2.5 0 4.8 1 6.4 2.6L21 8"/><path d="M21 3v5h-5"/></svg>
+      </span>
+      <div>
+        <p class="font-semibold">Reutilización de configuración activada</p>
+        <p class="mt-0.5 text-xs leading-relaxed text-sky-700">
+          Los energéticos, equipos, puntajes, hallazgos y recomendaciones de la última visita vienen precargados. La fecha se actualizó a hoy.
+        </p>
+      </div>
+    </div>
+  )}
+
+  <VisitaForm
+    empresa={empresa}
+    action={`/api/empresas/${empresa.id}/visitas`}
+    visita={plantilla}
+    hallazgos={hallazgos}
+    recomendaciones={recomendaciones}
+    asesorDefault={ASSESSOR_DEFAULT}
+    submitLabel="Guardar visita y generar informe"
+    cancelHref={`/empresas/${empresa.id}`}
+    esNueva
+  />
+</Layout>

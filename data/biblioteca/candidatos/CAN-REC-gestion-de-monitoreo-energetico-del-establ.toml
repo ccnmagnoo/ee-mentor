@@ -1,0 +1,13 @@
+id = "CAN-REC-gestion-de-monitoreo-energetico-del-establ"
+tipo = "recomendacion"
+titulo = "Gestión de monitoreo energético del establecimiento"
+descripcion = "Se recomienda implementar un sistema básico de gestión de la energía que contemple el registro periódico de consumos eléctricos, seguimiento de cuentas, definición de indicadores energéticos y revisión periódica de los principales equipos consumidores. Complementariamente, se sugiere utilizar herramientas gratuitas disponibles para MiPyMes, tales como las plataformas Gestiona Energía MiPyME, diagnósticos energéticos en línea y el Sello de Excelencia Energética, con el fin de fortalecer la cultura de eficiencia energética y facilitar la identificación continua de oportunidades de mejora."
+categoria = "gestion_energetica"
+impacto = "medio"
+inversion = "baja"
+dificultad = "media"
+origen = "casos:Cafetería"
+fuente_id = "FUE-la-creperia-rapa-nui-392938ab020580b2b86bcfcf44b"
+estado = "pendiente"
+created_at = "2026-10-24T17:57:09.431Z"
+

@@ -1,0 +1,13 @@
+id = "CAN-HAL-aislamiento-termico"
+tipo = "hallazgo"
+titulo = "Aislamiento térmico"
+descripcion = "El local posee dos ventanales convencionales sin medidas de aislamiento térmico. Esta condición puede favorecer ganancias de calor durante los períodos cálidos y pérdidas térmicas durante épocas frías, afectando el confort interior y aumentando la necesidad de ventilación o enfriamiento."
+categoria = "envolvente"
+impacto = "alto"
+inversion = "baja"
+dificultad = "baja"
+origen = "casos:Comercio minorista; casos:Restaurante"
+fuente_id = "FUE-rito-mata-390938ab0205809584b2c563debd6138"
+estado = "pendiente"
+created_at = "2026-10-24T17:57:09.097Z"
+

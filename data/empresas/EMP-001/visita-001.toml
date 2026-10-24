@@ -1,0 +1,188 @@
+schema_version = 1
+empresa_id = "EMP-001"
+id = "VIS-001"
+fecha = "2026-06-17"
+asesor = "Carlos Campos N."
+grado_consumo = "moderado"
+descripcion_perfil = "Café Aurora es una cafetería de pequeña escala ubicada en una galería comercial de Viña del Mar. La electricidad es el energético principal y se destina a máquinas de café, horno de convección, refrigeración e iluminación. El GLP se utiliza en la plancha y en la cocina. El mayor consumo se concentra en la preparación de alimentos y en los equipos de frío que operan de forma continua. La iluminación permanece encendida durante toda la jornada y la climatización se apoya en un calefactor portátil en invierno."
+usos_finales = [ "iluminacion", "refrigeracion", "coccion", "climatizacion" ]
+acuerdos = [ "El consultor apoyará el registro mensual de consumos durante los próximos tres meses.", "La empresa solicitará cotización de luminarias LED y sellos para puertas y ventanas." ]
+proxima_visita = "2026-11-15"
+observaciones = "Se entrega listado de instaladores certificados y recursos públicos de apoyo."
+created_at = "2026-06-17T15:00:00.000Z"
+updated_at = "2026-01-01T00:00:00.000Z"
+
+[[energeticos]]
+tipo = "electricidad"
+consumo = 712
+unidad = "kWh/mes"
+costo = 112000
+observacion = "Consumo promedio últimos 6 meses. Tarifa BT1."
+
+[[energeticos]]
+tipo = "glp"
+consumo = 45
+unidad = "kg/mes"
+costo = 68000
+observacion = "Suministro en cilindro de 45 kg."
+
+[[equipos]]
+nombre = "Máquina de espresso doble grupo"
+cantidad = 1
+potencia_w = 3200
+horas_dia = 10
+estado = "regular"
+observacion = "Opera desde la apertura; incluye caldera."
+
+[[equipos]]
+nombre = "Horno de convección"
+cantidad = 1
+potencia_w = 2800
+horas_dia = 6
+estado = "regular"
+observacion = "Uso discontinuo con aperturas frecuentes."
+
+[[equipos]]
+nombre = "Vitrina refrigerada de exhibición"
+cantidad = 2
+potencia_w = 450
+horas_dia = 24
+estado = "regular"
+observacion = "Una se usa como almacén prolongado."
+
+[[equipos]]
+nombre = "Congelador vertical"
+cantidad = 1
+potencia_w = 380
+horas_dia = 24
+estado = "deficiente"
+observacion = "Escarcha visible en evaporador."
+
+[[equipos]]
+nombre = "Calefactor portátil"
+cantidad = 2
+potencia_w = 2000
+horas_dia = 5
+estado = "deficiente"
+observacion = "Uso en invierno."
+
+[secciones.iluminacion]
+puntaje = 2
+observaciones = "Tubos fluorescentes en sala y bodega. Sin zonificación."
+tecnologia = "fluorescente"
+estado = "regular"
+horas_uso_diarias = 12
+
+[secciones.refrigeracion]
+puntaje = 2
+observaciones = "Vitrina usada como almacén y condensadores sucios."
+cantidad_equipos = 3
+antiguedad_anios = 7
+mantencion = "ocasional"
+
+[secciones.congelacion]
+puntaje = 2
+observaciones = "Escarcha acumulada y control por percepción."
+cantidad_equipos = 1
+antiguedad_anios = 8
+estado = "deficiente"
+
+[secciones.climatizacion]
+puntaje = 1
+observaciones = "Calefactores individuales como estrategia principal."
+tecnologia = "Calefactor eléctrico portátil"
+mantenciones = "sin_mantencion"
+control_temperatura = "manual"
+
+[secciones.acs]
+puntaje = 2
+observaciones = "Agua caliente para café y aseo; sin aislación en tuberías."
+tecnologia = "Caldera de espresso y termo eléctrico"
+fuente_energetica = "electricidad"
+horarios = "Toda la jornada"
+
+[secciones.coccion]
+puntaje = 2
+observaciones = "Horno con baja carga y aperturas frecuentes."
+equipos_principales = "Horno de convección, plancha a gas, cocina"
+combustible = "glp"
+
+[secciones.motores]
+puntaje = 3
+observaciones = "Sin motores relevantes; equipos de refrigeración en regular estado."
+tipo = "Compresores de refrigeración"
+estado = "regular"
+mantencion = "ocasional"
+
+[secciones.envolvente]
+puntaje = 1
+observaciones = "Puertas y ventanas con infiltraciones; sin burletes."
+ventanas = "regular"
+puertas = "deficiente"
+infiltraciones = "deficiente"
+aislacion = "no_evaluado"
+
+[secciones.gestion]
+puntaje = 1
+observaciones = "No existe gestión energética ni registro de consumos."
+nivel = "sin_gestion"
+monitoreo = false
+responsable = ""
+
+[secciones.tarifas]
+puntaje = 2
+observaciones = "Tarifa BT1 sin análisis de perfil."
+tarifa_actual = "BT1"
+potencia_contratada_kw = 0
+factor_potencia = 0
+
+[[hallazgos]]
+hallazgo_id = "HAL-ILUM-01"
+justificacion = "Se contabilizaron 18 tubos fluorescentes en sala, bodega y baño, con 12 horas diarias de uso."
+
+[[hallazgos]]
+hallazgo_id = "HAL-CLIM-01"
+justificacion = "Dos calefactores de 2 kW se utilizan en paralelo durante el invierno."
+
+[[hallazgos]]
+hallazgo_id = "HAL-REFR-01"
+justificacion = "Una vitrina de exhibición se utiliza para almacenar productos durante la noche."
+
+[[hallazgos]]
+hallazgo_id = "HAL-GEST-01"
+justificacion = "No se registran consumos ni existe un responsable energético designado."
+
+[[hallazgos]]
+hallazgo_id = "HAL-ENV-02"
+justificacion = "Se perciben corrientes de aire en la puerta de acceso y en la ventana lateral."
+
+[[recomendaciones]]
+recomendacion_id = "REC-ILUM-01"
+prioridad = "alta"
+observacion = "Priorizar sala de atención y bodega."
+
+[[recomendaciones]]
+recomendacion_id = "REC-CLIM-01"
+prioridad = "alta"
+observacion = "Evaluar split inverter de 12.000 BTU."
+
+[[recomendaciones]]
+recomendacion_id = "REC-REFR-01"
+prioridad = "alta"
+observacion = "Rotular vitrinas y habilitar espacio de almacenamiento."
+
+[[recomendaciones]]
+recomendacion_id = "REC-ENV-02"
+prioridad = "alta"
+observacion = "Instalar burletes y cierrapuertas."
+
+[[recomendaciones]]
+recomendacion_id = "REC-COCC-01"
+prioridad = "media"
+observacion = "Agrupar la producción de masas en tandas."
+
+[[recomendaciones]]
+recomendacion_id = "REC-GEST-01"
+prioridad = "alta"
+observacion = "Comenzar con registro mensual de facturas."
+

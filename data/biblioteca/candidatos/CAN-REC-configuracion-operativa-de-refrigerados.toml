@@ -1,0 +1,13 @@
+id = "CAN-REC-configuracion-operativa-de-refrigerados"
+tipo = "recomendacion"
+titulo = "Configuración operativa de refrigerados"
+descripcion = "Se recomienda ajustar los parámetros de operación de las vitrinas en función de condiciones estacionales y ciclos de uso:\n Ajuste por temporada \n- Verano / altas temperaturas: Incrementar capacidad de refrigeración (setpoint más exigente dentro de rango seguro).\n- Verificar sellos, cortinas de aire y correcto funcionamiento de condensadores.\n- Invierno / bajas temperaturas: Reducir la potencia de refrigeración cuando sea posible y ajustar setpoints para evitar sobreenfriamiento y consumo innecesario.\n Ajuste por ciclo día–noche \n- Horario de atención (día): \n- Operación a capacidad nominal , asegurando temperatura de conservación y correcta exhibición.\n- Horario no operativo (noche): \nAplicar modo ahorro energético , mediante el incremento controlado del setpoint (sin comprometer la cadena de frío). Uso de cubiertas o cortinas térmicas y reducción de iluminación interna de vitrinas que no se estén utilizando.\n Se recomienda ajuste de setpoint por tipo de equipo: \n- Refrigeradores: mantener entre 2°C y 5°C .\n- Congeladores: entre -18°C y -20°C .\n- Evitar configuraciones más bajas, ya que aumentan innecesariamente el consumo energético sin beneficios sanitarios relevantes."
+categoria = "refrigeracion"
+impacto = "medio"
+inversion = "baja"
+dificultad = "media"
+origen = "casos:Pastelería"
+fuente_id = "FUE-vijon-pasteleria-382938ab02058081bcb6de5c89055ba"
+estado = "pendiente"
+created_at = "2026-10-24T17:57:10.359Z"
+

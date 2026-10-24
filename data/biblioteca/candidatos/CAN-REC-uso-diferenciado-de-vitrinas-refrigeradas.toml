@@ -1,0 +1,13 @@
+id = "CAN-REC-uso-diferenciado-de-vitrinas-refrigeradas"
+tipo = "recomendacion"
+titulo = "Uso diferenciado de vitrinas refrigeradas"
+descripcion = "Se recomienda establecer un criterio operativo claro para el uso de vitrinas refrigeradas , alineado con su función principal de exhibición y venta, con el objetivo de optimizar el consumo energético y asegurar condiciones adecuadas de conservación de alimentos.\nLas vitrinas refrigeradas deben destinarse exclusivamente a:\n• Exhibición de productos disponibles para venta inmediata .\n• Mantención de alimentos listos para consumo en el corto plazo .\nEn este contexto:\n• Se desaconseja su utilización como sistemas de almacenamiento prolongado, debido a:\n ◦ Menor hermeticidad frente a equipos cerrados.\n ◦ Variaciones térmicas por aperturas frecuentes.\n ◦ Mayor demanda energética para mantener temperatura.\n• Para almacenamiento de insumos o productos de mayor duración, se deben utilizar equipos diseñados para ese fin (refrigeradores verticales, cámaras frigoríficas, etc.)."
+categoria = "refrigeracion"
+impacto = "medio"
+inversion = "baja"
+dificultad = "media"
+origen = "casos:Cafetería"
+fuente_id = "FUE-marcoffee-cl-382938ab0205803990d9ca01572d5b71"
+estado = "pendiente"
+created_at = "2026-10-24T17:57:09.614Z"
+

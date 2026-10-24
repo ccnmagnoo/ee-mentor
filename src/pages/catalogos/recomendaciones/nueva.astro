@@ -1,0 +1,26 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import PageHeader from '@/components/ui/PageHeader.astro';
+import CatalogoForm from '@/components/catalogos/CatalogoForm.astro';
+---
+
+<Layout title="Nueva recomendación" description="Crear una recomendación en el catálogo">
+  <PageHeader
+    eyebrow="Catálogos"
+    title="Nueva recomendación"
+    subtitle="Registra una medida de mejora reutilizable y su clasificación económica."
+    breadcrumbs={[
+      { label: 'Catálogos', href: '/catalogos' },
+      { label: 'Recomendaciones', href: '/catalogos?tab=recomendaciones' },
+      { label: 'Nueva' },
+    ]}
+  />
+
+  <div class="max-w-4xl">
+    <CatalogoForm
+      tipo="recomendacion"
+      action="/api/catalogos/recomendaciones"
+      cancelHref="/catalogos?tab=recomendaciones"
+    />
+  </div>
+</Layout>

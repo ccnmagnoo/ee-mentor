@@ -1,0 +1,16 @@
+schema_version = 1
+id = "HAL-ACS-02"
+codigo = "ACS-02"
+titulo = "Tuberías de agua caliente sin aislación"
+categoria = "acs"
+descripcion = "Se observan tramos de tubería de agua caliente sin aislación térmica, especialmente en recorridos largos entre el equipo y los puntos de consumo. También se detectan filtraciones menores."
+justificacion = "Las pérdidas en tuberías no aisladas obligan a elevar la temperatura de consigna y aumentan el consumo. Aislar los tramos accesibles es una medida de bajo costo."
+impacto = "bajo"
+energetico = "glp"
+recomendacion_id = "REC-ACS-02"
+tags = [ "acs", "aislacion", "tuberias" ]
+activo = true
+origen = "catalogo_base"
+created_at = "2026-01-01T00:00:00.000Z"
+updated_at = "2026-01-01T00:00:00.000Z"
+

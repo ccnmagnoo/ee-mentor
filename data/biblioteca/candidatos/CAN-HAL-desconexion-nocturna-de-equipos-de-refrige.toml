@@ -1,0 +1,13 @@
+id = "CAN-HAL-desconexion-nocturna-de-equipos-de-refrige"
+tipo = "hallazgo"
+titulo = "Desconexión nocturna de equipos de refrigeración como estrategia de control de consumo"
+descripcion = "Se identificó que los enfriadores verticales (VC Coolers) son desconectados durante la noche con el objetivo de reducir el consumo eléctrico. Si bien esta práctica puede generar una disminución temporal del gasto energético, también puede producir incrementos importantes de temperatura en los productos almacenados, mayores demandas de potencia al momento del reencendido y un aumento del desgaste de compresores y componentes eléctricos debido a los ciclos de parada y arranque. Además, dependiendo del tiempo fuera de servicio y del tipo de producto almacenado, esta práctica podría afectar la continuidad de la cadena de frío."
+categoria = "refrigeracion"
+impacto = "medio"
+inversion = "baja"
+dificultad = "baja"
+origen = "casos:Cafetería"
+fuente_id = "FUE-minimarket-y-cafe-tonita-392938ab02058043b56ae72"
+estado = "pendiente"
+created_at = "2026-10-24T17:57:09.657Z"
+

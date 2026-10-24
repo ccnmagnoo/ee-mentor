@@ -1,0 +1,13 @@
+id = "CAN-HAL-grupo-electrogeno"
+tipo = "hallazgo"
+titulo = "Grupo electrógeno"
+descripcion = "Se identifica una falla potencialmente crítica en el establecimiento, dado que, pese a contar con un equipo electrógeno nuevo de 33kVa por largo tiempo en desuso, este no se encuentra conectado ni operativo para respaldo energético en caso de contingencias o cortes de suministro eléctrico."
+categoria = "otros"
+impacto = "alto"
+inversion = "baja"
+dificultad = "baja"
+origen = "casos:No especificado"
+fuente_id = "FUE-stefymar-382938ab0205804e85d2cd29aa1f7eb1"
+estado = "pendiente"
+created_at = "2026-10-24T17:57:10.144Z"
+

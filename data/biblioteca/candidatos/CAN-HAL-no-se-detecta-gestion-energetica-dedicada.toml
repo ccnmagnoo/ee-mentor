@@ -1,0 +1,13 @@
+id = "CAN-HAL-no-se-detecta-gestion-energetica-dedicada"
+tipo = "hallazgo"
+titulo = "No se detecta gestión energética dedicada"
+descripcion = "No se evidencia la existencia de un responsable designado ni de un sistema formal de gestión de la energía dentro de la empresa, lo que limita la capacidad para monitorear, analizar y optimizar el consumo energético. Esta ausencia dificulta la identificación oportuna de ineficiencias, la implementación de medidas correctivas y el seguimiento de indicadores clave, generando una gestión más bien reactiva que estratégica en materia energética."
+categoria = "gestion_energetica"
+impacto = "medio"
+inversion = "baja"
+dificultad = "baja"
+origen = "casos:Restaurante"
+fuente_id = "FUE-las-deliciosas-383938ab020580caab4ce9e4e584f7a8"
+estado = "pendiente"
+created_at = "2026-10-24T17:57:09.485Z"
+

@@ -1,0 +1,16 @@
+schema_version = 1
+id = "HAL-GEST-04"
+codigo = "GEST-04"
+titulo = "Operación de equipos fuera del horario de atención"
+categoria = "gestion_operacional"
+descripcion = "Luces, climatización, equipos de cocción y letreros permanecen encendidos después del cierre o antes de la apertura. No existe una lista de verificación de cierre."
+justificacion = "La operación fuera de horario es un desperdicio evitable. Una pauta de cierre simple y asignada a un responsable puede reducir el consumo base diario."
+impacto = "medio"
+energetico = "electricidad"
+recomendacion_id = "REC-GEST-04"
+tags = [ "gestion", "horario", "cierre" ]
+activo = true
+origen = "catalogo_base"
+created_at = "2026-01-01T00:00:00.000Z"
+updated_at = "2026-01-01T00:00:00.000Z"
+

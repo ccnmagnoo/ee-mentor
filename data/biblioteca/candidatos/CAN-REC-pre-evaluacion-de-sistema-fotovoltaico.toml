@@ -1,0 +1,13 @@
+id = "CAN-REC-pre-evaluacion-de-sistema-fotovoltaico"
+tipo = "recomendacion"
+titulo = "Pre-evaluación de sistema Fotovoltaico"
+descripcion = "Se evaluó preliminarmente la factibilidad técnica de incorporar un sistema solar fotovoltaico en el Minimarket y Café Toñita, identificándose una superficie disponible en techumbre de aproximadamente 70 m² , suficiente para la instalación de un sistema de 3 kWp con almacenamiento mediante baterías de respaldo.\nLa solución propuesta corresponde a un sistema híbrido , diseñado para generar alrededor de 3.837 kWh al año , equivalentes a una producción promedio de 10,51 kWh diarios . De acuerdo con las estimaciones realizadas, la instalación alcanzaría un factor de utilización cercano al 15% , valor consistente con las condiciones de recurso solar disponibles en la zona.\nDesde la perspectiva del consumo energético del negocio, la generación proyectada permitiría cubrir aproximadamente el 67% de la demanda eléctrica durante los meses de invierno , particularmente en junio y julio, cuando la producción solar es menor. Durante los meses de mayor radiación solar y alta actividad comercial, el sistema podría aportar más del 90% de los consumos eléctricos mensuales , reduciendo significativamente la dependencia de la red y los costos de operación.\nLa incorporación de baterías permitiría almacenar parte de la energía generada durante el día para su utilización en horarios nocturnos, aportando mayor autonomía energética y capacidad de respaldo frente a eventuales interrupciones del suministro eléctrico, aspecto particularmente relevante para un negocio con alta dependencia de equipos de refrigeración.\nConsiderando suministro de equipos, estructuras, inversor, sistema de almacenamiento, protecciones eléctricas e instalación, la inversión referencial para este proyecto se estima entre $6,5 millones y $9,0 millones de pesos , dependiendo de la capacidad final de almacenamiento y especificaciones de los equipos seleccionados.\nEn virtud de los antecedentes revisados, la alternativa presenta una prefactibilidad técnica favorable , recomendándose avanzar hacia una evaluación de ingeniería de detalle para validar los aspectos estructurales, eléctricos y económicos del proyecto, con fondos de financiamiento adecuados para el perfil de la usuaria y el negocio. Se adjunta y complementa información de proveedores de servicios energéticos renovables en la isla aquí."
+categoria = "gestion_operacional"
+impacto = "medio"
+inversion = "alta"
+dificultad = "alta"
+origen = "casos:Cafetería"
+fuente_id = "FUE-minimarket-y-cafe-tonita-392938ab02058043b56ae72"
+estado = "pendiente"
+created_at = "2026-10-24T17:57:09.777Z"
+

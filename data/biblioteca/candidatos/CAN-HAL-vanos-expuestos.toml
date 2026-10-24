@@ -1,0 +1,13 @@
+id = "CAN-HAL-vanos-expuestos"
+tipo = "hallazgo"
+titulo = "Vanos expuestos"
+descripcion = "La falta de aislamiento en ventanales y puertas genera importantes pérdidas energéticas y puede afectar el confort interior, por lo que implementar mejoras pasivas permitiría reducir el consumo energético y mejorar la experiencia de los usuarios."
+categoria = "envolvente"
+impacto = "alto"
+inversion = "baja"
+dificultad = "baja"
+origen = "casos:Cafetería"
+fuente_id = "FUE-le-flaneur-spa-382938ab020580538763e1812d2fc12e"
+estado = "pendiente"
+created_at = "2026-10-24T17:57:09.564Z"
+

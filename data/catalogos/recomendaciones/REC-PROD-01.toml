@@ -1,0 +1,20 @@
+schema_version = 1
+id = "REC-PROD-01"
+codigo = "REC-PROD-01"
+titulo = "Gestión de standby y apagado programado"
+categoria = "equipos_productivos"
+descripcion = "Identificar equipos con consumo permanente, incorporar temporizadores o regletas con interruptor y establecer una lista de cierre por área."
+beneficio = "Elimina consumos evitables fuera del horario de operación sin afectar la disponibilidad de los equipos."
+inversion = "baja"
+dificultad = "baja"
+prioridad = "alta"
+ahorro_estimado = "3-8% del consumo eléctrico"
+plazo = "Inmediato (0-30 días)"
+energetico = "electricidad"
+hallazgos_relacionados = [ "HAL-PROD-01" ]
+tags = [ "equipos", "standby", "horario" ]
+activo = true
+origen = "catalogo_base"
+created_at = "2026-01-01T00:00:00.000Z"
+updated_at = "2026-01-01T00:00:00.000Z"
+

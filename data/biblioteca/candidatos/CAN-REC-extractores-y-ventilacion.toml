@@ -1,0 +1,13 @@
+id = "CAN-REC-extractores-y-ventilacion"
+tipo = "recomendacion"
+titulo = "Extractores y ventilación"
+descripcion = "Se recomienda implementar un sistema de extracción de aire caliente más eficiente sobre el horno a leña, mediante campanas de alto rendimiento y ductos bien dimensionados. Esto permitirá evacuar el calor generado de forma más efectiva, reduciendo la acumulación térmica en el local y mejorando el confort tanto de trabajadores como de clientes."
+categoria = "ventilacion"
+impacto = "medio"
+inversion = "media"
+dificultad = "media"
+origen = "casos:Pizzería"
+fuente_id = "FUE-pizzeria-plaggio-382938ab020580efa40bf9d41e53074"
+estado = "pendiente"
+created_at = "2026-10-24T17:57:09.836Z"
+

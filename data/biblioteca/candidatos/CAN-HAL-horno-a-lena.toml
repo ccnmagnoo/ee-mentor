@@ -1,0 +1,13 @@
+id = "CAN-HAL-horno-a-lena"
+tipo = "hallazgo"
+titulo = "Horno a leña"
+descripcion = "Constituye el núcleo del proceso productivo , utilizado para la cocción de pizzas. Funciona mediante combustión de biomasa (leña), generando, altas temperaturas de operación, e inercia térmica elevada ya que se genera retención de calor prolongada. Esto tiene un Impacto energético y térmico ya que existe una carga térmica interna significativa , que se transfiere al ambiente. Se detectan las siguientes dificultades:\n• Difícil de modular en términos de potencia térmica instantánea.\n• Puede generar pérdidas de energía si no se gestiona adecuadamente (exceso de calor).\n• En verano, s e genera una sobrecarga térmica interna , elevando la temperatura del local. Aumenta la necesidad de ventilación o climatización activa. También se produce una interacción ineficiente entre el horno (calor) y sistemas de enfriamiento (si existen).\n• En invierno, Puede contribuir parcialmente a la calefacción del espacio. Sin embargo, la distribución de calor no siempre es homogénea.\nEn general, el horno a leña introduce un desbalance térmico , especialmente crítico en períodos cálidos."
+categoria = "coccion"
+impacto = "alto"
+inversion = "baja"
+dificultad = "baja"
+origen = "casos:Pizzería"
+fuente_id = "FUE-pizzeria-plaggio-382938ab020580efa40bf9d41e53074"
+estado = "pendiente"
+created_at = "2026-10-24T17:57:09.819Z"
+

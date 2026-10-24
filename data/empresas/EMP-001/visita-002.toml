@@ -1,0 +1,162 @@
+schema_version = 1
+empresa_id = "EMP-001"
+id = "VIS-002"
+fecha = "2026-10-10"
+asesor = "Carlos Campos N."
+grado_consumo = "moderado"
+descripcion_perfil = "Visita de seguimiento. La empresa implementó el recambio de luminarias en sala de atención y el sellamiento de la puerta principal. Se mantiene el uso de la vitrina como almacén y los calefactores individuales. Se observa una reducción del consumo eléctrico respecto de la visita anterior, aunque no se dispone de medición separada por área."
+usos_finales = [ "iluminacion", "refrigeracion", "coccion", "climatizacion" ]
+acuerdos = [ "Mantener el registro mensual y compartir los datos en la próxima visita.", "Cotizar dos alternativas de climatización eficiente antes de diciembre." ]
+proxima_visita = "2027-01-20"
+observaciones = "Se refuerza la importancia de separar el consumo de cocina y refrigeración."
+created_at = "2026-10-10T16:00:00.000Z"
+updated_at = "2026-01-01T00:00:00.000Z"
+
+[[energeticos]]
+tipo = "electricidad"
+consumo = 648
+unidad = "kWh/mes"
+costo = 104000
+observacion = "Reducción preliminar de 9% respecto de la línea base."
+
+[[energeticos]]
+tipo = "glp"
+consumo = 42
+unidad = "kg/mes"
+costo = 66000
+observacion = "Sin cambios relevantes."
+
+[[equipos]]
+nombre = "Máquina de espresso doble grupo"
+cantidad = 1
+potencia_w = 3200
+horas_dia = 10
+estado = "regular"
+observacion = "Sin cambios."
+
+[[equipos]]
+nombre = "Horno de convección"
+cantidad = 1
+potencia_w = 2800
+horas_dia = 6
+estado = "regular"
+observacion = "Se incorporó planificación de tandas."
+
+[[equipos]]
+nombre = "Vitrina refrigerada de exhibición"
+cantidad = 2
+potencia_w = 450
+horas_dia = 24
+estado = "regular"
+observacion = "Persiste uso como almacén en una unidad."
+
+[[equipos]]
+nombre = "Congelador vertical"
+cantidad = 1
+potencia_w = 380
+horas_dia = 24
+estado = "regular"
+observacion = "Se realizó descongelación y limpieza."
+
+[secciones.iluminacion]
+puntaje = 4
+observaciones = "Recambio a LED completado en sala; pendiente bodega."
+tecnologia = "mixta"
+estado = "bueno"
+horas_uso_diarias = 12
+
+[secciones.refrigeracion]
+puntaje = 3
+observaciones = "Limpieza de condensadores realizada; persiste uso de vitrina."
+cantidad_equipos = 3
+antiguedad_anios = 7
+mantencion = "programada"
+
+[secciones.congelacion]
+puntaje = 3
+observaciones = "Descongelación al día; falta registro formal."
+cantidad_equipos = 1
+antiguedad_anios = 8
+estado = "regular"
+
+[secciones.climatizacion]
+puntaje = 2
+observaciones = "Persisten calefactores individuales."
+tecnologia = "Calefactor eléctrico portátil"
+mantenciones = "sin_mantencion"
+control_temperatura = "manual"
+
+[secciones.acs]
+puntaje = 2
+observaciones = "Sin cambios en agua caliente."
+tecnologia = "Caldera de espresso y termo eléctrico"
+fuente_energetica = "electricidad"
+horarios = "Toda la jornada"
+
+[secciones.coccion]
+puntaje = 3
+observaciones = "Mejor planificación de tandas; se mantienen aperturas."
+equipos_principales = "Horno de convección, plancha a gas, cocina"
+combustible = "glp"
+
+[secciones.motores]
+puntaje = 3
+observaciones = "Equipos sin novedades."
+tipo = "Compresores de refrigeración"
+estado = "regular"
+mantencion = "ocasional"
+
+[secciones.envolvente]
+puntaje = 3
+observaciones = "Sellamiento de puerta principal ejecutado; ventana pendiente."
+ventanas = "regular"
+puertas = "regular"
+infiltraciones = "regular"
+aislacion = "no_evaluado"
+
+[secciones.gestion]
+puntaje = 2
+observaciones = "Se inició registro mensual, sin indicadores aún."
+nivel = "basica"
+monitoreo = true
+responsable = "Administración"
+
+[secciones.tarifas]
+puntaje = 2
+observaciones = "Sin análisis tarifario."
+tarifa_actual = "BT1"
+potencia_contratada_kw = 0
+factor_potencia = 0
+
+[[hallazgos]]
+hallazgo_id = "HAL-REFR-01"
+justificacion = "Una de las dos vitrinas continúa usándose como almacén nocturno."
+
+[[hallazgos]]
+hallazgo_id = "HAL-CLIM-01"
+justificacion = "Los calefactores portátiles siguen siendo la única fuente de calefacción."
+
+[[hallazgos]]
+hallazgo_id = "HAL-GEST-02"
+justificacion = "El registro es manual y no se separan consumos por área."
+
+[[recomendaciones]]
+recomendacion_id = "REC-REFR-01"
+prioridad = "alta"
+observacion = "Completar la diferenciación de usos en ambas vitrinas."
+
+[[recomendaciones]]
+recomendacion_id = "REC-CLIM-01"
+prioridad = "alta"
+observacion = "Solicitar cotización de bomba de calor."
+
+[[recomendaciones]]
+recomendacion_id = "REC-GEST-02"
+prioridad = "media"
+observacion = "Evaluar remarcador para área de cocina."
+
+[[recomendaciones]]
+recomendacion_id = "REC-ENV-02"
+prioridad = "media"
+observacion = "Completar sellos en ventana lateral."
+

@@ -1,0 +1,13 @@
+id = "CAN-REC-mejoramiento-del-ciclo-de-refrigerado"
+tipo = "recomendacion"
+titulo = "Mejoramiento del ciclo de refrigerado"
+descripcion = "Se sugiere implementar mejoramiento de proceso de congelado a futuro, como el preenfriamiento de productos antes de su ingreso con túneles de congelado más pequeños , donde el control de carga máxima para permitir adecuada circulación de aire, y protocolos de minimización de aperturas. La mantención periódica (limpieza de escarcha, revisión de sellos y serpentines) es fundamental para mantener la eficiencia. Estas acciones permiten reducir el consumo energético, mejorar la estabilidad térmica y asegurar la calidad e inocuidad de los alimentos , contribuyendo a una operación más eficiente y sostenible del sistema de congelado."
+categoria = "mantencion"
+impacto = "medio"
+inversion = "baja"
+dificultad = "media"
+origen = "casos:Restaurante"
+fuente_id = "FUE-las-deliciosas-383938ab020580caab4ce9e4e584f7a8"
+estado = "pendiente"
+created_at = "2026-10-24T17:57:09.514Z"
+

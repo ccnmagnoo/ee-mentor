@@ -1,0 +1,13 @@
+id = "CAN-REC-mantenimiento-preventivo-cocina-insdustria"
+tipo = "recomendacion"
+titulo = "Mantenimiento preventivo cocina insdustrial"
+descripcion = "Se recomienda realizar mantenciones periódicas, verificar el estado de los quemadores y conexiones, mantener una correcta regulación de la llama y capacitar al personal en buenas prácticas de operación segura y eficiente ."
+categoria = "gestion_operacional"
+impacto = "medio"
+inversion = "baja"
+dificultad = "media"
+origen = "casos:Restaurante"
+fuente_id = "FUE-rito-mata-390938ab0205809584b2c563debd6138"
+estado = "pendiente"
+created_at = "2026-10-24T17:57:10.011Z"
+

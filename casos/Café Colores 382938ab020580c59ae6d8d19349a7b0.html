@@ -1,0 +1,798 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Café Colores</title><meta name="data-notion-page-icon" content="☕"/><link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20100%20100%22%3E%3Ctext%20y%3D%22.9em%22%20font-size%3D%2290%22%3E%E2%98%95%3C%2Ftext%3E%3C%2Fsvg%3E"/><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+/* Override strong tags inside headings to maintain consistent weight */
+h1 strong,
+h2 strong,
+h3 strong {
+	font-weight: 600;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 10px;
+	padding: 1rem;
+	/* Paint a complete callout box on every PDF page fragment. */
+	-webkit-box-decoration-break: clone;
+	box-decoration-break: clone;
+}
+
+/* For default-background callouts, render the border outline. */
+.callout.block-color-default_background {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+/*
+ * Toggles and callouts hold arbitrary content, so they can easily be taller
+ * than a page. They must stay breakable: avoiding breaks inside them makes
+ * Chromium push the whole block onto the next page, which leaves the previous
+ * page mostly empty before every long toggle.
+ */
+details,
+aside {
+	margin: 1.25em 0;
+}
+
+/* Keep a toggle's title on the same page as the start of its content. */
+summary {
+	page-break-after: avoid;
+	break-after: avoid;
+}
+
+/*
+ * Toggle headings render as <h1/h2/h3 style="display:inline-block"> inside
+ * <summary>. Without this reset, the heading's margin-top pushes it below the
+ * ::marker (▼), so the triangle and the title appear on separate lines.
+ */
+summary h1,
+summary h2,
+summary h3,
+summary h4 {
+	margin-top: 0;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+
+	table.collection-content {
+		width: 100%;
+		table-layout: fixed;
+	}
+
+	table.collection-content th,
+	table.collection-content td {
+		overflow-wrap: anywhere;
+	}
+
+	table.collection-content td > .user,
+	table.collection-content td > time {
+		white-space: pre-wrap;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content-wrapper {
+	overflow-x: auto;
+}
+
+@media only print {
+	.collection-content-wrapper {
+		overflow-x: visible;
+	}
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.collection-content td {
+	white-space: pre-wrap;
+	word-break: break-word;
+}
+
+.column-list {
+	display: flex;
+	gap: 46px;
+}
+
+.column {
+	min-width: 0;
+	overflow: hidden;
+}
+
+.column > *:first-child {
+	margin-top: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding-inline: 0.125rem;
+	padding-block: 0.375rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+table {
+	border-collapse: collapse;
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol.numbered-list.numbered-list-digits-2 {
+	padding-inline-start: 2em;
+}
+
+ol.numbered-list.numbered-list-digits-3plus {
+	padding-inline-start: 2.4em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+/*
+ * Render emoji icons using a ::before pseudo-element to keep the glyph
+ * out of the DOM textContent traversal. This avoids double-rendering icons
+ * in callouts and page titles.
+ * NOTE(slim/html-export-pseudo-icons): I can't tagref this because it will
+ * flag as a duplicate tag after codegen.
+ */
+.icon[data-emoji]::before {
+	content: attr(data-emoji);
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.callout img.notion-static-icon {
+	width: 1em;
+	height: 1em;
+}
+
+.callout p {
+	margin: 0;
+}
+
+.callout h1,
+.callout h2,
+.callout h3 {
+	margin: 0 0 0.6rem;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	margin-right: 0.4em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+blockquote.quote-large {
+	font-size: 1.25em;
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.tab {
+	margin: 1.25em 0;
+	padding-inline: 1rem;
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.highlight-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.highlight-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.highlight-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.highlight-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.highlight-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.highlight-default_background {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray_background {
+	background: rgba(42, 28, 0, 0.07);
+}
+.highlight-brown_background {
+	background: rgba(139, 46, 0, 0.086);
+}
+.highlight-orange_background {
+	background: rgba(224, 101, 1, 0.129);
+}
+.highlight-yellow_background {
+	background: rgba(211, 168, 0, 0.137);
+}
+.highlight-teal_background {
+	background: rgba(0, 100, 45, 0.09);
+}
+.highlight-blue_background {
+	background: rgba(0, 124, 215, 0.094);
+}
+.highlight-purple_background {
+	background: rgba(102, 0, 178, 0.078);
+}
+.highlight-pink_background {
+	background: rgba(197, 0, 93, 0.086);
+}
+.highlight-red_background {
+	background: rgba(223, 22, 0, 0.094);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.block-color-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.block-color-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.block-color-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.block-color-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.block-color-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(240, 239, 237, 1);
+}
+.block-color-brown_background {
+	background: rgba(245, 237, 233, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 235, 222, 1);
+}
+.block-color-yellow_background {
+	background: rgba(249, 243, 220, 1);
+}
+.block-color-teal_background {
+	background: rgba(232, 241, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(229, 242, 252, 1);
+}
+.block-color-purple_background {
+	background: rgba(243, 235, 249, 1);
+}
+.block-color-pink_background {
+	background: rgba(250, 233, 241, 1);
+}
+.block-color-red_background {
+	background: rgba(252, 233, 231, 1);
+}
+.select-value-color-default { background-color: rgba(42, 28, 0, 0.07); }
+.select-value-color-gray { background-color: rgba(28, 19, 1, 0.11); }
+.select-value-color-brown { background-color: rgba(127, 51, 0, 0.156); }
+.select-value-color-orange { background-color: rgba(196, 88, 0, 0.203); }
+.select-value-color-yellow { background-color: rgba(209, 156, 0, 0.282); }
+.select-value-color-green { background-color: rgba(0, 96, 38, 0.156); }
+.select-value-color-blue { background-color: rgba(0, 118, 217, 0.203); }
+.select-value-color-purple { background-color: rgba(92, 0, 163, 0.141); }
+.select-value-color-pink { background-color: rgba(183, 0, 78, 0.152); }
+.select-value-color-red { background-color: rgba(206, 24, 0, 0.164); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style><style>@import url('https://cdn.jsdelivr.net/npm/katex@0.16.25/dist/katex-swap.min.css')</style></head><body><article id="382938ab-0205-80c5-9ae6-d8d19349a7b0" class="page sans" data-notion-page-icon="☕"><header><div class="page-header-icon undefined"><span class="icon" data-emoji="☕"></span></div><h1 class="page-title" dir="auto">Café Colores</h1><p class="page-description" dir="auto"></p><table class="properties"><tbody><tr class="property-row property-row-created_time"><th><span class="icon property-icon"><img src="https://app.notion.com/icons/clock_gray.svg" style="width:14px;height:14px;display:block"/></span>Fecha</th><td><time datetime="2026-06-17T16:34">June 17, 2026 4:34 PM</time></td></tr><tr class="property-row property-row-select"><th><span class="icon property-icon"><img src="https://app.notion.com/icons/arrow-circle-down_gray.svg" style="width:14px;height:14px;display:block"/></span>Negocio</th><td><span class="selected-value select-value-color-default">Cafetería</span></td></tr><tr class="property-row property-row-select"><th><span class="icon property-icon"><img src="https://app.notion.com/icons/arrow-circle-down_gray.svg" style="width:14px;height:14px;display:block"/></span>Grado consumos</th><td><span class="selected-value select-value-color-purple">Moderado</span></td></tr><tr class="property-row property-row-text"><th><span class="icon property-icon"><img src="https://app.notion.com/icons/description_gray.svg" style="width:14px;height:14px;display:block"/></span>Usuario</th><td>Carol Navarro</td></tr><tr class="property-row property-row-phone_number"><th><span class="icon property-icon"><img src="https://app.notion.com/icons/phone-call_gray.svg" style="width:14px;height:14px;display:block"/></span>Teléfono</th><td><a href="+56966387741" class="url-value">+56966387741</a></td></tr><tr class="property-row property-row-email"><th><span class="icon property-icon"><img src="https://app.notion.com/icons/username_gray.svg" style="width:14px;height:14px;display:block"/></span>Correo electrónico</th><td><a href="carol.navav@gmail.com" class="url-value">carol.navav@gmail.com</a></td></tr><tr class="property-row property-row-select"><th><span class="icon property-icon"><img src="https://app.notion.com/icons/arrow-circle-down_gray.svg" style="width:14px;height:14px;display:block"/></span>Contraparte</th><td><span class="selected-value select-value-color-default">CND Sercotec Viña del Mar</span></td></tr></tbody></table></header><div class="page-body"><div id="a7c938ab-0205-8257-b0ce-81d88df38238" class="column-list" data-notion-column-list="" dir="auto"><div id="c98938ab-0205-8290-a9dc-017f1b53e983" style="width:18.75%" class="column" data-notion-column-ratio="0.1875" dir="auto"><figure id="cee938ab-0205-83a4-8541-814bbe687e06" class="image" data-notion-image="SEREMI_logo_SQR_Lowpoly.svg" dir="ltr"><a href="SEREMI_logo_SQR_Lowpoly.svg"><img style="width:120px" src="SEREMI_logo_SQR_Lowpoly.svg"/></a></figure></div><div id="943938ab-0205-82a4-b99e-01f495b2f2d8" style="width:81.25%" class="column" data-notion-column-ratio="0.8125" dir="auto"><figure id="9e4938ab-0205-8312-a4e6-015e5b0e7b4b" class="image" data-notion-image="cropped-logo-cdn-2021.png" dir="ltr"><a href="cropped-logo-cdn-2021.png"><img style="width:192px" src="cropped-logo-cdn-2021.png"/></a></figure></div></div><h1 id="352938ab-0205-82bb-8192-813bb9875d6e" class="" dir="auto">ACTA de seguimiento Asesoría/Mentoría</h1><h2 id="a9e938ab-0205-8357-9f74-017ab3b24501" class="" dir="auto">Información del contacto y cliente (negocio)</h2><table id="51e938ab-0205-82e4-bcc4-811c73b0ce70" class="simple-table" dir="ltr"><tbody><tr id="789938ab-0205-83aa-a31e-01c054cba13d" dir="ltr"><td id="jEMl" class="" style="width:150.875px">Nombre del contacto</td><td id="lP]a" class="" style="width:167.03125px">Carol Navarro</td><td id="xV[;" class="" style="width:67.875px">RUT</td><td id="GpK:" class="" style="width:110.453125px">18.886.446-5</td></tr><tr id="40e938ab-0205-8244-8a90-8113eaa3dc7f" dir="ltr"><td id="jEMl" class="" style="width:150.875px">Nombre del negocio</td><td id="lP]a" class="" style="width:167.03125px">Café Color - Grupo Onix</td><td id="xV[;" class="" style="width:67.875px">ROL</td><td id="GpK:" class="" style="width:110.453125px">77875192-5</td></tr><tr id="8b4938ab-0205-832a-b819-81d0227a4cf0" dir="ltr"><td id="jEMl" class="" style="width:150.875px">Asesor asignado</td><td id="lP]a" class="" style="width:167.03125px">Carlos Campos N</td><td id="xV[;" class="" style="width:67.875px">Servicio</td><td id="GpK:" class="" style="width:110.453125px">Seremi Energía</td></tr></tbody></table><h2 id="384938ab-0205-80ca-a208-f2de6f0e9894" class="" dir="auto">Descripción</h2><p id="384938ab-0205-80b3-9b66-e818afc22c20" class="" dir="auto"><em>Café Colores</em> corresponde al de una cafetería de pequeña escala, donde la <strong>electricidad es la principal fuente de consumo</strong>, destinada principalmente a la operación de equipos de preparación, refrigeración e iluminación. El mayor gasto energético se concentra en las <strong>máquinas  de café, hornos convectores y hervidores</strong>, que pueden representar entre el 40% y 60% del consumo total, debido a su uso intensivo y funcionamiento continuo durante la jornada. A su vez, los sistemas de <strong>refrigeración</strong> aportan entre un 20% y 30%, ya que operan de manera constante las 24 horas, mientras que la climatización, y por último la iluminación completan el resto del consumo con participaciones menores pero relevantes.</p><p id="384938ab-0205-805d-bac7-ffb6a7884dac" class="" dir="auto">El consumo energético presenta un patrón diario con <strong>picos en la mañana y la tarde</strong>, asociados a la mayor demanda de clientes, y un consumo base nocturno sostenido principalmente por equipos de frío. Este tipo de perfil muestra oportunidades claras de mejora mediante la <strong>optimización del uso de equipos, reducción de consumos en standby, mantención de refrigeradores y mejora en la eficiencia de iluminación y climatización</strong>. En conjunto, estas acciones permiten reducir costos operacionales y aumentar la eficiencia energética del local sin afectar su funcionamiento.</p><h3 id="960938ab-0205-830e-94f0-81427cbfd75a" class="" dir="auto">Acometidas</h3><p id="384938ab-0205-8021-84ef-c3a8e19006dc" class="" dir="auto">cliente: CGE 1634000, propietaria Delfina Delgado</p><p id="384938ab-0205-80a7-81e5-c73fbc5f2b19" class="" dir="auto">consumos energéticos: 712 kWh/mes</p><p id="384938ab-0205-806d-9a7b-c269536bf2a8" class="" dir="auto">
+</p><div id="212938ab-0205-8223-87b7-81cd2eebf6a6" class="collection-content" dir="ltr"><h4 class="collection-title">Hallazgos</h4><div class="collection-content-wrapper"><table class="collection-content"><colgroup><col style="width:27.299703264094955%"/><col style="width:18.5459940652819%"/><col style="width:54.154302670623146%"/></colgroup><thead><tr><th><span class="icon property-icon"><img src="https://app.notion.com/icons/font_gray.svg" style="width:14px;height:14px;display:block"/></span>Referencia</th><th><span class="icon property-icon"><img src="https://app.notion.com/icons/arrow-circle-down_gray.svg" style="width:14px;height:14px;display:block"/></span>Servicio</th><th><span class="icon property-icon"><img src="https://app.notion.com/icons/description_gray.svg" style="width:14px;height:14px;display:block"/></span>Descripción</th></tr></thead><tbody><tr id="357938ab-0205-8380-b9e7-0151a11b31a7"><td class="cell-title"><a href="Horno%20de%20convecci%C3%B3n%20357938ab02058380b9e70151a11b31a7.html" data-notion-page-id="357938ab-0205-8380-b9e7-0151a11b31a7" data-notion-space-id="242b1b81-4cab-4ab7-a7cd-3ea69f052ca2">Horno de convección</a></td><td class="cell-egc;"><span class="selected-value select-value-color-default">cocinas/hornos</span></td><td class="cell-blSE">El <strong>horno de convección utilizado para la cocción de masitas</strong> en <em>Café Colores, son equipos de gran utilidad y versatilidad para el modelo de negocio. </em>Pero una incorrecta utilización puede presentar ineficiencias operacionales si no se utiliza de forma adecuada. Uno de los principales problemas es el <strong>funcionamiento en vacío o con baja carga</strong>, lo que implica un alto consumo energético sin un aprovechamiento efectivo de la capacidad del equipo. Asimismo, la apertura frecuente de la puerta durante el proceso provoca <strong>pérdidas térmicas significativas</strong>, obligando al horno a trabajar más para recuperar la temperatura de consigna.</td></tr><tr id="382938ab-0205-8084-af06-e14ef5fe8d2e"><td class="cell-title"><a href="Calefacci%C3%B3n%20con%20calefactor%20382938ab02058084af06e14ef5fe8d2e.html" data-notion-page-id="382938ab-0205-8084-af06-e14ef5fe8d2e" data-notion-space-id="242b1b81-4cab-4ab7-a7cd-3ea69f052ca2">Calefacción con calefactor</a></td><td class="cell-egc;"><span class="selected-value select-value-color-red">calefacción</span></td><td class="cell-blSE">Uso de <strong>calefactor individual (portátiles o eléctricos)</strong> como principal estrategia de climatización representa una práctica ineficiente tanto desde el punto de vista energético como operativo. Estos equipos suelen presentar <strong>bajos rendimientos globales</strong>, especialmente cuando se utilizan múltiples unidades en paralelo para cubrir un mismo espacio, generando consumos elevados de electricidad sin lograr una distribución homogénea del calor. Además, su uso descoordinado provoca sobrecalentamientos puntuales y zonas frías, afectando el confort térmico de clientes y trabajadores.</td></tr><tr id="382938ab-0205-8093-ba9c-db971eb47382"><td class="cell-title"><a href="Se%20mes%C3%B3n%20de%20refrigeraci%C3%B3n%20para%20almacenamiento%20382938ab02058093ba9cdb971eb47382.html" data-notion-page-id="382938ab-0205-8093-ba9c-db971eb47382" data-notion-space-id="242b1b81-4cab-4ab7-a7cd-3ea69f052ca2">Se mesón de refrigeración para almacenamiento</a></td><td class="cell-egc;"><span class="selected-value select-value-color-pink">refrigeración</span></td><td class="cell-blSE">Hay un uso de un <strong>mesón refrigerado como equipo de almacenamiento de alimentos. E</strong>stos equipos están diseñados principalmente para <strong>apoyo operativo de corto plazo durante la preparación</strong>, no para almacenamiento prolongado. Su funcionamiento presenta aperturas frecuentes, exposición a temperatura ambiente y variaciones térmicas constantes, lo que reduce su eficiencia y aumenta el consumo energético. Además, estos equipos suelen tener menor capacidad de aislamiento y control de temperatura en comparación con refrigeradores dedicados, lo que puede comprometer la correcta conservación de los alimentos.</td></tr><tr id="384938ab-0205-80ff-b091-c710bf6e2e32"><td class="cell-title"><a href="No%20cuenta%20con%20gesti%C3%B3n%20energ%C3%A9tica%20384938ab020580ffb091c710bf6e2e32.html" data-notion-page-id="384938ab-0205-80ff-b091-c710bf6e2e32" data-notion-space-id="242b1b81-4cab-4ab7-a7cd-3ea69f052ca2">No cuenta con gestión energética</a></td><td class="cell-egc;"><span class="selected-value select-value-color-gray">gestión energética</span></td><td class="cell-blSE">No se evidencia la existencia explicita de<strong> un sistema formal de gestión de la energía</strong> dentro de la empresa, lo que limita la capacidad para monitorear, analizar y optimizar el consumo energético. Esta definición dificulta la identificación oportuna de ineficiencias, la implementación de medidas correctivas y el seguimiento de indicadores clave, generando una gestión más bien reactiva que estratégica en materia energética.</td></tr></tbody></table></div><br/><br/></div><div id="458938ab-0205-8260-9a8b-81e38ab514ec" class="collection-content" dir="ltr"><h4 class="collection-title">Recomendaciones</h4><div class="collection-content-wrapper"><table class="collection-content"><colgroup><col style="width:32.70142180094787%"/><col style="width:67.29857819905213%"/></colgroup><thead><tr><th><span class="icon property-icon"><img src="https://app.notion.com/icons/font_gray.svg" style="width:14px;height:14px;display:block"/></span>nombre</th><th><span class="icon property-icon"><img src="https://app.notion.com/icons/description_gray.svg" style="width:14px;height:14px;display:block"/></span>Recomendación</th></tr></thead><tbody><tr id="73c938ab-0205-8309-83f6-8154a2309531"><td class="cell-title"><a href="Mejoramiento%20uso%20almacenamiento%2073c938ab0205830983f68154a2309531.html" data-notion-page-id="73c938ab-0205-8309-83f6-8154a2309531" data-notion-space-id="242b1b81-4cab-4ab7-a7cd-3ea69f052ca2">Mejoramiento uso almacenamiento</a></td><td class="cell-;voQ">Se recomienda implementar una <strong>diferenciación clara de usos entre equipos de almacenamiento y equipos de operación para refrigerados y congelados</strong>, estableciendo que el mesón refrigerado sea utilizado exclusivamente como superficie de trabajo con apoyo de conservación temporal (alta rotación), mientras que el almacenamiento principal de alimentos debe realizarse en <strong>refrigeradores o cámaras diseñadas para conservación prolongada</strong>. Estos equipos presentan mejor aislación térmica, menor variación de temperatura y mayor eficiencia energética para este propósito.<br/>Adicionalmente, se sugiere establecer un <strong>protocolo interno de gestión de alimentos</strong>, que incluya: traslado periódico desde almacenamiento a mesón según demanda (sistema FIFO), minimización de aperturas innecesarias, y control de temperaturas de ambos equipos. Desde la perspectiva energética, esta medida permite <strong>reducir el consumo eléctrico, optimizar la operación de los equipos y prolongar su vida útil</strong>, contribuyendo a una gestión más eficiente y sostenible del local.</td></tr><tr id="382938ab-0205-8054-acca-e3dccab9ec12"><td class="cell-title"><a href="Sellamientos%20t%C3%A9rmicos%20382938ab02058054accae3dccab9ec12.html" data-notion-page-id="382938ab-0205-8054-acca-e3dccab9ec12" data-notion-space-id="242b1b81-4cab-4ab7-a7cd-3ea69f052ca2">Sellamientos térmicos</a></td><td class="cell-;voQ">Es fundamental implementar medidas complementarias como la <strong>mejora del aislamiento térmico del local (sellos en puertas y ventanas)</strong>, la definición de <strong>temperaturas de consigna adecuadas</strong> (por ejemplo, 20–22 °C en invierno) y el <strong>control del encendido/apagado según ocupación real</strong>. En caso de mantener calefactores de apoyo, estos deben utilizarse de forma puntual y controlada. Esta estrategia permite <strong>reducir el consumo energético, mejorar el confort térmico y optimizar la operación del sistema de climatización</strong>, avanzando hacia una gestión más eficiente y sostenible.</td></tr><tr id="382938ab-0205-8088-a37a-f6c848f4ced7"><td class="cell-title"><a href="Protocolo%20de%20uso%20de%20Horno%20de%20convecci%C3%B3n%20382938ab02058088a37af6c848f4ced7.html" data-notion-page-id="382938ab-0205-8088-a37a-f6c848f4ced7" data-notion-space-id="242b1b81-4cab-4ab7-a7cd-3ea69f052ca2">Protocolo de uso de Horno de convección</a></td><td class="cell-;voQ">Se recomienda optimizar el uso del horno mediante una <strong>programación eficiente de las tandas de cocción</strong>, buscando operar el equipo con <strong>carga completa o cercana a su capacidad máxima</strong>, evitando ciclos innecesarios. Es fundamental establecer un <strong>protocolo de uso</strong> que incluya precalentamientos controlados (solo el tiempo requerido por el fabricante), reducción de aperturas de puerta y definición de temperaturas adecuadas según el tipo de producto.<br/>Además, se sugiere implementar una <strong>planificación diaria de producción</strong>, agrupando la cocción de masitas en bloques horarios definidos para evitar encendidos y apagados frecuentes. Complementariamente, la mantención periódica (limpieza de ventiladores, revisión de sellos) mejora la eficiencia térmica del equipo. Estas acciones permiten <strong>reducir el consumo energético, mejorar la productividad y asegurar una calidad homogénea en los productos</strong>, contribuyendo a una operación más eficiente del negocio.</td></tr><tr id="384938ab-0205-8076-b68d-e0046ea327e0"><td class="cell-title"><a href="Mejoramiento%20de%20climatizaci%C3%B3n%20384938ab02058076b68de0046ea327e0.html" data-notion-page-id="384938ab-0205-8076-b68d-e0046ea327e0" data-notion-space-id="242b1b81-4cab-4ab7-a7cd-3ea69f052ca2">Mejoramiento de climatización</a></td><td class="cell-;voQ">Se recomienda reemplazar el uso de calefactores individuales por un <strong>sistema de climatización más eficiente y centralizado</strong>, como equipos tipo <strong>aire acondicionado inverter (bomba de calor)</strong>, los cuales permiten calefaccionar y enfriar el ambiente con un menor consumo energético y un mejor control de temperatura. Estos sistemas tienen mayor eficiencia (COP superior), permiten mantener condiciones térmicas estables y pueden ser programados según horarios de operación del local.</td></tr><tr id="384938ab-0205-804c-88ea-d61aed20c81b"><td class="cell-title"><a href="Educaci%C3%B3n%20y%20Gesti%C3%B3n%20Energ%C3%A9tica%20384938ab0205804c88ead61aed20c81b.html" data-notion-page-id="384938ab-0205-804c-88ea-d61aed20c81b" data-notion-space-id="242b1b81-4cab-4ab7-a7cd-3ea69f052ca2">Educación y Gestión Energética</a></td><td class="cell-;voQ">Se recomienda avanzar hacia la <strong>profesionalización de la gestión energética de la empresa</strong>. Esto implica designar un responsable interno o apoyo externo que se encargue de monitorear consumos, revisar indicadores eléctricos (como factor de potencia, demanda máxima y consumos base), e implementar buenas prácticas operacionales. La incorporación de una gestión energética sistemática permitirá <strong>identificar oportunidades de mejora, reducir costos, optimizar el uso de la energía y asegurar la sostenibilidad operativa del negocio</strong> en el tiempo y acorde a su crecimiento empresarial.</td></tr></tbody></table></div><br/><br/></div><h2 id="d74938ab-0205-8324-b022-8124c90825fe" class="" dir="auto">Temas adicionales</h2><p id="e0d938ab-0205-8208-b3ff-817041dbde4d" class="" dir="auto">Se a solicitado frecuentemente el  cambio de facturación de la boleta <br/>eléctrica a la razón social de la empresa a Grupo Onix SPA. Hasta el momento no ha habido respuesta de CGE.</p><h2 id="7d9938ab-0205-8341-9fc2-8134140278da" class="" dir="auto">Acuerdos</h2><p id="5e6938ab-0205-8345-9655-8171a24a6b83" class="" dir="auto">En atención a la solicitud realizada por <strong>Café Colores</strong>, respecto a la <strong>regularización de la facturación mediante la emisión de boleta a nombre de la empresa</strong>, se acuerda <strong>brindar orientación y apoyo técnico-administrativo</strong> a Café Colores, con el objetivo de facilitar el proceso de regularización de la facturación, aclarando los procedimientos necesarios y resolviendo las dudas que puedan surgir durante su implementación, conforme a la normativa vigente.</p><h2 id="384938ab-0205-803b-ade9-d3e805382a73" class="" dir="auto">Información adicional</h2><div dir="auto"><table id="384938ab-0205-80a5-b49a-d5b2c2461a24" class="simple-table" dir="ltr"><tbody><tr id="384938ab-0205-80f3-a638-ca33cbe6de6d" dir="ltr"><td id="h_NM" class="" style="width:170.25px">👩‍🦰Instaladoras</td><td id="r;IE" class="" style="width:303px">Red de mujeres <strong>Instaladoras</strong> certificadas SEC, para regularización eléctrica y gas, análisis de tarifas, expansiones y proyectos</td><td id="{Bve" class="" style="width:237px"><a href="https://app.notion.com/p/Instaladoras-383938ab02058099998cfbfc8342a16b?pvs=21">Instaladoras SEC Certificadas</a></td></tr><tr id="384938ab-0205-807c-ac74-c74d0ac2c3e8" dir="ltr"><td id="h_NM" class="" style="width:170.25px">👷‍♂️Portal SEC de instaladores</td><td id="r;IE" class="" style="width:303px">Listado de profesionales certificados SEC oficial.</td><td id="{Bve" class="" style="width:237px"><a href="https://www.sec.cl/area-ciudadana/nuevo-buscador-de-instaladores-e-instaladoras/">Instaladoras e Instaladores Certificados por SEC</a></td></tr><tr id="384938ab-0205-80cc-9388-e492d52b5b9e" dir="ltr"><td id="h_NM" class="" style="width:170.25px">🏭Proveedores</td><td id="r;IE" class="" style="width:303px">Listado referencial proveedores de equipamiento renovable, no implica recomendación y es responsabilidad del mandante asegurar su cumplimiento y calidad.</td><td id="{Bve" class="" style="width:237px"><a href="https://app.notion.com/p/Proveedores-Energ-ticos-pub-383938ab02058045b8e9c07564e3dca9?pvs=21">Proveedores Energéticos (pub)</a></td></tr><tr id="384938ab-0205-80f6-9aed-fd6b371de3ec" dir="ltr"><td id="h_NM" class="" style="width:170.25px">🧠Registro de <strong>Consultores</strong></td><td id="r;IE" class="" style="width:303px">Plataforma digital  para conectar a profesionales y empresas que prestan servicios en eficiencia energética y energías renovables</td><td id="{Bve" class="" style="width:237px"><a href="https://consultores.registroenergetico.cl/">Registro de Consultores</a></td></tr><tr id="384938ab-0205-80f0-aef3-d5b57d6ed1e5" dir="ltr"><td id="h_NM" class="" style="width:170.25px">📚Biblioteca <strong>AgenciaSE</strong></td><td id="r;IE" class="" style="width:303px">Material Bibliográfico sobre Eficiencia Energética y Sistemas de Gestión de la Energía</td><td id="{Bve" class="" style="width:237px"><a href="https://www.agenciase.org/biblioteca/">Biblioteca – Agencia de Sostenibilidad Energética</a></td></tr><tr id="384938ab-0205-8062-a3d2-fa41f69aba5a" dir="ltr"><td id="h_NM" class="" style="width:170.25px">🛡️Sello EE</td><td id="r;IE" class="" style="width:303px">Sello de Eficiencia Energética, <mark class="highlight-yellow" data-notion-highlight="yellow">gratuito </mark>para MiPyMes</td><td id="{Bve" class="" style="width:237px"><a href="https://plataforma.selloee.cl/">SelloEE - Sello de Excelencia Energética</a></td></tr><tr id="384938ab-0205-809d-9b50-f796ebb5a884" dir="ltr"><td id="h_NM" class="" style="width:170.25px">🎯Gestiona Energía <strong>MiPyME</strong></td><td id="r;IE" class="" style="width:303px">El Ministerio de Energía ha desarrollado una serie de herramientas de fácil uso para que las MiPyMES puedan estimar el uso y generación de energía a lo largo del país.</td><td id="{Bve" class="" style="width:237px"><a href="https://mipymes.gestionaenergia.cl/herramientas">Herramientas | Gestiona Energía MiPyMEs</a></td></tr><tr id="384938ab-0205-804f-a419-d8f2ed643595" dir="ltr"><td id="h_NM" class="" style="width:170.25px">⚡Calculadora de <strong>ahorro energéticos</strong></td><td id="r;IE" class="" style="width:303px">Herramienta para calcular una primera aproximación de ahorros y beneficios</td><td id="{Bve" class="" style="width:237px"><a href="https://mipyme.agenciase.org/plataforma/">Plataforma Gestiona Energía</a></td></tr><tr id="388938ab-0205-80a5-8e2e-e3feda28e98f" dir="ltr"><td id="h_NM" class="" style="width:170.25px">🌿Calculadora de Energías Renovables</td><td id="r;IE" class="" style="width:303px">Calculadora de Ahorro para calcular de forma rápida el ahorro que podría obtener al instalar un sistema solar fotovoltaico y conectarlo a la red, de acuerdo a la Ley de Generación Distribuida.</td><td id="{Bve" class="" style="width:237px"><a href="https://solar.minenergia.cl/">Explorador Solar</a></td></tr><tr id="384938ab-0205-80ec-a59f-fc9e907e5b42" dir="ltr"><td id="h_NM" class="" style="width:170.25px">🧾Servicio de Diagnóstico ONLINE</td><td id="r;IE" class="" style="width:303px">Servicio de <strong>diagnóstico energético gratuito</strong> que, a partir de una revisión energética de la empresa, entrega recomendaciones sobre medidas de eficiencia energética y energía renovable</td><td id="{Bve" class="" style="width:237px"><a href="https://mipymes.gestionaenergia.cl/unidad-de-asistencia-tecnica">Asistencia Técnica Gratuita</a></td></tr><tr id="392938ab-0205-8064-8cbe-dba408471bda" dir="ltr"><td id="h_NM" class="" style="width:170.25px">❄️Cero Fugas PNUD</td><td id="r;IE" class="" style="width:303px">Apoyo técnico y cofinanciamiento para empresas con sistemas de refrigeración HCFC.</td><td id="{Bve" class="" style="width:237px"><a href="https://www.undp.org/es/chile/programa-cero-fugas">Programa Cero Fugas | Programa De Las Naciones Unidas Para El Desarrollo</a></td></tr></tbody></table></div><hr id="384938ab-0205-80c8-8d05-f869c51fa2d7" dir="auto"/><p id="384938ab-0205-80fd-a640-d5ff76d8de96" class="" dir="auto"><mark class="highlight-blue" data-notion-highlight="blue">━━━━━━</mark><mark class="highlight-red" data-notion-highlight="red">━━━━━━━━━━</mark></p><p id="2c2938ab-0205-83ab-95eb-01c78c417775" class="" dir="auto"><strong>Carlos Campos<br/></strong><mark class="highlight-gray" data-notion-highlight="gray">Analista Regional Eficiencia Energética<br/></mark>Seremi de Energía Región de Valparaíso <br/><mark class="highlight-purple" data-notion-highlight="purple">ccamposn@minenergia.cl</mark></p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>

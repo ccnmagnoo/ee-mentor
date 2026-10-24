@@ -1,0 +1,192 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import Icon from '@/components/ui/Icon.astro';
+import PageHeader from '@/components/ui/PageHeader.astro';
+import ClasificacionBadge from '@/components/ui/ClasificacionBadge.astro';
+import EmptyState from '@/components/ui/EmptyState.astro';
+import { getEmpresaDetalle } from '@/lib/services/analytics';
+import { evaluarSecciones, redondear } from '@/lib/scoring';
+import { GRADOS_CONSUMO } from '@/lib/schemas';
+import { formatFecha, formatFechaCorta, formatNumero } from '@/lib/config';
+
+const { id } = Astro.params;
+if (!id) return Astro.redirect('/empresas');
+const detalle = await getEmpresaDetalle(id);
+if (!detalle) return Astro.redirect('/empresas');
+
+const { empresa, visitas, ultimaVisita, evaluacion } = detalle;
+const contacto = [
+  empresa.contacto && { label: 'Contacto', value: empresa.contacto },
+  empresa.telefono && { label: 'Teléfono', value: empresa.telefono },
+  empresa.correo && { label: 'Correo', value: empresa.correo },
+  empresa.direccion && { label: 'Dirección', value: empresa.direccion },
+].filter(Boolean) as Array<{ label: string; value: string }>;
+---
+
+<Layout title={empresa.nombre} description={`Ficha de ${empresa.nombre}`}>
+  <PageHeader
+    eyebrow={`${empresa.id} · ${empresa.rubro}`}
+    title={empresa.nombre}
+    subtitle={[empresa.comuna, empresa.region].filter(Boolean).join(', ') || 'Sin ubicación registrada'}
+    breadcrumbs={[
+      { label: 'Empresas', href: '/empresas' },
+      { label: empresa.nombre },
+    ]}
+  >
+    <Fragment slot="actions">
+      <a href={`/empresas/${empresa.id}/editar`} class="btn-secondary"><Icon name="edit" size={16} /> Editar ficha</a>
+      <a href={`/empresas/${empresa.id}/visitas/nueva`} class="btn-primary"><Icon name="plus" size={16} /> Nueva visita</a>
+    </Fragment>
+  </PageHeader>
+
+  <div class="grid gap-5 xl:grid-cols-3">
+    <section class="card card-pad xl:col-span-2">
+      <div class="flex flex-wrap items-start justify-between gap-4">
+        <div>
+          <p class="eyebrow">Ficha de empresa</p>
+          <h2 class="mt-1 text-xl font-semibold text-slate-900">{empresa.nombre}</h2>
+          <p class="mt-1 text-sm text-slate-500">RUT {empresa.rut || 'no informado'}</p>
+        </div>
+        <div class="flex flex-wrap gap-2 text-xs">
+          <span class="badge-brand">{empresa.rubro}</span>
+          {empresa.trabajadores > 0 && <span class="badge-neutral">{empresa.trabajadores} trabajadores</span>}
+          {empresa.superficie_m2 > 0 && <span class="badge-neutral">{formatNumero(empresa.superficie_m2, 'm²')}</span>}
+        </div>
+      </div>
+
+      <dl class="mt-5 grid gap-4 sm:grid-cols-2">
+        {contacto.map((item) => (
+          <div>
+            <dt class="text-[11px] font-semibold uppercase tracking-wide text-slate-400">{item.label}</dt>
+            <dd class="mt-0.5 text-sm text-slate-700">{item.value}</dd>
+          </div>
+        ))}
+      </dl>
+
+      {empresa.observaciones && (
+        <div class="mt-5 rounded-lg bg-slate-50 p-4">
+          <p class="text-[11px] font-semibold uppercase tracking-wide text-slate-400">Observaciones</p>
+          <p class="mt-1 text-sm leading-relaxed text-slate-600">{empresa.observaciones}</p>
+        </div>
+      )}
+    </section>
+
+    <section class="card card-pad">
+      <p class="eyebrow">Estado actual</p>
+      <div class="mt-3 flex items-end justify-between gap-3">
+        <div>
+          <p class="kpi">{evaluacion?.puntajeGlobal !== null && evaluacion ? redondear(evaluacion.puntajeGlobal, 1).toFixed(1) : '—'}<span class="text-base font-medium text-slate-400">/5</span></p>
+          <p class="mt-1 text-xs text-slate-500">Puntaje de la última visita</p>
+        </div>
+        {evaluacion && <ClasificacionBadge etiqueta={evaluacion.clasificacionGlobal.etiqueta} tono={evaluacion.clasificacionGlobal.tono} />}
+      </div>
+      <div class="mt-5 space-y-2 border-t border-slate-100 pt-4 text-sm">
+        <div class="flex justify-between"><span class="text-slate-500">Visitas registradas</span><span class="font-semibold text-slate-800">{visitas.length}</span></div>
+        <div class="flex justify-between"><span class="text-slate-500">Última visita</span><span class="font-medium text-slate-800">{ultimaVisita ? formatFechaCorta(ultimaVisita.fecha) : '—'}</span></div>
+        <div class="flex justify-between"><span class="text-slate-500">Grado de consumo</span><span class="font-medium text-slate-800">{ultimaVisita ? GRADOS_CONSUMO[ultimaVisita.grado_consumo] : '—'}</span></div>
+      </div>
+      {ultimaVisita && (
+        <a href={`/empresas/${empresa.id}/visitas/${ultimaVisita.id}/informe`} class="btn-primary mt-5 w-full">
+          <Icon name="file" size={16} /> Ver último informe
+        </a>
+      )}
+    </section>
+  </div>
+
+  {evaluacion && (
+    <section class="card mt-5 overflow-hidden">
+      <div class="card-header">
+        <div>
+          <h2 class="text-sm font-semibold text-slate-900">Evaluación por dimensión</h2>
+          <p class="text-xs text-slate-500">Última visita: {formatFecha(ultimaVisita?.fecha ?? '')} · {evaluacion.evaluadas} de {evaluacion.total} dimensiones evaluadas.</p>
+        </div>
+        <a href={`/empresas/${empresa.id}/visitas/${ultimaVisita?.id}`} class="btn-ghost btn-sm">Ver detalle</a>
+      </div>
+      <div class="grid gap-4 p-5 sm:grid-cols-2 sm:p-6 lg:grid-cols-5">
+        {evaluacion.secciones.map((seccion) => (
+          <div class="rounded-lg border border-slate-100 bg-slate-50/40 p-3">
+            <div class="flex items-center justify-between gap-2">
+              <p class="text-xs font-medium text-slate-600">{seccion.nombre}</p>
+              <span class="text-xs font-semibold text-slate-800">{seccion.aplica ? `${seccion.puntaje}/5` : '—'}</span>
+            </div>
+            <div class="mt-2 h-1.5 overflow-hidden rounded-full bg-slate-200">
+              <div
+                class:list={[
+                  'h-full rounded-full',
+                  seccion.puntaje <= 1.5 ? 'bg-rose-500' : seccion.puntaje <= 2.5 ? 'bg-orange-400' : seccion.puntaje <= 3.5 ? 'bg-amber-400' : seccion.puntaje <= 4.5 ? 'bg-emerald-500' : 'bg-brand-600',
+                ]}
+                style={`width: ${(seccion.puntaje / 5) * 100}%`}
+              />
+            </div>
+            <p class="mt-1.5 text-[10px] uppercase tracking-wide text-slate-400">{seccion.clasificacion.etiqueta}</p>
+          </div>
+        ))}
+      </div>
+    </section>
+  )}
+
+  <section class="card mt-5 overflow-hidden">
+    <div class="card-header">
+      <div>
+        <h2 class="text-sm font-semibold text-slate-900">Historial de visitas</h2>
+        <p class="text-xs text-slate-500">Cada visita genera un informe Markdown independiente.</p>
+      </div>
+      <a href={`/empresas/${empresa.id}/visitas/nueva`} class="btn-secondary btn-sm"><Icon name="plus" size={14} /> Nueva visita</a>
+    </div>
+
+    {visitas.length === 0 ? (
+      <div class="p-6">
+        <EmptyState
+          title="Sin visitas registradas"
+          description="Registra la primera visita para evaluar el desempeño energético y generar el informe técnico."
+        >
+          <Icon slot="icon" name="file" size={22} />
+          <a href={`/empresas/${empresa.id}/visitas/nueva`} class="btn-primary"><Icon name="plus" size={16} /> Registrar visita</a>
+        </EmptyState>
+      </div>
+    ) : (
+      <div class="table-wrap">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Visita</th>
+              <th>Fecha</th>
+              <th>Asesor</th>
+              <th class="text-center">Hallazgos</th>
+              <th class="text-center">Recomendaciones</th>
+              <th>Puntaje</th>
+              <th class="text-right">Acciones</th>
+            </tr>
+          </thead>
+          <tbody>
+            {visitas.map((visita) => {
+              const evalVisita = evaluarSecciones(visita.secciones);
+              return (
+                <tr>
+                  <td class="font-medium text-slate-800">{visita.id}</td>
+                  <td class="whitespace-nowrap text-slate-600">{formatFechaCorta(visita.fecha)}</td>
+                  <td class="text-slate-600">{visita.asesor}</td>
+                  <td class="text-center text-slate-700">{visita.hallazgos.length}</td>
+                  <td class="text-center text-slate-700">{visita.recomendaciones.length}</td>
+                  <td>
+                    <div class="flex items-center gap-2">
+                      <span class="text-sm font-semibold text-slate-800">{evalVisita.puntajeGlobal !== null ? evalVisita.puntajeGlobal.toFixed(1) : '—'}</span>
+                      <ClasificacionBadge etiqueta={evalVisita.clasificacionGlobal.etiqueta} tono={evalVisita.clasificacionGlobal.tono} />
+                    </div>
+                  </td>
+                  <td class="text-right">
+                    <div class="flex justify-end gap-1">
+                      <a href={`/empresas/${empresa.id}/visitas/${visita.id}`} class="btn-ghost btn-sm">Ver</a>
+                      <a href={`/empresas/${empresa.id}/visitas/${visita.id}/informe`} class="btn-ghost btn-sm">Informe</a>
+                      <a href={`/empresas/${empresa.id}/visitas/${visita.id}/editar`} class="btn-ghost btn-sm"><Icon name="edit" size={14} /></a>
+                    </div>
+                  </td>
+                </tr>
+              );
+            })}
+          </tbody>
+        </table>
+      </div>
+    )}
+  </section>
+</Layout>

@@ -1,0 +1,20 @@
+---
+import type { Clasificacion } from '@/lib/scoring';
+
+interface Props {
+  etiqueta: string;
+  tono: Clasificacion['tono'];
+  class?: string;
+}
+const { etiqueta, tono, class: className = '' } = Astro.props;
+const tones: Record<Clasificacion['tono'], string> = {
+  critical: 'badge-rose',
+  warning: 'badge-orange',
+  neutral: 'badge-amber',
+  good: 'badge-emerald',
+  excellent: 'badge-brand',
+  muted: 'badge-neutral',
+};
+---
+
+<span class={`${tones[tono]} ${className}`}>{etiqueta}</span>

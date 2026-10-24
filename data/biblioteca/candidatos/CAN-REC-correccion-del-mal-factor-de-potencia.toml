@@ -1,0 +1,13 @@
+id = "CAN-REC-correccion-del-mal-factor-de-potencia"
+tipo = "recomendacion"
+titulo = "Corrección del mal factor de potencia"
+descripcion = "Se recomienda implementar un sistema de compensación de energía reactiva mediante bancos de condensadores , dimensionados de acuerdo con la carga instalada, con el objetivo de elevar el factor de potencia a valores cercanos a 0,95 o superiores , eliminando o reduciendo las penalizaciones económicas. Idealmente, estos sistemas deben ser automáticos , permitiendo adaptarse a las variaciones de carga durante la jornada, debido a la naturaleza variable de la demanda de los productos de la empresa.\nAdicionalmente, es importante realizar una evaluación técnica de los equipos existentes , en particular motores y compresores, verificando su estado, eficiencia y adecuado dimensionamiento, ya que equipos sobredimensionados o en mal estado tienden a empeorar el factor de potencia. También se recomienda incorporar buenas prácticas operacionales , como evitar el funcionamiento en vacío de equipos inductivos y mantener una planificación adecuada del uso de cargas eléctricas.\nFinalmente, el monitoreo periódico del factor de potencia y de la calidad de energía permitirá asegurar la correcta operación del sistema de compensación y mantener un consumo eléctrico eficiente, reduciendo costos y mejorando el desempeño energético general de la instalación."
+categoria = "gestion_operacional"
+impacto = "alto"
+inversion = "media"
+dificultad = "media"
+origen = "casos:Restaurante"
+fuente_id = "FUE-las-deliciosas-383938ab020580caab4ce9e4e584f7a8"
+estado = "pendiente"
+created_at = "2026-10-24T17:57:09.521Z"
+

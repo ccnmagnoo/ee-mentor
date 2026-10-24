@@ -1,0 +1,13 @@
+id = "CAN-REC-sistema-de-auto-cierre-mecanico"
+tipo = "recomendacion"
+titulo = "Sistema de auto cierre mecánico"
+descripcion = "Evaluar la implementación de medidas que permitan compatibilizar la atención de público con la eficiencia energética, tales como sistemas de cierre autónomo mecánico, cortinas de aire o protocolos de apertura parcial según la afluencia de clientes. Estas medidas contribuyen a reducir el ingreso de aire caliente y a disminuir exposición de los equipos de refrigeración y congelado del local"
+categoria = "gestion_operacional"
+impacto = "medio"
+inversion = "baja"
+dificultad = "media"
+origen = "casos:Cafetería"
+fuente_id = "FUE-minimarket-y-cafe-tonita-392938ab02058043b56ae72"
+estado = "pendiente"
+created_at = "2026-10-24T17:57:09.731Z"
+

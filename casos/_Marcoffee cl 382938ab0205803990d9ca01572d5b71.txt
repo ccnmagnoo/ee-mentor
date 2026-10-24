@@ -1,0 +1,67 @@
+Marcoffee.cl
+Marcoffee.cl
+Fecha June 17, 2026 12:12 PM
+Negocio Cafetería
+Grado consumos Moderado
+Usuario Barbara Morales
+Teléfono +56981748363
+Correo electrónico bpmoralesvega@gmail.com
+Contraparte CND Sercotec Viña del Mar
+gmaps https://maps.app.goo.gl/GiAHwLzSFJ7EXey76
+ACTA de seguimiento Asesoría/Mentoría
+Información del contacto y cliente (negocio)
+Nombre del contacto Barbara Morales RUT
+Nombre del negocio Marcoffee.cl ROL
+Asesor asignado Carlos Campos N Servicio Seremi Energía
+Descripción
+La empresa corresponde a una cafetería de especialidad y pastelería ubicada en Viña del Mar , orientada a la venta directa de bebidas calientes/frías, productos horneados y alimentos preparados para consumo inmediato, tanto en local como vía delivery. Desde el punto de vista energético, presenta un perfil típico del rubro gastronómico de mediana escala, con predominancia de consumo eléctrico y térmico en procesos productivos y de conservación.
+Hallazgos
+Referencia Servicio Descripción
+Vitrinas refrigeradas refrigeración Existe un uso indistinto del equipamiento de vitrina para almacenamiento de productos.
+Refrigeradores refrigeración No se detecta mantenimiento o limpieza del equipamiento, acumulando hielo en secciones de frío directo.
+Sensibilización energética gestión energética El negocio no cuenta con capacitación regular en temáticas de energía.
+Aislamiento térmico de accesos y ventanales aislación térmica La falta de aislamiento en ventanales y puertas genera importantes pérdidas energéticas y puede afectar el confort interior, por lo que implementar mejoras pasivas permitiría reducir el consumo energético y mejorar la experiencia de los usuarios.
+Recomendaciones
+nombre Recomendación
+Uso diferenciado de vitrinas refrigeradas Se recomienda establecer un criterio operativo claro para el uso de vitrinas refrigeradas , alineado con su función principal de exhibición y venta, con el objetivo de optimizar el consumo energético y asegurar condiciones adecuadas de conservación de alimentos.
+Las vitrinas refrigeradas deben destinarse exclusivamente a:
+• Exhibición de productos disponibles para venta inmediata .
+• Mantención de alimentos listos para consumo en el corto plazo .
+En este contexto:
+• Se desaconseja su utilización como sistemas de almacenamiento prolongado, debido a:
+◦ Menor hermeticidad frente a equipos cerrados.
+◦ Variaciones térmicas por aperturas frecuentes.
+◦ Mayor demanda energética para mantener temperatura.
+• Para almacenamiento de insumos o productos de mayor duración, se deben utilizar equipos diseñados para ese fin (refrigeradores verticales, cámaras frigoríficas, etc.).
+Almacenamiento refrigerado Se recomienda el uso de equipos de mayor capacidad y eficiencia para el almacenamiento de productos a la espera de exposición, como refrigeradores verticales de frío indirecto clase A+ o superiores. Dichos equipos deben mantenerse ordenados para un retiro de los mismo de forma fácil y rápida. También esto permitirá la reducción de veces que este artefacto tiene que se abierto para reposición de alimentos.
+Ajustes de operación según condiciones de uso Para mejorar la eficiencia energética, se recomienda aplicar una configuración dinámica de operación, según estación del año
+• Para p eríodos cálidos: Ajustar la refrigeración a niveles que compensen la mayor carga térmica ambiental. También asegurar correcta ventilación y limpieza de condensadores.
+• Períodos fríos: Disminuir la exigencia de enfriamiento, evitando sobreconsumo y temperaturas innecesariamente bajas.
+También considerar según ciclo diario
+• Durante horario de atención, se recomienda op eración en condiciones normales, garantizando temperatura adecuada para exhibición.
+• Fuera de horario: Implementar medidas de ahorro como:
+Uso de cubiertas térmicas o cortinas nocturnas.
+Ajuste moderado del setpoint de temperatura.
+Reducción de iluminación interna.
+Temas adicionales
+Tiene consumos energéticos considerados normales para los estándares del modelo de negocio. Pero se recomienda incluir una formación y sensibilización en temáticas de energía.
+Acuerdos
+Visita técnica para revisión de espacios u otras externalidades
+no descritas en la entrevista técnica.
+Información de utilidad
+👩‍🦰Instaladoras Red de mujeres Instaladoras certificadas SEC, para regularización eléctrica y gas, análisis de tarifas, expansiones y proyectos Instaladoras SEC Certificadas
+👷‍♂️Portal SEC de instaladores Listado de profesionales certificados SEC oficial. Instaladoras e Instaladores Certificados por SEC
+🏭Proveedores Listado referencial proveedores de equipamiento renovable, no implica recomendación y es responsabilidad del mandante asegurar su cumplimiento y calidad. Proveedores Energéticos (pub)
+🧠Registro de Consultores Plataforma digital para conectar a profesionales y empresas que prestan servicios en eficiencia energética y energías renovables Registro de Consultores
+📚Biblioteca AgenciaSE Material Bibliográfico sobre Eficiencia Energética y Sistemas de Gestión de la Energía Biblioteca – Agencia de Sostenibilidad Energética
+🛡️Sello EE Sello de Eficiencia Energética, gratuito para MiPyMes SelloEE - Sello de Excelencia Energética
+🎯Gestiona Energía MiPyME El Ministerio de Energía ha desarrollado una serie de herramientas de fácil uso para que las MiPyMES puedan estimar el uso y generación de energía a lo largo del país. Herramientas | Gestiona Energía MiPyMEs
+⚡Calculadora de ahorro energéticos Herramienta para calcular una primera aproximación de ahorros y beneficios Plataforma Gestiona Energía
+🌿Calculadora de Energías Renovables Calculadora de Ahorro para calcular de forma rápida el ahorro que podría obtener al instalar un sistema solar fotovoltaico y conectarlo a la red, de acuerdo a la Ley de Generación Distribuida. Explorador Solar
+🧾Servicio de Diagnóstico ONLINE Servicio de  diagnóstico energético gratuito  que, a partir de una revisión energética de la empresa, entrega recomendaciones sobre medidas de eficiencia energética y energía renovable Asistencia Técnica Gratuita
+❄️Cero Fugas PNUD Apoyo técnico y cofinanciamiento para empresas con sistemas de refrigeración HCFC. Programa Cero Fugas | Programa De Las Naciones Unidas Para El Desarrollo
+━━━━━━ ━━━━━━━━━━
+Carlos Campos
+Analista Regional Eficiencia Energética
+Seremi de Energía Región de Valparaíso
+ccamposn@minenergia.cl

@@ -1,0 +1,20 @@
+schema_version = 1
+id = "REC-GEN-02"
+codigo = "REC-GEN-02"
+titulo = "Programa de detección y reparación de fugas de refrigerante"
+categoria = "refrigeracion"
+descripcion = "Implementar inspecciones periódicas, registro de cargas y reparaciones por personal certificado. Reemplazar equipos con refrigerantes de alto GWP al final de su vida útil."
+beneficio = "Recupera la capacidad de frío, reduce el consumo y disminuye las emisiones directas de gases de efecto invernadero."
+inversion = "media"
+dificultad = "alta"
+prioridad = "alta"
+ahorro_estimado = "5-15% del consumo de refrigeración"
+plazo = "Corto plazo (1-3 meses)"
+energetico = "electricidad"
+hallazgos_relacionados = [ "HAL-GEN-02" ]
+tags = [ "refrigeracion", "refrigerante", "ambiente" ]
+activo = true
+origen = "catalogo_base"
+created_at = "2026-01-01T00:00:00.000Z"
+updated_at = "2026-01-01T00:00:00.000Z"
+

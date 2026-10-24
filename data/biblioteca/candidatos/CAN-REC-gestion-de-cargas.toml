@@ -1,0 +1,13 @@
+id = "CAN-REC-gestion-de-cargas"
+tipo = "recomendacion"
+titulo = "Gestión de cargas"
+descripcion = "Se recomienda a partir del a nálisis tarifario comparativo , incorporando la tarifa BT4.3 , que considera discriminación horaria de la energía y la potencia , lo que podría resultar más conveniente para un hotel con capacidad de gestionar o desplazar consumos fuera de horarios punta (por ejemplo, operación de lavandería, producción de ACS o ciertas cargas eléctricas). Esta evaluación debe basarse en datos reales de consumo horario y demanda máxima, idealmente con mediciones o información detallada de facturación."
+categoria = "tarifas"
+impacto = "medio"
+inversion = "baja"
+dificultad = "media"
+origen = "casos:Hotel pequeño"
+fuente_id = "FUE-hotel-asturias-383938ab0205806999a2c62923829735"
+estado = "pendiente"
+created_at = "2026-10-24T17:57:09.203Z"
+

@@ -1,0 +1,16 @@
+schema_version = 1
+id = "HAL-ILUM-01"
+codigo = "ILUM-01"
+titulo = "Uso de iluminación fluorescente"
+categoria = "iluminacion"
+descripcion = "Se observan luminarias fluorescentes, incluidos tubos T8/T5 y ampolletas compactas, con tecnología de menor eficacia luminosa que la disponible actualmente en el mercado. Su reemplazo progresivo por LED permite reducir el consumo manteniendo o mejorando los niveles de iluminación."
+justificacion = "Las luminarias fluorescentes tienen una eficacia menor, contienen mercurio y suelen presentar depreciación lumínica con el uso. La migración a LED es una de las medidas con mejor relación costo-beneficio en locales comerciales."
+impacto = "medio"
+energetico = "electricidad"
+recomendacion_id = "REC-ILUM-01"
+tags = [ "iluminacion", "fluorescente", "led" ]
+activo = true
+origen = "catalogo_base"
+created_at = "2026-01-01T00:00:00.000Z"
+updated_at = "2026-01-01T00:00:00.000Z"
+

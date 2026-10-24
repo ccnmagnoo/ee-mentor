@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="EE Mentor">
+  <rect width="64" height="64" rx="14" fill="#0f766e"/>
+  <path d="M32 12c-10 0-17 6.5-17 15 0 5 2.4 8.6 6 11.2v7.3c0 1.4 1.1 2.5 2.5 2.5h17c1.4 0 2.5-1.1 2.5-2.5v-7.3c3.6-2.6 6-6.2 6-11.2 0-8.5-7-15-17-15Z" fill="#a7f3d0"/>
+  <path d="M26 52h12" stroke="#ecfdf5" stroke-width="3.5" stroke-linecap="round"/>
+  <path d="M32 22v14M26 27l6-5 6 5" stroke="#0f766e" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+</svg>

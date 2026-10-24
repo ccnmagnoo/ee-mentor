@@ -1,0 +1,208 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import Icon from '@/components/ui/Icon.astro';
+import PageHeader from '@/components/ui/PageHeader.astro';
+import EmptyState from '@/components/ui/EmptyState.astro';
+import StatCard from '@/components/ui/StatCard.astro';
+import { conocimiento } from '@/lib/repositories';
+import { CATEGORIAS, IMPACTOS, INVERSIONES } from '@/lib/schemas';
+import { formatFechaCorta, nowISO } from '@/lib/config';
+
+const estadoParam = Astro.url.searchParams.get('estado');
+const estado = estadoParam === 'aprobado' || estadoParam === 'descartado' || estadoParam === 'pendiente'
+  ? estadoParam
+  : 'pendiente';
+
+const [fuentes, candidatos] = await Promise.all([
+  conocimiento.listFuentes(),
+  conocimiento.listCandidatos(),
+]);
+
+const fuenteMap = new Map(fuentes.map((fuente) => [fuente.id, fuente]));
+const pendientes = candidatos.filter((item) => item.estado === 'pendiente');
+const aprobados = candidatos.filter((item) => item.estado === 'aprobado');
+const descartados = candidatos.filter((item) => item.estado === 'descartado');
+const visibles = candidatos.filter((item) => item.estado === estado);
+
+const tabs = [
+  { key: 'pendiente', label: 'Pendientes de revisión', count: pendientes.length },
+  { key: 'aprobado', label: 'Aprobados', count: aprobados.length },
+  { key: 'descartado', label: 'Descartados', count: descartados.length },
+];
+
+const totalHallazgos = fuentes.reduce((acc, fuente) => acc + fuente.hallazgos_count, 0);
+const totalRecomendaciones = fuentes.reduce((acc, fuente) => acc + fuente.recomendaciones_count, 0);
+const importadoReciente = fuentes[0]?.imported_at ?? '';
+---
+
+<Layout title="Biblioteca de conocimiento" description="Importación y revisión de conocimiento desde mentorías históricas">
+  <PageHeader
+    eyebrow="Biblioteca de conocimiento"
+    title="Conocimiento histórico"
+    subtitle="Importa casos de mentoría, revisa los hallazgos y recomendaciones extraídos y apruébalos para incorporarlos al catálogo reutilizable."
+  >
+    <Fragment slot="actions">
+      <a href="/catalogos" class="btn-secondary"><Icon name="book" size={16} /> Ver catálogos</a>
+      <form action="/api/biblioteca/importar" method="post" data-api class="inline-flex">
+        <button type="submit" class="btn-primary">
+          <Icon name="refresh" size={16} /> Importar documentos
+        </button>
+      </form>
+    </Fragment>
+  </PageHeader>
+
+  <div class="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
+    <StatCard label="Documentos fuente" value={fuentes.length} hint={importadoReciente ? `Última importación ${formatFechaCorta(importadoReciente.slice(0, 10))}` : 'Sin importaciones'} tone="brand">
+      <Icon slot="icon" name="book" size={20} />
+    </StatCard>
+    <StatCard label="Hallazgos extraídos" value={totalHallazgos} hint="Desde las mentorías históricas" tone="sky">
+      <Icon slot="icon" name="alert" size={20} />
+    </StatCard>
+    <StatCard label="Recomendaciones extraídas" value={totalRecomendaciones} hint="Medidas identificadas en los casos" tone="amber">
+      <Icon slot="icon" name="target" size={20} />
+    </StatCard>
+    <StatCard label="Candidatos pendientes" value={pendientes.length} hint={`${aprobados.length} aprobados · ${descartados.length} descartados`} tone="slate">
+      <Icon slot="icon" name="sparkles" size={20} />
+    </StatCard>
+  </div>
+
+  <section class="card mt-6 overflow-hidden">
+    <div class="card-header">
+      <div>
+        <h2 class="text-sm font-semibold text-slate-900">Documentos fuente</h2>
+        <p class="text-xs text-slate-500">Cada documento se guarda como Markdown con datos personales redactados.</p>
+      </div>
+      <span class="badge-neutral">{fuentes.length} documentos</span>
+    </div>
+
+    {fuentes.length === 0 ? (
+      <div class="p-6">
+        <EmptyState
+          title="Aún no hay documentos importados"
+          description="Coloca los archivos HTML de las mentorías en la carpeta configurada y usa “Importar documentos”. El proceso extrae hallazgos y recomendaciones y genera candidatos para revisar."
+        >
+          <Icon slot="icon" name="brain" size={22} />
+          <form action="/api/biblioteca/importar" method="post" data-api>
+            <button type="submit" class="btn-primary"><Icon name="refresh" size={16} /> Importar ahora</button>
+          </form>
+        </EmptyState>
+      </div>
+    ) : (
+      <div class="table-wrap">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Documento</th>
+              <th>Rubro</th>
+              <th class="text-center">Hallazgos</th>
+              <th class="text-center">Recomendaciones</th>
+              <th>Importado</th>
+              <th class="text-right">Acciones</th>
+            </tr>
+          </thead>
+          <tbody>
+            {fuentes.map((fuente) => (
+              <tr>
+                <td>
+                  <a href={`/biblioteca/${fuente.id}`} class="font-medium text-slate-900 hover:text-brand-700">{fuente.titulo}</a>
+                  <p class="font-mono text-[11px] text-slate-400">{fuente.id}</p>
+                </td>
+                <td class="whitespace-nowrap text-xs text-slate-600">{fuente.rubro}</td>
+                <td class="text-center text-slate-700">{fuente.hallazgos_count}</td>
+                <td class="text-center text-slate-700">{fuente.recomendaciones_count}</td>
+                <td class="whitespace-nowrap text-xs text-slate-500">{formatFechaCorta(fuente.imported_at.slice(0, 10))}</td>
+                <td class="text-right">
+                  <a href={`/biblioteca/${fuente.id}`} class="btn-ghost btn-sm">Ver documento</a>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    )}
+  </section>
+
+  <section class="card mt-6 overflow-hidden">
+    <div class="card-header">
+      <div>
+        <h2 class="text-sm font-semibold text-slate-900">Candidatos a catálogo</h2>
+        <p class="text-xs text-slate-500">Revisa el contenido extraído. Al aprobar, se crea el ítem en el catálogo correspondiente.</p>
+      </div>
+      <div class="flex flex-wrap gap-2">
+        {tabs.map((tab) => (
+          <a
+            href={`/biblioteca?estado=${tab.key}`}
+            class:list={[
+              'inline-flex items-center gap-1.5 rounded-lg px-2.5 py-1.5 text-xs font-semibold transition',
+              estado === tab.key
+                ? 'bg-brand-700 text-white shadow-sm'
+                : 'border border-slate-200 bg-white text-slate-600 hover:border-slate-300 hover:text-slate-900',
+            ]}
+          >
+            {tab.label}
+            <span class:list={['rounded-full px-1.5 text-[10px]', estado === tab.key ? 'bg-white/20' : 'bg-slate-100 text-slate-500']}>{tab.count}</span>
+          </a>
+        ))}
+      </div>
+    </div>
+
+    {visibles.length === 0 ? (
+      <div class="p-6">
+        <p class="text-sm text-slate-500">No hay candidatos en este estado.</p>
+      </div>
+    ) : (
+      <div class="divide-y divide-slate-100">
+        {visibles.map((candidato) => {
+          const fuente = fuenteMap.get(candidato.fuente_id);
+          return (
+            <article class="p-5">
+              <div class="flex flex-wrap items-start justify-between gap-3">
+                <div class="min-w-0 flex-1">
+                  <div class="flex flex-wrap items-center gap-2">
+                    <span class:list={['badge', candidato.tipo === 'hallazgo' ? 'badge-amber' : 'badge-sky']}>
+                      {candidato.tipo === 'hallazgo' ? 'Hallazgo' : 'Recomendación'}
+                    </span>
+                    <span class="badge-neutral">{CATEGORIAS[candidato.categoria]}</span>
+                    {candidato.tipo === 'hallazgo' ? (
+                      <span class="badge-neutral">Impacto {IMPACTOS[candidato.impacto]}</span>
+                    ) : (
+                      <span class="badge-neutral">{INVERSIONES[candidato.inversion]}</span>
+                    )}
+                    {fuente && (
+                      <a href={`/biblioteca/${fuente.id}`} class="text-[11px] font-medium text-brand-700 hover:text-brand-900">
+                        {fuente.titulo}
+                      </a>
+                    )}
+                  </div>
+                  <h3 class="mt-2 text-sm font-semibold text-slate-900">{candidato.titulo}</h3>
+                  <p class="mt-1 whitespace-pre-line text-xs leading-relaxed text-slate-600">{candidato.descripcion}</p>
+                </div>
+
+                {candidato.estado === 'pendiente' ? (
+                  <div class="flex shrink-0 gap-2">
+                    <form action={`/api/biblioteca/candidatos/${candidato.id}`} method="post" data-api>
+                      <input type="hidden" name="accion" value="aprobar" />
+                      <button type="submit" class="btn-primary btn-sm"><Icon name="check" size={14} /> Aprobar</button>
+                    </form>
+                    <form action={`/api/biblioteca/candidatos/${candidato.id}`} method="post" data-api>
+                      <input type="hidden" name="accion" value="descartar" />
+                      <button type="submit" class="btn-secondary btn-sm" data-confirm="¿Descartar este candidato?"><Icon name="close" size={14} /> Descartar</button>
+                    </form>
+                  </div>
+                ) : (
+                  <span class:list={['badge', candidato.estado === 'aprobado' ? 'badge-emerald' : 'badge-neutral']}>
+                    {candidato.estado === 'aprobado' ? 'Aprobado' : 'Descartado'}
+                  </span>
+                )}
+              </div>
+            </article>
+          );
+        })}
+      </div>
+    )}
+  </section>
+
+  <p class="mt-6 text-center text-xs text-slate-400">
+    Importación ejecutada desde el servidor · {nowISO().slice(0, 10)} · Los documentos originales permanecen en la carpeta de conocimiento.
+  </p>
+</Layout>

@@ -1,0 +1,13 @@
+id = "CAN-HAL-gestion-de-acondicionamiento-de-equipos-de"
+tipo = "hallazgo"
+titulo = "Gestión de acondicionamiento de equipos de congelación"
+descripcion = "Se recomienda optimizar la operación de los equipos de refrigeración destinados a productos del mar mediante una adecuada configuración de setpoints y una gestión operacional eficiente, considerando la alta perecibilidad de este tipo de productos. Es fundamental establecer temperaturas de conservación entre -1 °C y 2 °C para productos frescos refrigerados, y de -18 °C o inferiores para productos congelados, asegurando estabilidad térmica y evitando fluctuaciones que puedan comprometer la calidad e inocuidad. Asimismo, se debe verificar periódicamente la calibración de sensores y controladores, mantener un adecuado control de apertura de puertas para reducir infiltración de calor, y asegurar una correcta circulación de aire dentro de las cámaras. En términos operacionales, se recomienda implementar un sistema de monitoreo continuo de temperatura, realizar mantenimientos preventivos de los equipos, optimizar la carga y distribución de productos para evitar obstrucciones en los flujos de aire, y capacitar al personal en buenas prácticas de manejo y conservación, con el fin de garantizar eficiencia energética y cumplimiento de estándares sanitarios."
+categoria = "gestion_operacional"
+impacto = "medio"
+inversion = "baja"
+dificultad = "baja"
+origen = "casos:No especificado"
+fuente_id = "FUE-stefymar-382938ab0205804e85d2cd29aa1f7eb1"
+estado = "pendiente"
+created_at = "2026-10-24T17:57:10.134Z"
+

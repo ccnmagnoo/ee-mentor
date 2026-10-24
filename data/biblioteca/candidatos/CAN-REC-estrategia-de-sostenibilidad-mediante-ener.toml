@@ -1,0 +1,13 @@
+id = "CAN-REC-estrategia-de-sostenibilidad-mediante-ener"
+tipo = "recomendacion"
+titulo = "Estrategia de sostenibilidad mediante Energías Renovables"
+descripcion = "Se propone evaluar la implementación de un sistema fotovoltaico térmico de pequeña/mediana escala para autoconsumo, orientado principalmente a cubrir consumos base (iluminación, refrigeración en régimen estable y equipos auxiliares). Esta solución permite generar un aporte parcial pero visible, alineado con objetivos de sostenibilidad y reducción de huella de carbono.\nComplementariamente, se recomienda integrar esta iniciativa dentro de una estrategia comunicacional simple (etiquetado interno, información a clientes) que refuerce el compromiso ambiental de la empresa, mediante apoyo de CDN Sercotec. A nivel técnico, es clave realizar un dimensionamiento acorde a la demanda real y evaluar opciones modulares que permitan futuras ampliaciones. De este modo, aunque el porcentaje de cobertura sea limitado, el impacto en imagen, cumplimiento de requisitos y proyección sostenible puede resultar significativo."
+categoria = "ernc"
+impacto = "medio"
+inversion = "alta"
+dificultad = "alta"
+origen = "casos:No especificado; casos:Pastelería"
+fuente_id = "FUE-vijon-pasteleria-382938ab02058081bcb6de5c89055ba"
+estado = "pendiente"
+created_at = "2026-10-24T17:57:10.233Z"
+

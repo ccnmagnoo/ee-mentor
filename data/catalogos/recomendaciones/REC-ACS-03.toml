@@ -1,0 +1,20 @@
+schema_version = 1
+id = "REC-ACS-03"
+codigo = "REC-ACS-03"
+titulo = "Ajuste de temperatura y control de acumulación"
+categoria = "acs"
+descripcion = "Ajustar la temperatura de acumulación a un rango seguro y eficiente, instalar válvulas mezcladoras si corresponde y verificar dispositivos de seguridad."
+beneficio = "Reduce pérdidas térmicas y el riesgo de quemaduras, manteniendo el servicio en los puntos de consumo."
+inversion = "baja"
+dificultad = "baja"
+prioridad = "alta"
+ahorro_estimado = "5-10% del consumo de ACS"
+plazo = "Inmediato (0-30 días)"
+energetico = "glp"
+hallazgos_relacionados = [ "HAL-ACS-03" ]
+tags = [ "acs", "temperatura", "seguridad" ]
+activo = true
+origen = "catalogo_base"
+created_at = "2026-01-01T00:00:00.000Z"
+updated_at = "2026-01-01T00:00:00.000Z"
+

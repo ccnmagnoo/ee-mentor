@@ -1,0 +1,72 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import Icon from '@/components/ui/Icon.astro';
+import PageHeader from '@/components/ui/PageHeader.astro';
+import { empresas, informes, visitas } from '@/lib/repositories';
+import { construirInforme } from '@/lib/services/report-service';
+import { renderMarkdown, parseFrontmatter } from '@/lib/markdown';
+import { formatFecha } from '@/lib/config';
+
+const { id, visitaId } = Astro.params;
+if (!id || !visitaId) return Astro.redirect('/empresas');
+
+const [empresa, visita] = await Promise.all([empresas.get(id), visitas.get(id, visitaId)]);
+if (!empresa || !visita) return Astro.redirect(`/empresas/${id}`);
+
+let markdown = await informes.read(id, visitaId);
+if (!markdown) {
+  const generado = await construirInforme(id, visitaId);
+  markdown = generado?.markdown ?? '';
+}
+if (!markdown) return Astro.redirect(`/empresas/${id}/visitas/${visitaId}`);
+
+const meta = parseFrontmatter(markdown);
+const html = renderMarkdown(markdown);
+const base = `/api/empresas/${empresa.id}/visitas/${visita.id}`;
+---
+
+<Layout title={`Informe · ${empresa.nombre}`} wide>
+  <div class="no-print">
+    <PageHeader
+      eyebrow={`Informe técnico · ${visita.id}`}
+      title={empresa.nombre}
+      subtitle={`Visita del ${formatFecha(visita.fecha)} · Asesor ${visita.asesor}`}
+      breadcrumbs={[
+        { label: 'Empresas', href: '/empresas' },
+        { label: empresa.nombre, href: `/empresas/${empresa.id}` },
+        { label: visita.id, href: `/empresas/${empresa.id}/visitas/${visita.id}` },
+        { label: 'Informe' },
+      ]}
+    >
+      <Fragment slot="actions">
+        <a href={`${base}/markdown`} class="btn-secondary"><Icon name="download" size={16} /> Markdown</a>
+        <a href={`${base}/html`} target="_blank" rel="noopener" class="btn-secondary"><Icon name="external" size={16} /> HTML</a>
+        <button type="button" class="btn-primary" data-print><Icon name="print" size={16} /> Imprimir / PDF</button>
+      </Fragment>
+    </PageHeader>
+
+    <div class="mb-4 flex flex-wrap items-center justify-between gap-3 rounded-xl border border-slate-200 bg-white px-4 py-3 shadow-sm">
+      <div class="flex flex-wrap items-center gap-2 text-xs text-slate-500">
+        <span class="badge-brand">v{String(meta.version ?? 1)}</span>
+        {meta.clasificacion && <span class="badge-neutral">Clasificación: {String(meta.clasificacion)}</span>}
+        {meta.puntaje_global !== null && meta.puntaje_global !== undefined && (
+          <span class="badge-neutral">Puntaje: {String(meta.puntaje_global)}/5</span>
+        )}
+        <span class="badge-neutral">{String(meta.hallazgos ?? 0)} hallazgos</span>
+        <span class="badge-neutral">{String(meta.recomendaciones ?? 0)} recomendaciones</span>
+      </div>
+      <form action={`${base}/regenerar`} method="post" data-api class="flex items-center gap-2">
+        <span class="hidden text-xs text-slate-400 sm:inline">Generado desde los datos de la visita</span>
+        <button type="submit" class="btn-secondary btn-sm"><Icon name="refresh" size={14} /> Regenerar</button>
+      </form>
+    </div>
+  </div>
+
+  <article id="imprimir" class="report report-shell mx-auto max-w-4xl rounded-xl border border-slate-200 bg-white px-6 py-8 shadow-[var(--shadow-card)] sm:px-12 sm:py-12">
+    <div set:html={html} />
+  </article>
+
+  <p class="no-print mt-6 text-center text-xs text-slate-400">
+    Para exportar a PDF, usa “Imprimir” y selecciona “Guardar como PDF”. El HTML imprimible también está disponible como archivo independiente.
+  </p>
+</Layout>

@@ -1,0 +1,13 @@
+id = "CAN-HAL-tarifa-electrica"
+tipo = "hallazgo"
+titulo = "Tarifa eléctrica"
+descripcion = "El Hotel Asturias se encuentra actualmente bajo tarifa BT4.3 , la cual considera cobros por energía consumida y potencia demandada , siendo adecuada para clientes con consumos relevantes y perfiles de carga relativamente estables. Dado el perfil energético del hotel, esta tarifa resulta coherente desde el punto de vista técnico. Sin embargo, el uso intensivo de electricidad y la posible existencia de puntas de demanda en horarios específicos (mañana y noche, asociadas a ACS, calefacción y uso de servicios) podría estar generando costos elevados por potencia demandada , especialmente si no existe una gestión activa de la demanda."
+categoria = "tarifas"
+impacto = "medio"
+inversion = "baja"
+dificultad = "baja"
+origen = "casos:Hotel pequeño"
+fuente_id = "FUE-hotel-asturias-383938ab0205806999a2c62923829735"
+estado = "pendiente"
+created_at = "2026-10-24T17:57:09.174Z"
+

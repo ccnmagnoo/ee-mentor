@@ -1,0 +1,20 @@
+schema_version = 1
+id = "REC-GEST-01"
+codigo = "REC-GEST-01"
+titulo = "Implementar un sistema simple de gestión energética"
+categoria = "gestion_energetica"
+descripcion = "Designar un responsable, establecer una línea base de consumo, definir indicadores simples (kWh/mes, costo por venta o por m²) y realizar revisiones mensuales con metas de mejora."
+beneficio = "Sostiene los ahorros en el tiempo, permite detectar desviaciones y prepara a la empresa para programas como el Sello de Eficiencia Energética."
+inversion = "baja"
+dificultad = "media"
+prioridad = "alta"
+ahorro_estimado = "5-15% del consumo total"
+plazo = "Mediano plazo (3-6 meses)"
+energetico = "electricidad"
+hallazgos_relacionados = [ "HAL-GEST-01" ]
+tags = [ "gestion", "kpi", "sello ee" ]
+activo = true
+origen = "catalogo_base"
+created_at = "2026-01-01T00:00:00.000Z"
+updated_at = "2026-01-01T00:00:00.000Z"
+

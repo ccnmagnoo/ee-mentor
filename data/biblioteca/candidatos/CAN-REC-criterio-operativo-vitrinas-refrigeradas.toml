@@ -1,0 +1,13 @@
+id = "CAN-REC-criterio-operativo-vitrinas-refrigeradas"
+tipo = "recomendacion"
+titulo = "Criterio operativo vitrinas refrigeradas"
+descripcion = "Se sugiere definir un criterio operativo específico para el uso de las vitrinas refrigeradas, orientado a su función principal de exhibición y venta. El propósito es optimizar el consumo energético y garantizar condiciones adecuadas de conservación de los alimentos.\nLas vitrinas deben destinarse únicamente a:\n• Exhibición de productos disponibles para la venta inmediata.\n• Conservación de alimentos listos para consumo en el corto plazo.\nEn este marco:\n• Se desaconseja su uso como sistemas de almacenamiento prolongado, ya que presentan:\n ◦ Menor hermeticidad en comparación con equipos cerrados.\n ◦ Variaciones térmicas derivadas de aperturas frecuentes.\n ◦ Mayor demanda energética para mantener la temperatura estable."
+categoria = "refrigeracion"
+impacto = "medio"
+inversion = "media"
+dificultad = "media"
+origen = "casos:Comercio minorista"
+fuente_id = "FUE-ecosuper-383938ab020580828338cbfee1143fd0"
+estado = "pendiente"
+created_at = "2026-10-24T17:57:09.110Z"
+

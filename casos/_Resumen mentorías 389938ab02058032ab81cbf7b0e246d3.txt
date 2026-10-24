@@ -1,0 +1,194 @@
+Resumen mentorías Resumen mentorías
+Resumen de Mentorías Técnicas Energéticas — Seremi de Energía Región de Valparaíso
+Resumen General
+Se analizaron 8 informes de mentoría/asesoría energética realizados por Carlos Campos (Analista Regional Eficiencia Energética, Seremi de Energía Región de Valparaíso) a MiPyMes de la región. Los negocios abarcan rubros alimenticios (cafeterías, pastelería, pizzería, empanadas, productos del mar), comercio minorista sostenible y hotelería, con grados de consumo desde Ligero a Intensivo .
+Informes Analizados
+# Negocio Rubro Titular Consumo
+1 Le Flaneur Spa Cafetería Vincent Bellegueulle Moderado
+2 Vijon Pastelería Pastelería / Fábrica alimentos Victor Anibal Farias Jil Intensivo
+3 Stefymar Productos del mar (no especificado) Intensivo
+4 Pizzería Plaggio Pizzería artesanal Sergio Córdova Vargas Moderado
+5 Café Colores Cafetería Carol Navarro Moderado
+6 Hotel Asturias Hotelería Carolina Rojas Relevante
+7 EcoSuper Comercio minorista sostenible Susan Godoy Ligero
+8 Las Deliciosas Fábrica de empanadas Nicolás Lagomarsino Intensivo
+Estructura Común de los Informes
+Acta de seguimiento con datos del contacto y negocio
+Descripción del perfil energético (procesos, equipos, fuentes)
+Hallazgos por servicio (refrigeración, climatización, gestión, tarifa, etc.)
+Recomendaciones con medidas específicas por hallazgo
+Temas adicionales y acuerdos de colaboración
+Información de utilidad (instaladoras SEC, proveedores, herramientas públicas)
+Firma del analista y datos de contacto
+Listado Tipificado de Hallazgos
+H1. Uso inadecuado de equipos de refrigeración
+Campo Detalle
+Descripción Uso de vitrinas refrigeradas, mesones refrigerados o equipos de exhibición como almacenamiento prolongado, cuando están diseñados para exhibición/venta de corto plazo. Genera sobreconsumo por mayor intercambio térmico, menor hermeticidad y aperturas frecuentes.
+Frecuencia Muy Alta (6 de 8 informes)
+Rubros Cafeterías, pastelería, comercio, pizzería
+Ejemplos Café Colores (mesón refrigerado como almacén), EcoSuper (vitrinas para almacenamiento prolongado), Le Flaneur (vitrinas como almacenamiento permanente)
+Severidad Alta — impacto directo en consumo base 24/7
+H2. Ausencia de gestión energética formal
+Campo Detalle
+Descripción No existe un sistema estructurado de gestión de la energía, responsable designado, indicadores clave (KPIs), línea base ni monitoreo sistemático. Las acciones son esporádicas y reactivas.
+Frecuencia Muy Alta (7 de 8 informes)
+Rubros Todos
+Ejemplos Stefymar, Las Deliciosas, Vijon Pastelería, Café Colores
+Severidad Alta — limita la capacidad de mejora continua
+H3. Tarifa eléctrica inadecuada para el perfil de consumo
+Campo Detalle
+Descripción Negocios con consumo productivo relevante (fábricas, restaurantes) que mantienen tarifa BT1 (residencial/domiciliaria), sin discriminación horaria ni gestión de demanda.
+Frecuencia Media (3 de 8 informes)
+Rubros Pastelería, empanadas (fábricas de alimentos)
+Ejemplos Vijon Pastelería (BT1A para fábrica + 2 viviendas), Las Deliciosas (BT1A con 2.209 kWh/mes en restaurant)
+Severidad Alta — impacto económico directo en facturación
+H4. Bajo factor de potencia con penalización económica
+Campo Detalle
+Descripción Presencia de potencia reactiva elevada por motores, compresores y equipos inductivos, generando cargos adicionales en facturación eléctrica (ej: 6,4% de penalización en Las Deliciosas).
+Frecuencia Baja (1 de 8 informes)
+Rubros Fábrica de alimentos con refrigeración intensiva
+Ejemplos Las Deliciosas (penalización 6,4% en cuenta BT3PPP)
+Severidad Media — evitable con inversión moderada
+H5. Carga térmica interna por fuentes de calor no gestionadas
+Campo Detalle
+Descripción Hornos (a leña, convección) que generan sobrecalentamiento del local, aumentando demanda de climatización en verano. Aperturas frecuentes de puertas de hornos que provocan pérdidas térmicas significativas.
+Frecuencia Media (3 de 8 informes)
+Rubros Pizzería, cafeterías, pastelería
+Ejemplos Pizzería Plaggio (horno a leña + A/C para compensar), Café Colores (horno convección con aperturas frecuentes)
+Severidad Media — afecta confort y consumo estacional
+H6. Deficiencias en aislamiento térmico de la envolvente
+Campo Detalle
+Descripción Fugas de aire por puertas y ventanas sin sellos, ventanales sin doble vidrio ni control solar, pérdidas térmicas que afectan climatización.
+Frecuencia Media (4 de 8 informes)
+Rubros Cafeterías, comercio, pizzería, hotelería
+Ejemplos Le Flaneur (vanos expuestos, ventanales sin DVH), EcoSuper (medidas parciales), Pizzería Plaggio
+Severidad Media — acumulable, afecta climatización
+H7. Sin integración de energías renovables
+Campo Detalle
+Descripción Dependencia total de fuentes fósiles/convencionales, sin evaluación de ERNC (fotovoltaica, solar térmica) para autoconsumo.
+Frecuencia Media (3 de 8 informes explícitamente)
+Rubros Pastelería, empanadas (fábricas), hotelería
+Ejemplos Vijon Pastelería (cliente mayoritario exige sostenibilidad), Hotel Asturias (cubiertas disponibles para FV)
+Severidad Media — brecha estratégica de sostenibilidad
+H8. Grupo electrógeno no operativo
+Campo Detalle
+Descripción Equipo de respaldo instalado pero sin conexión ni puesta en marcha, exponiendo la operación a riesgos ante cortes de suministro eléctrico.
+Frecuencia Baja (1 de 8 informes)
+Rubros Productos del mar
+Ejemplos Stefymar (equipo nuevo sin conectar ni operativo)
+Severidad Crítica — riesgo de interrupción de procesos y pérdidas
+H9. Cadena de frío sin control documentado
+Campo Detalle
+Descripción Gestión de refrigeración basada en experiencia del personal, sin registros formales de temperaturas, setpoints, ciclos de descongelamiento ni mantenimiento programado.
+Frecuencia Media (3 de 8 informes)
+Rubros Pastelería, empanadas, productos del mar
+Ejemplos Vijon Pastelería (dependencia de experiencia operativa), Las Deliciosas (termocupla sin ubicación conocida)
+Severidad Media — riesgo de inocuidad e ineficiencia
+H10. Calefacción con equipos individuales ineficientes
+Campo Detalle
+Descripción Uso de calefactores halógenos/eléctricos portátiles como estrategia principal de climatización, sin sistema centralizado.
+Frecuencia Baja (2 de 8 informes)
+Rubros Hotelería, cafetería
+Ejemplos Hotel Asturias (calefactores halógenos 2 kW), Café Colores (calefactor portátil)
+Severidad Media — consumo elevado sin confort homogéneo
+Listado Tipificado de Recomendaciones
+R1. Gestión diferenciada de equipos de refrigeración
+Campo Detalle
+Acción Definir criterio operativo claro: vitrinas refrigeradas para exhibición y venta inmediata; cámaras frigoríficas o refrigeradores cerrados para almacenamiento prolongado.
+Implementación Protocolo interno escrito, rotulación de equipos, capacitación al personal, sistema FIFO de rotación.
+Horizonte Corto plazo (1-3 meses)
+Impacto energético Alto (reduce consumo base refrigeración)
+Costo estimado Bajo (solo gestión y capacitación)
+R2. Profesionalización de la gestión energética
+Campo Detalle
+Acción Designar responsable energético (interno o externo), establecer línea base de consumo, definir KPIs (kWh/kg producto, kWh/mes, $/unidad), monitoreo periódico.
+Implementación Plan progresivo con herramientas gratuitas (Gestiona Energía MiPyME), Sello EE del Ministerio de Energía, guías de buenas prácticas. A mediano plazo: ISO 50001 simplificada.
+Horizonte Corto a mediano plazo (3-12 meses)
+Impacto energético Alto (sostiene mejora continua)
+Costo estimado Medio (capacitación + horas dedicadas)
+R3. Corrección tarifaria y segregación de medidores
+Campo Detalle
+Acción Evaluar cambio a tarifa BT4.3 o AT4.3 según perfil de consumo y demanda. Separar medidores para uso productivo vs. residencial/administrativo para evitar subsidios cruzados.
+Implementación Instalador SEC certificado (clase D o E), análisis de facturación histórica (>12 meses), curvas de carga.
+Horizonte Corto plazo (1-3 meses)
+Impacto energético Medio (económico principalmente)
+Costo estimado Medio (instalación de medidores + proyecto)
+R4. Compensación de energía reactiva
+Campo Detalle
+Acción Instalar banco de condensadores automático dimensionado a la carga instalada para elevar el factor de potencia a >0,95.
+Implementación Evaluación técnica por especialista SEC clase D o E, monitoreo periódico del FP. Revisar estado de motores y compresores.
+Horizonte Corto plazo (1-3 meses)
+Impacto energético Medio (elimina penalizaciones económicas)
+Costo estimado Medio
+R5. Optimización térmica de hornos y climatización
+Campo Detalle
+Acción Programación eficiente de tandas (carga completa), precalentamientos controlados según especificaciones del fabricante, reducción de aperturas de puerta. Implementar sistema de extracción sobre horno a leña y aislamiento térmico alrededor.
+Implementación Protocolo de uso diario, campanas de alto rendimiento, barreras refractarias, planificación de producción en bloques horarios.
+Horizonte Corto plazo (1-3 meses)
+Impacto energético Medio (reduce demanda de climatización)
+Costo estimado Bajo a Medio (según solución)
+R6. Mejoramiento de aislamiento térmico de la envolvente
+Campo Detalle
+Acción Burletes perimetrales en puertas, cortinas térmicas, doble vidriado hermético (DVH), láminas de control solar, cortinas roller o persianas.
+Implementación Progresivo según presupuesto: priorizar sellos (bajo costo, impacto inmediato), luego DVH y láminas.
+Horizonte Corto a mediano plazo (1-6 meses)
+Impacto energético Medio (reduce pérdidas por infiltración)
+Costo estimado Bajo (sellos) a Alto (DVH)
+R7. Evaluación e incorporación de ERNC
+Campo Detalle
+Acción Estudio de factibilidad técnica para sistemas fotovoltaicos o solar térmico para autoconsumo, orientado a cubrir consumos base (refrigeración, iluminación, climatización).
+Implementación Dimensionamiento según demanda real, evaluar opciones modulares, utilizar Registro de Consultores. Integrar en estrategia comunicacional de sostenibilidad.
+Horizonte Mediano plazo (6-12 meses)
+Impacto energético Medio (cobertura parcial pero visible)
+Costo estimado Medio a Alto
+R8. Puesta en marcha de grupo electrógeno
+Campo Detalle
+Acción Conectar equipo mediante sistema de transferencia (manual/automático), verificar cumplimiento normativo SEC, programar pruebas de funcionamiento periódicas.
+Implementación Instalador SEC certificado, plan de mantención y pruebas mensuales.
+Horizonte Inmediato (1 mes)
+Impacto energético Crítico (continuidad operativa)
+Costo estimado Bajo (si el equipo ya existe)
+R9. Control documentado de cadena de frío
+Campo Detalle
+Acción Registrar formalmente setpoints, temperaturas, ciclos de descongelamiento y mantenciones. Establecer protocolos diferenciados por tipo de cámara (alta rotación vs. baja rotación).
+Implementación Registro manual o digital simple, capacitación estructurada del personal, dataloggers a mediano plazo.
+Horizonte Corto plazo (1-3 meses)
+Impacto energético Medio (reduce sobreconsumo y riesgo de inocuidad)
+Costo estimado Bajo
+R10. Programa de educación y sensibilización energética
+Campo Detalle
+Acción Charlas periódicas de sensibilización, capacitación en buenas prácticas operativas (apertura de puertas, setpoints correctos, rotación FIFO, mantención básica), cultura organizacional sostenible.
+Implementación Coordinación con CDN Sercotec y Seremi Energía. Planificar contenidos, responsables, calendarios y evaluación de impacto.
+Horizonte Corto plazo y permanente
+Impacto energético Medio (cambio cultural sostenido)
+Costo estimado Bajo
+Matriz de Correspondencia Hallazgo ↔︎ Recomendación
+Hallazgo Recomendación Principal Recomendación Complementaria
+H1. Uso inadecuado de refrigeración R1. Gestión diferenciada R10. Educación y sensibilización
+H2. Sin gestión energética formal R2. Profesionalización R10. Educación
+H3. Tarifa inadecuada R3. Corrección tarifaria —
+H4. Bajo factor de potencia R4. Compensación reactiva R2. Monitoreo de KPIs
+H5. Carga térmica de hornos R5. Optimización térmica R6. Aislamiento envolvente
+H6. Deficiencias en aislamiento R6. Aislamiento térmico R5. Extracción/ventilación
+H7. Sin ERNC R7. Evaluación ERNC R2. Estrategia sostenibilidad
+H8. Grupo electrógeno no operativo R8. Puesta en marcha —
+H9. Cadena de frío sin control R9. Control documentado R1. Gestión diferenciada
+H10. Calefacción ineficiente R5. Climatización eficiente R6. Aislamiento
+Recursos Públicos Clave para Reutilizar en Nuevas Mentorías
+Recurso Descripción Utilidad
+Instaladoras SEC Certificadas Red de mujeres instaladoras certificadas SEC para regularización eléctrica y gas, análisis tarifario y proyectos. Contacto directo para implementación de R3, R4, R8
+Portal SEC Listado oficial de instaladores e instaladoras certificados SEC. Verificación de profesionales habilitados
+Proveedores Energéticos (pub) Listado referencial de proveedores de equipamiento renovable. Evaluación de alternativas para R7
+Registro de Consultores Plataforma digital para conectar profesionales y empresas de eficiencia energética y ERNC. Apoyo externo para R2, R4, R7
+Biblioteca AgenciaSE Material bibliográfico sobre eficiencia energética y sistemas de gestión de la energía. Base documental para R2, R9
+Sello EE Sello de Eficiencia Energética, gratuito para MiPyMes. Reconocimiento y hoja de ruta para R2
+Gestiona Energía MiPyME Herramientas del Ministerio de Energía para estimar uso y generación de energía. Diagnóstico inicial y seguimiento de R2
+Calculadora de Ahorro Plataforma Gestiona Energía para primera aproximación de ahorros y beneficios. Sustento económico para recomendaciones
+Asistencia Técnica Gratuita Servicio de diagnóstico energético gratuito online. Puerta de entrada para nuevas mentorías
+Conclusiones y Recomendaciones para Nuevas Mentorías
+Estandarizar la pauta de diagnóstico : Los hallazgos H1 y H2 son transversales a casi todos los rubros; conviene incluirlos como preguntas obligatorias en toda mentoría inicial.
+Enfoque por clúster de rubro : Los negocios de alimentación (cafeterías, pastelerías, pizzerías, fábricas) comparten el mismo perfil de hallazgos (refrigeración, hornos, gestión). Se puede crear una mentoría base para cada clúster (alimentos, hotelería, comercio).
+Priorizar medidas de bajo costo : R1, R5, R6 (sellos), R9 y R10 son las de menor inversión y mayor impacto relativo; deben ser el punto de partida en toda mentoría.
+Aprovechar herramientas públicas : El ecosistema Sello EE, Gestiona Energía MiPyME y Asistencia Técnica Gratuita debe difundirse activamente como primer paso antes de recomendar inversiones mayores.
+Incluir acuerdo de seguimiento : Todos los informes exitosos incluyen compromisos de colaboración (charlas, visitas técnicas). Formalizar estos acuerdos mejora la adherencia a las recomendaciones.
+Documento elaborado el 24 de junio de 2026 a partir de 8 informes de mentoría energética de la Seremi de Energía Región de Valparaíso.Analista: Carlos Campos — ccamposn@minenergia.cl

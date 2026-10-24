@@ -1,0 +1,16 @@
+schema_version = 1
+id = "HAL-ERNC-01"
+codigo = "ERNC-01"
+titulo = "Sin evaluación de autoconsumo con energías renovables"
+categoria = "ernc"
+descripcion = "No se ha evaluado la incorporación de generación solar fotovoltaica u otra fuente renovable para autoconsumo, pese a disponer de cubierta o superficie útil y de un consumo eléctrico diurno relevante."
+justificacion = "La generación distribuida puede reducir la dependencia de la red y estabilizar costos. Un estudio de prefactibilidad permite dimensionar la solución antes de invertir."
+impacto = "medio"
+energetico = "electricidad"
+recomendacion_id = "REC-ERNC-01"
+tags = [ "ernc", "solar", "fotovoltaica" ]
+activo = true
+origen = "catalogo_base"
+created_at = "2026-01-01T00:00:00.000Z"
+updated_at = "2026-01-01T00:00:00.000Z"
+

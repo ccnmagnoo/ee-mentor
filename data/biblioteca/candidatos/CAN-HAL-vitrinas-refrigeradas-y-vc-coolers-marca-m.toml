@@ -1,0 +1,13 @@
+id = "CAN-HAL-vitrinas-refrigeradas-y-vc-coolers-marca-m"
+tipo = "hallazgo"
+titulo = "Vitrinas refrigeradas y VC coolers marca Mimet"
+descripcion = "El local cuenta con 2 vitrinas refrigeradas horizontales, 2 vc cooler 2 marca Mimet, uno simples y otro doble. Este conjunto representa uno de los principales consumos continuos del negocio, ya que combina refrigeración de exhibición y conservación de productos para venta al público. Su operación es permanente y está directamente influenciada por las condiciones ambientales y la interacción de clientes. Son equipos si bien con un sistema de aislamiento, tienden a ser de peor eficiencia que otros equipos de las mismas características pero sin vidriados. También se expone a ser configurados en un punto de operación más bajo de lo necesario y el aumento de la rotación de productos pueden representar un aumento del consumo energético de su operación, debido al ingreso de aire caliente y humedad del exterior. Tampoco se evidencia un trabajo programático de limpieza de condensadores o especial disposición para que facilite la operación del sistema de ventilación."
+categoria = "refrigeracion"
+impacto = "medio"
+inversion = "baja"
+dificultad = "baja"
+origen = "casos:Cafetería"
+fuente_id = "FUE-la-boulangerie-390938ab0205801fb682ff6930a172ba"
+estado = "pendiente"
+created_at = "2026-10-24T17:57:09.236Z"
+

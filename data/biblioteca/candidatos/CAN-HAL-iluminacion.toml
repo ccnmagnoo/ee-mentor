@@ -1,0 +1,13 @@
+id = "CAN-HAL-iluminacion"
+tipo = "hallazgo"
+titulo = "Iluminación"
+descripcion = "El uso de amplios ventanales en Café Le Flâneur, si bien favorece el ingreso de luz natural, puede implicar riesgos asociados al sobrecalentamiento del espacio en temporada estival , cuando hay periodos de alta radiación solar, lo que podría aumentar la demanda de climatización y el consumo energético. Asimismo, una falta de control solar adecuado (cortinas, láminas o sombreados) podría generar deslumbramiento, afectando el confort visual de clientes y trabajadores. En épocas de bajas temperaturas, los ventanales también pueden representar pérdidas térmicas , impactando negativamente en la eficiencia energética del recinto."
+categoria = "climatizacion"
+impacto = "alto"
+inversion = "baja"
+dificultad = "baja"
+origen = "casos:Cafetería"
+fuente_id = "FUE-le-flaneur-spa-382938ab020580538763e1812d2fc12e"
+estado = "pendiente"
+created_at = "2026-10-24T17:57:09.557Z"
+

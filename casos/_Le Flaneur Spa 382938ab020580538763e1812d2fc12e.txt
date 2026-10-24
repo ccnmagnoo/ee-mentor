@@ -1,0 +1,69 @@
+Le Flaneur Spa
+Le Flaneur Spa
+Fecha June 17, 2026 12:55 PM
+Negocio Cafetería
+Grado consumos Moderado
+Usuario Vincent Bellegueulle
+Teléfono +56940705600
+Correo electrónico gestion@leflaneur.cl
+Contraparte CND Sercotec Viña del Mar
+gmaps https://maps.app.goo.gl/q7k7r7aAxsSoxE6J6
+ACTA de seguimiento Asesoría/Mentoría
+Información del contacto y cliente (negocio)
+Nombre del contacto Vincent Bellegueulle RUT
+Nombre del negocio Le Flaneur Spa ROL
+Asesor asignado Carlos Campos Servicio Seremi Energía
+Descripción
+La empresa consiste en una cafetería corresponde a un establecimiento de servicios alimentarios de tamaño mediano, con una dotación de 14 trabajadores y operación continua durante jornada diurna extendida. Sus procesos energéticos se concentran principalmente en cocina, refrigeración, climatización y alumbrado. El establecimiento cuenta con dos medidores que suministran la parte de cocina y la sección de atención a clientes, siendo este último el que presenta mayores consumos.
+Hallazgos
+Referencia Servicio Descripción
+Vitrinas de refrigeración refrigeración El potencial uso de vitrinas refrigeradas como equipos de almacenamiento permanente constituye una mala práctica operacional y energética , ya que estos equipos están diseñados principalmente para exhibición y venta , no para conservación prolongada de alimentos. Las vitrinas presentan mayores pérdidas térmicas debido a superficies acristaladas, menor aislación y, en muchos casos, sistemas abiertos o con aperturas frecuentes, lo que obliga al compresor a operar de forma continua para mantener la temperatura de consigna.
+Iluminación iluminación El uso de amplios ventanales en Café Le Flâneur, si bien favorece el ingreso de luz natural, puede implicar riesgos asociados al sobrecalentamiento del espacio en temporada estival , cuando hay periodos de alta radiación solar, lo que podría aumentar la demanda de climatización y el consumo energético. Asimismo, una falta de control solar adecuado (cortinas, láminas o sombreados) podría generar deslumbramiento, afectando el confort visual de clientes y trabajadores. En épocas de bajas temperaturas, los ventanales también pueden representar pérdidas térmicas , impactando negativamente en la eficiencia energética del recinto.
+Vanos expuestos aislación térmica La falta de aislamiento en ventanales y puertas genera importantes pérdidas energéticas y puede afectar el confort interior, por lo que implementar mejoras pasivas permitiría reducir el consumo energético y mejorar la experiencia de los usuarios.
+Oportunidades
+Medida Recomendación
+Gestión de iluminación: Los amplios ventanales representan una oportunidad significativa para maximizar el aprovechamiento de la luz natural , reduciendo el uso de iluminación artificial durante gran parte de la jornada y, con ello, el consumo eléctrico. Esta condición permite avanzar hacia la optimización del diseño lumínico , incorporando controles de iluminación, sensores o zonificación, y reforzando una estrategia de eficiencia energética pasiva. Además, con una adecuada gestión solar y térmica, el espacio puede mejorar el confort interior y fortalecer una imagen de sostenibilidad alineada con buenas prácticas energéticas.
+Uso diferenciado de refrigeración Se recomienda implementar una gestión diferenciada de los equipos de refrigeración tipo vitrina , considerando su diseño, función y condiciones óptimas de operación, con el fin de mejorar la eficiencia energética y preservar la calidad de los productos.
+as vitrinas refrigeradas están diseñadas principalmente para:
+• Exhibición comercial de productos .
+• Mantención de alimentos de consumo inmediato o venta en el corto plazo.
+Por lo tanto, se establece que:
+• No deben utilizarse como equipos de almacenamiento de largo plazo , ya que:
+◦ Presentan mayor intercambio térmico con el ambiente (aperturas frecuentes, menor hermeticidad).
+◦ Tienen menor capacidad de control térmico homogéneo que cámaras o refrigeradores cerrados.
+◦ Su uso indebido incrementa el consumo energético y puede afectar la inocuidad de los alimentos.
+• Se debe disponer de equipos específicos para almacenamiento (cámaras frigoríficas o refrigeradores cerrados) para productos que requieran conservación prolongada.
+Configuración operativa de temperaturas Se recomienda ajustar los parámetros de operación de las vitrinas en función de condiciones estacionales y ciclos de uso:
+Ajuste por temporada
+• Verano / altas temperaturas: Incrementar capacidad de refrigeración (setpoint más exigente dentro de rango seguro).
+◦ Verificar sellos, cortinas de aire y correcto funcionamiento de condensadores.
+• Invierno / bajas temperaturas: Reducir la potencia de refrigeración cuando sea posible y ajustar setpoints para evitar sobreenfriamiento y consumo innecesario.
+Ajuste por ciclo día–noche
+• Horario de atención (día):
+◦ Operación a capacidad nominal , asegurando temperatura de conservación y correcta exhibición.
+• Horario no operativo (noche):
+Aplicar modo ahorro energético , mediante el incremento controlado del setpoint (sin comprometer la cadena de frío). Uso de cubiertas o cortinas térmicas y reducción de iluminación interna de vitrinas que no se estén utilizando.
+Mejoramiento de aislamiento térmico de vanos Se recomienda la incorporación de soluciones de sellado en puertas, tales como burletes perimetrales y sellos inferiores, con el fin de reducir las infiltraciones de aire. Esta es una medida de bajo costo y rápida implementación, con impactos inmediatos en la reducción de pérdidas térmicas. Complementariamente, se sugiere la instalación de cortinas térmicas o dispositivos similares en accesos principales, lo que permite minimizar el intercambio de aire entre el interior y el exterior.
+En relación con los ventanales, una mejora significativa corresponde a la implementación de sistemas de doble vidriado hermético (DVH) o la aplicación de láminas de control solar, dependiendo del presupuesto disponible. El DVH reduce considerablemente la transmisión de calor, mejorando tanto el comportamiento en invierno como en verano, mientras que las láminas pueden disminuir la radiación solar directa y contribuir al confort visual y térmico. Asimismo, la incorporación de elementos de sombreamiento, como cortinas tipo roller o persianas, permite gestionar de mejor manera las ganancias solares.
+Buenas prácticas complementarias y capacitación Capacitar a personal de cocina y atención para minimizar aperturas innecesarias o prolongadas de equipos de refrigeración. Evitar sobrecarga de productos que obstruyan la circulación de aire frío. Mantener una adecuada organización de los productos (rotación FIFO) para mejorar la distribución de la carga de frío. Realizar mantenciones periódicas (limpieza de serpentines, revisión de termostatos).
+Temas adicionales
+Se expresa el interés en explorar diversificación energética mediante energías renovables, por lo que se enviará información referencial de proveedores para evaluación por parte del cliente, en la sección de “información de utilidad”.
+Compromiso
+Queda planteada la necesidad de un programa de educación y sensibilización energética para trabajadores, para incluir la cultura del buen uso eficiente de la energía.
+Información de utilidad
+👩‍🦰Instaladoras Red de mujeres Instaladoras certificadas SEC, para regularización eléctrica y gas, análisis de tarifas, expansiones y proyectos Instaladoras SEC Certificadas
+👷‍♂️Portal SEC de instaladores Listado de profesionales certificados SEC oficial. Instaladoras e Instaladores Certificados por SEC
+🏭Proveedores Listado referencial proveedores de equipamiento renovable, no implica recomendación y es responsabilidad del mandante asegurar su cumplimiento y calidad. Proveedores Energéticos (pub)
+🧠Registro de Consultores Plataforma digital para conectar a profesionales y empresas que prestan servicios en eficiencia energética y energías renovables Registro de Consultores
+📚Biblioteca AgenciaSE Material Bibliográfico sobre Eficiencia Energética y Sistemas de Gestión de la Energía Biblioteca – Agencia de Sostenibilidad Energética
+🛡️Sello EE Sello de Eficiencia Energética, gratuito para MiPyMes SelloEE - Sello de Excelencia Energética
+🎯Gestiona Energía MiPyME El Ministerio de Energía ha desarrollado una serie de herramientas de fácil uso para que las MiPyMES puedan estimar el uso y generación de energía a lo largo del país. Herramientas | Gestiona Energía MiPyMEs
+⚡Calculadora de ahorro energéticos Herramienta para calcular una primera aproximación de ahorros y beneficios Plataforma Gestiona Energía
+🌿Calculadora de Energías Renovables Calculadora de Ahorro para calcular de forma rápida el ahorro que podría obtener al instalar un sistema solar fotovoltaico y conectarlo a la red, de acuerdo a la Ley de Generación Distribuida. Explorador Solar
+🧾Servicio de Diagnóstico ONLINE Servicio de  diagnóstico energético gratuito  que, a partir de una revisión energética de la empresa, entrega recomendaciones sobre medidas de eficiencia energética y energía renovable Asistencia Técnica Gratuita
+❄️Cero Fugas PNUD Apoyo técnico y cofinanciamiento para empresas con sistemas de refrigeración HCFC. Programa Cero Fugas | Programa De Las Naciones Unidas Para El Desarrollo
+━━━━━━ ━━━━━━━━━━
+Carlos Campos
+Analista Regional Eficiencia Energética
+Seremi de Energía Región de Valparaíso
+ccamposn@minenergia.cl

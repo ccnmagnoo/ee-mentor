@@ -1,0 +1,13 @@
+id = "CAN-REC-operacion-freidora"
+tipo = "recomendacion"
+titulo = "Operación freidora"
+descripcion = "Se recomienda mantener temperaturas de trabajo adecuadas, para esto puede utilizar un termómetro gastronómico para cocina , para configurar de forma óptima la temperatura de cocción de las frituras. A esto adicionar limpieza frecuente de los quemadores y gestionar correctamente los ciclos de calentamiento para evitar sobreconsumos energéticos."
+categoria = "coccion"
+impacto = "medio"
+inversion = "baja"
+dificultad = "media"
+origen = "casos:Restaurante"
+fuente_id = "FUE-rito-mata-390938ab0205809584b2c563debd6138"
+estado = "pendiente"
+created_at = "2026-10-24T17:57:10.024Z"
+

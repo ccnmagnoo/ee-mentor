@@ -1,0 +1,13 @@
+id = "CAN-REC-protocolo-de-uso-de-horno-de-conveccion"
+tipo = "recomendacion"
+titulo = "Protocolo de uso de Horno de convección"
+descripcion = "Se recomienda optimizar el uso del horno mediante una programación eficiente de las tandas de cocción , buscando operar el equipo con carga completa o cercana a su capacidad máxima , evitando ciclos innecesarios. Es fundamental establecer un protocolo de uso que incluya precalentamientos controlados (solo el tiempo requerido por el fabricante), reducción de aperturas de puerta y definición de temperaturas adecuadas según el tipo de producto.\nAdemás, se sugiere implementar una planificación diaria de producción , agrupando la cocción de masitas en bloques horarios definidos para evitar encendidos y apagados frecuentes. Complementariamente, la mantención periódica (limpieza de ventiladores, revisión de sellos) mejora la eficiencia térmica del equipo. Estas acciones permiten reducir el consumo energético, mejorar la productividad y asegurar una calidad homogénea en los productos , contribuyendo a una operación más eficiente del negocio."
+categoria = "gestion_operacional"
+impacto = "medio"
+inversion = "baja"
+dificultad = "media"
+origen = "casos:Cafetería"
+fuente_id = "FUE-cafe-colores-382938ab020580c59ae6d8d19349a7b0"
+estado = "pendiente"
+created_at = "2026-10-24T17:57:09.051Z"
+

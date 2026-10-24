@@ -1,0 +1,13 @@
+id = "CAN-HAL-gestion-de-la-cadena-de-refrigeracion-y-co"
+tipo = "hallazgo"
+titulo = "Gestión de la cadena de refrigeración y congelados"
+descripcion = "La empresa presenta una gestión operativa de los sistemas de refrigeración basada en conocimientos en base a la experiencia del personal y los dueños. Pero este no cuenta con respaldo documental ni control formal de parámetros críticos. La ausencia de una sistematización de indicadores de setpoints (temperaturas, ciclos, tiempos de descongelamiento) impide verificar si los equipos están operando en condiciones óptimas o sobredimensionadas. Además, aunque existe un uso diferenciado según la etapa de manufactura, este no podría estar estandarizado durante la operación anual, lo que puede generar inconsistencias térmicas, sobreconsumo energético y potenciales riesgos. Hay dependencia de la experiencia operativa más que de una gestión técnica sistemática."
+categoria = "gestion_operacional"
+impacto = "alto"
+inversion = "baja"
+dificultad = "baja"
+origen = "casos:Pastelería"
+fuente_id = "FUE-vijon-pasteleria-382938ab02058081bcb6de5c89055ba"
+estado = "pendiente"
+created_at = "2026-10-24T17:57:10.305Z"
+

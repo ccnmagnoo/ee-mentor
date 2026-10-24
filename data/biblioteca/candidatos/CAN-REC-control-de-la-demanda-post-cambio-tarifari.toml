@@ -1,0 +1,13 @@
+id = "CAN-REC-control-de-la-demanda-post-cambio-tarifari"
+tipo = "recomendacion"
+titulo = "Control de la demanda post cambio tarifario"
+descripcion = "La propuesta de cambio tarifario a AT4.3 busca optimizar los costos eléctricos mediante una gestión más activa de la demanda, considerando que esta tarifa en media tensión incorpora cargos diferenciados por energía y potencia, incluyendo la demanda máxima y la demanda en horario de punta. \nEn este contexto, es fundamental comprender la desagregación de la boleta: \n • Demanda leída: corresponde a la potencia registrada en el período y refleja el comportamiento operativo del consumo.\n • Demanda máxima representa el peak mensual y suele ser la base de cobro, por lo que un aumento puntual puede impactar los costos durante varios meses. \n • Demanda máxima en hora de punta, en invierno tiene un valor significativamente más alto, por lo que concentrar consumos intensivos en ese horario puede encarecer considerablemente la cuenta. Este mismo en los meses de octubre a mayo es “calculado” a partir del promedio de los 2 peaks más altos registrados en invierno.\n • Finalmente, el factor de potencia es un elemento crítico, ya que niveles bajos generan recargos económicos debido a un uso ineficiente de la energía, lo que obliga a mantener sistemas de compensación adecuados, como bancos de condensadores. \n \n El éxito del cambio a AT4.3 depende de implementar medidas de control de demanda, gestión de horarios de consumo y monitoreo continuo, ya que, si bien esta tarifa ofrece oportunidades de ahorro, también implica riesgos de sobrecostos si no se administran adecuadamente estos factores."
+categoria = "potencia_contratada"
+impacto = "alto"
+inversion = "baja"
+dificultad = "media"
+origen = "casos:No especificado"
+fuente_id = "FUE-stefymar-382938ab0205804e85d2cd29aa1f7eb1"
+estado = "pendiente"
+created_at = "2026-10-24T17:57:10.224Z"
+

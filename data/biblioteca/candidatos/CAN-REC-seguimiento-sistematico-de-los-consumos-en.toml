@@ -1,0 +1,13 @@
+id = "CAN-REC-seguimiento-sistematico-de-los-consumos-en"
+tipo = "recomendacion"
+titulo = "Seguimiento sistemático de los consumos energéticos"
+descripcion = "Implementar un registro mensual de consumo eléctrico utilizando la información contenida en las boletas de energía. A partir de estos datos se pueden establecer indicadores simples, como costo mensual, consumo por período y variaciones estacionales, facilitando la toma de decisiones relacionadas con el uso eficiente de la energía."
+categoria = "gestion_energetica"
+impacto = "medio"
+inversion = "media"
+dificultad = "media"
+origen = "casos:Cafetería"
+fuente_id = "FUE-minimarket-y-cafe-tonita-392938ab02058043b56ae72"
+estado = "pendiente"
+created_at = "2026-10-24T17:57:09.760Z"
+

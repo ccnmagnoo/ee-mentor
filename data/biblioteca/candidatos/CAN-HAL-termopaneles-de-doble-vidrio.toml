@@ -1,0 +1,13 @@
+id = "CAN-HAL-termopaneles-de-doble-vidrio"
+tipo = "hallazgo"
+titulo = "Termopaneles de doble vidrio"
+descripcion = "La instalación actual de termopaneles de doble vidrio en los ventanales del hotel constituye una buena práctica en eficiencia energética , ya que mejora significativamente el aislamiento térmico del edificio. Esta medida reduce las pérdidas de calor en invierno y las ganancias térmicas en verano , disminuyendo la demanda energética asociada a sistemas de calefacción y climatización. Además, contribuye a un mayor confort térmico para los huéspedes , reduce condensaciones y mejora el aislamiento acústico, aspectos clave en el rubro hotelero."
+categoria = "envolvente"
+impacto = "alto"
+inversion = "baja"
+dificultad = "baja"
+origen = "casos:Hotel pequeño"
+fuente_id = "FUE-hotel-asturias-383938ab0205806999a2c62923829735"
+estado = "pendiente"
+created_at = "2026-10-24T17:57:09.156Z"
+

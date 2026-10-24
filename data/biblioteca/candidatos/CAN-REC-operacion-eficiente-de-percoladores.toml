@@ -1,0 +1,13 @@
+id = "CAN-REC-operacion-eficiente-de-percoladores"
+tipo = "recomendacion"
+titulo = "Operación eficiente de percoladores"
+descripcion = "Se recomienda encender los equipos según la demanda esperada. Se recomienda fuertemente apagarlos durante periodos de baja actividad y revisar programáticamente el estado del aislamiento térmico de los mismos. Otra adición de una automatización de nivel básico, es incorporar temporizadores o procedimientos operativos de encendido y apagado de los mismos, para reducir excedentes en el consumo que no generen beneficios directos a las ventas del negocio."
+categoria = "gestion_operacional"
+impacto = "medio"
+inversion = "media"
+dificultad = "media"
+origen = "casos:Cafetería"
+fuente_id = "FUE-la-boulangerie-390938ab0205801fb682ff6930a172ba"
+estado = "pendiente"
+created_at = "2026-10-24T17:57:09.287Z"
+

@@ -1,0 +1,9 @@
+schema_version = 1
+id = "REC-SELLO-EE"
+categoria = "eficiencia_energetica"
+nombre = "Sello de Eficiencia Energética (Sello EE)"
+descripcion = "Programa gratuito para MiPyMEs que reconoce la gestión energética y entrega una hoja de ruta de mejora continua."
+url = "https://plataforma.selloee.cl/"
+orden = 30
+activo = true
+

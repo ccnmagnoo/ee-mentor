@@ -1,0 +1,13 @@
+id = "CAN-REC-horno-y-coccion-de-alimentos-tipo-masas"
+tipo = "recomendacion"
+titulo = "Horno y cocción de alimentos tipo masas"
+descripcion = "Se recomienda instalar sistemas de remarcación o submedición que permitan diferenciar los consumos del negocio actual y del futuro restaurante, realizar seguimiento periódico de los indicadores energéticos y evaluar la potencia contratada una vez que ambas actividades se encuentren operativas para evitar sobrecostos asociados a demanda eléctrica."
+categoria = "coccion"
+impacto = "medio"
+inversion = "media"
+dificultad = "media"
+origen = "casos:Cafetería"
+fuente_id = "FUE-la-creperia-rapa-nui-392938ab020580b2b86bcfcf44b"
+estado = "pendiente"
+created_at = "2026-10-24T17:57:09.418Z"
+

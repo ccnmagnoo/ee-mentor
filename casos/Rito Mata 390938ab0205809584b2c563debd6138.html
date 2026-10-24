@@ -1,0 +1,799 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Rito Mata</title><meta name="data-notion-page-icon" content="🍴"/><link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20100%20100%22%3E%3Ctext%20y%3D%22.9em%22%20font-size%3D%2290%22%3E%F0%9F%8D%B4%3C%2Ftext%3E%3C%2Fsvg%3E"/><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+/* Override strong tags inside headings to maintain consistent weight */
+h1 strong,
+h2 strong,
+h3 strong {
+	font-weight: 600;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 10px;
+	padding: 1rem;
+	/* Paint a complete callout box on every PDF page fragment. */
+	-webkit-box-decoration-break: clone;
+	box-decoration-break: clone;
+}
+
+/* For default-background callouts, render the border outline. */
+.callout.block-color-default_background {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+/*
+ * Toggles and callouts hold arbitrary content, so they can easily be taller
+ * than a page. They must stay breakable: avoiding breaks inside them makes
+ * Chromium push the whole block onto the next page, which leaves the previous
+ * page mostly empty before every long toggle.
+ */
+details,
+aside {
+	margin: 1.25em 0;
+}
+
+/* Keep a toggle's title on the same page as the start of its content. */
+summary {
+	page-break-after: avoid;
+	break-after: avoid;
+}
+
+/*
+ * Toggle headings render as <h1/h2/h3 style="display:inline-block"> inside
+ * <summary>. Without this reset, the heading's margin-top pushes it below the
+ * ::marker (▼), so the triangle and the title appear on separate lines.
+ */
+summary h1,
+summary h2,
+summary h3,
+summary h4 {
+	margin-top: 0;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+
+	table.collection-content {
+		width: 100%;
+		table-layout: fixed;
+	}
+
+	table.collection-content th,
+	table.collection-content td {
+		overflow-wrap: anywhere;
+	}
+
+	table.collection-content td > .user,
+	table.collection-content td > time {
+		white-space: pre-wrap;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content-wrapper {
+	overflow-x: auto;
+}
+
+@media only print {
+	.collection-content-wrapper {
+		overflow-x: visible;
+	}
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.collection-content td {
+	white-space: pre-wrap;
+	word-break: break-word;
+}
+
+.column-list {
+	display: flex;
+	gap: 46px;
+}
+
+.column {
+	min-width: 0;
+	overflow: hidden;
+}
+
+.column > *:first-child {
+	margin-top: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding-inline: 0.125rem;
+	padding-block: 0.375rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+table {
+	border-collapse: collapse;
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol.numbered-list.numbered-list-digits-2 {
+	padding-inline-start: 2em;
+}
+
+ol.numbered-list.numbered-list-digits-3plus {
+	padding-inline-start: 2.4em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+/*
+ * Render emoji icons using a ::before pseudo-element to keep the glyph
+ * out of the DOM textContent traversal. This avoids double-rendering icons
+ * in callouts and page titles.
+ * NOTE(slim/html-export-pseudo-icons): I can't tagref this because it will
+ * flag as a duplicate tag after codegen.
+ */
+.icon[data-emoji]::before {
+	content: attr(data-emoji);
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.callout img.notion-static-icon {
+	width: 1em;
+	height: 1em;
+}
+
+.callout p {
+	margin: 0;
+}
+
+.callout h1,
+.callout h2,
+.callout h3 {
+	margin: 0 0 0.6rem;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	margin-right: 0.4em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+blockquote.quote-large {
+	font-size: 1.25em;
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.tab {
+	margin: 1.25em 0;
+	padding-inline: 1rem;
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.highlight-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.highlight-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.highlight-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.highlight-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.highlight-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.highlight-default_background {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray_background {
+	background: rgba(42, 28, 0, 0.07);
+}
+.highlight-brown_background {
+	background: rgba(139, 46, 0, 0.086);
+}
+.highlight-orange_background {
+	background: rgba(224, 101, 1, 0.129);
+}
+.highlight-yellow_background {
+	background: rgba(211, 168, 0, 0.137);
+}
+.highlight-teal_background {
+	background: rgba(0, 100, 45, 0.09);
+}
+.highlight-blue_background {
+	background: rgba(0, 124, 215, 0.094);
+}
+.highlight-purple_background {
+	background: rgba(102, 0, 178, 0.078);
+}
+.highlight-pink_background {
+	background: rgba(197, 0, 93, 0.086);
+}
+.highlight-red_background {
+	background: rgba(223, 22, 0, 0.094);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.block-color-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.block-color-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.block-color-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.block-color-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.block-color-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(240, 239, 237, 1);
+}
+.block-color-brown_background {
+	background: rgba(245, 237, 233, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 235, 222, 1);
+}
+.block-color-yellow_background {
+	background: rgba(249, 243, 220, 1);
+}
+.block-color-teal_background {
+	background: rgba(232, 241, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(229, 242, 252, 1);
+}
+.block-color-purple_background {
+	background: rgba(243, 235, 249, 1);
+}
+.block-color-pink_background {
+	background: rgba(250, 233, 241, 1);
+}
+.block-color-red_background {
+	background: rgba(252, 233, 231, 1);
+}
+.select-value-color-default { background-color: rgba(42, 28, 0, 0.07); }
+.select-value-color-gray { background-color: rgba(28, 19, 1, 0.11); }
+.select-value-color-brown { background-color: rgba(127, 51, 0, 0.156); }
+.select-value-color-orange { background-color: rgba(196, 88, 0, 0.203); }
+.select-value-color-yellow { background-color: rgba(209, 156, 0, 0.282); }
+.select-value-color-green { background-color: rgba(0, 96, 38, 0.156); }
+.select-value-color-blue { background-color: rgba(0, 118, 217, 0.203); }
+.select-value-color-purple { background-color: rgba(92, 0, 163, 0.141); }
+.select-value-color-pink { background-color: rgba(183, 0, 78, 0.152); }
+.select-value-color-red { background-color: rgba(206, 24, 0, 0.164); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style><style>@import url('https://cdn.jsdelivr.net/npm/katex@0.16.25/dist/katex-swap.min.css')</style></head><body><article id="390938ab-0205-8095-84b2-c563debd6138" class="page sans" data-notion-page-icon="🍴"><header><div class="page-header-icon undefined"><span class="icon" data-emoji="🍴"></span></div><h1 class="page-title" dir="auto">Rito Mata</h1><p class="page-description" dir="auto"></p><table class="properties"><tbody><tr class="property-row property-row-created_time"><th><span class="icon property-icon"><img src="https://app.notion.com/icons/clock_gray.svg" style="width:14px;height:14px;display:block"/></span>Fecha</th><td><time datetime="2026-07-01T11:56">July 1, 2026 11:56 AM</time></td></tr><tr class="property-row property-row-select"><th><span class="icon property-icon"><img src="https://app.notion.com/icons/arrow-circle-down_gray.svg" style="width:14px;height:14px;display:block"/></span>Negocio</th><td><span class="selected-value select-value-color-gray">Restaurant</span></td></tr><tr class="property-row property-row-select"><th><span class="icon property-icon"><img src="https://app.notion.com/icons/arrow-circle-down_gray.svg" style="width:14px;height:14px;display:block"/></span>Grado consumos</th><td><span class="selected-value select-value-color-blue">Ligero</span></td></tr><tr class="property-row property-row-text"><th><span class="icon property-icon"><img src="https://app.notion.com/icons/description_gray.svg" style="width:14px;height:14px;display:block"/></span>Usuario</th><td>Patricia Uribe Gallardo</td></tr><tr class="property-row property-row-phone_number"><th><span class="icon property-icon"><img src="https://app.notion.com/icons/phone-call_gray.svg" style="width:14px;height:14px;display:block"/></span>Teléfono</th><td><a href="+56978953571" class="url-value">+56978953571</a></td></tr><tr class="property-row property-row-email"><th><span class="icon property-icon"><img src="https://app.notion.com/icons/username_gray.svg" style="width:14px;height:14px;display:block"/></span>Correo electrónico</th><td><a href="patruribe@gmail.com" class="url-value">patruribe@gmail.com</a></td></tr><tr class="property-row property-row-select"><th><span class="icon property-icon"><img src="https://app.notion.com/icons/arrow-circle-down_gray.svg" style="width:14px;height:14px;display:block"/></span>Contraparte</th><td><span class="selected-value select-value-color-green">Tāpa&#x27;o Ritomata</span></td></tr><tr class="property-row property-row-url"><th><span class="icon property-icon"><img src="https://app.notion.com/icons/link_gray.svg" style="width:14px;height:14px;display:block"/></span>gmaps</th><td><a href="https://maps.app.goo.gl/BTwxtv9Str11LQ9G7" class="url-value">https://maps.app.goo.gl/BTwxtv9Str11LQ9G7</a></td></tr></tbody></table></header><div class="page-body"><div id="395938ab-0205-807f-bb1d-d3bcf2af0b6e" class="column-list" data-notion-column-list="" dir="auto"><div id="395938ab-0205-80f4-9608-eb8287ce22fa" style="width:18.75%" class="column" data-notion-column-ratio="0.1875" dir="auto"><figure id="395938ab-0205-8082-96b2-c7d314cd8944" class="image" data-notion-image="SEREMI_logo_SQR_Lowpoly.svg" dir="ltr"><a href="SEREMI_logo_SQR_Lowpoly.svg"><img style="width:120px" src="SEREMI_logo_SQR_Lowpoly.svg"/></a></figure></div><div id="395938ab-0205-80ca-98c1-d28ff72efb32" style="width:81.25%" class="column" data-notion-column-ratio="0.8125" dir="auto"><figure id="395938ab-0205-80c5-b358-f0066e447602" class="image" data-notion-image="LOGO_REDONDO_FONDO_BLANCO.png" dir="ltr"><a href="LOGO_REDONDO_FONDO_BLANCO.png"><img style="width:132px" src="LOGO_REDONDO_FONDO_BLANCO.png"/></a></figure></div></div><h1 id="0ea938ab-0205-82da-9b44-81d4b4252a77" class="" dir="auto">ACTA de seguimiento Asesoría/Mentoría</h1><h2 id="1ee938ab-0205-83bf-bb97-8103bca3c2e3" class="" dir="auto">Información del contacto y cliente (negocio)</h2><table id="83f938ab-0205-82a8-b97f-81ac753c2d8e" class="simple-table" dir="ltr"><tbody><tr id="77f938ab-0205-83d8-99ae-01624865b62d" dir="ltr"><td id="jEMl" class="" style="width:235.66666666666666px">Nombre del contacto</td><td id="lP]a" class="" style="width:197.65625px">Patricia Uribe Gallardo</td><td id="xV[;" class="" style="width:152.65625px">RUT</td><td id="GpK:" class="">n/i</td></tr><tr id="6b9938ab-0205-82cb-842a-8178341828f6" dir="ltr"><td id="jEMl" class="" style="width:235.66666666666666px">Nombre del negocio</td><td id="lP]a" class="" style="width:197.65625px">Restauran Rito Mata</td><td id="xV[;" class="" style="width:152.65625px">ROL</td><td id="GpK:" class="">n/i</td></tr><tr id="eed938ab-0205-8222-a565-013cfc8cb5c2" dir="ltr"><td id="jEMl" class="" style="width:235.66666666666666px">Asesor asignado</td><td id="lP]a" class="" style="width:197.65625px">Carlos Campos N</td><td id="xV[;" class="" style="width:152.65625px">Servicio</td><td id="GpK:" class="">Seremi Energía</td></tr></tbody></table><h2 id="65b938ab-0205-82b9-82a1-014031c4cb62" class="" dir="auto">Descripción</h2><p id="395938ab-0205-802c-89ea-f87d0fee58a8" class="" dir="auto">Rito Mata es un restaurante dedicado a la elaboración y venta de alimentos preparados, orientado principalmente al público local y, de manera complementaria, al turismo. La operación se desarrolla en un local arrendado de aproximadamente 40 m², donde se concentran las áreas de cocina, atención y servicios. Su actividad presenta una marcada estacionalidad, registrando incrementos significativos en la demanda durante la temporada alta. </p><p id="395938ab-0205-8075-b799-d71235ce5d28" class="" dir="auto">Desde el punto de vista energético, el proceso productivo depende principalmente del uso de gas licuado para la cocción de alimentos, mediante una cocina industrial y una freidora a gas, que constituyen los equipos de mayor relevancia para la operación diaria. Complementariamente, dispone de un horno eléctrico y un microondas de uso ocasional, destinados principalmente al calentamiento y terminación de productos. </p><p id="395938ab-0205-80ec-8e5f-f858b5e614d2" class="" dir="auto">El establecimiento registra un consumo eléctrico aproximado de 676 kWh mensuales, asociado principalmente a los sistemas de refrigeración, iluminación y equipamiento auxiliar. Si bien no dispone de un sistema formal de gestión energética, se observan prácticas de uso responsable de la energía que podrían fortalecerse mediante procedimientos internos y seguimiento de consumos. Adicionalmente, la empresa cuenta con la adjudicación de un proyecto solar fotovoltaico financiado por CONADI, lo que representa una oportunidad para reducir costos energéticos, aumentar su sostenibilidad y mejorar su desempeño energético general.</p><h3 id="395938ab-0205-805d-bf7d-c10036e6842b" class="" dir="auto">Localización</h3><figure id="395938ab-0205-8011-af38-d94dcdaf1ea0" dir="ltr"><a href="https://maps.app.goo.gl/ucpa1uthLg1nUxu67" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Google Maps</div><div class="bookmark-description">Find local businesses, view maps and get driving directions in Google Maps.</div></div><div class="bookmark-href"><img src="https://www.google.com/images/branding/product/ico/web_maps_icon_32dp.ico" class="icon bookmark-icon"/>https://maps.app.goo.gl/ucpa1uthLg1nUxu67</div></div><img src="https://maps.google.com/maps/api/staticmap?center=-27.1549193%2C-109.4328189&amp;zoom=21&amp;size=900x900&amp;language=en&amp;sensor=false&amp;key=AIzaSyBoYjeRtfVI0Jd8Q_9mnflo9i4sOYpShB0&amp;signature=1BvnvRxqeknixOWG3XUd-r8YAd4" class="bookmark-image"/></a></figure><p id="390938ab-0205-807d-ae32-d3937121cdfe" class="" dir="auto">
+</p><h3 id="a22938ab-0205-8398-928d-01a3b752b689" class="" dir="auto">Acometidas</h3><table id="3f1938ab-0205-8352-b0a0-01ec06674896" class="simple-table" dir="ltr"><tbody><tr id="86d938ab-0205-822e-93a8-017593f2bfcc" dir="ltr"><td id="UI[G" class="" style="width:235.66666666666666px">Cliente</td><td id="Kmw|" class="" style="width:130.65625px">n/i</td><td id="`_sH" class="" style="width:111.65625px"></td></tr><tr id="e91938ab-0205-8395-9d4b-014572608b59" dir="ltr"><td id="UI[G" class="" style="width:235.66666666666666px">Propietario</td><td id="Kmw|" class="" style="width:130.65625px">n/i</td><td id="`_sH" class="" style="width:111.65625px"></td></tr><tr id="d85938ab-0205-82be-a384-0105646c6b56" dir="ltr"><td id="UI[G" class="" style="width:235.66666666666666px">Distribuidora</td><td id="Kmw|" class="" style="width:130.65625px">Sasipa</td><td id="`_sH" class="" style="width:111.65625px"></td></tr><tr id="1fb938ab-0205-8282-b800-816dfb823131" dir="ltr"><td id="UI[G" class="" style="width:235.66666666666666px">Consumo kWh</td><td id="Kmw|" class="" style="width:130.65625px">676</td><td id="`_sH" class="" style="width:111.65625px">kWh</td></tr><tr id="3cc938ab-0205-82bc-b49c-813cfe65b9c7" dir="ltr"><td id="UI[G" class="" style="width:235.66666666666666px">Gasto nominal </td><td id="Kmw|" class="" style="width:130.65625px">300.000</td><td id="`_sH" class="" style="width:111.65625px">$CLP</td></tr></tbody></table><div id="096938ab-0205-8301-9b76-81aab75dc21d" class="collection-content" dir="ltr"><h4 class="collection-title">Hallazgos</h4><div class="collection-content-wrapper"><table class="collection-content"><colgroup><col style="width:27.019089574155654%"/><col style="width:18.355359765051396%"/><col style="width:54.62555066079295%"/></colgroup><thead><tr><th><span class="icon property-icon"><img src="https://app.notion.com/icons/font_gray.svg" style="width:14px;height:14px;display:block"/></span>Referencia</th><th><span class="icon property-icon"><img src="https://app.notion.com/icons/arrow-circle-down_gray.svg" style="width:14px;height:14px;display:block"/></span>Servicio</th><th><span class="icon property-icon"><img src="https://app.notion.com/icons/description_gray.svg" style="width:14px;height:14px;display:block"/></span>Descripción</th></tr></thead><tbody><tr id="d68938ab-0205-83ba-aa09-812540ad9cf6"><td class="cell-title"><a href="Cocina%20Industrial%20a%20gas%20d68938ab020583baaa09812540ad9cf6.html" data-notion-page-id="d68938ab-0205-83ba-aa09-812540ad9cf6" data-notion-space-id="242b1b81-4cab-4ab7-a7cd-3ea69f052ca2">Cocina Industrial a gas</a></td><td class="cell-egc;"><span class="selected-value select-value-color-pink">refrigeración</span></td><td class="cell-blSE">La empresa utiliza una cocina industrial a gas licuado como principal fuente energética para la elaboración de alimentos, lo que resulta adecuado para procesos gastronómicos intensivos debido a su rapidez y control de temperatura. Sin embargo, una potencial problemática corresponde a pérdidas de eficiencia por quemadores sucios, fugas de gas o una combustión deficiente, situaciones que pueden aumentar los costos operacionales y generar riesgos de seguridad. </td></tr><tr id="395938ab-0205-809b-85b2-f18ba06c4534"><td class="cell-title"><a href="Horno%20el%C3%A9ctrico%20y%20micro%20hondas%20395938ab0205809b85b2f18ba06c4534.html" data-notion-page-id="395938ab-0205-809b-85b2-f18ba06c4534" data-notion-space-id="242b1b81-4cab-4ab7-a7cd-3ea69f052ca2">Horno eléctrico y micro hondas</a></td><td class="cell-egc;"><span class="selected-value select-value-color-default">cocinas/hornos</span></td><td class="cell-blSE">El establecimiento dispone de un horno eléctrico y un microondas de uso esporádico, principalmente para regenerar o calentar alimentos. Debido a su baja frecuencia de uso, estos equipos tienen una incidencia menor en el consumo energético total. No obstante, su uso ineficiente, como operar el horno para pequeñas cantidades de producto o mantenerlo encendido sin necesidad, puede generar consumos innecesarios. </td></tr><tr id="395938ab-0205-80d0-a279-e8d43a99675e"><td class="cell-title"><a href="Freidora%20a%20gas%20395938ab020580d0a279e8d43a99675e.html" data-notion-page-id="395938ab-0205-80d0-a279-e8d43a99675e" data-notion-space-id="242b1b81-4cab-4ab7-a7cd-3ea69f052ca2">Freidora a gas</a></td><td class="cell-egc;"><span class="selected-value select-value-color-default">cocinas/hornos</span></td><td class="cell-blSE">La freidora a gas destinada a la preparación de frituras representa un equipo fundamental para la operación del restaurante. Una problemática frecuente en este tipo de equipos es la pérdida de eficiencia producto de una regulación inadecuada de la temperatura o por el deterioro del aceite, lo que puede incrementar los tiempos de cocción y el consumo de combustible.</td></tr><tr id="395938ab-0205-8004-91cd-dc679393a959"><td class="cell-title"><a href="VC%20Cooler%20395938ab0205800491cddc679393a959.html" data-notion-page-id="395938ab-0205-8004-91cd-dc679393a959" data-notion-space-id="242b1b81-4cab-4ab7-a7cd-3ea69f052ca2">VC Cooler</a></td><td class="cell-egc;"><span class="selected-value select-value-color-pink">refrigeración</span></td><td class="cell-blSE">El negocio cuenta con dos VC Cooler verticales de puerta vidriada para almacenamiento y exhibición de materias primas y alimentos. Estos equipos poseen un consumo permanente durante gran parte del día, por lo que su eficiencia depende significativamente de su correcta utilización. Entre las problemáticas potenciales se encuentran aperturas frecuentes de puertas, sellos deteriorados, acumulación de suciedad en condensadores o una excesiva exposición al calor ambiental. </td></tr><tr id="395938ab-0205-8015-844f-d57bb803443e"><td class="cell-title"><a href="Congeladoras%20395938ab02058015844fd57bb803443e.html" data-notion-page-id="395938ab-0205-8015-844f-d57bb803443e" data-notion-space-id="242b1b81-4cab-4ab7-a7cd-3ea69f052ca2">Congeladoras</a></td><td class="cell-egc;"><span class="selected-value select-value-color-orange">congelado</span></td><td class="cell-blSE">La empresa dispone de una congeladora vertical y dos congeladoras horizontales destinadas al almacenamiento de materias primas de 100 y 150 litros. Estos equipos son esenciales para la conservación de alimentos, aunque pueden incrementar significativamente el consumo energético si presentan escarcha excesiva, problemas de sellado o sobrecarga de productos. <strong><br/></strong></td></tr><tr id="395938ab-0205-80cd-ab7a-e940b9b4402d"><td class="cell-title"><a href="Ventilaci%C3%B3n%20395938ab020580cdab7ae940b9b4402d.html" data-notion-page-id="395938ab-0205-80cd-ab7a-e940b9b4402d" data-notion-space-id="242b1b81-4cab-4ab7-a7cd-3ea69f052ca2">Ventilación</a></td><td class="cell-egc;"><span class="selected-value select-value-color-blue">clima</span></td><td class="cell-blSE">La ventilación del local se realiza mediante ventiladores mecánicos simples y ventilación natural. Este sistema presenta bajos consumos energéticos en comparación con equipos de climatización más complejos; sin embargo, podría resultar insuficiente en períodos de altas temperaturas o cuando existe una elevada carga térmica proveniente de la cocina. </td></tr><tr id="395938ab-0205-802e-82e8-cef351f963bf"><td class="cell-title"><a href="Extractores%20de%20cocina%20395938ab0205802e82e8cef351f963bf.html" data-notion-page-id="395938ab-0205-802e-82e8-cef351f963bf" data-notion-space-id="242b1b81-4cab-4ab7-a7cd-3ea69f052ca2">Extractores de cocina</a></td><td class="cell-egc;"><span class="selected-value select-value-color-default">cocinas/hornos</span></td><td class="cell-blSE">La cocina cuenta con una campana de extracción para evacuar calor, humedad y olores generados durante la preparación de alimentos. Una potencial problemática es la acumulación de grasas en filtros y ductos, lo que reduce la eficiencia de extracción, aumenta el consumo eléctrico y puede transformarse en un riesgo de incendio. </td></tr><tr id="395938ab-0205-8050-b16a-c73946c03fc4"><td class="cell-title"><a href="Electrodom%C3%A9sticos%20de%20cocina%20395938ab02058050b16ac73946c03fc4.html" data-notion-page-id="395938ab-0205-8050-b16a-c73946c03fc4" data-notion-space-id="242b1b81-4cab-4ab7-a7cd-3ea69f052ca2">Electrodomésticos de cocina</a></td><td class="cell-egc;"><span class="selected-value select-value-color-pink">eficiencia</span></td><td class="cell-blSE">El restaurante utiliza una batidora, una minipimer y una juguera, todos de uso ocasional. Aunque su incidencia en el gasto energético es reducida, el uso de equipos con motores desgastados o un mantenimiento deficiente puede disminuir su rendimiento y aumentar los tiempos de operación. </td></tr><tr id="395938ab-0205-80f4-9173-e537eae41a82"><td class="cell-title"><a href="Aislamiento%20t%C3%A9rmico%20395938ab020580f49173e537eae41a82.html" data-notion-page-id="395938ab-0205-80f4-9173-e537eae41a82" data-notion-space-id="242b1b81-4cab-4ab7-a7cd-3ea69f052ca2">Aislamiento térmico</a></td><td class="cell-egc;"><span class="selected-value select-value-color-purple">aislación</span></td><td class="cell-blSE">El local posee dos ventanales convencionales sin medidas de aislamiento térmico. Esta condición puede favorecer ganancias de calor durante los períodos cálidos y pérdidas térmicas durante épocas frías, afectando el confort interior y aumentando la necesidad de ventilación o enfriamiento. </td></tr><tr id="395938ab-0205-8069-9db4-d0db19bec285"><td class="cell-title"><a href="Iluminaci%C3%B3n%20LED%20395938ab020580699db4d0db19bec285.html" data-notion-page-id="395938ab-0205-8069-9db4-d0db19bec285" data-notion-space-id="242b1b81-4cab-4ab7-a7cd-3ea69f052ca2">Iluminación LED</a></td><td class="cell-egc;"><span class="selected-value select-value-color-yellow">iluminación</span></td><td class="cell-blSE">Todas las dependencias cuentan con iluminación LED, constituyendo una buena práctica de eficiencia energética ya implementada por la empresa. No obstante, podrían existir oportunidades de mejora asociadas a horarios de funcionamiento innecesarios o luminarias encendidas en espacios desocupados.<strong><br/></strong></td></tr><tr id="395938ab-0205-80c8-bb66-fc4bc27cd69c"><td class="cell-title"><a href="Gesti%C3%B3n%20Energ%C3%A9tica%20395938ab020580c8bb66fc4bc27cd69c.html" data-notion-page-id="395938ab-0205-80c8-bb66-fc4bc27cd69c" data-notion-space-id="242b1b81-4cab-4ab7-a7cd-3ea69f052ca2">Gestión Energética</a></td><td class="cell-egc;"><span class="selected-value select-value-color-gray">gestión</span></td><td class="cell-blSE">La empresa no dispone de un sistema formal de gestión de la energía, aunque ya ha desarrollado ciertas prácticas de uso responsable. La principal problemática radica en que estas acciones dependen principalmente de hábitos individuales y podrían perderse con cambios de personal o aumento de la actividad operacional. </td></tr></tbody></table></div><br/><br/></div><div id="342938ab-0205-830a-a183-81c3da59b38f" class="collection-content" dir="ltr"><h4 class="collection-title">Recomendaciones</h4><div class="collection-content-wrapper"><table class="collection-content"><colgroup><col style="width:24.492753623188406%"/><col style="width:75.5072463768116%"/></colgroup><thead><tr><th><span class="icon property-icon"><img src="https://app.notion.com/icons/font_gray.svg" style="width:14px;height:14px;display:block"/></span>nombre</th><th><span class="icon property-icon"><img src="https://app.notion.com/icons/description_gray.svg" style="width:14px;height:14px;display:block"/></span>Recomendación</th></tr></thead><tbody><tr id="056938ab-0205-839e-b970-01e4d15486b8"><td class="cell-title"><a href="Mantenimiento%20preventivo%20cocina%20insdustrial%20056938ab0205839eb97001e4d15486b8.html" data-notion-page-id="056938ab-0205-839e-b970-01e4d15486b8" data-notion-space-id="242b1b81-4cab-4ab7-a7cd-3ea69f052ca2">Mantenimiento preventivo cocina insdustrial</a></td><td class="cell-;voQ">Se recomienda realizar mantenciones periódicas, verificar el estado de los quemadores y conexiones, mantener una correcta regulación de la llama y capacitar al personal en buenas prácticas de operación segura y eficiente .</td></tr><tr id="396938ab-0205-8013-8bb8-d094ccdade1c"><td class="cell-title"><a href="Horno%20el%C3%A9ctrico%20y%20microondas%20396938ab020580138bb8d094ccdade1c.html" data-notion-page-id="396938ab-0205-8013-8bb8-d094ccdade1c" data-notion-space-id="242b1b81-4cab-4ab7-a7cd-3ea69f052ca2">Horno eléctrico y microondas</a></td><td class="cell-;voQ">Se recomienda mantener la actual operación de estos artefactos orientados en privilegiar el uso del microondas para calentamientos rápidos, aprovechar al máximo la capacidad del horno cuando se utilice y desconectarlo cuando permanezca largos períodos sin operación. Estas medidas optimizarán su uso y aportará a aumentar la performance del recurso energético en su modelo de negocio.</td></tr><tr id="396938ab-0205-80cd-a623-f7b0d03d23a3"><td class="cell-title"><a href="Operaci%C3%B3n%20freidora%20396938ab020580cda623f7b0d03d23a3.html" data-notion-page-id="396938ab-0205-80cd-a623-f7b0d03d23a3" data-notion-space-id="242b1b81-4cab-4ab7-a7cd-3ea69f052ca2">Operación freidora</a></td><td class="cell-;voQ"> Se recomienda mantener temperaturas de trabajo adecuadas, para esto puede utilizar un<a href="https://www.mercadolibre.cl/termometro-digital-de-cocina-gastronomico/p/MLC24456352?pdp_filters=item_id:MLC3455529354#is_advertising=true&amp;searchVariation=MLC24456352&amp;backend_model=search-backend&amp;be_origin=backend&amp;position=1&amp;search_layout=grid&amp;type=pad&amp;tracking_id=7a112f3d-8108-486a-b1c6-bb06527efab1&amp;ad_domain=VQCATCORE_LST&amp;ad_position=1&amp;ad_click_id=NWFmZmFmMzYtNGM1Yi00NmZmLTk3NzEtNTYxMDFmNjJmYzZi"> termómetro gastronómico para cocina</a>, para configurar de forma óptima la temperatura de cocción de las frituras. A esto adicionar limpieza frecuente de los quemadores y gestionar correctamente los ciclos de calentamiento para evitar sobreconsumos energéticos.</td></tr><tr id="396938ab-0205-8082-be00-e8a29036f03c"><td class="cell-title"><a href="VC%20cooler%20396938ab02058082be00e8a29036f03c.html" data-notion-page-id="396938ab-0205-8082-be00-e8a29036f03c" data-notion-space-id="242b1b81-4cab-4ab7-a7cd-3ea69f052ca2">VC cooler </a></td><td class="cell-;voQ">Revisar periódicamente los burletes o sellos de gomas para verificar su estado , al menos dos veces al año. Otro punto clave es mantener limpios los sistemas de refrigeración de acumulación polvo una vez cada 2 o un mes, la obstrucción de estos incrementarán notoriamente los consumos energéticos para refrigeración. También idealmente  minimizar el tiempo de apertura de puertas y evitar su instalación cercana a fuentes de calor, esto incluye otros artefactos de refrigeración ya que los compresores son una fuente intensa de calor.<strong><br/></strong></td></tr><tr id="396938ab-0205-809a-bf1c-e3f24ce8ea60"><td class="cell-title"><a href="Operaci%C3%B3n%20de%20congeladoras%20396938ab0205809abf1ce3f24ce8ea60.html" data-notion-page-id="396938ab-0205-809a-bf1c-e3f24ce8ea60" data-notion-space-id="242b1b81-4cab-4ab7-a7cd-3ea69f052ca2">Operación de congeladoras</a></td><td class="cell-;voQ">Realizar descongelamientos periódicos cuando corresponda, la acumulación de hielo y escarchado merma notoriamente la eficiencia, provocando un aumento innecesario de los consumos de energía. Además mantener una adecuada organización interna para reducir aperturas prolongadas. Se recomienda fuertemente dividir los productos por tipo, ej: vegetales, carnes, masa, ya que cada uno tiene su propio requerimiento de almacenamiento de congelado. Finalmente verificar regularmente el estado de los sellos y la temperatura de operación de los mismos. Para esto último se recomienda contar con un<a href="https://www.mercadolibre.cl/termometro-infrarrojo-digital-laser-cocina-50-c-a-400-c-l/p/MLC2089776504?pdp_filters=item_id:MLC4120943986#is_advertising=true&amp;searchVariation=MLC2089776504&amp;backend_model=search-backend&amp;be_origin=backend&amp;position=1&amp;search_layout=grid&amp;type=pad&amp;tracking_id=4d3d6a19-b4a7-43e6-9a4c-ef00886f0c94&amp;ad_domain=VQCATCORE_LST&amp;ad_position=1&amp;ad_click_id=OTcxNDIwNTUtNjkzNi00YWU4LTliOWMtYzlmMjdhZDMzNWU2"> sensor de temperatura laser para cocina</a>.</td></tr><tr id="396938ab-0205-80a8-ba60-d9411eb49f7d"><td class="cell-title"><a href="Ventilaci%C3%B3n%20pasiva%20del%20local%20396938ab020580a8ba60d9411eb49f7d.html" data-notion-page-id="396938ab-0205-80a8-ba60-d9411eb49f7d" data-notion-space-id="242b1b81-4cab-4ab7-a7cd-3ea69f052ca2">Ventilación pasiva del local</a></td><td class="cell-;voQ">Aprovechar la ventilación natural en horarios favorables de la mañana y tarde, realizar limpieza periódica de los equipos y evaluar mejoras de circulación de aire que permitan aumentar el confort térmico sin incrementar significativamente el consumo energético.</td></tr><tr id="396938ab-0205-8093-bc63-e15e8b414953"><td class="cell-title"><a href="Limpieza%20preventiva%20campana%20de%20extracci%C3%B3n%20de%20aire%20%20396938ab02058093bc63e15e8b414953.html" data-notion-page-id="396938ab-0205-8093-bc63-e15e8b414953" data-notion-space-id="242b1b81-4cab-4ab7-a7cd-3ea69f052ca2">Limpieza preventiva campana de extracción de aire de cocina</a></td><td class="cell-;voQ">Se recomienda implementar un programa de limpieza periódica de filtros y ductos, además de utilizar la extracción únicamente durante los períodos efectivos de cocción. Esto es de vital importancia para evitar acumulación de material que puede representar un riesgo para la integridad del establecimiento y las personas.<strong><br/></strong></td></tr><tr id="396938ab-0205-8090-b2ad-cfb73d233dd3"><td class="cell-title"><a href="Operaci%C3%B3n%20de%20electrodom%C3%A9sticos%20menores%20396938ab02058090b2adcfb73d233dd3.html" data-notion-page-id="396938ab-0205-8090-b2ad-cfb73d233dd3" data-notion-space-id="242b1b81-4cab-4ab7-a7cd-3ea69f052ca2">Operación de electrodomésticos menores</a></td><td class="cell-;voQ">Se recomienda fuertemente mantener los equipos en buen estado, realizar limpieza después de cada uso y utilizarlos únicamente para cargas adecuadas a su capacidad de diseño.</td></tr><tr id="396938ab-0205-8083-a5a2-e1c572246786"><td class="cell-title"><a href="Mejora%20del%20aislamiento%20t%C3%A9rmico%20396938ab02058083a5a2e1c572246786.html" data-notion-page-id="396938ab-0205-8083-a5a2-e1c572246786" data-notion-space-id="242b1b81-4cab-4ab7-a7cd-3ea69f052ca2">Mejora del aislamiento térmico</a></td><td class="cell-;voQ">Se recomienda incorporar soluciones de bajo costo como películas de control solar para ventanas, cortinas térmicas o sellos perimetrales que contribuyan a reducir las transferencias térmicas y mejorar el desempeño energético del inmueble.<a href="https://listado.mercadolibre.cl/sellos-t%C3%A9rmicos#D[A:sellos%20t%C3%A9rmicos]"> Estos sellos son de bajo costo</a> y se pueden instalar en puertas y ventanas.</td></tr><tr id="396938ab-0205-8032-a3d4-c0426825185f"><td class="cell-title"><a href="Iluminaci%C3%B3n%20eficiente%20396938ab02058032a3d4c0426825185f.html" data-notion-page-id="396938ab-0205-8032-a3d4-c0426825185f" data-notion-space-id="242b1b81-4cab-4ab7-a7cd-3ea69f052ca2">Iluminación eficiente</a></td><td class="cell-;voQ">Establecer hábitos de apagado cuando no se requiera iluminación, aprovechar al máximo la luz natural disponible e incorporar controles simples como interruptores sectorizados o sensores de presencia en áreas de bajo uso.</td></tr><tr id="396938ab-0205-80c5-b5c1-c8b6e1d17dc1"><td class="cell-title"><a href="Formalizaci%C3%B3n%20gesti%C3%B3n%20de%20la%20energ%C3%ADa%20396938ab020580c5b5c1c8b6e1d17dc1.html" data-notion-page-id="396938ab-0205-80c5-b5c1-c8b6e1d17dc1" data-notion-space-id="242b1b81-4cab-4ab7-a7cd-3ea69f052ca2">Formalización gestión de la energía</a></td><td class="cell-;voQ">Formalizar procedimientos básicos de gestión energética, registrar periódicamente consumos eléctricos y de gas, establecer metas de ahorro, capacitar al personal y aprovechar herramientas gratuitas como las disponibles en la plataforma Gestiona Energía MiPyME. </td></tr><tr id="396938ab-0205-8010-b52e-c23e947e6cd3"><td class="cell-title"><a href="Energ%C3%ADas%20Renovables%20396938ab02058010b52ec23e947e6cd3.html" data-notion-page-id="396938ab-0205-8010-b52e-c23e947e6cd3" data-notion-space-id="242b1b81-4cab-4ab7-a7cd-3ea69f052ca2">Energías Renovables</a></td><td class="cell-;voQ">Considerando la adjudicación de un proyecto fotovoltaico mediante co financiamiento CONADI de $5 millones, se recomienda integrar la futura generación solar dentro de una estrategia de seguimiento de consumos para maximizar los beneficios económicos y energéticos obtenidos. Algunos cálculos generales: <br/>El establecimiento cuenta con 30m2 de superficie de techumbre disponible, más que adecuado para una instalación fotovoltaica de entre 2 a 4 kWp. <br/>Se evaluó la implementación de un sistema solar fotovoltaico híbrido con baterías para un establecimiento que registra consumos eléctricos promedio de 676 kWh mensuales, equivalentes a aproximadamente 8.112 kWh al año. Como alternativa principal, se considera un sistema de 4 kWp de potencia instalada, capaz de generar en promedio 14.1 kWh diarios y alrededor de 5.146,7 kWh anuales. Esta generación permitiría cubrir aproximadamente un 48% de la demanda eléctrica durante los meses de invierno y hasta un 82.5% durante los meses de verano, alcanzando una cobertura promedio anual cercana al 63% del consumo total del establecimiento. Considerando costos de mercado para sistemas híbridos con almacenamiento entre $2.500 y $3.000 por watt instalado, la inversión requerida se estima entre $10.000.000 y $12.000.000, dependiendo de las características específicas del equipamiento, la capacidad de almacenamiento y las condiciones de instalación.<br/>Como alternativa de menor escala, se analiza un sistema híbrido de 2 kWp con baterías, cuya generación anual estimada alcanza aproximadamente 2.573 kWh. Este aporte permitiría cubrir entre un 20% y un 40% de los consumos mensuales del establecimiento, dependiendo de la época del año y de la disponibilidad del recurso solar. La inversión asociada a esta alternativa se estima en torno a los $5.000.000, constituyendo una opción más accesible para reducir parcialmente el consumo eléctrico proveniente de la red. No obstante, desde el punto de vista del ahorro energético y la maximización de la generación renovable, la alternativa de 4 kWp resulta más conveniente, al permitir una reducción significativamente mayor del consumo eléctrico convencional y otorgar una mayor autonomía energética gracias al respaldo proporcionado por el sistema de baterías.</td></tr></tbody></table></div><br/><br/></div><h2 id="a0a938ab-0205-82b7-991f-01ba376d2609" class="" dir="auto">Temas adicionales</h2><p id="0a8938ab-0205-82f5-ab63-8147d5973558" class="" dir="auto">Como parte de las acciones complementarias a la mentoría, se considera además el apoyo y acompañamiento técnico en el proceso de evaluación, cotización y eventual adquisición de equipos de energías renovables, en el marco de las iniciativas impulsadas bajo el <strong>Sello TĀPAꞌO RITOMATA</strong>, orientadas a fortalecer la sostenibilidad y la eficiencia energética del establecimiento. Este acompañamiento contempla la <strong>revisión de alternativas tecnológicas</strong>, orientación en la selección de proveedores y seguimiento general del proceso de implementación, con el propósito de facilitar una adecuada toma de decisiones en materia de inversión energética.</p><h2 id="e83938ab-0205-8326-bd9f-81edb3df5ec7" class="" dir="auto">Acuerdos</h2><p id="20f938ab-0205-8377-904d-818e6e8d455f" class="" dir="auto">Se propone establecer un acuerdo de colaboración de mediano plazo enfocado en el desarrollo y fortalecimiento de capacidades internas para la gestión de la energía. Este proceso buscará avanzar progresivamente hacia una gestión energética más profesionalizada dentro de la empresa, promoviendo la incorporación de buenas prácticas de monitoreo, análisis de consumos, identificación de oportunidades de mejora, control operacional y planificación de acciones de eficiencia energética. De esta manera, la instalación de sistemas de energías renovables se complementa con la generación de capacidades organizacionales que permitan maximizar los beneficios económicos, ambientales y operacionales de las inversiones realizadas.</p><h2 id="478938ab-0205-8257-b429-81c17fe603c3" class="" dir="auto">Información de utilidad</h2><div dir="auto"><table id="384938ab-0205-80a5-b49a-d5b2c2461a24" class="simple-table" dir="ltr"><tbody><tr id="384938ab-0205-80f3-a638-ca33cbe6de6d" dir="ltr"><td id="h_NM" class="" style="width:170.25px">👩‍🦰Instaladoras</td><td id="r;IE" class="" style="width:303px">Red de mujeres <strong>Instaladoras</strong> certificadas SEC, para regularización eléctrica y gas, análisis de tarifas, expansiones y proyectos</td><td id="{Bve" class="" style="width:237px"><a href="https://app.notion.com/p/Instaladoras-383938ab02058099998cfbfc8342a16b?pvs=21">Instaladoras SEC Certificadas</a></td></tr><tr id="384938ab-0205-807c-ac74-c74d0ac2c3e8" dir="ltr"><td id="h_NM" class="" style="width:170.25px">👷‍♂️Portal SEC de instaladores</td><td id="r;IE" class="" style="width:303px">Listado de profesionales certificados SEC oficial.</td><td id="{Bve" class="" style="width:237px"><a href="https://www.sec.cl/area-ciudadana/nuevo-buscador-de-instaladores-e-instaladoras/">Instaladoras e Instaladores Certificados por SEC</a></td></tr><tr id="384938ab-0205-80cc-9388-e492d52b5b9e" dir="ltr"><td id="h_NM" class="" style="width:170.25px">🏭Proveedores</td><td id="r;IE" class="" style="width:303px">Listado referencial proveedores de equipamiento renovable, no implica recomendación y es responsabilidad del mandante asegurar su cumplimiento y calidad.</td><td id="{Bve" class="" style="width:237px"><a href="https://app.notion.com/p/Proveedores-Energ-ticos-pub-383938ab02058045b8e9c07564e3dca9?pvs=21">Proveedores Energéticos (pub)</a></td></tr><tr id="384938ab-0205-80f6-9aed-fd6b371de3ec" dir="ltr"><td id="h_NM" class="" style="width:170.25px">🧠Registro de <strong>Consultores</strong></td><td id="r;IE" class="" style="width:303px">Plataforma digital  para conectar a profesionales y empresas que prestan servicios en eficiencia energética y energías renovables</td><td id="{Bve" class="" style="width:237px"><a href="https://consultores.registroenergetico.cl/">Registro de Consultores</a></td></tr><tr id="384938ab-0205-80f0-aef3-d5b57d6ed1e5" dir="ltr"><td id="h_NM" class="" style="width:170.25px">📚Biblioteca <strong>AgenciaSE</strong></td><td id="r;IE" class="" style="width:303px">Material Bibliográfico sobre Eficiencia Energética y Sistemas de Gestión de la Energía</td><td id="{Bve" class="" style="width:237px"><a href="https://www.agenciase.org/biblioteca/">Biblioteca – Agencia de Sostenibilidad Energética</a></td></tr><tr id="384938ab-0205-8062-a3d2-fa41f69aba5a" dir="ltr"><td id="h_NM" class="" style="width:170.25px">🛡️Sello EE</td><td id="r;IE" class="" style="width:303px">Sello de Eficiencia Energética, <mark class="highlight-yellow" data-notion-highlight="yellow">gratuito </mark>para MiPyMes</td><td id="{Bve" class="" style="width:237px"><a href="https://plataforma.selloee.cl/">SelloEE - Sello de Excelencia Energética</a></td></tr><tr id="384938ab-0205-809d-9b50-f796ebb5a884" dir="ltr"><td id="h_NM" class="" style="width:170.25px">🎯Gestiona Energía <strong>MiPyME</strong></td><td id="r;IE" class="" style="width:303px">El Ministerio de Energía ha desarrollado una serie de herramientas de fácil uso para que las MiPyMES puedan estimar el uso y generación de energía a lo largo del país.</td><td id="{Bve" class="" style="width:237px"><a href="https://mipymes.gestionaenergia.cl/herramientas">Herramientas | Gestiona Energía MiPyMEs</a></td></tr><tr id="384938ab-0205-804f-a419-d8f2ed643595" dir="ltr"><td id="h_NM" class="" style="width:170.25px">⚡Calculadora de <strong>ahorro energéticos</strong></td><td id="r;IE" class="" style="width:303px">Herramienta para calcular una primera aproximación de ahorros y beneficios</td><td id="{Bve" class="" style="width:237px"><a href="https://mipyme.agenciase.org/plataforma/">Plataforma Gestiona Energía</a></td></tr><tr id="388938ab-0205-80a5-8e2e-e3feda28e98f" dir="ltr"><td id="h_NM" class="" style="width:170.25px">🌿Calculadora de Energías Renovables</td><td id="r;IE" class="" style="width:303px">Calculadora de Ahorro para calcular de forma rápida el ahorro que podría obtener al instalar un sistema solar fotovoltaico y conectarlo a la red, de acuerdo a la Ley de Generación Distribuida.</td><td id="{Bve" class="" style="width:237px"><a href="https://solar.minenergia.cl/">Explorador Solar</a></td></tr><tr id="384938ab-0205-80ec-a59f-fc9e907e5b42" dir="ltr"><td id="h_NM" class="" style="width:170.25px">🧾Servicio de Diagnóstico ONLINE</td><td id="r;IE" class="" style="width:303px">Servicio de <strong>diagnóstico energético gratuito</strong> que, a partir de una revisión energética de la empresa, entrega recomendaciones sobre medidas de eficiencia energética y energía renovable</td><td id="{Bve" class="" style="width:237px"><a href="https://mipymes.gestionaenergia.cl/unidad-de-asistencia-tecnica">Asistencia Técnica Gratuita</a></td></tr><tr id="392938ab-0205-8064-8cbe-dba408471bda" dir="ltr"><td id="h_NM" class="" style="width:170.25px">❄️Cero Fugas PNUD</td><td id="r;IE" class="" style="width:303px">Apoyo técnico y cofinanciamiento para empresas con sistemas de refrigeración HCFC.</td><td id="{Bve" class="" style="width:237px"><a href="https://www.undp.org/es/chile/programa-cero-fugas">Programa Cero Fugas | Programa De Las Naciones Unidas Para El Desarrollo</a></td></tr></tbody></table></div><p id="95a938ab-0205-8399-9b9f-0118253a0288" class="" dir="auto"><mark class="highlight-blue" data-notion-highlight="blue">━━━━━━</mark><mark class="highlight-red" data-notion-highlight="red">━━━━━━━━━━</mark></p><p id="458938ab-0205-83d8-8d02-8108dff3886e" class="" dir="auto"><strong>Carlos Campos<br/></strong><mark class="highlight-gray" data-notion-highlight="gray">Analista Regional Eficiencia Energética<br/></mark>Seremi de Energía Región de Valparaíso <br/><mark class="highlight-purple" data-notion-highlight="purple">ccamposn@minenergia.cl</mark></p><p id="396938ab-0205-80fc-b47a-e697201637f6" class="" dir="auto">
+</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>

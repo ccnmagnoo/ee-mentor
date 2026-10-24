@@ -1,0 +1,65 @@
+Ecosuper
+Ecosuper
+Fecha June 18, 2026 9:48 AM
+Negocio Comercio
+Grado consumos Ligero
+Usuario Susan Godoy
+Teléfono +56933729834
+Correo electrónico contacto@ecosuper.cl
+Contraparte CND Sercotec Viña del Mar
+ACTA de seguimiento Asesoría/Mentoría
+Información del contacto y cliente (negocio)
+Nombre del contacto Susan Godoy RUT
+Nombre del negocio EcoSuper ROL
+Asesor asignado Carlos Campos Servicio Seremi Energía
+Descripción
+Ecosuper es un negocio orientado al comercio minorista de productos de consumo para cliente final, con un fuerte énfasis en la sostenibilidad de sus productos. Su propuesta de valor se centra en ofrecer un espacio moderno y responsable con el medio ambiente, transmitiendo una imagen verde que conecta con clientes conscientes del impacto ambiental de sus decisiones de compra. El local combina áreas de exhibición con vitrinas refrigeradas y espacios administrativos, manteniendo un equilibrio entre funcionalidad operativa y compromiso ecológico. En el ámbito energético la empresa cuenta con una serie de equipamiento de consumo energético, en la cuál destaca los equipos de refrigerados para bebestibles y alimentos entre otros. Otros procesos productivos son el de servicio de iluminación y los de administración y gestión de ventas, compuesto de computadoras y equipos de cobranza. Los consumos energético se encuentran en el rango de lo esperables y la estrategia base es el generar las acciones concordantes para alineamiento de los valores de sostenibilidad de la iniciativa, con la imagen comercial de la misma.
+Acometidas
+Cliente 1642681 BT1
+Propietario Rebeca Moraga
+Distribuidora CGE 5.5kW
+Consumo kWh 256 kWh
+Gasto nominal 96000 $CLP
+Hallazgos
+Referencia Servicio Descripción
+Vitrinas de exibición refrigeración Existe un uso indistinto del equipamiento de vitrina para almacenamiento de productos.
+Gestión de la energía básica gestión Eco Super dispone de ciertas prácticas de sensibilización energética impulsadas directamente por los dueños, pero carece de un sistema formal y estructurado de gestión energética. Esta condición implica que, si bien existe conciencia respecto al uso eficiente de la energía, las acciones implementadas son esporádicas, no sistemáticas y sin seguimiento técnico que permita evaluar su impacto real. Lo que para una estrategia de valor resulta importante este tipo de seguimiento e indicadores.
+Aislamiento térmico aislamiento térmico El establecimiento cuenta con algunas medidas de mejoramiento térmico en su envolvente, particularmente en puertas y ventanas, lo que contribuye a reducir las pérdidas de frío en áreas críticas y a mantener condiciones más estables en los espacios refrigerados. Estas mejoras permiten disminuir parcialmente la infiltración de aire y la carga térmica sobre los sistemas de refrigeración, generando ahorros energéticos y una operación más eficiente de los equipos
+Propuesta de valor de sostenibilidad que incluya la energía gestión Ecosuper posee una estrategia de sostenibilidad orientada a la atracción de clientes, lo que representa una base valiosa para diferenciarse en el mercado. Sin embargo, esta estrategia actualmente carece de indicadores concretos de desempeño energético que permitan medir, comunicar y validar los impactos asociados a sus acciones.
+Recomendaciones
+nombre Recomendación
+Criterio operativo vitrinas refrigeradas Se sugiere definir un criterio operativo específico para el uso de las vitrinas refrigeradas, orientado a su función principal de exhibición y venta. El propósito es optimizar el consumo energético y garantizar condiciones adecuadas de conservación de los alimentos.
+Las vitrinas deben destinarse únicamente a:
+• Exhibición de productos disponibles para la venta inmediata.
+• Conservación de alimentos listos para consumo en el corto plazo.
+En este marco:
+• Se desaconseja su uso como sistemas de almacenamiento prolongado, ya que presentan:
+◦ Menor hermeticidad en comparación con equipos cerrados.
+◦ Variaciones térmicas derivadas de aperturas frecuentes.
+◦ Mayor demanda energética para mantener la temperatura estable.
+Buenas prácticas complementarias y capacitación Capacitación sistemática a personal de atención para minimizar aperturas innecesarias o prolongadas de equipos de refrigeración. Evitar sobrecarga de productos que obstruyan la circulación de aire frío. Mantener una adecuada organización de los productos (rotación FIFO) para mejorar la distribución de la carga de frío. Realizar mantenciones periódicas (limpieza de serpentines, revisión de termostatos).
+Avanzar en profesionalización de la gestión de la energía Se propone fortalecer las capacidades internas mediante acciones de educación energética estructurada , incorporación de prácticas de gestión y seguimiento del consumo, y acompañamiento técnico que permita integrar la eficiencia energética en los procesos operativos y de toma de decisiones, contribuyendo así a una gestión más eficiente, sostenible y competitiva. En complemento a lo anterior, se propone implementar un plan de acompañamiento progresivo , que considere capacitaciones prácticas en uso eficiente de la energía, levantamiento y análisis básico de consumos, definición de responsables internos y establecimiento de indicadores de seguimiento. Estas acciones permitirán fortalecer la gestión energética de Pizzería Plaggio, promoviendo la adopción de buenas prácticas operativas, la toma de decisiones informadas y la consolidación de una cultura de eficiencia energética alineada con los objetivos productivos de la empresa.
+Mejora del aislamiento térmico Se recomienda la incorporación de revisión anual de sellado en puertas, tales como burletes perimetrales y sellos inferiores, con el fin de reducir las infiltraciones de aire. Esta es una medida de bajo costo y rápida implementación, con impactos inmediatos en la reducción de pérdidas térmicas, alineados con los valores de sostenibilidad. Complementariamente, se sugiere la instalación de cortinas térmicas o dispositivos similares en accesos principales, lo que permite minimizar el intercambio de aire entre el interior y el exterior.
+En relación con los ventanales, una mejora significativa corresponde a la implementación de sistemas de doble vidriado hermético (DVH) o la aplicación de láminas de control solar, dependiendo del presupuesto disponible. El DVH reduce considerablemente la transmisión de calor, mejorando tanto el comportamiento en invierno como en verano, mientras que las láminas pueden disminuir la radiación solar directa y contribuir al confort visual y térmico. Asimismo, la incorporación de elementos de sombreamiento, como cortinas tipo roller o persianas, permite gestionar de mejor manera las ganancias solares.
+Incorporar indicadores energéticos en propuesta de valor comercial Se recomienda complementar el valor de la propuesta comercial de Ecosuper con los indicadores obtenidos de un sistema básico de gestión de la energía que incluya la definición de indicadores clave de desempeño (KPIs), tales como consumo energético por unidad de venta, intensidad energética y costos energéticos mensuales. Asimismo, es clave establecer un monitoreo periódico de los consumos, asignar responsables internos y capacitar al personal en buenas prácticas energéticas, y de manera que puedan ser comunicados a clientes como parte de la propuesta de valor del negocio. Este proceso permitirá profesionalizar la gestión energética, mejorar la eficiencia operativa y fortalecer el posicionamiento sostenible de Ecosuper.
+Temas adicionales
+Se recomienda implementar un programa continuo de educación energética dirigido a los trabajadores , que no solo aborde procedimientos operativos, sino que también entregue conocimientos básicos sobre consumo energético, funcionamiento de equipos de refrigeración y su impacto en los costos del negocio.
+Acuerdos
+Se propone como acuerdo la coordinación conjunta de un programa de charlas de sensibilización energética dirigidas a socios, colaboradores y empleados, con el objetivo de promover el uso eficiente de la energía y fomentar una cultura organizacional orientada a la sostenibilidad. Estas actividades serán planificadas de manera periódica, definiendo contenidos, responsables y calendarios, así como mecanismos de evaluación de su impacto, asegurando la participación activa de los distintos actores involucrados y contribuyendo al cumplimiento de metas de eficiencia energética y responsabilidad ambiental.
+Información actualizada
+👩‍🦰Instaladoras Red de mujeres Instaladoras certificadas SEC, para regularización eléctrica y gas, análisis de tarifas, expansiones y proyectos Instaladoras SEC Certificadas
+👷‍♂️Portal SEC de instaladores Listado de profesionales certificados SEC oficial. Instaladoras e Instaladores Certificados por SEC
+🏭Proveedores Listado referencial proveedores de equipamiento renovable, no implica recomendación y es responsabilidad del mandante asegurar su cumplimiento y calidad. Proveedores Energéticos (pub)
+🧠Registro de Consultores Plataforma digital para conectar a profesionales y empresas que prestan servicios en eficiencia energética y energías renovables Registro de Consultores
+📚Biblioteca AgenciaSE Material Bibliográfico sobre Eficiencia Energética y Sistemas de Gestión de la Energía Biblioteca – Agencia de Sostenibilidad Energética
+🛡️Sello EE Sello de Eficiencia Energética, gratuito para MiPyMes SelloEE - Sello de Excelencia Energética
+🎯Gestiona Energía MiPyME El Ministerio de Energía ha desarrollado una serie de herramientas de fácil uso para que las MiPyMES puedan estimar el uso y generación de energía a lo largo del país. Herramientas | Gestiona Energía MiPyMEs
+⚡Calculadora de ahorro energéticos Herramienta para calcular una primera aproximación de ahorros y beneficios Plataforma Gestiona Energía
+🌿Calculadora de Energías Renovables Calculadora de Ahorro para calcular de forma rápida el ahorro que podría obtener al instalar un sistema solar fotovoltaico y conectarlo a la red, de acuerdo a la Ley de Generación Distribuida. Explorador Solar
+🧾Servicio de Diagnóstico ONLINE Servicio de  diagnóstico energético gratuito  que, a partir de una revisión energética de la empresa, entrega recomendaciones sobre medidas de eficiencia energética y energía renovable Asistencia Técnica Gratuita
+❄️Cero Fugas PNUD Apoyo técnico y cofinanciamiento para empresas con sistemas de refrigeración HCFC. Programa Cero Fugas | Programa De Las Naciones Unidas Para El Desarrollo
+━━━━━━ ━━━━━━━━━━
+Carlos Campos
+Analista Regional Eficiencia Energética
+Seremi de Energía Región de Valparaíso
+ccamposn@minenergia.cl

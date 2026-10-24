@@ -1,0 +1,13 @@
+id = "CAN-HAL-cocina"
+tipo = "hallazgo"
+titulo = "Cocina"
+descripcion = "Los hornos eléctricos de resistencia corresponden probablemente al principal consumo de potencia del local, debido a sus elevadas cargas eléctricas y a su utilización durante la preparación y horneado de productos. Este tipo de tecnología transforma electricidad en calor de forma directa, generando altas demandas instantáneas y contribuyendo significativamente al consumo mensual. Algunos riesgos son en el ámbito operativo, como encendidos anticipados antes de la producción, aperturas frecuentes y falta de programación operativa de lotes de cocción, debido a la naturaleza “variante” de la demanda de productos. También se genera un impacto durante la temporada alta entre diciembre y febrero cuando la demanda se llega a duplicar."
+categoria = "coccion"
+impacto = "alto"
+inversion = "baja"
+dificultad = "baja"
+origen = "casos:Cafetería"
+fuente_id = "FUE-la-boulangerie-390938ab0205801fb682ff6930a172ba"
+estado = "pendiente"
+created_at = "2026-10-24T17:57:09.224Z"
+

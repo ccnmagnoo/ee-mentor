@@ -1,0 +1,13 @@
+id = "CAN-HAL-electrodomesticos-de-cocina"
+tipo = "hallazgo"
+titulo = "Electrodomésticos de cocina"
+descripcion = "El restaurante utiliza una batidora, una minipimer y una juguera, todos de uso ocasional. Aunque su incidencia en el gasto energético es reducida, el uso de equipos con motores desgastados o un mantenimiento deficiente puede disminuir su rendimiento y aumentar los tiempos de operación."
+categoria = "gestion_operacional"
+impacto = "medio"
+inversion = "baja"
+dificultad = "baja"
+origen = "casos:Restaurante"
+fuente_id = "FUE-rito-mata-390938ab0205809584b2c563debd6138"
+estado = "pendiente"
+created_at = "2026-10-24T17:57:09.976Z"
+

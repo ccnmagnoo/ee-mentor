@@ -1,0 +1,13 @@
+id = "CAN-REC-formalizacion-gestion-de-la-energia"
+tipo = "recomendacion"
+titulo = "Formalización gestión de la energía"
+descripcion = "Formalizar procedimientos básicos de gestión energética, registrar periódicamente consumos eléctricos y de gas, establecer metas de ahorro, capacitar al personal y aprovechar herramientas gratuitas como las disponibles en la plataforma Gestiona Energía MiPyME."
+categoria = "gestion_energetica"
+impacto = "medio"
+inversion = "baja"
+dificultad = "media"
+origen = "casos:Restaurante"
+fuente_id = "FUE-rito-mata-390938ab0205809584b2c563debd6138"
+estado = "pendiente"
+created_at = "2026-10-24T17:57:10.092Z"
+

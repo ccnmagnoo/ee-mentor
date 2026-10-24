@@ -1,0 +1,13 @@
+id = "CAN-HAL-congeladoras"
+tipo = "hallazgo"
+titulo = "Congeladoras"
+descripcion = "La empresa dispone de una congeladora vertical y dos congeladoras horizontales destinadas al almacenamiento de materias primas de 100 y 150 litros. Estos equipos son esenciales para la conservación de alimentos, aunque pueden incrementar significativamente el consumo energético si presentan escarcha excesiva, problemas de sellado o sobrecarga de productos."
+categoria = "congelacion"
+impacto = "medio"
+inversion = "baja"
+dificultad = "baja"
+origen = "casos:Restaurante"
+fuente_id = "FUE-rito-mata-390938ab0205809584b2c563debd6138"
+estado = "pendiente"
+created_at = "2026-10-24T17:57:09.951Z"
+

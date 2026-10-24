@@ -1,0 +1,13 @@
+id = "CAN-REC-aislamiento-termico"
+tipo = "recomendacion"
+titulo = "Aislamiento térmico"
+descripcion = "Es aconsejable incorporar elementos de aislamiento térmico alrededor del horno a leña, tales como revestimientos refractarios o barreras térmicas. Estas soluciones permiten disminuir la radiación de calor hacia el ambiente interior, reduciendo la ganancia térmica innecesaria y contribuyendo a un ambiente más estable, especialmente durante períodos estivales de alta temperatura."
+categoria = "envolvente"
+impacto = "medio"
+inversion = "media"
+dificultad = "media"
+origen = "casos:Pizzería"
+fuente_id = "FUE-pizzeria-plaggio-382938ab020580efa40bf9d41e53074"
+estado = "pendiente"
+created_at = "2026-10-24T17:57:09.844Z"
+

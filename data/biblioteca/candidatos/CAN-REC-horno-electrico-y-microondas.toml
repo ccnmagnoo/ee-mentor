@@ -1,0 +1,13 @@
+id = "CAN-REC-horno-electrico-y-microondas"
+tipo = "recomendacion"
+titulo = "Horno eléctrico y microondas"
+descripcion = "Se recomienda mantener la actual operación de estos artefactos orientados en privilegiar el uso del microondas para calentamientos rápidos, aprovechar al máximo la capacidad del horno cuando se utilice y desconectarlo cuando permanezca largos períodos sin operación. Estas medidas optimizarán su uso y aportará a aumentar la performance del recurso energético en su modelo de negocio."
+categoria = "gestion_operacional"
+impacto = "medio"
+inversion = "media"
+dificultad = "media"
+origen = "casos:Restaurante"
+fuente_id = "FUE-rito-mata-390938ab0205809584b2c563debd6138"
+estado = "pendiente"
+created_at = "2026-10-24T17:57:10.016Z"
+

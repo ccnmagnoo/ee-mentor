@@ -1,0 +1,13 @@
+id = "CAN-REC-implementacion-del-sello-s"
+tipo = "recomendacion"
+titulo = "Implementación del Sello S"
+descripcion = "Se recomienda avanzar en la implementación del Sello S de Sernatur , como herramienta de gestión para fortalecer la sostenibilidad del establecimiento. Este reconocimiento promueve la incorporación de buenas prácticas en ámbitos ambientales, económicos y socioculturales , incluyendo el uso eficiente de la energía, la gestión de residuos y la optimización de recursos, aspectos directamente vinculados al desempeño energético del negocio, lo que se alinea con objetivos de un sistema de gestión energético"
+categoria = "gestion_energetica"
+impacto = "medio"
+inversion = "baja"
+dificultad = "media"
+origen = "casos:Hotel pequeño"
+fuente_id = "FUE-hotel-asturias-383938ab0205806999a2c62923829735"
+estado = "pendiente"
+created_at = "2026-10-24T17:57:09.185Z"
+

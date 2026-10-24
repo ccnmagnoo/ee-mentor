@@ -1,0 +1,13 @@
+id = "CAN-REC-control-activo-de-puntos-de-temperatura-eq"
+tipo = "recomendacion"
+titulo = "Control activo de puntos de temperatura equipos de refrigeración"
+descripcion = "Realizar un control periódico de las temperaturas de conservación y establecer un plan de mantenimiento preventivo para los equipos de refrigeración. Se recomienda además verificar el estado de sellos, burletes y condensadores, manteniendo estos últimos limpios para optimizar el rendimiento energético. Asimismo, evaluar la necesidad real de mantener todos los equipos operativos de manera permanente según la demanda efectiva de productos."
+categoria = "refrigeracion"
+impacto = "medio"
+inversion = "baja"
+dificultad = "media"
+origen = "casos:Cafetería"
+fuente_id = "FUE-minimarket-y-cafe-tonita-392938ab02058043b56ae72"
+estado = "pendiente"
+created_at = "2026-10-24T17:57:09.721Z"
+

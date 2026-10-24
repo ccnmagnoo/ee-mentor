@@ -1,0 +1,16 @@
+schema_version = 1
+id = "HAL-CONG-01"
+codigo = "CONG-01"
+titulo = "Acumulación de escarcha en evaporadores"
+categoria = "congelacion"
+descripcion = "Se observa escarcha o hielo acumulado en evaporadores, paredes o puertas de congeladores. El ciclo de descongelación no se realiza de forma programada o no se registra."
+justificacion = "La escarcha actúa como aislante térmico y reduce la transferencia de frío, obligando al equipo a operar más tiempo. Puede además obstruir la circulación de aire."
+impacto = "medio"
+energetico = "electricidad"
+recomendacion_id = "REC-CONG-01"
+tags = [ "congelacion", "escarcha", "mantencion" ]
+activo = true
+origen = "catalogo_base"
+created_at = "2026-01-01T00:00:00.000Z"
+updated_at = "2026-01-01T00:00:00.000Z"
+

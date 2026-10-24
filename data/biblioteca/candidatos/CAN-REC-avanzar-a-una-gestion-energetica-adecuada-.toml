@@ -1,0 +1,13 @@
+id = "CAN-REC-avanzar-a-una-gestion-energetica-adecuada-"
+tipo = "recomendacion"
+titulo = "Avanzar a una gestión energética adecuada al negocio"
+descripcion = "Se recomienda avanzar gradualmente hacia una gestión energética básica mediante el seguimiento de consumos, la planificación de mantenimientos y la evaluación periódica de oportunidades de ahorro, permitiendo consolidar las buenas prácticas ya presentes en el negocio, como herramienta de valorización y valor agregado al negocio."
+categoria = "gestion_operacional"
+impacto = "medio"
+inversion = "baja"
+dificultad = "media"
+origen = "casos:Cafetería"
+fuente_id = "FUE-minimarket-y-cafe-tonita-392938ab02058043b56ae72"
+estado = "pendiente"
+created_at = "2026-10-24T17:57:09.768Z"
+

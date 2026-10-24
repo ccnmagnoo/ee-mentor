@@ -1,0 +1,16 @@
+schema_version = 1
+id = "HAL-CONG-02"
+codigo = "CONG-02"
+titulo = "Aperturas frecuentes y falta de cortinas en congelación"
+categoria = "congelacion"
+descripcion = "Las puertas de congeladores y cámaras se abren con frecuencia durante la jornada, o permanecen abiertas mientras se retiran productos. No se utilizan cortinas de tiras ni se ha definido un protocolo de acceso."
+justificacion = "Cada apertura introduce aire caliente y húmedo que incrementa la carga térmica y la formación de escarcha. La gestión operacional es una medida de bajo costo y rápida implementación."
+impacto = "medio"
+energetico = "electricidad"
+recomendacion_id = "REC-CONG-02"
+tags = [ "congelacion", "operacion", "cortina" ]
+activo = true
+origen = "catalogo_base"
+created_at = "2026-01-01T00:00:00.000Z"
+updated_at = "2026-01-01T00:00:00.000Z"
+

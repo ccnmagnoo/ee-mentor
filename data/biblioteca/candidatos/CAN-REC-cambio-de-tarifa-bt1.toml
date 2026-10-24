@@ -1,0 +1,13 @@
+id = "CAN-REC-cambio-de-tarifa-bt1"
+tipo = "recomendacion"
+titulo = "Cambio de tarifa BT1"
+descripcion = "La tarifa BT1 corresponde a un suministro en baja tensión con cobro principalmente por energía consumida (kWh), sin diferenciación relevante por potencia demandada ni por bloques horarios.\nSe recomienda cambio de tarifa a AT4.3 inicialmente, pero que requerirá análisis acabado por un especialista certificado SEC clase D o E.\nPara un negocio tipo fábrica de alimentos como el analizado:\n• Existe variabilidad horaria significativa en el consumo (picos en mañana y tarde), dependiendo de la demanda y producción.\n• Se observan equipos de alta potencia (refrigeración, cocción, climatizado).\n• Se mantiene también una carga base constante (refrigeración). Esto sugiere que BT1A no necesariamente refleja de forma eficiente la estructura real de consumo."
+categoria = "equipos_productivos"
+impacto = "medio"
+inversion = "media"
+dificultad = "media"
+origen = "casos:Pastelería"
+fuente_id = "FUE-vijon-pasteleria-382938ab02058081bcb6de5c89055ba"
+estado = "pendiente"
+created_at = "2026-10-24T17:57:10.326Z"
+

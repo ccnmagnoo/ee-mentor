@@ -1,0 +1,13 @@
+id = "CAN-REC-energias-renovables"
+tipo = "recomendacion"
+titulo = "Energías Renovables"
+descripcion = "Considerando la adjudicación de un proyecto fotovoltaico mediante co financiamiento CONADI de $5 millones, se recomienda integrar la futura generación solar dentro de una estrategia de seguimiento de consumos para maximizar los beneficios económicos y energéticos obtenidos. Algunos cálculos generales: \nEl establecimiento cuenta con 30m2 de superficie de techumbre disponible, más que adecuado para una instalación fotovoltaica de entre 2 a 4 kWp. \nSe evaluó la implementación de un sistema solar fotovoltaico híbrido con baterías para un establecimiento que registra consumos eléctricos promedio de 676 kWh mensuales, equivalentes a aproximadamente 8.112 kWh al año. Como alternativa principal, se considera un sistema de 4 kWp de potencia instalada, capaz de generar en promedio 14.1 kWh diarios y alrededor de 5.146,7 kWh anuales. Esta generación permitiría cubrir aproximadamente un 48% de la demanda eléctrica durante los meses de invierno y hasta un 82.5% durante los meses de verano, alcanzando una cobertura promedio anual cercana al 63% del consumo total del establecimiento. Considerando costos de mercado para sistemas híbridos con almacenamiento entre $2.500 y $3.000 por watt instalado, la inversión requerida se estima entre $10.000.000 y $12.000.000, dependiendo de las características específicas del equipamiento, la capacidad de almacenamiento y las condiciones de instalación.\nComo alternativa de menor escala, se analiza un sistema híbrido de 2 kWp con baterías, cuya generación anual estimada alcanza aproximadamente 2.573 kWh. Este aporte permitiría cubrir entre un 20% y un 40% de los consumos mensuales del establecimiento, dependiendo de la época del año y de la disponibilidad del recurso solar. La inversión asociada a esta alternativa se estima en torno a los $5.000.000, constituyendo una opción más accesible para reducir parcialmente el consumo eléctrico proveniente de la red. No obstante, desde el punto de vista del ahorro energético y la maximización de la generación renovable, la alternativa de 4 kWp resulta más conveniente, al permitir una reducción significativamente mayor del consumo eléctrico convencional y otorgar una mayor autonomía energética gracias al respaldo proporcionado por el sistema de baterías."
+categoria = "ernc"
+impacto = "medio"
+inversion = "alta"
+dificultad = "alta"
+origen = "casos:Hotel pequeño; casos:Restaurante"
+fuente_id = "FUE-rito-mata-390938ab0205809584b2c563debd6138"
+estado = "pendiente"
+created_at = "2026-10-24T17:57:09.198Z"
+

@@ -1,0 +1,13 @@
+id = "CAN-HAL-calefaccion-con-calefactor"
+tipo = "hallazgo"
+titulo = "Calefacción con calefactor"
+descripcion = "Uso de calefactor individual (portátiles o eléctricos) como principal estrategia de climatización representa una práctica ineficiente tanto desde el punto de vista energético como operativo. Estos equipos suelen presentar bajos rendimientos globales , especialmente cuando se utilizan múltiples unidades en paralelo para cubrir un mismo espacio, generando consumos elevados de electricidad sin lograr una distribución homogénea del calor. Además, su uso descoordinado provoca sobrecalentamientos puntuales y zonas frías, afectando el confort térmico de clientes y trabajadores."
+categoria = "climatizacion"
+impacto = "medio"
+inversion = "baja"
+dificultad = "baja"
+origen = "casos:Cafetería"
+fuente_id = "FUE-cafe-colores-382938ab020580c59ae6d8d19349a7b0"
+estado = "pendiente"
+created_at = "2026-10-24T17:57:09.020Z"
+

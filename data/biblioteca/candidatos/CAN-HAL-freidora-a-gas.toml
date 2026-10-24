@@ -1,0 +1,13 @@
+id = "CAN-HAL-freidora-a-gas"
+tipo = "hallazgo"
+titulo = "Freidora a gas"
+descripcion = "La freidora a gas destinada a la preparación de frituras representa un equipo fundamental para la operación del restaurante. Una problemática frecuente en este tipo de equipos es la pérdida de eficiencia producto de una regulación inadecuada de la temperatura o por el deterioro del aceite, lo que puede incrementar los tiempos de cocción y el consumo de combustible."
+categoria = "coccion"
+impacto = "alto"
+inversion = "baja"
+dificultad = "baja"
+origen = "casos:Restaurante"
+fuente_id = "FUE-rito-mata-390938ab0205809584b2c563debd6138"
+estado = "pendiente"
+created_at = "2026-10-24T17:57:09.935Z"
+

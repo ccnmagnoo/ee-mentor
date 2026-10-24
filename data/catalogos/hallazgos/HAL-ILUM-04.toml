@@ -1,0 +1,16 @@
+schema_version = 1
+id = "HAL-ILUM-04"
+codigo = "ILUM-04"
+titulo = "Falta de mantención y limpieza de luminarias"
+categoria = "iluminacion"
+descripcion = "Se observan luminarias, difusores y pantallas con acumulación de polvo, grasa o insectos, especialmente en cocinas y sectores de atención. Algunas luminarias presentan además parpadeo o baja intensidad."
+justificacion = "La suciedad reduce el flujo luminoso y puede llevar a sobredimensionar la iluminación o a encender equipos adicionales. La limpieza periódica es una medida de bajo costo con impacto inmediato."
+impacto = "bajo"
+energetico = "electricidad"
+recomendacion_id = "REC-ILUM-03"
+tags = [ "iluminacion", "mantencion" ]
+activo = true
+origen = "catalogo_base"
+created_at = "2026-01-01T00:00:00.000Z"
+updated_at = "2026-01-01T00:00:00.000Z"
+

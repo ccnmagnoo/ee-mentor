@@ -1,0 +1,13 @@
+id = "CAN-REC-mantenimiento-preventivo-de-congeladores-v"
+tipo = "recomendacion"
+titulo = "Mantenimiento preventivo de congeladores verticales"
+descripcion = "Se recomienda implementar una metodología limpieza y descongelamiento periódico para reducir la acumulación de escarcha de los equipos en caso de haber acumulación de este. También se recomienda verificar el estado de empaquetaduras y cierres una vez al año, para asegurar que las gomas de empaquetadura se encuentra en perfecto estado. Mantener siempre espacio libre suficiente para la ventilación posterior de estos equipos. También monitorear temperaturas y ajustar setpoints según requerimientos sanitarios reales de requerirlo, considerando horarios nocturnos y baja temporada de invierno para reducir consumos energéticos de estos artefactos . Por último evaluar y planificar en el largo plazo reemplazo progresivo por equipos clase energética eficiente, cuando estos equipos cumplan su periodo de vida útil, entre 8 a 10 años. La evaluación de estos por parte de profesionales calificados para evaluar el estado del circuito y líquidos de refrigeración."
+categoria = "ventilacion"
+impacto = "medio"
+inversion = "baja"
+dificultad = "media"
+origen = "casos:Cafetería"
+fuente_id = "FUE-la-boulangerie-390938ab0205801fb682ff6930a172ba"
+estado = "pendiente"
+created_at = "2026-10-24T17:57:09.276Z"
+

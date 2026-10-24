@@ -1,0 +1,13 @@
+id = "CAN-HAL-ventilacion"
+tipo = "hallazgo"
+titulo = "Ventilación"
+descripcion = "La ventilación del local se realiza mediante ventiladores mecánicos simples y ventilación natural. Este sistema presenta bajos consumos energéticos en comparación con equipos de climatización más complejos; sin embargo, podría resultar insuficiente en períodos de altas temperaturas o cuando existe una elevada carga térmica proveniente de la cocina."
+categoria = "ventilacion"
+impacto = "medio"
+inversion = "baja"
+dificultad = "baja"
+origen = "casos:Restaurante"
+fuente_id = "FUE-rito-mata-390938ab0205809584b2c563debd6138"
+estado = "pendiente"
+created_at = "2026-10-24T17:57:09.959Z"
+

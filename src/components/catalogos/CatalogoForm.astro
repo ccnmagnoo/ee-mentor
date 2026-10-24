@@ -1,0 +1,230 @@
+---
+import Icon from '@/components/ui/Icon.astro';
+import {
+  CATEGORIAS,
+  DIFICULTADES,
+  ENERGOS,
+  IMPACTOS,
+  INVERSIONES,
+  PRIORIDADES,
+  type Categoria,
+  type Hallazgo,
+  type Recomendacion,
+} from '@/lib/schemas';
+
+interface Props {
+  tipo: 'hallazgo' | 'recomendacion';
+  action: string;
+  item?: Hallazgo | Recomendacion | null;
+  cancelHref?: string;
+}
+
+const { tipo, action, item = null, cancelHref = '/catalogos' } = Astro.props;
+const esHallazgo = tipo === 'hallazgo';
+const hallazgo = esHallazgo ? (item as Hallazgo | null) : null;
+const recomendacion = !esHallazgo ? (item as Recomendacion | null) : null;
+
+const titulo = esHallazgo ? 'hallazgo' : 'recomendación';
+const codigo = item?.codigo ?? '';
+const tituloItem = item?.titulo ?? '';
+const categoria: Categoria = item?.categoria ?? 'iluminacion';
+const descripcion = item?.descripcion ?? '';
+const energetico = item?.energetico ?? 'electricidad';
+const tags = (item?.tags ?? []).join(', ');
+const activo = item?.activo ?? true;
+const origen = item?.origen ?? 'catalogo_base';
+const editando = Boolean(item);
+
+const plazos = [
+  'Corto plazo (1-3 meses)',
+  'Mediano plazo (3-6 meses)',
+  'Largo plazo (6-12 meses)',
+  'Continuo / permanente',
+];
+---
+
+<form action={action} method="post" data-api class="space-y-5">
+  <div data-form-error class="hidden"></div>
+
+  {item && <input type="hidden" name="id" value={item.id} />}
+  <input type="hidden" name="origen" value={origen} />
+
+  <section class="card overflow-hidden">
+    <div class="section-heading">
+      <span class="step-number">{esHallazgo ? 'H' : 'R'}</span>
+      <div>
+        <h2 class="fieldset-title">{editando ? `Editar ${titulo}` : `Nuevo ${titulo}`}</h2>
+        <p class="text-xs text-slate-500">
+          El código identifica el ítem en el catálogo y aparece en los informes generados.
+        </p>
+      </div>
+    </div>
+    <div class="grid gap-4 p-5 sm:grid-cols-2 sm:p-6">
+      <div>
+        <label class="label" for="codigo">Código *</label>
+        <input
+          id="codigo"
+          name="codigo"
+          class="input font-mono uppercase"
+          required
+          minlength="2"
+          value={codigo}
+          placeholder={esHallazgo ? 'HAL-ILUM-99' : 'REC-ILUM-99'}
+        />
+        <p class="help">Se normaliza automáticamente para construir el identificador del archivo.</p>
+      </div>
+      <div>
+        <label class="label" for="categoria">Categoría *</label>
+        <select id="categoria" name="categoria" class="input" required>
+          {Object.entries(CATEGORIAS).map(([key, label]) => (
+            <option value={key} selected={categoria === key}>{label}</option>
+          ))}
+        </select>
+      </div>
+      <div class="sm:col-span-2">
+        <label class="label" for="titulo">Título *</label>
+        <input id="titulo" name="titulo" class="input" required minlength="3" value={tituloItem} />
+      </div>
+      <div class="sm:col-span-2">
+        <label class="label" for="descripcion">Descripción *</label>
+        <textarea id="descripcion" name="descripcion" rows="4" class="input" required minlength="10">{descripcion}</textarea>
+        <p class="help">Explica el problema o la medida con suficiente detalle para reutilizarla en terreno.</p>
+      </div>
+      <div>
+        <label class="label" for="energetico">Energético asociado</label>
+        <select id="energetico" name="energetico" class="input">
+          {Object.entries(ENERGOS).map(([key, label]) => (
+            <option value={key} selected={energetico === key}>{label}</option>
+          ))}
+        </select>
+      </div>
+      <div>
+        <label class="label" for="tags">Etiquetas</label>
+        <input id="tags" name="tags" class="input" value={tags} placeholder="separadas, por, coma" />
+        <p class="help">Ayudan a buscar y agrupar ítems relacionados.</p>
+      </div>
+    </div>
+  </section>
+
+  {esHallazgo ? (
+    <section class="card overflow-hidden">
+      <div class="section-heading">
+        <span class="step-number">2</span>
+        <div>
+          <h2 class="fieldset-title">Clasificación del hallazgo</h2>
+          <p class="text-xs text-slate-500">Impacto, justificación técnica y recomendación vinculada.</p>
+        </div>
+      </div>
+      <div class="grid gap-4 p-5 sm:grid-cols-2 sm:p-6">
+        <div>
+          <label class="label" for="impacto">Impacto *</label>
+          <select id="impacto" name="impacto" class="input" required>
+            {Object.entries(IMPACTOS).map(([key, label]) => (
+              <option value={key} selected={(hallazgo?.impacto ?? 'medio') === key}>{label}</option>
+            ))}
+          </select>
+        </div>
+        <div>
+          <label class="label" for="recomendacion_id">Código de recomendación vinculada</label>
+          <input
+            id="recomendacion_id"
+            name="recomendacion_id"
+            class="input font-mono uppercase"
+            value={hallazgo?.recomendacion_id ?? ''}
+            placeholder="REC-ILUM-01"
+          />
+          <p class="help">Al seleccionar este hallazgo en una visita se sugiere la recomendación indicada.</p>
+        </div>
+        <div class="sm:col-span-2">
+          <label class="label" for="justificacion">Justificación técnica</label>
+          <textarea id="justificacion" name="justificacion" rows="3" class="input">{hallazgo?.justificacion ?? ''}</textarea>
+          <p class="help">Fundamento normativo o técnico que respalda el hallazgo.</p>
+        </div>
+      </div>
+    </section>
+  ) : (
+    <section class="card overflow-hidden">
+      <div class="section-heading">
+        <span class="step-number">2</span>
+        <div>
+          <h2 class="fieldset-title">Clasificación de la recomendación</h2>
+          <p class="text-xs text-slate-500">Inversión, complejidad, prioridad y ahorro esperado.</p>
+        </div>
+      </div>
+      <div class="grid gap-4 p-5 sm:grid-cols-2 sm:p-6">
+        <div>
+          <label class="label" for="inversion">Inversión *</label>
+          <select id="inversion" name="inversion" class="input" required>
+            {Object.entries(INVERSIONES).map(([key, label]) => (
+              <option value={key} selected={(recomendacion?.inversion ?? 'media') === key}>{label}</option>
+            ))}
+          </select>
+        </div>
+        <div>
+          <label class="label" for="dificultad">Dificultad de implementación *</label>
+          <select id="dificultad" name="dificultad" class="input" required>
+            {Object.entries(DIFICULTADES).map(([key, label]) => (
+              <option value={key} selected={(recomendacion?.dificultad ?? 'media') === key}>{label}</option>
+            ))}
+          </select>
+        </div>
+        <div>
+          <label class="label" for="prioridad">Prioridad *</label>
+          <select id="prioridad" name="prioridad" class="input" required>
+            {Object.entries(PRIORIDADES).map(([key, label]) => (
+              <option value={key} selected={(recomendacion?.prioridad ?? 'media') === key}>{label}</option>
+            ))}
+          </select>
+        </div>
+        <div>
+          <label class="label" for="plazo">Plazo de implementación</label>
+          <select id="plazo" name="plazo" class="input">
+            {plazos.map((plazo) => (
+              <option value={plazo} selected={(recomendacion?.plazo ?? plazos[0]) === plazo}>{plazo}</option>
+            ))}
+          </select>
+        </div>
+        <div>
+          <label class="label" for="ahorro_estimado">Ahorro estimado</label>
+          <input
+            id="ahorro_estimado"
+            name="ahorro_estimado"
+            class="input"
+            value={recomendacion?.ahorro_estimado ?? ''}
+            placeholder="Ej: 10-20% del consumo de iluminación"
+          />
+        </div>
+        <div>
+          <label class="label" for="hallazgos_relacionados">Hallazgos relacionados</label>
+          <input
+            id="hallazgos_relacionados"
+            name="hallazgos_relacionados"
+            class="input font-mono uppercase"
+            value={(recomendacion?.hallazgos_relacionados ?? []).join(', ')}
+            placeholder="HAL-ILUM-01, HAL-ILUM-02"
+          />
+          <p class="help">Códigos separados por coma.</p>
+        </div>
+        <div class="sm:col-span-2">
+          <label class="label" for="beneficio">Beneficio esperado</label>
+          <textarea id="beneficio" name="beneficio" rows="3" class="input">{recomendacion?.beneficio ?? ''}</textarea>
+        </div>
+      </div>
+    </section>
+  )}
+
+  <section class="card card-pad">
+    <label class="flex cursor-pointer items-center gap-2 text-sm font-medium text-slate-700">
+      <input type="checkbox" name="activo" class="checkbox" checked={activo} />
+      Ítem activo (disponible para seleccionar en visitas)
+    </label>
+  </section>
+
+  <div class="flex flex-wrap items-center justify-end gap-2">
+    <a href={cancelHref} class="btn-secondary">Cancelar</a>
+    <button type="submit" class="btn-primary">
+      <Icon name="check" size={16} />
+      {editando ? 'Guardar cambios' : `Crear ${titulo}`}
+    </button>
+  </div>
+</form>

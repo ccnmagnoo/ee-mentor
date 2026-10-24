@@ -1,0 +1,13 @@
+id = "CAN-HAL-tarifa-domiciliaria"
+tipo = "hallazgo"
+titulo = "Tarifa domiciliaria"
+descripcion = "El cliente cuenta con una unidad que cuenta con tarifa BT1, en el cual se integran viviendas de uso domiciliario . Se sugiere que podría no estar en la categoría tarifaria más adecuada para su perfil de consumo . La tarifa BT1A está diseñada típicamente para clientes con bajos niveles de consumo y sin gestión de demanda , por lo que no considera señales de precio diferenciadas por horario ni permite optimizar costos mediante la gestión de carga. A medida que el consumo aumenta, como en este caso, es probable que el cliente esté pagando un costo unitario de energía menos competitivo en comparación con otras tarifas disponibles para mayores consumos."
+categoria = "tarifas"
+impacto = "medio"
+inversion = "baja"
+dificultad = "baja"
+origen = "casos:Pastelería"
+fuente_id = "FUE-vijon-pasteleria-382938ab02058081bcb6de5c89055ba"
+estado = "pendiente"
+created_at = "2026-10-24T17:57:10.278Z"
+

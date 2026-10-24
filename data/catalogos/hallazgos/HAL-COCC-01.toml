@@ -1,0 +1,16 @@
+schema_version = 1
+id = "HAL-COCC-01"
+codigo = "COCC-01"
+titulo = "Hornos operados con baja carga o aperturas frecuentes"
+categoria = "coccion"
+descripcion = "Los hornos se encienden antes de la producción, operan en vacío o con carga baja y su puerta se abre con frecuencia para verificar la cocción. No se observa una planificación de tandas."
+justificacion = "El funcionamiento en vacío y las aperturas de puerta provocan pérdidas térmicas significativas. Agrupar la producción y respetar los precalentamientos del fabricante reduce el consumo sin afectar la calidad."
+impacto = "alto"
+energetico = "electricidad"
+recomendacion_id = "REC-COCC-01"
+tags = [ "coccion", "horno", "operacion" ]
+activo = true
+origen = "catalogo_base"
+created_at = "2026-01-01T00:00:00.000Z"
+updated_at = "2026-01-01T00:00:00.000Z"
+

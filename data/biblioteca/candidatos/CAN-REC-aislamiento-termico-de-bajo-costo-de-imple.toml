@@ -1,0 +1,13 @@
+id = "CAN-REC-aislamiento-termico-de-bajo-costo-de-imple"
+tipo = "recomendacion"
+titulo = "Aislamiento térmico de bajo costo de implementación"
+descripcion = "Se recomienda evaluar la instalación de sellos térmicos en puertas y ventanas para reducir infiltraciones no controladas de aire exterior. Estas medidas suelen ser de bajo costo y permiten mejorar el confort interior, disminuir las ganancias de calor y reducir el tiempo de funcionamiento de los equipos de refrigeración y aire acondicionado. Adicionalmente, resulta conveniente verificar periódicamente el estado de los burletes y elementos de cierre para asegurar un adecuado desempeño en el tiempo."
+categoria = "envolvente"
+impacto = "medio"
+inversion = "baja"
+dificultad = "media"
+origen = "casos:Cafetería"
+fuente_id = "FUE-minimarket-y-cafe-tonita-392938ab02058043b56ae72"
+estado = "pendiente"
+created_at = "2026-10-24T17:57:09.738Z"
+

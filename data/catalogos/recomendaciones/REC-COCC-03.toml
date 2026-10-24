@@ -1,0 +1,20 @@
+schema_version = 1
+id = "REC-COCC-03"
+codigo = "REC-COCC-03"
+titulo = "Apagado de equipos de cocción sin carga"
+categoria = "coccion"
+descripcion = "Definir bloques de operación y apagar planchas, freidoras y cocinas durante pausas prolongadas. Incorporar la acción en la lista de cierre del local."
+beneficio = "Evita consumo innecesario de combustible, reduce la carga térmica y disminuye el desgaste de los equipos."
+inversion = "baja"
+dificultad = "baja"
+prioridad = "media"
+ahorro_estimado = "5-10% del consumo de cocción"
+plazo = "Inmediato (0-30 días)"
+energetico = "glp"
+hallazgos_relacionados = [ "HAL-COCC-03" ]
+tags = [ "coccion", "operacion", "apagado" ]
+activo = true
+origen = "catalogo_base"
+created_at = "2026-01-01T00:00:00.000Z"
+updated_at = "2026-01-01T00:00:00.000Z"
+

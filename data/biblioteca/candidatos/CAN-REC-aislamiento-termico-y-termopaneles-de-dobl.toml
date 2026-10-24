@@ -1,0 +1,13 @@
+id = "CAN-REC-aislamiento-termico-y-termopaneles-de-dobl"
+tipo = "recomendacion"
+titulo = "Aislamiento térmico y termopaneles de doble vidrio"
+descripcion = "Se recomienda complementar la instalación actual de termopaneles con una revisión integral de la envolvente térmica del hotel , incluyendo sellos en marcos, puertas y posibles infiltraciones de aire. Asimismo, es clave ajustar la operación de los sistemas de climatización , revisando temperaturas de consigna, horarios de funcionamiento y control por zonas, de manera de aprovechar plenamente la mejora en aislación térmica lograda."
+categoria = "envolvente"
+impacto = "medio"
+inversion = "baja"
+dificultad = "media"
+origen = "casos:Hotel pequeño"
+fuente_id = "FUE-hotel-asturias-383938ab0205806999a2c62923829735"
+estado = "pendiente"
+created_at = "2026-10-24T17:57:09.192Z"
+

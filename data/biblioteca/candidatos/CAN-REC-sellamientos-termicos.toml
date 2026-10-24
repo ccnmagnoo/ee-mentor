@@ -1,0 +1,13 @@
+id = "CAN-REC-sellamientos-termicos"
+tipo = "recomendacion"
+titulo = "Sellamientos térmicos"
+descripcion = "Es fundamental implementar medidas complementarias como la mejora del aislamiento térmico del local (sellos en puertas y ventanas) , la definición de temperaturas de consigna adecuadas (por ejemplo, 20–22 °C en invierno) y el control del encendido/apagado según ocupación real . En caso de mantener calefactores de apoyo, estos deben utilizarse de forma puntual y controlada. Esta estrategia permite reducir el consumo energético, mejorar el confort térmico y optimizar la operación del sistema de climatización , avanzando hacia una gestión más eficiente y sostenible."
+categoria = "envolvente"
+impacto = "medio"
+inversion = "baja"
+dificultad = "media"
+origen = "casos:Cafetería"
+fuente_id = "FUE-cafe-colores-382938ab020580c59ae6d8d19349a7b0"
+estado = "pendiente"
+created_at = "2026-10-24T17:57:09.046Z"
+

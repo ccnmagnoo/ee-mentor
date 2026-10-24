@@ -1,0 +1,13 @@
+id = "CAN-REC-buenas-practicas-complementarias-y-capacit"
+tipo = "recomendacion"
+titulo = "Buenas prácticas complementarias y capacitación"
+descripcion = "Capacitación sistemática a personal de atención para minimizar aperturas innecesarias o prolongadas de equipos de refrigeración. Evitar sobrecarga de productos que obstruyan la circulación de aire frío. Mantener una adecuada organización de los productos (rotación FIFO) para mejorar la distribución de la carga de frío. Realizar mantenciones periódicas (limpieza de serpentines, revisión de termostatos)."
+categoria = "gestion_operacional"
+impacto = "medio"
+inversion = "baja"
+dificultad = "media"
+origen = "casos:Comercio minorista"
+fuente_id = "FUE-ecosuper-383938ab020580828338cbfee1143fd0"
+estado = "pendiente"
+created_at = "2026-10-24T17:57:09.120Z"
+

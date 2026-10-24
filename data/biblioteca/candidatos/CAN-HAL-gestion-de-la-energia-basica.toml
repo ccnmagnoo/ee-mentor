@@ -1,0 +1,13 @@
+id = "CAN-HAL-gestion-de-la-energia-basica"
+tipo = "hallazgo"
+titulo = "Gestión de la energía básica"
+descripcion = "Eco Super dispone de ciertas prácticas de sensibilización energética impulsadas directamente por los dueños, pero carece de un sistema formal y estructurado de gestión energética. Esta condición implica que, si bien existe conciencia respecto al uso eficiente de la energía, las acciones implementadas son esporádicas, no sistemáticas y sin seguimiento técnico que permita evaluar su impacto real. Lo que para una estrategia de valor resulta importante este tipo de seguimiento e indicadores."
+categoria = "gestion_energetica"
+impacto = "medio"
+inversion = "baja"
+dificultad = "baja"
+origen = "casos:Comercio minorista"
+fuente_id = "FUE-ecosuper-383938ab020580828338cbfee1143fd0"
+estado = "pendiente"
+created_at = "2026-10-24T17:57:09.090Z"
+

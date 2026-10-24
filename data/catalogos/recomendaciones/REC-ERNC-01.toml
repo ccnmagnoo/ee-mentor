@@ -1,0 +1,20 @@
+schema_version = 1
+id = "REC-ERNC-01"
+codigo = "REC-ERNC-01"
+titulo = "Estudio e instalación de autoconsumo solar fotovoltaico"
+categoria = "ernc"
+descripcion = "Realizar una prefactibilidad técnica y económica considerando cubierta disponible, curva de consumo y normativa de generación distribuida. Dimensionar el sistema para maximizar el autoconsumo."
+beneficio = "Reduce la dependencia de la red, estabiliza costos y mejora el posicionamiento de sostenibilidad del negocio."
+inversion = "alta"
+dificultad = "alta"
+prioridad = "media"
+ahorro_estimado = "20-50% del consumo eléctrico diurno"
+plazo = "Largo plazo (6-12 meses)"
+energetico = "electricidad"
+hallazgos_relacionados = [ "HAL-ERNC-01" ]
+tags = [ "ernc", "solar", "autoconsumo" ]
+activo = true
+origen = "catalogo_base"
+created_at = "2026-01-01T00:00:00.000Z"
+updated_at = "2026-01-01T00:00:00.000Z"
+

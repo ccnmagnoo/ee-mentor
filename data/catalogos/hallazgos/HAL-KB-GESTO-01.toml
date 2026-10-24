@@ -1,0 +1,15 @@
+codigo = "KB-GESTO-01"
+titulo = "Aislamiento térmico de sistema de Refrigerante"
+categoria = "gestion_operacional"
+descripcion = "La empresa de productos marinos congelados presenta un problema asociado a las deficientes condiciones de aislamiento térmico en sus sistemas de refrigeración, lo que genera pérdidas de frío hacia el ambiente y un aumento significativo en la carga térmica que deben enfrentar los equipos. Esta situación obliga a los compresores a operar de manera más intensiva y prolongada, elevando el consumo energético, disminuyendo la eficiencia del sistema y acelerando el desgaste de los componentes. Además, estas ineficiencias pueden provocar fluctuaciones de temperatura que afectan la calidad y seguridad de los productos almacenados, incrementando los costos operacionales y reduciendo la vida útil de la infraestructura."
+justificacion = "Hallazgo importado desde la biblioteca de conocimiento (fuente FUE-stefymar-382938ab0205804e85d2cd29aa1f7eb1)."
+impacto = "alto"
+energetico = "electricidad"
+recomendacion_id = ""
+tags = [ "biblioteca", "gestion_operacional" ]
+activo = true
+origen = "biblioteca:FUE-stefymar-382938ab0205804e85d2cd29aa1f7eb1"
+schema_version = 1
+id = "HAL-KB-GESTO-01"
+created_at = "2026-10-24T17:59:55.829Z"
+updated_at = "2026-10-24T17:59:55.829Z"

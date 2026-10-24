@@ -1,0 +1,20 @@
+schema_version = 1
+id = "REC-CONG-01"
+codigo = "REC-CONG-01"
+titulo = "Descongelación y control de escarcha"
+categoria = "congelacion"
+descripcion = "Establecer un calendario de descongelación según las instrucciones del fabricante, verificar el funcionamiento de resistencias y desagües, y registrar la actividad."
+beneficio = "Restablece la transferencia de frío, reduce el tiempo de operación del compresor y mejora la conservación de los productos."
+inversion = "baja"
+dificultad = "baja"
+prioridad = "alta"
+ahorro_estimado = "5-15% del consumo de congelación"
+plazo = "Inmediato (0-30 días)"
+energetico = "electricidad"
+hallazgos_relacionados = [ "HAL-CONG-01" ]
+tags = [ "congelacion", "escarcha", "mantencion" ]
+activo = true
+origen = "catalogo_base"
+created_at = "2026-01-01T00:00:00.000Z"
+updated_at = "2026-01-01T00:00:00.000Z"
+

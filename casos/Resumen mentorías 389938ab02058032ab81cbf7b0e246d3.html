@@ -1,0 +1,797 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Resumen mentorías</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+/* Override strong tags inside headings to maintain consistent weight */
+h1 strong,
+h2 strong,
+h3 strong {
+	font-weight: 600;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 10px;
+	padding: 1rem;
+	/* Paint a complete callout box on every PDF page fragment. */
+	-webkit-box-decoration-break: clone;
+	box-decoration-break: clone;
+}
+
+/* For default-background callouts, render the border outline. */
+.callout.block-color-default_background {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+/*
+ * Toggles and callouts hold arbitrary content, so they can easily be taller
+ * than a page. They must stay breakable: avoiding breaks inside them makes
+ * Chromium push the whole block onto the next page, which leaves the previous
+ * page mostly empty before every long toggle.
+ */
+details,
+aside {
+	margin: 1.25em 0;
+}
+
+/* Keep a toggle's title on the same page as the start of its content. */
+summary {
+	page-break-after: avoid;
+	break-after: avoid;
+}
+
+/*
+ * Toggle headings render as <h1/h2/h3 style="display:inline-block"> inside
+ * <summary>. Without this reset, the heading's margin-top pushes it below the
+ * ::marker (▼), so the triangle and the title appear on separate lines.
+ */
+summary h1,
+summary h2,
+summary h3,
+summary h4 {
+	margin-top: 0;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+
+	table.collection-content {
+		width: 100%;
+		table-layout: fixed;
+	}
+
+	table.collection-content th,
+	table.collection-content td {
+		overflow-wrap: anywhere;
+	}
+
+	table.collection-content td > .user,
+	table.collection-content td > time {
+		white-space: pre-wrap;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content-wrapper {
+	overflow-x: auto;
+}
+
+@media only print {
+	.collection-content-wrapper {
+		overflow-x: visible;
+	}
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.collection-content td {
+	white-space: pre-wrap;
+	word-break: break-word;
+}
+
+.column-list {
+	display: flex;
+	gap: 46px;
+}
+
+.column {
+	min-width: 0;
+	overflow: hidden;
+}
+
+.column > *:first-child {
+	margin-top: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding-inline: 0.125rem;
+	padding-block: 0.375rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+table {
+	border-collapse: collapse;
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol.numbered-list.numbered-list-digits-2 {
+	padding-inline-start: 2em;
+}
+
+ol.numbered-list.numbered-list-digits-3plus {
+	padding-inline-start: 2.4em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+/*
+ * Render emoji icons using a ::before pseudo-element to keep the glyph
+ * out of the DOM textContent traversal. This avoids double-rendering icons
+ * in callouts and page titles.
+ * NOTE(slim/html-export-pseudo-icons): I can't tagref this because it will
+ * flag as a duplicate tag after codegen.
+ */
+.icon[data-emoji]::before {
+	content: attr(data-emoji);
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.callout img.notion-static-icon {
+	width: 1em;
+	height: 1em;
+}
+
+.callout p {
+	margin: 0;
+}
+
+.callout h1,
+.callout h2,
+.callout h3 {
+	margin: 0 0 0.6rem;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	margin-right: 0.4em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+blockquote.quote-large {
+	font-size: 1.25em;
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.tab {
+	margin: 1.25em 0;
+	padding-inline: 1rem;
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.highlight-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.highlight-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.highlight-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.highlight-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.highlight-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.highlight-default_background {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray_background {
+	background: rgba(42, 28, 0, 0.07);
+}
+.highlight-brown_background {
+	background: rgba(139, 46, 0, 0.086);
+}
+.highlight-orange_background {
+	background: rgba(224, 101, 1, 0.129);
+}
+.highlight-yellow_background {
+	background: rgba(211, 168, 0, 0.137);
+}
+.highlight-teal_background {
+	background: rgba(0, 100, 45, 0.09);
+}
+.highlight-blue_background {
+	background: rgba(0, 124, 215, 0.094);
+}
+.highlight-purple_background {
+	background: rgba(102, 0, 178, 0.078);
+}
+.highlight-pink_background {
+	background: rgba(197, 0, 93, 0.086);
+}
+.highlight-red_background {
+	background: rgba(223, 22, 0, 0.094);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.block-color-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.block-color-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.block-color-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.block-color-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.block-color-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(240, 239, 237, 1);
+}
+.block-color-brown_background {
+	background: rgba(245, 237, 233, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 235, 222, 1);
+}
+.block-color-yellow_background {
+	background: rgba(249, 243, 220, 1);
+}
+.block-color-teal_background {
+	background: rgba(232, 241, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(229, 242, 252, 1);
+}
+.block-color-purple_background {
+	background: rgba(243, 235, 249, 1);
+}
+.block-color-pink_background {
+	background: rgba(250, 233, 241, 1);
+}
+.block-color-red_background {
+	background: rgba(252, 233, 231, 1);
+}
+.select-value-color-default { background-color: rgba(42, 28, 0, 0.07); }
+.select-value-color-gray { background-color: rgba(28, 19, 1, 0.11); }
+.select-value-color-brown { background-color: rgba(127, 51, 0, 0.156); }
+.select-value-color-orange { background-color: rgba(196, 88, 0, 0.203); }
+.select-value-color-yellow { background-color: rgba(209, 156, 0, 0.282); }
+.select-value-color-green { background-color: rgba(0, 96, 38, 0.156); }
+.select-value-color-blue { background-color: rgba(0, 118, 217, 0.203); }
+.select-value-color-purple { background-color: rgba(92, 0, 163, 0.141); }
+.select-value-color-pink { background-color: rgba(183, 0, 78, 0.152); }
+.select-value-color-red { background-color: rgba(206, 24, 0, 0.164); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style><style>@import url('https://cdn.jsdelivr.net/npm/katex@0.16.25/dist/katex-swap.min.css')</style></head><body><article id="389938ab-0205-8032-ab81-cbf7b0e246d3" class="page sans"><header><h1 class="page-title" dir="auto">Resumen mentorías</h1><p class="page-description" dir="auto"></p></header><div class="page-body"><h1 id="389938ab-0205-8080-8e13-d20bfaac9a8b" class="" dir="auto">Resumen de Mentorías Técnicas Energéticas — Seremi de Energía Región de Valparaíso</h1><h2 id="389938ab-0205-8083-9af9-d3b0511d6863" class="" dir="auto">Resumen General</h2><p id="389938ab-0205-804f-ba2b-e182e582ca7b" class="" dir="auto">Se analizaron <strong>8 informes de mentoría/asesoría energética</strong> realizados por <strong>Carlos Campos</strong> (Analista Regional Eficiencia Energética, Seremi de Energía Región de Valparaíso) a MiPyMes de la región. Los negocios abarcan rubros alimenticios (cafeterías, pastelería, pizzería, empanadas, productos del mar), comercio minorista sostenible y hotelería, con grados de consumo desde <strong>Ligero</strong> a <strong>Intensivo</strong>.</p><h3 id="389938ab-0205-80d0-8a74-dbcf6279c25c" class="" dir="auto">Informes Analizados</h3><table id="389938ab-0205-80df-844a-e459f9715a8d" class="simple-table" dir="ltr"><thead class="simple-table-header"><tr id="389938ab-0205-80bb-9934-f570dc07fc59" dir="ltr"><th id="V_q}" class="simple-table-header-color simple-table-header">#</th><th id="wDsL" class="simple-table-header-color simple-table-header">Negocio</th><th id="_qFE" class="simple-table-header-color simple-table-header">Rubro</th><th id="ig^V" class="simple-table-header-color simple-table-header">Titular</th><th id="iEu\" class="simple-table-header-color simple-table-header">Consumo</th></tr></thead><tbody><tr id="389938ab-0205-80ac-bf84-ed487f09a37a" dir="ltr"><td id="V_q}" class="">1</td><td id="wDsL" class="">Le Flaneur Spa</td><td id="_qFE" class="">Cafetería</td><td id="ig^V" class="">Vincent Bellegueulle</td><td id="iEu\" class="">Moderado</td></tr><tr id="389938ab-0205-80e8-9147-c9881a1168d9" dir="ltr"><td id="V_q}" class="">2</td><td id="wDsL" class="">Vijon Pastelería</td><td id="_qFE" class="">Pastelería / Fábrica alimentos</td><td id="ig^V" class="">Victor Anibal Farias Jil</td><td id="iEu\" class="">Intensivo</td></tr><tr id="389938ab-0205-80f8-b48d-d25c104876fc" dir="ltr"><td id="V_q}" class="">3</td><td id="wDsL" class="">Stefymar</td><td id="_qFE" class="">Productos del mar</td><td id="ig^V" class="">(no especificado)</td><td id="iEu\" class="">Intensivo</td></tr><tr id="389938ab-0205-80c0-85eb-fca2c64fcf0d" dir="ltr"><td id="V_q}" class="">4</td><td id="wDsL" class="">Pizzería Plaggio</td><td id="_qFE" class="">Pizzería artesanal</td><td id="ig^V" class="">Sergio Córdova Vargas</td><td id="iEu\" class="">Moderado</td></tr><tr id="389938ab-0205-80c3-80d2-c081bf02b4c2" dir="ltr"><td id="V_q}" class="">5</td><td id="wDsL" class="">Café Colores</td><td id="_qFE" class="">Cafetería</td><td id="ig^V" class="">Carol Navarro</td><td id="iEu\" class="">Moderado</td></tr><tr id="389938ab-0205-8040-8532-c66fa91566f0" dir="ltr"><td id="V_q}" class="">6</td><td id="wDsL" class="">Hotel Asturias</td><td id="_qFE" class="">Hotelería</td><td id="ig^V" class="">Carolina Rojas</td><td id="iEu\" class="">Relevante</td></tr><tr id="389938ab-0205-80c7-a5cb-ee6935e4c2ca" dir="ltr"><td id="V_q}" class="">7</td><td id="wDsL" class="">EcoSuper</td><td id="_qFE" class="">Comercio minorista sostenible</td><td id="ig^V" class="">Susan Godoy</td><td id="iEu\" class="">Ligero</td></tr><tr id="389938ab-0205-80dc-b623-c2dfa6ca1197" dir="ltr"><td id="V_q}" class="">8</td><td id="wDsL" class="">Las Deliciosas</td><td id="_qFE" class="">Fábrica de empanadas</td><td id="ig^V" class="">Nicolás Lagomarsino</td><td id="iEu\" class="">Intensivo</td></tr></tbody></table><h3 id="389938ab-0205-808e-8bf6-f269eff900f1" class="" dir="auto">Estructura Común de los Informes</h3><ol type="1" id="389938ab-0205-8061-8c81-f52901ae825b" class="numbered-list" start="1" dir="auto"><li>Acta de seguimiento con datos del contacto y negocio</li></ol><ol type="1" id="389938ab-0205-80f2-97ec-f474da7da712" class="numbered-list" start="2" dir="auto"><li>Descripción del perfil energético (procesos, equipos, fuentes)</li></ol><ol type="1" id="389938ab-0205-804f-849b-d19c7d76466f" class="numbered-list" start="3" dir="auto"><li><strong>Hallazgos</strong> por servicio (refrigeración, climatización, gestión, tarifa, etc.)</li></ol><ol type="1" id="389938ab-0205-804f-970a-e01ffe8b25e7" class="numbered-list" start="4" dir="auto"><li><strong>Recomendaciones</strong> con medidas específicas por hallazgo</li></ol><ol type="1" id="389938ab-0205-8025-92ff-cb4037452c77" class="numbered-list" start="5" dir="auto"><li>Temas adicionales y acuerdos de colaboración</li></ol><ol type="1" id="389938ab-0205-8010-bf89-f0fedf0828ac" class="numbered-list" start="6" dir="auto"><li>Información de utilidad (instaladoras SEC, proveedores, herramientas públicas)</li></ol><ol type="1" id="389938ab-0205-804b-b0a3-db5365c1b4af" class="numbered-list" start="7" dir="auto"><li>Firma del analista y datos de contacto</li></ol><hr id="389938ab-0205-8085-855a-f56fb137bd81" dir="auto"/><h2 id="389938ab-0205-800b-a17f-d1ef2bd7a086" class="" dir="auto">Listado Tipificado de Hallazgos</h2><h3 id="389938ab-0205-8082-b982-f89133bcf316" class="" dir="auto">H1. Uso inadecuado de equipos de refrigeración</h3><table id="389938ab-0205-8055-afa6-ccad7251e576" class="simple-table" dir="ltr"><thead class="simple-table-header"><tr id="389938ab-0205-80dd-8c09-c5e6949522e6" dir="ltr"><th id="uzRb" class="simple-table-header-color simple-table-header">Campo</th><th id="\zyI" class="simple-table-header-color simple-table-header">Detalle</th></tr></thead><tbody><tr id="389938ab-0205-80d8-9ca6-fa81f60d2803" dir="ltr"><td id="uzRb" class=""><strong>Descripción</strong></td><td id="\zyI" class="">Uso de vitrinas refrigeradas, mesones refrigerados o equipos de exhibición como almacenamiento prolongado, cuando están diseñados para exhibición/venta de corto plazo. Genera sobreconsumo por mayor intercambio térmico, menor hermeticidad y aperturas frecuentes.</td></tr><tr id="389938ab-0205-8006-9ee6-eb40a74b8d70" dir="ltr"><td id="uzRb" class=""><strong>Frecuencia</strong></td><td id="\zyI" class="">Muy Alta (6 de 8 informes)</td></tr><tr id="389938ab-0205-80cf-9bd1-fb3d09e7c20b" dir="ltr"><td id="uzRb" class=""><strong>Rubros</strong></td><td id="\zyI" class="">Cafeterías, pastelería, comercio, pizzería</td></tr><tr id="389938ab-0205-80dd-8536-d1a8b0c1eeb1" dir="ltr"><td id="uzRb" class=""><strong>Ejemplos</strong></td><td id="\zyI" class="">Café Colores (mesón refrigerado como almacén), EcoSuper (vitrinas para almacenamiento prolongado), Le Flaneur (vitrinas como almacenamiento permanente)</td></tr><tr id="389938ab-0205-805e-8721-e62192024065" dir="ltr"><td id="uzRb" class=""><strong>Severidad</strong></td><td id="\zyI" class="">Alta — impacto directo en consumo base 24/7</td></tr></tbody></table><h3 id="389938ab-0205-801b-a0f5-f95d41d373f6" class="" dir="auto">H2. Ausencia de gestión energética formal</h3><table id="389938ab-0205-8061-a75f-e990c66a03af" class="simple-table" dir="ltr"><thead class="simple-table-header"><tr id="389938ab-0205-80af-8123-ce0e0053a6f4" dir="ltr"><th id="|;q\" class="simple-table-header-color simple-table-header">Campo</th><th id="=YaR" class="simple-table-header-color simple-table-header">Detalle</th></tr></thead><tbody><tr id="389938ab-0205-8020-b148-d7c740ded49a" dir="ltr"><td id="|;q\" class=""><strong>Descripción</strong></td><td id="=YaR" class="">No existe un sistema estructurado de gestión de la energía, responsable designado, indicadores clave (KPIs), línea base ni monitoreo sistemático. Las acciones son esporádicas y reactivas.</td></tr><tr id="389938ab-0205-80a6-b4be-fd415c29fa4d" dir="ltr"><td id="|;q\" class=""><strong>Frecuencia</strong></td><td id="=YaR" class="">Muy Alta (7 de 8 informes)</td></tr><tr id="389938ab-0205-8066-a64a-d573b14b7bbc" dir="ltr"><td id="|;q\" class=""><strong>Rubros</strong></td><td id="=YaR" class="">Todos</td></tr><tr id="389938ab-0205-80df-8b59-c67525e85a77" dir="ltr"><td id="|;q\" class=""><strong>Ejemplos</strong></td><td id="=YaR" class="">Stefymar, Las Deliciosas, Vijon Pastelería, Café Colores</td></tr><tr id="389938ab-0205-80b5-b303-e150ad5710b7" dir="ltr"><td id="|;q\" class=""><strong>Severidad</strong></td><td id="=YaR" class="">Alta — limita la capacidad de mejora continua</td></tr></tbody></table><h3 id="389938ab-0205-8018-8d61-d1f461e61a84" class="" dir="auto">H3. Tarifa eléctrica inadecuada para el perfil de consumo</h3><table id="389938ab-0205-8034-8b1c-e2f21a953dbd" class="simple-table" dir="ltr"><thead class="simple-table-header"><tr id="389938ab-0205-809c-9269-d74c3c7f21c6" dir="ltr"><th id="aFWB" class="simple-table-header-color simple-table-header">Campo</th><th id="Y&lt;k]" class="simple-table-header-color simple-table-header" style="width:460px">Detalle</th></tr></thead><tbody><tr id="389938ab-0205-8036-9c06-d352ad70d20e" dir="ltr"><td id="aFWB" class=""><strong>Descripción</strong></td><td id="Y&lt;k]" class="" style="width:460px">Negocios con consumo productivo relevante (fábricas, restaurantes) que mantienen tarifa BT1 (residencial/domiciliaria), sin discriminación horaria ni gestión de demanda.</td></tr><tr id="389938ab-0205-80fc-8f9d-f1c273f78e93" dir="ltr"><td id="aFWB" class=""><strong>Frecuencia</strong></td><td id="Y&lt;k]" class="" style="width:460px">Media (3 de 8 informes)</td></tr><tr id="389938ab-0205-808e-a4c8-f47687dadefa" dir="ltr"><td id="aFWB" class=""><strong>Rubros</strong></td><td id="Y&lt;k]" class="" style="width:460px">Pastelería, empanadas (fábricas de alimentos)</td></tr><tr id="389938ab-0205-8052-a301-fab5a449477a" dir="ltr"><td id="aFWB" class=""><strong>Ejemplos</strong></td><td id="Y&lt;k]" class="" style="width:460px">Vijon Pastelería (BT1A para fábrica + 2 viviendas), Las Deliciosas (BT1A con 2.209 kWh/mes en restaurant)</td></tr><tr id="389938ab-0205-80ff-b315-f145740f9499" dir="ltr"><td id="aFWB" class=""><strong>Severidad</strong></td><td id="Y&lt;k]" class="" style="width:460px">Alta — impacto económico directo en facturación</td></tr></tbody></table><h3 id="389938ab-0205-80a6-94be-e3f02a2bdd59" class="" dir="auto">H4. Bajo factor de potencia con penalización económica</h3><table id="389938ab-0205-80b8-b1fa-fa1406bf16f4" class="simple-table" dir="ltr"><thead class="simple-table-header"><tr id="389938ab-0205-8051-b717-f7205f23c2cd" dir="ltr"><th id="aqYL" class="simple-table-header-color simple-table-header">Campo</th><th id="d&gt;YB" class="simple-table-header-color simple-table-header" style="width:471px">Detalle</th></tr></thead><tbody><tr id="389938ab-0205-806e-bb75-ecf4d8db57c1" dir="ltr"><td id="aqYL" class=""><strong>Descripción</strong></td><td id="d&gt;YB" class="" style="width:471px">Presencia de potencia reactiva elevada por motores, compresores y equipos inductivos, generando cargos adicionales en facturación eléctrica (ej: 6,4% de penalización en Las Deliciosas).</td></tr><tr id="389938ab-0205-80cc-a25f-c7a73c744adb" dir="ltr"><td id="aqYL" class=""><strong>Frecuencia</strong></td><td id="d&gt;YB" class="" style="width:471px">Baja (1 de 8 informes)</td></tr><tr id="389938ab-0205-8001-84f2-f8989493a903" dir="ltr"><td id="aqYL" class=""><strong>Rubros</strong></td><td id="d&gt;YB" class="" style="width:471px">Fábrica de alimentos con refrigeración intensiva</td></tr><tr id="389938ab-0205-8041-82c8-e4759e287b63" dir="ltr"><td id="aqYL" class=""><strong>Ejemplos</strong></td><td id="d&gt;YB" class="" style="width:471px">Las Deliciosas (penalización 6,4% en cuenta BT3PPP)</td></tr><tr id="389938ab-0205-809b-badf-f8794ce74e22" dir="ltr"><td id="aqYL" class=""><strong>Severidad</strong></td><td id="d&gt;YB" class="" style="width:471px">Media — evitable con inversión moderada</td></tr></tbody></table><h3 id="389938ab-0205-80b6-a5b1-e4720030b02e" class="" dir="auto">H5. Carga térmica interna por fuentes de calor no gestionadas</h3><table id="389938ab-0205-80db-920d-f9c11653abec" class="simple-table" dir="ltr"><thead class="simple-table-header"><tr id="389938ab-0205-8007-9379-c813a068203b" dir="ltr"><th id="Mj=A" class="simple-table-header-color simple-table-header">Campo</th><th id="YvEy" class="simple-table-header-color simple-table-header">Detalle</th></tr></thead><tbody><tr id="389938ab-0205-80ba-8024-de76a8152c73" dir="ltr"><td id="Mj=A" class=""><strong>Descripción</strong></td><td id="YvEy" class="">Hornos (a leña, convección) que generan sobrecalentamiento del local, aumentando demanda de climatización en verano. Aperturas frecuentes de puertas de hornos que provocan pérdidas térmicas significativas.</td></tr><tr id="389938ab-0205-8072-8837-db3a584e9633" dir="ltr"><td id="Mj=A" class=""><strong>Frecuencia</strong></td><td id="YvEy" class="">Media (3 de 8 informes)</td></tr><tr id="389938ab-0205-80dc-99a2-fe9b417edc70" dir="ltr"><td id="Mj=A" class=""><strong>Rubros</strong></td><td id="YvEy" class="">Pizzería, cafeterías, pastelería</td></tr><tr id="389938ab-0205-803f-8240-cbde320e97cd" dir="ltr"><td id="Mj=A" class=""><strong>Ejemplos</strong></td><td id="YvEy" class="">Pizzería Plaggio (horno a leña + A/C para compensar), Café Colores (horno convección con aperturas frecuentes)</td></tr><tr id="389938ab-0205-8026-8215-e9e3e6ddee5b" dir="ltr"><td id="Mj=A" class=""><strong>Severidad</strong></td><td id="YvEy" class="">Media — afecta confort y consumo estacional</td></tr></tbody></table><h3 id="389938ab-0205-8046-8af7-e7d4c46349b5" class="" dir="auto">H6. Deficiencias en aislamiento térmico de la envolvente</h3><table id="389938ab-0205-80a3-a7f4-c49e54f9490d" class="simple-table" dir="ltr"><thead class="simple-table-header"><tr id="389938ab-0205-80f5-b88d-f20394f0aedb" dir="ltr"><th id="]&lt;MD" class="simple-table-header-color simple-table-header">Campo</th><th id="|uVu" class="simple-table-header-color simple-table-header">Detalle</th></tr></thead><tbody><tr id="389938ab-0205-80b6-86ed-f7dfb34eda71" dir="ltr"><td id="]&lt;MD" class=""><strong>Descripción</strong></td><td id="|uVu" class="">Fugas de aire por puertas y ventanas sin sellos, ventanales sin doble vidrio ni control solar, pérdidas térmicas que afectan climatización.</td></tr><tr id="389938ab-0205-802b-924c-c492ed0c05d4" dir="ltr"><td id="]&lt;MD" class=""><strong>Frecuencia</strong></td><td id="|uVu" class="">Media (4 de 8 informes)</td></tr><tr id="389938ab-0205-80b7-8cc1-db8193563a1c" dir="ltr"><td id="]&lt;MD" class=""><strong>Rubros</strong></td><td id="|uVu" class="">Cafeterías, comercio, pizzería, hotelería</td></tr><tr id="389938ab-0205-80df-9f24-f8262d95964c" dir="ltr"><td id="]&lt;MD" class=""><strong>Ejemplos</strong></td><td id="|uVu" class="">Le Flaneur (vanos expuestos, ventanales sin DVH), EcoSuper (medidas parciales), Pizzería Plaggio</td></tr><tr id="389938ab-0205-8094-becb-d23bc4daecc1" dir="ltr"><td id="]&lt;MD" class=""><strong>Severidad</strong></td><td id="|uVu" class="">Media — acumulable, afecta climatización</td></tr></tbody></table><h3 id="389938ab-0205-8057-9fd8-c23b37167f46" class="" dir="auto">H7. Sin integración de energías renovables</h3><table id="389938ab-0205-8090-ac48-f256ba50548f" class="simple-table" dir="ltr"><thead class="simple-table-header"><tr id="389938ab-0205-80b9-9d11-d8bf50cf8d73" dir="ltr"><th id="|Kw]" class="simple-table-header-color simple-table-header">Campo</th><th id="@LQz" class="simple-table-header-color simple-table-header">Detalle</th></tr></thead><tbody><tr id="389938ab-0205-807e-9578-c94b743061b6" dir="ltr"><td id="|Kw]" class=""><strong>Descripción</strong></td><td id="@LQz" class="">Dependencia total de fuentes fósiles/convencionales, sin evaluación de ERNC (fotovoltaica, solar térmica) para autoconsumo.</td></tr><tr id="389938ab-0205-8013-9497-ea2e07ae2b6c" dir="ltr"><td id="|Kw]" class=""><strong>Frecuencia</strong></td><td id="@LQz" class="">Media (3 de 8 informes explícitamente)</td></tr><tr id="389938ab-0205-8034-bd9a-c657a77e3758" dir="ltr"><td id="|Kw]" class=""><strong>Rubros</strong></td><td id="@LQz" class="">Pastelería, empanadas (fábricas), hotelería</td></tr><tr id="389938ab-0205-8010-90d5-c68b542db332" dir="ltr"><td id="|Kw]" class=""><strong>Ejemplos</strong></td><td id="@LQz" class="">Vijon Pastelería (cliente mayoritario exige sostenibilidad), Hotel Asturias (cubiertas disponibles para FV)</td></tr><tr id="389938ab-0205-8023-be94-e7e3f4d0edad" dir="ltr"><td id="|Kw]" class=""><strong>Severidad</strong></td><td id="@LQz" class="">Media — brecha estratégica de sostenibilidad</td></tr></tbody></table><h3 id="389938ab-0205-809b-a3ec-df3615150601" class="" dir="auto">H8. Grupo electrógeno no operativo</h3><table id="389938ab-0205-800e-814d-d42fb44bb09f" class="simple-table" dir="ltr"><thead class="simple-table-header"><tr id="389938ab-0205-8003-a133-f6a902097aa6" dir="ltr"><th id="Oaxt" class="simple-table-header-color simple-table-header">Campo</th><th id="O;rX" class="simple-table-header-color simple-table-header">Detalle</th></tr></thead><tbody><tr id="389938ab-0205-8031-8cf9-de6a608931e0" dir="ltr"><td id="Oaxt" class=""><strong>Descripción</strong></td><td id="O;rX" class="">Equipo de respaldo instalado pero sin conexión ni puesta en marcha, exponiendo la operación a riesgos ante cortes de suministro eléctrico.</td></tr><tr id="389938ab-0205-80cf-afbe-e25f2af31b03" dir="ltr"><td id="Oaxt" class=""><strong>Frecuencia</strong></td><td id="O;rX" class="">Baja (1 de 8 informes)</td></tr><tr id="389938ab-0205-80fc-986b-ff829e434f54" dir="ltr"><td id="Oaxt" class=""><strong>Rubros</strong></td><td id="O;rX" class="">Productos del mar</td></tr><tr id="389938ab-0205-8021-9911-defe366e21e8" dir="ltr"><td id="Oaxt" class=""><strong>Ejemplos</strong></td><td id="O;rX" class="">Stefymar (equipo nuevo sin conectar ni operativo)</td></tr><tr id="389938ab-0205-807a-b7bb-e673ee6dad77" dir="ltr"><td id="Oaxt" class=""><strong>Severidad</strong></td><td id="O;rX" class="">Crítica — riesgo de interrupción de procesos y pérdidas</td></tr></tbody></table><h3 id="389938ab-0205-80ed-a225-f78803ff4f56" class="" dir="auto">H9. Cadena de frío sin control documentado</h3><table id="389938ab-0205-8022-bbfc-ce49992d2608" class="simple-table" dir="ltr"><thead class="simple-table-header"><tr id="389938ab-0205-807c-9e44-c29effd7df9d" dir="ltr"><th id="cy?s" class="simple-table-header-color simple-table-header">Campo</th><th id="Z;Pz" class="simple-table-header-color simple-table-header">Detalle</th></tr></thead><tbody><tr id="389938ab-0205-80f5-b704-f72609dccb60" dir="ltr"><td id="cy?s" class=""><strong>Descripción</strong></td><td id="Z;Pz" class="">Gestión de refrigeración basada en experiencia del personal, sin registros formales de temperaturas, setpoints, ciclos de descongelamiento ni mantenimiento programado.</td></tr><tr id="389938ab-0205-8083-b6b8-d98138b941a4" dir="ltr"><td id="cy?s" class=""><strong>Frecuencia</strong></td><td id="Z;Pz" class="">Media (3 de 8 informes)</td></tr><tr id="389938ab-0205-80eb-a40a-c15bcb7de1c7" dir="ltr"><td id="cy?s" class=""><strong>Rubros</strong></td><td id="Z;Pz" class="">Pastelería, empanadas, productos del mar</td></tr><tr id="389938ab-0205-8064-a192-ee7087ee742e" dir="ltr"><td id="cy?s" class=""><strong>Ejemplos</strong></td><td id="Z;Pz" class="">Vijon Pastelería (dependencia de experiencia operativa), Las Deliciosas (termocupla sin ubicación conocida)</td></tr><tr id="389938ab-0205-80b2-9acc-df3cf49c7ea0" dir="ltr"><td id="cy?s" class=""><strong>Severidad</strong></td><td id="Z;Pz" class="">Media — riesgo de inocuidad e ineficiencia</td></tr></tbody></table><h3 id="389938ab-0205-80fe-b564-d72f7947bbe7" class="" dir="auto">H10. Calefacción con equipos individuales ineficientes</h3><table id="389938ab-0205-8078-9c28-e2dc2b62a517" class="simple-table" dir="ltr"><thead class="simple-table-header"><tr id="389938ab-0205-8026-80d8-f8b70cc45a89" dir="ltr"><th id="v|Sr" class="simple-table-header-color simple-table-header">Campo</th><th id="Ws=N" class="simple-table-header-color simple-table-header">Detalle</th></tr></thead><tbody><tr id="389938ab-0205-8027-ba84-f155e6109b50" dir="ltr"><td id="v|Sr" class=""><strong>Descripción</strong></td><td id="Ws=N" class="">Uso de calefactores halógenos/eléctricos portátiles como estrategia principal de climatización, sin sistema centralizado.</td></tr><tr id="389938ab-0205-80e9-92f4-d317924d712d" dir="ltr"><td id="v|Sr" class=""><strong>Frecuencia</strong></td><td id="Ws=N" class="">Baja (2 de 8 informes)</td></tr><tr id="389938ab-0205-80fe-932b-cd8cb3fe6b12" dir="ltr"><td id="v|Sr" class=""><strong>Rubros</strong></td><td id="Ws=N" class="">Hotelería, cafetería</td></tr><tr id="389938ab-0205-80cc-a067-e88e59eb38bf" dir="ltr"><td id="v|Sr" class=""><strong>Ejemplos</strong></td><td id="Ws=N" class="">Hotel Asturias (calefactores halógenos 2 kW), Café Colores (calefactor portátil)</td></tr><tr id="389938ab-0205-8021-8368-f7179545fb1c" dir="ltr"><td id="v|Sr" class=""><strong>Severidad</strong></td><td id="Ws=N" class="">Media — consumo elevado sin confort homogéneo</td></tr></tbody></table><hr id="389938ab-0205-80ba-bece-e0310f4180fa" dir="auto"/><h2 id="389938ab-0205-806f-bc0d-fe1e60ca549f" class="" dir="auto">Listado Tipificado de Recomendaciones</h2><h3 id="389938ab-0205-8093-b684-d607b915a09a" class="" dir="auto">R1. Gestión diferenciada de equipos de refrigeración</h3><table id="389938ab-0205-807c-a870-e2551ac314f1" class="simple-table" dir="ltr"><thead class="simple-table-header"><tr id="389938ab-0205-808c-96a3-e15b37c787a3" dir="ltr"><th id=":TgL" class="simple-table-header-color simple-table-header">Campo</th><th id="VvF=" class="simple-table-header-color simple-table-header">Detalle</th></tr></thead><tbody><tr id="389938ab-0205-809e-a473-c2e417cfd26d" dir="ltr"><td id=":TgL" class=""><strong>Acción</strong></td><td id="VvF=" class="">Definir criterio operativo claro: vitrinas refrigeradas para exhibición y venta inmediata; cámaras frigoríficas o refrigeradores cerrados para almacenamiento prolongado.</td></tr><tr id="389938ab-0205-800a-882a-e02e843c9d67" dir="ltr"><td id=":TgL" class=""><strong>Implementación</strong></td><td id="VvF=" class="">Protocolo interno escrito, rotulación de equipos, capacitación al personal, sistema FIFO de rotación.</td></tr><tr id="389938ab-0205-8093-ace5-cbe3935351e8" dir="ltr"><td id=":TgL" class=""><strong>Horizonte</strong></td><td id="VvF=" class="">Corto plazo (1-3 meses)</td></tr><tr id="389938ab-0205-8011-978c-e49fa9174154" dir="ltr"><td id=":TgL" class=""><strong>Impacto energético</strong></td><td id="VvF=" class="">Alto (reduce consumo base refrigeración)</td></tr><tr id="389938ab-0205-8087-9a2c-c516d97fab9a" dir="ltr"><td id=":TgL" class=""><strong>Costo estimado</strong></td><td id="VvF=" class="">Bajo (solo gestión y capacitación)</td></tr></tbody></table><h3 id="389938ab-0205-8067-b2b8-f39ff5fc1bcc" class="" dir="auto">R2. Profesionalización de la gestión energética</h3><table id="389938ab-0205-80c6-b625-cc893960a014" class="simple-table" dir="ltr"><thead class="simple-table-header"><tr id="389938ab-0205-800d-b28e-c8872ae9b94f" dir="ltr"><th id=":Bzp" class="simple-table-header-color simple-table-header">Campo</th><th id="\}Kw" class="simple-table-header-color simple-table-header">Detalle</th></tr></thead><tbody><tr id="389938ab-0205-80d1-8db6-fdf229217453" dir="ltr"><td id=":Bzp" class=""><strong>Acción</strong></td><td id="\}Kw" class="">Designar responsable energético (interno o externo), establecer línea base de consumo, definir KPIs (kWh/kg producto, kWh/mes, $/unidad), monitoreo periódico.</td></tr><tr id="389938ab-0205-8014-8b11-e8b8dbfb442a" dir="ltr"><td id=":Bzp" class=""><strong>Implementación</strong></td><td id="\}Kw" class="">Plan progresivo con herramientas gratuitas (Gestiona Energía MiPyME), Sello EE del Ministerio de Energía, guías de buenas prácticas. A mediano plazo: ISO 50001 simplificada.</td></tr><tr id="389938ab-0205-8073-9cce-cba86e824f31" dir="ltr"><td id=":Bzp" class=""><strong>Horizonte</strong></td><td id="\}Kw" class="">Corto a mediano plazo (3-12 meses)</td></tr><tr id="389938ab-0205-80cb-a1d2-f01f2b25cfa1" dir="ltr"><td id=":Bzp" class=""><strong>Impacto energético</strong></td><td id="\}Kw" class="">Alto (sostiene mejora continua)</td></tr><tr id="389938ab-0205-8049-be9b-c9a053b259cc" dir="ltr"><td id=":Bzp" class=""><strong>Costo estimado</strong></td><td id="\}Kw" class="">Medio (capacitación + horas dedicadas)</td></tr></tbody></table><h3 id="389938ab-0205-8077-8838-fef589bd5ebd" class="" dir="auto">R3. Corrección tarifaria y segregación de medidores</h3><table id="389938ab-0205-80c9-bf83-f936aef1ab88" class="simple-table" dir="ltr"><thead class="simple-table-header"><tr id="389938ab-0205-80f1-a95c-e7f2e811408c" dir="ltr"><th id="}QFl" class="simple-table-header-color simple-table-header">Campo</th><th id="c]Gh" class="simple-table-header-color simple-table-header">Detalle</th></tr></thead><tbody><tr id="389938ab-0205-8010-a8e3-e9ff4d33c9fc" dir="ltr"><td id="}QFl" class=""><strong>Acción</strong></td><td id="c]Gh" class="">Evaluar cambio a tarifa BT4.3 o AT4.3 según perfil de consumo y demanda. Separar medidores para uso productivo vs. residencial/administrativo para evitar subsidios cruzados.</td></tr><tr id="389938ab-0205-808d-9d45-febcef19e329" dir="ltr"><td id="}QFl" class=""><strong>Implementación</strong></td><td id="c]Gh" class="">Instalador SEC certificado (clase D o E), análisis de facturación histórica (&gt;12 meses), curvas de carga.</td></tr><tr id="389938ab-0205-807c-b8b7-fb8bc3a223dc" dir="ltr"><td id="}QFl" class=""><strong>Horizonte</strong></td><td id="c]Gh" class="">Corto plazo (1-3 meses)</td></tr><tr id="389938ab-0205-806c-ae84-cd5169c7f2dd" dir="ltr"><td id="}QFl" class=""><strong>Impacto energético</strong></td><td id="c]Gh" class="">Medio (económico principalmente)</td></tr><tr id="389938ab-0205-80fb-88a1-c3a42b76d03f" dir="ltr"><td id="}QFl" class=""><strong>Costo estimado</strong></td><td id="c]Gh" class="">Medio (instalación de medidores + proyecto)</td></tr></tbody></table><h3 id="389938ab-0205-80c8-90a8-f2600b9797de" class="" dir="auto">R4. Compensación de energía reactiva</h3><table id="389938ab-0205-8010-b5f3-cdd468e7017e" class="simple-table" dir="ltr"><thead class="simple-table-header"><tr id="389938ab-0205-8041-ad29-d26d5addf07b" dir="ltr"><th id="]Vn^" class="simple-table-header-color simple-table-header">Campo</th><th id="wasu" class="simple-table-header-color simple-table-header">Detalle</th></tr></thead><tbody><tr id="389938ab-0205-8090-bd77-d56c1d46e3a8" dir="ltr"><td id="]Vn^" class=""><strong>Acción</strong></td><td id="wasu" class="">Instalar banco de condensadores automático dimensionado a la carga instalada para elevar el factor de potencia a &gt;0,95.</td></tr><tr id="389938ab-0205-8088-87c7-fb653289df54" dir="ltr"><td id="]Vn^" class=""><strong>Implementación</strong></td><td id="wasu" class="">Evaluación técnica por especialista SEC clase D o E, monitoreo periódico del FP. Revisar estado de motores y compresores.</td></tr><tr id="389938ab-0205-80b9-9cbe-fbae51883dca" dir="ltr"><td id="]Vn^" class=""><strong>Horizonte</strong></td><td id="wasu" class="">Corto plazo (1-3 meses)</td></tr><tr id="389938ab-0205-808b-9814-f598332019b2" dir="ltr"><td id="]Vn^" class=""><strong>Impacto energético</strong></td><td id="wasu" class="">Medio (elimina penalizaciones económicas)</td></tr><tr id="389938ab-0205-80a8-b52d-c16834dd1380" dir="ltr"><td id="]Vn^" class=""><strong>Costo estimado</strong></td><td id="wasu" class="">Medio</td></tr></tbody></table><h3 id="389938ab-0205-80f3-a806-f9b2b5f764b6" class="" dir="auto">R5. Optimización térmica de hornos y climatización</h3><table id="389938ab-0205-8007-b768-e036e88f4e63" class="simple-table" dir="ltr"><thead class="simple-table-header"><tr id="389938ab-0205-80a6-8806-c389739755ca" dir="ltr"><th id="WhFV" class="simple-table-header-color simple-table-header">Campo</th><th id="rq|S" class="simple-table-header-color simple-table-header">Detalle</th></tr></thead><tbody><tr id="389938ab-0205-80da-83f3-ddf9d6ebb40d" dir="ltr"><td id="WhFV" class=""><strong>Acción</strong></td><td id="rq|S" class="">Programación eficiente de tandas (carga completa), precalentamientos controlados según especificaciones del fabricante, reducción de aperturas de puerta. Implementar sistema de extracción sobre horno a leña y aislamiento térmico alrededor.</td></tr><tr id="389938ab-0205-8038-a9df-ed2d04d59659" dir="ltr"><td id="WhFV" class=""><strong>Implementación</strong></td><td id="rq|S" class="">Protocolo de uso diario, campanas de alto rendimiento, barreras refractarias, planificación de producción en bloques horarios.</td></tr><tr id="389938ab-0205-8085-ba0c-e5560949979e" dir="ltr"><td id="WhFV" class=""><strong>Horizonte</strong></td><td id="rq|S" class="">Corto plazo (1-3 meses)</td></tr><tr id="389938ab-0205-80a5-981d-daa5c1dd75eb" dir="ltr"><td id="WhFV" class=""><strong>Impacto energético</strong></td><td id="rq|S" class="">Medio (reduce demanda de climatización)</td></tr><tr id="389938ab-0205-8033-a6ac-c7bbcd3a59a3" dir="ltr"><td id="WhFV" class=""><strong>Costo estimado</strong></td><td id="rq|S" class="">Bajo a Medio (según solución)</td></tr></tbody></table><h3 id="389938ab-0205-80e1-b6df-f82a4ab012b9" class="" dir="auto">R6. Mejoramiento de aislamiento térmico de la envolvente</h3><table id="389938ab-0205-80e1-8895-c6271645af8c" class="simple-table" dir="ltr"><thead class="simple-table-header"><tr id="389938ab-0205-80fd-8245-f68e32b1760c" dir="ltr"><th id="dYw{" class="simple-table-header-color simple-table-header">Campo</th><th id="jO=S" class="simple-table-header-color simple-table-header">Detalle</th></tr></thead><tbody><tr id="389938ab-0205-8038-b584-dbe43cbdfcf1" dir="ltr"><td id="dYw{" class=""><strong>Acción</strong></td><td id="jO=S" class="">Burletes perimetrales en puertas, cortinas térmicas, doble vidriado hermético (DVH), láminas de control solar, cortinas roller o persianas.</td></tr><tr id="389938ab-0205-80b4-b963-cfaa6010e5ed" dir="ltr"><td id="dYw{" class=""><strong>Implementación</strong></td><td id="jO=S" class="">Progresivo según presupuesto: priorizar sellos (bajo costo, impacto inmediato), luego DVH y láminas.</td></tr><tr id="389938ab-0205-802f-8e93-fa6d9f81e739" dir="ltr"><td id="dYw{" class=""><strong>Horizonte</strong></td><td id="jO=S" class="">Corto a mediano plazo (1-6 meses)</td></tr><tr id="389938ab-0205-802d-aa03-c6721e57b421" dir="ltr"><td id="dYw{" class=""><strong>Impacto energético</strong></td><td id="jO=S" class="">Medio (reduce pérdidas por infiltración)</td></tr><tr id="389938ab-0205-8056-be08-e874f269538b" dir="ltr"><td id="dYw{" class=""><strong>Costo estimado</strong></td><td id="jO=S" class="">Bajo (sellos) a Alto (DVH)</td></tr></tbody></table><h3 id="389938ab-0205-80d4-ace2-d63cb1d2cc56" class="" dir="auto">R7. Evaluación e incorporación de ERNC</h3><table id="389938ab-0205-8000-8b32-c243a05f0f8d" class="simple-table" dir="ltr"><thead class="simple-table-header"><tr id="389938ab-0205-80c0-9862-f73245206c43" dir="ltr"><th id=":V^=" class="simple-table-header-color simple-table-header">Campo</th><th id="yg\K" class="simple-table-header-color simple-table-header">Detalle</th></tr></thead><tbody><tr id="389938ab-0205-80c6-88d2-f1deb788d28f" dir="ltr"><td id=":V^=" class=""><strong>Acción</strong></td><td id="yg\K" class="">Estudio de factibilidad técnica para sistemas fotovoltaicos o solar térmico para autoconsumo, orientado a cubrir consumos base (refrigeración, iluminación, climatización).</td></tr><tr id="389938ab-0205-80e6-9f18-f9f8b8634e67" dir="ltr"><td id=":V^=" class=""><strong>Implementación</strong></td><td id="yg\K" class="">Dimensionamiento según demanda real, evaluar opciones modulares, utilizar Registro de Consultores. Integrar en estrategia comunicacional de sostenibilidad.</td></tr><tr id="389938ab-0205-801f-a146-efac8771e7f7" dir="ltr"><td id=":V^=" class=""><strong>Horizonte</strong></td><td id="yg\K" class="">Mediano plazo (6-12 meses)</td></tr><tr id="389938ab-0205-80e1-883a-cdbca5edf942" dir="ltr"><td id=":V^=" class=""><strong>Impacto energético</strong></td><td id="yg\K" class="">Medio (cobertura parcial pero visible)</td></tr><tr id="389938ab-0205-804d-bbc3-f00ef2ae3485" dir="ltr"><td id=":V^=" class=""><strong>Costo estimado</strong></td><td id="yg\K" class="">Medio a Alto</td></tr></tbody></table><h3 id="389938ab-0205-8084-a49e-e8ecd9982f85" class="" dir="auto">R8. Puesta en marcha de grupo electrógeno</h3><table id="389938ab-0205-805b-9b7c-f47126f2db63" class="simple-table" dir="ltr"><thead class="simple-table-header"><tr id="389938ab-0205-8056-8d29-ff46508429fa" dir="ltr"><th id="P|;d" class="simple-table-header-color simple-table-header">Campo</th><th id="wlYk" class="simple-table-header-color simple-table-header">Detalle</th></tr></thead><tbody><tr id="389938ab-0205-804b-a89b-e535543b44e2" dir="ltr"><td id="P|;d" class=""><strong>Acción</strong></td><td id="wlYk" class="">Conectar equipo mediante sistema de transferencia (manual/automático), verificar cumplimiento normativo SEC, programar pruebas de funcionamiento periódicas.</td></tr><tr id="389938ab-0205-80fc-a974-e4c2c6c1895d" dir="ltr"><td id="P|;d" class=""><strong>Implementación</strong></td><td id="wlYk" class="">Instalador SEC certificado, plan de mantención y pruebas mensuales.</td></tr><tr id="389938ab-0205-807b-8725-f8afe2bbcf13" dir="ltr"><td id="P|;d" class=""><strong>Horizonte</strong></td><td id="wlYk" class="">Inmediato (1 mes)</td></tr><tr id="389938ab-0205-80eb-bd5d-e749de4d1541" dir="ltr"><td id="P|;d" class=""><strong>Impacto energético</strong></td><td id="wlYk" class="">Crítico (continuidad operativa)</td></tr><tr id="389938ab-0205-8003-a779-edb435f0a390" dir="ltr"><td id="P|;d" class=""><strong>Costo estimado</strong></td><td id="wlYk" class="">Bajo (si el equipo ya existe)</td></tr></tbody></table><h3 id="389938ab-0205-805f-9f62-d45deb13747c" class="" dir="auto">R9. Control documentado de cadena de frío</h3><table id="389938ab-0205-8017-99c3-d74e69d65dbc" class="simple-table" dir="ltr"><thead class="simple-table-header"><tr id="389938ab-0205-806d-807b-eb6db9148a47" dir="ltr"><th id="YJwM" class="simple-table-header-color simple-table-header">Campo</th><th id="QBw}" class="simple-table-header-color simple-table-header">Detalle</th></tr></thead><tbody><tr id="389938ab-0205-80a3-9d6b-d691f209f027" dir="ltr"><td id="YJwM" class=""><strong>Acción</strong></td><td id="QBw}" class="">Registrar formalmente setpoints, temperaturas, ciclos de descongelamiento y mantenciones. Establecer protocolos diferenciados por tipo de cámara (alta rotación vs. baja rotación).</td></tr><tr id="389938ab-0205-80a3-a17a-d345ab503ae3" dir="ltr"><td id="YJwM" class=""><strong>Implementación</strong></td><td id="QBw}" class="">Registro manual o digital simple, capacitación estructurada del personal, dataloggers a mediano plazo.</td></tr><tr id="389938ab-0205-801b-83e9-de8ceab68ca8" dir="ltr"><td id="YJwM" class=""><strong>Horizonte</strong></td><td id="QBw}" class="">Corto plazo (1-3 meses)</td></tr><tr id="389938ab-0205-80b6-a34a-c3c0c01dfdc2" dir="ltr"><td id="YJwM" class=""><strong>Impacto energético</strong></td><td id="QBw}" class="">Medio (reduce sobreconsumo y riesgo de inocuidad)</td></tr><tr id="389938ab-0205-800e-91e3-c8776f4cc3f1" dir="ltr"><td id="YJwM" class=""><strong>Costo estimado</strong></td><td id="QBw}" class="">Bajo</td></tr></tbody></table><h3 id="389938ab-0205-808c-9fe5-c64faf41c51a" class="" dir="auto">R10. Programa de educación y sensibilización energética</h3><table id="389938ab-0205-8036-896d-dd456a17b42a" class="simple-table" dir="ltr"><thead class="simple-table-header"><tr id="389938ab-0205-80cb-a619-f65a9bf244fb" dir="ltr"><th id="XQmG" class="simple-table-header-color simple-table-header">Campo</th><th id="bbf:" class="simple-table-header-color simple-table-header">Detalle</th></tr></thead><tbody><tr id="389938ab-0205-8003-9172-d233fb8cac06" dir="ltr"><td id="XQmG" class=""><strong>Acción</strong></td><td id="bbf:" class="">Charlas periódicas de sensibilización, capacitación en buenas prácticas operativas (apertura de puertas, setpoints correctos, rotación FIFO, mantención básica), cultura organizacional sostenible.</td></tr><tr id="389938ab-0205-80dd-859f-d1e1cd377e59" dir="ltr"><td id="XQmG" class=""><strong>Implementación</strong></td><td id="bbf:" class="">Coordinación con CDN Sercotec y Seremi Energía. Planificar contenidos, responsables, calendarios y evaluación de impacto.</td></tr><tr id="389938ab-0205-80fd-96db-f0c0e6a73e44" dir="ltr"><td id="XQmG" class=""><strong>Horizonte</strong></td><td id="bbf:" class="">Corto plazo y permanente</td></tr><tr id="389938ab-0205-8027-9f74-d7926060669d" dir="ltr"><td id="XQmG" class=""><strong>Impacto energético</strong></td><td id="bbf:" class="">Medio (cambio cultural sostenido)</td></tr><tr id="389938ab-0205-80d0-a655-ed216299e13d" dir="ltr"><td id="XQmG" class=""><strong>Costo estimado</strong></td><td id="bbf:" class="">Bajo</td></tr></tbody></table><hr id="389938ab-0205-8001-aa9a-ff4d97f6166a" dir="auto"/><h2 id="389938ab-0205-8009-83e4-c90d3f62239f" class="" dir="auto">Matriz de Correspondencia Hallazgo ↔︎ Recomendación</h2><table id="389938ab-0205-803b-942a-f10a8eb53fa0" class="simple-table" dir="ltr"><thead class="simple-table-header"><tr id="389938ab-0205-8007-85bd-e89aae6fcee4" dir="ltr"><th id="rLV&gt;" class="simple-table-header-color simple-table-header">Hallazgo</th><th id="_EWR" class="simple-table-header-color simple-table-header">Recomendación Principal</th><th id="q{Bt" class="simple-table-header-color simple-table-header">Recomendación Complementaria</th></tr></thead><tbody><tr id="389938ab-0205-801c-8b2a-e6edc9ee6522" dir="ltr"><td id="rLV&gt;" class="">H1. Uso inadecuado de refrigeración</td><td id="_EWR" class="">R1. Gestión diferenciada</td><td id="q{Bt" class="">R10. Educación y sensibilización</td></tr><tr id="389938ab-0205-807d-bbbc-e115bd9d96a5" dir="ltr"><td id="rLV&gt;" class="">H2. Sin gestión energética formal</td><td id="_EWR" class="">R2. Profesionalización</td><td id="q{Bt" class="">R10. Educación</td></tr><tr id="389938ab-0205-8047-98f3-cb0b2ada0f6c" dir="ltr"><td id="rLV&gt;" class="">H3. Tarifa inadecuada</td><td id="_EWR" class="">R3. Corrección tarifaria</td><td id="q{Bt" class="">—</td></tr><tr id="389938ab-0205-809d-a423-d41a78d3699c" dir="ltr"><td id="rLV&gt;" class="">H4. Bajo factor de potencia</td><td id="_EWR" class="">R4. Compensación reactiva</td><td id="q{Bt" class="">R2. Monitoreo de KPIs</td></tr><tr id="389938ab-0205-80d0-a6cb-c40d14cdba39" dir="ltr"><td id="rLV&gt;" class="">H5. Carga térmica de hornos</td><td id="_EWR" class="">R5. Optimización térmica</td><td id="q{Bt" class="">R6. Aislamiento envolvente</td></tr><tr id="389938ab-0205-80c5-a3c7-c9e1570da433" dir="ltr"><td id="rLV&gt;" class="">H6. Deficiencias en aislamiento</td><td id="_EWR" class="">R6. Aislamiento térmico</td><td id="q{Bt" class="">R5. Extracción/ventilación</td></tr><tr id="389938ab-0205-8039-92d0-dab69b3d1d22" dir="ltr"><td id="rLV&gt;" class="">H7. Sin ERNC</td><td id="_EWR" class="">R7. Evaluación ERNC</td><td id="q{Bt" class="">R2. Estrategia sostenibilidad</td></tr><tr id="389938ab-0205-80cd-82cf-d1666f3a1ab9" dir="ltr"><td id="rLV&gt;" class="">H8. Grupo electrógeno no operativo</td><td id="_EWR" class="">R8. Puesta en marcha</td><td id="q{Bt" class="">—</td></tr><tr id="389938ab-0205-80d0-9fd2-ea013256181c" dir="ltr"><td id="rLV&gt;" class="">H9. Cadena de frío sin control</td><td id="_EWR" class="">R9. Control documentado</td><td id="q{Bt" class="">R1. Gestión diferenciada</td></tr><tr id="389938ab-0205-807e-9cd5-d4527fa05106" dir="ltr"><td id="rLV&gt;" class="">H10. Calefacción ineficiente</td><td id="_EWR" class="">R5. Climatización eficiente</td><td id="q{Bt" class="">R6. Aislamiento</td></tr></tbody></table><hr id="389938ab-0205-80c0-82bd-d4262d8270c9" dir="auto"/><h2 id="389938ab-0205-80b2-9661-e6a79b480116" class="" dir="auto">Recursos Públicos Clave para Reutilizar en Nuevas Mentorías</h2><table id="389938ab-0205-80c3-aeaa-e3d17b356c0e" class="simple-table" dir="ltr"><thead class="simple-table-header"><tr id="389938ab-0205-8065-abd8-d0b93b972054" dir="ltr"><th id="QOIi" class="simple-table-header-color simple-table-header">Recurso</th><th id="s&gt;Km" class="simple-table-header-color simple-table-header">Descripción</th><th id="gp}C" class="simple-table-header-color simple-table-header">Utilidad</th></tr></thead><tbody><tr id="389938ab-0205-8021-9a0b-e36eccabf185" dir="ltr"><td id="QOIi" class=""><strong>Instaladoras SEC Certificadas</strong></td><td id="s&gt;Km" class="">Red de mujeres instaladoras certificadas SEC para regularización eléctrica y gas, análisis tarifario y proyectos.</td><td id="gp}C" class="">Contacto directo para implementación de R3, R4, R8</td></tr><tr id="389938ab-0205-807e-9a94-d6bf99ab7d0e" dir="ltr"><td id="QOIi" class=""><strong>Portal SEC</strong></td><td id="s&gt;Km" class="">Listado oficial de instaladores e instaladoras certificados SEC.</td><td id="gp}C" class="">Verificación de profesionales habilitados</td></tr><tr id="389938ab-0205-804f-9923-e1c331f05ae9" dir="ltr"><td id="QOIi" class=""><strong>Proveedores Energéticos (pub)</strong></td><td id="s&gt;Km" class="">Listado referencial de proveedores de equipamiento renovable.</td><td id="gp}C" class="">Evaluación de alternativas para R7</td></tr><tr id="389938ab-0205-803e-8014-e6bc3b933cde" dir="ltr"><td id="QOIi" class=""><strong>Registro de Consultores</strong></td><td id="s&gt;Km" class="">Plataforma digital para conectar profesionales y empresas de eficiencia energética y ERNC.</td><td id="gp}C" class="">Apoyo externo para R2, R4, R7</td></tr><tr id="389938ab-0205-80c8-9182-d12fc2fed0df" dir="ltr"><td id="QOIi" class=""><strong>Biblioteca AgenciaSE</strong></td><td id="s&gt;Km" class="">Material bibliográfico sobre eficiencia energética y sistemas de gestión de la energía.</td><td id="gp}C" class="">Base documental para R2, R9</td></tr><tr id="389938ab-0205-80cf-9244-f99dabb3a912" dir="ltr"><td id="QOIi" class=""><strong>Sello EE</strong></td><td id="s&gt;Km" class="">Sello de Eficiencia Energética, gratuito para MiPyMes.</td><td id="gp}C" class="">Reconocimiento y hoja de ruta para R2</td></tr><tr id="389938ab-0205-80fa-b9f1-c726087abb92" dir="ltr"><td id="QOIi" class=""><strong>Gestiona Energía MiPyME</strong></td><td id="s&gt;Km" class="">Herramientas del Ministerio de Energía para estimar uso y generación de energía.</td><td id="gp}C" class="">Diagnóstico inicial y seguimiento de R2</td></tr><tr id="389938ab-0205-80ac-b6d1-d452c8213b71" dir="ltr"><td id="QOIi" class=""><strong>Calculadora de Ahorro</strong></td><td id="s&gt;Km" class="">Plataforma Gestiona Energía para primera aproximación de ahorros y beneficios.</td><td id="gp}C" class="">Sustento económico para recomendaciones</td></tr><tr id="389938ab-0205-8069-bce7-c4a74a8b23db" dir="ltr"><td id="QOIi" class=""><strong>Asistencia Técnica Gratuita</strong></td><td id="s&gt;Km" class="">Servicio de diagnóstico energético gratuito online.</td><td id="gp}C" class="">Puerta de entrada para nuevas mentorías</td></tr></tbody></table><hr id="389938ab-0205-80f5-b9f6-d85b3cb2308d" dir="auto"/><h2 id="389938ab-0205-805c-bf6c-fb9e0589ce83" class="" dir="auto">Conclusiones y Recomendaciones para Nuevas Mentorías</h2><ol type="1" id="389938ab-0205-806c-9dec-cadc5e84eae4" class="numbered-list" start="1" dir="auto"><li><strong>Estandarizar la pauta de diagnóstico</strong>: Los hallazgos H1 y H2 son transversales a casi todos los rubros; conviene incluirlos como preguntas obligatorias en toda mentoría inicial.</li></ol><ol type="1" id="389938ab-0205-808c-9490-d9e4adce4d58" class="numbered-list" start="2" dir="auto"><li><strong>Enfoque por clúster de rubro</strong>: Los negocios de alimentación (cafeterías, pastelerías, pizzerías, fábricas) comparten el mismo perfil de hallazgos (refrigeración, hornos, gestión). Se puede crear una mentoría base para cada clúster (alimentos, hotelería, comercio).</li></ol><ol type="1" id="389938ab-0205-8076-a0e9-ccf2f2df168a" class="numbered-list" start="3" dir="auto"><li><strong>Priorizar medidas de bajo costo</strong>: R1, R5, R6 (sellos), R9 y R10 son las de menor inversión y mayor impacto relativo; deben ser el punto de partida en toda mentoría.</li></ol><ol type="1" id="389938ab-0205-8030-b564-e38d9dbc169a" class="numbered-list" start="4" dir="auto"><li><strong>Aprovechar herramientas públicas</strong>: El ecosistema Sello EE, Gestiona Energía MiPyME y Asistencia Técnica Gratuita debe difundirse activamente como primer paso antes de recomendar inversiones mayores.</li></ol><ol type="1" id="389938ab-0205-8074-a45e-ceb91273984f" class="numbered-list" start="5" dir="auto"><li><strong>Incluir acuerdo de seguimiento</strong>: Todos los informes exitosos incluyen compromisos de colaboración (charlas, visitas técnicas). Formalizar estos acuerdos mejora la adherencia a las recomendaciones.</li></ol><hr id="389938ab-0205-80c5-a7ee-f2a81d33158b" dir="auto"/><p id="389938ab-0205-8028-926f-ddc90d4adef1" class="" dir="auto"><em>Documento elaborado el 24 de junio de 2026 a partir de 8 informes de mentoría energética de la Seremi de Energía Región de Valparaíso.Analista: Carlos Campos — ccamposn@minenergia.cl</em></p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>

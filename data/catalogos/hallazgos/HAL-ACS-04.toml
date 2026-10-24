@@ -1,0 +1,16 @@
+schema_version = 1
+id = "HAL-ACS-04"
+codigo = "ACS-04"
+titulo = "Percoladores y agua caliente operando fuera de horario"
+categoria = "acs"
+descripcion = "Percoladores, hervidores y urnas de agua caliente permanecen encendidos durante toda la jornada, incluso en períodos sin ventas, y en algunos casos no se apagan al cierre."
+justificacion = "Mantener agua caliente sin demanda consume energía de forma constante. Temporizadores y protocolos de apagado reducen el consumo evitable sin afectar la operación."
+impacto = "medio"
+energetico = "electricidad"
+recomendacion_id = "REC-ACS-04"
+tags = [ "acs", "percolador", "horario" ]
+activo = true
+origen = "catalogo_base"
+created_at = "2026-01-01T00:00:00.000Z"
+updated_at = "2026-01-01T00:00:00.000Z"
+

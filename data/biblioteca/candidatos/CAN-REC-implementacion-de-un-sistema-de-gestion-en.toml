@@ -1,0 +1,13 @@
+id = "CAN-REC-implementacion-de-un-sistema-de-gestion-en"
+tipo = "recomendacion"
+titulo = "Implementación de un sistema de gestión energética básica e indicadores de gestión"
+descripcion = "Se propone avanzar progresivamente hacia la implementación de un sistema básico de gestión energética adaptado a la escala de la empresa. En primer lugar, es fundamental formalizar la gestión mediante la designación de un responsable energético (aunque sea a tiempo parcial) que centralice la información, coordine acciones y establezca objetivos claros de reducción de consumo. Este rol puede ser asumido por un miembro del equipo con capacitación específica, evitando la necesidad de incorporar inicialmente un especialista externo permanente.\nEn segundo lugar, se recomienda establecer una línea base de consumo energético y definir indicadores simples, como consumo mensual de energía por unidad de producción (kWh/kg de producto elaborado). Esto permitirá monitorear el desempeño en el tiempo y evaluar el impacto de las medidas implementadas. Complementariamente, se sugiere llevar un registro sistemático de consumos eléctricos y de combustibles, idealmente con cierta desagregación por áreas o equipos críticos.\nA mediano plazo, se podría evaluar la adopción de estándares más formales como la norma ISO 50001 en una versión simplificada o adaptada, lo que permitiría consolidar una cultura energética organizacional, mejorar la eficiencia de manera sostenida y eventualmente reducir costos operacionales."
+categoria = "gestion_energetica"
+impacto = "alto"
+inversion = "baja"
+dificultad = "media"
+origen = "casos:Cafetería; casos:Pastelería"
+fuente_id = "FUE-vijon-pasteleria-382938ab02058081bcb6de5c89055ba"
+estado = "pendiente"
+created_at = "2026-10-24T17:57:09.304Z"
+

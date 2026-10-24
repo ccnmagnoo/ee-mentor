@@ -1,0 +1,259 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import Icon from '@/components/ui/Icon.astro';
+import PageHeader from '@/components/ui/PageHeader.astro';
+import ClasificacionBadge from '@/components/ui/ClasificacionBadge.astro';
+import { catalogos, empresas, informes, visitas } from '@/lib/repositories';
+import { evaluarSecciones, redondear } from '@/lib/scoring';
+import {
+  ENERGOS,
+  GRADOS_CONSUMO,
+  IMPACTOS,
+  INVERSIONES,
+  PRIORIDADES,
+} from '@/lib/schemas';
+import { formatCLP, formatFecha, formatNumero } from '@/lib/config';
+import { stripFrontmatter } from '@/lib/markdown';
+
+const { id, visitaId } = Astro.params;
+if (!id || !visitaId) return Astro.redirect('/empresas');
+
+const [empresa, visita] = await Promise.all([empresas.get(id), visitas.get(id, visitaId)]);
+if (!empresa || !visita) return Astro.redirect(`/empresas/${id}`);
+
+const [hallazgos, recomendaciones, markdown] = await Promise.all([
+  catalogos.listHallazgos(true),
+  catalogos.listRecomendaciones(true),
+  informes.read(id, visitaId),
+]);
+
+const hallazgoMap = new Map(hallazgos.map((item) => [item.id, item]));
+const recoMap = new Map(recomendaciones.map((item) => [item.id, item]));
+
+const hallazgosSeleccionados = visita.hallazgos
+  .map((seleccion) => ({ seleccion, hallazgo: hallazgoMap.get(seleccion.hallazgo_id) }))
+  .filter((item) => Boolean(item.hallazgo));
+
+const recomendacionesSeleccionadas = visita.recomendaciones
+  .map((seleccion) => ({ seleccion, reco: recoMap.get(seleccion.recomendacion_id) }))
+  .filter((item) => Boolean(item.reco));
+
+const evaluacion = evaluarSecciones(visita.secciones);
+const informeDisponible = Boolean(markdown && stripFrontmatter(markdown).trim());
+---
+
+<Layout title={`${visita.id} · ${empresa.nombre}`}>
+  <PageHeader
+    eyebrow={`Visita ${visita.id} · ${formatFecha(visita.fecha)}`}
+    title={`Diagnóstico de ${empresa.nombre}`}
+    subtitle={`Asesor: ${visita.asesor} · Grado de consumo: ${GRADOS_CONSUMO[visita.grado_consumo]}`}
+    breadcrumbs={[
+      { label: 'Empresas', href: '/empresas' },
+      { label: empresa.nombre, href: `/empresas/${empresa.id}` },
+      { label: visita.id },
+    ]}
+  >
+    <Fragment slot="actions">
+      <a href={`/empresas/${empresa.id}/visitas/${visita.id}/editar`} class="btn-secondary"><Icon name="edit" size={16} /> Editar</a>
+      <a href={`/empresas/${empresa.id}/visitas/${visita.id}/informe`} class="btn-primary"><Icon name="file" size={16} /> Ver informe</a>
+    </Fragment>
+  </PageHeader>
+
+  <div class="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
+    <div class="card card-pad">
+      <p class="text-xs font-semibold uppercase tracking-wide text-slate-500">Puntaje global</p>
+      <div class="mt-2 flex items-center gap-3">
+        <p class="kpi">{evaluacion.puntajeGlobal !== null ? redondear(evaluacion.puntajeGlobal, 1).toFixed(1) : '—'}<span class="text-base text-slate-400">/5</span></p>
+        <ClasificacionBadge etiqueta={evaluacion.clasificacionGlobal.etiqueta} tono={evaluacion.clasificacionGlobal.tono} />
+      </div>
+      <p class="mt-1 text-xs text-slate-500">{evaluacion.evaluadas} de {evaluacion.total} dimensiones evaluadas</p>
+    </div>
+    <div class="card card-pad">
+      <p class="text-xs font-semibold uppercase tracking-wide text-slate-500">Hallazgos</p>
+      <p class="kpi mt-2">{hallazgosSeleccionados.length}</p>
+      <p class="mt-1 text-xs text-slate-500">{hallazgosSeleccionados.filter((item) => item.hallazgo?.impacto === 'alto' || item.hallazgo?.impacto === 'critico').length} de impacto alto o crítico</p>
+    </div>
+    <div class="card card-pad">
+      <p class="text-xs font-semibold uppercase tracking-wide text-slate-500">Recomendaciones</p>
+      <p class="kpi mt-2">{recomendacionesSeleccionadas.length}</p>
+      <p class="mt-1 text-xs text-slate-500">{recomendacionesSeleccionadas.filter((item) => item.reco?.inversion === 'baja').length} de bajo costo</p>
+    </div>
+    <div class="card card-pad">
+      <p class="text-xs font-semibold uppercase tracking-wide text-slate-500">Próxima visita</p>
+      <p class="mt-2 text-lg font-semibold text-slate-900">{visita.proxima_visita ? formatFecha(visita.proxima_visita) : 'Por definir'}</p>
+      <p class="mt-1 text-xs text-slate-500">{visita.acuerdos.length} acuerdos registrados</p>
+    </div>
+  </div>
+
+  <div class="mt-5 grid gap-5 xl:grid-cols-3">
+    <section class="card card-pad xl:col-span-2">
+      <p class="eyebrow">Perfil energético</p>
+      <p class="mt-2 whitespace-pre-line text-sm leading-relaxed text-slate-600">
+        {visita.descripcion_perfil || 'Sin descripción de perfil registrada.'}
+      </p>
+
+      <div class="mt-5 grid gap-4 sm:grid-cols-2">
+        <div>
+          <p class="mb-2 text-xs font-semibold uppercase tracking-wide text-slate-500">Energéticos</p>
+          {visita.energeticos.length === 0 ? (
+            <p class="text-sm text-slate-400">No registrados.</p>
+          ) : (
+            <ul class="space-y-1.5 text-sm text-slate-700">
+              {visita.energeticos.map((energetico) => (
+                <li class="flex justify-between gap-3">
+                  <span>{ENERGOS[energetico.tipo]}</span>
+                  <span class="text-right text-xs text-slate-500">
+                    {energetico.consumo !== undefined ? formatNumero(energetico.consumo, energetico.unidad) : 's/i'}
+                    {energetico.costo !== undefined ? ` · ${formatCLP(energetico.costo)}` : ''}
+                  </span>
+                </li>
+              ))}
+            </ul>
+          )}
+        </div>
+        <div>
+          <p class="mb-2 text-xs font-semibold uppercase tracking-wide text-slate-500">Equipos registrados</p>
+          {visita.equipos.length === 0 ? (
+            <p class="text-sm text-slate-400">No registrados.</p>
+          ) : (
+            <ul class="space-y-1.5 text-sm text-slate-700">
+              {visita.equipos.slice(0, 6).map((equipo) => (
+                <li class="flex justify-between gap-3">
+                  <span>{equipo.nombre || 'Equipo'} <span class="text-xs text-slate-400">×{equipo.cantidad}</span></span>
+                  <span class="text-xs text-slate-500">{equipo.potencia_w ? `${formatNumero(equipo.potencia_w)} W` : ''}</span>
+                </li>
+              ))}
+            </ul>
+          )}
+        </div>
+      </div>
+    </section>
+
+    <section class="card card-pad">
+      <p class="eyebrow">Exportación</p>
+      <p class="mt-1 text-sm text-slate-500">Descarga el informe para editarlo o compartirlo.</p>
+      <div class="mt-4 space-y-2">
+        <a href={`/empresas/${empresa.id}/visitas/${visita.id}/informe`} class="btn-secondary w-full justify-start">
+          <Icon name="file" size={16} /> Vista del informe
+        </a>
+        <a href={`/api/empresas/${empresa.id}/visitas/${visita.id}/markdown`} class="btn-secondary w-full justify-start">
+          <Icon name="download" size={16} /> Descargar Markdown
+        </a>
+        <a href={`/api/empresas/${empresa.id}/visitas/${visita.id}/html`} target="_blank" rel="noopener" class="btn-secondary w-full justify-start">
+          <Icon name="external" size={16} /> HTML imprimible
+        </a>
+        <a href={`/empresas/${empresa.id}/visitas/${visita.id}/informe#imprimir`} class="btn-secondary w-full justify-start">
+          <Icon name="print" size={16} /> Imprimir / PDF
+        </a>
+      </div>
+      {!informeDisponible && (
+        <p class="mt-4 rounded-lg border border-amber-200 bg-amber-50 px-3 py-2 text-xs text-amber-800">
+          El informe aún no se ha generado. Ábrelo para generarlo automáticamente.
+        </p>
+      )}
+    </section>
+  </div>
+
+  <section class="card mt-5 overflow-hidden">
+    <div class="card-header">
+      <div>
+        <h2 class="text-sm font-semibold text-slate-900">Evaluación por sección</h2>
+        <p class="text-xs text-slate-500">Puntaje, clasificación y observaciones de terreno.</p>
+      </div>
+    </div>
+    <div class="table-wrap">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Dimensión</th>
+            <th class="text-center">Puntaje</th>
+            <th>Clasificación</th>
+            <th>Observaciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          {evaluacion.secciones.map((seccion) => (
+            <tr>
+              <td class="font-medium text-slate-800">{seccion.nombre}</td>
+              <td class="text-center">{seccion.aplica ? `${seccion.puntaje}/5` : '—'}</td>
+              <td><ClasificacionBadge etiqueta={seccion.clasificacion.etiqueta} tono={seccion.clasificacion.tono} /></td>
+              <td class="text-slate-600">{visita.secciones[seccion.key].observaciones || '—'}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <div class="mt-5 grid gap-5 xl:grid-cols-2">
+    <section class="card overflow-hidden">
+      <div class="card-header">
+        <h2 class="text-sm font-semibold text-slate-900">Hallazgos detectados</h2>
+        <span class="badge-neutral">{hallazgosSeleccionados.length}</span>
+      </div>
+      <div class="divide-y divide-slate-100">
+        {hallazgosSeleccionados.length === 0 && <p class="p-5 text-sm text-slate-500">No se registraron hallazgos.</p>}
+        {hallazgosSeleccionados.map(({ seleccion, hallazgo }) => (
+          <div class="p-4">
+            <div class="flex flex-wrap items-center gap-2">
+              <span class="font-mono text-[10px] font-semibold text-slate-400">{hallazgo!.codigo}</span>
+              <span class:list={['badge', hallazgo!.impacto === 'critico' ? 'badge-rose' : hallazgo!.impacto === 'alto' ? 'badge-orange' : 'badge-amber']}>
+                {IMPACTOS[hallazgo!.impacto]}
+              </span>
+            </div>
+            <p class="mt-1 text-sm font-semibold text-slate-800">{hallazgo!.titulo}</p>
+            <p class="mt-1 text-xs leading-relaxed text-slate-500">{hallazgo!.descripcion}</p>
+            {seleccion.justificacion && (
+              <p class="mt-2 rounded-md bg-slate-50 px-2.5 py-1.5 text-xs text-slate-600">
+                <span class="font-semibold text-slate-700">Evidencia:</span> {seleccion.justificacion}
+              </p>
+            )}
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <section class="card overflow-hidden">
+      <div class="card-header">
+        <h2 class="text-sm font-semibold text-slate-900">Recomendaciones</h2>
+        <span class="badge-neutral">{recomendacionesSeleccionadas.length}</span>
+      </div>
+      <div class="divide-y divide-slate-100">
+        {recomendacionesSeleccionadas.length === 0 && <p class="p-5 text-sm text-slate-500">No se seleccionaron recomendaciones.</p>}
+        {recomendacionesSeleccionadas.map(({ seleccion, reco }) => (
+          <div class="p-4">
+            <div class="flex flex-wrap items-center gap-2">
+              <span class="font-mono text-[10px] font-semibold text-slate-400">{reco!.codigo}</span>
+              <span class="badge-brand">Prioridad {PRIORIDADES[seleccion.prioridad ?? reco!.prioridad]}</span>
+              <span class="badge-neutral">{INVERSIONES[reco!.inversion]}</span>
+            </div>
+            <p class="mt-1 text-sm font-semibold text-slate-800">{reco!.titulo}</p>
+            <p class="mt-1 text-xs leading-relaxed text-slate-500">{reco!.descripcion}</p>
+            <p class="mt-2 text-xs text-slate-500">
+              <span class="font-semibold text-slate-700">Ahorro estimado:</span> {reco!.ahorro_estimado || 'Por cuantificar'} · {reco!.plazo}
+            </p>
+            {seleccion.observacion && (
+              <p class="mt-2 rounded-md bg-slate-50 px-2.5 py-1.5 text-xs text-slate-600">
+                <span class="font-semibold text-slate-700">Observación:</span> {seleccion.observacion}
+              </p>
+            )}
+          </div>
+        ))}
+      </div>
+    </section>
+  </div>
+
+  {visita.acuerdos.length > 0 && (
+    <section class="card mt-5 card-pad">
+      <p class="eyebrow">Acuerdos y próximos pasos</p>
+      <ul class="mt-3 space-y-2 text-sm text-slate-700">
+        {visita.acuerdos.map((acuerdo) => (
+          <li class="flex items-start gap-2">
+            <Icon name="check" size={15} class="mt-0.5 shrink-0 text-brand-600" />
+            <span>{acuerdo}</span>
+          </li>
+        ))}
+      </ul>
+    </section>
+  )}
+</Layout>

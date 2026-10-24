@@ -1,0 +1,129 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import Icon from '@/components/ui/Icon.astro';
+import PageHeader from '@/components/ui/PageHeader.astro';
+import { conocimiento } from '@/lib/repositories';
+import { readFuenteMarkdown } from '@/lib/storage/conocimiento';
+import { renderMarkdown } from '@/lib/markdown';
+import { CATEGORIAS, IMPACTOS, INVERSIONES } from '@/lib/schemas';
+import { formatFechaCorta } from '@/lib/config';
+
+const { id } = Astro.params;
+const fuente = id ? await conocimiento.getFuente(id) : null;
+if (!fuente) return Astro.redirect('/biblioteca');
+
+const [markdown, candidatos] = await Promise.all([
+  readFuenteMarkdown(fuente),
+  conocimiento.listCandidatos(),
+]);
+
+const propios = candidatos.filter((item) => item.fuente_id === fuente.id);
+const pendientes = propios.filter((item) => item.estado === 'pendiente').length;
+const html = markdown ? renderMarkdown(markdown) : '';
+---
+
+<Layout title={fuente.titulo} description={`Documento fuente ${fuente.id}`}>
+  <PageHeader
+    eyebrow={`Biblioteca · ${fuente.id}`}
+    title={fuente.titulo}
+    subtitle={`${fuente.rubro} · Importado el ${formatFechaCorta(fuente.imported_at.slice(0, 10))}`}
+    breadcrumbs={[
+      { label: 'Biblioteca', href: '/biblioteca' },
+      { label: fuente.titulo },
+    ]}
+  >
+    <Fragment slot="actions">
+      <a href="/biblioteca" class="btn-secondary"><Icon name="arrowLeft" size={16} /> Volver</a>
+      <a href="/biblioteca?estado=pendiente" class="btn-primary"><Icon name="sparkles" size={16} /> Revisar candidatos</a>
+    </Fragment>
+  </PageHeader>
+
+  <div class="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
+    <div class="card card-pad">
+      <p class="text-xs font-semibold uppercase tracking-wide text-slate-500">Rubro inferido</p>
+      <p class="mt-2 text-lg font-semibold text-slate-900">{fuente.rubro}</p>
+    </div>
+    <div class="card card-pad">
+      <p class="text-xs font-semibold uppercase tracking-wide text-slate-500">Fecha del documento</p>
+      <p class="mt-2 text-lg font-semibold text-slate-900">{fuente.fecha || 'No identificada'}</p>
+    </div>
+    <div class="card card-pad">
+      <p class="text-xs font-semibold uppercase tracking-wide text-slate-500">Contenido extraído</p>
+      <p class="mt-2 text-lg font-semibold text-slate-900">{fuente.hallazgos_count} hallazgos</p>
+      <p class="text-xs text-slate-500">{fuente.recomendaciones_count} recomendaciones</p>
+    </div>
+    <div class="card card-pad">
+      <p class="text-xs font-semibold uppercase tracking-wide text-slate-500">Candidatos</p>
+      <p class="mt-2 text-lg font-semibold text-slate-900">{propios.length}</p>
+      <p class="text-xs text-slate-500">{pendientes} pendientes de revisión</p>
+    </div>
+  </div>
+
+  <div class="mt-5 grid gap-5 xl:grid-cols-3">
+    <section class="card overflow-hidden xl:col-span-2">
+      <div class="card-header">
+        <div>
+          <h2 class="text-sm font-semibold text-slate-900">Documento procesado</h2>
+          <p class="text-xs text-slate-500">Versión Markdown con datos personales redactados.</p>
+        </div>
+        <span class="badge-neutral font-mono text-[10px]">hash {fuente.hash}</span>
+      </div>
+      {html ? (
+        <article class="report card-pad" set:html={html} />
+      ) : (
+        <div class="p-6">
+          <p class="text-sm text-slate-500">No fue posible leer el archivo Markdown asociado a esta fuente.</p>
+        </div>
+      )}
+    </section>
+
+    <section class="card self-start overflow-hidden">
+      <div class="card-header">
+        <div>
+          <h2 class="text-sm font-semibold text-slate-900">Candidatos del documento</h2>
+          <p class="text-xs text-slate-500">Apruébalos para incorporarlos al catálogo.</p>
+        </div>
+      </div>
+      {propios.length === 0 ? (
+        <p class="p-5 text-sm text-slate-500">Este documento no generó candidatos.</p>
+      ) : (
+        <div class="divide-y divide-slate-100">
+          {propios.map((candidato) => (
+            <div class="p-4">
+              <div class="flex flex-wrap items-center gap-1.5">
+                <span class:list={['badge', candidato.tipo === 'hallazgo' ? 'badge-amber' : 'badge-sky']}>
+                  {candidato.tipo === 'hallazgo' ? 'Hallazgo' : 'Recomendación'}
+                </span>
+                <span class="badge-neutral">{CATEGORIAS[candidato.categoria]}</span>
+              </div>
+              <p class="mt-1.5 text-sm font-medium text-slate-800">{candidato.titulo}</p>
+              <p class="mt-1 line-clamp-3 text-xs leading-relaxed text-slate-500">{candidato.descripcion}</p>
+              <p class="mt-1.5 text-[11px] text-slate-400">
+                {candidato.tipo === 'hallazgo' ? `Impacto ${IMPACTOS[candidato.impacto]}` : INVERSIONES[candidato.inversion]}
+              </p>
+
+              {candidato.estado === 'pendiente' ? (
+                <div class="mt-2 flex gap-2">
+                  <form action={`/api/biblioteca/candidatos/${candidato.id}`} method="post" data-api>
+                    <input type="hidden" name="accion" value="aprobar" />
+                    <button type="submit" class="btn-primary btn-sm"><Icon name="check" size={13} /> Aprobar</button>
+                  </form>
+                  <form action={`/api/biblioteca/candidatos/${candidato.id}`} method="post" data-api>
+                    <input type="hidden" name="accion" value="descartar" />
+                    <button type="submit" class="btn-secondary btn-sm"><Icon name="close" size={13} /> Descartar</button>
+                  </form>
+                </div>
+              ) : (
+                <p class="mt-2">
+                  <span class:list={['badge', candidato.estado === 'aprobado' ? 'badge-emerald' : 'badge-neutral']}>
+                    {candidato.estado === 'aprobado' ? 'Aprobado' : 'Descartado'}
+                  </span>
+                </p>
+              )}
+            </div>
+          ))}
+        </div>
+      )}
+    </section>
+  </div>
+</Layout>

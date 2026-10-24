@@ -1,0 +1,798 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Stefymar</title><meta name="data-notion-page-icon" content="🐟"/><link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20100%20100%22%3E%3Ctext%20y%3D%22.9em%22%20font-size%3D%2290%22%3E%F0%9F%90%9F%3C%2Ftext%3E%3C%2Fsvg%3E"/><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+/* Override strong tags inside headings to maintain consistent weight */
+h1 strong,
+h2 strong,
+h3 strong {
+	font-weight: 600;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 10px;
+	padding: 1rem;
+	/* Paint a complete callout box on every PDF page fragment. */
+	-webkit-box-decoration-break: clone;
+	box-decoration-break: clone;
+}
+
+/* For default-background callouts, render the border outline. */
+.callout.block-color-default_background {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+/*
+ * Toggles and callouts hold arbitrary content, so they can easily be taller
+ * than a page. They must stay breakable: avoiding breaks inside them makes
+ * Chromium push the whole block onto the next page, which leaves the previous
+ * page mostly empty before every long toggle.
+ */
+details,
+aside {
+	margin: 1.25em 0;
+}
+
+/* Keep a toggle's title on the same page as the start of its content. */
+summary {
+	page-break-after: avoid;
+	break-after: avoid;
+}
+
+/*
+ * Toggle headings render as <h1/h2/h3 style="display:inline-block"> inside
+ * <summary>. Without this reset, the heading's margin-top pushes it below the
+ * ::marker (▼), so the triangle and the title appear on separate lines.
+ */
+summary h1,
+summary h2,
+summary h3,
+summary h4 {
+	margin-top: 0;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+
+	table.collection-content {
+		width: 100%;
+		table-layout: fixed;
+	}
+
+	table.collection-content th,
+	table.collection-content td {
+		overflow-wrap: anywhere;
+	}
+
+	table.collection-content td > .user,
+	table.collection-content td > time {
+		white-space: pre-wrap;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content-wrapper {
+	overflow-x: auto;
+}
+
+@media only print {
+	.collection-content-wrapper {
+		overflow-x: visible;
+	}
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.collection-content td {
+	white-space: pre-wrap;
+	word-break: break-word;
+}
+
+.column-list {
+	display: flex;
+	gap: 46px;
+}
+
+.column {
+	min-width: 0;
+	overflow: hidden;
+}
+
+.column > *:first-child {
+	margin-top: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding-inline: 0.125rem;
+	padding-block: 0.375rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+table {
+	border-collapse: collapse;
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol.numbered-list.numbered-list-digits-2 {
+	padding-inline-start: 2em;
+}
+
+ol.numbered-list.numbered-list-digits-3plus {
+	padding-inline-start: 2.4em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+/*
+ * Render emoji icons using a ::before pseudo-element to keep the glyph
+ * out of the DOM textContent traversal. This avoids double-rendering icons
+ * in callouts and page titles.
+ * NOTE(slim/html-export-pseudo-icons): I can't tagref this because it will
+ * flag as a duplicate tag after codegen.
+ */
+.icon[data-emoji]::before {
+	content: attr(data-emoji);
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.callout img.notion-static-icon {
+	width: 1em;
+	height: 1em;
+}
+
+.callout p {
+	margin: 0;
+}
+
+.callout h1,
+.callout h2,
+.callout h3 {
+	margin: 0 0 0.6rem;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	margin-right: 0.4em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+blockquote.quote-large {
+	font-size: 1.25em;
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.tab {
+	margin: 1.25em 0;
+	padding-inline: 1rem;
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.highlight-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.highlight-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.highlight-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.highlight-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.highlight-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.highlight-default_background {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray_background {
+	background: rgba(42, 28, 0, 0.07);
+}
+.highlight-brown_background {
+	background: rgba(139, 46, 0, 0.086);
+}
+.highlight-orange_background {
+	background: rgba(224, 101, 1, 0.129);
+}
+.highlight-yellow_background {
+	background: rgba(211, 168, 0, 0.137);
+}
+.highlight-teal_background {
+	background: rgba(0, 100, 45, 0.09);
+}
+.highlight-blue_background {
+	background: rgba(0, 124, 215, 0.094);
+}
+.highlight-purple_background {
+	background: rgba(102, 0, 178, 0.078);
+}
+.highlight-pink_background {
+	background: rgba(197, 0, 93, 0.086);
+}
+.highlight-red_background {
+	background: rgba(223, 22, 0, 0.094);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.block-color-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.block-color-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.block-color-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.block-color-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.block-color-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(240, 239, 237, 1);
+}
+.block-color-brown_background {
+	background: rgba(245, 237, 233, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 235, 222, 1);
+}
+.block-color-yellow_background {
+	background: rgba(249, 243, 220, 1);
+}
+.block-color-teal_background {
+	background: rgba(232, 241, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(229, 242, 252, 1);
+}
+.block-color-purple_background {
+	background: rgba(243, 235, 249, 1);
+}
+.block-color-pink_background {
+	background: rgba(250, 233, 241, 1);
+}
+.block-color-red_background {
+	background: rgba(252, 233, 231, 1);
+}
+.select-value-color-default { background-color: rgba(42, 28, 0, 0.07); }
+.select-value-color-gray { background-color: rgba(28, 19, 1, 0.11); }
+.select-value-color-brown { background-color: rgba(127, 51, 0, 0.156); }
+.select-value-color-orange { background-color: rgba(196, 88, 0, 0.203); }
+.select-value-color-yellow { background-color: rgba(209, 156, 0, 0.282); }
+.select-value-color-green { background-color: rgba(0, 96, 38, 0.156); }
+.select-value-color-blue { background-color: rgba(0, 118, 217, 0.203); }
+.select-value-color-purple { background-color: rgba(92, 0, 163, 0.141); }
+.select-value-color-pink { background-color: rgba(183, 0, 78, 0.152); }
+.select-value-color-red { background-color: rgba(206, 24, 0, 0.164); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style><style>@import url('https://cdn.jsdelivr.net/npm/katex@0.16.25/dist/katex-swap.min.css')</style></head><body><article id="382938ab-0205-804e-85d2-cd29aa1f7eb1" class="page sans" data-notion-page-icon="🐟"><header><div class="page-header-icon undefined"><span class="icon" data-emoji="🐟"></span></div><h1 class="page-title" dir="auto">Stefymar</h1><p class="page-description" dir="auto"></p><table class="properties"><tbody><tr class="property-row property-row-created_time"><th><span class="icon property-icon"><img src="https://app.notion.com/icons/clock_gray.svg" style="width:14px;height:14px;display:block"/></span>Fecha</th><td><time datetime="2026-06-17T17:30">June 17, 2026 5:30 PM</time></td></tr><tr class="property-row property-row-select"><th><span class="icon property-icon"><img src="https://app.notion.com/icons/arrow-circle-down_gray.svg" style="width:14px;height:14px;display:block"/></span>Negocio</th><td><span class="selected-value select-value-color-purple">Alimentos</span></td></tr><tr class="property-row property-row-select"><th><span class="icon property-icon"><img src="https://app.notion.com/icons/arrow-circle-down_gray.svg" style="width:14px;height:14px;display:block"/></span>Grado consumos</th><td><span class="selected-value select-value-color-red">Intensivo</span></td></tr><tr class="property-row property-row-text"><th><span class="icon property-icon"><img src="https://app.notion.com/icons/description_gray.svg" style="width:14px;height:14px;display:block"/></span>Usuario</th><td>Edgardo Riedemann</td></tr><tr class="property-row property-row-phone_number"><th><span class="icon property-icon"><img src="https://app.notion.com/icons/phone-call_gray.svg" style="width:14px;height:14px;display:block"/></span>Teléfono</th><td><a href="+56982492127" class="url-value">+56982492127</a></td></tr><tr class="property-row property-row-email"><th><span class="icon property-icon"><img src="https://app.notion.com/icons/username_gray.svg" style="width:14px;height:14px;display:block"/></span>Correo electrónico</th><td><a href="eriedemann@stefymar.cl" class="url-value">eriedemann@stefymar.cl</a></td></tr><tr class="property-row property-row-select"><th><span class="icon property-icon"><img src="https://app.notion.com/icons/arrow-circle-down_gray.svg" style="width:14px;height:14px;display:block"/></span>Contraparte</th><td><span class="selected-value select-value-color-default">CND Sercotec Viña del Mar</span></td></tr></tbody></table></header><div class="page-body"><div id="d4f938ab-0205-82b6-86b6-013f5900af6c" class="column-list" data-notion-column-list="" dir="auto"><div id="412938ab-0205-82e0-ad59-8135bde43371" style="width:18.75%" class="column" data-notion-column-ratio="0.1875" dir="auto"><figure id="dc1938ab-0205-83c9-a0fb-011eb1cd89b1" class="image" data-notion-image="SEREMI_logo_SQR_Lowpoly.svg" dir="ltr"><a href="SEREMI_logo_SQR_Lowpoly.svg"><img style="width:120px" src="SEREMI_logo_SQR_Lowpoly.svg"/></a></figure></div><div id="86c938ab-0205-823e-bd37-81bdbc452c45" style="width:81.25%" class="column" data-notion-column-ratio="0.8125" dir="auto"><figure id="8ce938ab-0205-8214-858d-01826ce78cb3" class="image" data-notion-image="cropped-logo-cdn-2021.png" dir="ltr"><a href="cropped-logo-cdn-2021.png"><img style="width:192px" src="cropped-logo-cdn-2021.png"/></a></figure></div></div><h1 id="4cc938ab-0205-83d1-a5fc-017c2068684d" class="" dir="auto">ACTA de seguimiento Asesoría/Mentoría</h1><h2 id="d5b938ab-0205-8206-be59-017ba2d4f122" class="" dir="auto">Información del contacto y cliente (negocio)</h2><table id="524938ab-0205-82a6-a677-81ae758c44a3" class="simple-table" dir="ltr"><tbody><tr id="01e938ab-0205-833e-8fbc-8180c10a15c7" dir="ltr"><td id="jEMl" class="" style="width:235.66666666666666px">Nombre del contacto</td><td id="lP]a" class="" style="width:197.65625px">Claudia Piña Gutierrez</td><td id="xV[;" class="" style="width:152.65625px">RUT</td><td id="GpK:" class="">12.725.360-9</td></tr><tr id="c14938ab-0205-8254-879c-015cfe06046b" dir="ltr"><td id="jEMl" class="" style="width:235.66666666666666px">Nombre del negocio</td><td id="lP]a" class="" style="width:197.65625px">Stefymar</td><td id="xV[;" class="" style="width:152.65625px">ROL</td><td id="GpK:" class="">76264263-8</td></tr><tr id="6f7938ab-0205-8316-9587-8122ca46295c" dir="ltr"><td id="jEMl" class="" style="width:235.66666666666666px">Asesor asignado</td><td id="lP]a" class="" style="width:197.65625px">Carlos Campos N</td><td id="xV[;" class="" style="width:152.65625px">Servicio</td><td id="GpK:" class="">Seremi Energía</td></tr></tbody></table><h2 id="383938ab-0205-8065-b31e-c289d243e159" class="" dir="auto">Descripción</h2><p id="388938ab-0205-802d-a4a5-ea7fc4cb11cb" class="" dir="auto">Stefymar es una empresa del rubro de alimentos de mar con un perfil altamente intensivo en consumo energético, debido a la presencia de procesos de congelado, cámaras de refrigeración y túneles de enfriamiento, los cuales demandan operación continua y cargas eléctricas significativas asociadas principalmente a sistemas de frío industrial, compresores y ventilación forzada. Su patrón de consumo se caracteriza por altos niveles de demanda base y picos asociados a los ciclos de producción y mantención de la cadena de frío. La existencia de un grupo electrógeno sin conexión representa una oportunidad de mejora en términos de respaldo energético y gestión de costos ante contingencias o potenciales esquemas de optimización tarifaria. Asimismo, el uso de una tarifa BT1, no alineada con el perfil industrial de la empresa, implica ineficiencias económicas relevantes, al no reflejar adecuadamente la demanda ni incentivar una gestión activa de la energía. </p><p id="388938ab-0205-8009-86b4-fde7d64a6f69" class="" dir="auto">Los consumos eléctricos de Stefymar evidencia una operación intensiva en energía con dos suministros bajo tarifa BT1A en la distribuidora Chilquinta. El cliente presenta un consumo mensual significativo de 9.962 kWh en su principal medidor, asociado a un gasto nominal de $2.088.391 CLP, mientras que un segundo suministro registra 1.063 kWh con un costo de $766.724 CLP, lo que sugiere una estructura de costos poco eficiente, especialmente en este primer caso, donde el gasto por unidad de energía es considerablemente más alto.</p><p id="388938ab-0205-8050-ab63-fc2ca32806fc" class="" dir="auto">En este contexto, Stefymar presenta un alto potencial de eficiencia energética mediante optimización tarifaria, gestión de demanda y mejoras tecnológicas en sus sistemas de refrigeración.</p><h1 id="388938ab-0205-80b9-84c0-f15d02db8ccf" class="" dir="auto">Acometidas</h1><table id="388938ab-0205-80e9-af0e-fce474f9af34" class="simple-table" dir="ltr"><tbody><tr id="388938ab-0205-80e5-b5d2-f9ba1259c060" dir="ltr"><td id="UI[G" class="" style="width:138.65625px">Cliente</td><td id="Kmw|" class="" style="width:82.09375px">701011 - 7</td><td id="`_sH" class="" style="width:85.125px">BT1A</td><td id="FcYi" class="" style="width:82.09375px">618789-7</td><td id="q^EF" class="" style="width:51.28125px">BT1A</td></tr><tr id="388938ab-0205-8085-82ff-de5474b22fff" dir="ltr"><td id="UI[G" class="" style="width:138.65625px">Propietario</td><td id="Kmw|" class="" style="width:82.09375px">Empresa</td><td id="`_sH" class="" style="width:85.125px"></td><td id="FcYi" class="" style="width:82.09375px">Empresa</td><td id="q^EF" class="" style="width:51.28125px"></td></tr><tr id="388938ab-0205-80a9-a0de-fcc81c9f2bb0" dir="ltr"><td id="UI[G" class="" style="width:138.65625px">Distribuidora</td><td id="Kmw|" class="" style="width:82.09375px">Chilquinta</td><td id="`_sH" class="" style="width:85.125px"></td><td id="FcYi" class="" style="width:82.09375px">Chilquinta</td><td id="q^EF" class="" style="width:51.28125px"></td></tr><tr id="388938ab-0205-804d-8de9-f249d72f2e0b" dir="ltr"><td id="UI[G" class="" style="width:138.65625px">Consumo kWh</td><td id="Kmw|" class="" style="width:82.09375px">9962</td><td id="`_sH" class="" style="width:85.125px">kWh</td><td id="FcYi" class="" style="width:82.09375px">1063</td><td id="q^EF" class="" style="width:51.28125px">kWh</td></tr><tr id="388938ab-0205-801d-a866-fd2615cf944f" dir="ltr"><td id="UI[G" class="" style="width:138.65625px">Potencia Leída</td><td id="Kmw|" class="" style="width:82.09375px">s/i</td><td id="`_sH" class="" style="width:85.125px">kW</td><td id="FcYi" class="" style="width:82.09375px"></td><td id="q^EF" class="" style="width:51.28125px"></td></tr><tr id="388938ab-0205-8063-8bb4-da190e21eb1f" dir="ltr"><td id="UI[G" class="" style="width:138.65625px">Demanda Máxima</td><td id="Kmw|" class="" style="width:82.09375px">s/i</td><td id="`_sH" class="" style="width:85.125px">kW</td><td id="FcYi" class="" style="width:82.09375px"></td><td id="q^EF" class="" style="width:51.28125px"></td></tr><tr id="388938ab-0205-80a0-a9d3-de4d5ceb8743" dir="ltr"><td id="UI[G" class="" style="width:138.65625px">Gasto nominal </td><td id="Kmw|" class="" style="width:82.09375px">2.088.391</td><td id="`_sH" class="" style="width:85.125px">$CLP</td><td id="FcYi" class="" style="width:82.09375px">766.724</td><td id="q^EF" class="" style="width:51.28125px">$CLP</td></tr></tbody></table><div id="6d3938ab-0205-8378-8928-81d7ad9e7119" class="collection-content" dir="ltr"><h4 class="collection-title">Hallazgos</h4><div class="collection-content-wrapper"><table class="collection-content"><colgroup><col style="width:26.551226551226552%"/><col style="width:18.037518037518037%"/><col style="width:55.41125541125541%"/></colgroup><thead><tr><th><span class="icon property-icon"><img src="https://app.notion.com/icons/font_gray.svg" style="width:14px;height:14px;display:block"/></span>Referencia</th><th><span class="icon property-icon"><img src="https://app.notion.com/icons/arrow-circle-down_gray.svg" style="width:14px;height:14px;display:block"/></span>Servicio</th><th><span class="icon property-icon"><img src="https://app.notion.com/icons/description_gray.svg" style="width:14px;height:14px;display:block"/></span>Descripción</th></tr></thead><tbody><tr id="382938ab-0205-801c-9ee7-fcbde8170841"><td class="cell-title"><a href="C%C3%A1maras%20de%20tunel%20382938ab0205801c9ee7fcbde8170841.html" data-notion-page-id="382938ab-0205-801c-9ee7-fcbde8170841" data-notion-space-id="242b1b81-4cab-4ab7-a7cd-3ea69f052ca2">Cámaras de tunel</a></td><td class="cell-egc;"><span class="selected-value select-value-color-pink">refrigeración</span></td><td class="cell-blSE">Se utiliza las cámaras de túneles para almacenamiento en -20ºC por falta de espacios. Se observa una práctica inadecuada en el uso de los túneles de enfriamiento, los cuales están siendo utilizados como cámaras de refrigeración para almacenamiento de productos terminados, pese a que estos equipos están diseñados específicamente para procesos de choque térmico y no para almacenamiento continuo. Esta situación puede afectar la eficiencia energética del sistema, generar un uso de específico para este tipo equipos, acortar su vida útil. </td></tr><tr id="382938ab-0205-80ba-9ec3-d7c3cffdefb1"><td class="cell-title"><a href="Gesti%C3%B3n%20de%20acondicionamiento%20de%20equipos%20de%20congela%20382938ab020580ba9ec3d7c3cffdefb1.html" data-notion-page-id="382938ab-0205-80ba-9ec3-d7c3cffdefb1" data-notion-space-id="242b1b81-4cab-4ab7-a7cd-3ea69f052ca2">Gestión de acondicionamiento de equipos de congelación</a></td><td class="cell-egc;"><span class="selected-value select-value-color-pink">refrigeración</span></td><td class="cell-blSE">Se recomienda optimizar la operación de los equipos de refrigeración destinados a productos del mar mediante una adecuada configuración de setpoints y una gestión operacional eficiente, considerando la alta perecibilidad de este tipo de productos. Es fundamental establecer temperaturas de conservación entre -1 °C y 2 °C para productos frescos refrigerados, y de -18 °C o inferiores para productos congelados, asegurando estabilidad térmica y evitando fluctuaciones que puedan comprometer la calidad e inocuidad. Asimismo, se debe verificar periódicamente la calibración de sensores y controladores, mantener un adecuado control de apertura de puertas para reducir infiltración de calor, y asegurar una correcta circulación de aire dentro de las cámaras. En términos operacionales, se recomienda implementar un sistema de monitoreo continuo de temperatura, realizar mantenimientos preventivos de los equipos, optimizar la carga y distribución de productos para evitar obstrucciones en los flujos de aire, y capacitar al personal en buenas prácticas de manejo y conservación, con el fin de garantizar eficiencia energética y cumplimiento de estándares sanitarios.</td></tr><tr id="382938ab-0205-8024-bf41-dcdd6f1b6dad"><td class="cell-title"><a href="Grupo%20electr%C3%B3geno%20382938ab02058024bf41dcdd6f1b6dad.html" data-notion-page-id="382938ab-0205-8024-bf41-dcdd6f1b6dad" data-notion-space-id="242b1b81-4cab-4ab7-a7cd-3ea69f052ca2"><span class="icon" data-emoji="🆕"></span>Grupo electrógeno</a></td><td class="cell-egc;"><span class="selected-value select-value-color-orange">suministro</span></td><td class="cell-blSE">Se identifica una falla potencialmente crítica en el establecimiento, dado que, pese a contar con un equipo electrógeno nuevo de 33kVa por largo tiempo en desuso, este no se encuentra conectado ni operativo para respaldo energético en caso de contingencias o cortes de suministro eléctrico. </td></tr><tr id="382938ab-0205-8060-b6aa-dd9e68b17a64"><td class="cell-title"><a href="Tarifa%20BT1A%20382938ab02058060b6aadd9e68b17a64.html" data-notion-page-id="382938ab-0205-8060-b6aa-dd9e68b17a64" data-notion-space-id="242b1b81-4cab-4ab7-a7cd-3ea69f052ca2">Tarifa BT1A</a></td><td class="cell-egc;"><span class="selected-value select-value-color-green">contrato</span></td><td class="cell-blSE">La tarifa <strong>BT1A</strong> corresponde a un suministro en baja tensión con cobro principalmente por energía consumida (kWh), sin diferenciación relevante por potencia demandada ni por bloques horarios. La tarifa <strong>BT1A</strong> corresponde a un suministro en baja tensión con cobro principalmente por energía consumida (kWh), sin diferenciación relevante por potencia demandada ni por bloques horarios.<br/>Se recomienda cambio de tarifa a AT4.3 inicialmente, pero que requerirá análisis acabado por un especialista certificado SEC clase D o E. Ver apartado de enlaces de utilidad.<br/></td></tr><tr id="387938ab-0205-8067-9bec-ed6fa9f920b6"><td class="cell-title"><a href="Energ%C3%ADas%20Renovables%20387938ab020580679beced6fa9f920b6.html" data-notion-page-id="387938ab-0205-8067-9bec-ed6fa9f920b6" data-notion-space-id="242b1b81-4cab-4ab7-a7cd-3ea69f052ca2">Energías Renovables</a></td><td class="cell-egc;"><span class="selected-value select-value-color-yellow">renovables</span></td><td class="cell-blSE">La empresa no cuenta con integración de energías renovables, lo que implica una dependencia total de fuentes convencionales. Si bien el consumo energético de alta intensidad del proceso productivo del congelado de productos marinos, podría limitar el impacto técnico de estas soluciones, existe una brecha estratégica relevante en términos de sostenibilidad, especialmente considerando las exigencias del cliente mayoritario Walmart. La falta de iniciativas en este ámbito puede afectar la competitividad, la imagen corporativa y el cumplimiento de compromisos ambientales de interés estratégico de dichos mandantes. </td></tr><tr id="388938ab-0205-80f4-994a-d5dcb79d48c2"><td class="cell-title"><a href="Gesti%C3%B3n%20Energ%C3%A9tica%20388938ab020580f4994ad5dcb79d48c2.html" data-notion-page-id="388938ab-0205-80f4-994a-d5dcb79d48c2" data-notion-space-id="242b1b81-4cab-4ab7-a7cd-3ea69f052ca2">Gestión Energética</a></td><td class="cell-egc;"><span class="selected-value select-value-color-gray">gestión</span></td><td class="cell-blSE">No se evidencia la existencia de un <strong>responsable designado ni de un sistema formal de gestión de la energía</strong> dentro de la empresa, lo que limita la capacidad para monitorear, analizar y optimizar el consumo energético. Si bien existe algunos indicios que apuntan al desarrollo de este sistema de gestión,  esta ausencia sin una sistematización dedicada, dificulta la identificación oportuna de ineficiencias, la implementación de medidas correctivas y el seguimiento de indicadores clave, generando una gestión más bien reactiva que estratégica en materia energética, que permita un desarrollo permanente en el tiempo que apunte a una mejora continua de sus procesos energéticos.</td></tr><tr id="390938ab-0205-80f9-bdf2-f56f8332c2d7"><td class="cell-title"><a href="Aislamiento%20t%C3%A9rmico%20de%20sistema%20de%20Refrigerante%20390938ab020580f9bdf2f56f8332c2d7.html" data-notion-page-id="390938ab-0205-80f9-bdf2-f56f8332c2d7" data-notion-space-id="242b1b81-4cab-4ab7-a7cd-3ea69f052ca2"><span class="icon" data-emoji="🆕"></span>Aislamiento térmico de sistema de Refrigerante</a></td><td class="cell-egc;"><span class="selected-value select-value-color-pink">refrigeración</span></td><td class="cell-blSE">La empresa de productos marinos congelados presenta un problema asociado a las deficientes condiciones de aislamiento térmico en sus sistemas de refrigeración, lo que genera pérdidas de frío hacia el ambiente y un aumento significativo en la carga térmica que deben enfrentar los equipos. Esta situación obliga a los compresores a operar de manera más intensiva y prolongada, elevando el consumo energético, disminuyendo la eficiencia del sistema y acelerando el desgaste de los componentes. Además, estas ineficiencias pueden provocar fluctuaciones de temperatura que afectan la calidad y seguridad de los productos almacenados, incrementando los costos operacionales y reduciendo la vida útil de la infraestructura. </td></tr></tbody></table></div><br/><br/></div><div id="505938ab-0205-8387-b22d-81ff331525b7" class="collection-content" dir="ltr"><h4 class="collection-title">Recomendaciones</h4><div class="collection-content-wrapper"><table class="collection-content"><colgroup><col style="width:29.87012987012987%"/><col style="width:70.12987012987013%"/></colgroup><thead><tr><th><span class="icon property-icon"><img src="https://app.notion.com/icons/font_gray.svg" style="width:14px;height:14px;display:block"/></span>nombre</th><th><span class="icon property-icon"><img src="https://app.notion.com/icons/description_gray.svg" style="width:14px;height:14px;display:block"/></span>Recomendación</th></tr></thead><tbody><tr id="388938ab-0205-801b-a4a0-ddcd4fd69961"><td class="cell-title"><a href="Mejoramiento%20operativo%20c%C3%A1maras%20refrigerado%20388938ab0205801ba4a0ddcd4fd69961.html" data-notion-page-id="388938ab-0205-801b-a4a0-ddcd4fd69961" data-notion-space-id="242b1b81-4cab-4ab7-a7cd-3ea69f052ca2">Mejoramiento operativo cámaras refrigerado</a></td><td class="cell-;voQ">Uno de los principales problemas es la pérdida de frío por aperturas frecuentes de puertas, especialmente en contextos operativos con alta rotación de productos, lo que obliga al sistema de refrigeración a trabajar de manera intensiva para recuperar la temperatura de consigna. A esto se suman posibles deficiencias en sellos, infiltraciones de aire y acumulación de hielo en evaporadores, factores que reducen la eficiencia del sistema.<br/>Es clave implementar una gestión eficiente del uso de las cámaras, diferenciando su función (por ejemplo, una para productos de alta rotación y otra para almacenamiento más prolongado), lo que permite optimizar aperturas y reducir pérdidas térmicas.<br/>Asimismo, se recomienda establecer protocolos de operación, como limitar el tiempo de apertura de puertas, evitar el ingreso de productos calientes y mantener una adecuada organización interna que facilite la circulación de aire.<br/>Adicionalmente, la mantención periódica es fundamental: limpieza de serpentines, revisión de sellos y control de escarcha. Desde el punto de vista energético, estas acciones permiten reducir el consumo eléctrico, mejorar la eficiencia del sistema y asegurar condiciones adecuadas de conservación de alimentos, contribuyendo a una operación más confiable y sostenible.</td></tr><tr id="388938ab-0205-8081-953e-e51a6fd1d731"><td class="cell-title"><a href="Mejoramiento%20operativo%20c%C3%A1maras%20congelado%20388938ab02058081953ee51a6fd1d731.html" data-notion-page-id="388938ab-0205-8081-953e-e51a6fd1d731" data-notion-space-id="242b1b81-4cab-4ab7-a7cd-3ea69f052ca2">Mejoramiento operativo cámaras congelado</a></td><td class="cell-;voQ">Se recomienda mantener una diferenciación clara y estricta de uso entre ambas cámaras, optimizando su operación según el tipo de producto. La cámara de materias primas debe orientarse a almacenamiento de baja rotación, minimizando aperturas y asegurando una organización interna eficiente (sistema FIFO, orden por tipo de producto). En cambio, la cámara de productos terminados debe operar con una lógica de alta rotación, con un layout que facilite un acceso rápido y reduzca el tiempo de apertura de puertas.</td></tr><tr id="388938ab-0205-8002-84db-c406073ed801"><td class="cell-title"><a href="Mejoramiento%20de%20la%20cadena%20de%20refrigerado%20388938ab0205800284dbc406073ed801.html" data-notion-page-id="388938ab-0205-8002-84db-c406073ed801" data-notion-space-id="242b1b81-4cab-4ab7-a7cd-3ea69f052ca2">Mejoramiento de la cadena de refrigerado</a></td><td class="cell-;voQ">Se sugiere a mediano plazo evaluar el incremento de la capacidad de cámaras destinadas al almacenamiento de productos congelados, con el fin de liberar los túneles de congelado rápido para su uso específico en el preenfriamiento previo al ingreso a almacenamiento. Asimismo, resulta clave facilitar la implementación un adecuado control de las cargas máximas dentro de las cámaras, asegurando una correcta circulación de aire, junto con establecer protocolos que minimicen la apertura de las unidades de almacenamiento.<br/>Por otra parte, la mantención periódica de los equipos , incluyendo limpieza de escarcha, revisión de sellos y verificación del estado de los serpentines, es fundamental para preservar su eficiencia operativa. La aplicación conjunta de estas medidas permite reducir el consumo energético, mejorar la estabilidad térmica y garantizar la calidad e inocuidad de los productos, contribuyendo a una operación más eficiente y sostenible del sistema de congelado.</td></tr><tr id="388938ab-0205-8070-b951-e1fdebc8f442"><td class="cell-title"><a href="Mejoramiento%20circuito%20de%20refrigerantes%20c%C3%A1maras%20de%20%20388938ab02058070b951e1fdebc8f442.html" data-notion-page-id="388938ab-0205-8070-b951-e1fdebc8f442" data-notion-space-id="242b1b81-4cab-4ab7-a7cd-3ea69f052ca2"><span class="icon" data-emoji="🆕"></span>Mejoramiento circuito de refrigerantes cámaras de congelación</a></td><td class="cell-;voQ">Se recomienda implementar un plan de mejora que contemple un diagnóstico técnico detallado para identificar puntos críticos de pérdida térmica, seguido de la reparación o reemplazo de los materiales aislantes deteriorados y el sellado de filtraciones de aire. Asimismo, es fundamental optimizar la operación mediante buenas prácticas, como el control en la apertura de puertas y la capacitación del personal, junto con la incorporación de un sistema de monitoreo energético que permita evaluar continuamente el desempeño del sistema y asegurar la sostenibilidad de las mejoras implementadas.<strong><br/>Proporcione sus comentarios sobre BizChat</strong></td></tr><tr id="800938ab-0205-824f-8e53-816ddcc0d344"><td class="cell-title"><a href="An%C3%A1lisis%20de%20cambio%20tarifario%20800938ab0205824f8e53816ddcc0d344.html" data-notion-page-id="800938ab-0205-824f-8e53-816ddcc0d344" data-notion-space-id="242b1b81-4cab-4ab7-a7cd-3ea69f052ca2">Análisis de cambio tarifario</a></td><td class="cell-;voQ">Se recomienda cambio de tarifa a AT4.3 inicialmente, pero que requerirá análisis acabado por un especialista certificado SEC clase D o E.<br/>Para un negocio tipo fábrica de alimentos como el analizado:<br/>- Existe <strong>variabilidad horaria significativa en el consumo</strong> (picos en mañana y tarde), dependiendo de la demanda y producción.<br/>- Se observan <strong>equipos de alta potencia</strong> (refrigeración, cocción, climatizado).<br/>- Se mantiene también una <strong>carga base constante</strong> (refrigeración). Esto sugiere que BT1A no necesariamente refleja de forma eficiente la estructura real de consumo.</td></tr><tr id="388938ab-0205-8075-b625-dbbc48ed95f9"><td class="cell-title"><a href="Control%20de%20la%20demanda%20post%20cambio%20tarifario%20388938ab02058075b625dbbc48ed95f9.html" data-notion-page-id="388938ab-0205-8075-b625-dbbc48ed95f9" data-notion-space-id="242b1b81-4cab-4ab7-a7cd-3ea69f052ca2">Control de la demanda post cambio tarifario</a></td><td class="cell-;voQ">La propuesta de cambio tarifario a AT4.3 busca optimizar los costos eléctricos mediante una gestión más activa de la demanda, considerando que esta tarifa en media tensión incorpora cargos diferenciados por energía y potencia, incluyendo la demanda máxima y la demanda en horario de punta. <br/>En este contexto, es fundamental comprender la desagregación de la boleta: <br/>  • Demanda leída: corresponde a la potencia registrada en el período y refleja el comportamiento operativo del consumo.<br/>  • Demanda máxima representa el peak mensual y suele ser la base de cobro, por lo que un aumento puntual puede impactar los costos durante varios meses. <br/>  • Demanda máxima en hora de punta, en invierno tiene un valor significativamente más alto, por lo que concentrar consumos intensivos en ese horario puede encarecer considerablemente la cuenta. Este mismo en los meses de octubre a mayo es “calculado” a partir del promedio de los 2 peaks más altos registrados en invierno.<br/>  • Finalmente, el <strong>factor de potencia</strong> es un elemento crítico, ya que niveles bajos generan recargos económicos debido a un uso ineficiente de la energía, lo que obliga a mantener sistemas de compensación adecuados, como bancos de condensadores. <br/>   <br/>  El éxito del cambio a AT4.3 depende de implementar medidas de control de demanda, gestión de horarios de consumo y monitoreo continuo, ya que, si bien esta tarifa ofrece oportunidades de ahorro, también implica riesgos de sobrecostos si no se administran adecuadamente estos factores.</td></tr><tr id="387938ab-0205-80f5-a78f-e36f5eb5a537"><td class="cell-title"><a href="Estrategia%20de%20sostenibilidad%20mediante%20Energ%C3%ADas%20Ren%20387938ab020580f5a78fe36f5eb5a537.html" data-notion-page-id="387938ab-0205-80f5-a78f-e36f5eb5a537" data-notion-space-id="242b1b81-4cab-4ab7-a7cd-3ea69f052ca2">Estrategia de sostenibilidad mediante Energías Renovables</a></td><td class="cell-;voQ">Se propone evaluar la implementación de un sistema fotovoltaico térmico de pequeña/mediana escala para autoconsumo, orientado principalmente a cubrir consumos base (iluminación, refrigeración en régimen estable y equipos auxiliares). Esta solución permite generar un aporte parcial pero visible, alineado con objetivos de sostenibilidad y reducción de huella de carbono.<br/>Complementariamente, se recomienda integrar esta iniciativa dentro de una estrategia comunicacional simple (etiquetado interno, información a clientes) que refuerce el compromiso ambiental de la empresa, mediante apoyo de CDN Sercotec. A nivel técnico, es clave realizar un dimensionamiento acorde a la demanda real y evaluar opciones modulares que permitan futuras ampliaciones. De este modo, aunque el porcentaje de cobertura sea limitado, el impacto en imagen, cumplimiento de requisitos y proyección sostenible puede resultar significativo. <br/>Se adjuntan datos en el apartado de información de utilidad del presente informe.</td></tr><tr id="388938ab-0205-80c7-bec8-eded790d0c99"><td class="cell-title"><a href="Profesionalizaci%C3%B3n%20del%20sistema%20de%20Gesti%C3%B3n%20de%20la%20En%20388938ab020580c7bec8eded790d0c99.html" data-notion-page-id="388938ab-0205-80c7-bec8-eded790d0c99" data-notion-space-id="242b1b81-4cab-4ab7-a7cd-3ea69f052ca2">Profesionalización del sistema de Gestión de la Energía</a></td><td class="cell-;voQ">Se recomienda avanzar hacia la <strong>profesionalización de la gestión energética de la empresa</strong>. Esto implica designar un responsable interno o apoyo externo que se encargue de monitorear consumos, revisar indicadores eléctricos (como factor de potencia, demanda máxima y consumos base), e implementar buenas prácticas operacionales. La incorporación de una gestión energética sistemática permitirá <strong>identificar oportunidades de mejora, reducir costos, optimizar el uso de la energía y asegurar la sostenibilidad operativa del negocio</strong> en el tiempo y acorde a su crecimiento empresarial.<br/><br/>A mediano plazo, se podría evaluar la adopción de estándares más formales como la norma ISO 50001 en una versión simplificada o adaptada, lo que permitiría consolidar una cultura energética organizacional, mejorar la eficiencia de manera sostenida y eventualmente reducir costos operacionales.<br/><br/>Otra herramienta que puede apoyar al reconocimiento del proceso de mejora de gestión es apuntar al Sello de Eficiencia Energética del Ministerio de Energía, con subscripción gratuita para MiPymes. Ver enlace en anexos de utilidad.<br/><br/>Puede revisar con más información en <a href="https://drive.google.com/file/d/1Xxp3Uhm1WbXy5tsodA-J-cJAzWG-s45Y/view">La Guía Metodológica para Auditorías Energéticas para el Sector de Alimentos</a></td></tr><tr id="388938ab-0205-80b4-add2-f64a02ccf1f5"><td class="cell-title"><a href="Acometida%20Grupo%20electr%C3%B3geno%20388938ab020580b4add2f64a02ccf1f5.html" data-notion-page-id="388938ab-0205-80b4-add2-f64a02ccf1f5" data-notion-space-id="242b1b81-4cab-4ab7-a7cd-3ea69f052ca2"><span class="icon" data-emoji="🆕"></span>Acometida Grupo electrógeno</a></td><td class="cell-;voQ">Se identifica una falla potencialmente crítica en el establecimiento, dado que, pese a contar con un equipo electrógeno nuevo, este no se encuentra conectado ni operativo para respaldo energético en caso de contingencias o cortes de suministro eléctrico. Esta situación expone a la instalación a riesgos de interrupción de procesos, posibles pérdidas operativas y afectación a la seguridad. Se recomienda realizar a la brevedad la correcta instalación y puesta en marcha del equipo, incluyendo su conexión al sistema eléctrico mediante un sistema de transferencia adecuado (manual o automático), la verificación de cumplimiento normativo vigente y la ejecución de pruebas de funcionamiento periódicas que aseguren su disponibilidad y confiabilidad ante emergencias. El tamaño del equipo es de 33 kVA que puede ser suficiente para los equipos de refrigeración de materias primas y productos terminados. Antes de su operación requiere una inspección técnica de piezas y componentes para asegurar calidad de funcionamiento y suministro energético, ya que ha estado detenido por un periodo superior a 6 meses, por lo que previo a su operación requiere revisión de componentes y pierzas.</td></tr></tbody></table></div><br/><br/></div><h2 id="238938ab-0205-83ec-b293-0102b79701b4" class="" dir="auto">Temas adicionales</h2><h3 id="383938ab-0205-805c-b6c3-e7da9acc0ce4" class="" dir="auto">Estudios de especialización</h3><p id="383938ab-0205-80c9-83fd-cbf02091e9cc" class="" dir="auto">Se recomienda generar lazos de colaboración con instituciones educativas y centros de investigación especializados en tecnología de alimentos, con énfasis en productos del mar, con el fin de profundizar en estrategias avanzadas de conservación. Estas alianzas permitirían evaluar la existencia de brechas para eventuales incrementos marginales en las temperaturas de almacenamiento que no comprometan la inocuidad ni la calidad del producto, pero que contribuyan a mejorar la eficiencia energética de los procesos. No obstante, este tipo de ajustes requiere necesariamente de estudios técnicos y validaciones científicas específicas, considerando la alta sensibilidad de los productos marinos, por lo que su implementación debe estar respaldada por conocimiento experto, ensayos controlados y cumplimiento de normativas sanitarias vigentes.</p><h2 id="383938ab-0205-80ac-9305-c7a78ce293b5" class="" dir="auto">Acuerdos</h2><p id="e8b938ab-0205-8252-b6cd-815a3edd7447" class="" dir="auto">Se coordinará visita técnica a la zona a conveniencia de la operación de CDN Sercotec y Seremi Energía. Se propone como acuerdo la coordinación conjunta de un programa de charlas de sensibilización energética dirigidas a socios, colaboradores y empleados, con el objetivo de promover el uso eficiente de la energía y fomentar una cultura organizacional orientada a la sostenibilidad. Estas actividades serán planificadas de manera periódica, definiendo contenidos, responsables y calendarios, así como mecanismos de evaluación de su impacto, asegurando la participación activa de los distintos actores involucrados y contribuyendo al cumplimiento de metas de eficiencia energética y responsabilidad ambiental.</p><h2 id="383938ab-0205-80de-b730-f4e1c308a0d6" class="" dir="auto">Información de utilidad</h2><div dir="auto"><table id="384938ab-0205-80a5-b49a-d5b2c2461a24" class="simple-table" dir="ltr"><tbody><tr id="384938ab-0205-80f3-a638-ca33cbe6de6d" dir="ltr"><td id="h_NM" class="" style="width:170.25px">👩‍🦰Instaladoras</td><td id="r;IE" class="" style="width:303px">Red de mujeres <strong>Instaladoras</strong> certificadas SEC, para regularización eléctrica y gas, análisis de tarifas, expansiones y proyectos</td><td id="{Bve" class="" style="width:237px"><a href="https://app.notion.com/p/Instaladoras-383938ab02058099998cfbfc8342a16b?pvs=21">Instaladoras SEC Certificadas</a></td></tr><tr id="384938ab-0205-807c-ac74-c74d0ac2c3e8" dir="ltr"><td id="h_NM" class="" style="width:170.25px">👷‍♂️Portal SEC de instaladores</td><td id="r;IE" class="" style="width:303px">Listado de profesionales certificados SEC oficial.</td><td id="{Bve" class="" style="width:237px"><a href="https://www.sec.cl/area-ciudadana/nuevo-buscador-de-instaladores-e-instaladoras/">Instaladoras e Instaladores Certificados por SEC</a></td></tr><tr id="384938ab-0205-80cc-9388-e492d52b5b9e" dir="ltr"><td id="h_NM" class="" style="width:170.25px">🏭Proveedores</td><td id="r;IE" class="" style="width:303px">Listado referencial proveedores de equipamiento renovable, no implica recomendación y es responsabilidad del mandante asegurar su cumplimiento y calidad.</td><td id="{Bve" class="" style="width:237px"><a href="https://app.notion.com/p/Proveedores-Energ-ticos-pub-383938ab02058045b8e9c07564e3dca9?pvs=21">Proveedores Energéticos (pub)</a></td></tr><tr id="384938ab-0205-80f6-9aed-fd6b371de3ec" dir="ltr"><td id="h_NM" class="" style="width:170.25px">🧠Registro de <strong>Consultores</strong></td><td id="r;IE" class="" style="width:303px">Plataforma digital  para conectar a profesionales y empresas que prestan servicios en eficiencia energética y energías renovables</td><td id="{Bve" class="" style="width:237px"><a href="https://consultores.registroenergetico.cl/">Registro de Consultores</a></td></tr><tr id="384938ab-0205-80f0-aef3-d5b57d6ed1e5" dir="ltr"><td id="h_NM" class="" style="width:170.25px">📚Biblioteca <strong>AgenciaSE</strong></td><td id="r;IE" class="" style="width:303px">Material Bibliográfico sobre Eficiencia Energética y Sistemas de Gestión de la Energía</td><td id="{Bve" class="" style="width:237px"><a href="https://www.agenciase.org/biblioteca/">Biblioteca – Agencia de Sostenibilidad Energética</a></td></tr><tr id="384938ab-0205-8062-a3d2-fa41f69aba5a" dir="ltr"><td id="h_NM" class="" style="width:170.25px">🛡️Sello EE</td><td id="r;IE" class="" style="width:303px">Sello de Eficiencia Energética, <mark class="highlight-yellow" data-notion-highlight="yellow">gratuito </mark>para MiPyMes</td><td id="{Bve" class="" style="width:237px"><a href="https://plataforma.selloee.cl/">SelloEE - Sello de Excelencia Energética</a></td></tr><tr id="384938ab-0205-809d-9b50-f796ebb5a884" dir="ltr"><td id="h_NM" class="" style="width:170.25px">🎯Gestiona Energía <strong>MiPyME</strong></td><td id="r;IE" class="" style="width:303px">El Ministerio de Energía ha desarrollado una serie de herramientas de fácil uso para que las MiPyMES puedan estimar el uso y generación de energía a lo largo del país.</td><td id="{Bve" class="" style="width:237px"><a href="https://mipymes.gestionaenergia.cl/herramientas">Herramientas | Gestiona Energía MiPyMEs</a></td></tr><tr id="384938ab-0205-804f-a419-d8f2ed643595" dir="ltr"><td id="h_NM" class="" style="width:170.25px">⚡Calculadora de <strong>ahorro energéticos</strong></td><td id="r;IE" class="" style="width:303px">Herramienta para calcular una primera aproximación de ahorros y beneficios</td><td id="{Bve" class="" style="width:237px"><a href="https://mipyme.agenciase.org/plataforma/">Plataforma Gestiona Energía</a></td></tr><tr id="388938ab-0205-80a5-8e2e-e3feda28e98f" dir="ltr"><td id="h_NM" class="" style="width:170.25px">🌿Calculadora de Energías Renovables</td><td id="r;IE" class="" style="width:303px">Calculadora de Ahorro para calcular de forma rápida el ahorro que podría obtener al instalar un sistema solar fotovoltaico y conectarlo a la red, de acuerdo a la Ley de Generación Distribuida.</td><td id="{Bve" class="" style="width:237px"><a href="https://solar.minenergia.cl/">Explorador Solar</a></td></tr><tr id="384938ab-0205-80ec-a59f-fc9e907e5b42" dir="ltr"><td id="h_NM" class="" style="width:170.25px">🧾Servicio de Diagnóstico ONLINE</td><td id="r;IE" class="" style="width:303px">Servicio de <strong>diagnóstico energético gratuito</strong> que, a partir de una revisión energética de la empresa, entrega recomendaciones sobre medidas de eficiencia energética y energía renovable</td><td id="{Bve" class="" style="width:237px"><a href="https://mipymes.gestionaenergia.cl/unidad-de-asistencia-tecnica">Asistencia Técnica Gratuita</a></td></tr><tr id="392938ab-0205-8064-8cbe-dba408471bda" dir="ltr"><td id="h_NM" class="" style="width:170.25px">❄️Cero Fugas PNUD</td><td id="r;IE" class="" style="width:303px">Apoyo técnico y cofinanciamiento para empresas con sistemas de refrigeración HCFC.</td><td id="{Bve" class="" style="width:237px"><a href="https://www.undp.org/es/chile/programa-cero-fugas">Programa Cero Fugas | Programa De Las Naciones Unidas Para El Desarrollo</a></td></tr></tbody></table></div><p id="383938ab-0205-808e-b32e-f5e55915320e" class="" dir="auto">
+</p><hr id="383938ab-0205-80c3-a39b-d801fb2ff83b" dir="auto"/><p id="384938ab-0205-8011-a6b3-d3b07fbb0661" class="" dir="auto"><mark class="highlight-blue" data-notion-highlight="blue">━━━━━━</mark><mark class="highlight-red" data-notion-highlight="red">━━━━━━━━━━</mark></p><p id="4dd938ab-0205-832d-94b5-81b27c040015" class="" dir="auto"><strong>Carlos Campos<br/></strong><mark class="highlight-gray" data-notion-highlight="gray">Analista Regional Eficiencia Energética<br/></mark>Seremi de Energía Región de Valparaíso <br/><mark class="highlight-purple" data-notion-highlight="purple">ccamposn@minenergia.cl</mark></p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>

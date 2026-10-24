@@ -1,0 +1,13 @@
+id = "CAN-REC-gestion-de-la-cadena-de-refrigeracion-y-co"
+tipo = "recomendacion"
+titulo = "Gestión de la cadena de refrigeración y congelados"
+descripcion = "Se recomienda documentar formalmente los procedimientos de operación por etapa productiva, definiendo setpoints óptimos para cada tipo de producto y proceso, como referencia entre -7° a 0° para refrigerados, y -20° a -18°C para congelados, o según corresponda las definiciones del encargado del proceso de producción. Incorporar un registro simple de temperaturas y funcionamiento (manual o digital) permitirá monitorear desviaciones. Asimismo, se sugiere establecer indicadores básicos como consumo energético por hora de operación o por volumen refrigerado. Complementariamente, implementar capacitación estructurada (no solo básica) y estandarizar prácticas operativas asegurará consistencia. A mediano plazo, la incorporación de controles automáticos o dataloggers facilitará el seguimiento continuo y la optimización del desempeño energético."
+categoria = "gestion_operacional"
+impacto = "medio"
+inversion = "baja"
+dificultad = "media"
+origen = "casos:Pastelería"
+fuente_id = "FUE-vijon-pasteleria-382938ab02058081bcb6de5c89055ba"
+estado = "pendiente"
+created_at = "2026-10-24T17:57:10.382Z"
+

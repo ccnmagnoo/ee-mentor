@@ -1,0 +1,9 @@
+schema_version = 1
+id = "REC-AGENCIA-BIBLIOTECA"
+categoria = "agencia_se"
+nombre = "Biblioteca de la Agencia de Sostenibilidad Energética"
+descripcion = "Guías técnicas, manuales y estudios sobre eficiencia energética, gestión de la energía y tecnologías de bajo consumo."
+url = "https://www.agenciase.org/biblioteca/"
+orden = 10
+activo = true
+

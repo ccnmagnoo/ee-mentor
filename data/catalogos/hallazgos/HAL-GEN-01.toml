@@ -1,0 +1,16 @@
+schema_version = 1
+id = "HAL-GEN-01"
+codigo = "GEN-01"
+titulo = "Grupo electrógeno no operativo"
+categoria = "otros"
+descripcion = "Se identifica un grupo electrógeno instalado pero sin conexión, sin transferencia automática o sin puesta en marcha. No se han realizado pruebas de funcionamiento ni mantenciones."
+justificacion = "Un equipo de respaldo no operativo expone la continuidad del negocio ante cortes de suministro, especialmente en procesos de frío y producción. Es un riesgo crítico de operación."
+impacto = "critico"
+energetico = "diesel"
+recomendacion_id = "REC-GEN-01"
+tags = [ "respaldo", "continuidad", "seguridad" ]
+activo = true
+origen = "catalogo_base"
+created_at = "2026-01-01T00:00:00.000Z"
+updated_at = "2026-01-01T00:00:00.000Z"
+

@@ -1,0 +1,16 @@
+schema_version = 1
+id = "HAL-TAR-02"
+codigo = "TAR-02"
+titulo = "Bajo factor de potencia con penalización económica"
+categoria = "tarifas"
+descripcion = "La facturación registra energía reactiva o cargos por bajo factor de potencia, asociados a motores, compresores y equipos inductivos. No se monitorea este indicador."
+justificacion = "Un factor de potencia bajo genera cobros adicionales evitables. La compensación con condensadores, dimensionada correctamente, elimina o reduce la penalización."
+impacto = "medio"
+energetico = "electricidad"
+recomendacion_id = "REC-TAR-02"
+tags = [ "tarifa", "reactiva", "factor de potencia" ]
+activo = true
+origen = "catalogo_base"
+created_at = "2026-01-01T00:00:00.000Z"
+updated_at = "2026-01-01T00:00:00.000Z"
+

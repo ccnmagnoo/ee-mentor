@@ -1,0 +1,16 @@
+schema_version = 1
+id = "HAL-REFR-03"
+codigo = "REFR-03"
+titulo = "Sellos y empaquetaduras de puertas deterioradas"
+categoria = "refrigeracion"
+descripcion = "Las puertas de refrigeradores, vitrinas o cámaras presentan empaquetaduras deformadas, rotas o con holguras. En algunos casos la puerta no cierra completamente o requiere ser empujada para sellar."
+justificacion = "Las infiltraciones de aire caliente y húmedo aumentan la carga térmica del equipo, favorecen la formación de escarcha y elevan el consumo del compresor de forma permanente."
+impacto = "medio"
+energetico = "electricidad"
+recomendacion_id = "REC-REFR-03"
+tags = [ "refrigeracion", "sellos", "mantencion" ]
+activo = true
+origen = "catalogo_base"
+created_at = "2026-01-01T00:00:00.000Z"
+updated_at = "2026-01-01T00:00:00.000Z"
+

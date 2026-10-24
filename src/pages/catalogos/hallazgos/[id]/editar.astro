@@ -1,0 +1,32 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import PageHeader from '@/components/ui/PageHeader.astro';
+import CatalogoForm from '@/components/catalogos/CatalogoForm.astro';
+import { catalogos } from '@/lib/repositories';
+
+const { id } = Astro.params;
+const hallazgo = id ? await catalogos.getHallazgo(id) : null;
+if (!hallazgo) return Astro.redirect('/catalogos?tab=hallazgos');
+---
+
+<Layout title={`Editar ${hallazgo.codigo}`} description="Editar hallazgo del catálogo">
+  <PageHeader
+    eyebrow="Catálogos · Hallazgos"
+    title={`Editar ${hallazgo.codigo}`}
+    subtitle={hallazgo.titulo}
+    breadcrumbs={[
+      { label: 'Catálogos', href: '/catalogos' },
+      { label: 'Hallazgos', href: '/catalogos?tab=hallazgos' },
+      { label: hallazgo.codigo },
+    ]}
+  />
+
+  <div class="max-w-4xl">
+    <CatalogoForm
+      tipo="hallazgo"
+      action="/api/catalogos/hallazgos"
+      item={hallazgo}
+      cancelHref="/catalogos?tab=hallazgos"
+    />
+  </div>
+</Layout>

@@ -1,0 +1,16 @@
+schema_version = 1
+id = "HAL-REFR-06"
+codigo = "REFR-06"
+titulo = "Equipos de frío próximos a fuentes de calor o sin ventilación"
+categoria = "refrigeracion"
+descripcion = "Refrigeradores, congeladores o vitrinas se encuentran junto a hornos, planchas, exposición solar directa o en espacios sin ventilación suficiente, con las rejillas posteriores obstruidas."
+justificacion = "El calor externo reduce la capacidad de rechazo del condensador y aumenta el trabajo del compresor. Reubicar o ventilar adecuadamente el equipo es una medida de bajo costo."
+impacto = "medio"
+energetico = "electricidad"
+recomendacion_id = "REC-REFR-06"
+tags = [ "refrigeracion", "ventilacion", "ubicacion" ]
+activo = true
+origen = "catalogo_base"
+created_at = "2026-01-01T00:00:00.000Z"
+updated_at = "2026-01-01T00:00:00.000Z"
+

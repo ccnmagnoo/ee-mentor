@@ -1,0 +1,21 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import PageHeader from '@/components/ui/PageHeader.astro';
+import EmpresaForm from '@/components/empresas/EmpresaForm.astro';
+---
+
+<Layout title="Nueva empresa">
+  <PageHeader
+    eyebrow="Cartera"
+    title="Nueva empresa"
+    subtitle="Completa la ficha base. Podrás registrar visitas y generar informes inmediatamente después."
+    breadcrumbs={[
+      { label: 'Empresas', href: '/empresas' },
+      { label: 'Nueva empresa' },
+    ]}
+  />
+
+  <div class="max-w-4xl">
+    <EmpresaForm action="/api/empresas" submitLabel="Crear empresa" cancelHref="/empresas" />
+  </div>
+</Layout>

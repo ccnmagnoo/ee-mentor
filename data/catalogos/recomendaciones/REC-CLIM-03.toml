@@ -1,0 +1,20 @@
+schema_version = 1
+id = "REC-CLIM-03"
+codigo = "REC-CLIM-03"
+titulo = "Gestión de setpoints y horarios de climatización"
+categoria = "climatizacion"
+descripcion = "Fijar consignas de 20-22 °C en invierno y 24-26 °C en verano, programar el apagado fuera del horario de atención y evitar la operación simultánea de calefacción y refrigeración."
+beneficio = "Reduce el consumo sin afectar el confort y evita conflictos térmicos entre equipos y procesos."
+inversion = "baja"
+dificultad = "baja"
+prioridad = "media"
+ahorro_estimado = "10-20% del consumo de climatización"
+plazo = "Inmediato (0-30 días)"
+energetico = "electricidad"
+hallazgos_relacionados = [ "HAL-CLIM-03", "HAL-CLIM-04" ]
+tags = [ "climatizacion", "setpoint", "horario" ]
+activo = true
+origen = "catalogo_base"
+created_at = "2026-01-01T00:00:00.000Z"
+updated_at = "2026-01-01T00:00:00.000Z"
+

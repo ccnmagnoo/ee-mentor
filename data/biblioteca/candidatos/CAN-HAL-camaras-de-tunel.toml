@@ -1,0 +1,13 @@
+id = "CAN-HAL-camaras-de-tunel"
+tipo = "hallazgo"
+titulo = "Cámaras de tunel"
+descripcion = "Se utiliza las cámaras de túneles para almacenamiento en -20ºC por falta de espacios. Se observa una práctica inadecuada en el uso de los túneles de enfriamiento, los cuales están siendo utilizados como cámaras de refrigeración para almacenamiento de productos terminados, pese a que estos equipos están diseñados específicamente para procesos de choque térmico y no para almacenamiento continuo. Esta situación puede afectar la eficiencia energética del sistema, generar un uso de específico para este tipo equipos, acortar su vida útil."
+categoria = "refrigeracion"
+impacto = "medio"
+inversion = "baja"
+dificultad = "baja"
+origen = "casos:No especificado"
+fuente_id = "FUE-stefymar-382938ab0205804e85d2cd29aa1f7eb1"
+estado = "pendiente"
+created_at = "2026-10-24T17:57:10.128Z"
+

@@ -1,0 +1,13 @@
+id = "CAN-REC-educacion-y-gestion-energetica"
+tipo = "recomendacion"
+titulo = "Educación y Gestión Energética"
+descripcion = "Se recomienda avanzar hacia la profesionalización de la gestión energética de la empresa . Esto implica designar un responsable interno o apoyo externo que se encargue de monitorear consumos, revisar indicadores eléctricos (como factor de potencia, demanda máxima y consumos base), e implementar buenas prácticas operacionales. La incorporación de una gestión energética sistemática permitirá identificar oportunidades de mejora, reducir costos, optimizar el uso de la energía y asegurar la sostenibilidad operativa del negocio en el tiempo y acorde a su crecimiento empresarial."
+categoria = "gestion_operacional"
+impacto = "medio"
+inversion = "baja"
+dificultad = "media"
+origen = "casos:Cafetería"
+fuente_id = "FUE-cafe-colores-382938ab020580c59ae6d8d19349a7b0"
+estado = "pendiente"
+created_at = "2026-10-24T17:57:09.063Z"
+

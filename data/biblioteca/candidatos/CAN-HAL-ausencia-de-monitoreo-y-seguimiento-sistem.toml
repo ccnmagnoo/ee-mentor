@@ -1,0 +1,13 @@
+id = "CAN-HAL-ausencia-de-monitoreo-y-seguimiento-sistem"
+tipo = "hallazgo"
+titulo = "Ausencia de monitoreo y seguimiento sistemático de los consumos energéticos"
+descripcion = "No se observaron registros formales de consumo eléctrico ni indicadores de desempeño energético que permitan identificar tendencias, aumentos de consumo o evaluar el impacto de medidas de ahorro. Esta situación dificulta detectar oportunidades de mejora y cuantificar resultados."
+categoria = "gestion_energetica"
+impacto = "medio"
+inversion = "baja"
+dificultad = "baja"
+origen = "casos:Cafetería"
+fuente_id = "FUE-minimarket-y-cafe-tonita-392938ab02058043b56ae72"
+estado = "pendiente"
+created_at = "2026-10-24T17:57:09.696Z"
+

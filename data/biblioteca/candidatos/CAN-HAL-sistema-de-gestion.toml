@@ -1,0 +1,13 @@
+id = "CAN-HAL-sistema-de-gestion"
+tipo = "hallazgo"
+titulo = "Sistema de Gestión"
+descripcion = "Se identifican instancias iniciales de educación energética que evidencian disposición al cambio; sin embargo, para consolidar y sostener mejoras en el desempeño energético, resulta necesario avanzar hacia la profesionalización de la gestión energética al interior de la empresa"
+categoria = "gestion_energetica"
+impacto = "medio"
+inversion = "baja"
+dificultad = "baja"
+origen = "casos:Pizzería"
+fuente_id = "FUE-pizzeria-plaggio-382938ab020580efa40bf9d41e53074"
+estado = "pendiente"
+created_at = "2026-10-24T17:57:09.829Z"
+

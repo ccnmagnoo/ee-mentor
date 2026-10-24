@@ -1,0 +1,13 @@
+id = "CAN-REC-operacion-de-electrodomesticos-menores"
+tipo = "recomendacion"
+titulo = "Operación de electrodomésticos menores"
+descripcion = "Se recomienda fuertemente mantener los equipos en buen estado, realizar limpieza después de cada uso y utilizarlos únicamente para cargas adecuadas a su capacidad de diseño."
+categoria = "gestion_operacional"
+impacto = "medio"
+inversion = "baja"
+dificultad = "media"
+origen = "casos:Restaurante"
+fuente_id = "FUE-rito-mata-390938ab0205809584b2c563debd6138"
+estado = "pendiente"
+created_at = "2026-10-24T17:57:10.066Z"
+

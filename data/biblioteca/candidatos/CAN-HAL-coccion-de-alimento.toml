@@ -1,0 +1,13 @@
+id = "CAN-HAL-coccion-de-alimento"
+tipo = "hallazgo"
+titulo = "Cocción de alimento"
+descripcion = "La cafetería utiliza gas para la preparación de alimentos mediante plancha y cocina, reduciendo parcialmente la dependencia eléctrica en procesos térmicos. Los riesgos detectados son contar con los quemadores sucios o mal regulados. Llamas desajustadas que reducen la eficiencia de combustión. Uso de equipos encendidos sin carga de trabajo y potenciales fugas en conexiones o accesorios, estos de especial cuidado y con foco en seguridad."
+categoria = "coccion"
+impacto = "alto"
+inversion = "baja"
+dificultad = "baja"
+origen = "casos:Cafetería"
+fuente_id = "FUE-la-boulangerie-390938ab0205801fb682ff6930a172ba"
+estado = "pendiente"
+created_at = "2026-10-24T17:57:09.248Z"
+

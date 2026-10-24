@@ -1,0 +1,13 @@
+id = "CAN-REC-analisis-de-cambio-tarifario"
+tipo = "recomendacion"
+titulo = "Análisis de cambio tarifario"
+descripcion = "Se recomienda cambio de tarifa a AT4.3 inicialmente, pero que requerirá análisis acabado por un especialista certificado SEC clase D o E.\nPara un negocio tipo fábrica de alimentos como el analizado:\n- Existe variabilidad horaria significativa en el consumo (picos en mañana y tarde), dependiendo de la demanda y producción.\n- Se observan equipos de alta potencia (refrigeración, cocción, climatizado).\n- Se mantiene también una carga base constante (refrigeración). Esto sugiere que BT1A no necesariamente refleja de forma eficiente la estructura real de consumo."
+categoria = "equipos_productivos"
+impacto = "medio"
+inversion = "media"
+dificultad = "media"
+origen = "casos:No especificado"
+fuente_id = "FUE-stefymar-382938ab0205804e85d2cd29aa1f7eb1"
+estado = "pendiente"
+created_at = "2026-10-24T17:57:10.216Z"
+

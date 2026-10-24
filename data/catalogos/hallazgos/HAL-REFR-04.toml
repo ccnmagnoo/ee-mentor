@@ -1,0 +1,16 @@
+schema_version = 1
+id = "HAL-REFR-04"
+codigo = "REFR-04"
+titulo = "Temperaturas de consigna más bajas de lo necesario"
+categoria = "refrigeracion"
+descripcion = "Se observan equipos configurados con temperaturas inferiores a las requeridas para la conservación de los productos, o sin termómetro visible para verificar el punto de operación. La regulación se realiza por percepción del personal."
+justificacion = "Cada grado adicional de frío innecesario incrementa el consumo eléctrico. Ajustar los setpoints a los requisitos sanitarios y de conservación reales reduce el consumo sin comprometer la inocuidad."
+impacto = "medio"
+energetico = "electricidad"
+recomendacion_id = "REC-REFR-04"
+tags = [ "refrigeracion", "setpoint", "temperatura" ]
+activo = true
+origen = "catalogo_base"
+created_at = "2026-01-01T00:00:00.000Z"
+updated_at = "2026-01-01T00:00:00.000Z"
+

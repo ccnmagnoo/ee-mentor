@@ -1,0 +1,13 @@
+id = "CAN-HAL-vc-cooler"
+tipo = "hallazgo"
+titulo = "VC Cooler"
+descripcion = "El negocio cuenta con dos VC Cooler verticales de puerta vidriada para almacenamiento y exhibición de materias primas y alimentos. Estos equipos poseen un consumo permanente durante gran parte del día, por lo que su eficiencia depende significativamente de su correcta utilización. Entre las problemáticas potenciales se encuentran aperturas frecuentes de puertas, sellos deteriorados, acumulación de suciedad en condensadores o una excesiva exposición al calor ambiental."
+categoria = "refrigeracion"
+impacto = "medio"
+inversion = "baja"
+dificultad = "baja"
+origen = "casos:Restaurante"
+fuente_id = "FUE-rito-mata-390938ab0205809584b2c563debd6138"
+estado = "pendiente"
+created_at = "2026-10-24T17:57:09.942Z"
+

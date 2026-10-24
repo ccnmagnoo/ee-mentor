@@ -1,0 +1,20 @@
+schema_version = 1
+id = "REC-ILUM-01"
+codigo = "REC-ILUM-01"
+titulo = "Migración progresiva a tecnología LED"
+categoria = "iluminacion"
+descripcion = "Reemplazar progresivamente luminarias fluorescentes, halógenas e incandescentes por soluciones LED de alta eficacia, priorizando los sectores con mayor número de horas de uso: atención, vitrinas, cocina y fachada."
+beneficio = "Menor consumo eléctrico, mayor vida útil, menor carga térmica y mejor calidad de iluminación. La inversión se recupera habitualmente en menos de dos años."
+inversion = "media"
+dificultad = "baja"
+prioridad = "alta"
+ahorro_estimado = "40-60% del consumo de iluminación"
+plazo = "Corto plazo (1-3 meses)"
+energetico = "electricidad"
+hallazgos_relacionados = [ "HAL-ILUM-01", "HAL-ILUM-02" ]
+tags = [ "iluminacion", "led", "recambio" ]
+activo = true
+origen = "catalogo_base"
+created_at = "2026-01-01T00:00:00.000Z"
+updated_at = "2026-01-01T00:00:00.000Z"
+

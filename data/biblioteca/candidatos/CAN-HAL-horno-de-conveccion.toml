@@ -1,0 +1,13 @@
+id = "CAN-HAL-horno-de-conveccion"
+tipo = "hallazgo"
+titulo = "Horno de convección"
+descripcion = "El horno de convección utilizado para la cocción de masitas en Café Colores, son equipos de gran utilidad y versatilidad para el modelo de negocio. Pero una incorrecta utilización puede presentar ineficiencias operacionales si no se utiliza de forma adecuada. Uno de los principales problemas es el funcionamiento en vacío o con baja carga , lo que implica un alto consumo energético sin un aprovechamiento efectivo de la capacidad del equipo. Asimismo, la apertura frecuente de la puerta durante el proceso provoca pérdidas térmicas significativas , obligando al horno a trabajar más para recuperar la temperatura de consigna."
+categoria = "coccion"
+impacto = "alto"
+inversion = "baja"
+dificultad = "baja"
+origen = "casos:Cafetería"
+fuente_id = "FUE-cafe-colores-382938ab020580c59ae6d8d19349a7b0"
+estado = "pendiente"
+created_at = "2026-10-24T17:57:09.012Z"
+

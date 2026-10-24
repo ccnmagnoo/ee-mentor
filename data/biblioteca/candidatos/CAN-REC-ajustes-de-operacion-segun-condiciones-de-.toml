@@ -1,0 +1,13 @@
+id = "CAN-REC-ajustes-de-operacion-segun-condiciones-de-"
+tipo = "recomendacion"
+titulo = "Ajustes de operación según condiciones de uso"
+descripcion = "Para mejorar la eficiencia energética, se recomienda aplicar una configuración dinámica de operación, según estación del año \n• Para p eríodos cálidos: Ajustar la refrigeración a niveles que compensen la mayor carga térmica ambiental. También asegurar correcta ventilación y limpieza de condensadores.\n• Períodos fríos: Disminuir la exigencia de enfriamiento, evitando sobreconsumo y temperaturas innecesariamente bajas. \nTambién considerar según ciclo diario \n• Durante horario de atención, se recomienda op eración en condiciones normales, garantizando temperatura adecuada para exhibición.\n• Fuera de horario: Implementar medidas de ahorro como:\nUso de cubiertas térmicas o cortinas nocturnas.\nAjuste moderado del setpoint de temperatura.\nReducción de iluminación interna."
+categoria = "refrigeracion"
+impacto = "medio"
+inversion = "baja"
+dificultad = "media"
+origen = "casos:Cafetería"
+fuente_id = "FUE-marcoffee-cl-382938ab0205803990d9ca01572d5b71"
+estado = "pendiente"
+created_at = "2026-10-24T17:57:09.628Z"
+

@@ -1,0 +1,190 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import Icon from '@/components/ui/Icon.astro';
+import PageHeader from '@/components/ui/PageHeader.astro';
+import { catalogos } from '@/lib/repositories';
+import { CATEGORIAS, IMPACTOS, INVERSIONES, PRIORIDADES, RECURSO_CATEGORIAS } from '@/lib/schemas';
+
+const tabParam = Astro.url.searchParams.get('tab');
+const tab = tabParam === 'recomendaciones' || tabParam === 'recursos' ? tabParam : 'hallazgos';
+
+const [hallazgos, recomendaciones, recursos] = await Promise.all([
+  catalogos.listHallazgos(true),
+  catalogos.listRecomendaciones(true),
+  catalogos.listRecursos(),
+]);
+
+const tabs = [
+  { key: 'hallazgos', label: 'Hallazgos', count: hallazgos.length, icon: 'alert' as const },
+  { key: 'recomendaciones', label: 'Recomendaciones', count: recomendaciones.length, icon: 'target' as const },
+  { key: 'recursos', label: 'Recursos', count: recursos.length, icon: 'book' as const },
+];
+
+const categoriasHallazgos = [...new Set(hallazgos.map((item) => item.categoria))];
+const categoriasRecos = [...new Set(recomendaciones.map((item) => item.categoria))];
+---
+
+<Layout title="Catálogos" description="Catálogo editable de hallazgos, recomendaciones y recursos">
+  <PageHeader
+    eyebrow="Biblioteca de conocimiento"
+    title="Catálogos"
+    subtitle="Hallazgos, recomendaciones y recursos precargados a partir de las mentorías. Todo es editable y se reutiliza al registrar visitas."
+  >
+    <Fragment slot="actions">
+      <a href="/biblioteca" class="btn-secondary"><Icon name="brain" size={16} /> Importar documentos</a>
+      <a href={tab === 'recomendaciones' ? '/catalogos/recomendaciones/nueva' : '/catalogos/hallazgos/nuevo'} class="btn-primary">
+        <Icon name="plus" size={16} /> {tab === 'recomendaciones' ? 'Nueva recomendación' : 'Nuevo hallazgo'}
+      </a>
+    </Fragment>
+  </PageHeader>
+
+  <div class="mb-5 flex flex-wrap gap-2">
+    {tabs.map((item) => (
+      <a
+        href={`/catalogos?tab=${item.key}`}
+        class:list={[
+          'inline-flex items-center gap-2 rounded-lg px-3.5 py-2 text-sm font-semibold transition',
+          tab === item.key
+            ? 'bg-brand-700 text-white shadow-sm'
+            : 'border border-slate-200 bg-white text-slate-600 hover:border-slate-300 hover:text-slate-900',
+        ]}
+      >
+        <Icon name={item.icon} size={16} />
+        {item.label}
+        <span class:list={['rounded-full px-1.5 py-0.5 text-[10px]', tab === item.key ? 'bg-white/20' : 'bg-slate-100 text-slate-500']}>{item.count}</span>
+      </a>
+    ))}
+  </div>
+
+  {tab === 'hallazgos' && (
+    <section class="card overflow-hidden">
+      <div class="card-header">
+        <div class="relative w-full max-w-md">
+          <Icon name="search" size={16} class="pointer-events-none absolute left-3 top-2.5 text-slate-400" />
+          <input type="search" class="input pl-9" placeholder="Buscar hallazgo…" data-filter-target="#tabla-hallazgos" />
+        </div>
+        <p class="text-xs text-slate-500">{categoriasHallazgos.length} categorías representadas</p>
+      </div>
+      <div class="table-wrap">
+        <table id="tabla-hallazgos" class="table">
+          <thead>
+            <tr>
+              <th>Código</th>
+              <th>Hallazgo</th>
+              <th>Categoría</th>
+              <th>Impacto</th>
+              <th>Recomendación</th>
+              <th class="text-right">Acciones</th>
+            </tr>
+          </thead>
+          <tbody>
+            {hallazgos.map((hallazgo) => (
+              <tr data-filter-item>
+                <td class="whitespace-nowrap font-mono text-xs text-slate-500">{hallazgo.codigo}</td>
+                <td>
+                  <p class="font-medium text-slate-800">{hallazgo.titulo}</p>
+                  <p class="line-clamp-2 max-w-xl text-xs text-slate-500">{hallazgo.descripcion}</p>
+                </td>
+                <td class="whitespace-nowrap text-xs text-slate-600">{CATEGORIAS[hallazgo.categoria]}</td>
+                <td><span class:list={['badge', hallazgo.impacto === 'critico' ? 'badge-rose' : hallazgo.impacto === 'alto' ? 'badge-orange' : hallazgo.impacto === 'medio' ? 'badge-amber' : 'badge-neutral']}>{IMPACTOS[hallazgo.impacto]}</span></td>
+                <td class="whitespace-nowrap font-mono text-xs text-slate-500">{hallazgo.recomendacion_id || '—'}</td>
+                <td class="text-right">
+                  <div class="flex justify-end gap-1">
+                    {hallazgo.activo ? <span class="badge-emerald">Activo</span> : <span class="badge-neutral">Inactivo</span>}
+                    <a href={`/catalogos/hallazgos/${hallazgo.id}/editar`} class="btn-ghost btn-sm"><Icon name="edit" size={14} /></a>
+                  </div>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </section>
+  )}
+
+  {tab === 'recomendaciones' && (
+    <section class="card overflow-hidden">
+      <div class="card-header">
+        <div class="relative w-full max-w-md">
+          <Icon name="search" size={16} class="pointer-events-none absolute left-3 top-2.5 text-slate-400" />
+          <input type="search" class="input pl-9" placeholder="Buscar recomendación…" data-filter-target="#tabla-recomendaciones" />
+        </div>
+        <p class="text-xs text-slate-500">{categoriasRecos.length} categorías representadas</p>
+      </div>
+      <div class="table-wrap">
+        <table id="tabla-recomendaciones" class="table">
+          <thead>
+            <tr>
+              <th>Código</th>
+              <th>Recomendación</th>
+              <th>Categoría</th>
+              <th>Inversión</th>
+              <th>Prioridad</th>
+              <th>Ahorro estimado</th>
+              <th class="text-right">Acciones</th>
+            </tr>
+          </thead>
+          <tbody>
+            {recomendaciones.map((reco) => (
+              <tr data-filter-item>
+                <td class="whitespace-nowrap font-mono text-xs text-slate-500">{reco.codigo}</td>
+                <td>
+                  <p class="font-medium text-slate-800">{reco.titulo}</p>
+                  <p class="line-clamp-2 max-w-xl text-xs text-slate-500">{reco.descripcion}</p>
+                </td>
+                <td class="whitespace-nowrap text-xs text-slate-600">{CATEGORIAS[reco.categoria]}</td>
+                <td class="whitespace-nowrap text-xs text-slate-600">{INVERSIONES[reco.inversion]}</td>
+                <td><span class:list={['badge', reco.prioridad === 'alta' ? 'badge-rose' : reco.prioridad === 'media' ? 'badge-amber' : 'badge-neutral']}>{PRIORIDADES[reco.prioridad]}</span></td>
+                <td class="text-xs text-slate-600">{reco.ahorro_estimado || 'Por cuantificar'}</td>
+                <td class="text-right">
+                  <div class="flex justify-end gap-1">
+                    {reco.activo ? <span class="badge-emerald">Activa</span> : <span class="badge-neutral">Inactiva</span>}
+                    <a href={`/catalogos/recomendaciones/${reco.id}/editar`} class="btn-ghost btn-sm"><Icon name="edit" size={14} /></a>
+                  </div>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </section>
+  )}
+
+  {tab === 'recursos' && (
+    <section class="card overflow-hidden">
+      <div class="card-header">
+        <div>
+          <h2 class="text-sm font-semibold text-slate-900">Recursos de apoyo</h2>
+          <p class="text-xs text-slate-500">Se incluyen automáticamente en la sección de información complementaria del informe.</p>
+        </div>
+      </div>
+      <div class="table-wrap">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Recurso</th>
+              <th>Categoría</th>
+              <th>URL</th>
+            </tr>
+          </thead>
+          <tbody>
+            {recursos.map((recurso) => (
+              <tr>
+                <td>
+                  <p class="font-medium text-slate-800">{recurso.nombre}</p>
+                  <p class="max-w-xl text-xs text-slate-500">{recurso.descripcion}</p>
+                </td>
+                <td class="whitespace-nowrap text-xs text-slate-600">{RECURSO_CATEGORIAS[recurso.categoria]}</td>
+                <td>
+                  <a href={recurso.url} target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-xs font-medium text-brand-700 hover:text-brand-900">
+                    Abrir <Icon name="external" size={12} />
+                  </a>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </section>
+  )}
+</Layout>

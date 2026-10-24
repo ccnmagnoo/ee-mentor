@@ -1,0 +1,184 @@
+schema_version = 1
+empresa_id = "EMP-003"
+id = "VIS-001"
+fecha = "2026-09-18"
+asesor = "Carlos Campos N."
+grado_consumo = "relevante"
+descripcion_perfil = "Hostal Brisa Marina es un establecimiento de 9 habitaciones con desayuno incluido. La electricidad se utiliza en iluminación, agua caliente, refrigeración de desayuno y calefacción individual. El GLP abastece la cocina y un calefón. La envolvente presenta ventanales de vidrio simple y filtraciones en habitaciones de la fachada poniente. No existe gestión energética formal."
+usos_finales = [ "acs", "iluminacion", "climatizacion", "refrigeracion" ]
+acuerdos = [ "La empresa entregará 12 meses de facturación para evaluar tarifa y potencia.", "Se coordinará visita de especialista para evaluar climatización y ACS." ]
+proxima_visita = "2026-12-10"
+observaciones = "Se recomienda priorizar medidas de bajo costo antes de la temporada alta."
+created_at = "2026-09-18T11:00:00.000Z"
+updated_at = "2026-01-01T00:00:00.000Z"
+
+[[energeticos]]
+tipo = "electricidad"
+consumo = 1800
+unidad = "kWh/mes"
+costo = 310000
+observacion = "Mayor consumo en temporada estival."
+
+[[energeticos]]
+tipo = "glp"
+consumo = 80
+unidad = "kg/mes"
+costo = 118000
+observacion = "Cocina y calefón."
+
+[[equipos]]
+nombre = "Calefón a gas"
+cantidad = 1
+potencia_w = 0
+horas_dia = 24
+estado = "deficiente"
+observacion = "Equipo antiguo y sobredimensionado."
+
+[[equipos]]
+nombre = "Calefactores eléctricos"
+cantidad = 9
+potencia_w = 1500
+horas_dia = 8
+estado = "deficiente"
+observacion = "Uno por habitación."
+
+[[equipos]]
+nombre = "Refrigerador de desayuno"
+cantidad = 2
+potencia_w = 500
+horas_dia = 24
+estado = "regular"
+observacion = "Sellos en regular estado."
+
+[[equipos]]
+nombre = "Luminarias de pasillo y habitaciones"
+cantidad = 42
+potencia_w = 18
+horas_dia = 10
+estado = "regular"
+observacion = "Mezcla de LED y fluorescentes."
+
+[secciones.iluminacion]
+puntaje = 2
+observaciones = "Mezcla de tecnologías y luces de pasillo encendidas 24/7."
+tecnologia = "mixta"
+estado = "regular"
+horas_uso_diarias = 12
+
+[secciones.refrigeracion]
+puntaje = 3
+observaciones = "Equipos de desayuno en buen estado general."
+cantidad_equipos = 2
+antiguedad_anios = 5
+mantencion = "programada"
+
+[secciones.congelacion]
+puntaje = 0
+observaciones = "No aplica."
+cantidad_equipos = 0
+antiguedad_anios = 0
+estado = "no_evaluado"
+
+[secciones.climatizacion]
+puntaje = 1
+observaciones = "Calefactores individuales en todas las habitaciones."
+tecnologia = "Calefactores eléctricos"
+mantenciones = "sin_mantencion"
+control_temperatura = "manual"
+
+[secciones.acs]
+puntaje = 2
+observaciones = "Calefón antiguo y sin control de temperatura."
+tecnologia = "Calefón a gas central"
+fuente_energetica = "glp"
+horarios = "24 horas"
+
+[secciones.coccion]
+puntaje = 3
+observaciones = "Cocina de desayuno con equipos a gas en buen estado."
+equipos_principales = "Cocina a gas, tostador, hervidor"
+combustible = "glp"
+
+[secciones.motores]
+puntaje = 3
+observaciones = "Sin motores relevantes."
+tipo = "Bombas de agua"
+estado = "regular"
+mantencion = "ocasional"
+
+[secciones.envolvente]
+puntaje = 2
+observaciones = "Ventanas de vidrio simple y filtraciones en fachada poniente."
+ventanas = "deficiente"
+puertas = "regular"
+infiltraciones = "deficiente"
+aislacion = "deficiente"
+
+[secciones.gestion]
+puntaje = 1
+observaciones = "Sin gestión energética."
+nivel = "sin_gestion"
+monitoreo = false
+responsable = ""
+
+[secciones.tarifas]
+puntaje = 2
+observaciones = "Tarifa sin análisis y potencia contratada no revisada."
+tarifa_actual = "BT2"
+potencia_contratada_kw = 12
+factor_potencia = 0.92
+
+[[hallazgos]]
+hallazgo_id = "HAL-CLIM-01"
+justificacion = "Nueve calefactores individuales de 1,5 kW se usan como única fuente de calefacción."
+
+[[hallazgos]]
+hallazgo_id = "HAL-ACS-01"
+justificacion = "Calefón central antiguo, sin aislación y sobredimensionado para la demanda."
+
+[[hallazgos]]
+hallazgo_id = "HAL-ENV-01"
+justificacion = "Ventanales de vidrio simple con exposición solar en fachada norte."
+
+[[hallazgos]]
+hallazgo_id = "HAL-ENV-02"
+justificacion = "Filtraciones percibidas en ventanas y puertas de habitaciones."
+
+[[hallazgos]]
+hallazgo_id = "HAL-GEST-01"
+justificacion = "No existe registro de consumos ni responsable designado."
+
+[[hallazgos]]
+hallazgo_id = "HAL-ERNC-01"
+justificacion = "Cubierta disponible sin evaluación de autoconsumo solar."
+
+[[recomendaciones]]
+recomendacion_id = "REC-CLIM-01"
+prioridad = "alta"
+observacion = "Evaluar bombas de calor por habitación o sistema central."
+
+[[recomendaciones]]
+recomendacion_id = "REC-ACS-01"
+prioridad = "media"
+observacion = "Cotizar calefón eficiente o bomba de calor para ACS."
+
+[[recomendaciones]]
+recomendacion_id = "REC-ENV-02"
+prioridad = "alta"
+observacion = "Priorizar sellos en habitaciones de fachada poniente."
+
+[[recomendaciones]]
+recomendacion_id = "REC-ENV-01"
+prioridad = "media"
+observacion = "Evaluar láminas de control solar en ventanales norte."
+
+[[recomendaciones]]
+recomendacion_id = "REC-GEST-01"
+prioridad = "alta"
+observacion = "Implementar registro mensual por medidor."
+
+[[recomendaciones]]
+recomendacion_id = "REC-ERNC-01"
+prioridad = "media"
+observacion = "Solicitar prefactibilidad solar para cubierta."
+

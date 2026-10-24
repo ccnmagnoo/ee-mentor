@@ -1,0 +1,13 @@
+id = "CAN-HAL-vitrinas-de-refrigeracion"
+tipo = "hallazgo"
+titulo = "Vitrinas de refrigeración"
+descripcion = "El potencial uso de vitrinas refrigeradas como equipos de almacenamiento permanente constituye una mala práctica operacional y energética , ya que estos equipos están diseñados principalmente para exhibición y venta , no para conservación prolongada de alimentos. Las vitrinas presentan mayores pérdidas térmicas debido a superficies acristaladas, menor aislación y, en muchos casos, sistemas abiertos o con aperturas frecuentes, lo que obliga al compresor a operar de forma continua para mantener la temperatura de consigna."
+categoria = "envolvente"
+impacto = "alto"
+inversion = "baja"
+dificultad = "baja"
+origen = "casos:Cafetería"
+fuente_id = "FUE-le-flaneur-spa-382938ab020580538763e1812d2fc12e"
+estado = "pendiente"
+created_at = "2026-10-24T17:57:09.549Z"
+

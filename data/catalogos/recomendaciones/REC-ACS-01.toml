@@ -1,0 +1,20 @@
+schema_version = 1
+id = "REC-ACS-01"
+codigo = "REC-ACS-01"
+titulo = "Renovación de equipos de agua caliente sanitaria"
+categoria = "acs"
+descripcion = "Evaluar el recambio de calefones o termos por equipos de mayor eficiencia, correctamente dimensionados según la demanda real, o la incorporación de bombas de calor para ACS."
+beneficio = "Reduce el consumo de combustible o electricidad, mejora la disponibilidad de agua caliente y disminuye las pérdidas de acumulación."
+inversion = "media"
+dificultad = "media"
+prioridad = "media"
+ahorro_estimado = "20-40% del consumo de ACS"
+plazo = "Mediano plazo (3-6 meses)"
+energetico = "glp"
+hallazgos_relacionados = [ "HAL-ACS-01" ]
+tags = [ "acs", "calefon", "eficiencia" ]
+activo = true
+origen = "catalogo_base"
+created_at = "2026-01-01T00:00:00.000Z"
+updated_at = "2026-01-01T00:00:00.000Z"
+

@@ -1,0 +1,13 @@
+id = "CAN-REC-limpieza-preventiva-campana-de-extraccion-"
+tipo = "recomendacion"
+titulo = "Limpieza preventiva campana de extracción de aire de cocina"
+descripcion = "Se recomienda implementar un programa de limpieza periódica de filtros y ductos, además de utilizar la extracción únicamente durante los períodos efectivos de cocción. Esto es de vital importancia para evitar acumulación de material que puede representar un riesgo para la integridad del establecimiento y las personas."
+categoria = "ventilacion"
+impacto = "alto"
+inversion = "baja"
+dificultad = "media"
+origen = "casos:Restaurante"
+fuente_id = "FUE-rito-mata-390938ab0205809584b2c563debd6138"
+estado = "pendiente"
+created_at = "2026-10-24T17:57:10.057Z"
+

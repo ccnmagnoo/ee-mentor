@@ -1,0 +1,793 @@
+---
+import Icon from '@/components/ui/Icon.astro';
+import SeccionCard from '@/components/visitas/SeccionCard.astro';
+import {
+  CATEGORIAS,
+  ENERGOS,
+  ESTADOS_EQUIPO,
+  GRADOS_CONSUMO,
+  MANTENCIONES,
+  SeccionesSchema,
+  TECNOLOGIAS_ILUMINACION,
+  USOS_FINALES,
+  type Categoria,
+  type Empresa,
+  type Energetico,
+  type Hallazgo,
+  type Recomendacion,
+  type Visita,
+} from '@/lib/schemas';
+import { todayISO } from '@/lib/config';
+
+interface Props {
+  empresa: Empresa;
+  action: string;
+  visita?: Visita | null;
+  hallazgos: Hallazgo[];
+  recomendaciones: Recomendacion[];
+  asesorDefault: string;
+  submitLabel?: string;
+  cancelHref: string;
+  esNueva?: boolean;
+}
+const {
+  empresa,
+  action,
+  visita = null,
+  hallazgos,
+  recomendaciones,
+  asesorDefault,
+  submitLabel = 'Guardar visita',
+  cancelHref,
+  esNueva = false,
+} = Astro.props;
+
+const secciones = visita?.secciones ?? SeccionesSchema.parse({});
+const energeticos: Energetico[] = visita?.energeticos.length
+  ? visita.energeticos
+  : [{ tipo: 'electricidad', unidad: 'kWh/mes', observacion: '' }];
+const equipos = visita?.equipos ?? [];
+
+const hallazgosSeleccionados = new Map(
+  (visita?.hallazgos ?? []).map((item) => [item.hallazgo_id, item.justificacion]),
+);
+const recomendacionesSeleccionadas = new Map(
+  (visita?.recomendaciones ?? []).map((item) => [item.recomendacion_id, item]),
+);
+
+const hallazgosPorCategoria = new Map<Categoria, Hallazgo[]>();
+for (const hallazgo of hallazgos) {
+  hallazgosPorCategoria.set(hallazgo.categoria, [
+    ...(hallazgosPorCategoria.get(hallazgo.categoria) ?? []),
+    hallazgo,
+  ]);
+}
+
+const recomendacionesPorCategoria = new Map<Categoria, Recomendacion[]>();
+for (const reco of recomendaciones) {
+  recomendacionesPorCategoria.set(reco.categoria, [
+    ...(recomendacionesPorCategoria.get(reco.categoria) ?? []),
+    reco,
+  ]);
+}
+
+const usosSeleccionados = new Set(visita?.usos_finales ?? []);
+---
+
+<form action={action} method="post" data-api class="space-y-5">
+  <div data-form-error class="hidden"></div>
+
+  <div class="card card-pad">
+    <div class="flex flex-wrap items-start justify-between gap-3">
+      <div>
+        <p class="eyebrow">Visita energética</p>
+        <h2 class="mt-1 text-lg font-semibold text-slate-900">{empresa.nombre}</h2>
+        <p class="mt-1 text-sm text-slate-500">
+          {visita && !esNueva ? `Editando ${visita.id}` : 'Registra el diagnóstico y genera el informe automáticamente.'}
+        </p>
+      </div>
+      <div class="flex items-center gap-2">
+        <span class="badge-brand"><Icon name="target" size={12} /> {empresa.rubro}</span>
+        <span class="badge-neutral">{empresa.comuna || 'Sin comuna'}</span>
+      </div>
+    </div>
+  </div>
+
+  <section class="card overflow-hidden">
+    <div class="section-heading">
+      <span class="step-number">A</span>
+      <div>
+        <h2 class="fieldset-title">Datos de la visita</h2>
+        <p class="text-xs text-slate-500">Identificación del diagnóstico y contexto general del negocio.</p>
+      </div>
+    </div>
+    <div class="grid gap-4 p-5 sm:grid-cols-2 sm:p-6">
+      <div>
+        <label class="label" for="fecha">Fecha de visita *</label>
+        <input id="fecha" name="fecha" type="date" class="input" required value={visita?.fecha ?? todayISO()} />
+      </div>
+      <div>
+        <label class="label" for="asesor">Asesor *</label>
+        <input id="asesor" name="asesor" class="input" required value={visita?.asesor ?? asesorDefault} />
+      </div>
+      <div>
+        <label class="label" for="grado_consumo">Grado de consumo</label>
+        <select id="grado_consumo" name="grado_consumo" class="input">
+          {Object.entries(GRADOS_CONSUMO).map(([key, label]) => (
+            <option value={key} selected={(visita?.grado_consumo ?? 'moderado') === key}>{label}</option>
+          ))}
+        </select>
+      </div>
+      <div>
+        <label class="label" for="proxima_visita">Próxima visita sugerida</label>
+        <input id="proxima_visita" name="proxima_visita" type="date" class="input" value={visita?.proxima_visita ?? ''} />
+      </div>
+      <div class="sm:col-span-2">
+        <label class="label" for="descripcion_perfil">Descripción del perfil energético</label>
+        <textarea
+          id="descripcion_perfil"
+          name="descripcion_perfil"
+          rows="4"
+          class="input"
+          placeholder="Si se deja vacío, el informe construye una descripción automática a partir de los datos de la empresa y la visita."
+        >{visita?.descripcion_perfil ?? ''}</textarea>
+        <p class="help">Se recomienda describir el negocio, los energéticos, los principales usos finales y la operación.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="card overflow-hidden">
+    <div class="section-heading">
+      <span class="step-number">B</span>
+      <div>
+        <h2 class="fieldset-title">Energéticos y usos finales</h2>
+        <p class="text-xs text-slate-500">Consumos declarados o estimados a partir de la facturación.</p>
+      </div>
+    </div>
+    <div class="space-y-4 p-5 sm:p-6">
+      <div class="flex items-center justify-between gap-3">
+        <p class="text-sm font-medium text-slate-700">Energéticos utilizados</p>
+        <button type="button" class="btn-secondary btn-sm" data-add-row="energeticos">
+          <Icon name="plus" size={14} /> Agregar energético
+        </button>
+      </div>
+
+      <div data-rows="energeticos" class="space-y-3">
+        {energeticos.map((item, index) => (
+          <div data-row class="rounded-lg border border-slate-200 bg-slate-50/40 p-3">
+            <div class="grid gap-3 sm:grid-cols-12">
+              <div class="sm:col-span-3">
+                <label class="label">Tipo</label>
+                <select name={`energeticos.${index}.tipo`} class="input input-sm">
+                  {Object.entries(ENERGOS).map(([key, label]) => (
+                    <option value={key} selected={item.tipo === key}>{label}</option>
+                  ))}
+                </select>
+              </div>
+              <div class="sm:col-span-2">
+                <label class="label">Consumo</label>
+                <input name={`energeticos.${index}.consumo`} type="number" min="0" step="0.01" class="input input-sm" value={item.consumo ?? ''} />
+              </div>
+              <div class="sm:col-span-2">
+                <label class="label">Unidad</label>
+                <input name={`energeticos.${index}.unidad`} class="input input-sm" value={item.unidad ?? 'kWh/mes'} />
+              </div>
+              <div class="sm:col-span-2">
+                <label class="label">Costo (CLP)</label>
+                <input name={`energeticos.${index}.costo`} type="number" min="0" step="1" class="input input-sm" value={item.costo ?? ''} />
+              </div>
+              <div class="sm:col-span-3">
+                <label class="label">Observación</label>
+                <input name={`energeticos.${index}.observacion`} class="input input-sm" value={item.observacion ?? ''} />
+              </div>
+            </div>
+            <button type="button" class="mt-2 text-xs font-medium text-rose-600 hover:text-rose-700" data-remove-row>
+              Quitar
+            </button>
+          </div>
+        ))}
+      </div>
+
+      <div>
+        <p class="label">Usos finales principales</p>
+        <div class="flex flex-wrap gap-2">
+          {Object.entries(USOS_FINALES).map(([key, label]) => (
+            <label class="flex cursor-pointer items-center gap-2 rounded-lg border border-slate-200 bg-white px-3 py-2 text-xs font-medium text-slate-700 hover:border-brand-300">
+              <input
+                type="checkbox"
+                name="usos_finales[]"
+                value={key}
+                class="checkbox"
+                checked={usosSeleccionados.has(key as keyof typeof USOS_FINALES)}
+              />
+              {label}
+            </label>
+          ))}
+        </div>
+      </div>
+
+      <div>
+        <div class="flex items-center justify-between gap-3">
+          <p class="text-sm font-medium text-slate-700">Equipos y procesos observados</p>
+          <button type="button" class="btn-secondary btn-sm" data-add-row="equipos">
+            <Icon name="plus" size={14} /> Agregar equipo
+          </button>
+        </div>
+        <div data-rows="equipos" class="mt-3 space-y-3">
+          {equipos.map((equipo, index) => (
+            <div data-row class="rounded-lg border border-slate-200 bg-slate-50/40 p-3">
+              <div class="grid gap-3 sm:grid-cols-12">
+                <div class="sm:col-span-3">
+                  <label class="label">Equipo</label>
+                  <input name={`equipos.${index}.nombre`} class="input input-sm" value={equipo.nombre ?? ''} placeholder="Ej: Vitrina refrigerada" />
+                </div>
+                <div class="sm:col-span-1">
+                  <label class="label">Cant.</label>
+                  <input name={`equipos.${index}.cantidad`} type="number" min="0" step="1" class="input input-sm" value={equipo.cantidad ?? 1} />
+                </div>
+                <div class="sm:col-span-2">
+                  <label class="label">Potencia (W)</label>
+                  <input name={`equipos.${index}.potencia_w`} type="number" min="0" step="1" class="input input-sm" value={equipo.potencia_w ?? ''} />
+                </div>
+                <div class="sm:col-span-1">
+                  <label class="label">h/día</label>
+                  <input name={`equipos.${index}.horas_dia`} type="number" min="0" step="0.5" class="input input-sm" value={equipo.horas_dia ?? ''} />
+                </div>
+                <div class="sm:col-span-2">
+                  <label class="label">Estado</label>
+                  <select name={`equipos.${index}.estado`} class="input input-sm">
+                    {Object.entries(ESTADOS_EQUIPO).map(([key, label]) => (
+                      <option value={key} selected={equipo.estado === key}>{label}</option>
+                    ))}
+                  </select>
+                </div>
+                <div class="sm:col-span-3">
+                  <label class="label">Observación</label>
+                  <input name={`equipos.${index}.observacion`} class="input input-sm" value={equipo.observacion ?? ''} />
+                </div>
+              </div>
+              <button type="button" class="mt-2 text-xs font-medium text-rose-600 hover:text-rose-700" data-remove-row>
+                Quitar
+              </button>
+            </div>
+          ))}
+        </div>
+        {equipos.length === 0 && <p class="help mt-2">Aún no se registran equipos. Agrega los relevantes para el diagnóstico.</p>}
+      </div>
+    </div>
+  </section>
+
+  <section class="card overflow-hidden">
+    <div class="section-heading">
+      <span class="step-number">C</span>
+      <div>
+        <h2 class="fieldset-title">Evaluación por dimensiones</h2>
+        <p class="text-xs text-slate-500">Puntaje 0 a 5 por sección. El informe calcula promedios y clasificación.</p>
+      </div>
+    </div>
+    <div class="flex flex-wrap gap-2 p-5 sm:p-6">
+      {Object.entries({
+        iluminacion: 'Iluminación',
+        refrigeracion: 'Refrigeración',
+        congelacion: 'Congelación',
+        climatizacion: 'Climatización',
+        acs: 'ACS',
+        coccion: 'Cocción',
+        motores: 'Motores',
+        envolvente: 'Envolvente',
+        gestion: 'Gestión',
+        tarifas: 'Tarifas',
+      }).map(([key, label]) => (
+        <a href={`#seccion-${key}`} class="badge-neutral hover:bg-slate-100">{label}</a>
+      ))}
+    </div>
+  </section>
+
+  <SeccionCard
+    numero="1"
+    seccionKey="iluminacion"
+    titulo="Iluminación"
+    descripcion="Tecnología, estado y horas de uso."
+    puntaje={secciones.iluminacion.puntaje}
+    observaciones={secciones.iluminacion.observaciones}
+  >
+    <div>
+      <label class="label">Tecnología predominante</label>
+      <select name="secciones.iluminacion.tecnologia" class="input">
+        {Object.entries(TECNOLOGIAS_ILUMINACION).map(([key, label]) => (
+          <option value={key} selected={secciones.iluminacion.tecnologia === key}>{label}</option>
+        ))}
+      </select>
+    </div>
+    <div class="grid grid-cols-2 gap-4">
+      <div>
+        <label class="label">Estado general</label>
+        <select name="secciones.iluminacion.estado" class="input">
+          {Object.entries(ESTADOS_EQUIPO).map(([key, label]) => (
+            <option value={key} selected={secciones.iluminacion.estado === key}>{label}</option>
+          ))}
+        </select>
+      </div>
+      <div>
+        <label class="label">Horas de uso diario</label>
+        <input name="secciones.iluminacion.horas_uso_diarias" type="number" min="0" max="24" step="0.5" class="input" value={secciones.iluminacion.horas_uso_diarias} />
+      </div>
+    </div>
+  </SeccionCard>
+
+  <SeccionCard
+    numero="2"
+    seccionKey="refrigeracion"
+    titulo="Refrigeración"
+    descripcion="Cantidad, antigüedad y mantención de equipos."
+    puntaje={secciones.refrigeracion.puntaje}
+    observaciones={secciones.refrigeracion.observaciones}
+  >
+    <div>
+      <label class="label">Cantidad de equipos</label>
+      <input name="secciones.refrigeracion.cantidad_equipos" type="number" min="0" step="1" class="input" value={secciones.refrigeracion.cantidad_equipos} />
+    </div>
+    <div>
+      <label class="label">Antigüedad (años)</label>
+      <input name="secciones.refrigeracion.antiguedad_anios" type="number" min="0" step="0.5" class="input" value={secciones.refrigeracion.antiguedad_anios} />
+    </div>
+    <div class="sm:col-span-2">
+      <label class="label">Mantención</label>
+      <select name="secciones.refrigeracion.mantencion" class="input">
+        {Object.entries(MANTENCIONES).map(([key, label]) => (
+          <option value={key} selected={secciones.refrigeracion.mantencion === key}>{label}</option>
+        ))}
+      </select>
+    </div>
+  </SeccionCard>
+
+  <SeccionCard
+    numero="3"
+    seccionKey="congelacion"
+    titulo="Congelación"
+    descripcion="Equipos de congelación, antigüedad y estado."
+    puntaje={secciones.congelacion.puntaje}
+    observaciones={secciones.congelacion.observaciones}
+  >
+    <div>
+      <label class="label">Cantidad de equipos</label>
+      <input name="secciones.congelacion.cantidad_equipos" type="number" min="0" step="1" class="input" value={secciones.congelacion.cantidad_equipos} />
+    </div>
+    <div>
+      <label class="label">Antigüedad (años)</label>
+      <input name="secciones.congelacion.antiguedad_anios" type="number" min="0" step="0.5" class="input" value={secciones.congelacion.antiguedad_anios} />
+    </div>
+    <div class="sm:col-span-2">
+      <label class="label">Estado general</label>
+      <select name="secciones.congelacion.estado" class="input">
+        {Object.entries(ESTADOS_EQUIPO).map(([key, label]) => (
+          <option value={key} selected={secciones.congelacion.estado === key}>{label}</option>
+        ))}
+      </select>
+    </div>
+  </SeccionCard>
+
+  <SeccionCard
+    numero="4"
+    seccionKey="climatizacion"
+    titulo="Climatización y ventilación"
+    descripcion="Tecnología, mantenciones y control de temperatura."
+    puntaje={secciones.climatizacion.puntaje}
+    observaciones={secciones.climatizacion.observaciones}
+  >
+    <div>
+      <label class="label">Tecnología</label>
+      <input name="secciones.climatizacion.tecnologia" class="input" value={secciones.climatizacion.tecnologia} placeholder="Split, calefactor, sin climatización…" />
+    </div>
+    <div>
+      <label class="label">Control de temperatura</label>
+      <select name="secciones.climatizacion.control_temperatura" class="input">
+        {Object.entries({
+          termostato: 'Termostato / control automático',
+          manual: 'Control manual',
+          sin_control: 'Sin control',
+          no_evaluado: 'No evaluado',
+        }).map(([key, label]) => (
+          <option value={key} selected={secciones.climatizacion.control_temperatura === key}>{label}</option>
+        ))}
+      </select>
+    </div>
+    <div class="sm:col-span-2">
+      <label class="label">Mantenciones</label>
+      <select name="secciones.climatizacion.mantenciones" class="input">
+        {Object.entries(MANTENCIONES).map(([key, label]) => (
+          <option value={key} selected={secciones.climatizacion.mantenciones === key}>{label}</option>
+        ))}
+      </select>
+    </div>
+  </SeccionCard>
+
+  <SeccionCard
+    numero="5"
+    seccionKey="acs"
+    titulo="Agua caliente sanitaria"
+    descripcion="Tecnología, fuente energética y horarios de uso."
+    puntaje={secciones.acs.puntaje}
+    observaciones={secciones.acs.observaciones}
+  >
+    <div>
+      <label class="label">Tecnología empleada</label>
+      <input name="secciones.acs.tecnologia" class="input" value={secciones.acs.tecnologia} placeholder="Calefón, termo eléctrico, bomba de calor…" />
+    </div>
+    <div>
+      <label class="label">Fuente energética</label>
+      <select name="secciones.acs.fuente_energetica" class="input">
+        {Object.entries(ENERGOS).map(([key, label]) => (
+          <option value={key} selected={secciones.acs.fuente_energetica === key}>{label}</option>
+        ))}
+      </select>
+    </div>
+    <div class="sm:col-span-2">
+      <label class="label">Horarios de uso</label>
+      <input name="secciones.acs.horarios" class="input" value={secciones.acs.horarios} placeholder="Ej: 08:00 a 20:00 / 24 horas" />
+    </div>
+  </SeccionCard>
+
+  <SeccionCard
+    numero="6"
+    seccionKey="coccion"
+    titulo="Cocción"
+    descripcion="Equipos principales y combustible utilizado."
+    puntaje={secciones.coccion.puntaje}
+    observaciones={secciones.coccion.observaciones}
+  >
+    <div>
+      <label class="label">Equipos principales</label>
+      <input name="secciones.coccion.equipos_principales" class="input" value={secciones.coccion.equipos_principales} placeholder="Horno, plancha, cocina…" />
+    </div>
+    <div>
+      <label class="label">Combustible utilizado</label>
+      <select name="secciones.coccion.combustible" class="input">
+        {Object.entries(ENERGOS).map(([key, label]) => (
+          <option value={key} selected={secciones.coccion.combustible === key}>{label}</option>
+        ))}
+      </select>
+    </div>
+  </SeccionCard>
+
+  <SeccionCard
+    numero="7"
+    seccionKey="motores"
+    titulo="Motores y equipos productivos"
+    descripcion="Tipo, estado y mantención de motores y equipos."
+    puntaje={secciones.motores.puntaje}
+    observaciones={secciones.motores.observaciones}
+  >
+    <div>
+      <label class="label">Tipo de motores / equipos</label>
+      <input name="secciones.motores.tipo" class="input" value={secciones.motores.tipo} />
+    </div>
+    <div>
+      <label class="label">Estado general</label>
+      <select name="secciones.motores.estado" class="input">
+        {Object.entries(ESTADOS_EQUIPO).map(([key, label]) => (
+          <option value={key} selected={secciones.motores.estado === key}>{label}</option>
+        ))}
+      </select>
+    </div>
+    <div class="sm:col-span-2">
+      <label class="label">Mantención</label>
+      <select name="secciones.motores.mantencion" class="input">
+        {Object.entries(MANTENCIONES).map(([key, label]) => (
+          <option value={key} selected={secciones.motores.mantencion === key}>{label}</option>
+        ))}
+      </select>
+    </div>
+  </SeccionCard>
+
+  <SeccionCard
+    numero="8"
+    seccionKey="envolvente"
+    titulo="Envolvente e infiltraciones"
+    descripcion="Ventanas, puertas, aislación y sellamiento."
+    puntaje={secciones.envolvente.puntaje}
+    observaciones={secciones.envolvente.observaciones}
+  >
+    {([
+      ['ventanas', 'Ventanas'],
+      ['puertas', 'Puertas'],
+      ['infiltraciones', 'Infiltraciones'],
+      ['aislacion', 'Aislación'],
+    ] as const).map(([key, label]) => (
+      <div>
+        <label class="label">{label}</label>
+        <select name={`secciones.envolvente.${key}`} class="input">
+          {Object.entries(ESTADOS_EQUIPO).map(([value, option]) => (
+            <option value={value} selected={secciones.envolvente[key] === value}>{option}</option>
+          ))}
+        </select>
+      </div>
+    ))}
+  </SeccionCard>
+
+  <SeccionCard
+    numero="9"
+    seccionKey="gestion"
+    titulo="Gestión energética"
+    descripcion="Nivel de gestión, monitoreo y responsables."
+    puntaje={secciones.gestion.puntaje}
+    observaciones={secciones.gestion.observaciones}
+  >
+    <div>
+      <label class="label">Nivel de gestión</label>
+      <select name="secciones.gestion.nivel" class="input">
+        {Object.entries({
+          sin_gestion: 'Sin gestión',
+          basica: 'Básica / incipiente',
+          sistematica: 'Sistemática',
+          certificada: 'Certificada (Sello EE u otro)',
+          no_evaluado: 'No evaluado',
+        }).map(([key, label]) => (
+          <option value={key} selected={secciones.gestion.nivel === key}>{label}</option>
+        ))}
+      </select>
+    </div>
+    <div>
+      <label class="label">Responsable energético</label>
+      <input name="secciones.gestion.responsable" class="input" value={secciones.gestion.responsable} />
+    </div>
+    <div class="sm:col-span-2">
+      <label class="flex cursor-pointer items-center gap-2 rounded-lg border border-slate-200 bg-slate-50/60 px-3 py-2 text-sm text-slate-700">
+        <input type="checkbox" name="secciones.gestion.monitoreo" class="checkbox" checked={secciones.gestion.monitoreo} />
+        Existe monitoreo periódico de consumos
+      </label>
+    </div>
+  </SeccionCard>
+
+  <SeccionCard
+    numero="10"
+    seccionKey="tarifas"
+    titulo="Tarifas y potencia contratada"
+    descripcion="Tarifa actual, potencia y factor de potencia."
+    puntaje={secciones.tarifas.puntaje}
+    observaciones={secciones.tarifas.observaciones}
+  >
+    <div>
+      <label class="label">Tarifa actual</label>
+      <input name="secciones.tarifas.tarifa_actual" class="input" value={secciones.tarifas.tarifa_actual} placeholder="BT1, BT4.3, AT4…" />
+    </div>
+    <div>
+      <label class="label">Potencia contratada (kW)</label>
+      <input name="secciones.tarifas.potencia_contratada_kw" type="number" min="0" step="0.1" class="input" value={secciones.tarifas.potencia_contratada_kw ?? ''} />
+    </div>
+    <div>
+      <label class="label">Factor de potencia</label>
+      <input name="secciones.tarifas.factor_potencia" type="number" min="0" max="1" step="0.01" class="input" value={secciones.tarifas.factor_potencia ?? ''} />
+    </div>
+  </SeccionCard>
+
+  <section class="card overflow-hidden">
+    <div class="section-heading justify-between">
+      <div class="flex items-center gap-3">
+        <span class="step-number">D</span>
+        <div>
+          <h2 class="fieldset-title">Hallazgos detectados</h2>
+          <p class="text-xs text-slate-500">Selecciona los hallazgos del catálogo y complementa con evidencia de terreno.</p>
+        </div>
+      </div>
+      <span class="badge-brand"><span data-count-hallazgos>0</span> seleccionados</span>
+    </div>
+    <div class="space-y-4 p-5 sm:p-6">
+      <label class="relative block">
+        <span class="sr-only">Buscar hallazgos</span>
+        <Icon name="search" size={16} class="pointer-events-none absolute left-3 top-2.5 text-slate-400" />
+        <input type="search" class="input pl-9" placeholder="Buscar por título, código o categoría…" data-filter-target="#hallazgos-list" />
+      </label>
+
+      <div id="hallazgos-list" class="space-y-5">
+        {[...hallazgosPorCategoria.entries()].map(([categoria, items]) => (
+          <div data-filter-group>
+            <h3 class="mb-2 text-xs font-semibold uppercase tracking-wide text-slate-500">{CATEGORIAS[categoria]}</h3>
+            <div class="grid gap-2 lg:grid-cols-2">
+              {items.map((hallazgo) => {
+                const seleccionado = hallazgosSeleccionados.has(hallazgo.id);
+                return (
+                  <div data-filter-item class="finding-card">
+                    <label class="flex cursor-pointer items-start gap-3">
+                      <input
+                        type="checkbox"
+                        name="hallazgos[]"
+                        value={hallazgo.id}
+                        class="checkbox mt-0.5"
+                        checked={seleccionado}
+                        data-recomendacion={hallazgo.recomendacion_id || undefined}
+                      />
+                      <span class="min-w-0">
+                        <span class="flex flex-wrap items-center gap-1.5">
+                          <span class="font-mono text-[10px] font-semibold text-slate-400">{hallazgo.codigo}</span>
+                          <span class="badge-neutral">{hallazgo.impacto}</span>
+                        </span>
+                        <span class="mt-0.5 block text-sm font-medium text-slate-800">{hallazgo.titulo}</span>
+                        <span class="mt-0.5 block text-xs leading-relaxed text-slate-500">{hallazgo.descripcion}</span>
+                      </span>
+                    </label>
+                    <div class="finding-justification mt-2">
+                      <label class="label">Justificación / evidencia observada</label>
+                      <textarea name={`justificacion_${hallazgo.id}`} rows="2" class="input input-sm" placeholder="Ej: se contabilizaron 12 luminarias en sala principal…">{hallazgosSeleccionados.get(hallazgo.id) ?? ''}</textarea>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="card overflow-hidden">
+    <div class="section-heading justify-between">
+      <div class="flex items-center gap-3">
+        <span class="step-number">E</span>
+        <div>
+          <h2 class="fieldset-title">Recomendaciones de mejora</h2>
+          <p class="text-xs text-slate-500">Selecciona las medidas a incluir, ajusta prioridad y agrega observaciones.</p>
+        </div>
+      </div>
+      <span class="badge-brand"><span data-count-recomendaciones>0</span> seleccionadas</span>
+    </div>
+    <div class="space-y-4 p-5 sm:p-6">
+      <label class="relative block">
+        <span class="sr-only">Buscar recomendaciones</span>
+        <Icon name="search" size={16} class="pointer-events-none absolute left-3 top-2.5 text-slate-400" />
+        <input type="search" class="input pl-9" placeholder="Buscar por título, código o categoría…" data-filter-target="#recomendaciones-list" />
+      </label>
+
+      <div id="recomendaciones-list" class="space-y-5">
+        {[...recomendacionesPorCategoria.entries()].map(([categoria, items]) => (
+          <div data-filter-group>
+            <h3 class="mb-2 text-xs font-semibold uppercase tracking-wide text-slate-500">{CATEGORIAS[categoria]}</h3>
+            <div class="grid gap-2 lg:grid-cols-2">
+              {items.map((reco) => {
+                const seleccion = recomendacionesSeleccionadas.get(reco.id);
+                return (
+                  <div data-filter-item class="finding-card">
+                    <label class="flex cursor-pointer items-start gap-3">
+                      <input
+                        type="checkbox"
+                        name="recomendaciones[]"
+                        value={reco.id}
+                        class="checkbox mt-0.5"
+                        checked={Boolean(seleccion)}
+                      />
+                      <span class="min-w-0">
+                        <span class="flex flex-wrap items-center gap-1.5">
+                          <span class="font-mono text-[10px] font-semibold text-slate-400">{reco.codigo}</span>
+                          <span class="badge-neutral">{reco.inversion}</span>
+                          <span class="badge-neutral">{reco.ahorro_estimado || 'Ahorro por cuantificar'}</span>
+                        </span>
+                        <span class="mt-0.5 block text-sm font-medium text-slate-800">{reco.titulo}</span>
+                        <span class="mt-0.5 block text-xs leading-relaxed text-slate-500">{reco.descripcion}</span>
+                      </span>
+                    </label>
+                    <div class="mt-2 grid gap-2 sm:grid-cols-[130px_1fr]">
+                      <div>
+                        <label class="label">Prioridad</label>
+                        <select name={`prioridad_${reco.id}`} class="input input-sm">
+                          <option value="">Según catálogo</option>
+                          {(['alta', 'media', 'baja'] as const).map((prioridad) => (
+                            <option value={prioridad} selected={seleccion?.prioridad === prioridad}>{prioridad}</option>
+                          ))}
+                        </select>
+                      </div>
+                      <div>
+                        <label class="label">Observación</label>
+                        <input name={`reco_obs_${reco.id}`} class="input input-sm" value={seleccion?.observacion ?? ''} />
+                      </div>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="card overflow-hidden">
+    <div class="section-heading">
+      <span class="step-number">F</span>
+      <div>
+        <h2 class="fieldset-title">Cierre de la visita</h2>
+        <p class="text-xs text-slate-500">Acuerdos, observaciones y próximos pasos.</p>
+      </div>
+    </div>
+    <div class="grid gap-4 p-5 sm:grid-cols-2 sm:p-6">
+      <div class="sm:col-span-2">
+        <label class="label" for="acuerdos_texto">Acuerdos y compromisos</label>
+        <textarea id="acuerdos_texto" name="acuerdos_texto" rows="4" class="input" placeholder="Un acuerdo por línea…">{(visita?.acuerdos ?? []).join('\n')}</textarea>
+        <p class="help">Cada línea se convierte en un viñete del plan de acción.</p>
+      </div>
+      <div class="sm:col-span-2">
+        <label class="label" for="observaciones">Observaciones generales de la visita</label>
+        <textarea id="observaciones" name="observaciones" rows="3" class="input">{visita?.observaciones ?? ''}</textarea>
+      </div>
+    </div>
+  </section>
+
+  <div class="flex flex-wrap items-center justify-end gap-2">
+    <a href={cancelHref} class="btn-secondary">Cancelar</a>
+    <button type="submit" class="btn-primary">
+      <Icon name="check" size={16} />
+      {submitLabel}
+    </button>
+  </div>
+</form>
+
+<template data-row-template="energeticos">
+  <div data-row class="rounded-lg border border-slate-200 bg-slate-50/40 p-3">
+    <div class="grid gap-3 sm:grid-cols-12">
+      <div class="sm:col-span-3">
+        <label class="label">Tipo</label>
+        <select name="energeticos.__INDEX__.tipo" class="input input-sm">
+          {Object.entries(ENERGOS).map(([key, label]) => (
+            <option value={key}>{label}</option>
+          ))}
+        </select>
+      </div>
+      <div class="sm:col-span-2">
+        <label class="label">Consumo</label>
+        <input name="energeticos.__INDEX__.consumo" type="number" min="0" step="0.01" class="input input-sm" />
+      </div>
+      <div class="sm:col-span-2">
+        <label class="label">Unidad</label>
+        <input name="energeticos.__INDEX__.unidad" class="input input-sm" value="kWh/mes" />
+      </div>
+      <div class="sm:col-span-2">
+        <label class="label">Costo (CLP)</label>
+        <input name="energeticos.__INDEX__.costo" type="number" min="0" step="1" class="input input-sm" />
+      </div>
+      <div class="sm:col-span-3">
+        <label class="label">Observación</label>
+        <input name="energeticos.__INDEX__.observacion" class="input input-sm" />
+      </div>
+    </div>
+    <button type="button" class="mt-2 text-xs font-medium text-rose-600 hover:text-rose-700" data-remove-row>
+      Quitar
+    </button>
+  </div>
+</template>
+
+<template data-row-template="equipos">
+  <div data-row class="rounded-lg border border-slate-200 bg-slate-50/40 p-3">
+    <div class="grid gap-3 sm:grid-cols-12">
+      <div class="sm:col-span-3">
+        <label class="label">Equipo</label>
+        <input name="equipos.__INDEX__.nombre" class="input input-sm" />
+      </div>
+      <div class="sm:col-span-1">
+        <label class="label">Cant.</label>
+        <input name="equipos.__INDEX__.cantidad" type="number" min="0" step="1" class="input input-sm" value="1" />
+      </div>
+      <div class="sm:col-span-2">
+        <label class="label">Potencia (W)</label>
+        <input name="equipos.__INDEX__.potencia_w" type="number" min="0" step="1" class="input input-sm" />
+      </div>
+      <div class="sm:col-span-1">
+        <label class="label">h/día</label>
+        <input name="equipos.__INDEX__.horas_dia" type="number" min="0" step="0.5" class="input input-sm" />
+      </div>
+      <div class="sm:col-span-2">
+        <label class="label">Estado</label>
+        <select name="equipos.__INDEX__.estado" class="input input-sm">
+          {Object.entries(ESTADOS_EQUIPO).map(([key, label]) => (
+            <option value={key}>{label}</option>
+          ))}
+        </select>
+      </div>
+      <div class="sm:col-span-3">
+        <label class="label">Observación</label>
+        <input name="equipos.__INDEX__.observacion" class="input input-sm" />
+      </div>
+    </div>
+    <button type="button" class="mt-2 text-xs font-medium text-rose-600 hover:text-rose-700" data-remove-row>
+      Quitar
+    </button>
+  </div>
+</template>

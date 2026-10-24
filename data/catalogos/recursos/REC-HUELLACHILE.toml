@@ -1,0 +1,9 @@
+schema_version = 1
+id = "REC-HUELLACHILE"
+categoria = "herramientas"
+nombre = "HuellaChile"
+descripcion = "Programa del Ministerio del Medio Ambiente para medir y gestionar la huella de carbono de las empresas."
+url = "https://huellachile.mma.gob.cl/"
+orden = 130
+activo = true
+

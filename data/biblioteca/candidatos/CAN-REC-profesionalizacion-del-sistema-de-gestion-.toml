@@ -1,0 +1,13 @@
+id = "CAN-REC-profesionalizacion-del-sistema-de-gestion-"
+tipo = "recomendacion"
+titulo = "Profesionalización del sistema de Gestión de la Energía"
+descripcion = "Se recomienda avanzar hacia la profesionalización de la gestión energética de la empresa . Esto implica designar un responsable interno o apoyo externo que se encargue de monitorear consumos, revisar indicadores eléctricos (como factor de potencia, demanda máxima y consumos base), e implementar buenas prácticas operacionales. La incorporación de una gestión energética sistemática permitirá identificar oportunidades de mejora, reducir costos, optimizar el uso de la energía y asegurar la sostenibilidad operativa del negocio en el tiempo y acorde a su crecimiento empresarial.\nA mediano plazo, se podría evaluar la adopción de estándares más formales como la norma ISO 50001 en una versión simplificada o adaptada, lo que permitiría consolidar una cultura energética organizacional, mejorar la eficiencia de manera sostenida y eventualmente reducir costos operacionales.\nOtra herramienta que puede apoyar al reconocimiento del proceso de mejora de gestión es apuntar al Sello de Eficiencia Energética del Ministerio de Energía, con subscripción gratuita para MiPymes. Ver enlace en anexos de utilidad.\nPuede revisar con más información en La Guía Metodológica para Auditorías Energéticas para el Sector de Alimentos"
+categoria = "gestion_energetica"
+impacto = "medio"
+inversion = "baja"
+dificultad = "media"
+origen = "casos:No especificado"
+fuente_id = "FUE-stefymar-382938ab0205804e85d2cd29aa1f7eb1"
+estado = "pendiente"
+created_at = "2026-10-24T17:57:10.242Z"
+

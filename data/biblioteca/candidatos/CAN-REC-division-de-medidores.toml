@@ -1,0 +1,13 @@
+id = "CAN-REC-division-de-medidores"
+tipo = "recomendacion"
+titulo = "División de medidores"
+descripcion = "En paralelo a lo anterior, resulta fundamental abordar la actual configuración del sistema de medición mediante la separación de los consumos en medidores independientes. Se propone instalar al menos tres medidores diferenciados: uno exclusivo para la fábrica y uno para cada vivienda. Esta medida permitirá asignar correctamente los consumos, evitando subsidios cruzados entre el uso productivo y el residencial, y facilitando una mayor transparencia en la facturación eléctrica. Asimismo, la separación de medidores constituye una condición habilitante para que la fábrica pueda migrar a una tarifa industrial sin afectar el suministro de las viviendas, las cuales pueden mantenerse bajo una tarifa BT1 acorde a su perfil sin afectar las operaciones desagregadas de potencia de la tarifa de la fábrica."
+categoria = "tarifas"
+impacto = "medio"
+inversion = "media"
+dificultad = "media"
+origen = "casos:Pastelería"
+fuente_id = "FUE-vijon-pasteleria-382938ab02058081bcb6de5c89055ba"
+estado = "pendiente"
+created_at = "2026-10-24T17:57:10.333Z"
+

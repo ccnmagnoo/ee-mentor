@@ -1,0 +1,13 @@
+id = "CAN-REC-refrigeradores-tipo-vc-cooler"
+tipo = "recomendacion"
+titulo = "Refrigeradores tipo VC Cooler"
+descripcion = "Se recomienda mantener despejadas las zonas de ventilación de los equipos, efectuar limpieza periódica de condensadores y serpentines, controlar el estado de las puertas y ajustar las temperaturas de funcionamiento de acuerdo con las necesidades reales de almacenamiento."
+categoria = "refrigeracion"
+impacto = "medio"
+inversion = "baja"
+dificultad = "media"
+origen = "casos:Cafetería"
+fuente_id = "FUE-la-creperia-rapa-nui-392938ab020580b2b86bcfcf44b"
+estado = "pendiente"
+created_at = "2026-10-24T17:57:09.406Z"
+

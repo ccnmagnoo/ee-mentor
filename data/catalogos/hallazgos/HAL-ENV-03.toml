@@ -1,0 +1,16 @@
+schema_version = 1
+id = "HAL-ENV-03"
+codigo = "ENV-03"
+titulo = "Falta de aislación en cubierta o muros"
+categoria = "envolvente"
+descripcion = "La construcción presenta cubierta o muros sin aislación térmica declarada, con superficies frías o calientes y condensación en algunos sectores. No se dispone de planos o antecedentes de la envolvente."
+justificacion = "La envolvente es la barrera entre el clima exterior y el interior. Mejorar su aislación reduce la demanda de climatización de forma sostenida, aunque requiere inversión."
+impacto = "medio"
+energetico = "electricidad"
+recomendacion_id = "REC-ENV-03"
+tags = [ "envolvente", "aislacion", "cubierta" ]
+activo = true
+origen = "catalogo_base"
+created_at = "2026-01-01T00:00:00.000Z"
+updated_at = "2026-01-01T00:00:00.000Z"
+

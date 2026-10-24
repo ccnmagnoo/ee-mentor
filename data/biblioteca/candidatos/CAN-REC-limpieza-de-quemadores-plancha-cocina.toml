@@ -1,0 +1,13 @@
+id = "CAN-REC-limpieza-de-quemadores-plancha-cocina"
+tipo = "recomendacion"
+titulo = "Limpieza de Quemadores plancha cocina"
+descripcion = "Realizar mantenimiento preventivo de quemadores al menos una vez al año antes del periodo de alta demanda turística. Es fundamental que ante los eventos de alta demanda, todos los equipos estén en su máximo operativo para asegurar eficiencia energética y performance de servicio. También verificar periódicamente la correcta combustión, detectables con olores a combustible no deseados o aparecimiento de restos de hollín en placas metálicas y quemadores. Apagar equipos durante pausas prolongadas. Es fundamental implementar inspecciones periódicas para detectar fugas y condiciones inseguras."
+categoria = "coccion"
+impacto = "medio"
+inversion = "media"
+dificultad = "media"
+origen = "casos:Cafetería"
+fuente_id = "FUE-la-boulangerie-390938ab0205801fb682ff6930a172ba"
+estado = "pendiente"
+created_at = "2026-10-24T17:57:09.292Z"
+

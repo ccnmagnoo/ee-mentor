@@ -1,0 +1,13 @@
+id = "CAN-REC-energias-renovables-fotovoltaica"
+tipo = "recomendacion"
+titulo = "Energías Renovables Fotovoltáica"
+descripcion = "La Boulangerie presenta un interesante potencial de incorporación de energía solar fotovoltaica gracias a una superficie útil disponible de aproximadamente 57 m² , donde es posible instalar un sistema de 9,1 kWp de potencia nominal . Bajo las condiciones de diseño evaluadas, con una inclinación de 27° y un azimut de 20° , el sistema podría generar del orden de 32,29 kWh diarios , equivalentes a 11.786,83 kWh anuales , alcanzando un factor de planta cercano al 15% . Esta producción permitiría cubrir una proporción significativa de la demanda eléctrica del negocio, estimándose una contribución entre 35% de los consumos durante los meses de invierno y hasta 61% durante el período estival , coincidiendo con la época de mayor actividad y demanda energética del establecimiento. La implementación de esta solución contribuiría a reducir la dependencia de la red eléctrica, estabilizar los costos operacionales frente a futuras alzas tarifarias y disminuir la huella de carbono asociada a la operación de la cafetería. Adicionalmente, la incorporación de un inversor híbrido con capacidad de integración de baterías entrega flexibilidad para aumentar el autoconsumo energético y mejorar la resiliencia ante eventuales interrupciones del suministro eléctrico. Considerando las condiciones actuales del mercado, la inversión referencial para un proyecto de estas características se sitúa entre $22.7 y $31.8 millones de pesos , representando una alternativa técnicamente viable para avanzar hacia una operación más eficiente y sostenible en la isla."
+categoria = "ernc"
+impacto = "medio"
+inversion = "alta"
+dificultad = "alta"
+origen = "casos:Cafetería"
+fuente_id = "FUE-la-boulangerie-390938ab0205801fb682ff6930a172ba"
+estado = "pendiente"
+created_at = "2026-10-24T17:57:09.309Z"
+

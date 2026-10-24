@@ -1,0 +1,57 @@
+Café Colores
+Café Colores
+Fecha June 17, 2026 4:34 PM
+Negocio Cafetería
+Grado consumos Moderado
+Usuario Carol Navarro
+Teléfono +56966387741
+Correo electrónico carol.navav@gmail.com
+Contraparte CND Sercotec Viña del Mar
+ACTA de seguimiento Asesoría/Mentoría
+Información del contacto y cliente (negocio)
+Nombre del contacto Carol Navarro RUT 18.886.446-5
+Nombre del negocio Café Color - Grupo Onix ROL 77875192-5
+Asesor asignado Carlos Campos N Servicio Seremi Energía
+Descripción
+Café Colores corresponde al de una cafetería de pequeña escala, donde la electricidad es la principal fuente de consumo , destinada principalmente a la operación de equipos de preparación, refrigeración e iluminación. El mayor gasto energético se concentra en las máquinas de café, hornos convectores y hervidores , que pueden representar entre el 40% y 60% del consumo total, debido a su uso intensivo y funcionamiento continuo durante la jornada. A su vez, los sistemas de refrigeración aportan entre un 20% y 30%, ya que operan de manera constante las 24 horas, mientras que la climatización, y por último la iluminación completan el resto del consumo con participaciones menores pero relevantes.
+El consumo energético presenta un patrón diario con picos en la mañana y la tarde , asociados a la mayor demanda de clientes, y un consumo base nocturno sostenido principalmente por equipos de frío. Este tipo de perfil muestra oportunidades claras de mejora mediante la optimización del uso de equipos, reducción de consumos en standby, mantención de refrigeradores y mejora en la eficiencia de iluminación y climatización . En conjunto, estas acciones permiten reducir costos operacionales y aumentar la eficiencia energética del local sin afectar su funcionamiento.
+Acometidas
+cliente: CGE 1634000, propietaria Delfina Delgado
+consumos energéticos: 712 kWh/mes
+Hallazgos
+Referencia Servicio Descripción
+Horno de convección cocinas/hornos El horno de convección utilizado para la cocción de masitas en Café Colores, son equipos de gran utilidad y versatilidad para el modelo de negocio. Pero una incorrecta utilización puede presentar ineficiencias operacionales si no se utiliza de forma adecuada. Uno de los principales problemas es el funcionamiento en vacío o con baja carga , lo que implica un alto consumo energético sin un aprovechamiento efectivo de la capacidad del equipo. Asimismo, la apertura frecuente de la puerta durante el proceso provoca pérdidas térmicas significativas , obligando al horno a trabajar más para recuperar la temperatura de consigna.
+Calefacción con calefactor calefacción Uso de calefactor individual (portátiles o eléctricos) como principal estrategia de climatización representa una práctica ineficiente tanto desde el punto de vista energético como operativo. Estos equipos suelen presentar bajos rendimientos globales , especialmente cuando se utilizan múltiples unidades en paralelo para cubrir un mismo espacio, generando consumos elevados de electricidad sin lograr una distribución homogénea del calor. Además, su uso descoordinado provoca sobrecalentamientos puntuales y zonas frías, afectando el confort térmico de clientes y trabajadores.
+Se mesón de refrigeración para almacenamiento refrigeración Hay un uso de un mesón refrigerado como equipo de almacenamiento de alimentos. E stos equipos están diseñados principalmente para apoyo operativo de corto plazo durante la preparación , no para almacenamiento prolongado. Su funcionamiento presenta aperturas frecuentes, exposición a temperatura ambiente y variaciones térmicas constantes, lo que reduce su eficiencia y aumenta el consumo energético. Además, estos equipos suelen tener menor capacidad de aislamiento y control de temperatura en comparación con refrigeradores dedicados, lo que puede comprometer la correcta conservación de los alimentos.
+No cuenta con gestión energética gestión energética No se evidencia la existencia explicita de un sistema formal de gestión de la energía dentro de la empresa, lo que limita la capacidad para monitorear, analizar y optimizar el consumo energético. Esta definición dificulta la identificación oportuna de ineficiencias, la implementación de medidas correctivas y el seguimiento de indicadores clave, generando una gestión más bien reactiva que estratégica en materia energética.
+Recomendaciones
+nombre Recomendación
+Mejoramiento uso almacenamiento Se recomienda implementar una diferenciación clara de usos entre equipos de almacenamiento y equipos de operación para refrigerados y congelados , estableciendo que el mesón refrigerado sea utilizado exclusivamente como superficie de trabajo con apoyo de conservación temporal (alta rotación), mientras que el almacenamiento principal de alimentos debe realizarse en refrigeradores o cámaras diseñadas para conservación prolongada . Estos equipos presentan mejor aislación térmica, menor variación de temperatura y mayor eficiencia energética para este propósito.
+Adicionalmente, se sugiere establecer un protocolo interno de gestión de alimentos , que incluya: traslado periódico desde almacenamiento a mesón según demanda (sistema FIFO), minimización de aperturas innecesarias, y control de temperaturas de ambos equipos. Desde la perspectiva energética, esta medida permite reducir el consumo eléctrico, optimizar la operación de los equipos y prolongar su vida útil , contribuyendo a una gestión más eficiente y sostenible del local.
+Sellamientos térmicos Es fundamental implementar medidas complementarias como la mejora del aislamiento térmico del local (sellos en puertas y ventanas) , la definición de temperaturas de consigna adecuadas (por ejemplo, 20–22 °C en invierno) y el control del encendido/apagado según ocupación real . En caso de mantener calefactores de apoyo, estos deben utilizarse de forma puntual y controlada. Esta estrategia permite reducir el consumo energético, mejorar el confort térmico y optimizar la operación del sistema de climatización , avanzando hacia una gestión más eficiente y sostenible.
+Protocolo de uso de Horno de convección Se recomienda optimizar el uso del horno mediante una programación eficiente de las tandas de cocción , buscando operar el equipo con carga completa o cercana a su capacidad máxima , evitando ciclos innecesarios. Es fundamental establecer un protocolo de uso que incluya precalentamientos controlados (solo el tiempo requerido por el fabricante), reducción de aperturas de puerta y definición de temperaturas adecuadas según el tipo de producto.
+Además, se sugiere implementar una planificación diaria de producción , agrupando la cocción de masitas en bloques horarios definidos para evitar encendidos y apagados frecuentes. Complementariamente, la mantención periódica (limpieza de ventiladores, revisión de sellos) mejora la eficiencia térmica del equipo. Estas acciones permiten reducir el consumo energético, mejorar la productividad y asegurar una calidad homogénea en los productos , contribuyendo a una operación más eficiente del negocio.
+Mejoramiento de climatización Se recomienda reemplazar el uso de calefactores individuales por un sistema de climatización más eficiente y centralizado , como equipos tipo aire acondicionado inverter (bomba de calor) , los cuales permiten calefaccionar y enfriar el ambiente con un menor consumo energético y un mejor control de temperatura. Estos sistemas tienen mayor eficiencia (COP superior), permiten mantener condiciones térmicas estables y pueden ser programados según horarios de operación del local.
+Educación y Gestión Energética Se recomienda avanzar hacia la profesionalización de la gestión energética de la empresa . Esto implica designar un responsable interno o apoyo externo que se encargue de monitorear consumos, revisar indicadores eléctricos (como factor de potencia, demanda máxima y consumos base), e implementar buenas prácticas operacionales. La incorporación de una gestión energética sistemática permitirá identificar oportunidades de mejora, reducir costos, optimizar el uso de la energía y asegurar la sostenibilidad operativa del negocio en el tiempo y acorde a su crecimiento empresarial.
+Temas adicionales
+Se a solicitado frecuentemente el cambio de facturación de la boleta
+eléctrica a la razón social de la empresa a Grupo Onix SPA. Hasta el momento no ha habido respuesta de CGE.
+Acuerdos
+En atención a la solicitud realizada por Café Colores , respecto a la regularización de la facturación mediante la emisión de boleta a nombre de la empresa , se acuerda brindar orientación y apoyo técnico-administrativo a Café Colores, con el objetivo de facilitar el proceso de regularización de la facturación, aclarando los procedimientos necesarios y resolviendo las dudas que puedan surgir durante su implementación, conforme a la normativa vigente.
+Información adicional
+👩‍🦰Instaladoras Red de mujeres Instaladoras certificadas SEC, para regularización eléctrica y gas, análisis de tarifas, expansiones y proyectos Instaladoras SEC Certificadas
+👷‍♂️Portal SEC de instaladores Listado de profesionales certificados SEC oficial. Instaladoras e Instaladores Certificados por SEC
+🏭Proveedores Listado referencial proveedores de equipamiento renovable, no implica recomendación y es responsabilidad del mandante asegurar su cumplimiento y calidad. Proveedores Energéticos (pub)
+🧠Registro de Consultores Plataforma digital para conectar a profesionales y empresas que prestan servicios en eficiencia energética y energías renovables Registro de Consultores
+📚Biblioteca AgenciaSE Material Bibliográfico sobre Eficiencia Energética y Sistemas de Gestión de la Energía Biblioteca – Agencia de Sostenibilidad Energética
+🛡️Sello EE Sello de Eficiencia Energética, gratuito para MiPyMes SelloEE - Sello de Excelencia Energética
+🎯Gestiona Energía MiPyME El Ministerio de Energía ha desarrollado una serie de herramientas de fácil uso para que las MiPyMES puedan estimar el uso y generación de energía a lo largo del país. Herramientas | Gestiona Energía MiPyMEs
+⚡Calculadora de ahorro energéticos Herramienta para calcular una primera aproximación de ahorros y beneficios Plataforma Gestiona Energía
+🌿Calculadora de Energías Renovables Calculadora de Ahorro para calcular de forma rápida el ahorro que podría obtener al instalar un sistema solar fotovoltaico y conectarlo a la red, de acuerdo a la Ley de Generación Distribuida. Explorador Solar
+🧾Servicio de Diagnóstico ONLINE Servicio de  diagnóstico energético gratuito  que, a partir de una revisión energética de la empresa, entrega recomendaciones sobre medidas de eficiencia energética y energía renovable Asistencia Técnica Gratuita
+❄️Cero Fugas PNUD Apoyo técnico y cofinanciamiento para empresas con sistemas de refrigeración HCFC. Programa Cero Fugas | Programa De Las Naciones Unidas Para El Desarrollo
+━━━━━━ ━━━━━━━━━━
+Carlos Campos
+Analista Regional Eficiencia Energética
+Seremi de Energía Región de Valparaíso
+ccamposn@minenergia.cl

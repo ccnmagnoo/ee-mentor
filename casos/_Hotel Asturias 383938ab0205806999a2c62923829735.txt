@@ -1,0 +1,61 @@
+Hotel Asturias
+Hotel Asturias
+Fecha June 18, 2026 11:55 AM
+Negocio Hotelería
+Grado consumos Relevante
+Usuario Carolina Rojas
+Teléfono +56974088566
+Correo electrónico carola.magallanes@gmail.com
+Contraparte CND Sercotec Viña del Mar
+ACTA de seguimiento Asesoría/Mentoría
+Información del contacto y cliente (negocio)
+Nombre del contacto Carolina Rojas RUT
+Nombre del negocio Hotel Asturias ROL
+Asesor asignado Carlos Campos N Servicio Seremi Energía
+Descripción
+El Hotel Asturias , con aproximadamente 4 años de antigüedad , cuenta con servicios de alojamiento, lavandería y restaurant para usuarios , lo que define un perfil energético propio del rubro hotelero de pequeña a mediana escala. Dispone de habitaciones con servicios básicos y otros más avanzados, todas con iluminación LED , lo que constituye una buena práctica en eficiencia energética. El hotel posee 28 habitaciones , de las cuales 10 habitaciones son de aproximadamente 20 m² y cuentan con frigobar , mientras que 18 habitaciones tienen una superficie cercana a los 10 m² . Todas las habitaciones cuentan con grandes ventanales con termopanel de doble vidrio , lo que mejora la aislación térmica y reduce las pérdidas energéticas asociadas a climatización.
+En conjunto, el perfil energético del Hotel Asturias se caracteriza por un uso intensivo de electricidad , con oportunidades claras de optimización asociadas a la climatización, ACS, gestión de cargas y profesionalización de la gestión energética.
+Acometidas
+Cliente 1630245 Traslaviña 184
+Propietario
+Distribuidora CGE
+Consumo kWh 3.658 kWh
+HP 20.865 kW
+Gasto nominal 1.363.200 $CLP
+Hallazgos
+Referencia Servicio Descripción
+Termopaneles de doble vidrio aislación térmica La instalación actual de termopaneles de doble vidrio en los ventanales del hotel constituye una buena práctica en eficiencia energética , ya que mejora significativamente el aislamiento térmico del edificio. Esta medida reduce las pérdidas de calor en invierno y las ganancias térmicas en verano , disminuyendo la demanda energética asociada a sistemas de calefacción y climatización. Además, contribuye a un mayor confort térmico para los huéspedes , reduce condensaciones y mejora el aislamiento acústico, aspectos clave en el rubro hotelero.
+Calefación halógenos climatización (A/C) El hotel no cuenta con un sistema de calefacción centralizado , utilizando calefactores eléctricos halógenos , siendo los de las habitaciones más grandes de 2 kW de potencia , lo que genera un consumo eléctrico relevante y concentrado en períodos de mayor demanda térmica
+ACS Eléctrica con termoaculuradores ACS La producción de Agua Caliente Sanitaria (ACS) se realiza mediante dos termos eléctricos de 500 L y 250 L , destinados principalmente al uso en habitaciones, lavandería y servicios. El hotel también dispone de servicio de lavandería , equipado con 4 lavadoras y 3 secadoras eléctricas , complementado con secado natural en una sala con techo de policarbonato, lo que permite reducir parcialmente el consumo energético asociado al secado mecánico.
+Tarifa eléctrica contractual El Hotel Asturias se encuentra actualmente bajo tarifa BT4.3 , la cual considera cobros por energía consumida y potencia demandada , siendo adecuada para clientes con consumos relevantes y perfiles de carga relativamente estables. Dado el perfil energético del hotel, esta tarifa resulta coherente desde el punto de vista técnico. Sin embargo, el uso intensivo de electricidad y la posible existencia de puntas de demanda en horarios específicos (mañana y noche, asociadas a ACS, calefacción y uso de servicios) podría estar generando costos elevados por potencia demandada , especialmente si no existe una gestión activa de la demanda.
+Recomendaciones
+nombre Recomendación
+Profesionalización de la Gestión Energética Se recomienda implementar un proceso de profesionalización de la gestión energética en el rubro Hotelero , orientado a establecer una administración sistemática, continua y basada en indicadores del uso de la energía. Este enfoque implica la designación de un encargado o equipo responsable , junto con la adopción de herramientas de monitoreo, control y análisis que permitan gestionar eficientemente consumos en sistemas críticos como climatización, iluminación, equipos de lavandería y servicio de agua caliente.
+La incorporación de una gestión energética formal permite identificar oportunidades de mejora, reducir costos operacionales y aumentar la confiabilidad de las instalaciones , aspectos clave en entornos hospitalarios donde la continuidad de servicio es fundamental. Asimismo, avanzar hacia esquemas estructurados —como la implementación de buenas prácticas o incluso sistemas basados en estándares (por ejemplo, ISO 50.001)— contribuye a fortalecer la sostenibilidad, la eficiencia y la toma de decisiones informadas dentro de la organización. Puede Revisar en
+Guía de Gestión Energética Sector Hotelero
+Implementación del Sello S Se recomienda avanzar en la implementación del Sello S de Sernatur , como herramienta de gestión para fortalecer la sostenibilidad del establecimiento. Este reconocimiento promueve la incorporación de buenas prácticas en ámbitos ambientales, económicos y socioculturales , incluyendo el uso eficiente de la energía, la gestión de residuos y la optimización de recursos, aspectos directamente vinculados al desempeño energético del negocio, lo que se alinea con objetivos de un sistema de gestión energético
+Aislamiento térmico y termopaneles de doble vidrio Se recomienda complementar la instalación actual de termopaneles con una revisión integral de la envolvente térmica del hotel , incluyendo sellos en marcos, puertas y posibles infiltraciones de aire. Asimismo, es clave ajustar la operación de los sistemas de climatización , revisando temperaturas de consigna, horarios de funcionamiento y control por zonas, de manera de aprovechar plenamente la mejora en aislación térmica lograda.
+Energías renovables El Hotel Asturias cuenta con disposiciones favorables para la instalación de sistemas de energías renovables , tanto fotovoltaica como térmica , lo que representa una oportunidad relevante para mejorar su desempeño energético. La disponibilidad de superficies adecuadas (cubiertas y áreas expuestas), junto con un consumo eléctrico y térmico constante asociado a alojamiento, lavandería y agua caliente sanitaria, hace técnicamente atractivo la exploración de soluciones ERNC
+Gestión de cargas Se recomienda a partir del a nálisis tarifario comparativo , incorporando la tarifa BT4.3 , que considera discriminación horaria de la energía y la potencia , lo que podría resultar más conveniente para un hotel con capacidad de gestionar o desplazar consumos fuera de horarios punta (por ejemplo, operación de lavandería, producción de ACS o ciertas cargas eléctricas). Esta evaluación debe basarse en datos reales de consumo horario y demanda máxima, idealmente con mediciones o información detallada de facturación.
+Temas adicionales
+Se recomienda generar una vinculación activa con el Sello S de Sernatur , como parte de una estrategia para fortalecer la gestión de la sostenibilidad del establecimiento. Este vínculo permitiría al hotel alinear sus prácticas operativas ,especialmente en eficiencia energética, uso de energías renovables y gestión de recursos, con un estándar reconocido a nivel nacional , mejorando su posicionamiento en el mercado turístico. Asimismo, el Sello S actúa como un marco de mejora continua que fomenta la formalización de procesos, la reducción de impactos ambientales y la valorización del compromiso del establecimiento con un turismo más responsable y competitivo.
+Acuerdos
+Se ofrece colaboración orientado a la profesionalización de la gestión energética hotelera , mediante el cual se comprometa el aporte y apoyo en materiales, contenidos técnicos y herramientas de gestión , tales como guías de buenas prácticas, indicadores energéticos, lineamientos de operación eficiente y capacitaciones básicas para el personal.
+Se propone como segundo compromiso generar y fortalecer la vinculación del establecimiento con el Sello S de Sernatur , apoyando el proceso de alineación con sus criterios y estándares de sustentabilidad.
+Información de utilidad
+👩‍🦰Instaladoras Red de mujeres Instaladoras certificadas SEC, para regularización eléctrica y gas, análisis de tarifas, expansiones y proyectos Instaladoras SEC Certificadas
+👷‍♂️Portal SEC de instaladores Listado de profesionales certificados SEC oficial. Instaladoras e Instaladores Certificados por SEC
+🏭Proveedores Listado referencial proveedores de equipamiento renovable, no implica recomendación y es responsabilidad del mandante asegurar su cumplimiento y calidad. Proveedores Energéticos (pub)
+🧠Registro de Consultores Plataforma digital para conectar a profesionales y empresas que prestan servicios en eficiencia energética y energías renovables Registro de Consultores
+📚Biblioteca AgenciaSE Material Bibliográfico sobre Eficiencia Energética y Sistemas de Gestión de la Energía Biblioteca – Agencia de Sostenibilidad Energética
+🛡️Sello EE Sello de Eficiencia Energética, gratuito para MiPyMes SelloEE - Sello de Excelencia Energética
+🎯Gestiona Energía MiPyME El Ministerio de Energía ha desarrollado una serie de herramientas de fácil uso para que las MiPyMES puedan estimar el uso y generación de energía a lo largo del país. Herramientas | Gestiona Energía MiPyMEs
+⚡Calculadora de ahorro energéticos Herramienta para calcular una primera aproximación de ahorros y beneficios Plataforma Gestiona Energía
+🌿Calculadora de Energías Renovables Calculadora de Ahorro para calcular de forma rápida el ahorro que podría obtener al instalar un sistema solar fotovoltaico y conectarlo a la red, de acuerdo a la Ley de Generación Distribuida. Explorador Solar
+🧾Servicio de Diagnóstico ONLINE Servicio de  diagnóstico energético gratuito  que, a partir de una revisión energética de la empresa, entrega recomendaciones sobre medidas de eficiencia energética y energía renovable Asistencia Técnica Gratuita
+❄️Cero Fugas PNUD Apoyo técnico y cofinanciamiento para empresas con sistemas de refrigeración HCFC. Programa Cero Fugas | Programa De Las Naciones Unidas Para El Desarrollo
+━━━━━━ ━━━━━━━━━━
+Carlos Campos
+Analista Regional Eficiencia Energética
+Seremi de Energía Región de Valparaíso
+ccamposn@minenergia.cl

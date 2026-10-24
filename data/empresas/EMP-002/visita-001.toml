@@ -1,0 +1,202 @@
+schema_version = 1
+empresa_id = "EMP-002"
+id = "VIS-001"
+fecha = "2026-08-05"
+asesor = "Carlos Campos N."
+grado_consumo = "intensivo"
+descripcion_perfil = "Pastelería Los Aromos es una pequeña fábrica de alimentos con punto de venta. La producción se concentra durante la madrugada y la mañana. Los principales consumos son los hornos eléctricos, las cámaras de frío y la iluminación. El GLP se utiliza en la cocina y en el calentador de agua. Se detecta una tarifa residencial pese al volumen de consumo y una penalización por bajo factor de potencia."
+usos_finales = [ "coccion", "refrigeracion", "iluminacion", "acs" ]
+acuerdos = [ "Solicitar análisis tarifario a instalador certificado SEC.", "Implementar registro de temperaturas y mantenciones de cámaras." ]
+proxima_visita = "2026-11-30"
+observaciones = "La empresa cuenta con 12 meses de facturación disponibles para el análisis."
+created_at = "2026-08-05T14:00:00.000Z"
+updated_at = "2026-01-01T00:00:00.000Z"
+
+[[energeticos]]
+tipo = "electricidad"
+consumo = 2209
+unidad = "kWh/mes"
+costo = 385000
+observacion = "Tarifa BT1A con 2.209 kWh/mes."
+
+[[energeticos]]
+tipo = "glp"
+consumo = 120
+unidad = "kg/mes"
+costo = 176000
+observacion = "Cocina y calefón."
+
+[[equipos]]
+nombre = "Horno eléctrico de resistencia"
+cantidad = 3
+potencia_w = 4500
+horas_dia = 8
+estado = "regular"
+observacion = "Encendidos anticipadamente y con aperturas frecuentes."
+
+[[equipos]]
+nombre = "Cámara de frío"
+cantidad = 2
+potencia_w = 1800
+horas_dia = 24
+estado = "regular"
+observacion = "Evaporadores con escarcha."
+
+[[equipos]]
+nombre = "Amasador"
+cantidad = 2
+potencia_w = 1500
+horas_dia = 3
+estado = "bueno"
+observacion = "Uso programado."
+
+[[equipos]]
+nombre = "Calefón a gas"
+cantidad = 1
+potencia_w = 0
+horas_dia = 10
+estado = "deficiente"
+observacion = "Equipo antiguo, sin aislación de tuberías."
+
+[secciones.iluminacion]
+puntaje = 2
+observaciones = "Fluorescentes en producción y bodega."
+tecnologia = "fluorescente"
+estado = "regular"
+horas_uso_diarias = 14
+
+[secciones.refrigeracion]
+puntaje = 2
+observaciones = "Condensadores sucios y setpoints sin registro."
+cantidad_equipos = 2
+antiguedad_anios = 9
+mantencion = "correctiva"
+
+[secciones.congelacion]
+puntaje = 2
+observaciones = "Escarcha en evaporadores y aperturas frecuentes."
+cantidad_equipos = 2
+antiguedad_anios = 9
+estado = "regular"
+
+[secciones.climatizacion]
+puntaje = 0
+observaciones = "No aplica: la fábrica no cuenta con climatización."
+tecnologia = "Sin climatización"
+mantenciones = "no_evaluado"
+control_temperatura = "no_evaluado"
+
+[secciones.acs]
+puntaje = 2
+observaciones = "Calefón antiguo y tuberías sin aislación."
+tecnologia = "Calefón a gas"
+fuente_energetica = "glp"
+horarios = "Toda la jornada"
+
+[secciones.coccion]
+puntaje = 2
+observaciones = "Hornos con baja carga y aperturas frecuentes."
+equipos_principales = "Tres hornos eléctricos, cocina y plancha a gas"
+combustible = "electricidad"
+
+[secciones.motores]
+puntaje = 2
+observaciones = "Motores de amasadores y compresores sin mantención documentada."
+tipo = "Amasadores y compresores"
+estado = "regular"
+mantencion = "ocasional"
+
+[secciones.envolvente]
+puntaje = 2
+observaciones = "Puertas de cámara y acceso con infiltraciones."
+ventanas = "regular"
+puertas = "deficiente"
+infiltraciones = "deficiente"
+aislacion = "regular"
+
+[secciones.gestion]
+puntaje = 1
+observaciones = "Sin gestión energética ni indicadores."
+nivel = "sin_gestion"
+monitoreo = false
+responsable = ""
+
+[secciones.tarifas]
+puntaje = 1
+observaciones = "Tarifa residencial BT1A y penalización por reactiva."
+tarifa_actual = "BT1A"
+potencia_contratada_kw = 0
+factor_potencia = 0.86
+
+[[hallazgos]]
+hallazgo_id = "HAL-TAR-01"
+justificacion = "Consumo productivo de 2.209 kWh/mes mantenido en tarifa BT1A."
+
+[[hallazgos]]
+hallazgo_id = "HAL-TAR-02"
+justificacion = "La factura registra cargos por energía reactiva."
+
+[[hallazgos]]
+hallazgo_id = "HAL-GEST-01"
+justificacion = "No existe línea base ni revisión sistemática de consumos."
+
+[[hallazgos]]
+hallazgo_id = "HAL-GEST-02"
+justificacion = "Solo se dispone de la factura mensual."
+
+[[hallazgos]]
+hallazgo_id = "HAL-COCC-01"
+justificacion = "Los hornos se encienden antes de la producción y se abren con frecuencia."
+
+[[hallazgos]]
+hallazgo_id = "HAL-CONG-01"
+justificacion = "Se observa escarcha en evaporadores de ambas cámaras."
+
+[[hallazgos]]
+hallazgo_id = "HAL-ILUM-01"
+justificacion = "Tubos fluorescentes en producción y bodega, 14 horas diarias."
+
+[[hallazgos]]
+hallazgo_id = "HAL-ACS-02"
+justificacion = "Tuberías de agua caliente sin aislación en un recorrido de 8 metros."
+
+[[recomendaciones]]
+recomendacion_id = "REC-TAR-01"
+prioridad = "alta"
+observacion = "Analizar cambio a BT4.3 con curva de carga."
+
+[[recomendaciones]]
+recomendacion_id = "REC-TAR-02"
+prioridad = "alta"
+observacion = "Evaluar banco de condensadores."
+
+[[recomendaciones]]
+recomendacion_id = "REC-GEST-01"
+prioridad = "alta"
+observacion = "Implementar gestión con apoyo de Gestiona Energía MiPyME."
+
+[[recomendaciones]]
+recomendacion_id = "REC-GEST-02"
+prioridad = "alta"
+observacion = "Instalar remarcadores por área."
+
+[[recomendaciones]]
+recomendacion_id = "REC-COCC-01"
+prioridad = "alta"
+observacion = "Planificar producción en tandas completas."
+
+[[recomendaciones]]
+recomendacion_id = "REC-CONG-01"
+prioridad = "alta"
+observacion = "Programar descongelación semanal."
+
+[[recomendaciones]]
+recomendacion_id = "REC-ILUM-01"
+prioridad = "media"
+observacion = "Recambiar luminarias en dos etapas."
+
+[[recomendaciones]]
+recomendacion_id = "REC-ACS-02"
+prioridad = "media"
+observacion = "Aislar el tramo accesible."
+

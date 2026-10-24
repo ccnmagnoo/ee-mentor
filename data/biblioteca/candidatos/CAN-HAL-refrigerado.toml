@@ -1,0 +1,13 @@
+id = "CAN-HAL-refrigerado"
+tipo = "hallazgo"
+titulo = "Refrigerado"
+descripcion = "El negocio utiliza tres equipos refrigerados verticales para conservar bebidas y otros productos. Debido a su funcionamiento continuo, estos equipos pueden presentar incrementos de consumo energético si cuentan con ventilación insuficiente, configuraciones de temperatura inadecuadas, sobrecarga de productos o deterioro en los sistemas de cierre."
+categoria = "ventilacion"
+impacto = "medio"
+inversion = "baja"
+dificultad = "baja"
+origen = "casos:Cafetería"
+fuente_id = "FUE-la-creperia-rapa-nui-392938ab020580b2b86bcfcf44b"
+estado = "pendiente"
+created_at = "2026-10-24T17:57:09.350Z"
+

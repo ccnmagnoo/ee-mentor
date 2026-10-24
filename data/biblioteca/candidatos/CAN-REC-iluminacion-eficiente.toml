@@ -1,0 +1,13 @@
+id = "CAN-REC-iluminacion-eficiente"
+tipo = "recomendacion"
+titulo = "Iluminación eficiente"
+descripcion = "Establecer hábitos de apagado cuando no se requiera iluminación, aprovechar al máximo la luz natural disponible e incorporar controles simples como interruptores sectorizados o sensores de presencia en áreas de bajo uso."
+categoria = "iluminacion"
+impacto = "medio"
+inversion = "media"
+dificultad = "media"
+origen = "casos:Restaurante"
+fuente_id = "FUE-rito-mata-390938ab0205809584b2c563debd6138"
+estado = "pendiente"
+created_at = "2026-10-24T17:57:10.085Z"
+

@@ -1,0 +1,16 @@
+schema_version = 1
+id = "HAL-GEST-03"
+codigo = "GEST-03"
+titulo = "Personal sin capacitación en buenas prácticas energéticas"
+categoria = "gestion_operacional"
+descripcion = "El personal no ha recibido orientación sobre el uso eficiente de equipos, apagado de luces, manejo de puertas de frío o control de temperaturas. Las prácticas dependen de cada turno."
+justificacion = "Muchas medidas de bajo costo dependen del comportamiento. La capacitación y los procedimientos escritos aseguran consistencia y sostenibilidad de los ahorros."
+impacto = "medio"
+energetico = "electricidad"
+recomendacion_id = "REC-GEST-03"
+tags = [ "gestion", "capacitacion", "cultura" ]
+activo = true
+origen = "catalogo_base"
+created_at = "2026-01-01T00:00:00.000Z"
+updated_at = "2026-01-01T00:00:00.000Z"
+

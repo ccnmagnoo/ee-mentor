@@ -1,0 +1,9 @@
+schema_version = 1
+id = "REC-CALCULADORA-AHORRO"
+categoria = "herramientas"
+nombre = "Plataforma Gestiona Energía"
+descripcion = "Calculadora de ahorros y beneficios para una primera estimación del impacto de medidas de eficiencia energética."
+url = "https://mipyme.agenciase.org/plataforma/"
+orden = 80
+activo = true
+

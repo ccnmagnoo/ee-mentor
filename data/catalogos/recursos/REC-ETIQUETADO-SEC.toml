@@ -1,0 +1,9 @@
+schema_version = 1
+id = "REC-ETIQUETADO-SEC"
+categoria = "etiquetado"
+nombre = "Etiquetado energético de equipos"
+descripcion = "Información oficial sobre etiquetas de eficiencia energética para artefactos eléctricos y de gas."
+url = "https://www.sec.cl/etiquetado-energetico/"
+orden = 100
+activo = true
+

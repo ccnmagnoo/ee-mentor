@@ -1,0 +1,13 @@
+id = "CAN-REC-cocina-y-planificiacion-de-la-produccion"
+tipo = "recomendacion"
+titulo = "Cocina y planificiación de la producción"
+descripcion = "En la medida de lo posible, se recomienda programar la producción para maximizar la ocupación de cada ciclo de horneado. Reducir tiempos de precalentamiento al mínimo necesario. También revisión de sellos y burletes de puertas en buen estado cada 3 o 6 meses o previos a la temporada alta, para su óptima utilización antes de su sobrecarga estacional. También se recomienda planificar una evaluación sistemática a mediano plazo la renovación por hornos de mayor eficiencia energética o con mejores sistemas de aislamiento. Esta planificación enfocada en la gestión técnico - económica de su negocio ayudará a evitar o reducir riesgos operativos del negocio."
+categoria = "envolvente"
+impacto = "alto"
+inversion = "baja"
+dificultad = "media"
+origen = "casos:Cafetería"
+fuente_id = "FUE-la-boulangerie-390938ab0205801fb682ff6930a172ba"
+estado = "pendiente"
+created_at = "2026-10-24T17:57:09.270Z"
+

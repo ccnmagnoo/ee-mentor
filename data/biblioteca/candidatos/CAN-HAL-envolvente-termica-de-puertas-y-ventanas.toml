@@ -1,0 +1,13 @@
+id = "CAN-HAL-envolvente-termica-de-puertas-y-ventanas"
+tipo = "hallazgo"
+titulo = "Envolvente térmica de puertas y ventanas"
+descripcion = "El negocio presenta condiciones típicas de un establecimiento comercial integrado a una vivienda, con puertas y ventanas que pueden constituir puntos de intercambio térmico entre el interior y el exterior. No se observaron elementos específicos destinados a mejorar la hermeticidad de la envolvente, por lo que es posible que existan infiltraciones de aire que incrementen la carga térmica de los equipos de refrigeración y climatización."
+categoria = "envolvente"
+impacto = "medio"
+inversion = "baja"
+dificultad = "baja"
+origen = "casos:Cafetería"
+fuente_id = "FUE-minimarket-y-cafe-tonita-392938ab02058043b56ae72"
+estado = "pendiente"
+created_at = "2026-10-24T17:57:09.682Z"
+

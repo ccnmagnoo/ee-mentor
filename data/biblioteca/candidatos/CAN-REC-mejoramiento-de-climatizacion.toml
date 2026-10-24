@@ -1,0 +1,13 @@
+id = "CAN-REC-mejoramiento-de-climatizacion"
+tipo = "recomendacion"
+titulo = "Mejoramiento de climatización"
+descripcion = "Se recomienda reemplazar el uso de calefactores individuales por un sistema de climatización más eficiente y centralizado , como equipos tipo aire acondicionado inverter (bomba de calor) , los cuales permiten calefaccionar y enfriar el ambiente con un menor consumo energético y un mejor control de temperatura. Estos sistemas tienen mayor eficiencia (COP superior), permiten mantener condiciones térmicas estables y pueden ser programados según horarios de operación del local."
+categoria = "climatizacion"
+impacto = "medio"
+inversion = "media"
+dificultad = "media"
+origen = "casos:Cafetería"
+fuente_id = "FUE-cafe-colores-382938ab020580c59ae6d8d19349a7b0"
+estado = "pendiente"
+created_at = "2026-10-24T17:57:09.057Z"
+

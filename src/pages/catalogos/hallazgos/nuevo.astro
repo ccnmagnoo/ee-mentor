@@ -1,0 +1,26 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import PageHeader from '@/components/ui/PageHeader.astro';
+import CatalogoForm from '@/components/catalogos/CatalogoForm.astro';
+---
+
+<Layout title="Nuevo hallazgo" description="Crear un hallazgo en el catálogo">
+  <PageHeader
+    eyebrow="Catálogos"
+    title="Nuevo hallazgo"
+    subtitle="Registra un hallazgo reutilizable. Quedará disponible al evaluar cualquier visita."
+    breadcrumbs={[
+      { label: 'Catálogos', href: '/catalogos' },
+      { label: 'Hallazgos', href: '/catalogos?tab=hallazgos' },
+      { label: 'Nuevo' },
+    ]}
+  />
+
+  <div class="max-w-4xl">
+    <CatalogoForm
+      tipo="hallazgo"
+      action="/api/catalogos/hallazgos"
+      cancelHref="/catalogos?tab=hallazgos"
+    />
+  </div>
+</Layout>

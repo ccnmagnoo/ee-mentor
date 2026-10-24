@@ -1,0 +1,13 @@
+id = "CAN-REC-operacion-de-congeladoras"
+tipo = "recomendacion"
+titulo = "Operación de congeladoras"
+descripcion = "Realizar descongelamientos periódicos cuando corresponda, la acumulación de hielo y escarchado merma notoriamente la eficiencia, provocando un aumento innecesario de los consumos de energía. Además mantener una adecuada organización interna para reducir aperturas prolongadas. Se recomienda fuertemente dividir los productos por tipo, ej: vegetales, carnes, masa, ya que cada uno tiene su propio requerimiento de almacenamiento de congelado. Finalmente verificar regularmente el estado de los sellos y la temperatura de operación de los mismos. Para esto último se recomienda contar con un sensor de temperatura laser para cocina ."
+categoria = "gestion_operacional"
+impacto = "medio"
+inversion = "baja"
+dificultad = "media"
+origen = "casos:Restaurante"
+fuente_id = "FUE-rito-mata-390938ab0205809584b2c563debd6138"
+estado = "pendiente"
+created_at = "2026-10-24T17:57:10.039Z"
+

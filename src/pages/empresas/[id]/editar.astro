@@ -1,0 +1,35 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import PageHeader from '@/components/ui/PageHeader.astro';
+import EmpresaForm from '@/components/empresas/EmpresaForm.astro';
+import { empresas } from '@/lib/repositories';
+
+const { id } = Astro.params;
+const empresa = id ? await empresas.get(id) : null;
+
+if (!empresa) {
+  return Astro.redirect('/empresas');
+}
+---
+
+<Layout title={`Editar ${empresa.nombre}`}>
+  <PageHeader
+    eyebrow="Cartera"
+    title={`Editar ${empresa.nombre}`}
+    subtitle="Actualiza los antecedentes de la empresa. Las visitas y el informe existente no se modifican automáticamente."
+    breadcrumbs={[
+      { label: 'Empresas', href: '/empresas' },
+      { label: empresa.nombre, href: `/empresas/${empresa.id}` },
+      { label: 'Editar' },
+    ]}
+  />
+
+  <div class="max-w-4xl">
+    <EmpresaForm
+      action={`/api/empresas/${empresa.id}`}
+      empresa={empresa}
+      submitLabel="Guardar cambios"
+      cancelHref={`/empresas/${empresa.id}`}
+    />
+  </div>
+</Layout>

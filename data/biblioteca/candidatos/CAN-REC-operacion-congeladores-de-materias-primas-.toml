@@ -1,0 +1,13 @@
+id = "CAN-REC-operacion-congeladores-de-materias-primas-"
+tipo = "recomendacion"
+titulo = "Operación congeladores de materias primas y productos"
+descripcion = "Se aconseja revisar periódicamente el estado de los sellos y cierres, programar descongelamientos cuando sea necesario, organizar adecuadamente los productos almacenados para reducir los tiempos de apertura y verificar que las temperaturas programadas sean compatibles con los requerimientos de conservación."
+categoria = "gestion_operacional"
+impacto = "medio"
+inversion = "baja"
+dificultad = "media"
+origen = "casos:Cafetería"
+fuente_id = "FUE-la-creperia-rapa-nui-392938ab020580b2b86bcfcf44b"
+estado = "pendiente"
+created_at = "2026-10-24T17:57:09.400Z"
+

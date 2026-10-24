@@ -1,0 +1,798 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Hotel Asturias </title><meta name="data-notion-page-icon" content="🛏️"/><link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20100%20100%22%3E%3Ctext%20y%3D%22.9em%22%20font-size%3D%2290%22%3E%F0%9F%9B%8F%EF%B8%8F%3C%2Ftext%3E%3C%2Fsvg%3E"/><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+/* Override strong tags inside headings to maintain consistent weight */
+h1 strong,
+h2 strong,
+h3 strong {
+	font-weight: 600;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 10px;
+	padding: 1rem;
+	/* Paint a complete callout box on every PDF page fragment. */
+	-webkit-box-decoration-break: clone;
+	box-decoration-break: clone;
+}
+
+/* For default-background callouts, render the border outline. */
+.callout.block-color-default_background {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+/*
+ * Toggles and callouts hold arbitrary content, so they can easily be taller
+ * than a page. They must stay breakable: avoiding breaks inside them makes
+ * Chromium push the whole block onto the next page, which leaves the previous
+ * page mostly empty before every long toggle.
+ */
+details,
+aside {
+	margin: 1.25em 0;
+}
+
+/* Keep a toggle's title on the same page as the start of its content. */
+summary {
+	page-break-after: avoid;
+	break-after: avoid;
+}
+
+/*
+ * Toggle headings render as <h1/h2/h3 style="display:inline-block"> inside
+ * <summary>. Without this reset, the heading's margin-top pushes it below the
+ * ::marker (▼), so the triangle and the title appear on separate lines.
+ */
+summary h1,
+summary h2,
+summary h3,
+summary h4 {
+	margin-top: 0;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+
+	table.collection-content {
+		width: 100%;
+		table-layout: fixed;
+	}
+
+	table.collection-content th,
+	table.collection-content td {
+		overflow-wrap: anywhere;
+	}
+
+	table.collection-content td > .user,
+	table.collection-content td > time {
+		white-space: pre-wrap;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content-wrapper {
+	overflow-x: auto;
+}
+
+@media only print {
+	.collection-content-wrapper {
+		overflow-x: visible;
+	}
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.collection-content td {
+	white-space: pre-wrap;
+	word-break: break-word;
+}
+
+.column-list {
+	display: flex;
+	gap: 46px;
+}
+
+.column {
+	min-width: 0;
+	overflow: hidden;
+}
+
+.column > *:first-child {
+	margin-top: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding-inline: 0.125rem;
+	padding-block: 0.375rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+table {
+	border-collapse: collapse;
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol.numbered-list.numbered-list-digits-2 {
+	padding-inline-start: 2em;
+}
+
+ol.numbered-list.numbered-list-digits-3plus {
+	padding-inline-start: 2.4em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+/*
+ * Render emoji icons using a ::before pseudo-element to keep the glyph
+ * out of the DOM textContent traversal. This avoids double-rendering icons
+ * in callouts and page titles.
+ * NOTE(slim/html-export-pseudo-icons): I can't tagref this because it will
+ * flag as a duplicate tag after codegen.
+ */
+.icon[data-emoji]::before {
+	content: attr(data-emoji);
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.callout img.notion-static-icon {
+	width: 1em;
+	height: 1em;
+}
+
+.callout p {
+	margin: 0;
+}
+
+.callout h1,
+.callout h2,
+.callout h3 {
+	margin: 0 0 0.6rem;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	margin-right: 0.4em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+blockquote.quote-large {
+	font-size: 1.25em;
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.tab {
+	margin: 1.25em 0;
+	padding-inline: 1rem;
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.highlight-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.highlight-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.highlight-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.highlight-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.highlight-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.highlight-default_background {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray_background {
+	background: rgba(42, 28, 0, 0.07);
+}
+.highlight-brown_background {
+	background: rgba(139, 46, 0, 0.086);
+}
+.highlight-orange_background {
+	background: rgba(224, 101, 1, 0.129);
+}
+.highlight-yellow_background {
+	background: rgba(211, 168, 0, 0.137);
+}
+.highlight-teal_background {
+	background: rgba(0, 100, 45, 0.09);
+}
+.highlight-blue_background {
+	background: rgba(0, 124, 215, 0.094);
+}
+.highlight-purple_background {
+	background: rgba(102, 0, 178, 0.078);
+}
+.highlight-pink_background {
+	background: rgba(197, 0, 93, 0.086);
+}
+.highlight-red_background {
+	background: rgba(223, 22, 0, 0.094);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.block-color-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.block-color-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.block-color-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.block-color-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.block-color-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(240, 239, 237, 1);
+}
+.block-color-brown_background {
+	background: rgba(245, 237, 233, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 235, 222, 1);
+}
+.block-color-yellow_background {
+	background: rgba(249, 243, 220, 1);
+}
+.block-color-teal_background {
+	background: rgba(232, 241, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(229, 242, 252, 1);
+}
+.block-color-purple_background {
+	background: rgba(243, 235, 249, 1);
+}
+.block-color-pink_background {
+	background: rgba(250, 233, 241, 1);
+}
+.block-color-red_background {
+	background: rgba(252, 233, 231, 1);
+}
+.select-value-color-default { background-color: rgba(42, 28, 0, 0.07); }
+.select-value-color-gray { background-color: rgba(28, 19, 1, 0.11); }
+.select-value-color-brown { background-color: rgba(127, 51, 0, 0.156); }
+.select-value-color-orange { background-color: rgba(196, 88, 0, 0.203); }
+.select-value-color-yellow { background-color: rgba(209, 156, 0, 0.282); }
+.select-value-color-green { background-color: rgba(0, 96, 38, 0.156); }
+.select-value-color-blue { background-color: rgba(0, 118, 217, 0.203); }
+.select-value-color-purple { background-color: rgba(92, 0, 163, 0.141); }
+.select-value-color-pink { background-color: rgba(183, 0, 78, 0.152); }
+.select-value-color-red { background-color: rgba(206, 24, 0, 0.164); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style><style>@import url('https://cdn.jsdelivr.net/npm/katex@0.16.25/dist/katex-swap.min.css')</style></head><body><article id="383938ab-0205-8069-99a2-c62923829735" class="page sans" data-notion-page-icon="🛏️"><header><div class="page-header-icon undefined"><span class="icon" data-emoji="🛏️"></span></div><h1 class="page-title" dir="auto">Hotel Asturias </h1><p class="page-description" dir="auto"></p><table class="properties"><tbody><tr class="property-row property-row-created_time"><th><span class="icon property-icon"><img src="https://app.notion.com/icons/clock_gray.svg" style="width:14px;height:14px;display:block"/></span>Fecha</th><td><time datetime="2026-06-18T11:55">June 18, 2026 11:55 AM</time></td></tr><tr class="property-row property-row-select"><th><span class="icon property-icon"><img src="https://app.notion.com/icons/arrow-circle-down_gray.svg" style="width:14px;height:14px;display:block"/></span>Negocio</th><td><span class="selected-value select-value-color-red">Hotelería</span></td></tr><tr class="property-row property-row-select"><th><span class="icon property-icon"><img src="https://app.notion.com/icons/arrow-circle-down_gray.svg" style="width:14px;height:14px;display:block"/></span>Grado consumos</th><td><span class="selected-value select-value-color-orange">Relevante</span></td></tr><tr class="property-row property-row-text"><th><span class="icon property-icon"><img src="https://app.notion.com/icons/description_gray.svg" style="width:14px;height:14px;display:block"/></span>Usuario</th><td>Carolina Rojas</td></tr><tr class="property-row property-row-phone_number"><th><span class="icon property-icon"><img src="https://app.notion.com/icons/phone-call_gray.svg" style="width:14px;height:14px;display:block"/></span>Teléfono</th><td><a href="+56974088566" class="url-value">+56974088566</a></td></tr><tr class="property-row property-row-email"><th><span class="icon property-icon"><img src="https://app.notion.com/icons/username_gray.svg" style="width:14px;height:14px;display:block"/></span>Correo electrónico</th><td><a href="carola.magallanes@gmail.com" class="url-value">carola.magallanes@gmail.com</a></td></tr><tr class="property-row property-row-select"><th><span class="icon property-icon"><img src="https://app.notion.com/icons/arrow-circle-down_gray.svg" style="width:14px;height:14px;display:block"/></span>Contraparte</th><td><span class="selected-value select-value-color-default">CND Sercotec Viña del Mar</span></td></tr></tbody></table></header><div class="page-body"><div id="e99938ab-0205-821c-903f-817be845dd7f" class="column-list" data-notion-column-list="" dir="auto"><div id="982938ab-0205-82b5-a456-0148e663d4f2" style="width:18.75%" class="column" data-notion-column-ratio="0.1875" dir="auto"><figure id="bd0938ab-0205-838e-b5ad-0139ed2faa96" class="image" data-notion-image="SEREMI_logo_SQR_Lowpoly.svg" dir="ltr"><a href="SEREMI_logo_SQR_Lowpoly.svg"><img style="width:120px" src="SEREMI_logo_SQR_Lowpoly.svg"/></a></figure></div><div id="962938ab-0205-835e-b612-8185c608a6ee" style="width:81.25%" class="column" data-notion-column-ratio="0.8125" dir="auto"><figure id="571938ab-0205-8271-a7c3-01e7cf9898dc" class="image" data-notion-image="cropped-logo-cdn-2021.png" dir="ltr"><a href="cropped-logo-cdn-2021.png"><img style="width:192px" src="cropped-logo-cdn-2021.png"/></a></figure></div></div><h1 id="008938ab-0205-82cd-898e-816d2a37ea60" class="" dir="auto">ACTA de seguimiento Asesoría/Mentoría</h1><h2 id="105938ab-0205-8348-96cd-819de80abc9e" class="" dir="auto">Información del contacto y cliente (negocio)</h2><table id="65f938ab-0205-827d-afa3-011f29ec4340" class="simple-table" dir="ltr"><tbody><tr id="806938ab-0205-8312-a0eb-814e9d1d9f91" dir="ltr"><td id="jEMl" class="" style="width:150.875px">Nombre del contacto</td><td id="lP]a" class="" style="width:126.8125px">Carolina Rojas</td><td id="xV[;" class="" style="width:67.875px">RUT</td><td id="GpK:" class="" style="width:110.453125px"></td></tr><tr id="5e9938ab-0205-8293-a362-01d7c9af8a77" dir="ltr"><td id="jEMl" class="" style="width:150.875px">Nombre del negocio</td><td id="lP]a" class="" style="width:126.8125px">Hotel Asturias</td><td id="xV[;" class="" style="width:67.875px">ROL</td><td id="GpK:" class="" style="width:110.453125px"></td></tr><tr id="168938ab-0205-8236-9403-012b882c43b8" dir="ltr"><td id="jEMl" class="" style="width:150.875px">Asesor asignado</td><td id="lP]a" class="" style="width:126.8125px">Carlos Campos N</td><td id="xV[;" class="" style="width:67.875px">Servicio</td><td id="GpK:" class="" style="width:110.453125px">Seremi Energía</td></tr></tbody></table><h2 id="f83938ab-0205-82ad-a9df-81f4a0ccad8a" class="" dir="auto">Descripción</h2><p id="384938ab-0205-80bc-bf38-d215917a6ec9" class="" dir="auto">El <strong>Hotel Asturias</strong>, con aproximadamente <strong>4 años de antigüedad</strong>, cuenta con servicios de <strong>alojamiento, lavandería y restaurant para usuarios</strong>, lo que define un perfil energético propio del rubro hotelero de pequeña a mediana escala. Dispone de habitaciones con servicios básicos y otros más avanzados, todas con <strong>iluminación LED</strong>, lo que constituye una buena práctica en eficiencia energética. El hotel posee <strong>28 habitaciones</strong>, de las cuales <strong>10 habitaciones son de aproximadamente 20 m² y cuentan con frigobar</strong>, mientras que <strong>18 habitaciones tienen una superficie cercana a los 10 m²</strong>. Todas las habitaciones cuentan con <strong>grandes ventanales con termopanel de doble vidrio</strong>, lo que mejora la aislación térmica y reduce las pérdidas energéticas asociadas a climatización.</p><p id="384938ab-0205-8074-98c6-fadf0bb2cc62" class="" dir="auto">En conjunto, el perfil energético del Hotel Asturias se caracteriza por un <strong>uso intensivo de electricidad</strong>, con oportunidades claras de optimización asociadas a la climatización, ACS, gestión de cargas y profesionalización de la gestión energética.</p><h3 id="0b5938ab-0205-83b3-98d5-01884969b7b7" class="" dir="auto">Acometidas</h3><table id="45e938ab-0205-82ab-a341-8154fb9d789f" class="simple-table" dir="ltr"><tbody><tr id="c99938ab-0205-828f-b2a2-81117a14744e" dir="ltr"><td id="UI[G" class="" style="width:235.66666666666666px">Cliente</td><td id="Kmw|" class="" style="width:130.65625px">1630245</td><td id="`_sH" class="" style="width:111.65625px">Traslaviña 184</td></tr><tr id="ae3938ab-0205-824a-89d5-01e9b771a525" dir="ltr"><td id="UI[G" class="" style="width:235.66666666666666px">Propietario</td><td id="Kmw|" class="" style="width:130.65625px"></td><td id="`_sH" class="" style="width:111.65625px"></td></tr><tr id="20f938ab-0205-8380-b41c-0170b451c172" dir="ltr"><td id="UI[G" class="" style="width:235.66666666666666px">Distribuidora</td><td id="Kmw|" class="" style="width:130.65625px">CGE</td><td id="`_sH" class="" style="width:111.65625px"></td></tr><tr id="83e938ab-0205-8263-8fea-01cb06f5ac8b" dir="ltr"><td id="UI[G" class="" style="width:235.66666666666666px">Consumo kWh</td><td id="Kmw|" class="" style="width:130.65625px">3.658</td><td id="`_sH" class="" style="width:111.65625px">kWh</td></tr><tr id="383938ab-0205-802b-9bf9-fdb31b55f291" dir="ltr"><td id="UI[G" class="" style="width:235.66666666666666px">HP</td><td id="Kmw|" class="" style="width:130.65625px">20.865</td><td id="`_sH" class="" style="width:111.65625px">kW</td></tr><tr id="4b8938ab-0205-8224-8422-01ebfabc5c96" dir="ltr"><td id="UI[G" class="" style="width:235.66666666666666px">Gasto nominal </td><td id="Kmw|" class="" style="width:130.65625px">1.363.200</td><td id="`_sH" class="" style="width:111.65625px">$CLP</td></tr></tbody></table><div id="423938ab-0205-8266-80b8-01c026fade14" class="collection-content" dir="ltr"><h4 class="collection-title">Hallazgos</h4><div class="collection-content-wrapper"><table class="collection-content"><colgroup><col style="width:27.46268656716418%"/><col style="width:18.65671641791045%"/><col style="width:53.88059701492537%"/></colgroup><thead><tr><th><span class="icon property-icon"><img src="https://app.notion.com/icons/font_gray.svg" style="width:14px;height:14px;display:block"/></span>Referencia</th><th><span class="icon property-icon"><img src="https://app.notion.com/icons/arrow-circle-down_gray.svg" style="width:14px;height:14px;display:block"/></span>Servicio</th><th><span class="icon property-icon"><img src="https://app.notion.com/icons/description_gray.svg" style="width:14px;height:14px;display:block"/></span>Descripción</th></tr></thead><tbody><tr id="0a2938ab-0205-839d-be63-816733a718f2"><td class="cell-title"><a href="Termopaneles%20de%20doble%20vidrio%200a2938ab0205839dbe63816733a718f2.html" data-notion-page-id="0a2938ab-0205-839d-be63-816733a718f2" data-notion-space-id="242b1b81-4cab-4ab7-a7cd-3ea69f052ca2">Termopaneles de doble vidrio</a></td><td class="cell-egc;"><span class="selected-value select-value-color-purple">aislación térmica</span></td><td class="cell-blSE">La instalación actual de <strong>termopaneles de doble vidrio en los ventanales del hotel</strong> constituye una <strong>buena práctica en eficiencia energética</strong>, ya que mejora significativamente el aislamiento térmico del edificio. Esta medida reduce las <strong>pérdidas de calor en invierno y las ganancias térmicas en verano</strong>, disminuyendo la demanda energética asociada a sistemas de calefacción y climatización. Además, contribuye a un <strong>mayor confort térmico para los huéspedes</strong>, reduce condensaciones y mejora el aislamiento acústico, aspectos clave en el rubro hotelero.<br/></td></tr><tr id="384938ab-0205-804e-89af-eb43a557ecab"><td class="cell-title"><a href="Calefaci%C3%B3n%20hal%C3%B3genos%20384938ab0205804e89afeb43a557ecab.html" data-notion-page-id="384938ab-0205-804e-89af-eb43a557ecab" data-notion-space-id="242b1b81-4cab-4ab7-a7cd-3ea69f052ca2">Calefación halógenos</a></td><td class="cell-egc;"><span class="selected-value select-value-color-blue">climatización (A/C)</span></td><td class="cell-blSE">El hotel <strong>no cuenta con un sistema de calefacción centralizado</strong>, utilizando <strong>calefactores eléctricos halógenos</strong>, siendo los de las habitaciones más grandes de <strong>2 kW de potencia</strong>, lo que genera un consumo eléctrico relevante y concentrado en períodos de mayor demanda térmica</td></tr><tr id="384938ab-0205-80dc-9389-e4dda049a52d"><td class="cell-title"><a href="ACS%20El%C3%A9ctrica%20con%20termoaculuradores%20384938ab020580dc9389e4dda049a52d.html" data-notion-page-id="384938ab-0205-80dc-9389-e4dda049a52d" data-notion-space-id="242b1b81-4cab-4ab7-a7cd-3ea69f052ca2">ACS Eléctrica con termoaculuradores</a></td><td class="cell-egc;"><span class="selected-value select-value-color-blue">ACS</span></td><td class="cell-blSE"> La <strong>producción de Agua Caliente Sanitaria (ACS)</strong> se realiza mediante <strong>dos termos eléctricos de 500 L y 250 L</strong>, destinados principalmente al uso en habitaciones, lavandería y servicios. El hotel también dispone de <strong>servicio de lavandería</strong>, equipado con <strong>4 lavadoras y 3 secadoras eléctricas</strong>, complementado con <strong>secado natural</strong> en una sala con techo de policarbonato, lo que permite reducir parcialmente el consumo energético asociado al secado mecánico.</td></tr><tr id="384938ab-0205-800a-b7b4-e57574a59ea9"><td class="cell-title"><a href="Tarifa%20el%C3%A9ctrica%20384938ab0205800ab7b4e57574a59ea9.html" data-notion-page-id="384938ab-0205-800a-b7b4-e57574a59ea9" data-notion-space-id="242b1b81-4cab-4ab7-a7cd-3ea69f052ca2">Tarifa eléctrica</a></td><td class="cell-egc;"><span class="selected-value select-value-color-orange">contractual</span></td><td class="cell-blSE">El Hotel Asturias se encuentra actualmente bajo <strong>tarifa BT4.3</strong>, la cual considera cobros por <strong>energía consumida y potencia demandada</strong>, siendo adecuada para clientes con consumos relevantes y perfiles de carga relativamente estables. Dado el perfil energético del hotel, esta tarifa resulta coherente desde el punto de vista técnico. Sin embargo, el uso intensivo de electricidad y la posible existencia de <strong>puntas de demanda en horarios específicos</strong> (mañana y noche, asociadas a ACS, calefacción y uso de servicios) podría estar generando <strong>costos elevados por potencia demandada</strong>, especialmente si no existe una gestión activa de la demanda.</td></tr></tbody></table></div><br/><br/></div><div id="63d938ab-0205-8281-a549-81018e59fd13" class="collection-content" dir="ltr"><h4 class="collection-title">Recomendaciones</h4><div class="collection-content-wrapper"><table class="collection-content"><colgroup><col style="width:24.219910846953937%"/><col style="width:75.78008915304606%"/></colgroup><thead><tr><th><span class="icon property-icon"><img src="https://app.notion.com/icons/font_gray.svg" style="width:14px;height:14px;display:block"/></span>nombre</th><th><span class="icon property-icon"><img src="https://app.notion.com/icons/description_gray.svg" style="width:14px;height:14px;display:block"/></span>Recomendación</th></tr></thead><tbody><tr id="517938ab-0205-83f7-af5a-8142250a72d9"><td class="cell-title"><a href="Profesionalizaci%C3%B3n%20de%20la%20Gesti%C3%B3n%20Energ%C3%A9tica%20517938ab020583f7af5a8142250a72d9.html" data-notion-page-id="517938ab-0205-83f7-af5a-8142250a72d9" data-notion-space-id="242b1b81-4cab-4ab7-a7cd-3ea69f052ca2">Profesionalización de la Gestión Energética</a></td><td class="cell-;voQ">Se recomienda implementar un proceso de <strong>profesionalización de la gestión energética en el rubro Hotelero</strong>, orientado a establecer una administración sistemática, continua y basada en indicadores del uso de la energía. Este enfoque implica la designación de un <strong>encargado o equipo responsable</strong>, junto con la adopción de herramientas de monitoreo, control y análisis que permitan gestionar eficientemente consumos en sistemas críticos como climatización, iluminación, equipos de lavandería y servicio de agua caliente.<br/>La incorporación de una gestión energética formal permite <strong>identificar oportunidades de mejora, reducir costos operacionales y aumentar la confiabilidad de las instalaciones</strong>, aspectos clave en entornos hospitalarios donde la continuidad de servicio es fundamental. Asimismo, avanzar hacia esquemas estructurados —como la implementación de buenas prácticas o incluso sistemas basados en estándares (por ejemplo, ISO 50.001)— contribuye a fortalecer la sostenibilidad, la eficiencia y la toma de decisiones informadas dentro de la organización. Puede Revisar en <br/><a href="https://drive.google.com/file/d/1WQCUQTLHNnvcqvp_zNGvzlBalOy70B-A/view?usp=drive_open">Guía de Gestión Energética Sector Hotelero</a></td></tr><tr id="384938ab-0205-8082-9053-f81f47cc090b"><td class="cell-title"><a href="Implementaci%C3%B3n%20del%20Sello%20S%20384938ab020580829053f81f47cc090b.html" data-notion-page-id="384938ab-0205-8082-9053-f81f47cc090b" data-notion-space-id="242b1b81-4cab-4ab7-a7cd-3ea69f052ca2">Implementación del Sello S</a></td><td class="cell-;voQ">Se recomienda avanzar en la <strong>implementación del Sello S de Sernatur</strong>, como herramienta de gestión para fortalecer la sostenibilidad del establecimiento. Este reconocimiento promueve la incorporación de <strong>buenas prácticas en ámbitos ambientales, económicos y socioculturales</strong>, incluyendo el uso eficiente de la energía, la gestión de residuos y la optimización de recursos, aspectos directamente vinculados al desempeño energético del negocio, lo que se alinea con objetivos de un sistema de gestión energético</td></tr><tr id="384938ab-0205-8040-a3c0-d289fc978a17"><td class="cell-title"><a href="Aislamiento%20t%C3%A9rmico%20y%20termopaneles%20de%20doble%20vidrio%20384938ab02058040a3c0d289fc978a17.html" data-notion-page-id="384938ab-0205-8040-a3c0-d289fc978a17" data-notion-space-id="242b1b81-4cab-4ab7-a7cd-3ea69f052ca2">Aislamiento térmico y termopaneles de doble vidrio</a></td><td class="cell-;voQ">Se recomienda complementar la instalación actual de termopaneles con una <strong>revisión integral de la envolvente térmica del hotel</strong>, incluyendo sellos en marcos, puertas y posibles infiltraciones de aire. Asimismo, es clave <strong>ajustar la operación de los sistemas de climatización</strong>, revisando temperaturas de consigna, horarios de funcionamiento y control por zonas, de manera de aprovechar plenamente la mejora en aislación térmica lograda.<br/></td></tr><tr id="384938ab-0205-8011-81b2-c948a78df1be"><td class="cell-title"><a href="Energ%C3%ADas%20renovables%20384938ab0205801181b2c948a78df1be.html" data-notion-page-id="384938ab-0205-8011-81b2-c948a78df1be" data-notion-space-id="242b1b81-4cab-4ab7-a7cd-3ea69f052ca2">Energías renovables</a></td><td class="cell-;voQ">El <strong>Hotel Asturias</strong> cuenta con <strong>disposiciones favorables para la instalación de sistemas de energías renovables</strong>, tanto <strong>fotovoltaica</strong> como <strong>térmica</strong>, lo que representa una oportunidad relevante para mejorar su desempeño energético. La disponibilidad de superficies adecuadas (cubiertas y áreas expuestas), junto con un consumo eléctrico y térmico constante asociado a alojamiento, lavandería y agua caliente sanitaria, hace técnicamente atractivo la exploración de soluciones ERNC</td></tr><tr id="384938ab-0205-8062-8828-ecceded1bd03"><td class="cell-title"><a href="Gesti%C3%B3n%20de%20cargas%20384938ab020580628828ecceded1bd03.html" data-notion-page-id="384938ab-0205-8062-8828-ecceded1bd03" data-notion-space-id="242b1b81-4cab-4ab7-a7cd-3ea69f052ca2">Gestión de cargas</a></td><td class="cell-;voQ">Se recomienda a partir del a<strong>nálisis tarifario comparativo</strong>, incorporando la <strong>tarifa BT4.3</strong>, que considera <strong>discriminación horaria de la energía y la potencia</strong>, lo que podría resultar más conveniente para un hotel con capacidad de <strong>gestionar o desplazar consumos fuera de horarios punta</strong> (por ejemplo, operación de lavandería, producción de ACS o ciertas cargas eléctricas). Esta evaluación debe basarse en datos reales de consumo horario y demanda máxima, idealmente con mediciones o información detallada de facturación.</td></tr></tbody></table></div><br/><br/></div><h2 id="7e6938ab-0205-8245-b4c2-81fe65a001ec" class="" dir="auto">Temas adicionales</h2><p id="384938ab-0205-8029-b7cd-e9180a2ae3e0" class="" dir="auto">Se recomienda <strong>generar una vinculación activa con el Sello S de Sernatur</strong>, como parte de una estrategia para fortalecer la gestión de la sostenibilidad del establecimiento. Este vínculo permitiría al hotel alinear sus prácticas operativas ,especialmente en eficiencia energética, uso de energías renovables y gestión de recursos, con un <strong>estándar reconocido a nivel nacional</strong>, mejorando su posicionamiento en el mercado turístico. Asimismo, el Sello S actúa como un <strong>marco de mejora continua</strong> que fomenta la formalización de procesos, la reducción de impactos ambientales y la valorización del compromiso del establecimiento con un turismo más responsable y competitivo.</p><h2 id="e5f938ab-0205-83e6-892a-816c4dfbc630" class="" dir="auto">Acuerdos</h2><p id="384938ab-0205-805f-91d0-e1afd16e35b3" class="" dir="auto"><strong>Se ofrece colaboración orientado a la profesionalización de la gestión energética hotelera</strong>, mediante el cual se comprometa el <strong>aporte y apoyo en materiales, contenidos técnicos y herramientas de gestión</strong>, tales como guías de buenas prácticas, indicadores energéticos, lineamientos de operación eficiente y capacitaciones básicas para el personal.</p><p id="384938ab-0205-8015-b739-e8e924ac55df" class="" dir="auto">Se propone como segundo compromiso <strong>generar y fortalecer la vinculación del establecimiento con el Sello S de Sernatur</strong>, apoyando el proceso de alineación con sus criterios y estándares de sustentabilidad. </p><h2 id="384938ab-0205-80ce-89ff-f58b8ff1622b" class="" dir="auto">Información de utilidad</h2><div dir="auto"><table id="384938ab-0205-80a5-b49a-d5b2c2461a24" class="simple-table" dir="ltr"><tbody><tr id="384938ab-0205-80f3-a638-ca33cbe6de6d" dir="ltr"><td id="h_NM" class="" style="width:170.25px">👩‍🦰Instaladoras</td><td id="r;IE" class="" style="width:303px">Red de mujeres <strong>Instaladoras</strong> certificadas SEC, para regularización eléctrica y gas, análisis de tarifas, expansiones y proyectos</td><td id="{Bve" class="" style="width:237px"><a href="https://app.notion.com/p/Instaladoras-383938ab02058099998cfbfc8342a16b?pvs=21">Instaladoras SEC Certificadas</a></td></tr><tr id="384938ab-0205-807c-ac74-c74d0ac2c3e8" dir="ltr"><td id="h_NM" class="" style="width:170.25px">👷‍♂️Portal SEC de instaladores</td><td id="r;IE" class="" style="width:303px">Listado de profesionales certificados SEC oficial.</td><td id="{Bve" class="" style="width:237px"><a href="https://www.sec.cl/area-ciudadana/nuevo-buscador-de-instaladores-e-instaladoras/">Instaladoras e Instaladores Certificados por SEC</a></td></tr><tr id="384938ab-0205-80cc-9388-e492d52b5b9e" dir="ltr"><td id="h_NM" class="" style="width:170.25px">🏭Proveedores</td><td id="r;IE" class="" style="width:303px">Listado referencial proveedores de equipamiento renovable, no implica recomendación y es responsabilidad del mandante asegurar su cumplimiento y calidad.</td><td id="{Bve" class="" style="width:237px"><a href="https://app.notion.com/p/Proveedores-Energ-ticos-pub-383938ab02058045b8e9c07564e3dca9?pvs=21">Proveedores Energéticos (pub)</a></td></tr><tr id="384938ab-0205-80f6-9aed-fd6b371de3ec" dir="ltr"><td id="h_NM" class="" style="width:170.25px">🧠Registro de <strong>Consultores</strong></td><td id="r;IE" class="" style="width:303px">Plataforma digital  para conectar a profesionales y empresas que prestan servicios en eficiencia energética y energías renovables</td><td id="{Bve" class="" style="width:237px"><a href="https://consultores.registroenergetico.cl/">Registro de Consultores</a></td></tr><tr id="384938ab-0205-80f0-aef3-d5b57d6ed1e5" dir="ltr"><td id="h_NM" class="" style="width:170.25px">📚Biblioteca <strong>AgenciaSE</strong></td><td id="r;IE" class="" style="width:303px">Material Bibliográfico sobre Eficiencia Energética y Sistemas de Gestión de la Energía</td><td id="{Bve" class="" style="width:237px"><a href="https://www.agenciase.org/biblioteca/">Biblioteca – Agencia de Sostenibilidad Energética</a></td></tr><tr id="384938ab-0205-8062-a3d2-fa41f69aba5a" dir="ltr"><td id="h_NM" class="" style="width:170.25px">🛡️Sello EE</td><td id="r;IE" class="" style="width:303px">Sello de Eficiencia Energética, <mark class="highlight-yellow" data-notion-highlight="yellow">gratuito </mark>para MiPyMes</td><td id="{Bve" class="" style="width:237px"><a href="https://plataforma.selloee.cl/">SelloEE - Sello de Excelencia Energética</a></td></tr><tr id="384938ab-0205-809d-9b50-f796ebb5a884" dir="ltr"><td id="h_NM" class="" style="width:170.25px">🎯Gestiona Energía <strong>MiPyME</strong></td><td id="r;IE" class="" style="width:303px">El Ministerio de Energía ha desarrollado una serie de herramientas de fácil uso para que las MiPyMES puedan estimar el uso y generación de energía a lo largo del país.</td><td id="{Bve" class="" style="width:237px"><a href="https://mipymes.gestionaenergia.cl/herramientas">Herramientas | Gestiona Energía MiPyMEs</a></td></tr><tr id="384938ab-0205-804f-a419-d8f2ed643595" dir="ltr"><td id="h_NM" class="" style="width:170.25px">⚡Calculadora de <strong>ahorro energéticos</strong></td><td id="r;IE" class="" style="width:303px">Herramienta para calcular una primera aproximación de ahorros y beneficios</td><td id="{Bve" class="" style="width:237px"><a href="https://mipyme.agenciase.org/plataforma/">Plataforma Gestiona Energía</a></td></tr><tr id="388938ab-0205-80a5-8e2e-e3feda28e98f" dir="ltr"><td id="h_NM" class="" style="width:170.25px">🌿Calculadora de Energías Renovables</td><td id="r;IE" class="" style="width:303px">Calculadora de Ahorro para calcular de forma rápida el ahorro que podría obtener al instalar un sistema solar fotovoltaico y conectarlo a la red, de acuerdo a la Ley de Generación Distribuida.</td><td id="{Bve" class="" style="width:237px"><a href="https://solar.minenergia.cl/">Explorador Solar</a></td></tr><tr id="384938ab-0205-80ec-a59f-fc9e907e5b42" dir="ltr"><td id="h_NM" class="" style="width:170.25px">🧾Servicio de Diagnóstico ONLINE</td><td id="r;IE" class="" style="width:303px">Servicio de <strong>diagnóstico energético gratuito</strong> que, a partir de una revisión energética de la empresa, entrega recomendaciones sobre medidas de eficiencia energética y energía renovable</td><td id="{Bve" class="" style="width:237px"><a href="https://mipymes.gestionaenergia.cl/unidad-de-asistencia-tecnica">Asistencia Técnica Gratuita</a></td></tr><tr id="392938ab-0205-8064-8cbe-dba408471bda" dir="ltr"><td id="h_NM" class="" style="width:170.25px">❄️Cero Fugas PNUD</td><td id="r;IE" class="" style="width:303px">Apoyo técnico y cofinanciamiento para empresas con sistemas de refrigeración HCFC.</td><td id="{Bve" class="" style="width:237px"><a href="https://www.undp.org/es/chile/programa-cero-fugas">Programa Cero Fugas | Programa De Las Naciones Unidas Para El Desarrollo</a></td></tr></tbody></table></div><hr id="8b4938ab-0205-82c9-8573-014fd801f7c1" dir="auto"/><p id="384938ab-0205-80c3-8efa-ee33621b94ce" class="" dir="auto"><mark class="highlight-blue" data-notion-highlight="blue">━━━━━━</mark><mark class="highlight-red" data-notion-highlight="red">━━━━━━━━━━</mark></p><p id="c99938ab-0205-83b4-be1b-81ab059d240f" class="" dir="auto"><strong>Carlos Campos<br/></strong><mark class="highlight-gray" data-notion-highlight="gray">Analista Regional Eficiencia Energética<br/></mark>Seremi de Energía Región de Valparaíso <br/><mark class="highlight-purple" data-notion-highlight="purple">ccamposn@minenergia.cl</mark></p><p id="384938ab-0205-805b-9a31-f72072de7062" class="" dir="auto">
+</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>

@@ -1,0 +1,35 @@
+{
+  "name": "ee-mentor",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Sistema de diagnósticos y reportes de eficiencia energética para MiPyMEs",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "node ./dist/server/entry.mjs",
+    "build": "astro build",
+    "preview": "astro preview",
+    "check": "astro check",
+    "import:knowledge": "node scripts/import-knowledge.mjs",
+    "seed:catalogs": "node scripts/seed-catalogs.mjs",
+    "seed:demo": "node scripts/seed-demo.mjs",
+    "smoke": "node scripts/smoke-test.mjs"
+  },
+  "dependencies": {
+    "@astrojs/node": "^9.4.3",
+    "astro": "^5.14.1",
+    "marked": "^16.4.0",
+    "sanitize-html": "^2.17.0",
+    "smol-toml": "^1.4.2",
+    "yaml": "^2.8.1",
+    "zod": "^4.1.12"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.4",
+    "@tailwindcss/vite": "^4.1.14",
+    "@types/node": "^26.6.5",
+    "@types/sanitize-html": "^2.16.0",
+    "tailwindcss": "^4.1.14",
+    "typescript": "^5.9.3"
+  }
+}

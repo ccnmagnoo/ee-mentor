@@ -1,0 +1,13 @@
+id = "CAN-REC-almacenamiento-refrigerado"
+tipo = "recomendacion"
+titulo = "Almacenamiento refrigerado"
+descripcion = "Se recomienda el uso de equipos de mayor capacidad y eficiencia para el almacenamiento de productos a la espera de exposición, como refrigeradores verticales de frío indirecto clase A+ o superiores. Dichos equipos deben mantenerse ordenados para un retiro de los mismo de forma fácil y rápida. También esto permitirá la reducción de veces que este artefacto tiene que se abierto para reposición de alimentos."
+categoria = "refrigeracion"
+impacto = "medio"
+inversion = "media"
+dificultad = "media"
+origen = "casos:Cafetería"
+fuente_id = "FUE-marcoffee-cl-382938ab0205803990d9ca01572d5b71"
+estado = "pendiente"
+created_at = "2026-10-24T17:57:09.620Z"
+

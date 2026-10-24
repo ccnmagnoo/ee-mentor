@@ -1,0 +1,16 @@
+schema_version = 1
+id = "HAL-REFR-02"
+codigo = "REFR-02"
+titulo = "Condensadores y serpentines con suciedad acumulada"
+categoria = "refrigeracion"
+descripcion = "Se observan condensadores, serpentines y rejillas de ventilación con polvo, grasa o pelusa, especialmente en equipos ubicados en cocinas o zonas de preparación. No se evidencia una pauta periódica de limpieza."
+justificacion = "La suciedad reduce la transferencia de calor y obliga al compresor a trabajar más tiempo para alcanzar la temperatura de consigna, aumentando el consumo eléctrico y el desgaste del equipo."
+impacto = "medio"
+energetico = "electricidad"
+recomendacion_id = "REC-REFR-02"
+tags = [ "refrigeracion", "mantencion", "condensador" ]
+activo = true
+origen = "catalogo_base"
+created_at = "2026-01-01T00:00:00.000Z"
+updated_at = "2026-01-01T00:00:00.000Z"
+

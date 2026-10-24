@@ -1,0 +1,13 @@
+id = "CAN-HAL-sistema-de-congelado"
+tipo = "hallazgo"
+titulo = "Sistema de congelado"
+descripcion = "Cuenta con dos cámaras de congelado (una destinada a materias primas y otra a productos terminados de empanadas) con operación a bajas temperaturas (≈ -18 °C) , lo que implica un alto consumo energético continuo. Uno de los principales problemas es la apertura frecuente de puertas , especialmente en la cámara de productos terminados, donde existe mayor rotación, generando infiltración de aire húmedo que incrementa la formación de escarcha y la carga térmica del sistema. También la única fuente de información de congelado es la termocupla del equipo, del cuál el cliente desconoce su ubicación punto de toma de medición."
+categoria = "refrigeracion"
+impacto = "medio"
+inversion = "baja"
+dificultad = "baja"
+origen = "casos:Restaurante"
+fuente_id = "FUE-las-deliciosas-383938ab020580caab4ce9e4e584f7a8"
+estado = "pendiente"
+created_at = "2026-10-24T17:57:09.461Z"
+

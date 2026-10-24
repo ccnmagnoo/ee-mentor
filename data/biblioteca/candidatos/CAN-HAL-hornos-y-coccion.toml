@@ -1,0 +1,13 @@
+id = "CAN-HAL-hornos-y-coccion"
+tipo = "hallazgo"
+titulo = "Hornos y cocción"
+descripcion = "El local dispone de un horno convector utilizado para la preparación y calentamiento de masas y productos complementarios. Entre los riesgos de eficiencia se encuentran los períodos de precalentamiento prolongados, el uso con cargas parciales y las pérdidas de calor asociadas a aperturas frecuentes durante la operación."
+categoria = "coccion"
+impacto = "alto"
+inversion = "baja"
+dificultad = "baja"
+origen = "casos:Cafetería"
+fuente_id = "FUE-la-creperia-rapa-nui-392938ab020580b2b86bcfcf44b"
+estado = "pendiente"
+created_at = "2026-10-24T17:57:09.362Z"
+

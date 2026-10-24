@@ -1,0 +1,13 @@
+id = "CAN-HAL-maquina-de-helados"
+tipo = "hallazgo"
+titulo = "Maquina de helados"
+descripcion = "l principal proceso productivo del negocio corresponde a la elaboración de helados artesanales mediante una máquina de fabricación de helados que opera de manera intensiva, especialmente durante la temporada alta de turismo. Debido a que este equipo constituye uno de los mayores consumidores de energía del establecimiento, existe riesgo de elevados consumos eléctricos asociados a extensos períodos de funcionamiento, incrementos de demanda en horarios punta y disminución del rendimiento energético producto de una mantención insuficiente o del desgaste natural de sus componentes."
+categoria = "mantencion"
+impacto = "alto"
+inversion = "baja"
+dificultad = "baja"
+origen = "casos:Cafetería"
+fuente_id = "FUE-la-creperia-rapa-nui-392938ab020580b2b86bcfcf44b"
+estado = "pendiente"
+created_at = "2026-10-24T17:57:09.331Z"
+

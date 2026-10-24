@@ -1,0 +1,106 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import Icon from '@/components/ui/Icon.astro';
+import PageHeader from '@/components/ui/PageHeader.astro';
+import EmptyState from '@/components/ui/EmptyState.astro';
+import ClasificacionBadge from '@/components/ui/ClasificacionBadge.astro';
+import { listarEmpresasConResumen } from '@/lib/services/analytics';
+import { clasificarPuntaje } from '@/lib/scoring';
+import { formatFechaCorta } from '@/lib/config';
+
+const empresas = await listarEmpresasConResumen();
+const totalVisitas = empresas.reduce((acc, item) => acc + item.visitas, 0);
+---
+
+<Layout title="Empresas" description="Cartera de empresas asesoradas">
+  <PageHeader
+    eyebrow="Cartera"
+    title="Empresas"
+    subtitle={`${empresas.length} empresas registradas · ${totalVisitas} visitas realizadas.`}
+  >
+    <Fragment slot="actions">
+      <a href="/" class="btn-secondary"><Icon name="dashboard" size={16} /> Dashboard</a>
+      <a href="/empresas/nueva" class="btn-primary"><Icon name="plus" size={16} /> Nueva empresa</a>
+    </Fragment>
+  </PageHeader>
+
+  {empresas.length === 0 ? (
+    <EmptyState
+      title="No hay empresas registradas"
+      description="Crea la primera ficha de empresa para comenzar a registrar visitas y generar informes."
+    >
+      <Icon slot="icon" name="building" size={22} />
+      <a href="/empresas/nueva" class="btn-primary"><Icon name="plus" size={16} /> Crear empresa</a>
+    </EmptyState>
+  ) : (
+    <section class="card overflow-hidden">
+      <div class="card-header">
+        <div class="relative w-full max-w-md">
+          <Icon name="search" size={16} class="pointer-events-none absolute left-3 top-2.5 text-slate-400" />
+          <input
+            type="search"
+            class="input pl-9"
+            placeholder="Buscar por nombre, RUT, rubro o comuna…"
+            data-filter-target="#empresas-list"
+            aria-label="Buscar empresas"
+          />
+        </div>
+        <p class="text-xs text-slate-500">La búsqueda filtra la tabla en tiempo real.</p>
+      </div>
+
+      <div id="empresas-list" class="table-wrap">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Empresa</th>
+              <th>Ubicación</th>
+              <th class="text-center">Visitas</th>
+              <th>Última visita</th>
+              <th>Clasificación</th>
+              <th class="text-right">Acciones</th>
+            </tr>
+          </thead>
+          <tbody>
+            {empresas.map(({ empresa, visitas, ultimaVisita, puntaje, clasificacion }) => {
+              const clasificacionInfo = clasificarPuntaje(puntaje);
+              return (
+                <tr data-filter-item>
+                  <td>
+                    <a href={`/empresas/${empresa.id}`} class="font-medium text-slate-900 hover:text-brand-700">{empresa.nombre}</a>
+                    <p class="text-xs text-slate-500">
+                      {empresa.rut || 'Sin RUT'} · {empresa.rubro}
+                    </p>
+                  </td>
+                  <td class="text-slate-600">
+                    {empresa.comuna || '—'}
+                    <p class="text-xs text-slate-400">{empresa.region}</p>
+                  </td>
+                  <td class="text-center font-semibold text-slate-700">{visitas}</td>
+                  <td class="whitespace-nowrap text-slate-600">{ultimaVisita ? formatFechaCorta(ultimaVisita) : '—'}</td>
+                  <td>
+                    {puntaje !== null ? (
+                      <div class="flex flex-col items-start gap-1">
+                        <ClasificacionBadge etiqueta={clasificacionInfo.etiqueta} tono={clasificacionInfo.tono} />
+                        <span class="text-[11px] text-slate-500">{puntaje.toFixed(1)}/5</span>
+                      </div>
+                    ) : (
+                      <span class="text-xs text-slate-400">{clasificacion}</span>
+                    )}
+                  </td>
+                  <td class="text-right">
+                    <div class="flex justify-end gap-1">
+                      <a href={`/empresas/${empresa.id}/visitas/nueva`} class="btn-ghost btn-sm" title="Registrar visita">
+                        <Icon name="plus" size={14} /> Visita
+                      </a>
+                      <a href={`/empresas/${empresa.id}`} class="btn-ghost btn-sm">Detalle</a>
+                    </div>
+                  </td>
+                </tr>
+              );
+            })}
+          </tbody>
+        </table>
+      </div>
+    </section>
+  )}
+</Layout>

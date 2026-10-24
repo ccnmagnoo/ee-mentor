@@ -1,0 +1,60 @@
+---
+import { ESCALA_PUNTAJE } from '@/lib/scoring';
+
+interface Props {
+  numero: string;
+  seccionKey: string;
+  titulo: string;
+  descripcion: string;
+  puntaje: number;
+  observaciones: string;
+}
+const { numero, seccionKey, titulo, descripcion, puntaje, observaciones } = Astro.props;
+---
+
+<section class="card overflow-hidden" id={`seccion-${seccionKey}`}>
+  <div class="section-heading justify-between">
+    <div class="flex items-center gap-3">
+      <span class="step-number">{numero}</span>
+      <div>
+        <h2 class="fieldset-title">{titulo}</h2>
+        <p class="text-xs text-slate-500">{descripcion}</p>
+      </div>
+    </div>
+    <span class="hidden rounded-full bg-brand-50 px-2.5 py-1 text-[11px] font-semibold text-brand-700 ring-1 ring-inset ring-brand-200 sm:inline-flex">
+      Puntaje <span data-score-output={seccionKey} class="ml-1">—</span>
+    </span>
+  </div>
+
+  <div class="grid gap-4 p-5 sm:grid-cols-2 sm:p-6">
+    <div>
+      <label class="label" for={`puntaje-${seccionKey}`}>Evaluación de la sección</label>
+      <select
+        id={`puntaje-${seccionKey}`}
+        name={`secciones.${seccionKey}.puntaje`}
+        class="input"
+        data-score={seccionKey}
+      >
+        {ESCALA_PUNTAJE.map((item) => (
+          <option value={item.valor} selected={puntaje === item.valor}>
+            {item.valor} · {item.etiqueta}
+          </option>
+        ))}
+      </select>
+      <p class="help">0 excluye la sección del promedio global.</p>
+    </div>
+
+    <slot />
+
+    <div class="sm:col-span-2">
+      <label class="label" for={`obs-${seccionKey}`}>Observaciones de terreno</label>
+      <textarea
+        id={`obs-${seccionKey}`}
+        name={`secciones.${seccionKey}.observaciones`}
+        rows="2"
+        class="input"
+        placeholder="Detalle observado, condiciones de operación, evidencia…"
+      >{observaciones}</textarea>
+    </div>
+  </div>
+</section>

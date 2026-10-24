@@ -1,0 +1,13 @@
+id = "CAN-REC-vitrinas-refrigeradas-de-exhibicion"
+tipo = "recomendacion"
+titulo = "Vitrinas refrigeradas de exhibición"
+descripcion = "Resulta conveniente incorporar cubiertas térmicas o sistemas de protección durante horarios de cierre, mejorar el sombreado frente a la radiación solar directa y establecer revisiones periódicas de los sistemas de refrigeración para asegurar su correcto desempeño operacional. Estos equipos, a pesar de ser muy convenientes desde el punto comercial para ventas de productos a cliente final, son una performance energética extremadamente baja, esto debido a la superficie vidriada de las mismas. En adición se recomienda su uso para efectos de exposición de productos, pero en horarios de cierre, los productos se almacenen en cámaras apropiadas para conservación y configuración del setpoint de temperatura en baja potencia de refrigeración. Se recomienda la adquisición de termómetros laser para cocina para tener un manejo más fino de estos equipos , ya que su temperatura tiende a variar enormemente entre distintos puntos de su superficie."
+categoria = "refrigeracion"
+impacto = "medio"
+inversion = "media"
+dificultad = "media"
+origen = "casos:Cafetería"
+fuente_id = "FUE-la-creperia-rapa-nui-392938ab020580b2b86bcfcf44b"
+estado = "pendiente"
+created_at = "2026-10-24T17:57:09.412Z"
+

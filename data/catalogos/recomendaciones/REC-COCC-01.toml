@@ -1,0 +1,20 @@
+schema_version = 1
+id = "REC-COCC-01"
+codigo = "REC-COCC-01"
+titulo = "Programación eficiente de hornos y tandas de cocción"
+categoria = "coccion"
+descripcion = "Planificar la producción en tandas que aprovechen la capacidad del horno, respetar los tiempos de precalentamiento del fabricante y reducir las aperturas de puerta."
+beneficio = "Reduce el consumo por unidad producida, mejora la consistencia del producto y disminuye la carga térmica en el local."
+inversion = "baja"
+dificultad = "baja"
+prioridad = "alta"
+ahorro_estimado = "5-15% del consumo de cocción"
+plazo = "Inmediato (0-30 días)"
+energetico = "electricidad"
+hallazgos_relacionados = [ "HAL-COCC-01" ]
+tags = [ "coccion", "horno", "produccion" ]
+activo = true
+origen = "catalogo_base"
+created_at = "2026-01-01T00:00:00.000Z"
+updated_at = "2026-01-01T00:00:00.000Z"
+

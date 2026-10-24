@@ -1,0 +1,16 @@
+schema_version = 1
+id = "HAL-MOT-01"
+codigo = "MOT-01"
+titulo = "Motores antiguos o sobredimensionados"
+categoria = "motores"
+descripcion = "Se identifican motores eléctricos de tecnología antigua, con potencias superiores a la demanda real y sin variadores de frecuencia en cargas variables como bombas o ventiladores."
+justificacion = "Los motores sobredimensionados operan en rangos de baja eficiencia. La renovación o el control de velocidad en cargas variables puede reducir significativamente el consumo eléctrico."
+impacto = "alto"
+energetico = "electricidad"
+recomendacion_id = "REC-MOT-01"
+tags = [ "motores", "renovacion", "variador" ]
+activo = true
+origen = "catalogo_base"
+created_at = "2026-01-01T00:00:00.000Z"
+updated_at = "2026-01-01T00:00:00.000Z"
+

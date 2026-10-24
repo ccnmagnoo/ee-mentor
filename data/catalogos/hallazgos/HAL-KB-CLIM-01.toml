@@ -1,0 +1,15 @@
+codigo = "KB-CLIM-01"
+titulo = "Aire acondicionado"
+categoria = "climatizacion"
+descripcion = "El local cuenta con horno a leña a la vista como valor agregado, pero en verano aumenta la temperatura, requiriendo 1 equipo de A/C para climatización de los clientes"
+justificacion = "Hallazgo importado desde la biblioteca de conocimiento (fuente FUE-pizzeria-plaggio-382938ab020580efa40bf9d41e53074)."
+impacto = "medio"
+energetico = "electricidad"
+recomendacion_id = ""
+tags = [ "biblioteca", "climatizacion" ]
+activo = true
+origen = "biblioteca:FUE-pizzeria-plaggio-382938ab020580efa40bf9d41e53074"
+schema_version = 1
+id = "HAL-KB-CLIM-01"
+created_at = "2026-10-24T17:59:47.578Z"
+updated_at = "2026-10-24T17:59:47.578Z"

@@ -1,0 +1,13 @@
+id = "CAN-REC-gestion-activa-de-regulacion-termica-de-ar"
+tipo = "recomendacion"
+titulo = "Gestión activa de regulación térmica de artefactos de frío"
+descripcion = "Se recomienda evaluar la configuración de los controladores de temperatura de los equipos, privilegiando una estrategia de operación en modo de ahorro energético durante horarios de cierre, en lugar de la desconexión completa. El ajuste de setpoints nocturnos a temperaturas levemente superiores, compatibles con la conservación segura de los productos, puede permitir una reducción del consumo energético manteniendo la estabilidad térmica y disminuyendo el estrés operacional de los equipos. Asimismo, se recomienda revisar la programación de deshielos automáticos y verificar que cada equipo opere de acuerdo con las especificaciones del fabricante, contribuyendo a extender su vida útil y mejorar su desempeño energético. Para facilitar la medición activa de rendimiento de los equipos y seteos, se recomienda adquirir los siguientes instrumentos de medición:\n • termómetro infrarrojo digital \n • termómetro digital de cocina"
+categoria = "gestion_operacional"
+impacto = "medio"
+inversion = "baja"
+dificultad = "media"
+origen = "casos:Cafetería"
+fuente_id = "FUE-minimarket-y-cafe-tonita-392938ab02058043b56ae72"
+estado = "pendiente"
+created_at = "2026-10-24T17:57:09.725Z"
+

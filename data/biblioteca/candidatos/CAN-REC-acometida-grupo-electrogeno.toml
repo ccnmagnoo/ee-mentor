@@ -1,0 +1,13 @@
+id = "CAN-REC-acometida-grupo-electrogeno"
+tipo = "recomendacion"
+titulo = "Acometida Grupo electrógeno"
+descripcion = "Se identifica una falla potencialmente crítica en el establecimiento, dado que, pese a contar con un equipo electrógeno nuevo, este no se encuentra conectado ni operativo para respaldo energético en caso de contingencias o cortes de suministro eléctrico. Esta situación expone a la instalación a riesgos de interrupción de procesos, posibles pérdidas operativas y afectación a la seguridad. Se recomienda realizar a la brevedad la correcta instalación y puesta en marcha del equipo, incluyendo su conexión al sistema eléctrico mediante un sistema de transferencia adecuado (manual o automático), la verificación de cumplimiento normativo vigente y la ejecución de pruebas de funcionamiento periódicas que aseguren su disponibilidad y confiabilidad ante emergencias. El tamaño del equipo es de 33 kVA que puede ser suficiente para los equipos de refrigeración de materias primas y productos terminados. Antes de su operación requiere una inspección técnica de piezas y componentes para asegurar calidad de funcionamiento y suministro energético, ya que ha estado detenido por un periodo superior a 6 meses, por lo que previo a su operación requiere revisión de componentes y pierzas."
+categoria = "gestion_operacional"
+impacto = "alto"
+inversion = "media"
+dificultad = "media"
+origen = "casos:No especificado"
+fuente_id = "FUE-stefymar-382938ab0205804e85d2cd29aa1f7eb1"
+estado = "pendiente"
+created_at = "2026-10-24T17:57:10.251Z"
+

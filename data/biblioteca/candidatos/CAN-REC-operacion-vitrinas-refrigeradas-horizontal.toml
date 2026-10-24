@@ -1,0 +1,13 @@
+id = "CAN-REC-operacion-vitrinas-refrigeradas-horizontal"
+tipo = "recomendacion"
+titulo = "Operación vitrinas refrigeradas horizontales"
+descripcion = "De forma similar a los equipos congeladores, se recomienda mantener y planificar una limpieza periódica de serpentines y condensadores de los equipos .Verificar temperaturas de consigna adecuadas para cada producto .Revisar sellos y mecanismos de cierre . E implementar termómetros visibles o termómetros manuales, para seguimiento operativo del punto de funcionamiento de los mismos. Evitar la exposición directa a radiación solar o fuentes de calor y contar con coberturas del tipo reflectante (similar a las viseras de estacionamiento los vehículos) para reducción de perdidas durante la noche."
+categoria = "refrigeracion"
+impacto = "alto"
+inversion = "baja"
+dificultad = "media"
+origen = "casos:Cafetería"
+fuente_id = "FUE-la-boulangerie-390938ab0205801fb682ff6930a172ba"
+estado = "pendiente"
+created_at = "2026-10-24T17:57:09.281Z"
+

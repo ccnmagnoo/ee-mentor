@@ -1,0 +1,13 @@
+id = "CAN-HAL-fraccionamiento-de-refrigeradores"
+tipo = "hallazgo"
+titulo = "Fraccionamiento de refrigeradores"
+descripcion = "Cuenta con 2 refrigeradores de doble puerta 360L, 3 de 1 una puerta 200L y 1 de 300L, 3 congeladores, 2 cooler para almacenamiento."
+categoria = "refrigeracion"
+impacto = "medio"
+inversion = "baja"
+dificultad = "baja"
+origen = "casos:Pizzería"
+fuente_id = "FUE-pizzeria-plaggio-382938ab020580efa40bf9d41e53074"
+estado = "pendiente"
+created_at = "2026-10-24T17:57:09.811Z"
+

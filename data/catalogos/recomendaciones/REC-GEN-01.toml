@@ -1,0 +1,20 @@
+schema_version = 1
+id = "REC-GEN-01"
+codigo = "REC-GEN-01"
+titulo = "Puesta en marcha y mantención del grupo electrógeno"
+categoria = "otros"
+descripcion = "Conectar el grupo electrógeno mediante transferencia manual o automática, verificar cumplimiento normativo y programar pruebas y mantenciones periódicas."
+beneficio = "Asegura la continuidad de procesos críticos ante cortes de suministro y evita pérdidas de productos y ventas."
+inversion = "baja"
+dificultad = "media"
+prioridad = "alta"
+ahorro_estimado = "Continuidad operativa"
+plazo = "Inmediato (0-30 días)"
+energetico = "diesel"
+hallazgos_relacionados = [ "HAL-GEN-01" ]
+tags = [ "respaldo", "continuidad", "seguridad" ]
+activo = true
+origen = "catalogo_base"
+created_at = "2026-01-01T00:00:00.000Z"
+updated_at = "2026-01-01T00:00:00.000Z"
+

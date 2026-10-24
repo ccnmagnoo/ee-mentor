@@ -1,0 +1,20 @@
+schema_version = 1
+id = "REC-TAR-02"
+codigo = "REC-TAR-02"
+titulo = "Compensación de energía reactiva"
+categoria = "tarifas"
+descripcion = "Dimensionar e instalar un banco de condensadores o filtro activo para elevar el factor de potencia sobre 0,95, con evaluación de un especialista y monitoreo periódico."
+beneficio = "Elimina o reduce las penalizaciones por reactiva y libera capacidad en la instalación."
+inversion = "media"
+dificultad = "media"
+prioridad = "media"
+ahorro_estimado = "3-8% de la factura eléctrica"
+plazo = "Mediano plazo (3-6 meses)"
+energetico = "electricidad"
+hallazgos_relacionados = [ "HAL-TAR-02" ]
+tags = [ "tarifa", "reactiva", "condensadores" ]
+activo = true
+origen = "catalogo_base"
+created_at = "2026-01-01T00:00:00.000Z"
+updated_at = "2026-01-01T00:00:00.000Z"
+

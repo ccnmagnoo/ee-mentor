@@ -1,0 +1,16 @@
+schema_version = 1
+id = "HAL-TAR-01"
+codigo = "TAR-01"
+titulo = "Tarifa eléctrica inadecuada para el perfil de consumo"
+categoria = "tarifas"
+descripcion = "El negocio mantiene una tarifa de tipo residencial o sin discriminación horaria pese a tener un consumo productivo relevante. No se ha analizado el historial de facturación ni la curva de carga."
+justificacion = "Una tarifa mal seleccionada puede encarecer la factura incluso sin cambios en el consumo. El análisis tarifario es una medida de bajo costo con impacto económico directo."
+impacto = "alto"
+energetico = "electricidad"
+recomendacion_id = "REC-TAR-01"
+tags = [ "tarifa", "facturacion", "demanda" ]
+activo = true
+origen = "catalogo_base"
+created_at = "2026-01-01T00:00:00.000Z"
+updated_at = "2026-01-01T00:00:00.000Z"
+

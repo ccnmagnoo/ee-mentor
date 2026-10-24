@@ -1,0 +1,13 @@
+id = "CAN-REC-operacion-cafeteria-y-equipamiento-electro"
+tipo = "recomendacion"
+titulo = "Operación cafetería y equipamiento electrodoméstico menor"
+descripcion = "Es recomendable ajustar las temperaturas de operación a los requerimientos reales del servicio, realizar limpiezas y descalcificaciones periódicas, utilizar las funciones de ahorro de energía cuando existan y capacitar al personal para evitar periodos prolongados de funcionamiento sin utilización efectiva."
+categoria = "gestion_operacional"
+impacto = "medio"
+inversion = "baja"
+dificultad = "media"
+origen = "casos:Cafetería"
+fuente_id = "FUE-la-creperia-rapa-nui-392938ab020580b2b86bcfcf44b"
+estado = "pendiente"
+created_at = "2026-10-24T17:57:09.393Z"
+

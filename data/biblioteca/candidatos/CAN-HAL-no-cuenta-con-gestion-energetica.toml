@@ -1,0 +1,13 @@
+id = "CAN-HAL-no-cuenta-con-gestion-energetica"
+tipo = "hallazgo"
+titulo = "No cuenta con gestión energética"
+descripcion = "No se evidencia la existencia explicita de un sistema formal de gestión de la energía dentro de la empresa, lo que limita la capacidad para monitorear, analizar y optimizar el consumo energético. Esta definición dificulta la identificación oportuna de ineficiencias, la implementación de medidas correctivas y el seguimiento de indicadores clave, generando una gestión más bien reactiva que estratégica en materia energética."
+categoria = "gestion_energetica"
+impacto = "medio"
+inversion = "baja"
+dificultad = "baja"
+origen = "casos:Cafetería"
+fuente_id = "FUE-cafe-colores-382938ab020580c59ae6d8d19349a7b0"
+estado = "pendiente"
+created_at = "2026-10-24T17:57:09.034Z"
+

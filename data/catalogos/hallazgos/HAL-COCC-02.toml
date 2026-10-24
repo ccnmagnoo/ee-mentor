@@ -1,0 +1,16 @@
+schema_version = 1
+id = "HAL-COCC-02"
+codigo = "COCC-02"
+titulo = "Quemadores sucios o mal regulados"
+categoria = "coccion"
+descripcion = "Se observan quemadores de cocina o plancha con suciedad, hollín o llamas desajustadas. No se evidencia una mantención periódica ni una verificación de combustión."
+justificacion = "Una combustión deficiente reduce el aprovechamiento del gas y puede generar condiciones inseguras. La mantención y regulación de quemadores es una medida de bajo costo con impacto directo."
+impacto = "medio"
+energetico = "glp"
+recomendacion_id = "REC-COCC-02"
+tags = [ "coccion", "gas", "quemador", "mantencion" ]
+activo = true
+origen = "catalogo_base"
+created_at = "2026-01-01T00:00:00.000Z"
+updated_at = "2026-01-01T00:00:00.000Z"
+

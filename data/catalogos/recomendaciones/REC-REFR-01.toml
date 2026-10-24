@@ -1,0 +1,20 @@
+schema_version = 1
+id = "REC-REFR-01"
+codigo = "REC-REFR-01"
+titulo = "Gestión diferenciada de equipos de refrigeración"
+categoria = "refrigeracion"
+descripcion = "Definir que vitrinas y mesones refrigerados se usen para exhibición y apoyo de corto plazo, y que el almacenamiento prolongado se realice en refrigeradores o cámaras cerradas. Implementar rotación FIFO y señalización de equipos."
+beneficio = "Reduce el consumo base de refrigeración, mejora la conservación de alimentos y prolonga la vida útil de los equipos de exhibición."
+inversion = "baja"
+dificultad = "baja"
+prioridad = "alta"
+ahorro_estimado = "10-25% del consumo de refrigeración"
+plazo = "Inmediato (0-30 días)"
+energetico = "electricidad"
+hallazgos_relacionados = [ "HAL-REFR-01" ]
+tags = [ "refrigeracion", "operacion", "fifo" ]
+activo = true
+origen = "catalogo_base"
+created_at = "2026-01-01T00:00:00.000Z"
+updated_at = "2026-01-01T00:00:00.000Z"
+

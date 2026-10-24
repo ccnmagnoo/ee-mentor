@@ -1,0 +1,13 @@
+id = "CAN-HAL-ausencia-de-elementos-de-aislamiento-tempo"
+tipo = "hallazgo"
+titulo = "Ausencia de elementos de aislamiento temporal en vitrinas y equipos de refrigeración durante periodos de cierre"
+descripcion = "No se identificó el uso de cobertores térmicos o reflectantes para vitrinas refrigeradas ni para los equipos verticales de exhibición durante los períodos en que el local permanece cerrado al público. Esta condición favorece la transferencia de calor hacia el interior de los equipos, obligando a los sistemas de refrigeración a realizar un mayor esfuerzo para mantener las temperaturas de conservación."
+categoria = "refrigeracion"
+impacto = "medio"
+inversion = "baja"
+dificultad = "baja"
+origen = "casos:Cafetería"
+fuente_id = "FUE-minimarket-y-cafe-tonita-392938ab02058043b56ae72"
+estado = "pendiente"
+created_at = "2026-10-24T17:57:09.689Z"
+

@@ -1,0 +1,16 @@
+schema_version = 1
+id = "HAL-REFR-05"
+codigo = "REFR-05"
+titulo = "Equipos de refrigeración antiguos o ineficientes"
+categoria = "refrigeracion"
+descripcion = "Se identifican equipos con más de 8 a 10 años de operación, sin etiqueta de eficiencia visible y con signos de desgaste. Algunos utilizan refrigerantes con alto potencial de calentamiento global."
+justificacion = "La eficiencia de los compresores y del aislamiento se degrada con los años. La renovación planificada por equipos de clase energética superior reduce el consumo y las pérdidas de refrigerante."
+impacto = "alto"
+energetico = "electricidad"
+recomendacion_id = "REC-REFR-05"
+tags = [ "refrigeracion", "renovacion", "eficiencia" ]
+activo = true
+origen = "catalogo_base"
+created_at = "2026-01-01T00:00:00.000Z"
+updated_at = "2026-01-01T00:00:00.000Z"
+

@@ -1,0 +1,13 @@
+id = "CAN-HAL-seccion-de-cafeteria"
+tipo = "hallazgo"
+titulo = "Sección de cafetería"
+descripcion = "El local cuenta con una máquina de café espresso industrial de doble grupo destinada a la preparación de bebidas calientes para los clientes. Este tipo de equipamiento requiere mantener agua y componentes internos a alta temperatura durante gran parte de la jornada, lo que puede generar consumos permanentes incluso durante períodos de baja utilización, así como pérdidas de eficiencia derivadas de falta de limpieza, incrustaciones o ajustes inadecuados de temperatura."
+categoria = "equipos_productivos"
+impacto = "alto"
+inversion = "baja"
+dificultad = "baja"
+origen = "casos:Cafetería"
+fuente_id = "FUE-la-creperia-rapa-nui-392938ab020580b2b86bcfcf44b"
+estado = "pendiente"
+created_at = "2026-10-24T17:57:09.338Z"
+

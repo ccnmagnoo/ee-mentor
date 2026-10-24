@@ -1,0 +1,20 @@
+schema_version = 1
+id = "REC-CLIM-01"
+codigo = "REC-CLIM-01"
+titulo = "Reemplazo de calefactores por bomba de calor"
+categoria = "climatizacion"
+descripcion = "Evaluar la instalación de equipos inverter tipo split o bomba de calor de alta eficiencia para reemplazar calefactores individuales, dimensionados según la carga térmica del local."
+beneficio = "Mayor eficiencia por unidad de electricidad, mejor distribución del calor y control de temperatura. Requiere evaluación técnica y cotización."
+inversion = "alta"
+dificultad = "alta"
+prioridad = "alta"
+ahorro_estimado = "30-60% del consumo de calefacción"
+plazo = "Largo plazo (6-12 meses)"
+energetico = "electricidad"
+hallazgos_relacionados = [ "HAL-CLIM-01" ]
+tags = [ "climatizacion", "bomba de calor", "inverter" ]
+activo = true
+origen = "catalogo_base"
+created_at = "2026-01-01T00:00:00.000Z"
+updated_at = "2026-01-01T00:00:00.000Z"
+

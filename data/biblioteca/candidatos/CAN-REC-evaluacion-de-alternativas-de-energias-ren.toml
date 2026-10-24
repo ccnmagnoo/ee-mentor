@@ -1,0 +1,13 @@
+id = "CAN-REC-evaluacion-de-alternativas-de-energias-ren"
+tipo = "recomendacion"
+titulo = "Evaluación de alternativas de energías renovables"
+descripcion = "Se recomienda desarrollar un estudio preliminar de prefactibilidad para determinar el potencial de incorporación de energías renovables, considerando tanto las restricciones físicas del inmueble como alternativas disponibles en el mercado. Asimismo, es aconsejable utilizar herramientas como la Calculadora de Energías Renovables del Ministerio de Energía o asesorías técnicas especializadas para cuantificar eventuales beneficios económicos y energéticos, cuando se detecten oportunidades viables de implementación."
+categoria = "ernc"
+impacto = "medio"
+inversion = "media"
+dificultad = "media"
+origen = "casos:Cafetería"
+fuente_id = "FUE-la-creperia-rapa-nui-392938ab020580b2b86bcfcf44b"
+estado = "pendiente"
+created_at = "2026-10-24T17:57:09.424Z"
+

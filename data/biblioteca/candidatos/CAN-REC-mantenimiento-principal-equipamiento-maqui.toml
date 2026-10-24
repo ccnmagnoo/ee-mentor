@@ -1,0 +1,13 @@
+id = "CAN-REC-mantenimiento-principal-equipamiento-maqui"
+tipo = "recomendacion"
+titulo = "Mantenimiento principal equipamiento, máquina de helados"
+descripcion = "Se recomienda implementar un plan de mantención preventiva periódica, verificar regularmente las temperaturas de operación y organizar los ciclos de producción para optimizar el uso del equipo y reducir consumos innecesarios. Asimismo, en futuros procesos de renovación tecnológica, resulta conveniente evaluar alternativas de mayor eficiencia energética"
+categoria = "equipos_productivos"
+impacto = "medio"
+inversion = "baja"
+dificultad = "media"
+origen = "casos:Cafetería"
+fuente_id = "FUE-la-creperia-rapa-nui-392938ab020580b2b86bcfcf44b"
+estado = "pendiente"
+created_at = "2026-10-24T17:57:09.387Z"
+

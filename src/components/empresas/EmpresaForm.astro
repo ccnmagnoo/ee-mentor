@@ -1,0 +1,104 @@
+---
+import Icon from '@/components/ui/Icon.astro';
+import { REGION_DEFAULT } from '@/lib/config';
+import type { Empresa } from '@/lib/schemas';
+import { RUBROS } from '@/lib/schemas';
+
+interface Props {
+  action: string;
+  empresa?: Empresa | null;
+  submitLabel?: string;
+  cancelHref?: string;
+}
+const { action, empresa = null, submitLabel = 'Guardar empresa', cancelHref = '/empresas' } = Astro.props;
+---
+
+<form action={action} method="post" data-api class="space-y-5">
+  <div data-form-error class="hidden"></div>
+
+  <section class="card overflow-hidden">
+    <div class="section-heading">
+      <span class="step-number">1</span>
+      <div>
+        <h2 class="fieldset-title">Identificación del negocio</h2>
+        <p class="text-xs text-slate-500">Datos que aparecerán en la portada y el encabezado del informe.</p>
+      </div>
+    </div>
+    <div class="grid gap-4 p-5 sm:grid-cols-2 sm:p-6">
+      <div class="sm:col-span-2">
+        <label class="label" for="nombre">Nombre de la empresa *</label>
+        <input id="nombre" name="nombre" class="input" required minlength="2" value={empresa?.nombre ?? ''} placeholder="Ej: Café Aurora" />
+      </div>
+      <div>
+        <label class="label" for="rut">RUT</label>
+        <input id="rut" name="rut" class="input" value={empresa?.rut ?? ''} placeholder="76.482.193-5" />
+      </div>
+      <div>
+        <label class="label" for="rubro">Rubro</label>
+        <select id="rubro" name="rubro" class="input">
+          {RUBROS.map((rubro) => (
+            <option value={rubro} selected={(empresa?.rubro ?? 'Cafetería') === rubro}>{rubro}</option>
+          ))}
+        </select>
+      </div>
+      <div class="sm:col-span-2">
+        <label class="label" for="direccion">Dirección</label>
+        <input id="direccion" name="direccion" class="input" value={empresa?.direccion ?? ''} placeholder="Calle, número, local" />
+      </div>
+      <div>
+        <label class="label" for="comuna">Comuna</label>
+        <input id="comuna" name="comuna" class="input" value={empresa?.comuna ?? ''} placeholder="Viña del Mar" />
+      </div>
+      <div>
+        <label class="label" for="region">Región</label>
+        <input id="region" name="region" class="input" value={empresa?.region ?? REGION_DEFAULT} />
+      </div>
+    </div>
+  </section>
+
+  <section class="card overflow-hidden">
+    <div class="section-heading">
+      <span class="step-number">2</span>
+      <div>
+        <h2 class="fieldset-title">Contacto y operación</h2>
+        <p class="text-xs text-slate-500">Información útil para coordinar visitas y contextualizar el diagnóstico.</p>
+      </div>
+    </div>
+    <div class="grid gap-4 p-5 sm:grid-cols-2 sm:p-6">
+      <div>
+        <label class="label" for="contacto">Persona de contacto</label>
+        <input id="contacto" name="contacto" class="input" value={empresa?.contacto ?? ''} />
+      </div>
+      <div>
+        <label class="label" for="telefono">Teléfono</label>
+        <input id="telefono" name="telefono" class="input" value={empresa?.telefono ?? ''} placeholder="+56 9 ..." />
+      </div>
+      <div>
+        <label class="label" for="correo">Correo electrónico</label>
+        <input id="correo" name="correo" type="email" class="input" value={empresa?.correo ?? ''} />
+      </div>
+      <div class="grid grid-cols-2 gap-4">
+        <div>
+          <label class="label" for="trabajadores">Trabajadores</label>
+          <input id="trabajadores" name="trabajadores" type="number" min="0" step="1" class="input" value={empresa?.trabajadores ?? 0} />
+        </div>
+        <div>
+          <label class="label" for="superficie_m2">Superficie (m²)</label>
+          <input id="superficie_m2" name="superficie_m2" type="number" min="0" step="0.1" class="input" value={empresa?.superficie_m2 ?? 0} />
+        </div>
+      </div>
+      <div class="sm:col-span-2">
+        <label class="label" for="observaciones">Observaciones generales</label>
+        <textarea id="observaciones" name="observaciones" rows="3" class="input" placeholder="Horarios, particularidades de la operación, antecedentes relevantes…">{empresa?.observaciones ?? ''}</textarea>
+      </div>
+    </div>
+  </section>
+
+  <div class="flex flex-wrap items-center justify-end gap-2">
+    <a href={cancelHref} class="btn-secondary">Cancelar</a>
+    <button type="submit" class="btn-primary">
+      <Icon name="check" size={16} />
+      {submitLabel}
+    </button>
+  </div>
+</form>
