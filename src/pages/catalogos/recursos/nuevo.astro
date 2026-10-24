@@ -1,0 +1,22 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import PageHeader from '@/components/ui/PageHeader.astro';
+import RecursoForm from '@/components/catalogos/RecursoForm.astro';
+---
+
+<Layout title="Nuevo recurso" description="Crear un recurso de apoyo para los informes">
+  <PageHeader
+    eyebrow="Catálogos"
+    title="Nuevo recurso"
+    subtitle="Registra un enlace o documento de apoyo. Se incluirá en los informes generados mientras esté activo."
+    breadcrumbs={[
+      { label: 'Catálogos', href: '/catalogos' },
+      { label: 'Recursos', href: '/catalogos?tab=recursos' },
+      { label: 'Nuevo' },
+    ]}
+  />
+
+  <div class="max-w-4xl">
+    <RecursoForm action="/api/catalogos/recursos" cancelHref="/catalogos?tab=recursos" />
+  </div>
+</Layout>

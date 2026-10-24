@@ -1,9 +1,8 @@
-schema_version = 1
 id = "REC-CERO-FUGAS"
 categoria = "refrigeracion"
 nombre = "Programa Cero Fugas (PNUD)"
 descripcion = "Apoyo técnico y cofinanciamiento para empresas con sistemas de refrigeración que utilizan HCFC."
 url = "https://www.undp.org/es/chile/programa-cero-fugas"
 orden = 90
-activo = true
-
+activo = false
+schema_version = 1

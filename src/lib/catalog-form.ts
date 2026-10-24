@@ -6,6 +6,7 @@ import {
   IMPACTO_ENUM,
   INVERSION_ENUM,
   PRIORIDAD_ENUM,
+  RECURSO_CATEGORIA_ENUM,
 } from './schemas';
 
 function csv(value: FormDataEntryValue | null): string[] {
@@ -58,6 +59,18 @@ export const RecomendacionFormSchema = z.object({
 export type HallazgoFormInput = z.infer<typeof HallazgoFormSchema>;
 export type RecomendacionFormInput = z.infer<typeof RecomendacionFormSchema>;
 
+export const RecursoFormSchema = z.object({
+  id: optionalText,
+  categoria: RECURSO_CATEGORIA_ENUM,
+  nombre: z.string().trim().min(2, 'El nombre es obligatorio'),
+  descripcion: z.string().trim().min(10, 'La descripción debe ser más detallada'),
+  url: z.url('Debe ser una URL válida (https://…)'),
+  orden: z.coerce.number().int().min(0).default(0),
+  activo: z.boolean().default(true),
+});
+
+export type RecursoFormInput = z.infer<typeof RecursoFormSchema>;
+
 export function parseHallazgoForm(formData: FormData): HallazgoFormInput {
   return HallazgoFormSchema.parse({
     id: String(formData.get('id') ?? '').trim() || undefined,
@@ -93,5 +106,17 @@ export function parseRecomendacionForm(formData: FormData): RecomendacionFormInp
     tags: csv(formData.get('tags')),
     activo: checkbox(formData.get('activo')),
     origen: formData.get('origen') ?? 'catalogo_base',
+  });
+}
+
+export function parseRecursoForm(formData: FormData): RecursoFormInput {
+  return RecursoFormSchema.parse({
+    id: String(formData.get('id') ?? '').trim() || undefined,
+    categoria: formData.get('categoria'),
+    nombre: formData.get('nombre'),
+    descripcion: formData.get('descripcion'),
+    url: formData.get('url'),
+    orden: formData.get('orden') ?? 0,
+    activo: checkbox(formData.get('activo')),
   });
 }

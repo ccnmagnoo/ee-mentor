@@ -8,6 +8,7 @@ import {
   type Recomendacion,
   type RecomendacionInput,
   type Recurso,
+  type RecursoInput,
 } from '../schemas';
 import { HALLAZGOS_DIR, RECOMENDACIONES_DIR, RECURSOS_DIR } from '../config';
 import {
@@ -25,7 +26,9 @@ export interface CatalogoRepository {
   listRecomendaciones(includeInactive?: boolean): Promise<Recomendacion[]>;
   getRecomendacion(id: string): Promise<Recomendacion | null>;
   saveRecomendacion(input: RecomendacionInput): Promise<Recomendacion>;
-  listRecursos(): Promise<Recurso[]>;
+  listRecursos(includeInactive?: boolean): Promise<Recurso[]>;
+  getRecurso(id: string): Promise<Recurso | null>;
+  saveRecurso(input: RecursoInput): Promise<Recurso>;
 }
 
 function hallazgoFile(id: string): string {
@@ -34,6 +37,10 @@ function hallazgoFile(id: string): string {
 
 function recomendacionFile(id: string): string {
   return path.join(RECOMENDACIONES_DIR, `${id}.toml`);
+}
+
+function recursoFile(id: string): string {
+  return path.join(RECURSOS_DIR, `${id}.toml`);
 }
 
 export class FileCatalogoRepository implements CatalogoRepository {
@@ -115,14 +122,37 @@ export class FileCatalogoRepository implements CatalogoRepository {
     return recomendacion;
   }
 
-  async listRecursos(): Promise<Recurso[]> {
+  async listRecursos(includeInactive = false): Promise<Recurso[]> {
     const files = await listFiles(RECURSOS_DIR, '.toml');
     const items: Recurso[] = [];
     for (const file of files) {
       const item = await readTomlFileSafe(file, RecursoSchema);
-      if (item && item.activo) items.push(item);
+      if (item && (includeInactive || item.activo)) items.push(item);
     }
     return items.sort((a, b) => a.orden - b.orden || a.nombre.localeCompare(b.nombre, 'es'));
+  }
+
+  async getRecurso(id: string): Promise<Recurso | null> {
+    return readTomlFileSafe(recursoFile(id), RecursoSchema);
+  }
+
+  async saveRecurso(input: RecursoInput): Promise<Recurso> {
+    const existing = input.id ? await this.getRecurso(input.id) : null;
+    let id = input.id || `REC-${normalizeId(input.nombre).replace(/^REC-/, '')}`;
+    if (!existing) {
+      let suffix = 1;
+      while (await this.getRecurso(id)) {
+        suffix += 1;
+        id = `REC-${normalizeId(input.nombre).replace(/^REC-/, '')}-${suffix}`;
+      }
+    }
+    const recurso: Recurso = {
+      ...input,
+      schema_version: 1,
+      id,
+    };
+    await writeTomlFile(recursoFile(id), recurso);
+    return recurso;
   }
 }
 

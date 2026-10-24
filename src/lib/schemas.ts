@@ -491,6 +491,12 @@ export const RecursoSchema = z.object({
 
 export type Recurso = z.infer<typeof RecursoSchema>;
 
+export const RecursoInputSchema = RecursoSchema.omit({
+  schema_version: true,
+}).partial({ id: true });
+
+export type RecursoInput = z.infer<typeof RecursoInputSchema>;
+
 export const HallazgoInputSchema = HallazgoSchema.omit({
   schema_version: true,
   created_at: true,

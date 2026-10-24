@@ -11,7 +11,7 @@ Todo el contenido vive en archivos locales (TOML + Markdown), sin base de datos 
 - **Puntajes**: promedio por sección y global con clasificación automática:
   - `0 – 1,5` Crítico · `1,6 – 2,5` Deficiente · `2,6 – 3,5` Aceptable · `3,6 – 4,5` Bueno · `4,6 – 5` Destacado
 - **Informe automático** en Markdown con frontmatter YAML: perfil, evaluación, hallazgos agrupados, recomendaciones por costo, plan de acción, recursos y anexos.
-- **Catálogos editables** de hallazgos, recomendaciones y recursos, con impacto, inversión, dificultad, prioridad, ahorro estimado y plazo.
+- **Catálogos editables** de hallazgos, recomendaciones y recursos, con impacto, inversión, dificultad, prioridad, ahorro estimado y plazo. Los recursos de apoyo se crean y editan en `/catalogos?tab=recursos`; solo los activos se incluyen en los informes.
 - **Biblioteca de conocimiento**: importa los casos históricos en HTML, extrae hallazgos/recomendaciones, redacta datos personales y genera candidatos revisables que se aprueban hacia el catálogo.
 - **Dashboard** con cartera, actividad mensual, rubros y hallazgos/recomendaciones más frecuentes.
 - **Búsqueda** de empresas por nombre, RUT, rubro o comuna y filtros en catálogos.

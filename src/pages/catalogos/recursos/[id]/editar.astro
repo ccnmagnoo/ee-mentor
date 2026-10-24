@@ -1,0 +1,31 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import PageHeader from '@/components/ui/PageHeader.astro';
+import RecursoForm from '@/components/catalogos/RecursoForm.astro';
+import { catalogos } from '@/lib/repositories';
+
+const { id } = Astro.params;
+const recurso = id ? await catalogos.getRecurso(id) : null;
+if (!recurso) return Astro.redirect('/catalogos?tab=recursos');
+---
+
+<Layout title={`Editar ${recurso.nombre}`} description="Editar recurso de apoyo">
+  <PageHeader
+    eyebrow="Catálogos · Recursos"
+    title="Editar recurso"
+    subtitle={recurso.nombre}
+    breadcrumbs={[
+      { label: 'Catálogos', href: '/catalogos' },
+      { label: 'Recursos', href: '/catalogos?tab=recursos' },
+      { label: recurso.nombre },
+    ]}
+  />
+
+  <div class="max-w-4xl">
+    <RecursoForm
+      action="/api/catalogos/recursos"
+      item={recurso}
+      cancelHref="/catalogos?tab=recursos"
+    />
+  </div>
+</Layout>

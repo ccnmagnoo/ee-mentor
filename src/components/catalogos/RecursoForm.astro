@@ -1,0 +1,93 @@
+---
+import Icon from '@/components/ui/Icon.astro';
+import { RECURSO_CATEGORIAS, type Recurso } from '@/lib/schemas';
+
+interface Props {
+  action: string;
+  item?: Recurso | null;
+  cancelHref?: string;
+}
+
+const { action, item = null, cancelHref = '/catalogos?tab=recursos' } = Astro.props;
+const editando = Boolean(item);
+const categoria = item?.categoria ?? 'eficiencia_energetica';
+---
+
+<form action={action} method="post" data-api class="space-y-5">
+  <div data-form-error class="hidden"></div>
+
+  {item && <input type="hidden" name="id" value={item.id} />}
+
+  <section class="card overflow-hidden">
+    <div class="section-heading">
+      <span class="step-number">R</span>
+      <div>
+        <h2 class="fieldset-title">{editando ? 'Editar recurso' : 'Nuevo recurso'}</h2>
+        <p class="text-xs text-slate-500">
+          Los recursos activos se incluyen automáticamente en la sección de información
+          complementaria de cada informe.
+        </p>
+      </div>
+    </div>
+    <div class="grid gap-4 p-5 sm:grid-cols-2 sm:p-6">
+      <div class="sm:col-span-2">
+        <label class="label" for="nombre">Nombre *</label>
+        <input id="nombre" name="nombre" class="input" required minlength="2" value={item?.nombre ?? ''} />
+      </div>
+      <div class="sm:col-span-2">
+        <label class="label" for="descripcion">Descripción *</label>
+        <textarea id="descripcion" name="descripcion" rows="3" class="input" required minlength="10">{item?.descripcion ?? ''}</textarea>
+        <p class="help">Explica brevemente qué aporta el recurso y a quién está dirigido.</p>
+      </div>
+      <div>
+        <label class="label" for="categoria">Categoría *</label>
+        <select id="categoria" name="categoria" class="input" required>
+          {Object.entries(RECURSO_CATEGORIAS).map(([key, label]) => (
+            <option value={key} selected={categoria === key}>{label}</option>
+          ))}
+        </select>
+      </div>
+      <div>
+        <label class="label" for="orden">Orden de aparición</label>
+        <input
+          id="orden"
+          name="orden"
+          type="number"
+          min="0"
+          step="1"
+          class="input"
+          value={item?.orden ?? 0}
+        />
+        <p class="help">Los valores menores aparecen primero en el informe.</p>
+      </div>
+      <div class="sm:col-span-2">
+        <label class="label" for="url">URL *</label>
+        <input
+          id="url"
+          name="url"
+          type="url"
+          class="input font-mono text-xs"
+          required
+          placeholder="https://…"
+          value={item?.url ?? ''}
+        />
+        <p class="help">Enlace público al documento, sitio o herramienta.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="card card-pad">
+    <label class="flex cursor-pointer items-center gap-2 text-sm font-medium text-slate-700">
+      <input type="checkbox" name="activo" class="checkbox" checked={item?.activo ?? true} />
+      Recurso activo (disponible para incluir en informes)
+    </label>
+  </section>
+
+  <div class="flex flex-wrap items-center justify-end gap-2">
+    <a href={cancelHref} class="btn-secondary">Cancelar</a>
+    <button type="submit" class="btn-primary">
+      <Icon name="check" size={16} />
+      {editando ? 'Guardar cambios' : 'Crear recurso'}
+    </button>
+  </div>
+</form>

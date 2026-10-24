@@ -11,7 +11,7 @@ const tab = tabParam === 'recomendaciones' || tabParam === 'recursos' ? tabParam
 const [hallazgos, recomendaciones, recursos] = await Promise.all([
   catalogos.listHallazgos(true),
   catalogos.listRecomendaciones(true),
-  catalogos.listRecursos(),
+  catalogos.listRecursos(true),
 ]);
 
 const tabs = [
@@ -32,8 +32,18 @@ const categoriasRecos = [...new Set(recomendaciones.map((item) => item.categoria
   >
     <Fragment slot="actions">
       <a href="/biblioteca" class="btn-secondary"><Icon name="brain" size={16} /> Importar documentos</a>
-      <a href={tab === 'recomendaciones' ? '/catalogos/recomendaciones/nueva' : '/catalogos/hallazgos/nuevo'} class="btn-primary">
-        <Icon name="plus" size={16} /> {tab === 'recomendaciones' ? 'Nueva recomendación' : 'Nuevo hallazgo'}
+      <a
+        href={
+          tab === 'recomendaciones'
+            ? '/catalogos/recomendaciones/nueva'
+            : tab === 'recursos'
+              ? '/catalogos/recursos/nuevo'
+              : '/catalogos/hallazgos/nuevo'
+        }
+        class="btn-primary"
+      >
+        <Icon name="plus" size={16} />
+        {tab === 'recomendaciones' ? 'Nueva recomendación' : tab === 'recursos' ? 'Nuevo recurso' : 'Nuevo hallazgo'}
       </a>
     </Fragment>
   </PageHeader>
@@ -153,32 +163,42 @@ const categoriasRecos = [...new Set(recomendaciones.map((item) => item.categoria
   {tab === 'recursos' && (
     <section class="card overflow-hidden">
       <div class="card-header">
-        <div>
-          <h2 class="text-sm font-semibold text-slate-900">Recursos de apoyo</h2>
-          <p class="text-xs text-slate-500">Se incluyen automáticamente en la sección de información complementaria del informe.</p>
+        <div class="relative w-full max-w-md">
+          <Icon name="search" size={16} class="pointer-events-none absolute left-3 top-2.5 text-slate-400" />
+          <input type="search" class="input pl-9" placeholder="Buscar recurso…" data-filter-target="#tabla-recursos" />
         </div>
+        <p class="text-xs text-slate-500">Solo los activos se incluyen en los informes</p>
       </div>
       <div class="table-wrap">
-        <table class="table">
+        <table id="tabla-recursos" class="table">
           <thead>
             <tr>
               <th>Recurso</th>
               <th>Categoría</th>
+              <th class="text-center">Orden</th>
               <th>URL</th>
+              <th class="text-right">Acciones</th>
             </tr>
           </thead>
           <tbody>
             {recursos.map((recurso) => (
-              <tr>
+              <tr data-filter-item>
                 <td>
                   <p class="font-medium text-slate-800">{recurso.nombre}</p>
                   <p class="max-w-xl text-xs text-slate-500">{recurso.descripcion}</p>
                 </td>
                 <td class="whitespace-nowrap text-xs text-slate-600">{RECURSO_CATEGORIAS[recurso.categoria]}</td>
+                <td class="text-center text-xs text-slate-600">{recurso.orden}</td>
                 <td>
                   <a href={recurso.url} target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-xs font-medium text-brand-700 hover:text-brand-900">
                     Abrir <Icon name="external" size={12} />
                   </a>
+                </td>
+                <td class="text-right">
+                  <div class="flex justify-end gap-1">
+                    {recurso.activo ? <span class="badge-emerald">Activo</span> : <span class="badge-neutral">Inactivo</span>}
+                    <a href={`/catalogos/recursos/${recurso.id}/editar`} class="btn-ghost btn-sm"><Icon name="edit" size={14} /></a>
+                  </div>
                 </td>
               </tr>
             ))}
