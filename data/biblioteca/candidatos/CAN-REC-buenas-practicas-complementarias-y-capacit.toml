@@ -8,6 +8,5 @@ inversion = "baja"
 dificultad = "media"
 origen = "casos:Comercio minorista"
 fuente_id = "FUE-ecosuper-383938ab020580828338cbfee1143fd0"
-estado = "pendiente"
+estado = "aprobado"
 created_at = "2026-10-24T17:57:09.120Z"
-

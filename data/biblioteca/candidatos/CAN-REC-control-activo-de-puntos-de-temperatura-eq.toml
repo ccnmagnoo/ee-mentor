@@ -8,6 +8,5 @@ inversion = "baja"
 dificultad = "media"
 origen = "casos:Cafetería"
 fuente_id = "FUE-minimarket-y-cafe-tonita-392938ab02058043b56ae72"
-estado = "pendiente"
+estado = "aprobado"
 created_at = "2026-10-24T17:57:09.721Z"
-
