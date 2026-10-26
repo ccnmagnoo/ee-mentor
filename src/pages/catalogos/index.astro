@@ -23,6 +23,7 @@ const tabs = [
 const categoriasHallazgos = [...new Set(hallazgos.map((item) => item.categoria))];
 const categoriasRecos = [...new Set(recomendaciones.map((item) => item.categoria))];
 const recomendacionesPorId = new Map(recomendaciones.map((item) => [item.id, item]));
+const hallazgosPorId = new Map(hallazgos.map((item) => [item.id, item]));
 ---
 
 <Layout title="Catálogos" description="Catálogo editable de hallazgos, recomendaciones y recursos">
@@ -160,6 +161,30 @@ const recomendacionesPorId = new Map(recomendaciones.map((item) => [item.id, ite
                 <td>
                   <p class="font-medium text-slate-800">{reco.titulo}</p>
                   <p class="line-clamp-2 max-w-xl text-xs text-slate-500">{reco.descripcion}</p>
+                  {reco.hallazgos_relacionados.length > 0 && (
+                    <p class="mt-1 flex flex-wrap items-center gap-1">
+                      <span class="text-[10px] font-medium uppercase tracking-wide text-slate-400">Hallazgos:</span>
+                      {reco.hallazgos_relacionados.slice(0, 3).map((id) => {
+                        const hallazgo = hallazgosPorId.get(id);
+                        return hallazgo ? (
+                          <a
+                            href={`/catalogos/hallazgos/${hallazgo.id}/editar`}
+                            class="badge-neutral"
+                            title={hallazgo.titulo}
+                          >
+                            {hallazgo.codigo}
+                          </a>
+                        ) : (
+                          <span class="badge-amber" title="El hallazgo vinculado no existe en el catálogo">{id}</span>
+                        );
+                      })}
+                      {reco.hallazgos_relacionados.length > 3 && (
+                        <span class="text-[10px] text-slate-400">
+                          +{reco.hallazgos_relacionados.length - 3}
+                        </span>
+                      )}
+                    </p>
+                  )}
                 </td>
                 <td class="whitespace-nowrap text-xs text-slate-600">{CATEGORIAS[reco.categoria]}</td>
                 <td class="whitespace-nowrap text-xs text-slate-600">{INVERSIONES[reco.inversion]}</td>

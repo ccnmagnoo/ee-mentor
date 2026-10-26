@@ -102,7 +102,9 @@ export function parseRecomendacionForm(formData: FormData): RecomendacionFormInp
     ahorro_estimado: formData.get('ahorro_estimado') ?? '',
     plazo: formData.get('plazo') || 'Corto plazo (1-3 meses)',
     energetico: formData.get('energetico') ?? 'electricidad',
-    hallazgos_relacionados: csv(formData.get('hallazgos_relacionados')),
+    hallazgos_relacionados: [
+      ...new Set(formData.getAll('hallazgos_relacionados').flatMap((value) => csv(value))),
+    ],
     tags: csv(formData.get('tags')),
     activo: checkbox(formData.get('activo')),
     origen: formData.get('origen') ?? 'catalogo_base',

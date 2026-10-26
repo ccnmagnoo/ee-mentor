@@ -18,6 +18,7 @@ interface Props {
   item?: Hallazgo | Recomendacion | null;
   cancelHref?: string;
   recomendaciones?: Recomendacion[];
+  hallazgos?: Hallazgo[];
 }
 
 const {
@@ -26,6 +27,7 @@ const {
   item = null,
   cancelHref = '/catalogos',
   recomendaciones = [],
+  hallazgos = [],
 } = Astro.props;
 const esHallazgo = tipo === 'hallazgo';
 const hallazgo = esHallazgo ? (item as Hallazgo | null) : null;
@@ -62,6 +64,53 @@ const recosDisponibles = recomendaciones
 const recoSugerida =
   recosDisponibles.find(({ reco }) => reco.categoria === categoria)?.reco ?? null;
 const recoSeleccionadaId = recoVinculadaId || (!editando && recoSugerida ? recoSugerida.id : '');
+
+const hallazgosRelacionadosIds = [...new Set(recomendacion?.hallazgos_relacionados ?? [])];
+const hallazgosRelacionadosSet = new Set(hallazgosRelacionadosIds);
+const hallazgosDisponibles = hallazgos
+  .filter((hallazgo) => hallazgo.activo || hallazgosRelacionadosSet.has(hallazgo.id))
+  .map((hallazgo) => ({
+    hallazgo,
+    afinidad:
+      (hallazgo.categoria === categoria ? 4 : 0) +
+      (hallazgo.energetico === energetico ? 2 : 0),
+  }))
+  .sort(
+    (a, b) =>
+      b.afinidad - a.afinidad ||
+      a.hallazgo.titulo.localeCompare(b.hallazgo.titulo, 'es'),
+  );
+
+const hallazgosSugeridos = hallazgosDisponibles.filter(
+  ({ hallazgo }) => hallazgo.categoria === categoria,
+);
+const hallazgosSugeridosIds = new Set(hallazgosSugeridos.map(({ hallazgo }) => hallazgo.id));
+const hallazgosSeleccionados = editando ? hallazgosRelacionadosSet : hallazgosSugeridosIds;
+const hallazgosSeleccionadosVisibles = new Set(
+  [...hallazgosSeleccionados].filter((id) =>
+    hallazgosDisponibles.some(({ hallazgo }) => hallazgo.id === id),
+  ),
+);
+const hallazgosFaltantes = hallazgosRelacionadosIds.filter(
+  (id) => !hallazgosDisponibles.some(({ hallazgo }) => hallazgo.id === id),
+);
+const seleccionSonSugeridos =
+  hallazgosSugeridosIds.size === hallazgosSeleccionadosVisibles.size &&
+  [...hallazgosSugeridosIds].every((id) => hallazgosSeleccionadosVisibles.has(id));
+const sugeridosMismoEnergetico = hallazgosSugeridos.filter(
+  ({ hallazgo }) => hallazgo.energetico === energetico,
+).length;
+const hallazgoHint =
+  hallazgosSugeridos.length > 0
+    ? `Sugeridos: ${hallazgosSugeridos.length} ${
+        hallazgosSugeridos.length === 1 ? 'hallazgo' : 'hallazgos'
+      } de ${CATEGORIAS[categoria]}${
+        sugeridosMismoEnergetico > 0 &&
+        sugeridosMismoEnergetico < hallazgosSugeridos.length
+          ? ` (${sugeridosMismoEnergetico} con el mismo energético)`
+          : ''
+      }`
+    : 'No hay hallazgos de la misma categoría; selecciona manualmente.';
 
 const plazos = [
   'Corto plazo (1-3 meses)',
@@ -159,7 +208,7 @@ const plazos = [
             La recomendación sugerida combina el uso tecnológico y el energético del hallazgo.
           </p>
         </div>
-        <div class="sm:col-span-2" data-reco-picker data-autoselect={!editando ? 'true' : undefined}>
+        <div class="sm:col-span-2" data-reco-picker data-picker data-autoselect={!editando ? 'true' : undefined}>
           <div class="flex flex-wrap items-start justify-between gap-2">
             <div>
               <p class="label">Recomendación vinculada</p>
@@ -273,7 +322,7 @@ const plazos = [
                   );
                 })}
               </div>
-              <p class="help hidden" data-reco-empty>No hay recomendaciones que coincidan con la búsqueda.</p>
+              <p class="help hidden" data-reco-empty data-picker-empty>No hay recomendaciones que coincidan con la búsqueda.</p>
             </>
           ) : (
             <p class="mt-2 rounded-lg border border-amber-200 bg-amber-50 px-3 py-2 text-xs text-amber-800">
@@ -340,16 +389,115 @@ const plazos = [
             placeholder="Ej: 10-20% del consumo de iluminación"
           />
         </div>
-        <div>
-          <label class="label" for="hallazgos_relacionados">Hallazgos relacionados</label>
-          <input
-            id="hallazgos_relacionados"
-            name="hallazgos_relacionados"
-            class="input font-mono uppercase"
-            value={(recomendacion?.hallazgos_relacionados ?? []).join(', ')}
-            placeholder="HAL-ILUM-01, HAL-ILUM-02"
-          />
-          <p class="help">Códigos separados por coma.</p>
+        <div
+          class="sm:col-span-2"
+          data-hallazgo-picker
+          data-picker
+          data-autoselect={!editando ? 'true' : undefined}
+        >
+          <div class="flex flex-wrap items-start justify-between gap-2">
+            <div>
+              <p class="label">Hallazgos relacionados</p>
+              <p class="help -mt-0.5">
+                Se preseleccionan los hallazgos del mismo tipo de uso tecnológico. El energético asociado define el orden de prioridad.
+              </p>
+            </div>
+            <button
+              type="button"
+              class:list={[
+                'btn-secondary btn-sm',
+                (hallazgosSugeridosIds.size === 0 || seleccionSonSugeridos) && 'hidden',
+              ]}
+              data-hallazgo-apply
+            >
+              <Icon name="sparkles" size={14} /> Usar sugeridos
+            </button>
+          </div>
+
+          {hallazgosDisponibles.length > 0 ? (
+            <>
+              <div class="mt-1 flex flex-wrap items-center justify-between gap-2">
+                <p class="help" data-hallazgo-hint aria-live="polite">{hallazgoHint}</p>
+                <p class="text-xs text-slate-500" aria-live="polite">
+                  <span class="font-semibold text-brand-700" data-hallazgo-count>{hallazgosSeleccionadosVisibles.size}</span>
+                  {' '}de {hallazgosDisponibles.length} seleccionados
+                </p>
+              </div>
+
+              <label class="relative mt-2 block">
+                <span class="sr-only">Buscar hallazgo</span>
+                <Icon name="search" size={16} class="pointer-events-none absolute left-3 top-2.5 text-slate-400" />
+                <input
+                  type="search"
+                  class="input pl-9"
+                  placeholder="Buscar por título, código, categoría o energético…"
+                  data-filter-target="#hallazgo-picker-list"
+                />
+              </label>
+
+              <div
+                id="hallazgo-picker-list"
+                data-hallazgo-list
+                class="mt-2 max-h-80 space-y-2 overflow-y-auto rounded-lg border border-slate-200 bg-slate-50/50 p-2"
+                role="group"
+                aria-label="Hallazgos relacionados"
+              >
+                {hallazgosDisponibles.map(({ hallazgo }) => {
+                  const esSugerido = hallazgosSugeridosIds.has(hallazgo.id);
+                  return (
+                    <label
+                      data-filter-item
+                      data-hallazgo-item
+                      data-hallazgo-id={hallazgo.id}
+                      data-hallazgo-categoria={hallazgo.categoria}
+                      data-hallazgo-energetico={hallazgo.energetico}
+                      data-hallazgo-titulo={hallazgo.titulo}
+                      class="finding-card flex cursor-pointer items-start gap-3"
+                    >
+                      <input
+                        type="checkbox"
+                        name="hallazgos_relacionados"
+                        value={hallazgo.id}
+                        class="checkbox mt-0.5"
+                        checked={hallazgosSeleccionadosVisibles.has(hallazgo.id)}
+                        data-hallazgo-input
+                      />
+                      <span class="min-w-0 flex-1">
+                        <span class="flex flex-wrap items-center gap-1.5">
+                          <span class:list={['badge-brand', !esSugerido && 'hidden']} data-hallazgo-suggested>
+                            <Icon name="sparkles" size={11} /> Sugerido
+                          </span>
+                          <span class="badge-neutral">{CATEGORIAS[hallazgo.categoria]}</span>
+                          <span class="badge-neutral">{ENERGOS[hallazgo.energetico]}</span>
+                          {!hallazgo.activo && <span class="badge-rose">Inactivo</span>}
+                          <span class="ml-auto font-mono text-[10px] font-semibold text-slate-400">{hallazgo.codigo}</span>
+                        </span>
+                        <span class="mt-1 block text-sm font-medium text-slate-800">{hallazgo.titulo}</span>
+                        <span class="mt-0.5 line-clamp-2 block text-xs leading-relaxed text-slate-500">{hallazgo.descripcion}</span>
+                      </span>
+                    </label>
+                  );
+                })}
+              </div>
+              <p class="help hidden" data-hallazgo-empty data-picker-empty>No hay hallazgos que coincidan con la búsqueda.</p>
+
+              {hallazgosFaltantes.length > 0 && (
+                <div class="mt-2 rounded-lg border border-amber-200 bg-amber-50 px-3 py-2 text-xs text-amber-800">
+                  <p>
+                    Estos vínculos no existen en el catálogo y se conservarán al guardar:
+                    <span class="ml-1 font-mono">{hallazgosFaltantes.join(', ')}</span>
+                  </p>
+                  {hallazgosFaltantes.map((id) => (
+                    <input type="hidden" name="hallazgos_relacionados" value={id} />
+                  ))}
+                </div>
+              )}
+            </>
+          ) : (
+            <p class="mt-2 rounded-lg border border-amber-200 bg-amber-50 px-3 py-2 text-xs text-amber-800">
+              No hay hallazgos activos en el catálogo. Crea un hallazgo para poder vincularlo.
+            </p>
+          )}
         </div>
         <div class="sm:col-span-2">
           <label class="label" for="beneficio">Beneficio esperado</label>

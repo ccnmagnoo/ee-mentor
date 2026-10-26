@@ -176,9 +176,9 @@ function applyTextFilter(input: HTMLInputElement): void {
     const visible = group.querySelectorAll('[data-filter-item]:not(.hidden)').length;
     group.classList.toggle('hidden', visible === 0);
   });
-  const picker = input.closest<HTMLElement>('[data-reco-picker]');
+  const picker = input.closest<HTMLElement>('[data-picker]');
   if (picker) {
-    const empty = picker.querySelector<HTMLElement>('[data-reco-empty]');
+    const empty = picker.querySelector<HTMLElement>('[data-picker-empty]');
     if (empty) {
       empty.classList.toggle(
         'hidden',
@@ -262,6 +262,100 @@ function syncRecoPicker(picker: HTMLElement): void {
   updateRecoApply(picker);
 }
 
+/* ------------------- Hallazgos relacionados a una recomendación ------------------ */
+
+const HALLAZGO_SCORE_CATEGORIA = 4;
+const HALLAZGO_SCORE_ENERGETICO = 2;
+
+function updateHallazgoPicker(picker: HTMLElement): void {
+  const inputs = [...picker.querySelectorAll<HTMLInputElement>('input[data-hallazgo-input]')];
+  const selected = new Set(inputs.filter((input) => input.checked).map((input) => input.value));
+
+  picker.querySelectorAll<HTMLElement>('[data-hallazgo-count]').forEach((el) => {
+    el.textContent = String(selected.size);
+  });
+
+  const suggested = [...picker.querySelectorAll<HTMLElement>('[data-hallazgo-item]')]
+    .filter((item) => {
+      const badge = item.querySelector<HTMLElement>('[data-hallazgo-suggested]');
+      return badge && !badge.classList.contains('hidden');
+    })
+    .map((item) => item.dataset.hallazgoId ?? '');
+
+  const apply = picker.querySelector<HTMLElement>('[data-hallazgo-apply]');
+  if (apply) {
+    const same =
+      suggested.length === selected.size && suggested.every((id) => selected.has(id));
+    apply.classList.toggle('hidden', suggested.length === 0 || same);
+  }
+}
+
+function syncHallazgoPicker(picker: HTMLElement): void {
+  const categoriaSelect = document.querySelector<HTMLSelectElement>('#categoria');
+  const categoria = categoriaSelect?.value ?? '';
+  const categoriaLabel = categoriaSelect?.selectedOptions[0]?.textContent?.trim() ?? '';
+  const energetico = document.querySelector<HTMLSelectElement>('#energetico')?.value ?? '';
+  const items = [...picker.querySelectorAll<HTMLElement>('[data-hallazgo-item]')];
+  const candidatos = items.filter((item) => Boolean(item.dataset.hallazgoId));
+
+  const ordenados = candidatos
+    .map((item) => ({
+      item,
+      afinidad:
+        (item.dataset.hallazgoCategoria === categoria ? HALLAZGO_SCORE_CATEGORIA : 0) +
+        (item.dataset.hallazgoEnergetico === energetico ? HALLAZGO_SCORE_ENERGETICO : 0),
+    }))
+    .sort(
+      (a, b) =>
+        b.afinidad - a.afinidad ||
+        (a.item.dataset.hallazgoTitulo ?? '').localeCompare(
+          b.item.dataset.hallazgoTitulo ?? '',
+          'es',
+        ),
+    );
+
+  const sugeridos = ordenados.filter(
+    ({ item }) => item.dataset.hallazgoCategoria === categoria,
+  );
+  const sugeridosIds = new Set(sugeridos.map(({ item }) => item.dataset.hallazgoId ?? ''));
+
+  for (const item of candidatos) {
+    item
+      .querySelector<HTMLElement>('[data-hallazgo-suggested]')
+      ?.classList.toggle('hidden', !sugeridosIds.has(item.dataset.hallazgoId ?? ''));
+  }
+
+  const list = picker.querySelector<HTMLElement>('[data-hallazgo-list]');
+  if (list) {
+    for (const { item } of ordenados) list.appendChild(item);
+  }
+
+  const hint = picker.querySelector<HTMLElement>('[data-hallazgo-hint]');
+  if (hint) {
+    const mismoEnergetico = sugeridos.filter(
+      ({ item }) => item.dataset.hallazgoEnergetico === energetico,
+    ).length;
+    hint.textContent =
+      sugeridos.length > 0
+        ? `Sugeridos: ${sugeridos.length} ${
+            sugeridos.length === 1 ? 'hallazgo' : 'hallazgos'
+          } de ${categoriaLabel}${
+            mismoEnergetico > 0 && mismoEnergetico < sugeridos.length
+              ? ` (${mismoEnergetico} con el mismo energético)`
+              : ''
+          }`
+        : 'No hay hallazgos de la misma categoría; selecciona manualmente.';
+  }
+
+  if (picker.dataset.autoselect === 'true' && picker.dataset.userSelected !== 'true') {
+    picker.querySelectorAll<HTMLInputElement>('input[data-hallazgo-input]').forEach((input) => {
+      input.checked = sugeridosIds.has(input.value);
+    });
+  }
+
+  updateHallazgoPicker(picker);
+}
+
 document.addEventListener('change', (event) => {
   const target = event.target as HTMLInputElement;
   if (target.matches('input[name="hallazgos[]"], input[name="recomendaciones[]"]')) {
@@ -282,12 +376,20 @@ document.addEventListener('change', (event) => {
   }
   if (target.matches('#categoria, #energetico')) {
     document.querySelectorAll<HTMLElement>('[data-reco-picker]').forEach(syncRecoPicker);
+    document.querySelectorAll<HTMLElement>('[data-hallazgo-picker]').forEach(syncHallazgoPicker);
   }
   if (target.matches('[data-reco-input]')) {
     const picker = target.closest<HTMLElement>('[data-reco-picker]');
     if (picker) {
       picker.dataset.userSelected = 'true';
       updateRecoApply(picker);
+    }
+  }
+  if (target.matches('[data-hallazgo-input]')) {
+    const picker = target.closest<HTMLElement>('[data-hallazgo-picker]');
+    if (picker) {
+      picker.dataset.userSelected = 'true';
+      updateHallazgoPicker(picker);
     }
   }
 });
@@ -304,20 +406,42 @@ document.addEventListener('keydown', (event) => {
 
 document.addEventListener('click', (event) => {
   const target = event.target as HTMLElement;
-  const applyButton = target.closest<HTMLElement>('[data-reco-apply]');
-  if (!applyButton) return;
+
+  const recoApply = target.closest<HTMLElement>('[data-reco-apply]');
+  if (recoApply) {
+    event.preventDefault();
+    const picker = recoApply.closest<HTMLElement>('[data-reco-picker]');
+    if (!picker) return;
+    const sugerida = [...picker.querySelectorAll<HTMLElement>('[data-reco-item]')].find((item) => {
+      const badge = item.querySelector<HTMLElement>('[data-reco-suggested]');
+      return badge && !badge.classList.contains('hidden');
+    });
+    const input = sugerida?.querySelector<HTMLInputElement>('input[data-reco-input]');
+    if (!input) return;
+    input.checked = true;
+    picker.dataset.userSelected = 'true';
+    input.dispatchEvent(new Event('change', { bubbles: true }));
+    return;
+  }
+
+  const hallazgoApply = target.closest<HTMLElement>('[data-hallazgo-apply]');
+  if (!hallazgoApply) return;
   event.preventDefault();
-  const picker = applyButton.closest<HTMLElement>('[data-reco-picker]');
+  const picker = hallazgoApply.closest<HTMLElement>('[data-hallazgo-picker]');
   if (!picker) return;
-  const sugerida = [...picker.querySelectorAll<HTMLElement>('[data-reco-item]')].find((item) => {
-    const badge = item.querySelector<HTMLElement>('[data-reco-suggested]');
-    return badge && !badge.classList.contains('hidden');
+  const sugeridos = new Set(
+    [...picker.querySelectorAll<HTMLElement>('[data-hallazgo-item]')]
+      .filter((item) => {
+        const badge = item.querySelector<HTMLElement>('[data-hallazgo-suggested]');
+        return badge && !badge.classList.contains('hidden');
+      })
+      .map((item) => item.dataset.hallazgoId ?? ''),
+  );
+  picker.querySelectorAll<HTMLInputElement>('input[data-hallazgo-input]').forEach((input) => {
+    input.checked = sugeridos.has(input.value);
   });
-  const input = sugerida?.querySelector<HTMLInputElement>('input[data-reco-input]');
-  if (!input) return;
-  input.checked = true;
   picker.dataset.userSelected = 'true';
-  input.dispatchEvent(new Event('change', { bubbles: true }));
+  updateHallazgoPicker(picker);
 });
 
 /* ------------------------------- Puntajes ---------------------------------- */
@@ -354,6 +478,7 @@ function init(): void {
   updateCounts();
   updateScoreOutputs();
   document.querySelectorAll<HTMLElement>('[data-reco-picker]').forEach(syncRecoPicker);
+  document.querySelectorAll<HTMLElement>('[data-hallazgo-picker]').forEach(syncHallazgoPicker);
 }
 
 if (document.readyState === 'loading') {

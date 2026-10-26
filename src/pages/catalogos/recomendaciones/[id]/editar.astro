@@ -7,6 +7,8 @@ import { catalogos } from '@/lib/repositories';
 const { id } = Astro.params;
 const recomendacion = id ? await catalogos.getRecomendacion(id) : null;
 if (!recomendacion) return Astro.redirect('/catalogos?tab=recomendaciones');
+
+const hallazgos = await catalogos.listHallazgos(true);
 ---
 
 <Layout title={`Editar ${recomendacion.codigo}`} description="Editar recomendación del catálogo">
@@ -27,6 +29,7 @@ if (!recomendacion) return Astro.redirect('/catalogos?tab=recomendaciones');
       action="/api/catalogos/recomendaciones"
       item={recomendacion}
       cancelHref="/catalogos?tab=recomendaciones"
+      hallazgos={hallazgos}
     />
   </div>
 </Layout>

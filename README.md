@@ -125,6 +125,8 @@ Cada ítem tiene `codigo`, `titulo`, `categoria`, `descripcion`, `activo`, `orig
 
 Al crear un hallazgo, la recomendación vinculada se sugiere y preselecciona combinando el tipo de uso tecnológico (`categoria`) y el energético; solo se autoselecciona cuando coincide el uso tecnológico. En edición se conserva el vínculo existente y el botón **Usar sugerida** permite aplicar la nueva sugerencia.
 
+En el formulario de recomendaciones, los hallazgos relacionados se eligen con un selector de búsqueda múltiple. Se sugieren y preseleccionan los hallazgos del mismo tipo de uso tecnológico, ordenados por coincidencia de energético; en edición se respeta la selección guardada y el botón **Usar sugeridos** aplica la sugerencia.
+
 ## Biblioteca de conocimiento
 
 1. Coloca los HTML exportados de las mentorías en `casos/` (o `EE_KNOWLEDGE_DIR`).
