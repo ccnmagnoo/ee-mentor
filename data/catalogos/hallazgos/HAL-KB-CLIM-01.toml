@@ -1,3 +1,4 @@
+id = "HAL-KB-CLIM-01"
 codigo = "KB-CLIM-01"
 titulo = "Aire acondicionado"
 categoria = "climatizacion"
@@ -7,9 +8,8 @@ impacto = "medio"
 energetico = "electricidad"
 recomendacion_id = ""
 tags = [ "biblioteca", "climatizacion" ]
-activo = true
+activo = false
 origen = "biblioteca:FUE-pizzeria-plaggio-382938ab020580efa40bf9d41e53074"
 schema_version = 1
-id = "HAL-KB-CLIM-01"
 created_at = "2026-10-24T17:59:47.578Z"
-updated_at = "2026-10-24T17:59:47.578Z"
+updated_at = "2026-10-26T00:19:33.749Z"

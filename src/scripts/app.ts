@@ -163,6 +163,105 @@ function updateCounts(): void {
   document.querySelectorAll('[data-count-recomendaciones]').forEach((el) => (el.textContent = String(recomendaciones)));
 }
 
+function applyTextFilter(input: HTMLInputElement): void {
+  const selector = input.dataset.filterTarget;
+  if (!selector) return;
+  const query = input.value.trim().toLowerCase();
+  const items = document.querySelectorAll<HTMLElement>(`${selector} [data-filter-item]`);
+  items.forEach((item) => {
+    const matches = item.textContent?.toLowerCase().includes(query) ?? false;
+    item.classList.toggle('hidden', !matches);
+  });
+  document.querySelectorAll<HTMLElement>(`${selector} [data-filter-group]`).forEach((group) => {
+    const visible = group.querySelectorAll('[data-filter-item]:not(.hidden)').length;
+    group.classList.toggle('hidden', visible === 0);
+  });
+  const picker = input.closest<HTMLElement>('[data-reco-picker]');
+  if (picker) {
+    const empty = picker.querySelector<HTMLElement>('[data-reco-empty]');
+    if (empty) {
+      empty.classList.toggle(
+        'hidden',
+        [...items].some((item) => !item.classList.contains('hidden')),
+      );
+    }
+  }
+}
+
+/* ---------------------- Recomendación vinculada al hallazgo --------------------- */
+
+const RECO_SCORE_CATEGORIA = 4;
+const RECO_SCORE_ENERGETICO = 2;
+const RECO_SCORE_PRIORIDAD: Record<string, number> = { alta: 3, media: 2, baja: 1 };
+
+function updateRecoApply(picker: HTMLElement): void {
+  const apply = picker.querySelector<HTMLElement>('[data-reco-apply]');
+  if (!apply) return;
+  const sugerida = [...picker.querySelectorAll<HTMLElement>('[data-reco-item]')].find((item) => {
+    const badge = item.querySelector<HTMLElement>('[data-reco-suggested]');
+    return badge && !badge.classList.contains('hidden');
+  });
+  const selected = picker.querySelector<HTMLInputElement>('input[data-reco-input]:checked');
+  apply.classList.toggle('hidden', !sugerida || selected?.value === sugerida.dataset.recoId);
+}
+
+function syncRecoPicker(picker: HTMLElement): void {
+  const categoria = document.querySelector<HTMLSelectElement>('#categoria')?.value ?? '';
+  const energetico = document.querySelector<HTMLSelectElement>('#energetico')?.value ?? '';
+  const items = [...picker.querySelectorAll<HTMLElement>('[data-reco-item]')];
+  const candidatos = items.filter((item) => Boolean(item.dataset.recoId));
+
+  const ordenados = candidatos
+    .map((item) => ({
+      item,
+      afinidad:
+        (item.dataset.recoCategoria === categoria ? RECO_SCORE_CATEGORIA : 0) +
+        (item.dataset.recoEnergetico === energetico ? RECO_SCORE_ENERGETICO : 0) +
+        (RECO_SCORE_PRIORIDAD[item.dataset.recoPrioridad ?? ''] ?? 0),
+    }))
+    .sort(
+      (a, b) =>
+        b.afinidad - a.afinidad ||
+        (a.item.dataset.recoTitulo ?? '').localeCompare(b.item.dataset.recoTitulo ?? '', 'es'),
+    );
+
+  const sugeridaId =
+    ordenados.find(({ item }) => item.dataset.recoCategoria === categoria)?.item.dataset.recoId ?? '';
+
+  for (const item of candidatos) {
+    item
+      .querySelector<HTMLElement>('[data-reco-suggested]')
+      ?.classList.toggle('hidden', item.dataset.recoId !== sugeridaId);
+  }
+
+  const list = picker.querySelector<HTMLElement>('[data-reco-list]');
+  if (list) {
+    const sinReco = items.find((item) => !item.dataset.recoId);
+    for (const { item } of ordenados) list.appendChild(item);
+    if (sinReco) list.prepend(sinReco);
+  }
+
+  const hint = picker.querySelector<HTMLElement>('[data-reco-hint]');
+  if (hint) {
+    const sugeridaItem = ordenados.find(({ item }) => item.dataset.recoId === sugeridaId)?.item;
+    hint.textContent = sugeridaId
+      ? `Sugerida: ${sugeridaItem?.dataset.recoTitulo ?? ''}`
+      : 'No hay una recomendación de la misma categoría; elige una manualmente.';
+  }
+
+  const autoSelect = picker.dataset.autoselect === 'true';
+  const userSelected = picker.dataset.userSelected === 'true';
+  if (autoSelect && !userSelected) {
+    const selector = sugeridaId
+      ? `input[data-reco-input][value="${CSS.escape(sugeridaId)}"]`
+      : 'input[data-reco-input][value=""]';
+    const target = picker.querySelector<HTMLInputElement>(selector);
+    if (target) target.checked = true;
+  }
+
+  updateRecoApply(picker);
+}
+
 document.addEventListener('change', (event) => {
   const target = event.target as HTMLInputElement;
   if (target.matches('input[name="hallazgos[]"], input[name="recomendaciones[]"]')) {
@@ -179,18 +278,46 @@ document.addEventListener('change', (event) => {
     }
   }
   if (target.matches('[data-filter-target]')) {
-    const selector = target.dataset.filterTarget;
-    if (!selector) return;
-    const query = target.value.trim().toLowerCase();
-    document.querySelectorAll<HTMLElement>(`${selector} [data-filter-item]`).forEach((item) => {
-      const matches = item.textContent?.toLowerCase().includes(query) ?? false;
-      item.classList.toggle('hidden', !matches);
-    });
-    document.querySelectorAll<HTMLElement>(`${selector} [data-filter-group]`).forEach((group) => {
-      const visible = group.querySelectorAll('[data-filter-item]:not(.hidden)').length;
-      group.classList.toggle('hidden', visible === 0);
-    });
+    applyTextFilter(target);
   }
+  if (target.matches('#categoria, #energetico')) {
+    document.querySelectorAll<HTMLElement>('[data-reco-picker]').forEach(syncRecoPicker);
+  }
+  if (target.matches('[data-reco-input]')) {
+    const picker = target.closest<HTMLElement>('[data-reco-picker]');
+    if (picker) {
+      picker.dataset.userSelected = 'true';
+      updateRecoApply(picker);
+    }
+  }
+});
+
+document.addEventListener('input', (event) => {
+  const target = event.target as HTMLInputElement;
+  if (target.matches('[data-filter-target]')) applyTextFilter(target);
+});
+
+document.addEventListener('keydown', (event) => {
+  const target = event.target as HTMLElement;
+  if (event.key === 'Enter' && target.matches('[data-filter-target]')) event.preventDefault();
+});
+
+document.addEventListener('click', (event) => {
+  const target = event.target as HTMLElement;
+  const applyButton = target.closest<HTMLElement>('[data-reco-apply]');
+  if (!applyButton) return;
+  event.preventDefault();
+  const picker = applyButton.closest<HTMLElement>('[data-reco-picker]');
+  if (!picker) return;
+  const sugerida = [...picker.querySelectorAll<HTMLElement>('[data-reco-item]')].find((item) => {
+    const badge = item.querySelector<HTMLElement>('[data-reco-suggested]');
+    return badge && !badge.classList.contains('hidden');
+  });
+  const input = sugerida?.querySelector<HTMLInputElement>('input[data-reco-input]');
+  if (!input) return;
+  input.checked = true;
+  picker.dataset.userSelected = 'true';
+  input.dispatchEvent(new Event('change', { bubbles: true }));
 });
 
 /* ------------------------------- Puntajes ---------------------------------- */
@@ -226,6 +353,7 @@ document.addEventListener('click', (event) => {
 function init(): void {
   updateCounts();
   updateScoreOutputs();
+  document.querySelectorAll<HTMLElement>('[data-reco-picker]').forEach(syncRecoPicker);
 }
 
 if (document.readyState === 'loading') {

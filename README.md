@@ -123,6 +123,8 @@ Markdown con frontmatter YAML (`empresa`, `visita`, `fecha`, `puntaje_global`, `
 
 Cada ítem tiene `codigo`, `titulo`, `categoria`, `descripcion`, `activo`, `origen` y los atributos propios del tipo. Los IDs se derivan del código (`HAL-…`, `REC-…`) y se evita sobrescribir con sufijos numéricos.
 
+Al crear un hallazgo, la recomendación vinculada se sugiere y preselecciona combinando el tipo de uso tecnológico (`categoria`) y el energético; solo se autoselecciona cuando coincide el uso tecnológico. En edición se conserva el vínculo existente y el botón **Usar sugerida** permite aplicar la nueva sugerencia.
+
 ## Biblioteca de conocimiento
 
 1. Coloca los HTML exportados de las mentorías en `casos/` (o `EE_KNOWLEDGE_DIR`).

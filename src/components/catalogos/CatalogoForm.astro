@@ -17,9 +17,16 @@ interface Props {
   action: string;
   item?: Hallazgo | Recomendacion | null;
   cancelHref?: string;
+  recomendaciones?: Recomendacion[];
 }
 
-const { tipo, action, item = null, cancelHref = '/catalogos' } = Astro.props;
+const {
+  tipo,
+  action,
+  item = null,
+  cancelHref = '/catalogos',
+  recomendaciones = [],
+} = Astro.props;
 const esHallazgo = tipo === 'hallazgo';
 const hallazgo = esHallazgo ? (item as Hallazgo | null) : null;
 const recomendacion = !esHallazgo ? (item as Recomendacion | null) : null;
@@ -34,6 +41,27 @@ const tags = (item?.tags ?? []).join(', ');
 const activo = item?.activo ?? true;
 const origen = item?.origen ?? 'catalogo_base';
 const editando = Boolean(item);
+
+const prioridadPeso = { alta: 3, media: 2, baja: 1 } as const;
+
+const recoVinculadaId = hallazgo?.recomendacion_id ?? '';
+const recosDisponibles = recomendaciones
+  .filter((reco) => reco.activo || reco.id === recoVinculadaId)
+  .map((reco) => ({
+    reco,
+    afinidad:
+      (reco.categoria === categoria ? 4 : 0) +
+      (reco.energetico === energetico ? 2 : 0) +
+      (prioridadPeso[reco.prioridad] ?? 0),
+  }))
+  .sort(
+    (a, b) =>
+      b.afinidad - a.afinidad || a.reco.titulo.localeCompare(b.reco.titulo, 'es'),
+  );
+
+const recoSugerida =
+  recosDisponibles.find(({ reco }) => reco.categoria === categoria)?.reco ?? null;
+const recoSeleccionadaId = recoVinculadaId || (!editando && recoSugerida ? recoSugerida.id : '');
 
 const plazos = [
   'Corto plazo (1-3 meses)',
@@ -74,12 +102,13 @@ const plazos = [
         <p class="help">Se normaliza automáticamente para construir el identificador del archivo.</p>
       </div>
       <div>
-        <label class="label" for="categoria">Categoría *</label>
+        <label class="label" for="categoria">Tipo de uso tecnológico *</label>
         <select id="categoria" name="categoria" class="input" required>
           {Object.entries(CATEGORIAS).map(([key, label]) => (
             <option value={key} selected={categoria === key}>{label}</option>
           ))}
         </select>
+        <p class="help">Agrupa el hallazgo por tecnología o uso final y guía la recomendación sugerida.</p>
       </div>
       <div class="sm:col-span-2">
         <label class="label" for="titulo">Título *</label>
@@ -124,16 +153,133 @@ const plazos = [
             ))}
           </select>
         </div>
-        <div>
-          <label class="label" for="recomendacion_id">Código de recomendación vinculada</label>
-          <input
-            id="recomendacion_id"
-            name="recomendacion_id"
-            class="input font-mono uppercase"
-            value={hallazgo?.recomendacion_id ?? ''}
-            placeholder="REC-ILUM-01"
-          />
-          <p class="help">Al seleccionar este hallazgo en una visita se sugiere la recomendación indicada.</p>
+        <div class="rounded-lg border border-brand-200 bg-brand-50/50 px-3 py-2">
+          <p class="text-[11px] font-semibold uppercase tracking-wide text-brand-700">Vínculo automático</p>
+          <p class="mt-0.5 text-xs leading-relaxed text-slate-600">
+            La recomendación sugerida combina el uso tecnológico y el energético del hallazgo.
+          </p>
+        </div>
+        <div class="sm:col-span-2" data-reco-picker data-autoselect={!editando ? 'true' : undefined}>
+          <div class="flex flex-wrap items-start justify-between gap-2">
+            <div>
+              <p class="label">Recomendación vinculada</p>
+              <p class="help -mt-0.5">
+                Se preselecciona según el tipo de uso tecnológico y el energético. Puedes cambiarla o dejarla sin vínculo.
+              </p>
+            </div>
+            <button
+              type="button"
+              class:list={[
+                'btn-secondary btn-sm',
+                (!recoSugerida || recoSeleccionadaId === recoSugerida.id) && 'hidden',
+              ]}
+              data-reco-apply
+            >
+              <Icon name="sparkles" size={14} /> Usar sugerida
+            </button>
+          </div>
+
+          {recosDisponibles.length > 0 ? (
+            <>
+              <p class="help" data-reco-hint>
+                {recoSugerida
+                  ? `Sugerida: ${recoSugerida.titulo}`
+                  : 'No hay una recomendación de la misma categoría; elige una manualmente.'}
+              </p>
+
+              <label class="relative mt-2 block">
+                <span class="sr-only">Buscar recomendación</span>
+                <Icon name="search" size={16} class="pointer-events-none absolute left-3 top-2.5 text-slate-400" />
+                <input
+                  type="search"
+                  class="input pl-9"
+                  placeholder="Buscar por título, categoría, energético o ahorro…"
+                  data-filter-target="#reco-picker-list"
+                />
+              </label>
+
+              <div
+                id="reco-picker-list"
+                data-reco-list
+                class="mt-2 max-h-80 space-y-2 overflow-y-auto rounded-lg border border-slate-200 bg-slate-50/50 p-2"
+                role="radiogroup"
+                aria-label="Recomendación vinculada"
+              >
+                <label
+                  data-filter-item
+                  data-reco-item
+                  data-reco-id=""
+                  data-reco-categoria=""
+                  data-reco-energetico=""
+                  data-reco-prioridad=""
+                  data-reco-titulo="Sin recomendación vinculada"
+                  class="finding-card flex cursor-pointer items-start gap-3"
+                >
+                  <input
+                    type="radio"
+                    name="recomendacion_id"
+                    value=""
+                    class="radio mt-0.5"
+                    checked={!recoSeleccionadaId}
+                    data-reco-input
+                  />
+                  <span class="min-w-0">
+                    <span class="block text-sm font-medium text-slate-800">Sin recomendación vinculada</span>
+                    <span class="block text-xs text-slate-500">El hallazgo se registrará sin una medida asociada.</span>
+                  </span>
+                </label>
+
+                {recosDisponibles.map(({ reco }) => {
+                  const esSugerida = recoSugerida?.id === reco.id;
+                  return (
+                    <label
+                      data-filter-item
+                      data-reco-item
+                      data-reco-id={reco.id}
+                      data-reco-categoria={reco.categoria}
+                      data-reco-energetico={reco.energetico}
+                      data-reco-prioridad={reco.prioridad}
+                      data-reco-titulo={reco.titulo}
+                      class="finding-card flex cursor-pointer items-start gap-3"
+                    >
+                      <input
+                        type="radio"
+                        name="recomendacion_id"
+                        value={reco.id}
+                        class="radio mt-0.5"
+                        checked={recoSeleccionadaId === reco.id}
+                        data-reco-input
+                      />
+                      <span class="min-w-0 flex-1">
+                        <span class="flex flex-wrap items-center gap-1.5">
+                          <span class:list={['badge-brand', !esSugerida && 'hidden']} data-reco-suggested>
+                            <Icon name="sparkles" size={11} /> Sugerida
+                          </span>
+                          <span class="badge-neutral">{CATEGORIAS[reco.categoria]}</span>
+                          <span class="badge-neutral">{ENERGOS[reco.energetico]}</span>
+                          <span class="badge-neutral">{INVERSIONES[reco.inversion]}</span>
+                          {!reco.activo && <span class="badge-rose">Inactiva</span>}
+                          <span class="ml-auto font-mono text-[10px] font-semibold text-slate-400">{reco.codigo}</span>
+                        </span>
+                        <span class="mt-1 block text-sm font-medium text-slate-800">{reco.titulo}</span>
+                        <span class="mt-0.5 block text-xs leading-relaxed text-slate-500">{reco.descripcion}</span>
+                        {reco.ahorro_estimado && (
+                          <span class="mt-1 block text-xs font-medium text-emerald-700">
+                            Ahorro estimado: {reco.ahorro_estimado}
+                          </span>
+                        )}
+                      </span>
+                    </label>
+                  );
+                })}
+              </div>
+              <p class="help hidden" data-reco-empty>No hay recomendaciones que coincidan con la búsqueda.</p>
+            </>
+          ) : (
+            <p class="mt-2 rounded-lg border border-amber-200 bg-amber-50 px-3 py-2 text-xs text-amber-800">
+              No hay recomendaciones activas en el catálogo. Crea una recomendación para poder vincularla.
+            </p>
+          )}
         </div>
         <div class="sm:col-span-2">
           <label class="label" for="justificacion">Justificación técnica</label>

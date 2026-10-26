@@ -2,6 +2,9 @@
 import Layout from '@/layouts/Layout.astro';
 import PageHeader from '@/components/ui/PageHeader.astro';
 import CatalogoForm from '@/components/catalogos/CatalogoForm.astro';
+import { catalogos } from '@/lib/repositories';
+
+const recomendaciones = await catalogos.listRecomendaciones(true);
 ---
 
 <Layout title="Nuevo hallazgo" description="Crear un hallazgo en el catálogo">
@@ -21,6 +24,7 @@ import CatalogoForm from '@/components/catalogos/CatalogoForm.astro';
       tipo="hallazgo"
       action="/api/catalogos/hallazgos"
       cancelHref="/catalogos?tab=hallazgos"
+      recomendaciones={recomendaciones}
     />
   </div>
 </Layout>

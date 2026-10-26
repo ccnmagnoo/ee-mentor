@@ -22,6 +22,7 @@ const tabs = [
 
 const categoriasHallazgos = [...new Set(hallazgos.map((item) => item.categoria))];
 const categoriasRecos = [...new Set(recomendaciones.map((item) => item.categoria))];
+const recomendacionesPorId = new Map(recomendaciones.map((item) => [item.id, item]));
 ---
 
 <Layout title="Catálogos" description="Catálogo editable de hallazgos, recomendaciones y recursos">
@@ -81,31 +82,49 @@ const categoriasRecos = [...new Set(recomendaciones.map((item) => item.categoria
             <tr>
               <th>Código</th>
               <th>Hallazgo</th>
-              <th>Categoría</th>
+              <th>Uso tecnológico</th>
               <th>Impacto</th>
               <th>Recomendación</th>
               <th class="text-right">Acciones</th>
             </tr>
           </thead>
           <tbody>
-            {hallazgos.map((hallazgo) => (
-              <tr data-filter-item>
-                <td class="whitespace-nowrap font-mono text-xs text-slate-500">{hallazgo.codigo}</td>
-                <td>
-                  <p class="font-medium text-slate-800">{hallazgo.titulo}</p>
-                  <p class="line-clamp-2 max-w-xl text-xs text-slate-500">{hallazgo.descripcion}</p>
-                </td>
-                <td class="whitespace-nowrap text-xs text-slate-600">{CATEGORIAS[hallazgo.categoria]}</td>
-                <td><span class:list={['badge', hallazgo.impacto === 'critico' ? 'badge-rose' : hallazgo.impacto === 'alto' ? 'badge-orange' : hallazgo.impacto === 'medio' ? 'badge-amber' : 'badge-neutral']}>{IMPACTOS[hallazgo.impacto]}</span></td>
-                <td class="whitespace-nowrap font-mono text-xs text-slate-500">{hallazgo.recomendacion_id || '—'}</td>
-                <td class="text-right">
-                  <div class="flex justify-end gap-1">
-                    {hallazgo.activo ? <span class="badge-emerald">Activo</span> : <span class="badge-neutral">Inactivo</span>}
-                    <a href={`/catalogos/hallazgos/${hallazgo.id}/editar`} class="btn-ghost btn-sm"><Icon name="edit" size={14} /></a>
-                  </div>
-                </td>
-              </tr>
-            ))}
+            {hallazgos.map((hallazgo) => {
+              const recoVinculada = hallazgo.recomendacion_id
+                ? recomendacionesPorId.get(hallazgo.recomendacion_id)
+                : null;
+              return (
+                <tr data-filter-item>
+                  <td class="whitespace-nowrap font-mono text-xs text-slate-500">{hallazgo.codigo}</td>
+                  <td>
+                    <p class="font-medium text-slate-800">{hallazgo.titulo}</p>
+                    <p class="line-clamp-2 max-w-xl text-xs text-slate-500">{hallazgo.descripcion}</p>
+                  </td>
+                  <td class="whitespace-nowrap text-xs text-slate-600">{CATEGORIAS[hallazgo.categoria]}</td>
+                  <td><span class:list={['badge', hallazgo.impacto === 'critico' ? 'badge-rose' : hallazgo.impacto === 'alto' ? 'badge-orange' : hallazgo.impacto === 'medio' ? 'badge-amber' : 'badge-neutral']}>{IMPACTOS[hallazgo.impacto]}</span></td>
+                  <td class="min-w-48">
+                    {recoVinculada ? (
+                      <a href={`/catalogos/recomendaciones/${recoVinculada.id}/editar`} class="group block">
+                        <span class="block text-xs font-medium text-slate-700 group-hover:text-brand-700">{recoVinculada.titulo}</span>
+                        <span class="font-mono text-[10px] text-slate-400">{recoVinculada.codigo}</span>
+                      </a>
+                    ) : hallazgo.recomendacion_id ? (
+                      <span class="font-mono text-xs text-amber-600" title="La recomendación vinculada no existe en el catálogo">
+                        {hallazgo.recomendacion_id}
+                      </span>
+                    ) : (
+                      <span class="text-xs text-slate-400">Sin vínculo</span>
+                    )}
+                  </td>
+                  <td class="text-right">
+                    <div class="flex justify-end gap-1">
+                      {hallazgo.activo ? <span class="badge-emerald">Activo</span> : <span class="badge-neutral">Inactivo</span>}
+                      <a href={`/catalogos/hallazgos/${hallazgo.id}/editar`} class="btn-ghost btn-sm"><Icon name="edit" size={14} /></a>
+                    </div>
+                  </td>
+                </tr>
+              );
+            })}
           </tbody>
         </table>
       </div>
@@ -127,7 +146,7 @@ const categoriasRecos = [...new Set(recomendaciones.map((item) => item.categoria
             <tr>
               <th>Código</th>
               <th>Recomendación</th>
-              <th>Categoría</th>
+              <th>Uso tecnológico</th>
               <th>Inversión</th>
               <th>Prioridad</th>
               <th>Ahorro estimado</th>
