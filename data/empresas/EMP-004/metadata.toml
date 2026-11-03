@@ -1,0 +1,16 @@
+schema_version = 1
+id = "EMP-004"
+nombre = "Mini Market Kaitoue"
+rut = ""
+direccion = ""
+comuna = "Hanga Roa"
+region = "Valparaíso"
+rubro = "Almacén / minimarket"
+contacto = "Jimena Bastián González"
+telefono = "+56992104616"
+correo = "bastgonzalezpily@gmail.com"
+trabajadores = 5
+superficie_m2 = 50
+observaciones = "Tiene inicio de actividades en el servicio de SII y patentes al día. Venta de abarrotes,  artículos de aseo, líquidos, cigarros, venta de congelados carne, hamburguesas, 4 congeladores, 6 vc cooler. Cuenta con 2 contenedores para almacenamiento. Constantemente a realizado mantenimiento e instalaciones eléctricos, son en términos parciales y aprecia que es de una calidad regular, se mantiene funcional. Tiene dificultades logística de suministro , se menciona perdidas $50 millones por vencimiento en buque. Está gestiones para la instalación de paneles fotovoltaico, 30 paneles , aprox. 15kWp. Tiene instalado led en todo el establecimiento, realiza mantenimiento preventivo de los equipos de frío, coordina con especialista de la Armada para mantenimiento, por confianza y certezas del servicio.\r\nUbicación https://maps.app.goo.gl/NfASY1sig6rwK5uo9"
+created_at = "2026-11-03T14:25:38.791Z"
+updated_at = "2026-11-03T14:25:38.791Z"

@@ -1,0 +1,98 @@
+schema_version = 1
+id = "VIS-001"
+empresa_id = "EMP-005"
+fecha = "2026-11-03"
+asesor = "Carlos Campos"
+grado_consumo = "moderado"
+descripcion_perfil = "El Restaurant Neptuno presenta un comportamiento de consumo energético variable a lo largo del año, influenciado principalmente por la estacionalidad turística y las condiciones climáticas. El establecimiento opera bajo un concepto dual, funcionando como restaurante durante el día y como bar tipo sunset durante el atardecer, aprovechando su ubicación y entorno paisajístico. Su horario de funcionamiento se extiende desde las 10:00 hasta las 23:00 horas, atendiendo tanto público general mediante servicio a la carta como grupos coordinados a través de agencias turísticas. La capacidad máxima de atención es de aproximadamente 50 comensales.\r\nEn el área de producción gastronómica, el establecimiento dispone de cuatro cocinas con quemadores a Gas Licuado de Petróleo (GLP) y una grilla a gas, lo que concentra la mayor parte de la demanda térmica asociada a la preparación de alimentos. No se cuenta con sistemas solares térmicos para la producción de agua caliente sanitaria o apoyo a procesos térmicos, situación que se ve condicionada por el carácter arrendado del inmueble, lo que dificulta la incorporación de instalaciones permanentes o de complejo traslado.\r\nRespecto al suministro eléctrico, el restaurante ha incorporado una solución de generación fotovoltaica aislada (off-grid) destinada principalmente a la alimentación de sistemas de iluminación. Este sistema cuenta con almacenamiento mediante baterías, permitiendo una autonomía estimada de aproximadamente cuatro horas. Dicho sistema contribuye a reducir parcialmente la demanda eléctrica proveniente de la red durante determinados periodos de operación.\r\nLa refrigeración representa uno de los consumos eléctricos más relevantes del establecimiento debido a la naturaleza de los productos almacenados. Para ello, dispone de:\r\n\r\nCuatro congeladores horizontales, destinados al almacenamiento de carnes, pescados, mariscos, verduras y vegetales.\r\nUna cámara de congelación de pequeña capacidad para la producción y almacenamiento de hielo.\r\nDos congeladores verticales, utilizados para frutas porcionadas destinadas a la preparación de bebestibles y para almacenamiento de postres.\r\nDos equipos tipo V-Cooler, destinados a la conservación de vinos, postres de frutas, agua, cerveza y cristalería.\r\nTres V-Cooler adicionales, destinados a verduras, pescados y mariscos, y carnes.\r\n\r\nEn materia de iluminación, el establecimiento utiliza tecnología LED en la totalidad de sus espacios, complementando esta medida con un importante aprovechamiento de la iluminación natural. Gracias a las características arquitectónicas del local y a su orientación, se dispone de una significativa cantidad de luz natural durante gran parte de la jornada, reduciendo la necesidad de iluminación artificial en horario diurno.\r\n\r\nEn cuanto a las características constructivas, el recinto cuenta con ventanas de PVC flexible, las cuales son cerradas mediante tablillas durante la temporada invernal para minimizar las pérdidas térmicas. Durante el verano, estas permanecen abiertas o sin protección, favoreciendo la ventilación natural y el aprovechamiento de las vistas panorámicas, mejorando la experiencia de los clientes y reduciendo la necesidad de climatización artificial.\r\nEl establecimiento mantiene además una política sistemática de mantenimiento preventivo. Cada año, durante el mes de mayo, se realiza una revisión integral de los equipos, considerando labores de limpieza, mantenimiento y renovación de aquellos artefactos que lo requieran. Este proceso es ejecutado por un técnico mantenedor permanente que presta servicios al restaurante desde el año 2015, contribuyendo a mantener la eficiencia operativa de los equipos y a prevenir pérdidas energéticas asociadas a fallas o deterioros.\r\nFinalmente, aunque no existe un sistema formalizado de gestión energética, el Restaurant Neptuno evidencia una cultura organizacional orientada al uso eficiente de la energía, promoviendo prácticas permanentes de ahorro y control operacional. Esta gestión informal se refleja en el aprovechamiento de recursos naturales disponibles, la mantención periódica de los equipos y la incorporación gradual de tecnologías más eficientes, constituyendo una base favorable para futuras acciones de mejora y optimización energética."
+usos_finales = [ "iluminacion", "refrigeracion", "coccion", "acs" ]
+equipos = []
+hallazgos = []
+recomendaciones = []
+acuerdos = []
+proxima_visita = "2026-11-30"
+observaciones = ""
+created_at = "2026-11-03T15:44:41.542Z"
+updated_at = "2026-11-03T15:44:41.542Z"
+
+[[energeticos]]
+tipo = "electricidad"
+consumo = 1061
+unidad = "kWh/mes"
+costo = 407000
+observacion = "con boleta"
+
+[[energeticos]]
+tipo = "glp"
+consumo = 8
+unidad = "Balones 45kg / mes"
+costo = 1000000
+observacion = "en temporada baja se consumen 3 a 4 balones por mes"
+
+[secciones.iluminacion]
+puntaje = 0
+observaciones = ""
+tecnologia = "no_evaluado"
+estado = "no_evaluado"
+horas_uso_diarias = 0
+
+[secciones.refrigeracion]
+puntaje = 0
+observaciones = ""
+cantidad_equipos = 0
+antiguedad_anios = 0
+mantencion = "no_evaluado"
+
+[secciones.congelacion]
+puntaje = 0
+observaciones = ""
+cantidad_equipos = 0
+antiguedad_anios = 0
+estado = "no_evaluado"
+
+[secciones.climatizacion]
+puntaje = 0
+observaciones = ""
+tecnologia = ""
+mantenciones = "no_evaluado"
+control_temperatura = "no_evaluado"
+
+[secciones.acs]
+puntaje = 0
+observaciones = ""
+tecnologia = ""
+fuente_energetica = "electricidad"
+horarios = ""
+
+[secciones.coccion]
+puntaje = 0
+observaciones = ""
+equipos_principales = ""
+combustible = "electricidad"
+
+[secciones.motores]
+puntaje = 0
+observaciones = ""
+tipo = ""
+estado = "no_evaluado"
+mantencion = "no_evaluado"
+
+[secciones.envolvente]
+puntaje = 0
+observaciones = ""
+ventanas = "no_evaluado"
+puertas = "no_evaluado"
+infiltraciones = "no_evaluado"
+aislacion = "no_evaluado"
+
+[secciones.gestion]
+puntaje = 0
+observaciones = ""
+nivel = "no_evaluado"
+monitoreo = false
+responsable = ""
+
+[secciones.tarifas]
+puntaje = 0
+observaciones = ""
+tarifa_actual = ""
