@@ -3,6 +3,7 @@ import Icon from '@/components/ui/Icon.astro';
 import { REGION_DEFAULT } from '@/lib/config';
 import type { Empresa } from '@/lib/schemas';
 import { RUBROS } from '@/lib/schemas';
+import { urlMapa } from '@/lib/ubicacion';
 
 interface Props {
   action: string;
@@ -11,6 +12,7 @@ interface Props {
   cancelHref?: string;
 }
 const { action, empresa = null, submitLabel = 'Guardar empresa', cancelHref = '/empresas' } = Astro.props;
+const mapaActual = empresa ? urlMapa(empresa) : null;
 ---
 
 <form action={action} method="post" data-api class="space-y-5">
@@ -52,6 +54,69 @@ const { action, empresa = null, submitLabel = 'Guardar empresa', cancelHref = '/
       <div>
         <label class="label" for="region">Región</label>
         <input id="region" name="region" class="input" value={empresa?.region ?? REGION_DEFAULT} />
+      </div>
+
+      <div class="sm:col-span-2 border-t border-slate-100 pt-1">
+        <p class="text-[11px] font-semibold uppercase tracking-wide text-slate-400">Georreferenciación (opcional)</p>
+      </div>
+      <div class="sm:col-span-2">
+        <label class="label" for="mapa_url">Enlace de ubicación</label>
+        <input
+          id="mapa_url"
+          name="mapa_url"
+          type="url"
+          class="input"
+          value={empresa?.mapa_url ?? ''}
+          placeholder="https://maps.app.goo.gl/..."
+        />
+        <p class="mt-1 text-xs text-slate-500">
+          Pega el enlace de Google Maps u otro servicio de mapas. Si el enlace contiene coordenadas, se completan automáticamente.
+        </p>
+        {mapaActual && (
+          <a
+            href={mapaActual}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="mt-1 inline-flex items-center gap-1 text-xs font-medium text-brand-700 hover:text-brand-800"
+          >
+            Abrir ubicación actual
+          </a>
+        )}
+      </div>
+      <div>
+        <label class="label" for="latitud">Latitud</label>
+        <input
+          id="latitud"
+          name="latitud"
+          type="number"
+          step="any"
+          min="-90"
+          max="90"
+          inputmode="decimal"
+          class="input"
+          value={empresa?.latitud ?? ''}
+          placeholder="-33.02450"
+        />
+      </div>
+      <div>
+        <label class="label" for="longitud">Longitud</label>
+        <input
+          id="longitud"
+          name="longitud"
+          type="number"
+          step="any"
+          min="-180"
+          max="180"
+          inputmode="decimal"
+          class="input"
+          value={empresa?.longitud ?? ''}
+          placeholder="-71.55180"
+        />
+      </div>
+      <div class="sm:col-span-2">
+        <p class="text-xs text-slate-500">
+          Coordenadas en grados decimales (WGS84). Ingresa latitud y longitud juntas para permitir la georreferenciación posterior.
+        </p>
       </div>
     </div>
   </section>

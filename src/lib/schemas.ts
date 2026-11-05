@@ -240,6 +240,39 @@ const optionalNumber = z.preprocess(
   z.coerce.number().nonnegative().optional(),
 );
 
+/** Coordenada en grados decimales (WGS84). Acepta coma decimal y vacío. */
+function coordenada(min: number, max: number, etiqueta: string) {
+  return z.preprocess(
+    (v) => {
+      if (v === '' || v === null || v === undefined) return undefined;
+      if (typeof v !== 'string') return v;
+      const normalized = v.trim().replace(',', '.');
+      return normalized === '' ? undefined : normalized;
+    },
+    z.coerce
+      .number()
+      .min(min, `${etiqueta} debe estar entre ${min} y ${max}`)
+      .max(max, `${etiqueta} debe estar entre ${min} y ${max}`)
+      .optional(),
+  );
+}
+
+/** Enlace de ubicación opcional. Solo se permiten enlaces http(s). */
+const optionalMapUrl = z.preprocess(
+  (v) => {
+    if (typeof v !== 'string') return v;
+    const trimmed = v.trim();
+    return trimmed === '' ? undefined : trimmed;
+  },
+  z
+    .url('El enlace de ubicación debe ser una URL válida')
+    .refine(
+      (value) => /^https?:\/\//i.test(value),
+      'El enlace de ubicación debe comenzar con http:// o https://',
+    )
+    .optional(),
+);
+
 const fecha = z
   .string()
   .regex(/^\d{4}-\d{2}-\d{2}$/, 'La fecha debe tener formato AAAA-MM-DD');
@@ -261,7 +294,7 @@ function seccion<T extends z.ZodRawShape>(shape: T) {
 /* Empresa                                                             */
 /* ------------------------------------------------------------------ */
 
-export const EmpresaBaseSchema = z.object({
+const EmpresaBaseObjectSchema = z.object({
   nombre: z.string().trim().min(2, 'El nombre es obligatorio'),
   rut: str,
   direccion: str,
@@ -274,6 +307,20 @@ export const EmpresaBaseSchema = z.object({
   trabajadores: int,
   superficie_m2: num,
   observaciones: text,
+  mapa_url: optionalMapUrl,
+  latitud: coordenada(-90, 90, 'La latitud'),
+  longitud: coordenada(-180, 180, 'La longitud'),
+});
+
+export const EmpresaBaseSchema = EmpresaBaseObjectSchema.superRefine((data, ctx) => {
+  const tieneLatitud = data.latitud !== undefined;
+  const tieneLongitud = data.longitud !== undefined;
+  if (tieneLatitud === tieneLongitud) return;
+  ctx.addIssue({
+    code: 'custom',
+    path: [tieneLatitud ? 'longitud' : 'latitud'],
+    message: 'Ingresa latitud y longitud juntas para georreferenciar la empresa.',
+  });
 });
 
 export const EmpresaSchema = EmpresaBaseSchema.extend({

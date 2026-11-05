@@ -29,6 +29,12 @@ Páginas / API  →  Servicios  →  Repositorios  →  Storage (archivos)
 4. El informe se guarda por visita y también como `informe.md` (último).
 5. La vista del informe puede regenerarlo con `POST …/regenerar`.
 
+## Georreferenciación
+
+`Empresa` admite tres campos opcionales en `metadata.toml`: `mapa_url`, `latitud` y `longitud`. El enlace solo acepta `http(s)` y las coordenadas se validan como grados decimales WGS84 (latitud -90/90, longitud -180/180). Si se informa una coordenada, se exige la otra.
+
+La lógica de presentación vive en `src/lib/ubicacion.ts`: resuelve el enlace configurado, genera uno de Google Maps cuando solo hay coordenadas y formatea el par para la ficha y el informe. `report.ts` copia `latitud`, `longitud` y `mapa_url` al frontmatter del Markdown para permitir procesos de georreferenciación posteriores.
+
 ## Puntajes
 
 `evaluarSecciones` recorre las 10 secciones, excluye las que tienen puntaje `0` y promedia el resto. `clasificarPuntaje` aplica los cortes:

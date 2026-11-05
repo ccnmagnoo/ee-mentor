@@ -20,6 +20,9 @@ const empresas = [
     correo: 'contacto@cafeaurora.cl',
     trabajadores: 5,
     superficie_m2: 72,
+    latitud: -33.0245,
+    longitud: -71.5518,
+    mapa_url: 'https://www.google.com/maps?q=-33.0245,-71.5518',
     observaciones:
       'Local arrendado en galería comercial. Operación de lunes a sábado de 08:00 a 20:00 horas, con peak de demanda entre 09:00 y 12:00.',
     created_at: '2026-06-10T10:00:00.000Z',
@@ -38,6 +41,9 @@ const empresas = [
     correo: 'ventas@losaromos.cl',
     trabajadores: 9,
     superficie_m2: 135,
+    latitud: -33.0498,
+    longitud: -71.4415,
+    mapa_url: 'https://www.google.com/maps?q=-33.0498,-71.4415',
     observaciones:
       'Fábrica y punto de venta. Produce tortas y masas durante la madrugada; cuenta con dos cámaras de frío y tres hornos eléctricos.',
     created_at: '2026-07-20T10:00:00.000Z',
@@ -56,6 +62,9 @@ const empresas = [
     correo: 'reservas@brisamarina.cl',
     trabajadores: 6,
     superficie_m2: 185,
+    latitud: -32.925,
+    longitud: -71.532,
+    mapa_url: 'https://www.google.com/maps?q=-32.925,-71.532',
     observaciones:
       'Hostal de 9 habitaciones con desayuno incluido. Mayor ocupación entre diciembre y marzo; calefacción con equipos individuales.',
     created_at: '2026-09-01T10:00:00.000Z',

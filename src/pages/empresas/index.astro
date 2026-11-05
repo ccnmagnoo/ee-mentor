@@ -7,6 +7,7 @@ import ClasificacionBadge from '@/components/ui/ClasificacionBadge.astro';
 import { listarEmpresasConResumen } from '@/lib/services/analytics';
 import { clasificarPuntaje } from '@/lib/scoring';
 import { formatFechaCorta } from '@/lib/config';
+import { urlMapa } from '@/lib/ubicacion';
 
 const empresas = await listarEmpresasConResumen();
 const totalVisitas = empresas.reduce((acc, item) => acc + item.visitas, 0);
@@ -63,6 +64,7 @@ const totalVisitas = empresas.reduce((acc, item) => acc + item.visitas, 0);
           <tbody>
             {empresas.map(({ empresa, visitas, ultimaVisita, puntaje, clasificacion }) => {
               const clasificacionInfo = clasificarPuntaje(puntaje);
+              const mapa = urlMapa(empresa);
               return (
                 <tr data-filter-item>
                   <td>
@@ -72,7 +74,21 @@ const totalVisitas = empresas.reduce((acc, item) => acc + item.visitas, 0);
                     </p>
                   </td>
                   <td class="text-slate-600">
-                    {empresa.comuna || '—'}
+                    <div class="flex items-center gap-1.5">
+                      <span>{empresa.comuna || '—'}</span>
+                      {mapa && (
+                        <a
+                          href={mapa}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          class="text-brand-600 hover:text-brand-800"
+                          title="Ver ubicación en mapa"
+                          aria-label={`Ver ${empresa.nombre} en el mapa`}
+                        >
+                          <Icon name="mapPin" size={13} />
+                        </a>
+                      )}
+                    </div>
                     <p class="text-xs text-slate-400">{empresa.region}</p>
                   </td>
                   <td class="text-center font-semibold text-slate-700">{visitas}</td>

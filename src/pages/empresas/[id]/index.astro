@@ -8,6 +8,7 @@ import { getEmpresaDetalle } from '@/lib/services/analytics';
 import { evaluarSecciones, redondear } from '@/lib/scoring';
 import { GRADOS_CONSUMO } from '@/lib/schemas';
 import { formatFecha, formatFechaCorta, formatNumero } from '@/lib/config';
+import { formatearCoordenadas, urlMapa } from '@/lib/ubicacion';
 
 const { id } = Astro.params;
 if (!id) return Astro.redirect('/empresas');
@@ -21,6 +22,8 @@ const contacto = [
   empresa.correo && { label: 'Correo', value: empresa.correo },
   empresa.direccion && { label: 'Dirección', value: empresa.direccion },
 ].filter(Boolean) as Array<{ label: string; value: string }>;
+const mapa = urlMapa(empresa);
+const coordenadasTexto = formatearCoordenadas(empresa);
 ---
 
 <Layout title={empresa.nombre} description={`Ficha de ${empresa.nombre}`}>
@@ -62,6 +65,25 @@ const contacto = [
           </div>
         ))}
       </dl>
+
+      {(mapa || coordenadasTexto) && (
+        <div class="mt-5 rounded-lg border border-slate-100 bg-slate-50/60 p-4">
+          <p class="text-[11px] font-semibold uppercase tracking-wide text-slate-400">Georreferenciación</p>
+          <div class="mt-1 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-slate-700">
+            {coordenadasTexto && <span class="font-mono text-xs">{coordenadasTexto}</span>}
+            {mapa && (
+              <a
+                href={mapa}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex items-center gap-1 font-medium text-brand-700 hover:text-brand-800"
+              >
+                <Icon name="mapPin" size={14} /> Ver en mapa
+              </a>
+            )}
+          </div>
+        </div>
+      )}
 
       {empresa.observaciones && (
         <div class="mt-5 rounded-lg bg-slate-50 p-4">

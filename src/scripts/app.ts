@@ -188,6 +188,42 @@ function applyTextFilter(input: HTMLInputElement): void {
   }
 }
 
+/* ---------------------------- Georreferenciación ---------------------------- */
+
+const MAP_COORDS_PATTERNS = [
+  /@(-?\d{1,3}(?:\.\d+)?),\s*(-?\d{1,3}(?:\.\d+)?)/,
+  /[?&](?:q|query|ll|sll|center|destination|daddr)=(-?\d{1,3}(?:\.\d+)?),\s*(-?\d{1,3}(?:\.\d+)?)/i,
+  /!3d(-?\d{1,3}(?:\.\d+)?)!4d(-?\d{1,3}(?:\.\d+)?)/i,
+];
+
+function extraerCoordenadasDeMapa(value: string): { lat: string; lng: string } | null {
+  const normalized = value.replace(/%2c/gi, ',').trim();
+  for (const pattern of MAP_COORDS_PATTERNS) {
+    const match = pattern.exec(normalized);
+    if (!match) continue;
+    const lat = Number(match[1]);
+    const lng = Number(match[2]);
+    if (!Number.isFinite(lat) || !Number.isFinite(lng)) continue;
+    if (lat < -90 || lat > 90 || lng < -180 || lng > 180) continue;
+    return { lat: match[1]!, lng: match[2]! };
+  }
+  return null;
+}
+
+/** Completa latitud/longitud desde un enlace de Google Maps si están vacías. */
+function autocompletarCoordenadasMapa(input: HTMLInputElement): void {
+  const coords = extraerCoordenadasDeMapa(input.value);
+  if (!coords) return;
+
+  const latitud = document.querySelector<HTMLInputElement>('#latitud');
+  const longitud = document.querySelector<HTMLInputElement>('#longitud');
+  if (!latitud || !longitud) return;
+  if (latitud.value.trim() !== '' || longitud.value.trim() !== '') return;
+
+  latitud.value = coords.lat;
+  longitud.value = coords.lng;
+}
+
 /* ---------------------- Recomendación vinculada al hallazgo --------------------- */
 
 const RECO_SCORE_CATEGORIA = 4;
@@ -374,6 +410,9 @@ document.addEventListener('change', (event) => {
   if (target.matches('[data-filter-target]')) {
     applyTextFilter(target);
   }
+  if (target.matches('#mapa_url')) {
+    autocompletarCoordenadasMapa(target);
+  }
   if (target.matches('#categoria, #energetico')) {
     document.querySelectorAll<HTMLElement>('[data-reco-picker]').forEach(syncRecoPicker);
     document.querySelectorAll<HTMLElement>('[data-hallazgo-picker]').forEach(syncHallazgoPicker);
@@ -397,6 +436,7 @@ document.addEventListener('change', (event) => {
 document.addEventListener('input', (event) => {
   const target = event.target as HTMLInputElement;
   if (target.matches('[data-filter-target]')) applyTextFilter(target);
+  if (target.matches('#mapa_url')) autocompletarCoordenadasMapa(target);
 });
 
 document.addEventListener('keydown', (event) => {

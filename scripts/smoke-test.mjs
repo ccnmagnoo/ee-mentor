@@ -79,6 +79,33 @@ async function validateEmpresas() {
     check(/^EMP-\d{3,}$/.test(empresa.id ?? ''), `ID de empresa inválido: ${path.basename(dir)}`);
     check(Boolean(empresa.nombre), `Empresa sin nombre: ${path.basename(dir)}`);
 
+    const tieneLatitud = empresa.latitud !== undefined && empresa.latitud !== null;
+    const tieneLongitud = empresa.longitud !== undefined && empresa.longitud !== null;
+    check(
+      tieneLatitud === tieneLongitud,
+      `Coordenadas incompletas en ${path.basename(empresaFile)}`,
+    );
+    if (tieneLatitud) {
+      check(
+        typeof empresa.latitud === 'number' &&
+          empresa.latitud >= -90 &&
+          empresa.latitud <= 90,
+        `Latitud inválida en ${path.basename(empresaFile)}`,
+      );
+      check(
+        typeof empresa.longitud === 'number' &&
+          empresa.longitud >= -180 &&
+          empresa.longitud <= 180,
+        `Longitud inválida en ${path.basename(empresaFile)}`,
+      );
+    }
+    if (empresa.mapa_url) {
+      check(
+        /^https?:\/\//i.test(empresa.mapa_url),
+        `Enlace de mapa inválido en ${path.basename(empresaFile)}`,
+      );
+    }
+
     const visitasFiles = await listFiles(dir, '.toml');
     for (const file of visitasFiles) {
       if (path.basename(file) === 'metadata.toml') continue;

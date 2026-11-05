@@ -6,7 +6,7 @@ Todo el contenido vive en archivos locales (TOML + Markdown), sin base de datos 
 
 ## Funcionalidades
 
-- **Empresas**: ficha con RUT, rubro, ubicación, contacto, superficie, trabajadores y observaciones.
+- **Empresas**: ficha con RUT, rubro, ubicación, georreferenciación (enlace de mapa y coordenadas), contacto, superficie, trabajadores y observaciones.
 - **Visitas**: perfil energético, energéticos y costos, equipos, 10 secciones evaluadas de 0 a 5, hallazgos con evidencia, recomendaciones, acuerdos y próxima visita.
 - **Puntajes**: promedio por sección y global con clasificación automática:
   - `0 – 1,5` Crítico · `1,6 – 2,5` Deficiente · `2,6 – 3,5` Aceptable · `3,6 – 4,5` Bueno · `4,6 – 5` Destacado
@@ -103,13 +103,19 @@ id = "EMP-001"
 nombre = "Café Aurora"
 rut = "76.482.193-5"
 rubro = "Cafetería"
-region = "Valparaíso"
+direccion = "Av. Valparaíso 1250, local 4"
 comuna = "Viña del Mar"
+region = "Valparaíso"
+latitud = -33.0245
+longitud = -71.5518
+mapa_url = "https://maps.app.goo.gl/..."
 trabajadores = 5
 superficie_m2 = 72
 created_at = "2026-06-10T10:00:00.000Z"
 updated_at = "2026-06-10T10:00:00.000Z"
 ```
+
+`mapa_url`, `latitud` y `longitud` son opcionales. Las coordenadas se expresan en grados decimales (WGS84) y se validan entre -90/90 y -180/180. Si solo se registran coordenadas, la aplicación genera un enlace a Google Maps; ambos datos quedan disponibles en el frontmatter del informe para georreferenciación posterior. Al pegar un enlace de Google Maps que contenga coordenadas (`@lat,lng`, `?q=lat,lng` o `!3d…!4d…`), el formulario completa latitud y longitud si están vacías.
 
 ### Visita — `data/empresas/EMP-001/visita-001.toml`
 

@@ -21,6 +21,7 @@ import {
 } from './schemas';
 import { clasificarPuntaje, evaluarSecciones, redondear } from './scoring';
 import { formatCLP, formatFecha, formatNumero } from './config';
+import { formatearCoordenadas, urlMapa } from './ubicacion';
 
 export interface ReportInput {
   empresa: Empresa;
@@ -591,6 +592,8 @@ export function generarMarkdown(input: ReportInput): string {
   const hallazgos = hallazgosSeleccionados(input);
   const recomendaciones = recomendacionesSeleccionadas(input);
   const evaluacion = evaluarSecciones(visita.secciones);
+  const mapa = urlMapa(empresa);
+  const coordenadasTexto = formatearCoordenadas(empresa);
 
   const frontmatter: Record<string, unknown> = {
     title: `Informe técnico de eficiencia energética — ${empresa.nombre}`,
@@ -616,6 +619,12 @@ export function generarMarkdown(input: ReportInput): string {
     ),
   };
 
+  if (empresa.latitud !== undefined && empresa.longitud !== undefined) {
+    frontmatter.latitud = empresa.latitud;
+    frontmatter.longitud = empresa.longitud;
+  }
+  if (empresa.mapa_url) frontmatter.mapa_url = empresa.mapa_url;
+
   const lines: string[] = [];
   lines.push('# Informe Técnico de Eficiencia Energética', '');
   lines.push(`## ${empresa.nombre}`, '');
@@ -625,6 +634,17 @@ export function generarMarkdown(input: ReportInput): string {
   );
   if (contextoEmpresa(empresa)) lines.push(`${contextoEmpresa(empresa)}`, '');
   if (empresa.rut) lines.push(`**RUT:** ${empresa.rut} · **Contacto:** ${empresa.contacto || '—'} · **Teléfono:** ${empresa.telefono || '—'}`, '');
+  if (coordenadasTexto || mapa) {
+    lines.push(
+      [
+        coordenadasTexto && `**Coordenadas:** ${coordenadasTexto} (WGS84)`,
+        mapa && `**Ubicación:** [Ver en mapa](${mapa})`,
+      ]
+        .filter(Boolean)
+        .join(' · '),
+      '',
+    );
+  }
   lines.push('---', '');
 
   lines.push('## Resumen ejecutivo', '');
