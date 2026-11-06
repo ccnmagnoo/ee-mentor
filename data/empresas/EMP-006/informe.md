@@ -11,14 +11,17 @@ comuna: Hanga Roa
 region: Valparaíso
 rubro: Almacén / minimarket
 version: 1
-generado: 2026-11-04T13:43:49.717Z
-puntaje_global: null
-clasificacion: No evaluado
+generado: 2026-11-06T13:20:12.308Z
+puntaje_global: 2
+clasificacion: Deficiente
 hallazgos: 0
 recomendaciones: 0
 tags:
   - eficiencia-energetica
   - almacén-/-minimarket
+latitud: -27.147053
+longitud: -109.4303547
+mapa_url: https://www.google.com/maps/place/27%C2%B008'49.4%22S+109%C2%B025'47.0%22W/@-27.147053,-109.4303547,252m/data=!3m2!1e3!4b1!4m4!3m3!8m2!3d-27.147053!4d-109.429711?entry=ttu&g_ep=EgoyMDI2MTEwMi4wIKXMDSoASAFQAw%3D%3D
 ---
 
 # Informe Técnico de Eficiencia Energética
@@ -29,11 +32,15 @@ tags:
 
 Rubro: Almacén / minimarket · Comuna: Hanga Roa · Región: Valparaíso · Superficie: 80 m² · Trabajadores: 4
 
+**Coordenadas:** -27.14705, -109.43035 (WGS84) · **Ubicación:** [Ver en mapa](https://www.google.com/maps/place/27%C2%B008'49.4%22S+109%C2%B025'47.0%22W/@-27.147053,-109.4303547,252m/data=!3m2!1e3!4b1!4m4!3m3!8m2!3d-27.147053!4d-109.429711?entry=ttu&g_ep=EgoyMDI2MTEwMi4wIKXMDSoASAFQAw%3D%3D)
+
 ---
 
 ## Resumen ejecutivo
 
-El presente informe resume el diagnóstico energético realizado a **Minimarket Tía Sonia** el 04 de noviembre de 2026. La evaluación abarca 0 de 10 dimensiones del desempeño energético y entrega una hoja de ruta priorizada para reducir consumos y costos operacionales.
+El presente informe resume el diagnóstico energético realizado a **Minimarket Tía Sonia** el 04 de noviembre de 2026. La evaluación abarca 1 de 10 dimensiones del desempeño energético y entrega una hoja de ruta priorizada para reducir consumos y costos operacionales.
+
+El **puntaje global de desempeño es 2.0/5**, clasificado como **Deficiente**. El desempeño está por debajo de lo esperado; se recomienda un plan de mejora.
 
 Las estimaciones de ahorro incluidas son referenciales, no son aditivas entre sí y deben validarse con mediciones y cotizaciones antes de su implementación.
 
@@ -79,7 +86,7 @@ En términos de gestión energética, el negocio no cuenta actualmente con un si
 | Dimensión | Puntaje | Clasificación |
 | --- | :---: | --- |
 | Iluminación | No evaluado | No evaluado |
-| Refrigeración | No evaluado | No evaluado |
+| Refrigeración | 2/5 | Deficiente |
 | Congelación | No evaluado | No evaluado |
 | Climatización y A/C | No evaluado | No evaluado |
 | Agua caliente sanitaria | No evaluado | No evaluado |
@@ -88,7 +95,9 @@ En términos de gestión energética, el negocio no cuenta actualmente con un si
 | Envolvente e infiltraciones | No evaluado | No evaluado |
 | Gestión energética | No evaluado | No evaluado |
 | Tarifas y potencia | No evaluado | No evaluado |
-| **Puntaje global** | **No evaluado** | **No evaluado** |
+| **Puntaje global** | **2.0/5** | **Deficiente** |
+
+**Brechas prioritarias:** Refrigeración (2/5, deficiente).
 
 ## 2. Principales falencias detectadas
 
@@ -176,7 +185,7 @@ Los siguientes recursos públicos pueden apoyar la implementación de las medida
 | 3,6 – 4,5 | Bueno |
 | 4,6 – 5,0 | Destacado |
 
-El puntaje global se calcula como el promedio simple de las 0 dimensiones evaluadas. Las secciones con puntaje 0 se excluyen del promedio.
+El puntaje global se calcula como el promedio simple de las 1 dimensiones evaluadas. Las secciones con puntaje 0 se excluyen del promedio.
 
 ### Alcance del diagnóstico
 
@@ -190,9 +199,9 @@ El puntaje global se calcula como el promedio simple de las 0 dimensiones evalua
 - **Fecha:** 04 de noviembre de 2026
 - **Asesor:** Carlos Campos
 - **Grado de consumo:** Moderado
-- **Clasificación global:** No evaluado
-- **Generado:** 04-11-2026, 10:43:49 a. m.
+- **Clasificación global:** Deficiente
+- **Generado:** 06-11-2026, 10:20:12 a. m.
 
 ---
 
-Documento generado automáticamente por EE Mentor. Debe ser revisado y validado por el consultor energético antes de su entrega al cliente.
+Reporte de mentorías energéticas. Debe ser revisado y validado por el consultor energético antes de su entrega al cliente.

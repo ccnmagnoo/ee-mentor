@@ -1,0 +1,19 @@
+schema_version = 1
+id = "EMP-007"
+nombre = "Revive Gourmet"
+rut = ""
+direccion = ""
+comuna = "Hanga Roa"
+region = "Valparaíso"
+rubro = "Taller"
+contacto = "Cintya Pradenas"
+telefono = "+56973763348"
+correo = "reviverapanui@gmail.com"
+trabajadores = 3
+superficie_m2 = 30
+observaciones = "Revive Gourmet es una empresa dedicada a la elaboración de alimentos de alta calidad y a la prestación de servicios gastronómicos, incluyendo cafetería, almuerzos ejecutivos y una línea de productos envasados al vacío, tales como sándwiches, quiches y ensaladas, entre otros. Con cerca de cuatro años de trayectoria, la empresa surgió a finales del período de pandemia, teniendo inicialmente como actividad principal el reciclaje de botellas de vidrio.\r\n\r\nSu fundadora, de profesión chef, ha desarrollado un modelo de negocio centrado en la sostenibilidad alimentaria, integrando principios de economía circular y gestión responsable de los recursos. Esta visión se refleja en diversas prácticas orientadas al reciclaje, la reutilización y la reducción de residuos, elementos que forman parte de la identidad y propuesta de valor de la empresa. Bajo el lema “Para celebrar no es necesario contaminar”, Revive Gourmet promueve una oferta gastronómica que busca compatibilizar la calidad de sus productos con el cuidado del medio ambiente."
+mapa_url = "https://www.google.com/maps/place/Revive+Gourmet/@-27.1472551,-109.4290988,102m/data=!3m1!1e3!4m6!3m5!1s0x9947fba0a87a1fdd:0xacccdf33dce8fee9!8m2!3d-27.1471502!4d-109.4290216!16s%2Fg%2F11vqhl_f24?entry=ttu&g_ep=EgoyMDI2MTEwMy4wIKXMDSoASAFQAw%3D%3D"
+latitud = -27.1472551
+longitud = -109.4290988
+created_at = "2026-11-06T14:12:30.471Z"
+updated_at = "2026-11-06T14:12:30.471Z"

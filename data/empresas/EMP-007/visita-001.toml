@@ -1,0 +1,136 @@
+fecha = "2026-11-06"
+asesor = "Carlos Campos"
+grado_consumo = "ligero"
+descripcion_perfil = "El negocio actualmente se encuentra produciendo alimentos para distinto tipo de servicios de alimentación como Coffee , alimentos sellados al vacío y servicios de alimentación a pedidos, dependiendo el requerimiento cliente, como celebraciones, eventos sociales, etc. Se encuentra instalado en un centro donde comparten consumos con otros establecimiento y los registros son medidos con remarcadores. Actualmente se encuentra instalado donde anteriormente funcionaba una cafetería, lo que ha requerido una adaptación de estos espacios , para el funcionamiento de su negocio."
+usos_finales = [ "iluminacion", "refrigeracion", "coccion", "equipos_productivos" ]
+hallazgos = []
+recomendaciones = []
+acuerdos = [ "Se realizara un reporte que se enviará a la usuaria para revisión conjunta, y validar qué elementos se pueden potenciar para alienarse al modelo de negocios." ]
+proxima_visita = "2026-11-30"
+observaciones = "Tiene una buena base de trabajo para implementar un sistema de gestión, se vuelve necesario coordinar en conjunto que acciones son posibles concordar para mejorar la propuesta de valor comercial, usando herramientas como la gestión eficiencia de la energía."
+schema_version = 1
+id = "VIS-001"
+empresa_id = "EMP-007"
+created_at = "2026-11-06T14:46:07.933Z"
+updated_at = "2026-11-06T14:53:33.316Z"
+
+[[energeticos]]
+tipo = "electricidad"
+unidad = "kWh/mes"
+costo = 100000
+observacion = "cuenta dividida con remarcadores"
+
+[[energeticos]]
+tipo = "glp"
+consumo = 15
+unidad = "kg/mes"
+costo = 40000
+observacion = "balón de 45kg dura 3 meses"
+
+[[equipos]]
+nombre = "Selladora al vacio"
+cantidad = 1
+potencia_w = 300
+horas_dia = 1
+estado = "bueno"
+observacion = "funciona a pedido"
+
+[[equipos]]
+nombre = "Vici cooler"
+cantidad = 2
+potencia_w = 250
+horas_dia = 24
+estado = "regular"
+observacion = "uno simple otro doble, segunda mano"
+
+[[equipos]]
+nombre = "Horno eléctrico"
+cantidad = 1
+potencia_w = 3000
+horas_dia = 1
+estado = "bueno"
+observacion = "para masas"
+
+[[equipos]]
+nombre = "Congeladores"
+cantidad = 2
+potencia_w = 250
+horas_dia = 24
+estado = "bueno"
+observacion = "para carnes y frutas"
+
+[[equipos]]
+nombre = "Refrigerador"
+cantidad = 1
+potencia_w = 300
+horas_dia = 24
+estado = "bueno"
+observacion = "convencional"
+
+[secciones.iluminacion]
+puntaje = 3
+observaciones = "El sistema de iluminación de ve en estado apropiado para los espacios. Sin embargo probablemente no se encuentra normalizado para operación de servicios de alimentos y elementos de cocina."
+tecnologia = "led"
+estado = "bueno"
+horas_uso_diarias = 6
+
+[secciones.refrigeracion]
+puntaje = 2
+observaciones = "Cuenta con visi cooler simple, a ser reemplazado por otro visi cooler doble, que sirve para almacenamiento de alimentos finales, sin o que también para materiales e ingredientes. Se realiza limpieza diaria del equipo. Además un refrigerador convencional vertical, que tiene el mismo uso que el anterior."
+cantidad_equipos = 2
+antiguedad_anios = 6
+mantencion = "correctiva"
+
+[secciones.congelacion]
+puntaje = 3
+observaciones = "Cuenta con 2 congeladores de 2 tamaños, 297 litros y de 150 litros, en estos se almacenan frutas, y en otro productos de carne, principalmente pollo y pescados ocasionalmente. Realizan mantenimiento y es preocupación para el usuario, ya que genera problemas de cierre. Como manteamiento correctivo. "
+cantidad_equipos = 2
+antiguedad_anios = 4
+estado = "bueno"
+
+[secciones.climatizacion]
+puntaje = 3
+observaciones = "Cuenta con ventilador, pero se realiza uso de la ventilación natural activa , con mosquitero. "
+tecnologia = "Ventilador"
+mantenciones = "sin_mantencion"
+control_temperatura = "manual"
+
+[secciones.acs]
+puntaje = 0
+observaciones = ""
+tecnologia = ""
+fuente_energetica = "electricidad"
+horarios = ""
+
+[secciones.coccion]
+puntaje = 2
+observaciones = "Cuenta con 2 anafres de 2 quemadores cada uno, de 3 años de antigüedad. Tiene manteamiento limpieza básica, la usuaria tiene nociones de el buen funcionamiento de los quemadores, por sus conocimientos de gastronomía. El horno eléctrico profesional para las masas y dulces."
+equipos_principales = "Anafres, Horno eléctrico"
+combustible = "electricidad"
+
+[secciones.motores]
+puntaje = 0
+observaciones = ""
+tipo = ""
+estado = "no_evaluado"
+mantencion = "no_evaluado"
+
+[secciones.envolvente]
+puntaje = 3
+observaciones = "El establecimiento no requiere mejoramiento de envolvente, de acuerdo a la zona climática de la isla. Si se vuelve relevante la ventilación sea adecuada, evitando material particulado del exterior y posible contaminación de los alimentos."
+ventanas = "bueno"
+puertas = "bueno"
+infiltraciones = "bueno"
+aislacion = "bueno"
+
+[secciones.gestion]
+puntaje = 1
+observaciones = "Hay un chequeo diario de las temperaturas, en caso de corte eléctrico y baja de voltaje. Esto es preventivo ya que resulta fundamental de funcionamiento del negocio y la calidad de los productos producidos."
+nivel = "sin_gestion"
+monitoreo = false
+responsable = "Cintya Pradenas"
+
+[secciones.tarifas]
+puntaje = 3
+observaciones = "El cliente se encuentra compartiendo consumos con otros negocios, los cuales se encuentra divido por re marcadores. Probablemente sea un trifásico por las características del centro."
+tarifa_actual = "Trifásica"
