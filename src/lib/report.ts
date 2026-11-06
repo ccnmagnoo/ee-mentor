@@ -583,7 +583,7 @@ function seccionAnexo(input: ReportInput): string {
     '',
     '---',
     '',
-    'Documento generado automáticamente por EE Mentor. Debe ser revisado y validado por el consultor energético antes de su entrega al cliente.',
+    'Reporte de mentorías energéticas. Debe ser revisado y validado por el consultor energético antes de su entrega al cliente.',
   ].join('\n');
 }
 

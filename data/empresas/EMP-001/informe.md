@@ -11,7 +11,7 @@ comuna: Viña del Mar
 region: Valparaíso
 rubro: Cafetería
 version: 1
-generado: 2026-10-24T18:32:56.200Z
+generado: 2026-11-06T11:58:20.728Z
 puntaje_global: 1.8
 clasificacion: Deficiente
 hallazgos: 5
@@ -301,10 +301,6 @@ Los siguientes recursos públicos pueden apoyar la implementación de las medida
 - **Unidad de Asistencia Técnica Gratuita.** Servicio de diagnóstico energético gratuito en línea para empresas, con recomendaciones de eficiencia energética y energías renovables. [https://mipymes.gestionaenergia.cl/unidad-de-asistencia-tecnica](https://mipymes.gestionaenergia.cl/unidad-de-asistencia-tecnica)
 - **Ministerio de Energía — Eficiencia Energética.** Políticas, programas y material de apoyo sobre eficiencia energética en Chile. [https://www.energia.gob.cl/eficiencia-energetica](https://www.energia.gob.cl/eficiencia-energetica)
 
-### Refrigeración
-
-- **Programa Cero Fugas (PNUD).** Apoyo técnico y cofinanciamiento para empresas con sistemas de refrigeración que utilizan HCFC. [https://www.undp.org/es/chile/programa-cero-fugas](https://www.undp.org/es/chile/programa-cero-fugas)
-
 ### Etiquetado energético
 
 - **Etiquetado energético de equipos.** Información oficial sobre etiquetas de eficiencia energética para artefactos eléctricos y de gas. [https://www.sec.cl/etiquetado-energetico/](https://www.sec.cl/etiquetado-energetico/)
@@ -365,8 +361,8 @@ El puntaje global se calcula como el promedio simple de las 10 dimensiones evalu
 - **Asesor:** Carlos Campos N.
 - **Grado de consumo:** Moderado
 - **Clasificación global:** Deficiente
-- **Generado:** 24-10-2026, 3:32:56 p. m.
+- **Generado:** 06-11-2026, 8:58:20 a. m.
 
 ---
 
-Documento generado automáticamente por EE Mentor. Debe ser revisado y validado por el consultor energético antes de su entrega al cliente.
+Reporte de mentorías energéticas. Debe ser revisado y validado por el consultor energético antes de su entrega al cliente.
