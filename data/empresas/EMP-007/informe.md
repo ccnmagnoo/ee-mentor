@@ -11,9 +11,9 @@ comuna: Hanga Roa
 region: Valparaíso
 rubro: Taller
 version: 1
-generado: 2026-11-06T14:53:33.355Z
-puntaje_global: 2.5
-clasificacion: Deficiente
+generado: 2026-11-06T15:01:13.031Z
+puntaje_global: 2.6
+clasificacion: Aceptable
 hallazgos: 0
 recomendaciones: 0
 tags:
@@ -40,7 +40,7 @@ Rubro: Taller · Comuna: Hanga Roa · Región: Valparaíso · Superficie: 30 m²
 
 El presente informe resume el diagnóstico energético realizado a **Revive Gourmet** el 06 de noviembre de 2026. La evaluación abarca 8 de 10 dimensiones del desempeño energético y entrega una hoja de ruta priorizada para reducir consumos y costos operacionales.
 
-El **puntaje global de desempeño es 2.5/5**, clasificado como **Deficiente**. El desempeño está por debajo de lo esperado; se recomienda un plan de mejora.
+El **puntaje global de desempeño es 2.6/5**, clasificado como **Aceptable**. Cumple lo básico, pero persisten oportunidades de optimización.
 
 Las estimaciones de ahorro incluidas son referenciales, no son aditivas entre sí y deben validarse con mediciones y cotizaciones antes de su implementación.
 
@@ -48,7 +48,7 @@ Las estimaciones de ahorro incluidas son referenciales, no son aditivas entre s�
 
 ### 1.1 Contexto del negocio
 
-El negocio actualmente se encuentra produciendo alimentos para distinto tipo de servicios de alimentación como Coffee , alimentos sellados al vacío y servicios de alimentación a pedidos, dependiendo el requerimiento cliente, como celebraciones, eventos sociales, etc. Se encuentra instalado en un centro donde comparten consumos con otros establecimiento y los registros son medidos con remarcadores. Actualmente se encuentra instalado donde anteriormente funcionaba una cafetería, lo que ha requerido una adaptación de estos espacios , para el funcionamiento de su negocio.
+El perfil energético de la empresa Revive Gourmet se caracteriza por un consumo energético ligero asociado principalmente a procesos de elaboración y conservación de alimentos, incluyendo servicios de coffee break, alimentos sellados al vacío y preparación de productos para eventos y pedidos especiales. La operación se desarrolla en un centro comercial donde el consumo eléctrico es compartido con otros establecimientos mediante re marcadores, por lo que no dispone de una medición independiente. Sus principales usos energéticos corresponden a la refrigeración y congelación de alimentos, apoyados por dos visicoolers, dos congeladores y un refrigerador, además de equipos de producción como una selladora al vacío y un horno eléctrico de 3 kW. El negocio complementa sus requerimientos térmicos con GLP, utilizado en dos anafres de dos quemadores para las actividades de cocción. En términos de gestión energética, destaca la realización de controles diarios de temperatura para resguardar la calidad e inocuidad de los productos ante eventuales cortes de suministro o variaciones de voltaje; sin embargo, se identifican oportunidades de mejora en la gestión energética formal y en la eficiencia de los equipos de refrigeración y cocción. Las principales oportunidades están asociadas a una mejor administración de los consumos y al fortalecimiento de las prácticas operacionales de eficiencia energética.
 
 ### 1.2 Energéticos utilizados
 
@@ -80,14 +80,14 @@ El negocio actualmente se encuentra produciendo alimentos para distinto tipo de 
 | Congelación | 3/5 | Aceptable |
 | Climatización y A/C | 3/5 | Aceptable |
 | Agua caliente sanitaria | No evaluado | No evaluado |
-| Cocción | 2/5 | Deficiente |
+| Cocción | 3/5 | Aceptable |
 | Motores y equipos productivos | No evaluado | No evaluado |
 | Envolvente e infiltraciones | 3/5 | Aceptable |
 | Gestión energética | 1/5 | Crítico |
 | Tarifas y potencia | 3/5 | Aceptable |
-| **Puntaje global** | **2.5/5** | **Deficiente** |
+| **Puntaje global** | **2.6/5** | **Aceptable** |
 
-**Brechas prioritarias:** Refrigeración (2/5, deficiente); Cocción (2/5, deficiente); Gestión energética (1/5, crítico).
+**Brechas prioritarias:** Refrigeración (2/5, deficiente); Gestión energética (1/5, crítico).
 
 **Observaciones generales de la visita:** Tiene una buena base de trabajo para implementar un sistema de gestión, se vuelve necesario coordinar en conjunto que acciones son posibles concordar para mejorar la propuesta de valor comercial, usando herramientas como la gestión eficiencia de la energía.
 
@@ -195,8 +195,8 @@ El puntaje global se calcula como el promedio simple de las 8 dimensiones evalua
 - **Fecha:** 06 de noviembre de 2026
 - **Asesor:** Carlos Campos
 - **Grado de consumo:** Ligero
-- **Clasificación global:** Deficiente
-- **Generado:** 06-11-2026, 11:53:33 a. m.
+- **Clasificación global:** Aceptable
+- **Generado:** 06-11-2026, 12:01:13 p. m.
 
 ---
 

@@ -1,7 +1,7 @@
 fecha = "2026-11-06"
 asesor = "Carlos Campos"
 grado_consumo = "ligero"
-descripcion_perfil = "El negocio actualmente se encuentra produciendo alimentos para distinto tipo de servicios de alimentación como Coffee , alimentos sellados al vacío y servicios de alimentación a pedidos, dependiendo el requerimiento cliente, como celebraciones, eventos sociales, etc. Se encuentra instalado en un centro donde comparten consumos con otros establecimiento y los registros son medidos con remarcadores. Actualmente se encuentra instalado donde anteriormente funcionaba una cafetería, lo que ha requerido una adaptación de estos espacios , para el funcionamiento de su negocio."
+descripcion_perfil = "El perfil energético de la empresa Revive Gourmet se caracteriza por un consumo energético ligero asociado principalmente a procesos de elaboración y conservación de alimentos, incluyendo servicios de coffee break, alimentos sellados al vacío y preparación de productos para eventos y pedidos especiales. La operación se desarrolla en un centro comercial donde el consumo eléctrico es compartido con otros establecimientos mediante re marcadores, por lo que no dispone de una medición independiente. Sus principales usos energéticos corresponden a la refrigeración y congelación de alimentos, apoyados por dos visicoolers, dos congeladores y un refrigerador, además de equipos de producción como una selladora al vacío y un horno eléctrico de 3 kW. El negocio complementa sus requerimientos térmicos con GLP, utilizado en dos anafres de dos quemadores para las actividades de cocción. En términos de gestión energética, destaca la realización de controles diarios de temperatura para resguardar la calidad e inocuidad de los productos ante eventuales cortes de suministro o variaciones de voltaje; sin embargo, se identifican oportunidades de mejora en la gestión energética formal y en la eficiencia de los equipos de refrigeración y cocción. Las principales oportunidades están asociadas a una mejor administración de los consumos y al fortalecimiento de las prácticas operacionales de eficiencia energética."
 usos_finales = [ "iluminacion", "refrigeracion", "coccion", "equipos_productivos" ]
 hallazgos = []
 recomendaciones = []
@@ -12,7 +12,7 @@ schema_version = 1
 id = "VIS-001"
 empresa_id = "EMP-007"
 created_at = "2026-11-06T14:46:07.933Z"
-updated_at = "2026-11-06T14:53:33.316Z"
+updated_at = "2026-11-06T15:01:12.999Z"
 
 [[energeticos]]
 tipo = "electricidad"
@@ -103,7 +103,7 @@ fuente_energetica = "electricidad"
 horarios = ""
 
 [secciones.coccion]
-puntaje = 2
+puntaje = 3
 observaciones = "Cuenta con 2 anafres de 2 quemadores cada uno, de 3 años de antigüedad. Tiene manteamiento limpieza básica, la usuaria tiene nociones de el buen funcionamiento de los quemadores, por sus conocimientos de gastronomía. El horno eléctrico profesional para las masas y dulces."
 equipos_principales = "Anafres, Horno eléctrico"
 combustible = "electricidad"
