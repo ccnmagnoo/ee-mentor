@@ -1,0 +1,19 @@
+nombre = "Ohi Sushi"
+rut = ""
+direccion = "Policarpo Toro sn"
+comuna = "Hanga Roa"
+region = "Valparaíso"
+rubro = "Restaurante"
+contacto = "Barbara Escobar"
+telefono = ""
+correo = ""
+trabajadores = 4
+superficie_m2 = 0
+observaciones = "Ohi Sushi es un pequeño restaurante dedicado a la comida japonesa, con servicio de atención y despacho de comidas de la especialidad, cuenta con equipamiento necesario para la preparación de este alimento, equipamiento para cocción, freidora, refrigeración entre otros."
+mapa_url = "https://www.google.com/maps/place/OHI+SUSHI/@-27.1448676,-109.4315522,1006m/data=!3m2!1e3!4b1!4m6!3m5!1s0x9947fbab9156244b:0xbcef233b6d231ad!8m2!3d-27.1448676!4d-109.4289773!16s%2Fg%2F11fxdxg8rf?entry=ttu&g_ep=EgoyMDI2MTEwMy4wIKXMDSoASAFQAw%3D%3D"
+latitud = -27.1448676
+longitud = -109.4315522
+schema_version = 1
+id = "EMP-008"
+created_at = "2026-11-06T17:05:46.280Z"
+updated_at = "2026-11-06T17:21:32.436Z"
