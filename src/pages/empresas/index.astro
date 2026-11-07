@@ -62,7 +62,10 @@ const totalVisitas = empresas.reduce((acc, item) => acc + item.visitas, 0);
             </tr>
           </thead>
           <tbody>
-            {empresas.map(({ empresa, visitas, ultimaVisita, puntaje, clasificacion }) => {
+            {empresas.sort((a,b)=>{
+              const [aDate,bDate] = [a.ultimaVisita ? new Date(a.ultimaVisita) : null, b.ultimaVisita ? new Date(b.ultimaVisita) : null];
+              return (bDate?.getTime() || 0) - (aDate?.getTime() || 0);
+            }).map(({ empresa, visitas, ultimaVisita, puntaje, clasificacion }) => {
               const clasificacionInfo = clasificarPuntaje(puntaje);
               const mapa = urlMapa(empresa);
               return (
