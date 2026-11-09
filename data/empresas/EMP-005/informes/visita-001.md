@@ -11,14 +11,17 @@ comuna: Hanga Roa
 region: Valparaíso
 rubro: Restaurante
 version: 1
-generado: 2026-11-03T15:44:41.628Z
-puntaje_global: null
-clasificacion: No evaluado
+generado: 2026-11-09T14:49:04.339Z
+puntaje_global: 2
+clasificacion: Deficiente
 hallazgos: 0
 recomendaciones: 0
 tags:
   - eficiencia-energetica
   - restaurante
+latitud: -27.1524789
+longitud: -109.4395382
+mapa_url: https://www.google.com/maps/place/Neptuno+Sunset+Restaurant/@-27.1524789,-109.4395382,228m/data=!3m1!1e3!4m6!3m5!1s0x9947fb00594bc469:0x137f80dde6c0c6ce!8m2!3d-27.1526886!4d-109.4399246!16s%2Fg%2F11ggngtgyv?entry=tts&g_ep=EgoyMDI2MTEwMS4wIOC7DCoASAFQAw%3D%3D&skid=be495d96-1fee-41c6-a8b0-03df898bf56d
 ---
 
 # Informe Técnico de Eficiencia Energética
@@ -29,11 +32,15 @@ tags:
 
 Rubro: Restaurante · Comuna: Hanga Roa · Región: Valparaíso · Superficie: 100 m² · Trabajadores: 7
 
+**Coordenadas:** -27.15248, -109.43954 (WGS84) · **Ubicación:** [Ver en mapa](https://www.google.com/maps/place/Neptuno+Sunset+Restaurant/@-27.1524789,-109.4395382,228m/data=!3m1!1e3!4m6!3m5!1s0x9947fb00594bc469:0x137f80dde6c0c6ce!8m2!3d-27.1526886!4d-109.4399246!16s%2Fg%2F11ggngtgyv?entry=tts&g_ep=EgoyMDI2MTEwMS4wIOC7DCoASAFQAw%3D%3D&skid=be495d96-1fee-41c6-a8b0-03df898bf56d)
+
 ---
 
 ## Resumen ejecutivo
 
-El presente informe resume el diagnóstico energético realizado a **Restaurant Neptuno** el 03 de noviembre de 2026. La evaluación abarca 0 de 10 dimensiones del desempeño energético y entrega una hoja de ruta priorizada para reducir consumos y costos operacionales.
+El presente informe resume el diagnóstico energético realizado a **Restaurant Neptuno** el 03 de noviembre de 2026. La evaluación abarca 1 de 10 dimensiones del desempeño energético y entrega una hoja de ruta priorizada para reducir consumos y costos operacionales.
+
+El **puntaje global de desempeño es 2.0/5**, clasificado como **Deficiente**. El desempeño está por debajo de lo esperado; se recomienda un plan de mejora.
 
 Las estimaciones de ahorro incluidas son referenciales, no son aditivas entre sí y deben validarse con mediciones y cotizaciones antes de su implementación.
 
@@ -41,22 +48,21 @@ Las estimaciones de ahorro incluidas son referenciales, no son aditivas entre s�
 
 ### 1.1 Contexto del negocio
 
-El Restaurant Neptuno presenta un comportamiento de consumo energético variable a lo largo del año, influenciado principalmente por la estacionalidad turística y las condiciones climáticas. El establecimiento opera bajo un concepto dual, funcionando como restaurante durante el día y como bar tipo sunset durante el atardecer, aprovechando su ubicación y entorno paisajístico. Su horario de funcionamiento se extiende desde las 10:00 hasta las 23:00 horas, atendiendo tanto público general mediante servicio a la carta como grupos coordinados a través de agencias turísticas. La capacidad máxima de atención es de aproximadamente 50 comensales.
-En el área de producción gastronómica, el establecimiento dispone de cuatro cocinas con quemadores a Gas Licuado de Petróleo (GLP) y una grilla a gas, lo que concentra la mayor parte de la demanda térmica asociada a la preparación de alimentos. No se cuenta con sistemas solares térmicos para la producción de agua caliente sanitaria o apoyo a procesos térmicos, situación que se ve condicionada por el carácter arrendado del inmueble, lo que dificulta la incorporación de instalaciones permanentes o de complejo traslado.
-Respecto al suministro eléctrico, el restaurante ha incorporado una solución de generación fotovoltaica aislada (off-grid) destinada principalmente a la alimentación de sistemas de iluminación. Este sistema cuenta con almacenamiento mediante baterías, permitiendo una autonomía estimada de aproximadamente cuatro horas. Dicho sistema contribuye a reducir parcialmente la demanda eléctrica proveniente de la red durante determinados periodos de operación.
-La refrigeración representa uno de los consumos eléctricos más relevantes del establecimiento debido a la naturaleza de los productos almacenados. Para ello, dispone de:
+La empresa presenta una demanda energética asociada principalmente a procesos de elaboración gastronómica, conservación de alimentos, iluminación y servicios complementarios para la atención de clientes. Asimismo, los sucesivos cambios de ubicación que ha experimentado el establecimiento a lo largo de su historia han requerido la adaptación e implementación reiterada de instalaciones eléctricas y equipamiento, generando desafíos permanentes en materia de infraestructura energética, pero también oportunidades para incorporar mejoras tecnológicas orientadas a la reducción de costos operacionales y al uso eficiente de la energía.
 
-Cuatro congeladores horizontales, destinados al almacenamiento de carnes, pescados, mariscos, verduras y vegetales.
-Una cámara de congelación de pequeña capacidad para la producción y almacenamiento de hielo.
-Dos congeladores verticales, utilizados para frutas porcionadas destinadas a la preparación de bebestibles y para almacenamiento de postres.
-Dos equipos tipo V-Cooler, destinados a la conservación de vinos, postres de frutas, agua, cerveza y cristalería.
-Tres V-Cooler adicionales, destinados a verduras, pescados y mariscos, y carnes.
+El comportamiento energético del restaurante presenta una marcada variabilidad estacional, estrechamente relacionada con las fluctuaciones de la actividad turística en Rapa Nui y con las condiciones climáticas propias de la isla. El establecimiento opera bajo un modelo de negocio mixto, funcionando como restaurante durante el día y como bar de tipo sunset durante la tarde y primeras horas de la noche, aprovechando su privilegiada ubicación costera y el atractivo paisajístico de su entorno. Su horario de atención se extiende entre las 10:00 y las 23:00 horas, brindando servicios tanto a clientes individuales bajo modalidad de carta como a grupos organizados por agencias de turismo nacionales e internacionales. La capacidad máxima de atención alcanza aproximadamente 50 comensales.
 
-En materia de iluminación, el establecimiento utiliza tecnología LED en la totalidad de sus espacios, complementando esta medida con un importante aprovechamiento de la iluminación natural. Gracias a las características arquitectónicas del local y a su orientación, se dispone de una significativa cantidad de luz natural durante gran parte de la jornada, reduciendo la necesidad de iluminación artificial en horario diurno.
+En el ámbito de la producción gastronómica, la energía térmica utilizada para la preparación de alimentos proviene principalmente de Gas Licuado de Petróleo (GLP). El establecimiento dispone de cuatro cocinas industriales con quemadores a gas y una grilla de cocción, equipamiento que concentra gran parte de los requerimientos energéticos asociados a la operación culinaria. Actualmente no cuenta con sistemas de aprovechamiento solar térmico para la producción de agua caliente sanitaria o apoyo a procesos productivos, situación que se encuentra condicionada por la naturaleza arrendada del inmueble, lo que limita la realización de inversiones permanentes o de difícil traslado.
 
-En cuanto a las características constructivas, el recinto cuenta con ventanas de PVC flexible, las cuales son cerradas mediante tablillas durante la temporada invernal para minimizar las pérdidas térmicas. Durante el verano, estas permanecen abiertas o sin protección, favoreciendo la ventilación natural y el aprovechamiento de las vistas panorámicas, mejorando la experiencia de los clientes y reduciendo la necesidad de climatización artificial.
-El establecimiento mantiene además una política sistemática de mantenimiento preventivo. Cada año, durante el mes de mayo, se realiza una revisión integral de los equipos, considerando labores de limpieza, mantenimiento y renovación de aquellos artefactos que lo requieran. Este proceso es ejecutado por un técnico mantenedor permanente que presta servicios al restaurante desde el año 2015, contribuyendo a mantener la eficiencia operativa de los equipos y a prevenir pérdidas energéticas asociadas a fallas o deterioros.
-Finalmente, aunque no existe un sistema formalizado de gestión energética, el Restaurant Neptuno evidencia una cultura organizacional orientada al uso eficiente de la energía, promoviendo prácticas permanentes de ahorro y control operacional. Esta gestión informal se refleja en el aprovechamiento de recursos naturales disponibles, la mantención periódica de los equipos y la incorporación gradual de tecnologías más eficientes, constituyendo una base favorable para futuras acciones de mejora y optimización energética.
+En cuanto al suministro eléctrico, el restaurante ha incorporado una solución fotovoltaica aislada (off-grid), destinada principalmente a abastecer sistemas de iluminación. Esta instalación cuenta con almacenamiento mediante baterías, permitiendo una autonomía cercana a cuatro horas y contribuyendo a disminuir parcialmente la dependencia de la red eléctrica convencional durante determinados periodos de operación.
+
+La refrigeración constituye uno de los principales centros de consumo eléctrico del establecimiento, dada la necesidad de mantener condiciones adecuadas de conservación para alimentos y bebidas. La infraestructura disponible contempla cuatro congeladores horizontales destinados al almacenamiento de carnes, pescados, mariscos y vegetales; una cámara de congelación de pequeña capacidad orientada a la producción y almacenamiento de hielo; dos congeladores verticales para frutas porcionadas y postres; además de cinco equipos tipo V-Cooler, utilizados para la conservación de vinos, bebidas, alimentos frescos y otros insumos gastronómicos.
+
+Respecto de la iluminación, el restaurante ha realizado una transición completa hacia tecnología LED, medida que contribuye significativamente a la reducción del consumo eléctrico. Esta estrategia se complementa con un amplio aprovechamiento de la iluminación natural, favorecido por el diseño arquitectónico del local y su orientación. Como resultado, gran parte de la jornada diurna puede desarrollarse con un uso mínimo de iluminación artificial.
+
+Las características constructivas del establecimiento también aportan a la eficiencia energética. El recinto cuenta con cerramientos de PVC flexible que, durante la temporada invernal, son protegidos mediante tablillas para reducir pérdidas térmicas y mejorar el confort interior. En los meses de verano estas protecciones son retiradas o permanecen abiertas, favoreciendo la ventilación natural, la integración con el entorno costero y la disminución de requerimientos de climatización artificial.
+
+Complementariamente, el Restaurant Neptuno mantiene una política de mantenimiento preventivo consolidada. Anualmente, durante el mes de mayo, se ejecuta una revisión integral de sus instalaciones y equipos, considerando actividades de limpieza, mantenimiento correctivo menor y reemplazo de componentes cuando resulta necesario. Estas labores son desarrolladas por un técnico mantenedor que presta servicios de forma continua desde el año 2015, lo que ha permitido conservar adecuados niveles de desempeño operacional y evitar pérdidas energéticas derivadas de fallas o deterioro de los equipos.
 
 ### 1.2 Energéticos utilizados
 
@@ -67,7 +73,7 @@ Finalmente, aunque no existe un sistema formalizado de gestión energética, el 
 
 **Principales usos finales:** Iluminación, Refrigeración y congelación, Cocción, Agua caliente sanitaria.
 
-**Observaciones de la empresa:** Restaurante de borde costero con servicios de alimentación y servicios de Bar. Han abierto y cerrado 8 restaurantes, cambios y arriendos ya que como continentales no pueden ser propietarios. En pandemia tuvieron que detener el negocio por no haber ingresos, actualmente pagan $1.5MM en arriendos. Restaurant para servicios turísticos y asociados a agencias locales e internacionales. ubicación https://maps.app.goo.gl/945zRhprzbUoiiVTA
+**Observaciones de la empresa:** Restaurant Neptuno es una micro y pequeña empresa turística ubicada en , , dedicada a la prestación de servicios de alimentación y bar en un entorno privilegiado de borde costero. Su propuesta gastronómica está orientada tanto a visitantes nacionales e internacionales como a operadores turísticos, manteniendo una estrecha vinculación con agencias de turismo locales y extranjeras que derivan clientes de manera permanente. A lo largo de su trayectoria, el negocio ha demostrado una importante capacidad de adaptación y resiliencia. Uno de los principales desafíos que ha enfrentado ha sido la necesidad de trasladar sus operaciones en múltiples ocasiones. A la fecha, el restaurante ha experimentado ocho reubicaciones, situación que ha implicado la habilitación completa de nuevas instalaciones en cada oportunidad, incluyendo adecuaciones de infraestructura, equipamiento y sistemas energéticos. Esta condición ha generado costos significativos y una constante necesidad de ajustar consumos y requerimientos eléctricos para mantener la continuidad operacional. Durante la pandemia de COVID-19, el restaurante debió suspender temporalmente sus actividades debido a la caída total de ingresos asociada a la paralización del turismo, principal motor económico de la isla. Pese a este escenario adverso, la empresa logró retomar sus operaciones y actualmente continúa desarrollando sus actividades, enfrentando además costos fijos relevantes, entre ellos un gasto mensual de aproximadamente $1.500.000 en arriendo.
 
 ### 1.3 Equipos y procesos observados
 
@@ -85,9 +91,11 @@ _No se registró un inventario detallado de equipos._
 | Cocción | No evaluado | No evaluado |
 | Motores y equipos productivos | No evaluado | No evaluado |
 | Envolvente e infiltraciones | No evaluado | No evaluado |
-| Gestión energética | No evaluado | No evaluado |
+| Gestión energética | 2/5 | Deficiente |
 | Tarifas y potencia | No evaluado | No evaluado |
-| **Puntaje global** | **No evaluado** | **No evaluado** |
+| **Puntaje global** | **2.0/5** | **Deficiente** |
+
+**Brechas prioritarias:** Gestión energética (2/5, deficiente).
 
 ## 2. Principales falencias detectadas
 
@@ -175,7 +183,7 @@ Los siguientes recursos públicos pueden apoyar la implementación de las medida
 | 3,6 – 4,5 | Bueno |
 | 4,6 – 5,0 | Destacado |
 
-El puntaje global se calcula como el promedio simple de las 0 dimensiones evaluadas. Las secciones con puntaje 0 se excluyen del promedio.
+El puntaje global se calcula como el promedio simple de las 1 dimensiones evaluadas. Las secciones con puntaje 0 se excluyen del promedio.
 
 ### Alcance del diagnóstico
 
@@ -189,9 +197,9 @@ El puntaje global se calcula como el promedio simple de las 0 dimensiones evalua
 - **Fecha:** 03 de noviembre de 2026
 - **Asesor:** Carlos Campos
 - **Grado de consumo:** Moderado
-- **Clasificación global:** No evaluado
-- **Generado:** 03-11-2026, 12:44:41 p. m.
+- **Clasificación global:** Deficiente
+- **Generado:** 09-11-2026, 11:49:04 a. m.
 
 ---
 
-Documento generado automáticamente por EE Mentor. Debe ser revisado y validado por el consultor energético antes de su entrega al cliente.
+Reporte de mentorías energéticas. Debe ser revisado y validado por el consultor energético antes de su entrega al cliente.

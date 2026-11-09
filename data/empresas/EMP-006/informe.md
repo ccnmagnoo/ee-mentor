@@ -11,7 +11,7 @@ comuna: Hanga Roa
 region: Valparaíso
 rubro: Almacén / minimarket
 version: 1
-generado: 2026-11-09T13:12:52.397Z
+generado: 2026-11-09T13:32:45.274Z
 puntaje_global: 2
 clasificacion: Deficiente
 hallazgos: 13
@@ -509,7 +509,7 @@ El puntaje global se calcula como el promedio simple de las 7 dimensiones evalua
 - **Asesor:** Carlos Campos
 - **Grado de consumo:** Moderado
 - **Clasificación global:** Deficiente
-- **Generado:** 09-11-2026, 10:12:52 a. m.
+- **Generado:** 09-11-2026, 10:32:45 a. m.
 
 ---
 

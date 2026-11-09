@@ -1,0 +1,112 @@
+fecha = "2026-11-09"
+asesor = "Carlos Campos"
+grado_consumo = "moderado"
+descripcion_perfil = "Le Frits es una PYME gastronómica de servicio de alimentación rápida ubicada en Rapa Nui , cuya actividad principal corresponde a la preparación y venta de empanadas fritas, frituras, ceviches, bebidas y otros productos de consumo inmediato. Su operación considera procesos de cocción, fritura, conservación de alimentos y atención de público. El consumo energético del establecimiento se concentra principalmente en los procesos de cocción y fritura, mediante equipos eléctricos o a gas destinados a la preparación de empanadas y otros productos fritos. Existe una demanda permanente asociada a la refrigeración y conservación de alimentos, especialmente para materias primas perecibles como pescados, mariscos, bebidas y otros productos que requieren cadena de frío.\r\nSe observa además consumo asociado a iluminación interior y exterior, equipamiento de apoyo de cocina, sistemas de extracción de aire y equipos de atención al cliente. Debido a la naturaleza del negocio, la demanda energética presenta mayor intensidad durante los horarios de preparación y atención al público, especialmente en períodos de alta afluencia turística. Considerando su ubicación en , donde los costos de abastecimiento y operación suelen ser superiores a los del territorio continental, la gestión eficiente de la energía representa una oportunidad relevante para reducir costos operacionales y mejorar la competitividad del negocio."
+usos_finales = [ "iluminacion", "refrigeracion", "climatizacion", "coccion", "acs", "equipos_productivos", "otros" ]
+hallazgos = []
+recomendaciones = []
+acuerdos = []
+proxima_visita = "2026-11-30"
+observaciones = "Le Frits cuenta con equipamiento de energías renovables, pero no hay conocimiento de sus características técnicas y no se percibe ahorro en la cuenta de la luz. Requiere revisión."
+schema_version = 1
+id = "VIS-001"
+empresa_id = "EMP-009"
+created_at = "2026-11-09T14:58:45.840Z"
+updated_at = "2026-11-09T15:30:41.426Z"
+
+[[energeticos]]
+tipo = "electricidad"
+unidad = "kWh/mes"
+costo = 1300000
+observacion = "arriendo"
+
+[[energeticos]]
+tipo = "glp"
+consumo = 225
+unidad = "kg/mes"
+costo = 625000
+observacion = "5 balones de 45 kg/mes"
+
+[[equipos]]
+nombre = "Freidora"
+cantidad = 1
+potencia_w = 5000
+horas_dia = 12
+estado = "bueno"
+observacion = "funciona a gas"
+
+[[equipos]]
+nombre = "Freidora eléctrica"
+cantidad = 1
+potencia_w = 1500
+horas_dia = 12
+estado = "bueno"
+observacion = "para empandas"
+
+[secciones.iluminacion]
+puntaje = 0
+observaciones = ""
+tecnologia = "no_evaluado"
+estado = "no_evaluado"
+horas_uso_diarias = 0
+
+[secciones.refrigeracion]
+puntaje = 3
+observaciones = "Cuenta con 2 refrigeradores en barra, 2 refrigeradores en cocina, para materias primas. Tiene además un refrigerador en barra y otro tipo frigobar para vasos y aderezos. Además una vitrina refrigerada, que es utilizada para materia prima. Se revisa permanentemente los equipos por técnicos especializados con la Armada,"
+cantidad_equipos = 5
+antiguedad_anios = 0
+mantencion = "ocasional"
+
+[secciones.congelacion]
+puntaje = 3
+observaciones = "Tienen 4 equipos 2 grades y 2 pequeños, para almacenamiento para materias primas y preparaciones para cocinas."
+cantidad_equipos = 4
+antiguedad_anios = 4
+estado = "bueno"
+
+[secciones.climatizacion]
+puntaje = 3
+observaciones = "3 equipos de ventilación y adicionalmente el extractor de cocina."
+tecnologia = ""
+mantenciones = "correctiva"
+control_temperatura = "manual"
+
+[secciones.acs]
+puntaje = 3
+observaciones = "Queda sujeto a disponibilidad de combustible, actualmente no cuentan con suministro electro."
+tecnologia = ""
+fuente_energetica = "glp"
+horarios = "12 hasta las 12"
+
+[secciones.coccion]
+puntaje = 2
+observaciones = "Cocina de 4 quemadores industriales, para fabricación para productos calientes no fritos. Carnes, pollo, y otros. Se le hace mantenimiento 1 vez al mes, pero hay limpieza recurrente de los equipos."
+equipos_principales = "Cocina"
+combustible = "glp"
+
+[secciones.motores]
+puntaje = 0
+observaciones = ""
+tipo = ""
+estado = "no_evaluado"
+mantencion = "no_evaluado"
+
+[secciones.envolvente]
+puntaje = 0
+observaciones = ""
+ventanas = "no_evaluado"
+puertas = "no_evaluado"
+infiltraciones = "no_evaluado"
+aislacion = "no_evaluado"
+
+[secciones.gestion]
+puntaje = 2
+observaciones = "Hay noción de la importancia de mejorar el proceso productivo y gestión de la energía"
+nivel = "basica"
+monitoreo = true
+responsable = "Valentina Pince"
+
+[secciones.tarifas]
+puntaje = 3
+observaciones = ""
+tarifa_actual = "Domiciliaria sobre 75 kWh"

@@ -1,0 +1,96 @@
+fecha = "2026-11-09"
+asesor = "Consultor Energético"
+grado_consumo = "moderado"
+descripcion_perfil = "Tiene servicio de lavandería, "
+usos_finales = [ "iluminacion", "refrigeracion", "climatizacion", "acs" ]
+equipos = []
+hallazgos = []
+recomendaciones = []
+acuerdos = []
+proxima_visita = "2026-11-30"
+observaciones = "Cuenta paneles 18 paneles fotovoltaicos con batería, para toda la red. Instalados a fines de noviembre. Solari energía."
+schema_version = 1
+id = "VIS-001"
+empresa_id = "EMP-010"
+created_at = "2026-11-09T17:29:04.782Z"
+updated_at = "2026-11-09T17:41:42.123Z"
+
+[[energeticos]]
+tipo = "electricidad"
+unidad = "kWh/mes"
+costo = 250000
+observacion = "Variable durante el año, no cuenta separado los consumos."
+
+[[energeticos]]
+tipo = "glp"
+unidad = "kWh/mes"
+costo = 0
+observacion = ""
+
+[secciones.iluminacion]
+puntaje = 4
+observaciones = ""
+tecnologia = "led"
+estado = "bueno"
+horas_uso_diarias = 6
+
+[secciones.refrigeracion]
+puntaje = 3
+observaciones = "Refrigeradores normales"
+cantidad_equipos = 5
+antiguedad_anios = 3
+mantencion = "correctiva"
+
+[secciones.congelacion]
+puntaje = 0
+observaciones = ""
+cantidad_equipos = 0
+antiguedad_anios = 0
+estado = "no_evaluado"
+
+[secciones.climatizacion]
+puntaje = 2
+observaciones = ""
+tecnologia = ""
+mantenciones = "correctiva"
+control_temperatura = "sin_control"
+
+[secciones.acs]
+puntaje = 3
+observaciones = ""
+tecnologia = "Calefón"
+fuente_energetica = "glp"
+horarios = ""
+
+[secciones.coccion]
+puntaje = 3
+observaciones = "3 encimeras, 1 normal domiciaria"
+equipos_principales = "Encimera"
+combustible = "glp"
+
+[secciones.motores]
+puntaje = 0
+observaciones = ""
+tipo = ""
+estado = "no_evaluado"
+mantencion = "no_evaluado"
+
+[secciones.envolvente]
+puntaje = 0
+observaciones = "Ventanas normales, muros OSB, techumbre de zincalum "
+ventanas = "no_evaluado"
+puertas = "no_evaluado"
+infiltraciones = "no_evaluado"
+aislacion = "no_evaluado"
+
+[secciones.gestion]
+puntaje = 1
+observaciones = "Tuvieron el sello S"
+nivel = "sin_gestion"
+monitoreo = false
+responsable = ""
+
+[secciones.tarifas]
+puntaje = 3
+observaciones = ""
+tarifa_actual = "Domiciliaria"

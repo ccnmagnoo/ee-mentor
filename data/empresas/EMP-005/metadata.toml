@@ -9,11 +9,11 @@ telefono = "+56982153361"
 correo = "mikeyaz0407@gmail.com"
 trabajadores = 7
 superficie_m2 = 100
-observaciones = "Restaurante de borde costero con servicios de alimentación y servicios de Bar. El negocio como tal a sufrido varios trasados (8) y cada reubicación a significado habilitación nueva, por lo que representa un desafío desde el punto de vista energético. En pandemia tuvieron que detener el negocio por no haber ingresos, actualmente pagan $1.5MM en arriendos. Restaurant para servicios turísticos y asociados a agencias locales e internacionales."
+observaciones = "Restaurant Neptuno es una micro y pequeña empresa turística ubicada en , , dedicada a la prestación de servicios de alimentación y bar en un entorno privilegiado de borde costero. Su propuesta gastronómica está orientada tanto a visitantes nacionales e internacionales como a operadores turísticos, manteniendo una estrecha vinculación con agencias de turismo locales y extranjeras que derivan clientes de manera permanente.\r\n\r\nA lo largo de su trayectoria, el negocio ha demostrado una importante capacidad de adaptación y resiliencia. Uno de los principales desafíos que ha enfrentado ha sido la necesidad de trasladar sus operaciones en múltiples ocasiones. A la fecha, el restaurante ha experimentado ocho reubicaciones, situación que ha implicado la habilitación completa de nuevas instalaciones en cada oportunidad, incluyendo adecuaciones de infraestructura, equipamiento y sistemas energéticos. Esta condición ha generado costos significativos y una constante necesidad de ajustar consumos y requerimientos eléctricos para mantener la continuidad operacional.\r\n\r\nDurante la pandemia de COVID-19, el restaurante debió suspender temporalmente sus actividades debido a la caída total de ingresos asociada a la paralización del turismo, principal motor económico de la isla. Pese a este escenario adverso, la empresa logró retomar sus operaciones y actualmente continúa desarrollando sus actividades, enfrentando además costos fijos relevantes, entre ellos un gasto mensual de aproximadamente $1.500.000 en arriendo."
 mapa_url = "https://www.google.com/maps/place/Neptuno+Sunset+Restaurant/@-27.1524789,-109.4395382,228m/data=!3m1!1e3!4m6!3m5!1s0x9947fb00594bc469:0x137f80dde6c0c6ce!8m2!3d-27.1526886!4d-109.4399246!16s%2Fg%2F11ggngtgyv?entry=tts&g_ep=EgoyMDI2MTEwMS4wIOC7DCoASAFQAw%3D%3D&skid=be495d96-1fee-41c6-a8b0-03df898bf56d"
 latitud = -27.1524789
 longitud = -109.4395382
 schema_version = 1
 id = "EMP-005"
 created_at = "2026-11-03T15:12:04.486Z"
-updated_at = "2026-11-05T19:20:23.871Z"
+updated_at = "2026-11-09T14:00:35.664Z"
