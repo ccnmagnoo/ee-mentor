@@ -11,7 +11,7 @@ comuna: Hanga Roa
 region: Valparaíso
 rubro: Hostal
 version: 1
-generado: 2026-11-09T17:41:42.169Z
+generado: 2026-11-09T18:45:51.020Z
 puntaje_global: 2.7
 clasificacion: Aceptable
 hallazgos: 0
@@ -48,7 +48,7 @@ Las estimaciones de ahorro incluidas son referenciales, no son aditivas entre s�
 
 ### 1.1 Contexto del negocio
 
-Tiene servicio de lavandería,
+**Tokarau Cabañas** corresponde a un negocio del rubro **Hostal**, ubicado en la comuna de Hanga Roa, Región de Valparaíso. La operación considera 5 trabajadores y una superficie aproximada de 200 m². Los principales energéticos declarados son Electricidad, GLP. El grado de consumo observado se clasifica como **Moderado**.
 
 ### 1.2 Energéticos utilizados
 
@@ -59,7 +59,7 @@ Tiene servicio de lavandería,
 
 **Principales usos finales:** Iluminación, Refrigeración y congelación, Climatización y ventilación, Agua caliente sanitaria.
 
-**Observaciones de la empresa:** Cuenta con 4 cabañas de 50 m2 cada una, capacidad para 24 en ocupación
+**Observaciones de la empresa:** Tokarau Cabañas, ubicado en Hanga Roa, Valparaíso, corresponde a un establecimiento turístico tipo hostal compuesto por 4 cabañas de aproximadamente 50 m² cada una, con capacidad total para 24 pasajeros y una dotación de 5 trabajadores. La gestión está orientada a la sostenibilidad ambiental, y actual desempeño energético de la instalación resulta de especial importancia, donde se busca permanentemente oportunidades de mejora orientadas a reducir consumos, optimizar costos operacionales y fortalecer la sostenibilidad del servicio turístico.
 
 ### 1.3 Equipos y procesos observados
 
@@ -188,7 +188,7 @@ El puntaje global se calcula como el promedio simple de las 7 dimensiones evalua
 - **Asesor:** Consultor Energético
 - **Grado de consumo:** Moderado
 - **Clasificación global:** Aceptable
-- **Generado:** 09-11-2026, 2:41:42 p. m.
+- **Generado:** 09-11-2026, 3:45:51 p. m.
 
 ---
 

@@ -9,11 +9,11 @@ telefono = "+56984781444"
 correo = "tokerauconsultores@gmail.com"
 trabajadores = 5
 superficie_m2 = 200
-observaciones = "Tokarau Cabañas, ubicado en Hanga Roa, Valparaíso, corresponde a un establecimiento turístico tipo hostal compuesto por 4 cabañas de aproximadamente 50 m² cada una, con capacidad total para 24 pasajeros y una dotación de 5 trabajadores. La gestión está orientada a la sostenibilidad ambiental, y actual desempeño energético de la instalación resulta de especial importancia,  donde se busca permanentemente oportunidades de mejora orientadas a reducir consumos, optimizar costos operacionales y fortalecer la sostenibilidad del servicio turístico."
+observaciones = "Tokarau Cabañas, ubicado en Hanga Roa, Valparaíso, corresponde a un establecimiento turístico tipo hostal compuesto por 4 cabañas de aproximadamente 50 m² cada una, con capacidad total para 24 personas y una dotación de 5 trabajadores. La gestión está orientada a la sostenibilidad ambiental, y actual desempeño energético de la instalación resulta de especial importancia,  donde se busca permanentemente oportunidades de mejora orientadas a reducir consumos, optimizar costos operacionales y fortalecer la sostenibilidad del servicio turístico."
 mapa_url = "https://www.google.com/maps/place/Caba%C3%B1as+Tokerau/@-27.1343959,-109.4241205,110m/data=!3m1!1e3!4m9!3m8!1s0x9947fafe4427c925:0xa37ce436d4812308!5m2!4m1!1i2!8m2!3d-27.1343519!4d-109.4239055!16s%2Fg%2F12vr9f8t2?entry=ttu&g_ep=EgoyMDI2MTEwMy4wIKXMDSoASAFQAw%3D%3D"
 latitud = -27.1343959
 longitud = -109.4241205
 schema_version = 1
 id = "EMP-010"
 created_at = "2026-11-09T17:16:33.165Z"
-updated_at = "2026-11-09T17:58:36.965Z"
+updated_at = "2026-11-09T18:46:41.414Z"
