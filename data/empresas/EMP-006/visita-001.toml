@@ -3,16 +3,14 @@ asesor = "Carlos Campos"
 grado_consumo = "moderado"
 descripcion_perfil = "El establecimiento opera en un contexto marcado por la fragilidad del sistema eléctrico de la isla, situación que se traduce en interrupciones recurrentes del suministro y que representa una de las principales preocupaciones para el negocio. Según sus propietarios, el aumento sostenido de la demanda energética local, asociado entre otros factores a una mayor utilización de sistemas de climatización producto de las altas temperaturas y los efectos del cambio climático, ha generado una presión creciente sobre la infraestructura eléctrica existente. En este sentido, manifiestan la necesidad de contar con un servicio más confiable y una planificación energética acorde con las proyecciones de crecimiento del consumo.\r\n\r\nComo parte de su compromiso con el desarrollo sostenible y la protección del medio ambiente, los propietarios han expresado interés en incorporar soluciones de energías renovables que permitan reducir su dependencia de la red eléctrica y mejorar la resiliencia energética del establecimiento. Sin embargo, actualmente no cuentan con sistemas de generación renovable, aunque consideran prioritario acceder a opciones de financiamiento que faciliten su implementación.\r\n\r\nDesde el punto de vista operativo, el minimarket presenta un consumo eléctrico principalmente asociado a refrigeración, climatización e iluminación. El local dispone de dos equipos de aire acondicionado. Uno de ellos se utiliza para climatizar el área de ventas, la cual presenta ganancias térmicas importantes debido a la presencia de superficies vidriadas y a la acumulación de calor en los espacios interiores. El segundo equipo se encuentra instalado en una bodega destinada al almacenamiento de dulces y huevos, donde cumple una función complementaria de enfriamiento para mantener condiciones térmicas favorables para los productos almacenados.\r\n\r\nEn materia de refrigeración comercial, el establecimiento cuenta con una cantidad significativa de equipos destinados a la conservación de alimentos y bebidas. Se identificaron dos vitrinas refrigeradas de doble puerta y tres vitrinas refrigeradas simples para la exhibición y almacenamiento de bebidas, yogures, quesos, jamón y mantequilla envasada. Además, dispone de una vitrina refrigerada adicional de doble puerta y otra simple destinadas principalmente a almacenamiento.\r\n\r\nRespecto de la cadena de frío, se constató la existencia de cinco congeladores destinados al almacenamiento de helados, verduras congeladas, carnes, pollo envasado al vacío, hamburguesas y otros productos congelados. Debido a la relevancia de estos equipos para la continuidad operacional del negocio, los cortes de suministro eléctrico representan un riesgo importante para la conservación de los productos y para la calidad del servicio prestado.\r\n\r\nLas actividades de elaboración de alimentos son limitadas y se concentran principalmente en la preparación de productos de venta rápida. Para estas tareas se utiliza una cocina a gas y equipamiento menor, incluyendo una procesadora de alimentos, lo que permite reducir parcialmente la demanda eléctrica asociada a la cocción.\r\n\r\nEn cuanto a iluminación, el establecimiento utiliza tecnología LED de bajo consumo en la totalidad o gran parte de sus espacios, lo que constituye una medida favorable desde el punto de vista de la eficiencia energética. Asimismo, el suministro eléctrico se encuentra bajo tarifa residencial/comercial tipo TE1, sin registrarse observaciones relevantes respecto de la contratación eléctrica vigente.\r\n\r\nEn términos de gestión energética, el negocio no cuenta actualmente con un sistema formal de gestión de la energía ni con procedimientos estructurados para el monitoreo y evaluación periódica del desempeño energético de sus equipos. No obstante, se observan prácticas básicas de seguimiento de consumos y preocupación por el uso eficiente de la energía, lo que evidencia una disposición favorable hacia la adopción futura de medidas de gestión y eficiencia energética que permitan optimizar los costos operacionales y mejorar el desempeño energético del establecimiento."
 usos_finales = [ "iluminacion", "refrigeracion", "climatizacion", "coccion" ]
-hallazgos = []
-recomendaciones = []
-acuerdos = []
+acuerdos = [ "Durante la visita técnica realizada mediante videollamada, se acordó elaborar un informe borrador que incluirá los principales hallazgos, oportunidades de mejora y recomendaciones en materia de eficiencia energética identificadas durante la evaluación. Una vez remitido el documento, el cliente realizará una revisión de su contenido con el fin de validar la información levantada, antecedentes operacionales y observaciones asociadas a su instalación. Posteriormente, ambas partes coordinarán la entrega de comentarios y eventuales ajustes para la emisión de la versión final del informe. Asimismo, el cliente manifestó su disposición a analizar las recomendaciones propuestas y evaluar su factibilidad de implementación de acuerdo con las necesidades y recursos disponibles del negocio." ]
 proxima_visita = "2026-11-30"
-observaciones = ""
+observaciones = "urante la actividad se recopilaron antecedentes sobre los consumos energéticos, equipamiento existente y prácticas operacionales relacionadas con el uso de la energía. La evaluación se basó en la información proporcionada por el cliente, observaciones realizadas de forma remota y evidencia visual compartida durante la conexión. Si bien esta modalidad permitió identificar oportunidades de mejora energética relevantes, algunas verificaciones técnicas y mediciones específicas requerirían una visita presencial para obtener un nivel de detalle y precisión superior."
 schema_version = 1
 id = "VIS-001"
 empresa_id = "EMP-006"
 created_at = "2026-11-04T13:43:49.659Z"
-updated_at = "2026-11-06T13:20:12.276Z"
+updated_at = "2026-11-09T13:12:52.362Z"
 
 [[energeticos]]
 tipo = "electricidad"
@@ -23,10 +21,10 @@ observacion = "cuenta con 2 medidores"
 
 [[energeticos]]
 tipo = "glp"
-consumo = 0.5
-unidad = "Balones 45kg / mes"
+consumo = 22
+unidad = "kg / mes"
 costo = 65000
-observacion = "dura 2 meses"
+observacion = "dura 2 meses el balón de 45 kg"
 
 [[equipos]]
 nombre = "Procesadora de alimentos"
@@ -36,12 +34,18 @@ horas_dia = 1
 estado = "bueno"
 observacion = "para pastas de alimentos"
 
+[[equipos]]
+nombre = ""
+cantidad = 1
+estado = "bueno"
+observacion = ""
+
 [secciones.iluminacion]
-puntaje = 0
-observaciones = ""
-tecnologia = "no_evaluado"
-estado = "no_evaluado"
-horas_uso_diarias = 0
+puntaje = 3
+observaciones = "Cuenta con luminarias LED, sin embargo no se percibe que haya una normalización por el tipo de uso de los espacios, eso podría dar indicios de potenciales baja optimización lumínica en espacios que lo requieran,"
+tecnologia = "led"
+estado = "regular"
+horas_uso_diarias = 6
 
 [secciones.refrigeracion]
 puntaje = 2
@@ -51,18 +55,18 @@ antiguedad_anios = 5
 mantencion = "ocasional"
 
 [secciones.congelacion]
-puntaje = 0
-observaciones = ""
-cantidad_equipos = 0
-antiguedad_anios = 0
-estado = "no_evaluado"
+puntaje = 2
+observaciones = "Congeladores destinados al almacenamiento de helados, verduras congeladas, carnes, pollo envasado al vacío, hamburguesas y otros productos congelados. Debido a la relevancia de estos equipos para la continuidad operacional del negocio, los cortes de suministro eléctrico representan un riesgo importante para la conservación de los productos y para la calidad del servicio prestado."
+cantidad_equipos = 5
+antiguedad_anios = 6
+estado = "regular"
 
 [secciones.climatizacion]
-puntaje = 0
-observaciones = ""
-tecnologia = ""
-mantenciones = "no_evaluado"
-control_temperatura = "no_evaluado"
+puntaje = 1
+observaciones = "El establecimiento cuenta con dos equipos de aire acondicionado: uno destinado al área de atención de clientes y otro utilizado para la conservación de alimentos. Ambos equipos operan en espacios que presentan altas infiltraciones de aire debido a las características constructivas del inmueble, lo que reduce significativamente su desempeño y genera un uso poco eficiente de la energía. En estas condiciones, los equipos deben trabajar durante más tiempo para mantener la temperatura requerida, incrementando el consumo eléctrico y el desgaste de los sistemas.\r\n\r\nAdicionalmente, el segundo equipo está siendo utilizado con fines de conservación de alimentos, una función para la cual los equipos de aire acondicionado convencionales no están diseñados. Esta aplicación puede traducirse en bajos niveles de eficiencia energética, dificultades para mantener temperaturas estables y posibles riesgos para la adecuada conservación de los productos.\r\n\r\nEn este contexto, se recomienda implementar medidas para reducir las infiltraciones de aire mediante mejoras en la envolvente del recinto, tales como sellado de puertas, ventanas y otras aberturas. Asimismo, se aconseja evaluar alternativas de refrigeración específicamente diseñadas para la conservación de alimentos, como cámaras de frío o equipos de refrigeración comercial adecuados a los requerimientos de almacenamiento. Estas soluciones permitirían mejorar el control térmico, reducir el consumo energético y asegurar condiciones más apropiadas para la conservación de los productos."
+tecnologia = "Split"
+mantenciones = "ocasional"
+control_temperatura = "manual"
 
 [secciones.acs]
 puntaje = 0
@@ -85,21 +89,121 @@ estado = "no_evaluado"
 mantencion = "no_evaluado"
 
 [secciones.envolvente]
-puntaje = 0
-observaciones = ""
-ventanas = "no_evaluado"
-puertas = "no_evaluado"
-infiltraciones = "no_evaluado"
-aislacion = "no_evaluado"
+puntaje = 1
+observaciones = "Dada la elevada humedad ambiental de la zona, las infiltraciones de aire generan una carga latente significativa sobre los equipos de aire acondicionado, obligándolos a destinar parte de su capacidad a la deshumidificación del aire en lugar de únicamente al control de temperatura. Esto reduce su rendimiento efectivo y aumenta las horas de operación necesarias para alcanzar las condiciones de confort requeridas."
+ventanas = "regular"
+puertas = "deficiente"
+infiltraciones = "deficiente"
+aislacion = "deficiente"
 
 [secciones.gestion]
-puntaje = 0
-observaciones = ""
-nivel = "no_evaluado"
-monitoreo = false
-responsable = ""
+puntaje = 2
+observaciones = "El negocio de venta de abarrotes cuenta con nociones básicas de gestión energética, enfocadas principalmente en el control operativo de sus equipos de refrigeración y conservación de alimentos. Como parte de sus prácticas habituales, realiza un monitoreo manual de las temperaturas de cámaras, vitrinas y refrigeradores, lo que contribuye a mantener la calidad de los productos y detectar eventuales desviaciones en el funcionamiento de los equipos. Además, existe un interés creciente por reducir los gastos energéticos, motivado por los elevados costos de la electricidad propios de un territorio insular, donde el valor del kWh suele ser significativamente superior al del continente. En este contexto, la implementación de medidas de eficiencia energética, como la optimización de horarios de operación, el mantenimiento preventivo de los sistemas de refrigeración y el fortalecimiento del seguimiento de consumos, representa una oportunidad para mejorar la competitividad y sostenibilidad del negocio."
+nivel = "basica"
+monitoreo = true
+responsable = "Propietaria"
 
 [secciones.tarifas]
-puntaje = 0
-observaciones = ""
-tarifa_actual = ""
+puntaje = 3
+observaciones = "Cuenta con la tarifa correspondiente al nivel de consumos"
+tarifa_actual = "Domiciliaria sobre 75 kWh"
+
+[[hallazgos]]
+hallazgo_id = "HAL-CLIM-02"
+justificacion = "Los equipos cuentan con un sistema no documentado de mantenimiento, aunque se hace revisión uno o dos veces al año para su chequeo operacional."
+
+[[hallazgos]]
+hallazgo_id = "HAL-CLIM-05"
+justificacion = ""
+
+[[hallazgos]]
+hallazgo_id = "HAL-CONG-01"
+justificacion = ""
+
+[[hallazgos]]
+hallazgo_id = "HAL-CONG-03"
+justificacion = ""
+
+[[hallazgos]]
+hallazgo_id = "HAL-ENV-02"
+justificacion = ""
+
+[[hallazgos]]
+hallazgo_id = "HAL-KB-ENV-01"
+justificacion = ""
+
+[[hallazgos]]
+hallazgo_id = "HAL-ERNC-01"
+justificacion = "Hay interés y algunas prospecciones básicas de sistemas de autoconsumo, pero estos no cuentan con un dimensionamiento."
+
+[[hallazgos]]
+hallazgo_id = "HAL-GEST-01"
+justificacion = ""
+
+[[hallazgos]]
+hallazgo_id = "HAL-GEST-02"
+justificacion = ""
+
+[[hallazgos]]
+hallazgo_id = "HAL-GEST-03"
+justificacion = ""
+
+[[hallazgos]]
+hallazgo_id = "HAL-GEST-04"
+justificacion = "No existe diferenciación horaria de funcionamiento de equipos re refrigeración o clima cuando están fuera de atención a público."
+
+[[hallazgos]]
+hallazgo_id = "HAL-ILUM-03"
+justificacion = ""
+
+[[hallazgos]]
+hallazgo_id = "HAL-REFR-06"
+justificacion = "Los equipos se encuentra en lugares que podría no optimizar su ventilación adecuada."
+
+[[recomendaciones]]
+recomendacion_id = "REC-CLIM-02"
+observacion = ""
+
+[[recomendaciones]]
+recomendacion_id = "REC-CLIM-05"
+observacion = ""
+
+[[recomendaciones]]
+recomendacion_id = "REC-CONG-01"
+observacion = ""
+
+[[recomendaciones]]
+recomendacion_id = "REC-CONG-03"
+observacion = ""
+
+[[recomendaciones]]
+recomendacion_id = "REC-ENV-02"
+observacion = ""
+
+[[recomendaciones]]
+recomendacion_id = "REC-ERNC-01"
+observacion = ""
+
+[[recomendaciones]]
+recomendacion_id = "REC-GEST-01"
+observacion = ""
+
+[[recomendaciones]]
+recomendacion_id = "REC-GEST-02"
+observacion = ""
+
+[[recomendaciones]]
+recomendacion_id = "REC-GEST-03"
+observacion = ""
+
+[[recomendaciones]]
+recomendacion_id = "REC-GEST-04"
+observacion = ""
+
+[[recomendaciones]]
+recomendacion_id = "REC-ILUM-02"
+observacion = ""
+
+[[recomendaciones]]
+recomendacion_id = "REC-REFR-06"
+observacion = ""

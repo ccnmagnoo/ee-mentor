@@ -1,0 +1,15 @@
+id = "HAL-CLIM-05"
+codigo = "CLIM-05"
+titulo = "Uso inapropiado de equipamiento"
+categoria = "climatizacion"
+descripcion = "Aire acondicionado se encuentra operando para usos que no corresponden al confort térmico. Esta práctica genera un consumo energético innecesario, ya que el espacio no requiere mantener condiciones estrictas de confort térmico ni control ambiental continuo. Además, la operación prolongada del equipo incrementa los costos de electricidad y acelera el desgaste de los componentes del sistema de climatización. Considerando el alto consumo de este tipo de equipamiento , esta situación representa una oportunidad relevante de mejora mediante la redefinición de los criterios de uso del equipo. Se estima que la reducción o eliminación de este uso innecesario puede generar ahorros energéticos directos sin afectar la calidad ni las condiciones de almacenamiento de los productos."
+justificacion = "Se recomienda la evaluación de equipamientos adecuados al requerimiento base, ya que los equipos de climatización están diseñados para confort térmico de espacios mediante la circulación de aire en la temperatura de configuración o set point."
+impacto = "alto"
+energetico = "electricidad"
+recomendacion_id = "REC-CLIM-05"
+tags = [ "Aire Acondicionado", "Split" ]
+activo = true
+origen = "catalogo_base"
+schema_version = 1
+created_at = "2026-11-09T12:33:27.419Z"
+updated_at = "2026-11-09T12:39:25.109Z"
