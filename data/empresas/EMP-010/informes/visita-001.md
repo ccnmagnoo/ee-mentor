@@ -11,11 +11,11 @@ comuna: Hanga Roa
 region: Valparaíso
 rubro: Hostal
 version: 1
-generado: 2026-11-09T18:45:51.020Z
-puntaje_global: 2.7
+generado: 2026-11-10T11:37:11.598Z
+puntaje_global: 2.8
 clasificacion: Aceptable
-hallazgos: 0
-recomendaciones: 0
+hallazgos: 4
+recomendaciones: 4
 tags:
   - eficiencia-energetica
   - hostal
@@ -38,9 +38,15 @@ Rubro: Hostal · Comuna: Hanga Roa · Región: Valparaíso · Superficie: 200 m�
 
 ## Resumen ejecutivo
 
-El presente informe resume el diagnóstico energético realizado a **Tokarau Cabañas** el 09 de noviembre de 2026. La evaluación abarca 7 de 10 dimensiones del desempeño energético y entrega una hoja de ruta priorizada para reducir consumos y costos operacionales.
+El presente informe resume el diagnóstico energético realizado a **Tokarau Cabañas** el 09 de noviembre de 2026. La evaluación abarca 8 de 10 dimensiones del desempeño energético y entrega una hoja de ruta priorizada para reducir consumos y costos operacionales.
 
-El **puntaje global de desempeño es 2.7/5**, clasificado como **Aceptable**. Cumple lo básico, pero persisten oportunidades de optimización.
+El **puntaje global de desempeño es 2.8/5**, clasificado como **Aceptable**. Cumple lo básico, pero persisten oportunidades de optimización.
+
+Se identificaron **4 hallazgos** y **4 recomendaciones** de mejora. De ellos, 2 hallazgos presentan impacto alto o crítico y deberían abordarse en el corto plazo.
+
+Un total de **4 medidas son de bajo costo** y pueden implementarse principalmente mediante ajustes operacionales, mantención y capacitación, sin comprometer inversiones relevantes.
+
+Las acciones prioritarias sugeridas son: **Implementar un sistema simple de gestión energética**; **Medición y monitoreo de consumos**; **Plan de mantención y limpieza de luminarias**.
 
 Las estimaciones de ahorro incluidas son referenciales, no son aditivas entre sí y deben validarse con mediciones y cotizaciones antes de su implementación.
 
@@ -59,7 +65,7 @@ Las estimaciones de ahorro incluidas son referenciales, no son aditivas entre s�
 
 **Principales usos finales:** Iluminación, Refrigeración y congelación, Climatización y ventilación, Agua caliente sanitaria.
 
-**Observaciones de la empresa:** Tokarau Cabañas, ubicado en Hanga Roa, Valparaíso, corresponde a un establecimiento turístico tipo hostal compuesto por 4 cabañas de aproximadamente 50 m² cada una, con capacidad total para 24 pasajeros y una dotación de 5 trabajadores. La gestión está orientada a la sostenibilidad ambiental, y actual desempeño energético de la instalación resulta de especial importancia, donde se busca permanentemente oportunidades de mejora orientadas a reducir consumos, optimizar costos operacionales y fortalecer la sostenibilidad del servicio turístico.
+**Observaciones de la empresa:** Tokarau Cabañas, ubicado en Hanga Roa, Valparaíso, corresponde a un establecimiento turístico tipo hostal compuesto por 4 cabañas de aproximadamente 50 m² cada una, con capacidad total para 24 personas y una dotación de 5 trabajadores. La gestión está orientada a la sostenibilidad ambiental, y actual desempeño energético de la instalación resulta de especial importancia, donde se busca permanentemente oportunidades de mejora orientadas a reducir consumos, optimizar costos operacionales y fortalecer la sostenibilidad del servicio turístico.
 
 ### 1.3 Equipos y procesos observados
 
@@ -69,35 +75,139 @@ _No se registró un inventario detallado de equipos._
 
 | Dimensión | Puntaje | Clasificación |
 | --- | :---: | --- |
-| Iluminación | 4/5 | Bueno |
+| Iluminación | 3/5 | Aceptable |
 | Refrigeración | 3/5 | Aceptable |
 | Congelación | No evaluado | No evaluado |
-| Climatización y A/C | 2/5 | Deficiente |
+| Climatización y A/C | 3/5 | Aceptable |
 | Agua caliente sanitaria | 3/5 | Aceptable |
 | Cocción | 3/5 | Aceptable |
 | Motores y equipos productivos | No evaluado | No evaluado |
-| Envolvente e infiltraciones | No evaluado | No evaluado |
-| Gestión energética | 1/5 | Crítico |
+| Envolvente e infiltraciones | 2/5 | Deficiente |
+| Gestión energética | 2/5 | Deficiente |
 | Tarifas y potencia | 3/5 | Aceptable |
-| **Puntaje global** | **2.7/5** | **Aceptable** |
+| **Puntaje global** | **2.8/5** | **Aceptable** |
 
-**Fortalezas observadas:** Iluminación (4/5).
+**Brechas prioritarias:** Envolvente e infiltraciones (2/5, deficiente); Gestión energética (2/5, deficiente).
 
-**Brechas prioritarias:** Climatización y A/C (2/5, deficiente); Gestión energética (1/5, crítico).
-
-**Observaciones generales de la visita:** Cuenta paneles 18 paneles fotovoltaicos con batería, para toda la red. Instalados a fines de noviembre. Solari energía.
+**Observaciones generales de la visita:** El establecimiento se encuentra próximo a incorporar un sistema de generación fotovoltaica compuesto por 18 paneles solares, con una potencia nominal estimada entre 10 y 12 kWp, cuya instalación está programada para finales de noviembre por la empresa Solari Energía. Esta iniciativa representa un avance significativo en la incorporación de energías renovables y en la reducción de los costos operacionales asociados al consumo eléctrico. En este contexto, se acuerda realizar un dimensionamiento y evaluación del desempeño energético del sistema, con el objetivo de estimar su aporte a la demanda eléctrica del establecimiento, determinar porcentajes de autoconsumo, identificar oportunidades de optimización y establecer indicadores de seguimiento que permitan evaluar los beneficios económicos y energéticos de la inversión una vez que el sistema entre en operación.
 
 ## 2. Principales falencias detectadas
 
-No se registraron hallazgos en esta visita. Se recomienda mantener el monitoreo y revisar la pauta en la próxima inspección.
+Se identificaron 4 hallazgos. La distribución por impacto es: crítico: 0, alto: 2, medio: 1, bajo: 1.
+
+### Distribución por energético
+
+| Energético | Hallazgos |
+| --- | ---: |
+| Electricidad | 4 |
+
+### Iluminación
+
+#### ILUM-03 · Iluminación sin zonificación ni control de presencia
+
+**Impacto:** Medio · **Energético:** Electricidad · **Categoría:** Iluminación
+
+La iluminación permanece encendida de forma homogénea durante toda la jornada, incluso en sectores sin ocupación como bodegas, baños, vitrinas o áreas de preparación cerradas. No se observan sensores, temporizadores ni circuitos independientes.
+
+**Justificación técnica:** Se recomienda desarrollar un perfil de requerimientos lumínicos que considere niveles de iluminancia, temperatura de color y distribución de la luz acordes a los distintos espacios de uso, con el fin de mejorar el confort visual de los usuarios, favorecer la percepción de calidad de las instalaciones y optimizar el desempeño energético, evitando tanto la sobreiluminación como el subdimensionamiento de los sistemas de iluminación.
+
+**Recomendación asociada:** REC-ILUM-02
+
+#### ILUM-04 · Falta de mantención y limpieza de luminarias
+
+**Impacto:** Bajo · **Energético:** Electricidad · **Categoría:** Iluminación
+
+Se observan luminarias, difusores y pantallas con acumulación de polvo, grasa o insectos, especialmente en cocinas y sectores de atención. Algunas luminarias presentan además parpadeo o baja intensidad.
+
+**Justificación técnica:** Hay limpieza permanente de los espacios, pero se vuelve necesario especificar en políticas de gestión energética la limpieza de luminarias, de forma segura y adecuada para los trabajadores.
+
+**Recomendación asociada:** REC-ILUM-03
+
+### Gestión, tarifas y potencia contratada
+
+#### GEST-01 · Ausencia de un sistema formal de gestión energética
+
+**Impacto:** Alto · **Energético:** Electricidad · **Categoría:** Gestión energética
+
+No existe un responsable designado, una línea base de consumo, indicadores clave ni un procedimiento de revisión periódica. Las acciones energéticas son reactivas y no se documentan.
+
+**Justificación técnica:** Hay nociones básicas de gestión energética pero requiere profesionalización para un buen aprovechamiento técnico y comercial como valor agregado alineado a valores de sostenibilidad.
+
+**Recomendación asociada:** REC-GEST-01
+
+#### GEST-02 · Falta de medición y monitoreo de consumos
+
+**Impacto:** Alto · **Energético:** Electricidad · **Categoría:** Gestión energética
+
+Se dispone solo de la facturación mensual o de remarcadores sin registro sistemático. No se separan consumos por área, proceso o equipo, ni se comparan mes a mes.
+
+**Justificación técnica:** Cuenta con 4 cabañas, además no está dividida del consumo domiciliario
+
+**Recomendación asociada:** REC-GEST-02
 
 ## 3. Recomendaciones de mejora energética
 
-No se seleccionaron recomendaciones para esta visita.
+Las 4 medidas propuestas se ordenan por nivel de inversión. La prioridad considera el impacto potencial, el costo y la facilidad de implementación.
+
+### Bajo costo
+
+#### REC-GEST-01 · Implementar un sistema simple de gestión energética
+
+**Prioridad:** Alta · **Inversión:** Bajo costo · **Complejidad:** Media · **Ahorro estimado:** 5-15% del consumo total · **Plazo:** Mediano plazo (3-6 meses)
+
+Designar un responsable, establecer una línea base de consumo, definir indicadores simples (kWh/mes, costo por venta o por m²) y realizar revisiones mensuales con metas de mejora.
+
+**Beneficio esperado:** Sostiene los ahorros en el tiempo, permite detectar desviaciones y prepara a la empresa para programas como el Sello de Eficiencia Energética.
+
+**Atiende hallazgos:** GEST-01
+
+#### REC-GEST-02 · Medición y monitoreo de consumos
+
+**Prioridad:** Alta · **Inversión:** Bajo costo · **Complejidad:** Media · **Ahorro estimado:** 5-10% del consumo total · **Plazo:** Corto plazo (1-3 meses)
+
+Registrar mensualmente la facturación y, si es posible, instalar remarcadores o medidores por área. Mantener una planilla con consumos, costos, producción y observaciones.
+
+**Beneficio esperado:** Permite verificar el impacto de las medidas, comparar períodos y priorizar nuevas acciones con información confiable.
+
+**Atiende hallazgos:** GEST-02
+
+#### REC-ILUM-03 · Plan de mantención y limpieza de luminarias
+
+**Prioridad:** Media · **Inversión:** Bajo costo · **Complejidad:** Baja · **Ahorro estimado:** 5-15% del consumo de iluminación · **Plazo:** Inmediato (0-30 días)
+
+Establecer una pauta semestral de limpieza de luminarias y difusores, revisión de conexiones y reemplazo de equipos con parpadeo o baja intensidad.
+
+**Beneficio esperado:** Recupera los niveles de iluminación diseñados, evita sobredimensionar la potencia instalada y prolonga la vida útil de los equipos.
+
+**Atiende hallazgos:** ILUM-04
+
+#### REC-ILUM-02 · Zonificación y control automático de iluminación
+
+**Prioridad:** Media · **Inversión:** Bajo costo · **Complejidad:** Baja · **Ahorro estimado:** 10-25% del consumo de iluminación · **Plazo:** Corto plazo (1-3 meses)
+
+Separar circuitos por zona funcional e incorporar sensores de presencia en baños, bodegas y áreas de paso, junto con temporizadores para letreros y fachadas.
+
+**Beneficio esperado:** Reduce las horas de operación innecesarias y evita que la iluminación permanezca encendida en sectores desocupados.
+
+**Atiende hallazgos:** ILUM-03
+
+### Vista por uso final
+
+| Uso final | Recomendaciones | Inversión predominante |
+| --- | --- | --- |
+| Otros usos | Implementar un sistema simple de gestión energética; Medición y monitoreo de consumos | Baja |
+| Iluminación | Plan de mantención y limpieza de luminarias; Zonificación y control automático de iluminación | Baja |
 
 ## 4. Plan de acción sugerido
 
-No hay acciones priorizadas para esta visita.
+El siguiente plan ordena las medidas según horizonte de implementación. Se sugiere revisar los avances en cada visita de seguimiento y ajustar las metas según los resultados medidos.
+
+| Prioridad | Acción | Inversión | Plazo | Ahorro referencial |
+| --- | --- | --- | --- | --- |
+| Media | Plan de mantención y limpieza de luminarias | Bajo costo | Inmediato (0-30 días) | 5-15% del consumo de iluminación |
+| Alta | Medición y monitoreo de consumos | Bajo costo | Corto plazo (1-3 meses) | 5-10% del consumo total |
+| Media | Zonificación y control automático de iluminación | Bajo costo | Corto plazo (1-3 meses) | 10-25% del consumo de iluminación |
+| Alta | Implementar un sistema simple de gestión energética | Bajo costo | Mediano plazo (3-6 meses) | 5-15% del consumo total |
 
 ### Metas y seguimiento recomendado
 
@@ -106,6 +216,10 @@ No hay acciones priorizadas para esta visita.
 - Revisar mensualmente la facturación eléctrica y de combustibles, verificando tarifa, potencia contratada y factor de potencia.
 - Mantener un registro de mantenciones preventivas y de temperaturas de operación de equipos de frío.
 - Documentar las acciones implementadas y sus resultados para consolidar la mejora continua.
+
+### Acuerdos y próximos pasos
+
+- Se acuerda promover el desarrollo de una política de gestión energética integrada al modelo de negocio del establecimiento, orientada a mejorar progresivamente el desempeño energético de las instalaciones y fortalecer la sustentabilidad de la operación. Dicha política deberá implementarse de manera gradual, considerando la realidad operativa, capacidades de inversión y necesidades específicas del emprendimiento, incorporando acciones tales como el monitoreo de consumos, definición de metas de reducción, mantención eficiente de equipos, mejora de la envolvente térmica, optimización de la iluminación y sensibilización de trabajadores y huéspedes. Asimismo, se establece el compromiso de revisar periódicamente los avances alcanzados, priorizando medidas de bajo costo y alto impacto que contribuyan al confort de los usuarios y a la reducción de los costos operacionales asociados al consumo de energía.
 
 **Próxima visita sugerida:** 30 de noviembre de 2026
 
@@ -173,7 +287,7 @@ Los siguientes recursos públicos pueden apoyar la implementación de las medida
 | 3,6 – 4,5 | Bueno |
 | 4,6 – 5,0 | Destacado |
 
-El puntaje global se calcula como el promedio simple de las 7 dimensiones evaluadas. Las secciones con puntaje 0 se excluyen del promedio.
+El puntaje global se calcula como el promedio simple de las 8 dimensiones evaluadas. Las secciones con puntaje 0 se excluyen del promedio.
 
 ### Alcance del diagnóstico
 
@@ -188,7 +302,7 @@ El puntaje global se calcula como el promedio simple de las 7 dimensiones evalua
 - **Asesor:** Consultor Energético
 - **Grado de consumo:** Moderado
 - **Clasificación global:** Aceptable
-- **Generado:** 09-11-2026, 3:45:51 p. m.
+- **Generado:** 10-11-2026, 8:37:11 a. m.
 
 ---
 
