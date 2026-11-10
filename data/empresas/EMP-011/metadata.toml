@@ -1,0 +1,31 @@
+nombre = "Maurea Supermarket"
+rut = ""
+direccion = "Miru sn"
+comuna = "Hanga Roa"
+region = "Valparaíso"
+rubro = "Almacén / minimarket"
+contacto = "Christopher González"
+telefono = "+56942632651"
+correo = "chris.contable@gmail.com"
+trabajadores = 7
+superficie_m2 = 50
+observaciones = "Maurea Supermarket es un minimarket y supermercado local ubicado en Rapa Nui (Isla de Pascua), orientado a la venta minorista de alimentos, bebidas y productos de primera necesidad para residentes y visitantes de la isla. La empresa opera bajo la razón social MAUREA SPA, con actividades comerciales vinculadas principalmente al comercio de alimentos en formato de almacén y minimarket"
+mapa_url = "https://www.google.com/maps/place/Maurea+Supermarket/@-27.1447297,-109.4274293,1003m/data=!3m2!1e3!4b1!4m6!3m5!1s0x9947fb0076b71487:0x84402e596a80bdd1!8m2!3d-27.1447345!4d-109.4248544!16s%2Fg%2F11xmlj72p5?entry=ttu&g_ep=EgoyMDI2MTEwNC4wIKXMDSoASAFQAw%3D%3D"
+latitud = -27.1447297
+longitud = -109.4274293
+schema_version = 1
+id = "EMP-011"
+created_at = "2026-11-10T13:57:28.133Z"
+updated_at = "2026-11-10T14:28:34.843Z"
+
+[sistema_fotovoltaico]
+estado = "planificado"
+proveedor = "n/e"
+paneles = 4
+potencia_kwp = 2
+potencia_kwp_min = 2
+potencia_kwp_max = 2.5
+fecha_instalacion = ""
+tipo_conexion = "hibrido"
+almacenamiento_kwh = 1
+observaciones = "Evaluación de prefactibilidad de suministro energético mediante equipamiento FV híbrido con almacenamiento"

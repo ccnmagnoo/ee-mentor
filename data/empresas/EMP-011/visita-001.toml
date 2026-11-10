@@ -1,0 +1,103 @@
+fecha = "2026-11-10"
+asesor = "Carlos Campos"
+grado_consumo = "moderado"
+descripcion_perfil = ""
+usos_finales = [ "iluminacion", "refrigeracion", "climatizacion", "equipos_productivos", "otros" ]
+equipos = []
+hallazgos = []
+recomendaciones = []
+acuerdos = []
+proxima_visita = ""
+observaciones = ""
+schema_version = 1
+id = "VIS-001"
+empresa_id = "EMP-011"
+created_at = "2026-11-10T14:42:27.918Z"
+updated_at = "2026-11-10T15:08:00.141Z"
+
+[[energeticos]]
+tipo = "electricidad"
+unidad = "kWh/mes"
+costo = 450000
+observacion = "normalizado"
+
+[evaluacion_fotovoltaica]
+consumo_mensual_kwh = 0
+consumo_diurno_pct = 50
+horas_sol_pico = 0
+performance_ratio = 0.8
+generacion_medida_kwh = 0
+autoconsumo_medido_kwh = 0
+excedentes_medidos_kwh = 0
+precio_kwh = 0
+precio_inyeccion_kwh = 0
+factor_co2_kg_kwh = 0.4
+observaciones = ""
+
+[secciones.iluminacion]
+puntaje = 3
+observaciones = ""
+tecnologia = "led"
+estado = "bueno"
+horas_uso_diarias = 12
+
+[secciones.refrigeracion]
+puntaje = 3
+observaciones = "Cuenta con dificultades para realizar mantenimiento, sólo se hace a nivel correctivo. Se hace seguimiento de la temperatura, control de la misma."
+cantidad_equipos = 6
+antiguedad_anios = 2
+mantencion = "correctiva"
+
+[secciones.congelacion]
+puntaje = 3
+observaciones = "4 vidriados y 1 cerrado para hielo."
+cantidad_equipos = 5
+antiguedad_anios = 3
+estado = "bueno"
+
+[secciones.climatizacion]
+puntaje = 3
+observaciones = "Equipo a funcionado de forma normal."
+tecnologia = "Split"
+mantenciones = "ocasional"
+control_temperatura = "manual"
+
+[secciones.acs]
+puntaje = 0
+observaciones = ""
+tecnologia = ""
+fuente_energetica = "electricidad"
+horarios = ""
+
+[secciones.coccion]
+puntaje = 0
+observaciones = ""
+equipos_principales = ""
+combustible = "electricidad"
+
+[secciones.motores]
+puntaje = 0
+observaciones = ""
+tipo = ""
+estado = "no_evaluado"
+mantencion = "no_evaluado"
+
+[secciones.envolvente]
+puntaje = 3
+observaciones = "El establecimiento es relativamente nuevo, cuenta con una envolvente térmica de construcción liviana pero buenas terminaciones, con un cielo falso aislado, y paredes recubiertas con OSB."
+ventanas = "regular"
+puertas = "regular"
+infiltraciones = "bueno"
+aislacion = "bueno"
+
+[secciones.gestion]
+puntaje = 2
+observaciones = "Existe una conciencia del buen uso, sin embargo se hace ahínco en el buen uso de las luminaria, los equipos de refrigeración."
+nivel = "sistematica"
+monitoreo = true
+responsable = "Christopher González"
+
+[secciones.tarifas]
+puntaje = 0
+observaciones = ""
+tarifa_actual = ""

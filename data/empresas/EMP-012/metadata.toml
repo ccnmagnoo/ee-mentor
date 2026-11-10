@@ -1,0 +1,28 @@
+schema_version = 1
+id = "EMP-012"
+nombre = "Vai Tea Aguas"
+rut = ""
+direccion = "Kaituoe, s/n"
+comuna = "Hanga Roa"
+region = "Valparaíso"
+rubro = "Otro"
+contacto = ""
+telefono = ""
+correo = ""
+trabajadores = 0
+superficie_m2 = 0
+observaciones = "Vai Tea Agua Purificada es una micro y pequeña empresa (MiPyME) de Rapa Nui dedicada a la producción y comercialización de agua purificada para el consumo humano. Su actividad contribuye al abastecimiento local de agua de calidad para hogares, comercios, emprendimientos turísticos y servicios de la isla, promoviendo soluciones seguras y sostenibles en un territorio donde los recursos hídricos son especialmente valiosos."
+created_at = "2026-11-10T14:06:07.327Z"
+updated_at = "2026-11-10T14:06:07.327Z"
+
+[sistema_fotovoltaico]
+estado = "no_aplica"
+proveedor = ""
+paneles = 0
+potencia_kwp = 0
+potencia_kwp_min = 0
+potencia_kwp_max = 0
+fecha_instalacion = ""
+tipo_conexion = "no_definido"
+almacenamiento_kwh = 0
+observaciones = ""

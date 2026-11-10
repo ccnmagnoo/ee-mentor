@@ -1,0 +1,102 @@
+schema_version = 1
+id = "VIS-001"
+empresa_id = "EMP-012"
+fecha = "2026-11-10"
+asesor = "Carlos Campos"
+grado_consumo = "moderado"
+descripcion_perfil = "La Empresa desarrolla su actividad en mediante un modelo de producción y distribución de agua purificada que incorpora criterios de eficiencia energética y sostenibilidad ambiental. La empresa utiliza una planta de tratamiento compuesta por sistemas de filtración, además procesos de llenado, tecnologías que permiten optimizar el consumo de agua y energía durante la producción de agua para consumo humano.\r\nDesde una perspectiva energética, destaca el uso de tecnologías limpias y soluciones orientadas a minimizar el impacto ambiental asociado al tratamiento del recurso hídrico. La automatización de los procesos reduce pérdidas operacionales y mejora la eficiencia en el uso de la energía requerida para el acondicionamiento y distribución del agua.\r\nUn elemento relevante de su modelo es la utilización exclusiva de envases retornables, evitando las botellas plásticas de un solo uso. Esta estrategia disminuye la energía incorporada en la fabricación, transporte y disposición final de envases desechables, contribuyendo a la reducción de la huella energética y de carbono del abastecimiento de agua en la isla.\r\nAsimismo, la implementación de puntos de recarga distribuidos en distintos establecimientos de favorece una logística más eficiente, reduciendo la demanda de transporte asociada a la comercialización de agua embotellada convencional y promoviendo patrones de consumo más sostenibles para residentes y visitantes.\r\nEn conjunto, constituye un ejemplo de integración entre gestión hídrica, eficiencia operativa y economía circular en un territorio insular con alta sensibilidad ambiental, aportando a la seguridad del abastecimiento de agua y a la disminución de los impactos energéticos asociados al consumo de agua."
+usos_finales = []
+equipos = []
+hallazgos = []
+recomendaciones = []
+acuerdos = []
+proxima_visita = "2026-12-07"
+observaciones = ""
+created_at = "2026-11-10T15:12:25.882Z"
+updated_at = "2026-11-10T15:12:25.882Z"
+
+[[energeticos]]
+tipo = "electricidad"
+unidad = "kWh/mes"
+observacion = ""
+
+[evaluacion_fotovoltaica]
+consumo_mensual_kwh = 0
+consumo_diurno_pct = 50
+horas_sol_pico = 0
+performance_ratio = 0.8
+generacion_medida_kwh = 0
+autoconsumo_medido_kwh = 0
+excedentes_medidos_kwh = 0
+precio_kwh = 0
+precio_inyeccion_kwh = 0
+factor_co2_kg_kwh = 0.4
+observaciones = ""
+
+[secciones.iluminacion]
+puntaje = 0
+observaciones = ""
+tecnologia = "no_evaluado"
+estado = "no_evaluado"
+horas_uso_diarias = 0
+
+[secciones.refrigeracion]
+puntaje = 0
+observaciones = ""
+cantidad_equipos = 0
+antiguedad_anios = 0
+mantencion = "no_evaluado"
+
+[secciones.congelacion]
+puntaje = 0
+observaciones = ""
+cantidad_equipos = 0
+antiguedad_anios = 0
+estado = "no_evaluado"
+
+[secciones.climatizacion]
+puntaje = 0
+observaciones = ""
+tecnologia = ""
+mantenciones = "no_evaluado"
+control_temperatura = "no_evaluado"
+
+[secciones.acs]
+puntaje = 0
+observaciones = ""
+tecnologia = ""
+fuente_energetica = "electricidad"
+horarios = ""
+
+[secciones.coccion]
+puntaje = 0
+observaciones = ""
+equipos_principales = ""
+combustible = "electricidad"
+
+[secciones.motores]
+puntaje = 0
+observaciones = ""
+tipo = ""
+estado = "no_evaluado"
+mantencion = "no_evaluado"
+
+[secciones.envolvente]
+puntaje = 0
+observaciones = ""
+ventanas = "no_evaluado"
+puertas = "no_evaluado"
+infiltraciones = "no_evaluado"
+aislacion = "no_evaluado"
+
+[secciones.gestion]
+puntaje = 0
+observaciones = ""
+nivel = "no_evaluado"
+monitoreo = false
+responsable = ""
+
+[secciones.tarifas]
+puntaje = 0
+observaciones = ""
+tarifa_actual = ""
