@@ -11,9 +11,9 @@ comuna: Hanga Roa
 region: Valparaíso
 rubro: Almacén / minimarket
 version: 1
-generado: 2026-11-10T13:01:55.213Z
-puntaje_global: null
-clasificacion: No evaluado
+generado: 2026-11-10T18:21:06.086Z
+puntaje_global: 2
+clasificacion: Deficiente
 hallazgos: 0
 recomendaciones: 0
 tags:
@@ -23,12 +23,18 @@ latitud: -27.1534956
 longitud: -109.4172031
 mapa_url: https://www.google.com/maps/place/Minimarket+Kaituoe/@-27.1534956,-109.4172031,316m/data=!3m1!1e3!4m6!3m5!1s0x9947fb047109f835:0x1fb2abfe75bd1fed!8m2!3d-27.1534923!4d-109.4166981!16s%2Fg%2F11fcrg2f6_?entry=tts&g_ep=EgoyMDI2MTEwMS4wIOC7DCoASAFQAw%3D%3D&skid=b366f417-2ae7-4f61-ad3d-0de7ddf5f59d
 fotovoltaica:
-  estado: planificado
-  proveedor: Solari Energía
+  estado: en_evaluacion
+  proveedor: n/e
   paneles: 18
-  potencia_kwp: 11
-  potencia_kwp_min: 10
+  potencia_kwp: 10
+  potencia_kwp_min: 6
   potencia_kwp_max: 12
+  generacion_kwh_mes: 1125
+  generacion_medida: false
+  autoconsumo_pct: 100
+  cobertura_demanda_pct: 17.7
+  ahorro_mensual_clp: 538470
+  co2_evitado_kg_mes: 450
 ---
 
 # Informe Técnico de Eficiencia Energética
@@ -45,7 +51,11 @@ Rubro: Almacén / minimarket · Comuna: Hanga Roa · Región: Valparaíso · Sup
 
 ## Resumen ejecutivo
 
-El presente informe resume el diagnóstico energético realizado a **Mini Market Kaitoue** el 03 de noviembre de 2026. La evaluación abarca 0 de 10 dimensiones del desempeño energético y entrega una hoja de ruta priorizada para reducir consumos y costos operacionales.
+El presente informe resume el diagnóstico energético realizado a **Mini Market Kaitoue** el 03 de noviembre de 2026. La evaluación abarca 2 de 10 dimensiones del desempeño energético y entrega una hoja de ruta priorizada para reducir consumos y costos operacionales.
+
+El **puntaje global de desempeño es 2.0/5**, clasificado como **Deficiente**. El desempeño está por debajo de lo esperado; se recomienda un plan de mejora.
+
+El establecimiento proyecta incorporar un sistema fotovoltaico de 6–12 kWp. La estimación de generación de **1.125 kWh/mes** cubriría aproximadamente el **17.7%** de la demanda eléctrica mensual, con un autoconsumo del **100.0%**.
 
 Las estimaciones de ahorro incluidas son referenciales, no son aditivas entre sí y deben validarse con mediciones y cotizaciones antes de su implementación.
 
@@ -54,18 +64,13 @@ Las estimaciones de ahorro incluidas son referenciales, no son aditivas entre s�
 ### 1.1 Contexto del negocio
 
 Mini Market Kaitoue corresponde a un establecimiento comercial dedicado a la venta de abarrotes, artículos de aseo, bebidas, cigarros y productos congelados, incluyendo carnes y hamburguesas. La empresa mantiene su inicio de actividades formalizado ante el Servicio de Impuestos Internos (SII) y cuenta con sus patentes comerciales vigentes.
-Para el desarrollo de sus operaciones dispone de una importante infraestructura de refrigeración, compuesta por cuatro congeladores, seis equipos tipo VC Cooler y dos vitrinas refrigeradas destinadas a la conservación y exhibición de helados y productos cárnicos. Adicionalmente, cuenta con dos contenedores utilizados para almacenamiento de mercaderías e insumos.
+Para el desarrollo de sus operaciones dispone de una importante infraestructura de refrigeración, compuesta por cuatro congeladores, seis equipos tipo visi cooler y dos vitrinas refrigeradas destinadas a la conservación y exhibición de helados y productos cárnicos. Adicionalmente, cuenta con dos contenedores utilizados para almacenamiento de mercaderías e insumos.
 Respecto de sus instalaciones eléctricas, la empresa ha realizado de manera constante trabajos de mantenimiento y mejoras parciales. Si bien estas intervenciones presentan una calidad evaluada como regular, las instalaciones se mantienen operativas y funcionales para las necesidades actuales del establecimiento.
 Uno de los principales desafíos identificados corresponde a las dificultades logísticas asociadas al abastecimiento de productos en la isla. En este contexto, la empresa señala haber experimentado pérdidas cercanas a los $50 millones debido al vencimiento de mercaderías provocado por retrasos en el transporte marítimo.
-
-En materia de eficiencia energética y sostenibilidad, el establecimiento se encuentra próximo a incorporar un sistema fotovoltaico de 18 paneles solares, con una potencia nominal estimada entre 10 y 12 kWp, a cargo de Solari Energía, cuya instalación está programada para finales de noviembre de 2026. La iniciativa contribuirá a disminuir el consumo de energía proveniente de la red eléctrica y a reducir los costos operacionales.
-
-Asimismo, se observa la implementación de diversas buenas prácticas de gestión energética. El establecimiento cuenta con iluminación LED en la totalidad de sus dependencias y realiza mantenimiento preventivo periódico de los equipos de refrigeración. Estas labores son coordinadas con un especialista de la Armada, proveedor de confianza para la empresa, lo que permite asegurar la continuidad operativa y el adecuado funcionamiento de los sistemas.
-
+Asimismo, se observa la implementación de diversas buenas prácticas de gestión energética. 
+El establecimiento cuenta con iluminación LED en la totalidad de sus dependencias y realiza mantenimiento preventivo periódico de los equipos de refrigeración. Estas labores son coordinadas con un especialista de la Armada, proveedor de confianza para la empresa, lo que permite asegurar la continuidad operativa y el adecuado funcionamiento de los sistemas.
 El local dispone además de dos equipos de aire acondicionado, cuyo uso varía según las condiciones climáticas y los requerimientos de confort térmico del recinto. En relación con la cultura energética, existe conocimiento básico sobre el uso eficiente de la energía entre los trabajadores. Durante la jornada nocturna se procura desconectar aquellos equipos considerados no críticos, aunque una parte importante del equipamiento de refrigeración debe mantenerse en funcionamiento continuo para garantizar la conservación de los productos comercializados.
-
-En términos generales, la empresa evidencia interés por mejorar su desempeño energético mediante la incorporación de tecnologías más eficientes y la adopción de medidas de mantenimiento preventivo, existiendo oportunidades de mejora asociadas a la gestión integral de los consumos eléctricos y al fortalecimiento de las prácticas de eficiencia energética. 
-Ubicación https://maps.app.goo.gl/NfASY1sig6rwK5uo9
+En términos generales, la empresa evidencia interés por mejorar su desempeño energético mediante la incorporación de tecnologías más eficientes y la adopción de medidas de mantenimiento preventivo, existiendo oportunidades de mejora asociadas a la gestión integral de los consumos eléctricos y al fortalecimiento de las prácticas de eficiencia energética.
 
 ### 1.2 Energéticos utilizados
 
@@ -75,18 +80,23 @@ Ubicación https://maps.app.goo.gl/NfASY1sig6rwK5uo9
 
 **Principales usos finales:** Iluminación, Refrigeración y congelación, Climatización y ventilación.
 
-**Observaciones de la empresa:** Tiene inicio de actividades en el servicio de SII y patentes al día. Venta de abarrotes, artículos de aseo, líquidos, cigarros, venta de congelados carne, hamburguesas, 4 congeladores, 6 vc cooler. Cuenta con 2 contenedores para almacenamiento. Constantemente a realizado mantenimiento e instalaciones eléctricos, son en términos parciales y aprecia que es de una calidad regular, se mantiene funcional. Tiene dificultades logística de suministro , se menciona perdidas $50 millones por vencimiento en buque. Se encuentra en proceso de incorporación un sistema fotovoltaico de 18 paneles, con potencia nominal estimada entre 10 y 12 kWp, a cargo de Solari Energía, cuya instalación está programada para finales de noviembre de 2026. Tiene instalado led en todo el establecimiento, realiza mantenimiento preventivo de los equipos de frío, coordina con especialista de la Armada para mantenimiento, por confianza y certezas del servicio.
+**Observaciones de la empresa:** Tiene inicio de actividades en el servicio de SII y patentes al día. Venta de abarrotes, artículos de aseo, líquidos, cigarros, venta de congelados carne, hamburguesas, 4 congeladores, 6 visi cooler. Cuenta con 2 contenedores para almacenamiento. Constantemente a realizado mantenimiento e instalaciones eléctricos, son en términos parciales y aprecia que es de una calidad regular, se mantiene funcional. Tiene dificultades logística de suministro , se menciona perdidas $50 millones por vencimiento en buque. Tiene instalado led en todo el establecimiento, realiza mantenimiento preventivo de los equipos de frío, coordina con especialista de la Armada para mantenimiento, por confianza y certezas del servicio.
 
 ### 1.3 Equipos y procesos observados
 
-_No se registró un inventario detallado de equipos._
+| Equipo | Cantidad | Potencia | Uso diario | Estado | Observación |
+| --- | ---: | ---: | ---: | --- | --- |
+| visi cooler doble puerta | 6 | 600 W | 24 h/día | regular | para bebidas y frutas |
+| vitrinas refrigeradas | 2 | 700 W | 24 h/día | regular | almacenamiento y exposición |
+| congeladores | 4 | 250 W | 24 h/día | bueno | pescados, carnes y frutas y verduras |
+| luminarias led | 10 | 9 W | 12 h/día | bueno | luz blanca, sin especificación de iluminancia |
 
 ### 1.4 Evaluación energética global
 
 | Dimensión | Puntaje | Clasificación |
 | --- | :---: | --- |
-| Iluminación | No evaluado | No evaluado |
-| Refrigeración | No evaluado | No evaluado |
+| Iluminación | 2/5 | Deficiente |
+| Refrigeración | 2/5 | Deficiente |
 | Congelación | No evaluado | No evaluado |
 | Climatización y A/C | No evaluado | No evaluado |
 | Agua caliente sanitaria | No evaluado | No evaluado |
@@ -95,30 +105,61 @@ _No se registró un inventario detallado de equipos._
 | Envolvente e infiltraciones | No evaluado | No evaluado |
 | Gestión energética | No evaluado | No evaluado |
 | Tarifas y potencia | No evaluado | No evaluado |
-| **Puntaje global** | **No evaluado** | **No evaluado** |
+| **Puntaje global** | **2.0/5** | **Deficiente** |
+
+**Brechas prioritarias:** Iluminación (2/5, deficiente); Refrigeración (2/5, deficiente).
 
 ### 1.5 Análisis de energías renovables
 
 #### Estado actual
 
-El establecimiento cuenta con un proyecto fotovoltaico en estado **planificado**: 18 paneles · 10–12 kWp · instalador Solari Energía · fecha de instalación 30 de noviembre de 2026 · conexión autoconsumo.
+El establecimiento cuenta con un proyecto fotovoltaico en estado **evaluación**: 18 paneles · 6–12 kWp · instalador n/e · conexión híbrido con almacenamiento.
 
-Instalación programada para finales de noviembre de 2026.
+Propuesta para pre valuación económica y de impacto en el modelo de negocio
 
 #### Evaluación del sistema fotovoltaico
 
-No se registraron los parámetros mínimos para estimar la generación y el aporte a la demanda. Completa la evaluación fotovoltaica de la visita para generar los indicadores.
+Los indicadores son estimaciones referenciales calculadas con los supuestos indicados. Deben validarse con mediciones y facturación antes de su uso contractual.
+
+##### Supuestos de la evaluación
+
+| Parámetro | Valor |
+| --- | ---: |
+| Consumo mensual | 6.550 kWh/mes |
+| Consumo diurno | 60% |
+| Horas de sol pico | 5 h/día |
+| Performance ratio | 0.75 |
+| Precio energía | $465/kWh |
+| Precio inyección | $0/kWh |
+| Factor CO₂ | 0,4 kg/kWh |
+
+##### Indicadores de desempeño
+
+| Indicador | Resultado |
+| --- | ---: |
+| Potencia considerada | 10 kWp (rango 6–12 kWp) |
+| Generación estimada | 1.125 kWh/mes |
+| Generación anual | 13.500 kWh/año |
+| Rango estimado | 675 kWh/mes – 1.350 kWh/mes |
+| Autoconsumo | 1.158 kWh/mes (100.0%) |
+| Cobertura demanda total | 17.7% |
+| Cobertura demanda diurna | 29.5% |
+| Excedentes | 0 kWh/mes |
+| Ahorro estimado | $538.470/mes · $6.461.640/año |
+| CO₂ evitado | 450 kg/mes |
+| Rendimiento específico | 112,5 kWh/kWp/mes |
 
 #### Oportunidades de optimización y seguimiento
 
-- Realizar una prefactibilidad de energías renovables para el establecimiento, considerando consumo eléctrico, superficie disponible y usos finales.
+- Evaluar una ampliación del sistema o una segunda etapa si la superficie disponible y la curva de consumo lo permiten.
 
 #### Indicadores de seguimiento
 
-- Registrar el avance de las medidas ERNC identificadas y las cotizaciones recibidas.
-- Medir el consumo y la generación antes y después de la implementación.
-- Documentar supuestos, costos de inversión y ahorros verificados.
-- Revisar los requisitos normativos y de conexión aplicables antes de la instalación.
+- Registrar mensualmente la generación del sistema y, si aplica, la energía inyectada a la red.
+- Comparar la generación medida con la estimada y analizar desviaciones superiores al 10%.
+- Medir el consumo total y el consumo diurno para recalcular autoconsumo y cobertura.
+- Revisar el performance ratio y la disponibilidad del sistema, incluyendo limpieza y mantenciones.
+- Actualizar el ahorro económico y el CO₂ evitado con los precios y factores vigentes.
 
 ## 2. Principales falencias detectadas
 
@@ -206,7 +247,7 @@ Los siguientes recursos públicos pueden apoyar la implementación de las medida
 | 3,6 – 4,5 | Bueno |
 | 4,6 – 5,0 | Destacado |
 
-El puntaje global se calcula como el promedio simple de las 0 dimensiones evaluadas. Las secciones con puntaje 0 se excluyen del promedio.
+El puntaje global se calcula como el promedio simple de las 2 dimensiones evaluadas. Las secciones con puntaje 0 se excluyen del promedio.
 
 ### Alcance del diagnóstico
 
@@ -220,8 +261,8 @@ El puntaje global se calcula como el promedio simple de las 0 dimensiones evalua
 - **Fecha:** 03 de noviembre de 2026
 - **Asesor:** Carlos Campos
 - **Grado de consumo:** Relevante
-- **Clasificación global:** No evaluado
-- **Generado:** 10-11-2026, 10:01:55 a. m.
+- **Clasificación global:** Deficiente
+- **Generado:** 10-11-2026, 3:21:06 p. m.
 
 ---
 
