@@ -1,23 +1,62 @@
-schema_version = 1
-id = "VIS-001"
-empresa_id = "EMP-012"
 fecha = "2026-11-10"
 asesor = "Carlos Campos"
 grado_consumo = "moderado"
 descripcion_perfil = "La Empresa desarrolla su actividad en mediante un modelo de producción y distribución de agua purificada que incorpora criterios de eficiencia energética y sostenibilidad ambiental. La empresa utiliza una planta de tratamiento compuesta por sistemas de filtración, además procesos de llenado, tecnologías que permiten optimizar el consumo de agua y energía durante la producción de agua para consumo humano.\r\nDesde una perspectiva energética, destaca el uso de tecnologías limpias y soluciones orientadas a minimizar el impacto ambiental asociado al tratamiento del recurso hídrico. La automatización de los procesos reduce pérdidas operacionales y mejora la eficiencia en el uso de la energía requerida para el acondicionamiento y distribución del agua.\r\nUn elemento relevante de su modelo es la utilización exclusiva de envases retornables, evitando las botellas plásticas de un solo uso. Esta estrategia disminuye la energía incorporada en la fabricación, transporte y disposición final de envases desechables, contribuyendo a la reducción de la huella energética y de carbono del abastecimiento de agua en la isla.\r\nAsimismo, la implementación de puntos de recarga distribuidos en distintos establecimientos de favorece una logística más eficiente, reduciendo la demanda de transporte asociada a la comercialización de agua embotellada convencional y promoviendo patrones de consumo más sostenibles para residentes y visitantes.\r\nEn conjunto, constituye un ejemplo de integración entre gestión hídrica, eficiencia operativa y economía circular en un territorio insular con alta sensibilidad ambiental, aportando a la seguridad del abastecimiento de agua y a la disminución de los impactos energéticos asociados al consumo de agua."
-usos_finales = []
-equipos = []
+usos_finales = [ "iluminacion", "refrigeracion", "acs", "fuerza_motriz", "equipos_productivos", "otros" ]
 hallazgos = []
 recomendaciones = []
 acuerdos = []
 proxima_visita = "2026-12-07"
 observaciones = ""
+schema_version = 1
+id = "VIS-001"
+empresa_id = "EMP-012"
 created_at = "2026-11-10T15:12:25.882Z"
-updated_at = "2026-11-10T15:12:25.882Z"
+updated_at = "2026-11-10T15:39:53.668Z"
 
 [[energeticos]]
 tipo = "electricidad"
+consumo = 775
 unidad = "kWh/mes"
+costo = 439000
+observacion = ""
+
+[[energeticos]]
+tipo = "diesel"
+consumo = 180
+unidad = "lt/mes"
+costo = 80000
+observacion = "para transporte a clientes"
+
+[[equipos]]
+nombre = "Llenadora"
+cantidad = 2
+potencia_w = 750
+horas_dia = 8
+estado = "bueno"
+observacion = "en tandem"
+
+[[equipos]]
+nombre = "Filtradora"
+cantidad = 1
+potencia_w = 750
+horas_dia = 8
+estado = "bueno"
+observacion = ""
+
+[[equipos]]
+nombre = "Osmosis inversa"
+cantidad = 1
+potencia_w = 750
+horas_dia = 8
+estado = "bueno"
+observacion = "1 bar"
+
+[[equipos]]
+nombre = "Camión"
+cantidad = 1
+horas_dia = 8
+estado = "bueno"
 observacion = ""
 
 [evaluacion_fotovoltaica]
@@ -34,18 +73,18 @@ factor_co2_kg_kwh = 0.4
 observaciones = ""
 
 [secciones.iluminacion]
-puntaje = 0
+puntaje = 3
 observaciones = ""
-tecnologia = "no_evaluado"
-estado = "no_evaluado"
-horas_uso_diarias = 0
+tecnologia = "led"
+estado = "regular"
+horas_uso_diarias = 8
 
 [secciones.refrigeracion]
-puntaje = 0
+puntaje = 3
 observaciones = ""
-cantidad_equipos = 0
-antiguedad_anios = 0
-mantencion = "no_evaluado"
+cantidad_equipos = 1
+antiguedad_anios = 6
+mantencion = "sin_mantencion"
 
 [secciones.congelacion]
 puntaje = 0
@@ -75,14 +114,14 @@ equipos_principales = ""
 combustible = "electricidad"
 
 [secciones.motores]
-puntaje = 0
+puntaje = 4
 observaciones = ""
 tipo = ""
 estado = "no_evaluado"
 mantencion = "no_evaluado"
 
 [secciones.envolvente]
-puntaje = 0
+puntaje = 3
 observaciones = ""
 ventanas = "no_evaluado"
 puertas = "no_evaluado"
@@ -90,11 +129,11 @@ infiltraciones = "no_evaluado"
 aislacion = "no_evaluado"
 
 [secciones.gestion]
-puntaje = 0
-observaciones = ""
-nivel = "no_evaluado"
-monitoreo = false
-responsable = ""
+puntaje = 1
+observaciones = "Existe un monitoreo básico de los consumo, guardando las boletas."
+nivel = "basica"
+monitoreo = true
+responsable = "Tipanie Tepano"
 
 [secciones.tarifas]
 puntaje = 0

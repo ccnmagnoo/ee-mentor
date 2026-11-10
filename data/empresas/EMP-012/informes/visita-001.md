@@ -11,9 +11,9 @@ comuna: Hanga Roa
 region: Valparaíso
 rubro: Otro
 version: 1
-generado: 2026-11-10T15:12:25.927Z
-puntaje_global: null
-clasificacion: No evaluado
+generado: 2026-11-10T15:39:53.749Z
+puntaje_global: 2.8
+clasificacion: Aceptable
 hallazgos: 0
 recomendaciones: 0
 tags:
@@ -33,7 +33,9 @@ Rubro: Otro · Comuna: Hanga Roa · Región: Valparaíso
 
 ## Resumen ejecutivo
 
-El presente informe resume el diagnóstico energético realizado a **Vai Tea Aguas** el 10 de noviembre de 2026. La evaluación abarca 0 de 10 dimensiones del desempeño energético y entrega una hoja de ruta priorizada para reducir consumos y costos operacionales.
+El presente informe resume el diagnóstico energético realizado a **Vai Tea Aguas** el 10 de noviembre de 2026. La evaluación abarca 5 de 10 dimensiones del desempeño energético y entrega una hoja de ruta priorizada para reducir consumos y costos operacionales.
+
+El **puntaje global de desempeño es 2.8/5**, clasificado como **Aceptable**. Cumple lo básico, pero persisten oportunidades de optimización.
 
 Las estimaciones de ahorro incluidas son referenciales, no son aditivas entre sí y deben validarse con mediciones y cotizaciones antes de su implementación.
 
@@ -51,29 +53,41 @@ En conjunto, constituye un ejemplo de integración entre gestión hídrica, efic
 
 | Energético | Consumo declarado | Costo mensual | Observación |
 | --- | ---: | ---: | --- |
-| Electricidad | No informado | — | — |
+| Electricidad | 775 kWh/mes | $439.000 | — |
+| Diésel | 180 lt/mes | $80.000 | para transporte a clientes |
+
+**Principales usos finales:** Iluminación, Refrigeración y congelación, Agua caliente sanitaria, Fuerza motriz, Equipos productivos, Otros usos.
 
 **Observaciones de la empresa:** Vai Tea Agua Purificada es una micro y pequeña empresa (MiPyME) de Rapa Nui dedicada a la producción y comercialización de agua purificada para el consumo humano. Su actividad contribuye al abastecimiento local de agua de calidad para hogares, comercios, emprendimientos turísticos y servicios de la isla, promoviendo soluciones seguras y sostenibles en un territorio donde los recursos hídricos son especialmente valiosos.
 
 ### 1.3 Equipos y procesos observados
 
-_No se registró un inventario detallado de equipos._
+| Equipo | Cantidad | Potencia | Uso diario | Estado | Observación |
+| --- | ---: | ---: | ---: | --- | --- |
+| Llenadora | 2 | 750 W | 8 h/día | bueno | en tandem |
+| Filtradora | 1 | 750 W | 8 h/día | bueno | — |
+| Osmosis inversa | 1 | 750 W | 8 h/día | bueno | 1 bar |
+| Camión | 1 | — | 8 h/día | bueno | — |
 
 ### 1.4 Evaluación energética global
 
 | Dimensión | Puntaje | Clasificación |
 | --- | :---: | --- |
-| Iluminación | No evaluado | No evaluado |
-| Refrigeración | No evaluado | No evaluado |
+| Iluminación | 3/5 | Aceptable |
+| Refrigeración | 3/5 | Aceptable |
 | Congelación | No evaluado | No evaluado |
 | Climatización y A/C | No evaluado | No evaluado |
 | Agua caliente sanitaria | No evaluado | No evaluado |
 | Cocción | No evaluado | No evaluado |
-| Motores y equipos productivos | No evaluado | No evaluado |
-| Envolvente e infiltraciones | No evaluado | No evaluado |
-| Gestión energética | No evaluado | No evaluado |
+| Motores y equipos productivos | 4/5 | Bueno |
+| Envolvente e infiltraciones | 3/5 | Aceptable |
+| Gestión energética | 1/5 | Crítico |
 | Tarifas y potencia | No evaluado | No evaluado |
-| **Puntaje global** | **No evaluado** | **No evaluado** |
+| **Puntaje global** | **2.8/5** | **Aceptable** |
+
+**Fortalezas observadas:** Motores y equipos productivos (4/5).
+
+**Brechas prioritarias:** Gestión energética (1/5, crítico).
 
 ## 2. Principales falencias detectadas
 
@@ -161,7 +175,7 @@ Los siguientes recursos públicos pueden apoyar la implementación de las medida
 | 3,6 – 4,5 | Bueno |
 | 4,6 – 5,0 | Destacado |
 
-El puntaje global se calcula como el promedio simple de las 0 dimensiones evaluadas. Las secciones con puntaje 0 se excluyen del promedio.
+El puntaje global se calcula como el promedio simple de las 5 dimensiones evaluadas. Las secciones con puntaje 0 se excluyen del promedio.
 
 ### Alcance del diagnóstico
 
@@ -175,8 +189,8 @@ El puntaje global se calcula como el promedio simple de las 0 dimensiones evalua
 - **Fecha:** 10 de noviembre de 2026
 - **Asesor:** Carlos Campos
 - **Grado de consumo:** Moderado
-- **Clasificación global:** No evaluado
-- **Generado:** 10-11-2026, 12:12:25 p. m.
+- **Clasificación global:** Aceptable
+- **Generado:** 10-11-2026, 12:39:53 p. m.
 
 ---
 

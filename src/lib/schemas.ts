@@ -188,6 +188,7 @@ export const CONTROL_TEMPERATURA_ENUM = z.enum(
 );
 
 export const ESTADOS_SISTEMA_FV = {
+  en_evaluacion:'Evaluación',
   planificado: 'Planificado',
   en_instalacion: 'En instalación',
   operativo: 'Operativo',
