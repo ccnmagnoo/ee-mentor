@@ -129,6 +129,7 @@ export const RUBROS = [
   'Taller',
   'Pequeña fábrica de alimentos',
   'Comercio minorista',
+  'Cabañas',
   'Otro',
 ] as const;
 
