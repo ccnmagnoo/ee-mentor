@@ -6,11 +6,11 @@ Todo el contenido vive en archivos locales (TOML + Markdown), sin base de datos 
 
 ## Funcionalidades
 
-- **Empresas**: ficha con RUT, rubro, ubicación, georreferenciación (enlace de mapa y coordenadas), contacto, superficie, trabajadores y observaciones.
-- **Visitas**: perfil energético, energéticos y costos, equipos, 10 secciones evaluadas de 0 a 5, hallazgos con evidencia, recomendaciones, acuerdos y próxima visita.
+- **Empresas**: ficha con RUT, rubro, ubicación, georreferenciación (enlace de mapa y coordenadas), sistema fotovoltaico, contacto, superficie, trabajadores y observaciones.
+- **Visitas**: perfil energético, energéticos y costos, equipos, evaluación fotovoltaica, 10 secciones evaluadas de 0 a 5, hallazgos con evidencia, recomendaciones, acuerdos y próxima visita.
 - **Puntajes**: promedio por sección y global con clasificación automática:
   - `0 – 1,5` Crítico · `1,6 – 2,5` Deficiente · `2,6 – 3,5` Aceptable · `3,6 – 4,5` Bueno · `4,6 – 5` Destacado
-- **Informe automático** en Markdown con frontmatter YAML: perfil, evaluación, hallazgos agrupados, recomendaciones por costo, plan de acción, recursos y anexos.
+- **Informe automático** en Markdown con frontmatter YAML: perfil, evaluación, análisis de energías renovables, hallazgos agrupados, recomendaciones por costo, plan de acción, recursos y anexos.
 - **Catálogos editables** de hallazgos, recomendaciones y recursos, con impacto, inversión, dificultad, prioridad, ahorro estimado y plazo. Los recursos de apoyo se crean y editan en `/catalogos?tab=recursos`; solo los activos se incluyen en los informes.
 - **Biblioteca de conocimiento**: importa los casos históricos en HTML, extrae hallazgos/recomendaciones, redacta datos personales y genera candidatos revisables que se aprueban hacia el catálogo.
 - **Dashboard** con cartera, actividad mensual, rubros y hallazgos/recomendaciones más frecuentes.
@@ -113,13 +113,41 @@ trabajadores = 5
 superficie_m2 = 72
 created_at = "2026-06-10T10:00:00.000Z"
 updated_at = "2026-06-10T10:00:00.000Z"
+
+[sistema_fotovoltaico]
+estado = "planificado"
+proveedor = "Solari Energía"
+paneles = 18
+potencia_kwp = 11
+potencia_kwp_min = 10
+potencia_kwp_max = 12
+fecha_instalacion = "2026-11-30"
+tipo_conexion = "autoconsumo"
+almacenamiento_kwh = 0
+observaciones = "Instalación programada para finales de noviembre de 2026."
 ```
 
 `mapa_url`, `latitud` y `longitud` son opcionales. Las coordenadas se expresan en grados decimales (WGS84) y se validan entre -90/90 y -180/180. Si solo se registran coordenadas, la aplicación genera un enlace a Google Maps; ambos datos quedan disponibles en el frontmatter del informe para georreferenciación posterior. Al pegar un enlace de Google Maps que contenga coordenadas (`@lat,lng`, `?q=lat,lng` o `!3d…!4d…`), el formulario completa latitud y longitud si están vacías.
 
 ### Visita — `data/empresas/EMP-001/visita-001.toml`
 
-Incluye `fecha`, `asesor`, `grado_consumo`, `descripcion_perfil`, `energeticos[]`, `usos_finales[]`, `equipos[]`, `secciones` (con `puntaje`, `observaciones` y atributos propios de cada dimensión), `hallazgos[]`, `recomendaciones[]`, `acuerdos[]` y `proxima_visita`.
+Incluye `fecha`, `asesor`, `grado_consumo`, `descripcion_perfil`, `energeticos[]`, `usos_finales[]`, `equipos[]`, `evaluacion_fotovoltaica`, `secciones` (con `puntaje`, `observaciones` y atributos propios de cada dimensión), `hallazgos[]`, `recomendaciones[]`, `acuerdos[]` y `proxima_visita`.
+
+```toml
+[evaluacion_fotovoltaica]
+consumo_mensual_kwh = 6550
+consumo_diurno_pct = 50
+horas_sol_pico = 5.0
+performance_ratio = 0.8
+generacion_medida_kwh = 0
+autoconsumo_medido_kwh = 0
+excedentes_medidos_kwh = 0
+precio_kwh = 458
+precio_inyeccion_kwh = 0
+factor_co2_kg_kwh = 0.4
+```
+
+Si `consumo_mensual_kwh` o `precio_kwh` se dejan en `0`, la evaluación usa el consumo y el costo del energético electricidad de la visita.
 
 ### Informe — `data/empresas/EMP-001/informes/visita-001.md`
 
@@ -132,6 +160,19 @@ Cada ítem tiene `codigo`, `titulo`, `categoria`, `descripcion`, `activo`, `orig
 Al crear un hallazgo, la recomendación vinculada se sugiere y preselecciona combinando el tipo de uso tecnológico (`categoria`) y el energético; solo se autoselecciona cuando coincide el uso tecnológico. En edición se conserva el vínculo existente y el botón **Usar sugerida** permite aplicar la nueva sugerencia.
 
 En el formulario de recomendaciones, los hallazgos relacionados se eligen con un selector de búsqueda múltiple. Se sugieren y preseleccionan los hallazgos del mismo tipo de uso tecnológico, ordenados por coincidencia de energético; en edición se respeta la selección guardada y el botón **Usar sugeridos** aplica la sugerencia.
+
+## Análisis de energías renovables
+
+La ficha de empresa puede registrar un sistema fotovoltaico planificado u operativo. La visita captura los supuestos y, cuando existan, los datos medidos. La evaluación fotovoltaica se calcula con:
+
+- Generación estimada: `potencia_kwp × horas_sol_pico × 30 × performance_ratio`.
+- Generación mínima y máxima usando el rango de potencia.
+- Autoconsumo: dato medido o `min(generación, consumo_diurno)`.
+- Cobertura de la demanda total y de la demanda diurna.
+- Excedentes, ahorro económico y CO₂ evitado.
+- Performance ratio medido y rendimiento específico.
+
+La sección **1.5 Análisis de energías renovables** del informe aparece cuando existe un sistema fotovoltaico registrado o cuando la visita incluye hallazgos o recomendaciones de la categoría ERNC. En ese caso reúne el estado actual, la evaluación fotovoltaica, las oportunidades ERNC seleccionadas en el catálogo y los indicadores de seguimiento. Los resultados son referenciales y el informe muestra los supuestos utilizados.
 
 ## Biblioteca de conocimiento
 

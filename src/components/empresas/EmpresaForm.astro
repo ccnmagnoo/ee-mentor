@@ -2,7 +2,11 @@
 import Icon from '@/components/ui/Icon.astro';
 import { REGION_DEFAULT } from '@/lib/config';
 import type { Empresa } from '@/lib/schemas';
-import { RUBROS } from '@/lib/schemas';
+import {
+  ESTADOS_SISTEMA_FV,
+  RUBROS,
+  TIPOS_CONEXION_FV,
+} from '@/lib/schemas';
 import { urlMapa } from '@/lib/ubicacion';
 
 interface Props {
@@ -13,6 +17,7 @@ interface Props {
 }
 const { action, empresa = null, submitLabel = 'Guardar empresa', cancelHref = '/empresas' } = Astro.props;
 const mapaActual = empresa ? urlMapa(empresa) : null;
+const fv = empresa?.sistema_fotovoltaico;
 ---
 
 <form action={action} method="post" data-api class="space-y-5">
@@ -155,6 +160,72 @@ const mapaActual = empresa ? urlMapa(empresa) : null;
       <div class="sm:col-span-2">
         <label class="label" for="observaciones">Observaciones generales</label>
         <textarea id="observaciones" name="observaciones" rows="3" class="input" placeholder="Horarios, particularidades de la operación, antecedentes relevantes…">{empresa?.observaciones ?? ''}</textarea>
+      </div>
+    </div>
+  </section>
+
+  <section class="card overflow-hidden">
+    <div class="section-heading">
+      <span class="step-number">3</span>
+      <div>
+        <h2 class="fieldset-title">Sistema fotovoltaico</h2>
+        <p class="text-xs text-slate-500">Datos del proyecto o instalación para dimensionar y evaluar su aporte energético.</p>
+      </div>
+    </div>
+    <div class="grid gap-4 p-5 sm:grid-cols-2 sm:p-6">
+      <div>
+        <label class="label" for="fv_estado">Estado</label>
+        <select id="fv_estado" name="sistema_fotovoltaico.estado" class="input">
+          {Object.entries(ESTADOS_SISTEMA_FV).map(([key, label]) => (
+            <option value={key} selected={(fv?.estado ?? 'no_aplica') === key}>{label}</option>
+          ))}
+        </select>
+      </div>
+      <div>
+        <label class="label" for="fv_proveedor">Proveedor / instalador</label>
+        <input id="fv_proveedor" name="sistema_fotovoltaico.proveedor" class="input" value={fv?.proveedor ?? ''} placeholder="Ej: Solari Energía" />
+      </div>
+      <div>
+        <label class="label" for="fv_paneles">Cantidad de paneles</label>
+        <input id="fv_paneles" name="sistema_fotovoltaico.paneles" type="number" min="0" step="1" class="input" value={fv?.paneles ?? 0} />
+      </div>
+      <div>
+        <label class="label" for="fv_fecha">Fecha de instalación</label>
+        <input id="fv_fecha" name="sistema_fotovoltaico.fecha_instalacion" type="date" class="input" value={fv?.fecha_instalacion ?? ''} />
+      </div>
+      <div>
+        <label class="label" for="fv_potencia">Potencia considerada (kWp)</label>
+        <input id="fv_potencia" name="sistema_fotovoltaico.potencia_kwp" type="number" min="0" step="0.01" class="input" value={fv?.potencia_kwp ?? 0} />
+        <p class="help">Valor central usado en las estimaciones del informe.</p>
+      </div>
+      <div class="grid grid-cols-2 gap-3">
+        <div>
+          <label class="label" for="fv_min">Potencia mínima (kWp)</label>
+          <input id="fv_min" name="sistema_fotovoltaico.potencia_kwp_min" type="number" min="0" step="0.01" class="input" value={fv?.potencia_kwp_min ?? 0} />
+        </div>
+        <div>
+          <label class="label" for="fv_max">Potencia máxima (kWp)</label>
+          <input id="fv_max" name="sistema_fotovoltaico.potencia_kwp_max" type="number" min="0" step="0.01" class="input" value={fv?.potencia_kwp_max ?? 0} />
+        </div>
+      </div>
+      <div>
+        <label class="label" for="fv_conexion">Tipo de conexión</label>
+        <select id="fv_conexion" name="sistema_fotovoltaico.tipo_conexion" class="input">
+          {Object.entries(TIPOS_CONEXION_FV).map(([key, label]) => (
+            <option value={key} selected={(fv?.tipo_conexion ?? 'no_definido') === key}>{label}</option>
+          ))}
+        </select>
+      </div>
+      <div>
+        <label class="label" for="fv_almacenamiento">Almacenamiento (kWh)</label>
+        <input id="fv_almacenamiento" name="sistema_fotovoltaico.almacenamiento_kwh" type="number" min="0" step="0.01" class="input" value={fv?.almacenamiento_kwh ?? 0} />
+      </div>
+      <div class="sm:col-span-2">
+        <label class="label" for="fv_observaciones">Observaciones del sistema</label>
+        <textarea id="fv_observaciones" name="sistema_fotovoltaico.observaciones" rows="3" class="input" placeholder="Etapa del proyecto, condiciones de cubierta, equipos, garantías…">{fv?.observaciones ?? ''}</textarea>
+      </div>
+      <div class="sm:col-span-2 rounded-lg border border-slate-100 bg-slate-50/60 px-3 py-2 text-xs text-slate-500">
+        Si la empresa no cuenta ni proyecta un sistema fotovoltaico, deja el estado en “No aplica”.
       </div>
     </div>
   </section>

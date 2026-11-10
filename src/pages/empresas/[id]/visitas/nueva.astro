@@ -17,7 +17,19 @@ const [hallazgos, recomendaciones, historial] = await Promise.all([
 ]);
 
 const ultima = historial[0] ?? null;
-const plantilla = ultima ? { ...ultima, fecha: todayISO(), proxima_visita: '' } : null;
+const plantilla = ultima
+  ? {
+      ...ultima,
+      fecha: todayISO(),
+      proxima_visita: '',
+      evaluacion_fotovoltaica: {
+        ...ultima.evaluacion_fotovoltaica,
+        generacion_medida_kwh: 0,
+        autoconsumo_medido_kwh: 0,
+        excedentes_medidos_kwh: 0,
+      },
+    }
+  : null;
 const reutiliza = Boolean(ultima);
 ---
 

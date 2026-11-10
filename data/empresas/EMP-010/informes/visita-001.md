@@ -6,12 +6,12 @@ empresa: Tokarau Cabañas
 rut: ""
 visita_id: VIS-001
 fecha_visita: 2026-11-09
-asesor: Consultor Energético
+asesor: Carlos Campos
 comuna: Hanga Roa
 region: Valparaíso
 rubro: Hostal
 version: 1
-generado: 2026-11-10T11:37:11.598Z
+generado: 2026-11-10T12:30:10.087Z
 puntaje_global: 2.8
 clasificacion: Aceptable
 hallazgos: 4
@@ -28,7 +28,7 @@ mapa_url: https://www.google.com/maps/place/Caba%C3%B1as+Tokerau/@-27.1343959,-1
 
 ## Tokarau Cabañas
 
-**Visita:** VIS-001 · **Fecha:** 09 de noviembre de 2026 · **Asesor:** Consultor Energético
+**Visita:** VIS-001 · **Fecha:** 09 de noviembre de 2026 · **Asesor:** Carlos Campos
 
 Rubro: Hostal · Comuna: Hanga Roa · Región: Valparaíso · Superficie: 200 m² · Trabajadores: 5
 
@@ -60,7 +60,7 @@ Las estimaciones de ahorro incluidas son referenciales, no son aditivas entre s�
 
 | Energético | Consumo declarado | Costo mensual | Observación |
 | --- | ---: | ---: | --- |
-| Electricidad | No informado | $250.000 | Variable durante el año, no cuenta separado los consumos. |
+| Electricidad | 530 kWh/mes | $250.000 | Variable durante el año, no cuenta separado los consumos. |
 | GLP | No informado | $0 | — |
 
 **Principales usos finales:** Iluminación, Refrigeración y congelación, Climatización y ventilación, Agua caliente sanitaria.
@@ -299,10 +299,10 @@ El puntaje global se calcula como el promedio simple de las 8 dimensiones evalua
 ### Antecedentes de la visita
 
 - **Fecha:** 09 de noviembre de 2026
-- **Asesor:** Consultor Energético
+- **Asesor:** Carlos Campos
 - **Grado de consumo:** Moderado
 - **Clasificación global:** Aceptable
-- **Generado:** 10-11-2026, 8:37:11 a. m.
+- **Generado:** 10-11-2026, 9:30:10 a. m.
 
 ---
 

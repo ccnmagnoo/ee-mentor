@@ -11,7 +11,7 @@ comuna: Concón
 region: Valparaíso
 rubro: Hostal
 version: 1
-generado: 2026-11-06T11:57:10.916Z
+generado: 2026-11-10T13:01:55.100Z
 puntaje_global: 2.1
 clasificacion: Deficiente
 hallazgos: 6
@@ -19,6 +19,11 @@ recomendaciones: 6
 tags:
   - eficiencia-energetica
   - hostal
+ernc:
+  hallazgos:
+    - ERNC-01
+  recomendaciones:
+    - REC-ERNC-01
 ---
 
 # Informe Técnico de Eficiencia Energética
@@ -38,6 +43,8 @@ Rubro: Hostal · Comuna: Concón · Región: Valparaíso · Superficie: 185 m² 
 El presente informe resume el diagnóstico energético realizado a **Hostal Brisa Marina** el 18 de septiembre de 2026. La evaluación abarca 9 de 10 dimensiones del desempeño energético y entrega una hoja de ruta priorizada para reducir consumos y costos operacionales.
 
 El **puntaje global de desempeño es 2.1/5**, clasificado como **Deficiente**. El desempeño está por debajo de lo esperado; se recomienda un plan de mejora.
+
+En materia de energías renovables, la visita registra **1 hallazgo** y **1 recomendación**, detallados en la sección 1.5.
 
 Se identificaron **6 hallazgos** y **6 recomendaciones** de mejora. De ellos, 3 hallazgos presentan impacto alto o crítico y deberían abordarse en el corto plazo.
 
@@ -92,6 +99,36 @@ Hostal Brisa Marina es un establecimiento de 9 habitaciones con desayuno incluid
 **Brechas prioritarias:** Iluminación (2/5, deficiente); Climatización y A/C (1/5, crítico); Agua caliente sanitaria (2/5, deficiente); Envolvente e infiltraciones (2/5, deficiente); Gestión energética (1/5, crítico); Tarifas y potencia (2/5, deficiente).
 
 **Observaciones generales de la visita:** Se recomienda priorizar medidas de bajo costo antes de la temporada alta.
+
+### 1.5 Análisis de energías renovables
+
+#### Estado actual
+
+No se registran sistemas de generación renovable en la ficha de la empresa.
+
+La visita identificó **1 hallazgo** y **1 recomendación** en materia de energías renovables.
+
+#### Oportunidades ERNC identificadas en la visita
+
+**Hallazgos**
+
+- **ERNC-01 · Sin evaluación de autoconsumo con energías renovables** — Impacto medio · Energías renovables. No se ha evaluado la incorporación de generación solar fotovoltaica u otra fuente renovable para autoconsumo, pese a disponer de cubierta o superficie útil y de un consumo eléctrico diurno relevante. **Evidencia:** Cubierta disponible sin evaluación de autoconsumo solar.
+
+**Recomendaciones**
+
+- **REC-ERNC-01 · Estudio e instalación de autoconsumo solar fotovoltaico** — Prioridad media · Inversión: alto costo · Plazo: Largo plazo (6-12 meses). Realizar una prefactibilidad técnica y económica considerando cubierta disponible, curva de consumo y normativa de generación distribuida. Dimensionar el sistema para maximizar el autoconsumo. **Ahorro estimado:** 20-50% del consumo eléctrico diurno. **Observación:** Solicitar prefactibilidad solar para cubierta.
+
+#### Oportunidades de optimización y seguimiento
+
+- Solicitar prefactibilidad técnica y económica de las medidas ERNC identificadas, incluyendo cotizaciones y verificación de requisitos de conexión o permisos.
+- Validar el recurso disponible y la superficie utilizable antes de comprometer la inversión.
+
+#### Indicadores de seguimiento
+
+- Registrar el avance de las medidas ERNC identificadas y las cotizaciones recibidas.
+- Medir el consumo y la generación antes y después de la implementación.
+- Documentar supuestos, costos de inversión y ahorros verificados.
+- Revisar los requisitos normativos y de conexión aplicables antes de la instalación.
 
 ## 2. Principales falencias detectadas
 
@@ -371,7 +408,7 @@ El puntaje global se calcula como el promedio simple de las 9 dimensiones evalua
 - **Asesor:** Carlos Campos N.
 - **Grado de consumo:** Relevante
 - **Clasificación global:** Deficiente
-- **Generado:** 06-11-2026, 8:57:10 a. m.
+- **Generado:** 10-11-2026, 10:01:55 a. m.
 
 ---
 

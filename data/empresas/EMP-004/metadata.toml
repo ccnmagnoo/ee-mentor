@@ -9,11 +9,23 @@ telefono = "+56992104616"
 correo = "bastgonzalezpily@gmail.com"
 trabajadores = 5
 superficie_m2 = 50
-observaciones = "Tiene inicio de actividades en el servicio de SII y patentes al día. Venta de abarrotes,  artículos de aseo, líquidos, cigarros, venta de congelados carne, hamburguesas, 4 congeladores, 6 vc cooler. Cuenta con 2 contenedores para almacenamiento. Constantemente a realizado mantenimiento e instalaciones eléctricos, son en términos parciales y aprecia que es de una calidad regular, se mantiene funcional. Tiene dificultades logística de suministro , se menciona perdidas $50 millones por vencimiento en buque. Está gestiones para la instalación de paneles fotovoltaico, 30 paneles , aprox. 15kWp. Tiene instalado led en todo el establecimiento, realiza mantenimiento preventivo de los equipos de frío, coordina con especialista de la Armada para mantenimiento, por confianza y certezas del servicio."
+observaciones = "Tiene inicio de actividades en el servicio de SII y patentes al día. Venta de abarrotes,  artículos de aseo, líquidos, cigarros, venta de congelados carne, hamburguesas, 4 congeladores, 6 vc cooler. Cuenta con 2 contenedores para almacenamiento. Constantemente a realizado mantenimiento e instalaciones eléctricos, son en términos parciales y aprecia que es de una calidad regular, se mantiene funcional. Tiene dificultades logística de suministro , se menciona perdidas $50 millones por vencimiento en buque. Se encuentra en proceso de incorporación un sistema fotovoltaico de 18 paneles, con potencia nominal estimada entre 10 y 12 kWp, a cargo de Solari Energía, cuya instalación está programada para finales de noviembre de 2026. Tiene instalado led en todo el establecimiento, realiza mantenimiento preventivo de los equipos de frío, coordina con especialista de la Armada para mantenimiento, por confianza y certezas del servicio."
 schema_version = 1
 id = "EMP-004"
 created_at = "2026-11-03T14:25:38.791Z"
-updated_at = "2026-11-05T19:19:46.541Z"
+updated_at = "2026-11-10T12:00:00.000Z"
 mapa_url = "https://www.google.com/maps/place/Minimarket+Kaituoe/@-27.1534956,-109.4172031,316m/data=!3m1!1e3!4m6!3m5!1s0x9947fb047109f835:0x1fb2abfe75bd1fed!8m2!3d-27.1534923!4d-109.4166981!16s%2Fg%2F11fcrg2f6_?entry=tts&g_ep=EgoyMDI2MTEwMS4wIOC7DCoASAFQAw%3D%3D&skid=b366f417-2ae7-4f61-ad3d-0de7ddf5f59d"
 latitud = -27.1534956
 longitud = -109.4172031
+
+[sistema_fotovoltaico]
+estado = "planificado"
+proveedor = "Solari Energía"
+paneles = 18
+potencia_kwp = 11
+potencia_kwp_min = 10
+potencia_kwp_max = 12
+fecha_instalacion = "2026-11-30"
+tipo_conexion = "autoconsumo"
+almacenamiento_kwh = 0
+observaciones = "Instalación programada para finales de noviembre de 2026."

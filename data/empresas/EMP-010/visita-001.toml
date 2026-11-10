@@ -1,5 +1,5 @@
 fecha = "2026-11-09"
-asesor = "Consultor Energético"
+asesor = "Carlos Campos"
 grado_consumo = "moderado"
 descripcion_perfil = ""
 usos_finales = [ "iluminacion", "refrigeracion", "climatizacion", "acs" ]
@@ -11,10 +11,11 @@ schema_version = 1
 id = "VIS-001"
 empresa_id = "EMP-010"
 created_at = "2026-11-09T17:29:04.782Z"
-updated_at = "2026-11-10T11:37:11.562Z"
+updated_at = "2026-11-10T12:30:09.507Z"
 
 [[energeticos]]
 tipo = "electricidad"
+consumo = 530
 unidad = "kWh/mes"
 costo = 250000
 observacion = "Variable durante el año, no cuenta separado los consumos."
@@ -24,6 +25,19 @@ tipo = "glp"
 unidad = "kWh/mes"
 costo = 0
 observacion = ""
+
+[evaluacion_fotovoltaica]
+consumo_mensual_kwh = 530
+consumo_diurno_pct = 50
+horas_sol_pico = 5
+performance_ratio = 0.8
+generacion_medida_kwh = 0
+autoconsumo_medido_kwh = 1488
+excedentes_medidos_kwh = 0
+precio_kwh = 465
+precio_inyeccion_kwh = 0
+factor_co2_kg_kwh = 0.4
+observaciones = "El establecimiento se encuentra próximo a incorporar un sistema de generación fotovoltaica compuesto por 18 paneles solares, con una potencia nominal estimada entre 10 y 12 kWp, cuya instalación está programada para finales de noviembre por la empresa Solari Energía."
 
 [secciones.iluminacion]
 puntaje = 3

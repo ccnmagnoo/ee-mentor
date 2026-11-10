@@ -4,14 +4,14 @@ tipo: informe_diagnostico_energetico
 empresa_id: EMP-010
 empresa: Tokarau Cabañas
 rut: ""
-visita_id: VIS-001
-fecha_visita: 2026-11-09
-asesor: Consultor Energético
+visita_id: VIS-002
+fecha_visita: 2026-11-10
+asesor: Carlos Campos
 comuna: Hanga Roa
 region: Valparaíso
 rubro: Hostal
 version: 1
-generado: 2026-11-10T11:37:11.598Z
+generado: 2026-11-10T13:17:32.264Z
 puntaje_global: 2.8
 clasificacion: Aceptable
 hallazgos: 4
@@ -28,7 +28,7 @@ mapa_url: https://www.google.com/maps/place/Caba%C3%B1as+Tokerau/@-27.1343959,-1
 
 ## Tokarau Cabañas
 
-**Visita:** VIS-001 · **Fecha:** 09 de noviembre de 2026 · **Asesor:** Consultor Energético
+**Visita:** VIS-002 · **Fecha:** 10 de noviembre de 2026 · **Asesor:** Carlos Campos
 
 Rubro: Hostal · Comuna: Hanga Roa · Región: Valparaíso · Superficie: 200 m² · Trabajadores: 5
 
@@ -38,7 +38,7 @@ Rubro: Hostal · Comuna: Hanga Roa · Región: Valparaíso · Superficie: 200 m�
 
 ## Resumen ejecutivo
 
-El presente informe resume el diagnóstico energético realizado a **Tokarau Cabañas** el 09 de noviembre de 2026. La evaluación abarca 8 de 10 dimensiones del desempeño energético y entrega una hoja de ruta priorizada para reducir consumos y costos operacionales.
+El presente informe resume el diagnóstico energético realizado a **Tokarau Cabañas** el 10 de noviembre de 2026. La evaluación abarca 8 de 10 dimensiones del desempeño energético y entrega una hoja de ruta priorizada para reducir consumos y costos operacionales.
 
 El **puntaje global de desempeño es 2.8/5**, clasificado como **Aceptable**. Cumple lo básico, pero persisten oportunidades de optimización.
 
@@ -60,7 +60,7 @@ Las estimaciones de ahorro incluidas son referenciales, no son aditivas entre s�
 
 | Energético | Consumo declarado | Costo mensual | Observación |
 | --- | ---: | ---: | --- |
-| Electricidad | No informado | $250.000 | Variable durante el año, no cuenta separado los consumos. |
+| Electricidad | 530 kWh/mes | $250.000 | Variable durante el año, no cuenta separado los consumos. |
 | GLP | No informado | $0 | — |
 
 **Principales usos finales:** Iluminación, Refrigeración y congelación, Climatización y ventilación, Agua caliente sanitaria.
@@ -221,7 +221,7 @@ El siguiente plan ordena las medidas según horizonte de implementación. Se sug
 
 - Se acuerda promover el desarrollo de una política de gestión energética integrada al modelo de negocio del establecimiento, orientada a mejorar progresivamente el desempeño energético de las instalaciones y fortalecer la sustentabilidad de la operación. Dicha política deberá implementarse de manera gradual, considerando la realidad operativa, capacidades de inversión y necesidades específicas del emprendimiento, incorporando acciones tales como el monitoreo de consumos, definición de metas de reducción, mantención eficiente de equipos, mejora de la envolvente térmica, optimización de la iluminación y sensibilización de trabajadores y huéspedes. Asimismo, se establece el compromiso de revisar periódicamente los avances alcanzados, priorizando medidas de bajo costo y alto impacto que contribuyan al confort de los usuarios y a la reducción de los costos operacionales asociados al consumo de energía.
 
-**Próxima visita sugerida:** 30 de noviembre de 2026
+**Próxima visita sugerida:** a definir con la empresa.
 
 ## 5. Información complementaria
 
@@ -298,11 +298,11 @@ El puntaje global se calcula como el promedio simple de las 8 dimensiones evalua
 
 ### Antecedentes de la visita
 
-- **Fecha:** 09 de noviembre de 2026
-- **Asesor:** Consultor Energético
+- **Fecha:** 10 de noviembre de 2026
+- **Asesor:** Carlos Campos
 - **Grado de consumo:** Moderado
 - **Clasificación global:** Aceptable
-- **Generado:** 10-11-2026, 8:37:11 a. m.
+- **Generado:** 10-11-2026, 10:17:32 a. m.
 
 ---
 

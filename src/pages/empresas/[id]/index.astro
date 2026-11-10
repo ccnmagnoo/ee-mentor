@@ -6,9 +6,14 @@ import ClasificacionBadge from '@/components/ui/ClasificacionBadge.astro';
 import EmptyState from '@/components/ui/EmptyState.astro';
 import { getEmpresaDetalle } from '@/lib/services/analytics';
 import { evaluarSecciones, redondear } from '@/lib/scoring';
-import { GRADOS_CONSUMO } from '@/lib/schemas';
-import { formatFecha, formatFechaCorta, formatNumero } from '@/lib/config';
+import {
+  ESTADOS_SISTEMA_FV,
+  GRADOS_CONSUMO,
+  TIPOS_CONEXION_FV,
+} from '@/lib/schemas';
+import { formatCLP, formatFecha, formatFechaCorta, formatNumero } from '@/lib/config';
 import { formatearCoordenadas, urlMapa } from '@/lib/ubicacion';
+import { evaluarFotovoltaica } from '@/lib/fotovoltaica';
 
 const { id } = Astro.params;
 if (!id) return Astro.redirect('/empresas');
@@ -24,6 +29,15 @@ const contacto = [
 ].filter(Boolean) as Array<{ label: string; value: string }>;
 const mapa = urlMapa(empresa);
 const coordenadasTexto = formatearCoordenadas(empresa);
+const sistemaFv = empresa.sistema_fotovoltaico;
+const evaluacionFv =
+  sistemaFv.estado !== 'no_aplica' && ultimaVisita
+    ? evaluarFotovoltaica({
+        sistema: sistemaFv,
+        evaluacion: ultimaVisita.evaluacion_fotovoltaica,
+        energeticos: ultimaVisita.energeticos,
+      })
+    : null;
 ---
 
 <Layout title={empresa.nombre} description={`Ficha de ${empresa.nombre}`}>
@@ -114,6 +128,72 @@ const coordenadasTexto = formatearCoordenadas(empresa);
       )}
     </section>
   </div>
+
+  {sistemaFv.estado !== 'no_aplica' && (
+    <section class="card mt-5 overflow-hidden">
+      <div class="card-header">
+        <div class="flex items-center gap-2">
+          <Icon name="solar" size={18} class="text-brand-600" />
+          <div>
+            <h2 class="text-sm font-semibold text-slate-900">Sistema fotovoltaico</h2>
+            <p class="text-xs text-slate-500">
+              {ESTADOS_SISTEMA_FV[sistemaFv.estado]} · {sistemaFv.paneles} paneles · {formatNumero(sistemaFv.potencia_kwp || sistemaFv.potencia_kwp_max, 'kWp')}
+            </p>
+          </div>
+        </div>
+        {ultimaVisita && evaluacionFv && (
+          <a href={`/empresas/${empresa.id}/visitas/${ultimaVisita.id}`} class="btn-ghost btn-sm">Ver evaluación</a>
+        )}
+      </div>
+      <div class="grid gap-4 p-5 sm:grid-cols-2 sm:p-6 lg:grid-cols-4">
+        <div>
+          <p class="text-[11px] font-semibold uppercase tracking-wide text-slate-400">Potencia</p>
+          <p class="mt-1 text-sm font-medium text-slate-800">
+            {sistemaFv.potencia_kwp_min > 0 && sistemaFv.potencia_kwp_max > 0
+              ? `${formatNumero(sistemaFv.potencia_kwp_min)}–${formatNumero(sistemaFv.potencia_kwp_max)} kWp`
+              : formatNumero(sistemaFv.potencia_kwp, 'kWp')}
+          </p>
+        </div>
+        <div>
+          <p class="text-[11px] font-semibold uppercase tracking-wide text-slate-400">Proveedor</p>
+          <p class="mt-1 text-sm font-medium text-slate-800">{sistemaFv.proveedor || 'No informado'}</p>
+        </div>
+        <div>
+          <p class="text-[11px] font-semibold uppercase tracking-wide text-slate-400">Instalación</p>
+          <p class="mt-1 text-sm font-medium text-slate-800">{sistemaFv.fecha_instalacion ? formatFechaCorta(sistemaFv.fecha_instalacion) : 'Por definir'}</p>
+        </div>
+        <div>
+          <p class="text-[11px] font-semibold uppercase tracking-wide text-slate-400">Conexión</p>
+          <p class="mt-1 text-sm font-medium text-slate-800">{TIPOS_CONEXION_FV[sistemaFv.tipo_conexion]}</p>
+        </div>
+      </div>
+      {evaluacionFv && (
+        <div class="border-t border-slate-100 bg-slate-50/50 px-5 py-4 sm:px-6">
+          <div class="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+            <div>
+              <p class="text-[11px] font-semibold uppercase tracking-wide text-slate-400">Generación</p>
+              <p class="mt-1 text-sm font-medium text-slate-800">{formatNumero(evaluacionFv.generacionKwh, 'kWh/mes')}</p>
+            </div>
+            <div>
+              <p class="text-[11px] font-semibold uppercase tracking-wide text-slate-400">Autoconsumo</p>
+              <p class="mt-1 text-sm font-medium text-slate-800">{evaluacionFv.autoconsumoPct.toFixed(1)}%</p>
+            </div>
+            <div>
+              <p class="text-[11px] font-semibold uppercase tracking-wide text-slate-400">Cobertura demanda</p>
+              <p class="mt-1 text-sm font-medium text-slate-800">{evaluacionFv.coberturaTotalPct.toFixed(1)}%</p>
+            </div>
+            <div>
+              <p class="text-[11px] font-semibold uppercase tracking-wide text-slate-400">Ahorro estimado</p>
+              <p class="mt-1 text-sm font-medium text-slate-800">{formatCLP(evaluacionFv.ahorroMensualClp)}/mes</p>
+            </div>
+          </div>
+          <p class="mt-2 text-[11px] text-slate-400">
+            {evaluacionFv.generacionMedida ? 'Datos medidos en la última visita.' : 'Estimación referencial según los supuestos de la última visita.'}
+          </p>
+        </div>
+      )}
+    </section>
+  )}
 
   {evaluacion && (
     <section class="card mt-5 overflow-hidden">

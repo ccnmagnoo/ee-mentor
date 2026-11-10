@@ -35,6 +35,22 @@ Páginas / API  →  Servicios  →  Repositorios  →  Storage (archivos)
 
 La lógica de presentación vive en `src/lib/ubicacion.ts`: resuelve el enlace configurado, genera uno de Google Maps cuando solo hay coordenadas y formatea el par para la ficha y el informe. `report.ts` copia `latitud`, `longitud` y `mapa_url` al frontmatter del Markdown para permitir procesos de georreferenciación posteriores.
 
+## Análisis de energías renovables
+
+`Empresa` puede incluir un bloque `sistema_fotovoltaico` (estado, proveedor, paneles, potencia y fecha) y cada visita un bloque `evaluacion_fotovoltaica` con los supuestos y datos medidos. El cálculo vive en `src/lib/fotovoltaica.ts` y no persiste resultados: se recalcula en cada lectura para evitar datos obsoletos.
+
+Fórmulas principales:
+
+- `generacion_estimada = potencia_kwp × horas_sol_pico × 30 × performance_ratio`.
+- `generacion_rango = potencia_min/max × horas_sol_pico × 30 × performance_ratio`.
+- `autoconsumo = min(generacion, consumo_mensual × consumo_diurno_pct / 100)` si no hay medición.
+- `cobertura_total = autoconsumo / consumo_mensual`.
+- `cobertura_diurna = autoconsumo / consumo_diurno`.
+- `ahorro = autoconsumo × precio_kwh + excedentes × precio_inyeccion_kwh`.
+- `co2_evitado = generacion × factor_co2_kg_kwh`.
+
+Si la visita no informa consumo o precio, se usan el consumo y el costo del energético electricidad. La sección **1.5 Análisis de energías renovables** aparece cuando existe un sistema fotovoltaico o cuando la visita seleccionó hallazgos/recomendaciones de categoría `ernc`. Incluye el estado actual, la evaluación FV, las oportunidades del catálogo y el seguimiento. El frontmatter YAML agrega los bloques `fotovoltaica` y `ernc` cuando corresponda.
+
 ## Puntajes
 
 `evaluarSecciones` recorre las 10 secciones, excluye las que tienen puntaje `0` y promedia el resto. `clasificarPuntaje` aplica los cortes:

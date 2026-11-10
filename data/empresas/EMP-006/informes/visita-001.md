@@ -11,7 +11,7 @@ comuna: Hanga Roa
 region: Valparaíso
 rubro: Almacén / minimarket
 version: 1
-generado: 2026-11-09T13:32:45.274Z
+generado: 2026-11-10T13:01:55.162Z
 puntaje_global: 2
 clasificacion: Deficiente
 hallazgos: 13
@@ -22,6 +22,11 @@ tags:
 latitud: -27.147053
 longitud: -109.4303547
 mapa_url: https://www.google.com/maps/place/27%C2%B008'49.4%22S+109%C2%B025'47.0%22W/@-27.147053,-109.4303547,252m/data=!3m2!1e3!4b1!4m4!3m3!8m2!3d-27.147053!4d-109.429711?entry=ttu&g_ep=EgoyMDI2MTEwMi4wIKXMDSoASAFQAw%3D%3D
+ernc:
+  hallazgos:
+    - ERNC-01
+  recomendaciones:
+    - REC-ERNC-01
 ---
 
 # Informe Técnico de Eficiencia Energética
@@ -41,6 +46,8 @@ Rubro: Almacén / minimarket · Comuna: Hanga Roa · Región: Valparaíso · Sup
 El presente informe resume el diagnóstico energético realizado a **Minimarket Tía Sonia** el 04 de noviembre de 2026. La evaluación abarca 7 de 10 dimensiones del desempeño energético y entrega una hoja de ruta priorizada para reducir consumos y costos operacionales.
 
 El **puntaje global de desempeño es 2.0/5**, clasificado como **Deficiente**. El desempeño está por debajo de lo esperado; se recomienda un plan de mejora.
+
+En materia de energías renovables, la visita registra **1 hallazgo** y **1 recomendación**, detallados en la sección 1.5.
 
 Se identificaron **13 hallazgos** y **12 recomendaciones** de mejora. De ellos, 3 hallazgos presentan impacto alto o crítico y deberían abordarse en el corto plazo.
 
@@ -107,6 +114,36 @@ En términos de gestión energética, el negocio no cuenta actualmente con un si
 **Brechas prioritarias:** Refrigeración (2/5, deficiente); Congelación (2/5, deficiente); Climatización y A/C (1/5, crítico); Envolvente e infiltraciones (1/5, crítico); Gestión energética (2/5, deficiente).
 
 **Observaciones generales de la visita:** urante la actividad se recopilaron antecedentes sobre los consumos energéticos, equipamiento existente y prácticas operacionales relacionadas con el uso de la energía. La evaluación se basó en la información proporcionada por el cliente, observaciones realizadas de forma remota y evidencia visual compartida durante la conexión. Si bien esta modalidad permitió identificar oportunidades de mejora energética relevantes, algunas verificaciones técnicas y mediciones específicas requerirían una visita presencial para obtener un nivel de detalle y precisión superior.
+
+### 1.5 Análisis de energías renovables
+
+#### Estado actual
+
+No se registran sistemas de generación renovable en la ficha de la empresa.
+
+La visita identificó **1 hallazgo** y **1 recomendación** en materia de energías renovables.
+
+#### Oportunidades ERNC identificadas en la visita
+
+**Hallazgos**
+
+- **ERNC-01 · Sin evaluación de autoconsumo con energías renovables** — Impacto medio · Energías renovables. No se ha evaluado la incorporación de generación solar fotovoltaica u otra fuente renovable para autoconsumo, pese a disponer de cubierta o superficie útil y de un consumo eléctrico diurno relevante. **Evidencia:** Hay interés y algunas prospecciones básicas de sistemas de autoconsumo, pero estos no cuentan con un dimensionamiento.
+
+**Recomendaciones**
+
+- **REC-ERNC-01 · Estudio e instalación de autoconsumo solar fotovoltaico** — Prioridad media · Inversión: alto costo · Plazo: Largo plazo (6-12 meses). Realizar una prefactibilidad técnica y económica considerando cubierta disponible, curva de consumo y normativa de generación distribuida. Dimensionar el sistema para maximizar el autoconsumo. **Ahorro estimado:** 20-50% del consumo eléctrico diurno.
+
+#### Oportunidades de optimización y seguimiento
+
+- Solicitar prefactibilidad técnica y económica de las medidas ERNC identificadas, incluyendo cotizaciones y verificación de requisitos de conexión o permisos.
+- Validar el recurso disponible y la superficie utilizable antes de comprometer la inversión.
+
+#### Indicadores de seguimiento
+
+- Registrar el avance de las medidas ERNC identificadas y las cotizaciones recibidas.
+- Medir el consumo y la generación antes y después de la implementación.
+- Documentar supuestos, costos de inversión y ahorros verificados.
+- Revisar los requisitos normativos y de conexión aplicables antes de la instalación.
 
 ## 2. Principales falencias detectadas
 
@@ -509,7 +546,7 @@ El puntaje global se calcula como el promedio simple de las 7 dimensiones evalua
 - **Asesor:** Carlos Campos
 - **Grado de consumo:** Moderado
 - **Clasificación global:** Deficiente
-- **Generado:** 09-11-2026, 10:32:45 a. m.
+- **Generado:** 10-11-2026, 10:01:55 a. m.
 
 ---
 

@@ -106,6 +106,26 @@ async function validateEmpresas() {
       );
     }
 
+    const sistemaFv = empresa.sistema_fotovoltaico;
+    if (sistemaFv && sistemaFv.estado !== 'no_aplica') {
+      check(
+        Number.isInteger(sistemaFv.paneles) && sistemaFv.paneles >= 0,
+        `Paneles FV inválidos en ${path.basename(empresaFile)}`,
+      );
+      check(
+        sistemaFv.potencia_kwp >= 0 &&
+          sistemaFv.potencia_kwp_min >= 0 &&
+          sistemaFv.potencia_kwp_max >= 0,
+        `Potencia FV inválida en ${path.basename(empresaFile)}`,
+      );
+      check(
+        sistemaFv.potencia_kwp_min === 0 ||
+          sistemaFv.potencia_kwp_max === 0 ||
+          sistemaFv.potencia_kwp_min <= sistemaFv.potencia_kwp_max,
+        `Rango de potencia FV inválido en ${path.basename(empresaFile)}`,
+      );
+    }
+
     const visitasFiles = await listFiles(dir, '.toml');
     for (const file of visitasFiles) {
       if (path.basename(file) === 'metadata.toml') continue;
@@ -116,6 +136,52 @@ async function validateEmpresas() {
       check(visita.empresa_id === empresa.id, `Visita ${visita.id} no coincide con ${empresa.id}`);
       check(/^\d{4}-\d{2}-\d{2}$/.test(visita.fecha ?? ''), `Fecha inválida en ${path.basename(file)}`);
       check(Boolean(visita.secciones), `Visita sin secciones: ${path.basename(file)}`);
+
+      const fv = visita.evaluacion_fotovoltaica;
+      if (fv) {
+        check(
+          fv.consumo_diurno_pct >= 0 && fv.consumo_diurno_pct <= 100,
+          `Porcentaje diurno FV inválido en ${path.basename(file)}`,
+        );
+        check(
+          fv.performance_ratio >= 0 && fv.performance_ratio <= 1.5,
+          `Performance ratio FV inválido en ${path.basename(file)}`,
+        );
+        check(
+          fv.horas_sol_pico >= 0 && fv.horas_sol_pico <= 12,
+          `Horas de sol pico inválidas en ${path.basename(file)}`,
+        );
+        check(
+          fv.precio_kwh >= 0 &&
+            fv.precio_inyeccion_kwh >= 0 &&
+            fv.factor_co2_kg_kwh >= 0,
+          `Parámetros económicos FV inválidos en ${path.basename(file)}`,
+        );
+      }
+
+      const tieneSistemaFv =
+        empresa.sistema_fotovoltaico &&
+        empresa.sistema_fotovoltaico.estado !== 'no_aplica';
+      const tieneErnc =
+        tieneSistemaFv ||
+        (visita.hallazgos ?? []).some((item) => /ERNC/i.test(item.hallazgo_id ?? '')) ||
+        (visita.recomendaciones ?? []).some((item) =>
+          /ERNC/i.test(item.recomendacion_id ?? ''),
+        );
+      if (tieneErnc) {
+        const informeFile = path.join(
+          dir,
+          'informes',
+          `visita-${String(visita.id).replace(/^VIS-/, '')}.md`,
+        );
+        const informe = await fs.readFile(informeFile, 'utf8').catch(() => null);
+        if (informe) {
+          check(
+            informe.includes('### 1.5 Análisis de energías renovables'),
+            `Informe sin sección de energías renovables: ${path.basename(informeFile)}`,
+          );
+        }
+      }
     }
 
     const informesFiles = await listFiles(path.join(dir, 'informes'), '.md');

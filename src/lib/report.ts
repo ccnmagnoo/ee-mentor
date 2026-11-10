@@ -3,12 +3,14 @@ import {
   CATEGORIAS,
   DIFICULTADES,
   ENERGOS,
+  ESTADOS_SISTEMA_FV,
   GRADOS_CONSUMO,
   IMPACTOS,
   INVERSIONES,
   PRIORIDADES,
   RECURSO_CATEGORIAS,
   SECCIONES,
+  TIPOS_CONEXION_FV,
   USOS_FINALES,
   type Categoria,
   type Empresa,
@@ -22,6 +24,11 @@ import {
 import { clasificarPuntaje, evaluarSecciones, redondear } from './scoring';
 import { formatCLP, formatFecha, formatNumero } from './config';
 import { formatearCoordenadas, urlMapa } from './ubicacion';
+import {
+  evaluarFotovoltaica,
+  oportunidadesFotovoltaicas,
+  type ResultadoFotovoltaico,
+} from './fotovoltaica';
 
 export interface ReportInput {
   empresa: Empresa;
@@ -215,6 +222,229 @@ function contextoEmpresa(empresa: Empresa): string {
   return partes.join(' · ');
 }
 
+function pluralizar(cantidad: number, singular: string, plural: string): string {
+  return `${cantidad} ${cantidad === 1 ? singular : plural}`;
+}
+
+function textoPotenciaFv(input: ReportInput): string {
+  const sistema = input.empresa.sistema_fotovoltaico;
+  const min = sistema.potencia_kwp_min || sistema.potencia_kwp;
+  const max = sistema.potencia_kwp_max || sistema.potencia_kwp;
+  if (min > 0 && max > 0 && min !== max) {
+    return `${formatNumero(min)}–${formatNumero(max)} kWp`;
+  }
+  const potencia = sistema.potencia_kwp || max || min;
+  return potencia > 0 ? `${formatNumero(potencia)} kWp` : 'potencia no informada';
+}
+
+function evaluacionFvReporte(input: ReportInput): ResultadoFotovoltaico | null {
+  return evaluarFotovoltaica({
+    sistema: input.empresa.sistema_fotovoltaico,
+    evaluacion: input.visita.evaluacion_fotovoltaica,
+    energeticos: input.visita.energeticos,
+  });
+}
+
+interface ContextoErnc {
+  sistema: Empresa['sistema_fotovoltaico'];
+  resultado: ResultadoFotovoltaico | null;
+  hallazgosErnc: Hallazgo[];
+  recomendacionesErnc: RecoSeleccionada[];
+  tieneSistema: boolean;
+  tieneErnc: boolean;
+}
+
+function contextoErnc(input: ReportInput): ContextoErnc {
+  const sistema = input.empresa.sistema_fotovoltaico;
+  const hallazgosErnc = hallazgosSeleccionados(input).filter(
+    (hallazgo) => hallazgo.categoria === 'ernc',
+  );
+  const recomendacionesErnc = recomendacionesSeleccionadas(input).filter(
+    (item) => item.reco.categoria === 'ernc',
+  );
+  const tieneSistema = sistema.estado !== 'no_aplica';
+  return {
+    sistema,
+    resultado: tieneSistema ? evaluacionFvReporte(input) : null,
+    hallazgosErnc,
+    recomendacionesErnc,
+    tieneSistema,
+    tieneErnc: tieneSistema || hallazgosErnc.length > 0 || recomendacionesErnc.length > 0,
+  };
+}
+
+function seccionEnergiasRenovables(input: ReportInput): string {
+  const contexto = contextoErnc(input);
+  if (!contexto.tieneErnc) return '';
+
+  const { sistema, resultado, hallazgosErnc, recomendacionesErnc } = contexto;
+  const lineas: string[] = ['### 1.5 Análisis de energías renovables', ''];
+
+  lineas.push('#### Estado actual', '');
+  if (contexto.tieneSistema) {
+    const detalles = [
+      `${sistema.paneles} paneles`,
+      textoPotenciaFv(input),
+      sistema.proveedor ? `instalador ${sistema.proveedor}` : '',
+      sistema.fecha_instalacion
+        ? `fecha de instalación ${formatFecha(sistema.fecha_instalacion)}`
+        : '',
+      `conexión ${TIPOS_CONEXION_FV[sistema.tipo_conexion].toLowerCase()}`,
+    ].filter(Boolean);
+    lineas.push(
+      `El establecimiento cuenta con un proyecto fotovoltaico en estado **${ESTADOS_SISTEMA_FV[sistema.estado].toLowerCase()}**: ${detalles.join(' · ')}.`,
+      '',
+    );
+    if (sistema.observaciones) {
+      lineas.push(oneLine(sistema.observaciones), '');
+    }
+  } else {
+    lineas.push(
+      'No se registran sistemas de generación renovable en la ficha de la empresa.',
+      '',
+    );
+  }
+
+  if (hallazgosErnc.length || recomendacionesErnc.length) {
+    lineas.push(
+      `La visita identificó **${pluralizar(hallazgosErnc.length, 'hallazgo', 'hallazgos')}** y **${pluralizar(recomendacionesErnc.length, 'recomendación', 'recomendaciones')}** en materia de energías renovables.`,
+      '',
+    );
+  }
+
+  if (resultado) {
+    lineas.push('#### Evaluación del sistema fotovoltaico', '');
+    lineas.push(
+      resultado.generacionMedida
+        ? 'Los indicadores se calculan con la generación medida y, cuando no existe medición, con el autoconsumo estimado a partir del consumo diurno.'
+        : 'Los indicadores son estimaciones referenciales calculadas con los supuestos indicados. Deben validarse con mediciones y facturación antes de su uso contractual.',
+      '',
+    );
+
+    const evaluacion = input.visita.evaluacion_fotovoltaica;
+    lineas.push('##### Supuestos de la evaluación', '');
+    lineas.push('| Parámetro | Valor |', '| --- | ---: |');
+    lineas.push(`| Consumo mensual | ${formatNumero(resultado.consumoMensualKwh, 'kWh/mes')} |`);
+    lineas.push(`| Consumo diurno | ${evaluacion.consumo_diurno_pct}% |`);
+    lineas.push(`| Horas de sol pico | ${formatNumero(evaluacion.horas_sol_pico, 'h/día')} |`);
+    lineas.push(`| Performance ratio | ${evaluacion.performance_ratio.toFixed(2)} |`);
+    lineas.push(`| Precio energía | ${formatCLP(resultado.precioKwh)}/kWh |`);
+    lineas.push(`| Precio inyección | ${formatCLP(evaluacion.precio_inyeccion_kwh)}/kWh |`);
+    lineas.push(`| Factor CO₂ | ${formatNumero(evaluacion.factor_co2_kg_kwh, 'kg/kWh')} |`, '');
+
+    lineas.push('##### Indicadores de desempeño', '');
+    lineas.push('| Indicador | Resultado |', '| --- | ---: |');
+    const potenciaConsiderada =
+      resultado.potenciaMinKwp > 0 &&
+      resultado.potenciaMaxKwp > 0 &&
+      resultado.potenciaMinKwp !== resultado.potenciaMaxKwp
+        ? `${formatNumero(resultado.potenciaKwp, 'kWp')} (rango ${formatNumero(resultado.potenciaMinKwp)}–${formatNumero(resultado.potenciaMaxKwp)} kWp)`
+        : formatNumero(resultado.potenciaKwp, 'kWp');
+    lineas.push(`| Potencia considerada | ${potenciaConsiderada} |`);
+    lineas.push(
+      `| Generación ${resultado.generacionMedida ? 'medida' : 'estimada'} | ${formatNumero(resultado.generacionKwh, 'kWh/mes')} |`,
+    );
+    lineas.push(`| Generación anual | ${formatNumero(resultado.generacionAnualKwh, 'kWh/año')} |`);
+    if (!resultado.generacionMedida) {
+      lineas.push(
+        `| Rango estimado | ${formatNumero(resultado.generacionMinKwh, 'kWh/mes')} – ${formatNumero(resultado.generacionMaxKwh, 'kWh/mes')} |`,
+      );
+    }
+    lineas.push(
+      `| Autoconsumo | ${formatNumero(resultado.autoconsumoKwh, 'kWh/mes')} (${resultado.autoconsumoPct.toFixed(1)}%) |`,
+    );
+    lineas.push(`| Cobertura demanda total | ${resultado.coberturaTotalPct.toFixed(1)}% |`);
+    lineas.push(`| Cobertura demanda diurna | ${resultado.coberturaDiurnaPct.toFixed(1)}% |`);
+    lineas.push(`| Excedentes | ${formatNumero(resultado.excedentesKwh, 'kWh/mes')} |`);
+    lineas.push(
+      `| Ahorro estimado | ${formatCLP(resultado.ahorroMensualClp)}/mes · ${formatCLP(resultado.ahorroAnualClp)}/año |`,
+    );
+    lineas.push(`| CO₂ evitado | ${formatNumero(resultado.co2EvitadoKgMes, 'kg/mes')} |`);
+    lineas.push(
+      `| Rendimiento específico | ${formatNumero(resultado.rendimientoEspecificoKwhKwpMes, 'kWh/kWp/mes')} |`,
+    );
+    if (resultado.performanceRatioMedido !== null) {
+      lineas.push(
+        `| Performance ratio medido | ${resultado.performanceRatioMedido.toFixed(2)} |`,
+      );
+    }
+    lineas.push('');
+  } else if (contexto.tieneSistema) {
+    lineas.push('#### Evaluación del sistema fotovoltaico', '');
+    lineas.push(
+      'No se registraron los parámetros mínimos para estimar la generación y el aporte a la demanda. Completa la evaluación fotovoltaica de la visita para generar los indicadores.',
+      '',
+    );
+  }
+
+  if (hallazgosErnc.length || recomendacionesErnc.length) {
+    lineas.push('#### Oportunidades ERNC identificadas en la visita', '');
+
+    if (hallazgosErnc.length) {
+      lineas.push('**Hallazgos**', '');
+      for (const hallazgo of hallazgosErnc) {
+        const seleccion = input.visita.hallazgos.find(
+          (item) => item.hallazgo_id === hallazgo.id,
+        );
+        const justificacion =
+          seleccion?.justificacion?.trim() || hallazgo.justificacion;
+        lineas.push(
+          `- **${hallazgo.codigo} · ${oneLine(hallazgo.titulo)}** — Impacto ${IMPACTOS[hallazgo.impacto].toLowerCase()} · ${etiquetaCategoria(hallazgo.categoria)}. ${oneLine(hallazgo.descripcion)}${justificacion ? ` **Evidencia:** ${oneLine(justificacion)}` : ''}`,
+        );
+      }
+      lineas.push('');
+    }
+
+    if (recomendacionesErnc.length) {
+      lineas.push('**Recomendaciones**', '');
+      for (const item of recomendacionesErnc) {
+        lineas.push(
+          `- **${item.reco.codigo} · ${oneLine(item.reco.titulo)}** — Prioridad ${PRIORIDADES[item.prioridad].toLowerCase()} · Inversión: ${INVERSIONES[item.reco.inversion].toLowerCase()} · Plazo: ${item.reco.plazo}. ${oneLine(item.reco.descripcion)}${item.reco.ahorro_estimado ? ` **Ahorro estimado:** ${oneLine(item.reco.ahorro_estimado)}.` : ''}${item.observacion ? ` **Observación:** ${oneLine(item.observacion)}` : ''}`,
+        );
+      }
+      lineas.push('');
+    }
+  }
+
+  lineas.push('#### Oportunidades de optimización y seguimiento', '');
+  const oportunidades: string[] = [];
+  if (resultado) {
+    oportunidades.push(...oportunidadesFotovoltaicas(resultado));
+  }
+  if (recomendacionesErnc.length) {
+    oportunidades.push(
+      'Solicitar prefactibilidad técnica y económica de las medidas ERNC identificadas, incluyendo cotizaciones y verificación de requisitos de conexión o permisos.',
+    );
+    oportunidades.push(
+      'Validar el recurso disponible y la superficie utilizable antes de comprometer la inversión.',
+    );
+  } else if (!resultado) {
+    oportunidades.push(
+      'Realizar una prefactibilidad de energías renovables para el establecimiento, considerando consumo eléctrico, superficie disponible y usos finales.',
+    );
+  }
+  lineas.push(bullets(oportunidades), '');
+
+  const indicadores = resultado
+    ? [
+        'Registrar mensualmente la generación del sistema y, si aplica, la energía inyectada a la red.',
+        'Comparar la generación medida con la estimada y analizar desviaciones superiores al 10%.',
+        'Medir el consumo total y el consumo diurno para recalcular autoconsumo y cobertura.',
+        'Revisar el performance ratio y la disponibilidad del sistema, incluyendo limpieza y mantenciones.',
+        'Actualizar el ahorro económico y el CO₂ evitado con los precios y factores vigentes.',
+      ]
+    : [
+        'Registrar el avance de las medidas ERNC identificadas y las cotizaciones recibidas.',
+        'Medir el consumo y la generación antes y después de la implementación.',
+        'Documentar supuestos, costos de inversión y ahorros verificados.',
+        'Revisar los requisitos normativos y de conexión aplicables antes de la instalación.',
+      ];
+  lineas.push('#### Indicadores de seguimiento', '');
+  lineas.push(bullets(indicadores), '');
+
+  return lineas.join('\n').trim();
+}
+
 function construirResumenEjecutivo(
   input: ReportInput,
   hallazgos: Hallazgo[],
@@ -230,6 +460,22 @@ function construirResumenEjecutivo(
   if (evaluacion.puntajeGlobal !== null) {
     lineas.push(
       `El **puntaje global de desempeño es ${redondear(evaluacion.puntajeGlobal, 1).toFixed(1)}/5**, clasificado como **${evaluacion.clasificacionGlobal.etiqueta}**. ${evaluacion.clasificacionGlobal.descripcion}`,
+    );
+  }
+
+  const ernc = contextoErnc(input);
+  if (ernc.resultado) {
+    const sistemaFv = ernc.sistema;
+    const verbo = sistemaFv.estado === 'operativo' ? 'cuenta con' : 'proyecta incorporar';
+    const coberturaVerbo = sistemaFv.estado === 'operativo' ? 'cubre' : 'cubriría';
+    lineas.push(
+      `El establecimiento ${verbo} un sistema fotovoltaico de ${textoPotenciaFv(input)}. La ${ernc.resultado.generacionMedida ? 'generación medida' : 'estimación de generación'} de **${formatNumero(ernc.resultado.generacionKwh, 'kWh/mes')}** ${coberturaVerbo} aproximadamente el **${ernc.resultado.coberturaTotalPct.toFixed(1)}%** de la demanda eléctrica mensual, con un autoconsumo del **${ernc.resultado.autoconsumoPct.toFixed(1)}%**.`,
+    );
+  }
+
+  if (ernc.hallazgosErnc.length || ernc.recomendacionesErnc.length) {
+    lineas.push(
+      `En materia de energías renovables, la visita registra **${pluralizar(ernc.hallazgosErnc.length, 'hallazgo', 'hallazgos')}** y **${pluralizar(ernc.recomendacionesErnc.length, 'recomendación', 'recomendaciones')}**, detallados en la sección 1.5.`,
     );
   }
 
@@ -594,6 +840,7 @@ export function generarMarkdown(input: ReportInput): string {
   const evaluacion = evaluarSecciones(visita.secciones);
   const mapa = urlMapa(empresa);
   const coordenadasTexto = formatearCoordenadas(empresa);
+  const ernc = contextoErnc(input);
 
   const frontmatter: Record<string, unknown> = {
     title: `Informe técnico de eficiencia energética — ${empresa.nombre}`,
@@ -624,6 +871,38 @@ export function generarMarkdown(input: ReportInput): string {
     frontmatter.longitud = empresa.longitud;
   }
   if (empresa.mapa_url) frontmatter.mapa_url = empresa.mapa_url;
+
+  if (empresa.sistema_fotovoltaico.estado !== 'no_aplica') {
+    const sistema = empresa.sistema_fotovoltaico;
+    const fvFrontmatter: Record<string, unknown> = {
+      estado: sistema.estado,
+      proveedor: sistema.proveedor,
+      paneles: sistema.paneles,
+      potencia_kwp: sistema.potencia_kwp,
+      potencia_kwp_min: sistema.potencia_kwp_min,
+      potencia_kwp_max: sistema.potencia_kwp_max,
+    };
+    if (ernc.resultado) {
+      fvFrontmatter.generacion_kwh_mes = Number(ernc.resultado.generacionKwh.toFixed(1));
+      fvFrontmatter.generacion_medida = ernc.resultado.generacionMedida;
+      fvFrontmatter.autoconsumo_pct = Number(ernc.resultado.autoconsumoPct.toFixed(1));
+      fvFrontmatter.cobertura_demanda_pct = Number(
+        ernc.resultado.coberturaTotalPct.toFixed(1),
+      );
+      fvFrontmatter.ahorro_mensual_clp = Math.round(ernc.resultado.ahorroMensualClp);
+      fvFrontmatter.co2_evitado_kg_mes = Number(
+        ernc.resultado.co2EvitadoKgMes.toFixed(1),
+      );
+    }
+    frontmatter.fotovoltaica = fvFrontmatter;
+  }
+
+  if (ernc.hallazgosErnc.length || ernc.recomendacionesErnc.length) {
+    frontmatter.ernc = {
+      hallazgos: ernc.hallazgosErnc.map((hallazgo) => hallazgo.codigo),
+      recomendaciones: ernc.recomendacionesErnc.map((item) => item.reco.codigo),
+    };
+  }
 
   const lines: string[] = [];
   lines.push('# Informe Técnico de Eficiencia Energética', '');
@@ -676,6 +955,9 @@ export function generarMarkdown(input: ReportInput): string {
   if (visita.observaciones) {
     lines.push(`**Observaciones generales de la visita:** ${oneLine(visita.observaciones)}`, '');
   }
+
+  const erncMarkdown = seccionEnergiasRenovables(input);
+  if (erncMarkdown) lines.push(erncMarkdown, '');
 
   lines.push(seccionHallazgos(input), '');
   lines.push(seccionRecomendaciones(input, recomendaciones), '');

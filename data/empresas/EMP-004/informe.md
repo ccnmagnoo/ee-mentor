@@ -4,36 +4,67 @@ tipo: informe_diagnostico_energetico
 empresa_id: EMP-004
 empresa: Mini Market Kaitoue
 rut: ""
-visita_id: VIS-001
-fecha_visita: 2026-11-03
+visita_id: VIS-002
+fecha_visita: 2026-11-10
 asesor: Carlos Campos
 comuna: Hanga Roa
 region: Valparaíso
 rubro: Almacén / minimarket
 version: 1
-generado: 2026-11-03T16:53:57.912Z
+generado: 2026-11-10T13:27:06.585Z
 puntaje_global: null
 clasificacion: No evaluado
-hallazgos: 0
-recomendaciones: 0
+hallazgos: 1
+recomendaciones: 1
 tags:
   - eficiencia-energetica
   - almacén-/-minimarket
+latitud: -27.1534956
+longitud: -109.4172031
+mapa_url: https://www.google.com/maps/place/Minimarket+Kaituoe/@-27.1534956,-109.4172031,316m/data=!3m1!1e3!4m6!3m5!1s0x9947fb047109f835:0x1fb2abfe75bd1fed!8m2!3d-27.1534923!4d-109.4166981!16s%2Fg%2F11fcrg2f6_?entry=tts&g_ep=EgoyMDI2MTEwMS4wIOC7DCoASAFQAw%3D%3D&skid=b366f417-2ae7-4f61-ad3d-0de7ddf5f59d
+fotovoltaica:
+  estado: planificado
+  proveedor: Solari Energía
+  paneles: 18
+  potencia_kwp: 11
+  potencia_kwp_min: 10
+  potencia_kwp_max: 12
+  generacion_kwh_mes: 1000
+  generacion_medida: true
+  autoconsumo_pct: 100
+  cobertura_demanda_pct: 15.3
+  ahorro_mensual_clp: 465000
+  co2_evitado_kg_mes: 400
+ernc:
+  hallazgos:
+    - ERNC-01
+  recomendaciones:
+    - REC-ERNC-01
 ---
 
 # Informe Técnico de Eficiencia Energética
 
 ## Mini Market Kaitoue
 
-**Visita:** VIS-001 · **Fecha:** 03 de noviembre de 2026 · **Asesor:** Carlos Campos
+**Visita:** VIS-002 · **Fecha:** 10 de noviembre de 2026 · **Asesor:** Carlos Campos
 
 Rubro: Almacén / minimarket · Comuna: Hanga Roa · Región: Valparaíso · Superficie: 50 m² · Trabajadores: 5
+
+**Coordenadas:** -27.15350, -109.41720 (WGS84) · **Ubicación:** [Ver en mapa](https://www.google.com/maps/place/Minimarket+Kaituoe/@-27.1534956,-109.4172031,316m/data=!3m1!1e3!4m6!3m5!1s0x9947fb047109f835:0x1fb2abfe75bd1fed!8m2!3d-27.1534923!4d-109.4166981!16s%2Fg%2F11fcrg2f6_?entry=tts&g_ep=EgoyMDI2MTEwMS4wIOC7DCoASAFQAw%3D%3D&skid=b366f417-2ae7-4f61-ad3d-0de7ddf5f59d)
 
 ---
 
 ## Resumen ejecutivo
 
-El presente informe resume el diagnóstico energético realizado a **Mini Market Kaitoue** el 03 de noviembre de 2026. La evaluación abarca 0 de 10 dimensiones del desempeño energético y entrega una hoja de ruta priorizada para reducir consumos y costos operacionales.
+El presente informe resume el diagnóstico energético realizado a **Mini Market Kaitoue** el 10 de noviembre de 2026. La evaluación abarca 0 de 10 dimensiones del desempeño energético y entrega una hoja de ruta priorizada para reducir consumos y costos operacionales.
+
+El establecimiento proyecta incorporar un sistema fotovoltaico de 10–12 kWp. La generación medida de **1.000 kWh/mes** cubriría aproximadamente el **15.3%** de la demanda eléctrica mensual, con un autoconsumo del **100.0%**.
+
+En materia de energías renovables, la visita registra **1 hallazgo** y **1 recomendación**, detallados en la sección 1.5.
+
+Se identificaron **1 hallazgos** y **1 recomendaciones** de mejora.
+
+Las acciones prioritarias sugeridas son: **Estudio e instalación de autoconsumo solar fotovoltaico**.
 
 Las estimaciones de ahorro incluidas son referenciales, no son aditivas entre sí y deben validarse con mediciones y cotizaciones antes de su implementación.
 
@@ -46,28 +77,27 @@ Para el desarrollo de sus operaciones dispone de una importante infraestructura 
 Respecto de sus instalaciones eléctricas, la empresa ha realizado de manera constante trabajos de mantenimiento y mejoras parciales. Si bien estas intervenciones presentan una calidad evaluada como regular, las instalaciones se mantienen operativas y funcionales para las necesidades actuales del establecimiento.
 Uno de los principales desafíos identificados corresponde a las dificultades logísticas asociadas al abastecimiento de productos en la isla. En este contexto, la empresa señala haber experimentado pérdidas cercanas a los $50 millones debido al vencimiento de mercaderías provocado por retrasos en el transporte marítimo.
 
-En materia de eficiencia energética y sostenibilidad, el establecimiento está gestionando la futura instalación de un sistema fotovoltaico de aproximadamente 15 kWp, compuesto por cerca de 30 paneles solares, iniciativa que contribuiría a disminuir el consumo de energía proveniente de la red eléctrica.
+En materia de eficiencia energética y sostenibilidad, el establecimiento se encuentra próximo a incorporar un sistema fotovoltaico de 18 paneles solares, con una potencia nominal estimada entre 10 y 12 kWp, a cargo de Solari Energía, cuya instalación está programada para finales de noviembre de 2026. La iniciativa contribuirá a disminuir el consumo de energía proveniente de la red eléctrica y a reducir los costos operacionales.
 
-Asimismo, se observa la implementación de diversas buenas prácticas de gestión energética. El establecimiento cuenta con iluminación LED en la totalidad de sus dependencias y realiza mantenimiento preventivo periódico de los equipos de refrigeración. Estas labores son coordinadas con un especialista de la Armada, proveedor de confianza para la empresa, lo que permite asegurar la continuidad operativa y el adecuado funcionamiento de los sistemas.
+En este contexto, se acuerda realizar un dimensionamiento y evaluación del desempeño energético del sistema, con el objetivo de estimar su aporte a la demanda eléctrica del establecimiento, determinar porcentajes de autoconsumo, identificar oportunidades de optimización y establecer indicadores de seguimiento que permitan evaluar los beneficios económicos y energéticos de la inversión una vez que el sistema entre en operación.
 
-El local dispone además de dos equipos de aire acondicionado, cuyo uso varía según las condiciones climáticas y los requerimientos de confort térmico del recinto. En relación con la cultura energética, existe conocimiento básico sobre el uso eficiente de la energía entre los trabajadores. Durante la jornada nocturna se procura desconectar aquellos equipos considerados no críticos, aunque una parte importante del equipamiento de refrigeración debe mantenerse en funcionamiento continuo para garantizar la conservación de los productos comercializados.
-
-En términos generales, la empresa evidencia interés por mejorar su desempeño energético mediante la incorporación de tecnologías más eficientes y la adopción de medidas de mantenimiento preventivo, existiendo oportunidades de mejora asociadas a la gestión integral de los consumos eléctricos y al fortalecimiento de las prácticas de eficiencia energética. 
-Ubicación https://maps.app.goo.gl/NfASY1sig6rwK5uo9
+Asimismo, se observa la implementación de diversas buenas prácticas de gestión energética. El establecimiento cuenta con iluminación LED en la totalidad de sus dependencias y realiza mantenimiento preventivo periódico de los equipos de refrigeración. Estas labores son coordinadas con un especialista de la Armada por confianza y certezas del servicio.
 
 ### 1.2 Energéticos utilizados
 
 | Energético | Consumo declarado | Costo mensual | Observación |
 | --- | ---: | ---: | --- |
-| Electricidad | 6.550 kWh/mes | $3.000.000 | consumo kWh estimado |
+| Electricidad | 6.550 kWh/mes | $3.000.000 | Consumo y costo tomados de VIS-001; validar con facturación antes de la evaluación definitiva. |
 
 **Principales usos finales:** Iluminación, Refrigeración y congelación, Climatización y ventilación.
 
-**Observaciones de la empresa:** Tiene inicio de actividades en el servicio de SII y patentes al día. Venta de abarrotes, artículos de aseo, líquidos, cigarros, venta de congelados carne, hamburguesas, 4 congeladores, 6 vc cooler. Cuenta con 2 contenedores para almacenamiento. Constantemente a realizado mantenimiento e instalaciones eléctricos, son en términos parciales y aprecia que es de una calidad regular, se mantiene funcional. Tiene dificultades logística de suministro , se menciona perdidas $50 millones por vencimiento en buque. Está gestiones para la instalación de paneles fotovoltaico, 30 paneles , aprox. 15kWp. Tiene instalado led en todo el establecimiento, realiza mantenimiento preventivo de los equipos de frío, coordina con especialista de la Armada para mantenimiento, por confianza y certezas del servicio. Ubicación https://maps.app.goo.gl/NfASY1sig6rwK5uo9
+**Observaciones de la empresa:** Tiene inicio de actividades en el servicio de SII y patentes al día. Venta de abarrotes, artículos de aseo, líquidos, cigarros, venta de congelados carne, hamburguesas, 4 congeladores, 6 vc cooler. Cuenta con 2 contenedores para almacenamiento. Constantemente a realizado mantenimiento e instalaciones eléctricos, son en términos parciales y aprecia que es de una calidad regular, se mantiene funcional. Tiene dificultades logística de suministro , se menciona perdidas $50 millones por vencimiento en buque. Se encuentra en proceso de incorporación un sistema fotovoltaico de 18 paneles, con potencia nominal estimada entre 10 y 12 kWp, a cargo de Solari Energía, cuya instalación está programada para finales de noviembre de 2026. Tiene instalado led en todo el establecimiento, realiza mantenimiento preventivo de los equipos de frío, coordina con especialista de la Armada para mantenimiento, por confianza y certezas del servicio.
 
 ### 1.3 Equipos y procesos observados
 
-_No se registró un inventario detallado de equipos._
+| Equipo | Cantidad | Potencia | Uso diario | Estado | Observación |
+| --- | ---: | ---: | ---: | --- | --- |
+| — | 1 | — | — | bueno | — |
 
 ### 1.4 Evaluación energética global
 
@@ -85,17 +115,127 @@ _No se registró un inventario detallado de equipos._
 | Tarifas y potencia | No evaluado | No evaluado |
 | **Puntaje global** | **No evaluado** | **No evaluado** |
 
+**Observaciones generales de la visita:** El sistema se encuentra en etapa planificada. La evaluación de desempeño se actualizará con datos medidos después de la puesta en marcha.
+
+### 1.5 Análisis de energías renovables
+
+#### Estado actual
+
+El establecimiento cuenta con un proyecto fotovoltaico en estado **planificado**: 18 paneles · 10–12 kWp · instalador Solari Energía · fecha de instalación 30 de noviembre de 2026 · conexión autoconsumo.
+
+Instalación programada para finales de noviembre de 2026.
+
+La visita identificó **1 hallazgo** y **1 recomendación** en materia de energías renovables.
+
+#### Evaluación del sistema fotovoltaico
+
+Los indicadores se calculan con la generación medida y, cuando no existe medición, con el autoconsumo estimado a partir del consumo diurno.
+
+##### Supuestos de la evaluación
+
+| Parámetro | Valor |
+| --- | ---: |
+| Consumo mensual | 6.550 kWh/mes |
+| Consumo diurno | 60% |
+| Horas de sol pico | 4,9 h/día |
+| Performance ratio | 0.80 |
+| Precio energía | $465/kWh |
+| Precio inyección | $0/kWh |
+| Factor CO₂ | 0,4 kg/kWh |
+
+##### Indicadores de desempeño
+
+| Indicador | Resultado |
+| --- | ---: |
+| Potencia considerada | 11 kWp (rango 10–12 kWp) |
+| Generación medida | 1.000 kWh/mes |
+| Generación anual | 12.000 kWh/año |
+| Autoconsumo | 1.000 kWh/mes (100.0%) |
+| Cobertura demanda total | 15.3% |
+| Cobertura demanda diurna | 25.4% |
+| Excedentes | 0 kWh/mes |
+| Ahorro estimado | $465.000/mes · $5.580.000/año |
+| CO₂ evitado | 400 kg/mes |
+| Rendimiento específico | 90,9 kWh/kWp/mes |
+| Performance ratio medido | 0.62 |
+
+#### Oportunidades ERNC identificadas en la visita
+
+**Hallazgos**
+
+- **ERNC-01 · Sin evaluación de autoconsumo con energías renovables** — Impacto medio · Energías renovables. No se ha evaluado la incorporación de generación solar fotovoltaica u otra fuente renovable para autoconsumo, pese a disponer de cubierta o superficie útil y de un consumo eléctrico diurno relevante. **Evidencia:** La generación distribuida puede reducir la dependencia de la red y estabilizar costos. Un estudio de prefactibilidad permite dimensionar la solución antes de invertir.
+
+**Recomendaciones**
+
+- **REC-ERNC-01 · Estudio e instalación de autoconsumo solar fotovoltaico** — Prioridad media · Inversión: alto costo · Plazo: Largo plazo (6-12 meses). Realizar una prefactibilidad técnica y económica considerando cubierta disponible, curva de consumo y normativa de generación distribuida. Dimensionar el sistema para maximizar el autoconsumo. **Ahorro estimado:** 20-50% del consumo eléctrico diurno.
+
+#### Oportunidades de optimización y seguimiento
+
+- Evaluar una ampliación del sistema o una segunda etapa si la superficie disponible y la curva de consumo lo permiten.
+- Revisar sombreamiento, limpieza de paneles, orientación e inclinación, y el estado del inversor para recuperar el rendimiento esperado.
+- Investigar la desviación entre generación medida y estimada, verificando disponibilidad, suciedad y posibles fallas del sistema.
+- Solicitar prefactibilidad técnica y económica de las medidas ERNC identificadas, incluyendo cotizaciones y verificación de requisitos de conexión o permisos.
+- Validar el recurso disponible y la superficie utilizable antes de comprometer la inversión.
+
+#### Indicadores de seguimiento
+
+- Registrar mensualmente la generación del sistema y, si aplica, la energía inyectada a la red.
+- Comparar la generación medida con la estimada y analizar desviaciones superiores al 10%.
+- Medir el consumo total y el consumo diurno para recalcular autoconsumo y cobertura.
+- Revisar el performance ratio y la disponibilidad del sistema, incluyendo limpieza y mantenciones.
+- Actualizar el ahorro económico y el CO₂ evitado con los precios y factores vigentes.
+
 ## 2. Principales falencias detectadas
 
-No se registraron hallazgos en esta visita. Se recomienda mantener el monitoreo y revisar la pauta en la próxima inspección.
+Se identificaron 1 hallazgos. La distribución por impacto es: crítico: 0, alto: 0, medio: 1, bajo: 0.
+
+### Distribución por energético
+
+| Energético | Hallazgos |
+| --- | ---: |
+| Electricidad | 1 |
+
+### Energías renovables
+
+#### ERNC-01 · Sin evaluación de autoconsumo con energías renovables
+
+**Impacto:** Medio · **Energético:** Electricidad · **Categoría:** Energías renovables
+
+No se ha evaluado la incorporación de generación solar fotovoltaica u otra fuente renovable para autoconsumo, pese a disponer de cubierta o superficie útil y de un consumo eléctrico diurno relevante.
+
+**Justificación técnica:** La generación distribuida puede reducir la dependencia de la red y estabilizar costos. Un estudio de prefactibilidad permite dimensionar la solución antes de invertir.
+
+**Recomendación asociada:** REC-ERNC-01
 
 ## 3. Recomendaciones de mejora energética
 
-No se seleccionaron recomendaciones para esta visita.
+Las 1 medidas propuestas se ordenan por nivel de inversión. La prioridad considera el impacto potencial, el costo y la facilidad de implementación.
+
+### Alto costo
+
+#### REC-ERNC-01 · Estudio e instalación de autoconsumo solar fotovoltaico
+
+**Prioridad:** Media · **Inversión:** Alto costo · **Complejidad:** Alta · **Ahorro estimado:** 20-50% del consumo eléctrico diurno · **Plazo:** Largo plazo (6-12 meses)
+
+Realizar una prefactibilidad técnica y económica considerando cubierta disponible, curva de consumo y normativa de generación distribuida. Dimensionar el sistema para maximizar el autoconsumo.
+
+**Beneficio esperado:** Reduce la dependencia de la red, estabiliza costos y mejora el posicionamiento de sostenibilidad del negocio.
+
+**Atiende hallazgos:** ERNC-01
+
+### Vista por uso final
+
+| Uso final | Recomendaciones | Inversión predominante |
+| --- | --- | --- |
+| Otros usos | Estudio e instalación de autoconsumo solar fotovoltaico | Alta |
 
 ## 4. Plan de acción sugerido
 
-No hay acciones priorizadas para esta visita.
+El siguiente plan ordena las medidas según horizonte de implementación. Se sugiere revisar los avances en cada visita de seguimiento y ajustar las metas según los resultados medidos.
+
+| Prioridad | Acción | Inversión | Plazo | Ahorro referencial |
+| --- | --- | --- | --- | --- |
+| Media | Estudio e instalación de autoconsumo solar fotovoltaico | Alto costo | Largo plazo (6-12 meses) | 20-50% del consumo eléctrico diurno |
 
 ### Metas y seguimiento recomendado
 
@@ -105,7 +245,14 @@ No hay acciones priorizadas para esta visita.
 - Mantener un registro de mantenciones preventivas y de temperaturas de operación de equipos de frío.
 - Documentar las acciones implementadas y sus resultados para consolidar la mejora continua.
 
-**Próxima visita sugerida:** 30 de noviembre de 2026
+### Acuerdos y próximos pasos
+
+- Realizar el dimensionamiento y la evaluación del desempeño energético del sistema fotovoltaico de 18 paneles y 10-12 kWp.
+- Estimar el aporte del sistema a la demanda eléctrica del establecimiento y determinar los porcentajes de autoconsumo.
+- Identificar oportunidades de optimización y establecer indicadores de seguimiento una vez que el sistema entre en operación.
+- Evaluar los beneficios económicos y energéticos de la inversión con datos de generación y facturación.
+
+**Próxima visita sugerida:** 15 de enero de 2027
 
 ## 5. Información complementaria
 
@@ -182,12 +329,12 @@ El puntaje global se calcula como el promedio simple de las 0 dimensiones evalua
 
 ### Antecedentes de la visita
 
-- **Fecha:** 03 de noviembre de 2026
+- **Fecha:** 10 de noviembre de 2026
 - **Asesor:** Carlos Campos
 - **Grado de consumo:** Relevante
 - **Clasificación global:** No evaluado
-- **Generado:** 03-11-2026, 1:53:57 p. m.
+- **Generado:** 10-11-2026, 10:27:06 a. m.
 
 ---
 
-Documento generado automáticamente por EE Mentor. Debe ser revisado y validado por el consultor energético antes de su entrega al cliente.
+Reporte de mentorías energéticas. Debe ser revisado y validado por el consultor energético antes de su entrega al cliente.

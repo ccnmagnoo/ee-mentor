@@ -11,7 +11,7 @@ comuna: Hanga Roa
 region: Valparaíso
 rubro: Almacén / minimarket
 version: 1
-generado: 2026-11-03T16:53:57.912Z
+generado: 2026-11-10T13:01:55.213Z
 puntaje_global: null
 clasificacion: No evaluado
 hallazgos: 0
@@ -19,6 +19,16 @@ recomendaciones: 0
 tags:
   - eficiencia-energetica
   - almacén-/-minimarket
+latitud: -27.1534956
+longitud: -109.4172031
+mapa_url: https://www.google.com/maps/place/Minimarket+Kaituoe/@-27.1534956,-109.4172031,316m/data=!3m1!1e3!4m6!3m5!1s0x9947fb047109f835:0x1fb2abfe75bd1fed!8m2!3d-27.1534923!4d-109.4166981!16s%2Fg%2F11fcrg2f6_?entry=tts&g_ep=EgoyMDI2MTEwMS4wIOC7DCoASAFQAw%3D%3D&skid=b366f417-2ae7-4f61-ad3d-0de7ddf5f59d
+fotovoltaica:
+  estado: planificado
+  proveedor: Solari Energía
+  paneles: 18
+  potencia_kwp: 11
+  potencia_kwp_min: 10
+  potencia_kwp_max: 12
 ---
 
 # Informe Técnico de Eficiencia Energética
@@ -28,6 +38,8 @@ tags:
 **Visita:** VIS-001 · **Fecha:** 03 de noviembre de 2026 · **Asesor:** Carlos Campos
 
 Rubro: Almacén / minimarket · Comuna: Hanga Roa · Región: Valparaíso · Superficie: 50 m² · Trabajadores: 5
+
+**Coordenadas:** -27.15350, -109.41720 (WGS84) · **Ubicación:** [Ver en mapa](https://www.google.com/maps/place/Minimarket+Kaituoe/@-27.1534956,-109.4172031,316m/data=!3m1!1e3!4m6!3m5!1s0x9947fb047109f835:0x1fb2abfe75bd1fed!8m2!3d-27.1534923!4d-109.4166981!16s%2Fg%2F11fcrg2f6_?entry=tts&g_ep=EgoyMDI2MTEwMS4wIOC7DCoASAFQAw%3D%3D&skid=b366f417-2ae7-4f61-ad3d-0de7ddf5f59d)
 
 ---
 
@@ -46,7 +58,7 @@ Para el desarrollo de sus operaciones dispone de una importante infraestructura 
 Respecto de sus instalaciones eléctricas, la empresa ha realizado de manera constante trabajos de mantenimiento y mejoras parciales. Si bien estas intervenciones presentan una calidad evaluada como regular, las instalaciones se mantienen operativas y funcionales para las necesidades actuales del establecimiento.
 Uno de los principales desafíos identificados corresponde a las dificultades logísticas asociadas al abastecimiento de productos en la isla. En este contexto, la empresa señala haber experimentado pérdidas cercanas a los $50 millones debido al vencimiento de mercaderías provocado por retrasos en el transporte marítimo.
 
-En materia de eficiencia energética y sostenibilidad, el establecimiento está gestionando la futura instalación de un sistema fotovoltaico de aproximadamente 15 kWp, compuesto por cerca de 30 paneles solares, iniciativa que contribuiría a disminuir el consumo de energía proveniente de la red eléctrica.
+En materia de eficiencia energética y sostenibilidad, el establecimiento se encuentra próximo a incorporar un sistema fotovoltaico de 18 paneles solares, con una potencia nominal estimada entre 10 y 12 kWp, a cargo de Solari Energía, cuya instalación está programada para finales de noviembre de 2026. La iniciativa contribuirá a disminuir el consumo de energía proveniente de la red eléctrica y a reducir los costos operacionales.
 
 Asimismo, se observa la implementación de diversas buenas prácticas de gestión energética. El establecimiento cuenta con iluminación LED en la totalidad de sus dependencias y realiza mantenimiento preventivo periódico de los equipos de refrigeración. Estas labores son coordinadas con un especialista de la Armada, proveedor de confianza para la empresa, lo que permite asegurar la continuidad operativa y el adecuado funcionamiento de los sistemas.
 
@@ -63,7 +75,7 @@ Ubicación https://maps.app.goo.gl/NfASY1sig6rwK5uo9
 
 **Principales usos finales:** Iluminación, Refrigeración y congelación, Climatización y ventilación.
 
-**Observaciones de la empresa:** Tiene inicio de actividades en el servicio de SII y patentes al día. Venta de abarrotes, artículos de aseo, líquidos, cigarros, venta de congelados carne, hamburguesas, 4 congeladores, 6 vc cooler. Cuenta con 2 contenedores para almacenamiento. Constantemente a realizado mantenimiento e instalaciones eléctricos, son en términos parciales y aprecia que es de una calidad regular, se mantiene funcional. Tiene dificultades logística de suministro , se menciona perdidas $50 millones por vencimiento en buque. Está gestiones para la instalación de paneles fotovoltaico, 30 paneles , aprox. 15kWp. Tiene instalado led en todo el establecimiento, realiza mantenimiento preventivo de los equipos de frío, coordina con especialista de la Armada para mantenimiento, por confianza y certezas del servicio. Ubicación https://maps.app.goo.gl/NfASY1sig6rwK5uo9
+**Observaciones de la empresa:** Tiene inicio de actividades en el servicio de SII y patentes al día. Venta de abarrotes, artículos de aseo, líquidos, cigarros, venta de congelados carne, hamburguesas, 4 congeladores, 6 vc cooler. Cuenta con 2 contenedores para almacenamiento. Constantemente a realizado mantenimiento e instalaciones eléctricos, son en términos parciales y aprecia que es de una calidad regular, se mantiene funcional. Tiene dificultades logística de suministro , se menciona perdidas $50 millones por vencimiento en buque. Se encuentra en proceso de incorporación un sistema fotovoltaico de 18 paneles, con potencia nominal estimada entre 10 y 12 kWp, a cargo de Solari Energía, cuya instalación está programada para finales de noviembre de 2026. Tiene instalado led en todo el establecimiento, realiza mantenimiento preventivo de los equipos de frío, coordina con especialista de la Armada para mantenimiento, por confianza y certezas del servicio.
 
 ### 1.3 Equipos y procesos observados
 
@@ -84,6 +96,29 @@ _No se registró un inventario detallado de equipos._
 | Gestión energética | No evaluado | No evaluado |
 | Tarifas y potencia | No evaluado | No evaluado |
 | **Puntaje global** | **No evaluado** | **No evaluado** |
+
+### 1.5 Análisis de energías renovables
+
+#### Estado actual
+
+El establecimiento cuenta con un proyecto fotovoltaico en estado **planificado**: 18 paneles · 10–12 kWp · instalador Solari Energía · fecha de instalación 30 de noviembre de 2026 · conexión autoconsumo.
+
+Instalación programada para finales de noviembre de 2026.
+
+#### Evaluación del sistema fotovoltaico
+
+No se registraron los parámetros mínimos para estimar la generación y el aporte a la demanda. Completa la evaluación fotovoltaica de la visita para generar los indicadores.
+
+#### Oportunidades de optimización y seguimiento
+
+- Realizar una prefactibilidad de energías renovables para el establecimiento, considerando consumo eléctrico, superficie disponible y usos finales.
+
+#### Indicadores de seguimiento
+
+- Registrar el avance de las medidas ERNC identificadas y las cotizaciones recibidas.
+- Medir el consumo y la generación antes y después de la implementación.
+- Documentar supuestos, costos de inversión y ahorros verificados.
+- Revisar los requisitos normativos y de conexión aplicables antes de la instalación.
 
 ## 2. Principales falencias detectadas
 
@@ -186,8 +221,8 @@ El puntaje global se calcula como el promedio simple de las 0 dimensiones evalua
 - **Asesor:** Carlos Campos
 - **Grado de consumo:** Relevante
 - **Clasificación global:** No evaluado
-- **Generado:** 03-11-2026, 1:53:57 p. m.
+- **Generado:** 10-11-2026, 10:01:55 a. m.
 
 ---
 
-Documento generado automáticamente por EE Mentor. Debe ser revisado y validado por el consultor energético antes de su entrega al cliente.
+Reporte de mentorías energéticas. Debe ser revisado y validado por el consultor energético antes de su entrega al cliente.

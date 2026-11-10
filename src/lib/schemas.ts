@@ -187,6 +187,33 @@ export const CONTROL_TEMPERATURA_ENUM = z.enum(
   ],
 );
 
+export const ESTADOS_SISTEMA_FV = {
+  planificado: 'Planificado',
+  en_instalacion: 'En instalación',
+  operativo: 'Operativo',
+  no_aplica: 'No aplica',
+} as const;
+export const ESTADO_SISTEMA_FV_ENUM = z.enum(
+  Object.keys(ESTADOS_SISTEMA_FV) as [
+    keyof typeof ESTADOS_SISTEMA_FV,
+    ...(keyof typeof ESTADOS_SISTEMA_FV)[],
+  ],
+);
+
+export const TIPOS_CONEXION_FV = {
+  autoconsumo: 'Autoconsumo',
+  netbilling: 'Netbilling / inyección a red',
+  off_grid: 'Aislado (off-grid)',
+  hibrido: 'Híbrido con almacenamiento',
+  no_definido: 'No definido',
+} as const;
+export const TIPO_CONEXION_FV_ENUM = z.enum(
+  Object.keys(TIPOS_CONEXION_FV) as [
+    keyof typeof TIPOS_CONEXION_FV,
+    ...(keyof typeof TIPOS_CONEXION_FV)[],
+  ],
+);
+
 export const SECCIONES = {
   iluminacion: 'Iluminación',
   refrigeracion: 'Refrigeración',
@@ -281,6 +308,78 @@ const corréo = z
   .union([z.literal(''), z.email('Correo electrónico inválido')])
   .default('');
 
+function numeroConDefault(porDefecto: number, min: number, max: number) {
+  return z.preprocess(
+    (v) => (v === '' || v === null || v === undefined ? undefined : v),
+    z.coerce.number().min(min).max(max).default(porDefecto),
+  );
+}
+
+/* ------------------------------------------------------------------ */
+/* Sistema fotovoltaico                                                */
+/* ------------------------------------------------------------------ */
+
+export const SistemaFotovoltaicoSchema = z.preprocess(
+  (v) => v ?? {},
+  z
+    .object({
+      estado: ESTADO_SISTEMA_FV_ENUM.default('no_aplica'),
+      proveedor: str,
+      paneles: int,
+      potencia_kwp: num,
+      potencia_kwp_min: num,
+      potencia_kwp_max: num,
+      fecha_instalacion: z.union([z.literal(''), fecha]).default(''),
+      tipo_conexion: TIPO_CONEXION_FV_ENUM.default('no_definido'),
+      almacenamiento_kwh: num,
+      observaciones: text,
+    })
+    .superRefine((data, ctx) => {
+      if (data.potencia_kwp_min > 0 && data.potencia_kwp_max > 0 && data.potencia_kwp_min > data.potencia_kwp_max) {
+        ctx.addIssue({
+          code: 'custom',
+          path: ['potencia_kwp_max'],
+          message: 'La potencia máxima debe ser mayor o igual a la mínima.',
+        });
+        return;
+      }
+      if (data.potencia_kwp > 0 && data.potencia_kwp_min > 0 && data.potencia_kwp < data.potencia_kwp_min) {
+        ctx.addIssue({
+          code: 'custom',
+          path: ['potencia_kwp'],
+          message: 'La potencia considerada no puede ser menor que la mínima.',
+        });
+      }
+      if (data.potencia_kwp > 0 && data.potencia_kwp_max > 0 && data.potencia_kwp > data.potencia_kwp_max) {
+        ctx.addIssue({
+          code: 'custom',
+          path: ['potencia_kwp'],
+          message: 'La potencia considerada no puede ser mayor que la máxima.',
+        });
+      }
+    }),
+);
+
+export const EvaluacionFotovoltaicaSchema = z.preprocess(
+  (v) => v ?? {},
+  z.object({
+    consumo_mensual_kwh: num,
+    consumo_diurno_pct: numeroConDefault(50, 0, 100),
+    horas_sol_pico: numeroConDefault(0, 0, 12),
+    performance_ratio: numeroConDefault(0.8, 0, 1.5),
+    generacion_medida_kwh: num,
+    autoconsumo_medido_kwh: num,
+    excedentes_medidos_kwh: num,
+    precio_kwh: num,
+    precio_inyeccion_kwh: num,
+    factor_co2_kg_kwh: numeroConDefault(0.4, 0, 10),
+    observaciones: text,
+  }),
+);
+
+export type SistemaFotovoltaico = z.infer<typeof SistemaFotovoltaicoSchema>;
+export type EvaluacionFotovoltaica = z.infer<typeof EvaluacionFotovoltaicaSchema>;
+
 function seccion<T extends z.ZodRawShape>(shape: T) {
   const schema = z.object({
     puntaje: z.coerce.number().int().min(0).max(5).default(0),
@@ -310,6 +409,7 @@ const EmpresaBaseObjectSchema = z.object({
   mapa_url: optionalMapUrl,
   latitud: coordenada(-90, 90, 'La latitud'),
   longitud: coordenada(-180, 180, 'La longitud'),
+  sistema_fotovoltaico: SistemaFotovoltaicoSchema,
 });
 
 export const EmpresaBaseSchema = EmpresaBaseObjectSchema.superRefine((data, ctx) => {
@@ -451,6 +551,7 @@ export const VisitaBodySchema = z.object({
   energeticos: z.array(EnergeticoSchema).default([]),
   usos_finales: z.array(USO_FINAL_ENUM).default([]),
   equipos: z.array(EquipoSchema).default([]),
+  evaluacion_fotovoltaica: EvaluacionFotovoltaicaSchema,
   secciones: SeccionesSchema,
   hallazgos: z.array(HallazgoSeleccionadoSchema).default([]),
   recomendaciones: z.array(RecomendacionSeleccionadaSchema).default([]),

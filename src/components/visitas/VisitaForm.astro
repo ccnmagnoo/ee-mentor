@@ -5,6 +5,7 @@ import {
   CATEGORIAS,
   ENERGOS,
   ESTADOS_EQUIPO,
+  ESTADOS_SISTEMA_FV,
   GRADOS_CONSUMO,
   MANTENCIONES,
   SeccionesSchema,
@@ -47,6 +48,9 @@ const energeticos: Energetico[] = visita?.energeticos.length
   ? visita.energeticos
   : [{ tipo: 'electricidad', unidad: 'kWh/mes', observacion: '' }];
 const equipos = visita?.equipos ?? [];
+const fv = visita?.evaluacion_fotovoltaica;
+const sistemaFv = empresa.sistema_fotovoltaico;
+const tieneSistemaFv = sistemaFv.estado !== 'no_aplica';
 
 const hallazgosSeleccionados = new Map(
   (visita?.hallazgos ?? []).map((item) => [item.hallazgo_id, item.justificacion]),
@@ -253,6 +257,82 @@ const usosSeleccionados = new Set(visita?.usos_finales ?? []);
           ))}
         </div>
         {equipos.length === 0 && <p class="help mt-2">Aún no se registran equipos. Agrega los relevantes para el diagnóstico.</p>}
+      </div>
+    </div>
+  </section>
+
+  <section class="card overflow-hidden">
+    <div class="section-heading">
+      <span class="step-number">FV</span>
+      <div>
+        <h2 class="fieldset-title">Evaluación fotovoltaica</h2>
+        <p class="text-xs text-slate-500">Dimensionamiento y desempeño esperado del sistema. Completa los datos medidos cuando esté operativo.</p>
+      </div>
+    </div>
+    <div class="space-y-4 p-5 sm:p-6">
+      {tieneSistemaFv ? (
+        <div class="rounded-lg border border-brand-100 bg-brand-50/50 px-3 py-2 text-xs text-brand-900">
+          Sistema registrado: {sistemaFv.paneles} paneles · {sistemaFv.potencia_kwp_min || sistemaFv.potencia_kwp}–{sistemaFv.potencia_kwp_max || sistemaFv.potencia_kwp} kWp · {ESTADOS_SISTEMA_FV[sistemaFv.estado]}
+          {sistemaFv.proveedor ? ` · ${sistemaFv.proveedor}` : ''}
+        </div>
+      ) : (
+        <div class="rounded-lg border border-slate-200 bg-slate-50 px-3 py-2 text-xs text-slate-500">
+          La empresa no tiene un sistema fotovoltaico registrado. Puedes completar esta evaluación si existe un proyecto en análisis.
+        </div>
+      )}
+
+      <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <div>
+          <label class="label" for="fv_consumo">Consumo mensual (kWh)</label>
+          <input id="fv_consumo" name="evaluacion_fotovoltaica.consumo_mensual_kwh" type="number" min="0" step="0.01" class="input" value={fv?.consumo_mensual_kwh ?? 0} />
+          <p class="help">Si se deja en 0, se usa el consumo eléctrico de la visita.</p>
+        </div>
+        <div>
+          <label class="label" for="fv_diurno">Consumo diurno (%)</label>
+          <input id="fv_diurno" name="evaluacion_fotovoltaica.consumo_diurno_pct" type="number" min="0" max="100" step="1" class="input" value={fv?.consumo_diurno_pct ?? 50} />
+          <p class="help">Porcentaje del consumo total que ocurre en horas con generación solar.</p>
+        </div>
+        <div>
+          <label class="label" for="fv_hsp">Horas de sol pico (h/día)</label>
+          <input id="fv_hsp" name="evaluacion_fotovoltaica.horas_sol_pico" type="number" min="0" max="12" step="0.1" class="input" value={fv?.horas_sol_pico ?? 0} />
+          <p class="help">Consulta el Explorador Solar para el valor de la comuna.</p>
+        </div>
+        <div>
+          <label class="label" for="fv_pr">Performance ratio</label>
+          <input id="fv_pr" name="evaluacion_fotovoltaica.performance_ratio" type="number" min="0" max="1.5" step="0.01" class="input" value={fv?.performance_ratio ?? 0.8} />
+          <p class="help">Valor típico entre 0,75 y 0,85.</p>
+        </div>
+        <div>
+          <label class="label" for="fv_generacion">Generación medida (kWh/mes)</label>
+          <input id="fv_generacion" name="evaluacion_fotovoltaica.generacion_medida_kwh" type="number" min="0" step="0.01" class="input" value={fv?.generacion_medida_kwh ?? 0} />
+          <p class="help">Dejar en 0 mientras el sistema no esté operativo.</p>
+        </div>
+        <div>
+          <label class="label" for="fv_autoconsumo">Autoconsumo medido (kWh/mes)</label>
+          <input id="fv_autoconsumo" name="evaluacion_fotovoltaica.autoconsumo_medido_kwh" type="number" min="0" step="0.01" class="input" value={fv?.autoconsumo_medido_kwh ?? 0} />
+        </div>
+        <div>
+          <label class="label" for="fv_excedentes">Excedentes medidos (kWh/mes)</label>
+          <input id="fv_excedentes" name="evaluacion_fotovoltaica.excedentes_medidos_kwh" type="number" min="0" step="0.01" class="input" value={fv?.excedentes_medidos_kwh ?? 0} />
+        </div>
+        <div>
+          <label class="label" for="fv_precio">Precio energía (CLP/kWh)</label>
+          <input id="fv_precio" name="evaluacion_fotovoltaica.precio_kwh" type="number" min="0" step="0.01" class="input" value={fv?.precio_kwh ?? 0} />
+          <p class="help">Si se deja en 0, se calcula desde el costo y consumo eléctrico.</p>
+        </div>
+        <div>
+          <label class="label" for="fv_inyeccion">Precio inyección (CLP/kWh)</label>
+          <input id="fv_inyeccion" name="evaluacion_fotovoltaica.precio_inyeccion_kwh" type="number" min="0" step="0.01" class="input" value={fv?.precio_inyeccion_kwh ?? 0} />
+        </div>
+        <div>
+          <label class="label" for="fv_co2">Factor CO₂ (kg/kWh)</label>
+          <input id="fv_co2" name="evaluacion_fotovoltaica.factor_co2_kg_kwh" type="number" min="0" step="0.01" class="input" value={fv?.factor_co2_kg_kwh ?? 0.4} />
+        </div>
+      </div>
+
+      <div>
+        <label class="label" for="fv_obs">Observaciones de la evaluación</label>
+        <textarea id="fv_obs" name="evaluacion_fotovoltaica.observaciones" rows="3" class="input" placeholder="Supuestos, fuente de los datos, condiciones particulares del sistema…">{fv?.observaciones ?? ''}</textarea>
       </div>
     </div>
   </section>
