@@ -1,0 +1,31 @@
+nombre = "Henua Iti"
+rut = ""
+direccion = "Pia Taro"
+comuna = "Hanga Roa"
+region = "Valparaíso"
+rubro = "Cabañas"
+contacto = ""
+telefono = ""
+correo = ""
+trabajadores = 0
+superficie_m2 = 0
+observaciones = "Pendiente"
+mapa_url = "https://www.google.com/maps/place/Caba%C3%B1as+Henua+Iti/@-27.1516837,-109.4131228,332m/data=!3m1!1e3!4m9!3m8!1s0x9947fa5835672d9d:0xe3f5c5342900ea65!5m2!4m1!1i2!8m2!3d-27.1513338!4d-109.4123436!16s%2Fg%2F11btv67wqp?entry=ttu&g_ep=EgoyMDI2MTEwNC4wIKXMDSoASAFQAw%3D%3D"
+latitud = -27.1516837
+longitud = -109.4131228
+schema_version = 1
+id = "EMP-013"
+created_at = "2026-11-10T17:19:56.971Z"
+updated_at = "2026-11-10T17:20:09.850Z"
+
+[sistema_fotovoltaico]
+estado = "planificado"
+proveedor = ""
+paneles = 0
+potencia_kwp = 0
+potencia_kwp_min = 0
+potencia_kwp_max = 0
+fecha_instalacion = ""
+tipo_conexion = "no_definido"
+almacenamiento_kwh = 0
+observaciones = ""
