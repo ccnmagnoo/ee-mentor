@@ -1,0 +1,31 @@
+nombre = "Bounty Kai & Bar"
+rut = ""
+direccion = "Te Pito o Te Henua s /n, 2770000 Hanga Roa, Isla de Pascua, Valparaíso"
+comuna = "Hanga Roa"
+region = "Valparaíso"
+rubro = "Restaurante"
+contacto = "Mauricio Adams"
+telefono = "+5698408733"
+correo = "bountykaibar@gmail.com"
+trabajadores = 0
+superficie_m2 = 0
+observaciones = "Restaurant cocina enfocada en gastronomía local, con énfasis en productos locales del territorio insular y coctelería. Principal clientela es enfocada en turistas y tiene servicios de bar en horarios nocturnos. La construcción es de material liviano de madera y con grandes vanos con ventilación natural."
+mapa_url = "https://www.google.com/maps/place/Bounty+Kai+%26+Bar/@-27.1477526,-109.4302202,1003m/data=!3m2!1e3!4b1!4m6!3m5!1s0x9947fb007cdec77b:0xee0734ac9bb01821!8m2!3d-27.1477574!4d-109.4276453!16s%2Fg%2F11w9rlgcb2?entry=ttu&g_ep=EgoyMDI2MTEwOC4wIKXMDSoASAFQAw%3D%3D"
+latitud = -27.1477526
+longitud = -109.4302202
+schema_version = 1
+id = "EMP-014"
+created_at = "2026-11-11T11:38:45.808Z"
+updated_at = "2026-11-11T15:22:48.446Z"
+
+[sistema_fotovoltaico]
+estado = "no_aplica"
+proveedor = ""
+paneles = 0
+potencia_kwp = 0
+potencia_kwp_min = 0
+potencia_kwp_max = 0
+fecha_instalacion = ""
+tipo_conexion = "no_definido"
+almacenamiento_kwh = 0
+observaciones = ""

@@ -1,0 +1,164 @@
+fecha = "2026-11-11"
+asesor = "Carlos Campos"
+grado_consumo = "moderado"
+descripcion_perfil = ""
+usos_finales = [ "iluminacion", "refrigeracion", "coccion" ]
+hallazgos = []
+recomendaciones = []
+acuerdos = []
+proxima_visita = "2026-12-07"
+observaciones = ""
+schema_version = 1
+id = "VIS-001"
+empresa_id = "EMP-014"
+created_at = "2026-11-11T15:27:51.609Z"
+updated_at = "2026-11-11T15:39:56.692Z"
+
+[[energeticos]]
+tipo = "electricidad"
+unidad = "kWh/mes"
+costo = 1500000
+observacion = "compartido con Hotel y otras 2 tiendas librería y souvenir"
+
+[[energeticos]]
+tipo = "glp"
+consumo = 45
+unidad = "kg/mes"
+costo = 125000
+observacion = "1 balon al mes"
+
+[[equipos]]
+nombre = "extractores"
+cantidad = 1
+potencia_w = 300
+horas_dia = 8
+estado = "bueno"
+observacion = ""
+
+[[equipos]]
+nombre = "freidora eléctrica"
+cantidad = 1
+potencia_w = 2500
+horas_dia = 8
+estado = "bueno"
+observacion = ""
+
+[[equipos]]
+nombre = "visi cooler"
+cantidad = 3
+potencia_w = 350
+horas_dia = 24
+estado = "bueno"
+observacion = "simples, 2 año"
+
+[[equipos]]
+nombre = "congeladores"
+cantidad = 4
+potencia_w = 249
+estado = "bueno"
+observacion = "250lt. 150lt"
+
+[[equipos]]
+nombre = "refrigerador dual"
+cantidad = 1
+potencia_w = 350
+horas_dia = 24
+estado = "bueno"
+observacion = "doble función"
+
+[[equipos]]
+nombre = "luminarias"
+cantidad = 30
+potencia_w = 9
+horas_dia = 12
+estado = "bueno"
+observacion = ""
+
+[[equipos]]
+nombre = "cocina industrial"
+cantidad = 1
+potencia_w = 4999
+horas_dia = 8
+estado = "bueno"
+observacion = "6 quemadores "
+
+[evaluacion_fotovoltaica]
+consumo_mensual_kwh = 0
+consumo_diurno_pct = 50
+horas_sol_pico = 0
+performance_ratio = 0.8
+generacion_medida_kwh = 0
+autoconsumo_medido_kwh = 0
+excedentes_medidos_kwh = 0
+precio_kwh = 0
+precio_inyeccion_kwh = 0
+factor_co2_kg_kwh = 0.4
+observaciones = ""
+
+[secciones.iluminacion]
+puntaje = 0
+observaciones = ""
+tecnologia = "no_evaluado"
+estado = "no_evaluado"
+horas_uso_diarias = 0
+
+[secciones.refrigeracion]
+puntaje = 0
+observaciones = ""
+cantidad_equipos = 0
+antiguedad_anios = 0
+mantencion = "no_evaluado"
+
+[secciones.congelacion]
+puntaje = 0
+observaciones = ""
+cantidad_equipos = 0
+antiguedad_anios = 0
+estado = "no_evaluado"
+
+[secciones.climatizacion]
+puntaje = 0
+observaciones = ""
+tecnologia = ""
+mantenciones = "no_evaluado"
+control_temperatura = "no_evaluado"
+
+[secciones.acs]
+puntaje = 0
+observaciones = ""
+tecnologia = ""
+fuente_energetica = "electricidad"
+horarios = ""
+
+[secciones.coccion]
+puntaje = 3
+observaciones = ""
+equipos_principales = "Cocina Industrial"
+combustible = "electricidad"
+
+[secciones.motores]
+puntaje = 0
+observaciones = ""
+tipo = ""
+estado = "no_evaluado"
+mantencion = "no_evaluado"
+
+[secciones.envolvente]
+puntaje = 0
+observaciones = ""
+ventanas = "no_evaluado"
+puertas = "no_evaluado"
+infiltraciones = "no_evaluado"
+aislacion = "no_evaluado"
+
+[secciones.gestion]
+puntaje = 1
+observaciones = "No cuenta con monitoreo, por se cuenta compartida."
+nivel = "basica"
+monitoreo = false
+responsable = "Mauricio"
+
+[secciones.tarifas]
+puntaje = 0
+observaciones = ""
+tarifa_actual = ""
