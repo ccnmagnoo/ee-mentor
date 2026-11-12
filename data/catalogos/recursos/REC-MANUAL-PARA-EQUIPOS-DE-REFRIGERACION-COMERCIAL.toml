@@ -1,0 +1,8 @@
+id = "REC-MANUAL-PARA-EQUIPOS-DE-REFRIGERACION-COMERCIAL"
+categoria = "eficiencia_energetica"
+nombre = "Manual para Equipos de Refrigeración Comercial"
+descripcion = "Manual de buenas prácticas de operación y mantenimiento de equipos de refrigeración comercial dirigido para administradores, encargados de locales comerciales, personal de mantención y operadores. Aplicable a equipos tipo Visi coolers, refrigeradores comerciales, congeladores horizontales y verticales, vitrinas refrigeradas."
+url = "https://crcamposn.notion.site/Manual-para-equipos-de-refrigeraci-n-416938ab020580039dddf3a96b2ee238?pvs=74"
+orden = 90
+activo = true
+schema_version = 1

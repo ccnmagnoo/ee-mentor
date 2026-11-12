@@ -3,16 +3,14 @@ asesor = "Carlos Campos"
 grado_consumo = "moderado"
 descripcion_perfil = ""
 usos_finales = [ "iluminacion", "refrigeracion", "coccion" ]
-hallazgos = []
-recomendaciones = []
-acuerdos = []
+acuerdos = [ "Se acuerda realizar el levantamiento y análisis de la información disponible con el fin de elaborar un informe técnico que incluya la caracterización energética del establecimiento, la identificación de oportunidades de mejora y recomendaciones para fortalecer la gestión de la energía. Una vez elaborado, el documento será sometido a una instancia de revisión conjunta con el representante del negocio, con el propósito de validar antecedentes, complementar información relevante y ajustar las recomendaciones según la realidad operacional del local. Adicionalmente, se incorporará la evaluación de un sistema fotovoltaico existente, considerando parámetros básicos de desempeño, condiciones de operación y potencial aporte a la reducción del consumo energético de la instalación, con el objetivo de determinar preliminarmente su nivel de performance y posibles acciones de optimización." ]
 proxima_visita = "2026-12-07"
-observaciones = ""
+observaciones = "La visita técnica fue realizada de manera telemática, permitiendo recopilar antecedentes generales de la operación, equipamiento y patrones de consumo energético del establecimiento. No obstante, debido a las limitaciones propias de esta modalidad, algunos aspectos requieren ser verificados directamente en terreno, entre ellos las características de las instalaciones eléctricas, la identificación de cargas relevantes, las condiciones reales de operación de los equipos y la factibilidad de implementar sistemas de medición mediante remarcadores o un nuevo medidor independiente. Por lo anterior, se recomienda efectuar una visita presencial en una etapa posterior para complementar el diagnóstico, validar la información recopilada y profundizar en las oportunidades de mejora identificadas."
 schema_version = 1
 id = "VIS-001"
 empresa_id = "EMP-014"
 created_at = "2026-11-11T15:27:51.609Z"
-updated_at = "2026-11-11T15:39:56.692Z"
+updated_at = "2026-11-12T14:33:16.105Z"
 
 [[energeticos]]
 tipo = "electricidad"
@@ -96,25 +94,25 @@ factor_co2_kg_kwh = 0.4
 observaciones = ""
 
 [secciones.iluminacion]
-puntaje = 0
-observaciones = ""
-tecnologia = "no_evaluado"
-estado = "no_evaluado"
-horas_uso_diarias = 0
+puntaje = 3
+observaciones = "Cuenta con 30 puntos de iluminación en el local, estos son en su mayoría para iluminación de espacios para el servicio de restaurant. Existen oportunidades de mejoramiento ya que no hay una normalización de los grados de iluminación en función del tipo y uso de los espacios, por lo que podría haber algunas optimizaciones de lugares críticos, como espacios de cocina y almacenamiento."
+tecnologia = "led"
+estado = "bueno"
+horas_uso_diarias = 12
 
 [secciones.refrigeracion]
-puntaje = 0
-observaciones = ""
-cantidad_equipos = 0
-antiguedad_anios = 0
-mantencion = "no_evaluado"
+puntaje = 3
+observaciones = "Cuenta con 3 visi cooler y un refrigerador, para almacenamiento de bebestibles, cocktelería y otros productos. Los equipos tiene menos de 2 años de antiguedad y cuenta con permanente chequeo por personal técnico especializado de la isla. Esto mantiene la operación a punto como equipos fundamentales para el desempeño del negocio. Otro aspecto que podría ser mejorable es la gestión del funcionamiento de los equipos considerando carga operativa por temporada y clima, por lo que hay posibles mejoras en la gestión eficiente de equipos de refrigeración."
+cantidad_equipos = 4
+antiguedad_anios = 2
+mantencion = "ocasional"
 
 [secciones.congelacion]
-puntaje = 0
-observaciones = ""
-cantidad_equipos = 0
-antiguedad_anios = 0
-estado = "no_evaluado"
+puntaje = 3
+observaciones = "Cuenta con 4 congeladores, equipos de eficiencia A y con menos de 2 años de operación. Cuentan con cuidados de limpieza y mantenimiento recurrente, realizado por profesionales especializados. Sin embargo no existe un seguimiento claro y trazable del mantenimiento y operación de cada uno por lo que se recomienda establecer lineamientos de gestión energética apropiada para el buen uso del equipamiento."
+cantidad_equipos = 4
+antiguedad_anios = 2
+estado = "bueno"
 
 [secciones.climatizacion]
 puntaje = 0
@@ -132,9 +130,9 @@ horarios = ""
 
 [secciones.coccion]
 puntaje = 3
-observaciones = ""
-equipos_principales = "Cocina Industrial"
-combustible = "electricidad"
+observaciones = "Cuenta con equipamiento de cocina para cocción de alimentos industrial, con su correspondiente extractores. Cuentan con revisión permanente para chequeo y limpieza de los mismos."
+equipos_principales = "Cocina Industrial, Freidora"
+combustible = "glp"
 
 [secciones.motores]
 puntaje = 0
@@ -152,13 +150,113 @@ infiltraciones = "no_evaluado"
 aislacion = "no_evaluado"
 
 [secciones.gestion]
-puntaje = 1
-observaciones = "No cuenta con monitoreo, por se cuenta compartida."
+puntaje = 2
+observaciones = "El negocio presenta una gestión energética básica, basada principalmente en el control reactivo de los consumos y costos asociados a la operación, sin contar con procedimientos formales, indicadores de desempeño energético ni herramientas que permitan un seguimiento sistemático de los principales usos de energía. La información disponible sobre los consumos es limitada y se obtiene a partir de la facturación general del suministro, lo que dificulta identificar oportunidades de ahorro, detectar desviaciones operacionales y evaluar el impacto de medidas de eficiencia energética."
 nivel = "basica"
 monitoreo = false
 responsable = "Mauricio"
 
 [secciones.tarifas]
-puntaje = 0
-observaciones = ""
-tarifa_actual = ""
+puntaje = 2
+observaciones = "La empresa comparte medidor con otros establecimientos turísticos, como el hotel y tiendas de recuerdos. Para una apropiada gestión de la energía se requiere que haya una mejora en el seguimiento de los consumos, en una primera instancia mediante re marcadores, o derechamente individualización de medidores a cada negocio. Sin embargo se detecta que hay una buena coordinación entre el propietario del inmueble/medidor y el dueño del local."
+tarifa_actual = "Tarifa Domiciliaria"
+
+[[hallazgos]]
+hallazgo_id = "HAL-CONG-01"
+justificacion = ""
+
+[[hallazgos]]
+hallazgo_id = "HAL-CONG-02"
+justificacion = ""
+
+[[hallazgos]]
+hallazgo_id = "HAL-CONG-03"
+justificacion = ""
+
+[[hallazgos]]
+hallazgo_id = "HAL-GEST-01"
+justificacion = ""
+
+[[hallazgos]]
+hallazgo_id = "HAL-GEST-02"
+justificacion = ""
+
+[[hallazgos]]
+hallazgo_id = "HAL-GEST-03"
+justificacion = ""
+
+[[hallazgos]]
+hallazgo_id = "HAL-GEST-04"
+justificacion = ""
+
+[[recomendaciones]]
+recomendacion_id = "REC-CONG-01"
+observacion = ""
+
+[[recomendaciones]]
+recomendacion_id = "REC-CONG-02"
+observacion = ""
+
+[[recomendaciones]]
+recomendacion_id = "REC-CONG-03"
+observacion = ""
+
+[[recomendaciones]]
+recomendacion_id = "REC-ERNC-01"
+prioridad = "media"
+observacion = ""
+
+[[recomendaciones]]
+recomendacion_id = "REC-GEST-01"
+prioridad = "media"
+observacion = ""
+
+[[recomendaciones]]
+recomendacion_id = "REC-GEST-02"
+observacion = ""
+
+[[recomendaciones]]
+recomendacion_id = "REC-GEST-03"
+prioridad = "media"
+observacion = ""
+
+[[recomendaciones]]
+recomendacion_id = "REC-GEST-04"
+prioridad = "alta"
+observacion = ""
+
+[[recomendaciones]]
+recomendacion_id = "REC-KB-GESTO-01"
+prioridad = "media"
+observacion = ""
+
+[[recomendaciones]]
+recomendacion_id = "REC-ILUM-02"
+observacion = ""
+
+[[recomendaciones]]
+recomendacion_id = "REC-ILUM-03"
+observacion = ""
+
+[[recomendaciones]]
+recomendacion_id = "REC-KB-REFR-01"
+prioridad = "media"
+observacion = ""
+
+[[recomendaciones]]
+recomendacion_id = "REC-REFR-01"
+prioridad = "media"
+observacion = ""
+
+[[recomendaciones]]
+recomendacion_id = "REC-REFR-02"
+prioridad = "alta"
+observacion = ""
+
+[[recomendaciones]]
+recomendacion_id = "REC-REFR-04"
+observacion = ""
+
+[[recomendaciones]]
+recomendacion_id = "REC-TAR-04"
+observacion = ""

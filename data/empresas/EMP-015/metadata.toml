@@ -1,0 +1,31 @@
+nombre = "Club Sandwich Restaurant"
+rut = ""
+direccion = "Te Pito o Te Henua s /n, 2770000 Hanga Roa, Isla de Pascua, Valparaíso"
+comuna = ""
+region = "Valparaíso"
+rubro = "Restaurante"
+contacto = ""
+telefono = ""
+correo = ""
+trabajadores = 0
+superficie_m2 = 0
+observaciones = "El restaurante Club Sandwich, ubicado en Hanga Roa, se caracteriza por la preparación platos rápidos. Desde una perspectiva técnica, este tipo de establecimiento presenta consumos energéticos asociados principalmente a la conservación de alimentos mediante equipos de refrigeración y congelación, la cocción y calentamiento de preparaciones mediante hornos, planchas, freidoras y microondas, así como el uso de sistemas de ventilación, iluminación, lavado y climatización de espacios. Debido al alto flujo operativo que requiere la preparación diaria de carnes, empanadas, sándwiches y otros alimentos frescos, la demanda energética se concentra especialmente en los equipos de cocina y refrigeración, representando las principales oportunidades para implementar medidas de eficiencia energética orientadas a reducir costos operacionales y optimizar el desempeño del local."
+mapa_url = "https://www.google.com/maps/place/Club+Sandwich/@-27.1468269,-109.4314372,324m/data=!3m1!1e3!4m10!1m2!2m1!1sSandwich+Club+Restaurant+hanga+roa!3m6!1s0x9947fbab95d0a8e5:0x9ade63559cfce364!8m2!3d-27.1470064!4d-109.4299664!15sCiJTYW5kd2ljaCBDbHViIFJlc3RhdXJhbnQgaGFuZ2Egcm9hWiQiInNhbmR3aWNoIGNsdWIgcmVzdGF1cmFudCBoYW5nYSByb2GSAQ1zYW5kd2ljaF9zaG9wmgEjQ2haRFNVaE5NRzluUzBWSlEwRm5TVVJRZWw5NWRXUkJFQUXgAQD6AQQIABBD!16s%2Fg%2F11cks08j0c?entry=ttu&g_ep=EgoyMDI2MTEwOS4wIKXMDSoASAFQAw%3D%3D"
+latitud = -27.1468269
+longitud = -109.4314372
+schema_version = 1
+id = "EMP-015"
+created_at = "2026-11-12T14:58:18.605Z"
+updated_at = "2026-11-12T15:12:55.519Z"
+
+[sistema_fotovoltaico]
+estado = "no_aplica"
+proveedor = ""
+paneles = 0
+potencia_kwp = 0
+potencia_kwp_min = 0
+potencia_kwp_max = 0
+fecha_instalacion = ""
+tipo_conexion = "no_definido"
+almacenamiento_kwh = 0
+observaciones = ""
