@@ -11,7 +11,7 @@ comuna: Hanga Roa
 region: Valparaíso
 rubro: Restaurante
 version: 1
-generado: 2026-11-12T14:52:01.075Z
+generado: 2026-11-13T11:26:43.648Z
 puntaje_global: 2.7
 clasificacion: Aceptable
 hallazgos: 7
@@ -488,7 +488,7 @@ El puntaje global se calcula como el promedio simple de las 6 dimensiones evalua
 - **Asesor:** Carlos Campos
 - **Grado de consumo:** Moderado
 - **Clasificación global:** Aceptable
-- **Generado:** 12-11-2026, 11:52:01 a. m.
+- **Generado:** 13-11-2026, 8:26:43 a. m.
 
 ---
 

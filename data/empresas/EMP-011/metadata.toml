@@ -16,16 +16,16 @@ longitud = -109.4274293
 schema_version = 1
 id = "EMP-011"
 created_at = "2026-11-10T13:57:28.133Z"
-updated_at = "2026-11-10T14:28:34.843Z"
+updated_at = "2026-11-13T11:47:01.181Z"
 
 [sistema_fotovoltaico]
-estado = "planificado"
+estado = "operativo"
 proveedor = "n/e"
 paneles = 4
-potencia_kwp = 2
-potencia_kwp_min = 2
-potencia_kwp_max = 2.5
+potencia_kwp = 2.4
+potencia_kwp_min = 1
+potencia_kwp_max = 2.4
 fecha_instalacion = ""
 tipo_conexion = "hibrido"
 almacenamiento_kwh = 1
-observaciones = "Evaluación de prefactibilidad de suministro energético mediante equipamiento FV híbrido con almacenamiento"
+observaciones = "Evaluación de prefactibilidad de suministro energético mediante equipamiento FV híbrido con almacenamiento. El usuario no cuenta con la especificación técnica, y se utiliza como suministro de respaldo para equipamiento de gestión de ventas del establecimiento."

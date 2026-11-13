@@ -3,40 +3,62 @@ asesor = "Carlos Campos"
 grado_consumo = "moderado"
 descripcion_perfil = ""
 usos_finales = [ "iluminacion", "refrigeracion", "climatizacion", "equipos_productivos", "otros" ]
-equipos = []
-hallazgos = []
-recomendaciones = []
-acuerdos = []
-proxima_visita = ""
-observaciones = ""
+acuerdos = [ "Durante la visita técnica realizada mediante videollamada, se acordó elaborar un informe borrador que incluirá los principales hallazgos, oportunidades de mejora y recomendaciones en materia de eficiencia energética identificadas durante la evaluación. Una vez remitido el documento, el cliente realizará una revisión de su contenido con el fin de validar la información levantada, antecedentes operacionales y observaciones asociadas a su instalación. Posteriormente, ambas partes coordinarán la entrega de comentarios y eventuales ajustes para la emisión de la versión final del informe. El cliente manifestó su disposición a analizar las recomendaciones propuestas y evaluar su factibilidad de implementación de acuerdo con las necesidades y recursos disponibles del negocio." ]
+proxima_visita = "2026-12-14"
+observaciones = "Se realizado observaciones y recorrido virtual en el establecimiento,. el establecimiento es relativamente nuevo, cuenta con una construcción con buenas terminaciones y buena ventilación."
 schema_version = 1
 id = "VIS-001"
 empresa_id = "EMP-011"
 created_at = "2026-11-10T14:42:27.918Z"
-updated_at = "2026-11-10T15:08:00.141Z"
+updated_at = "2026-11-13T12:33:58.381Z"
 
 [[energeticos]]
 tipo = "electricidad"
+consumo = 960
 unidad = "kWh/mes"
 costo = 450000
 observacion = "normalizado"
 
+[[equipos]]
+nombre = "visi cooler"
+cantidad = 6
+potencia_w = 350
+horas_dia = 24
+estado = "regular"
+observacion = "Mantenimiento correctivo, muchos cortes"
+
+[[equipos]]
+nombre = "congelador"
+cantidad = 5
+potencia_w = 220
+horas_dia = 24
+estado = "bueno"
+observacion = "4 vidriados y 1 cerrado para hielos"
+
+[[equipos]]
+nombre = "aire acondicionado"
+cantidad = 1
+potencia_w = 2000
+horas_dia = 6
+estado = "bueno"
+observacion = "utilización ocacional"
+
 [evaluacion_fotovoltaica]
-consumo_mensual_kwh = 0
-consumo_diurno_pct = 50
-horas_sol_pico = 0
-performance_ratio = 0.8
-generacion_medida_kwh = 0
-autoconsumo_medido_kwh = 0
+consumo_mensual_kwh = 960
+consumo_diurno_pct = 60
+horas_sol_pico = 5
+performance_ratio = 0.75
+generacion_medida_kwh = 279
+autoconsumo_medido_kwh = 120
 excedentes_medidos_kwh = 0
-precio_kwh = 0
+precio_kwh = 465
 precio_inyeccion_kwh = 0
 factor_co2_kg_kwh = 0.4
-observaciones = ""
+observaciones = "Datos de generación a partir de solar.minenergia.cl con generación media y almacenamiento. El equipo es híbrido sin inyección. Se utiliza para mantener los equipos destinado al sistema de compras y pagos, para full operación durante cortes eléctricos. Faltan especificaciones técnicas por lo que se realiza una estimación a partir de la descripción del usuario de 4 paneles de 600W."
 
 [secciones.iluminacion]
-puntaje = 3
-observaciones = ""
+puntaje = 4
+observaciones = "Establecimiento es de construcción nueva, cuenta con luminarias LED luz blanca que se distribuye en todo el negocio. Requiere una evaluación profunda pero existe buena iluminación además de aprovechamiento de la luz natural."
 tecnologia = "led"
 estado = "bueno"
 horas_uso_diarias = 12
@@ -57,10 +79,10 @@ estado = "bueno"
 
 [secciones.climatizacion]
 puntaje = 3
-observaciones = "Equipo a funcionado de forma normal."
+observaciones = "Equipo relativamente nuevo, no hay con calendario operativo, este se utiliza para climatizar los espacios al interior del minimarket. Cuenta con mantenimiento de limpieza y verificación de nivel de refrigerante. Además se utiliza con un estricto régimen horario, y reservado cuando se cuenta con alta temperaturas, pero no cuenta con una definición clara de setpoints o condiciones de utilización."
 tecnologia = "Split"
 mantenciones = "ocasional"
-control_temperatura = "manual"
+control_temperatura = "sin_control"
 
 [secciones.acs]
 puntaje = 0
@@ -92,12 +114,120 @@ aislacion = "bueno"
 
 [secciones.gestion]
 puntaje = 2
-observaciones = "Existe una conciencia del buen uso, sin embargo se hace ahínco en el buen uso de las luminaria, los equipos de refrigeración."
-nivel = "sistematica"
+observaciones = "Existe una conciencia del buen uso, sin embargo se hace ahínco en el buen uso de las luminaria y los equipos de refrigeración. Existe una cultura ambiental interiorizada pero quiere sistematizar de forma más programática para aseguramiento de la continuidad y consistencia de las buenas prácticas del uso de la energía."
+nivel = "basica"
 monitoreo = true
 responsable = "Christopher González"
 
 [secciones.tarifas]
-puntaje = 0
-observaciones = ""
-tarifa_actual = ""
+puntaje = 3
+observaciones = "Cuenta con la tarifa correspondiente a sistemas monofásico."
+tarifa_actual = "Tarifa domiciliaria"
+
+[[hallazgos]]
+hallazgo_id = "HAL-CLIM-03"
+justificacion = "Existe un cuidado de la utilización del equipo AC pero que requiere esclarecer cuales son los criterios de puntos de funcionamiento del equipo, por cada 1°C que el equipo excede su mejor punto de operación, se puede gastar entre 2 a 3% adicionales de energía correspondiente."
+
+[[hallazgos]]
+hallazgo_id = "HAL-CONG-02"
+justificacion = "Los equipos son accesibles a clientes, tampoco hay una diferenciación por tipo de productos. También se puede mejorar el funcionamiento con cobertores reflectantes que puedan ayudar en horarios de baja demanda de productos."
+
+[[hallazgos]]
+hallazgo_id = "HAL-CONG-03"
+justificacion = ""
+
+[[hallazgos]]
+hallazgo_id = "HAL-PROD-01"
+justificacion = ""
+
+[[hallazgos]]
+hallazgo_id = "HAL-ERNC-01"
+justificacion = "Existe equipo renovable pero limitado a suministrar energía a equipamiento ventas. Se puede evaluar considerando ampliar el aporte energético para suplir parcialmente la demanda de energía del establecimiento."
+
+[[hallazgos]]
+hallazgo_id = "HAL-GEST-01"
+justificacion = "Existe indicios de un sistema de gestión eficiente de la energía pero requiere sistematizar en el marco de una política interna del negocio."
+
+[[hallazgos]]
+hallazgo_id = "HAL-GEST-02"
+justificacion = ""
+
+[[hallazgos]]
+hallazgo_id = "HAL-GEST-03"
+justificacion = "Si bien hay una cultura con conciencia ambiental, se vuelve necesario formación permanente para cultura del ahorro energético y su uso eficiente."
+
+[[hallazgos]]
+hallazgo_id = "HAL-ILUM-03"
+justificacion = "Podría mejorar con algunas zonas como bodegas o entornos de transito."
+
+[[hallazgos]]
+hallazgo_id = "HAL-REFR-04"
+justificacion = "Los congeladores tienen un punto de funcionamiento indistinto al tipo de producto contenido, puede existir una mejora energética considerando una diferenciación dependiendo de estos, productos derivados de carnes, vegetales , lácteos entre otros."
+
+[[hallazgos]]
+hallazgo_id = "HAL-REFR-06"
+justificacion = "Los equipos requieren mejorar la disposición para facilitar la ventilación. Se recomienda que haya una abertura entre 6 a 10 cm con las paredes y en los costados."
+
+[[recomendaciones]]
+recomendacion_id = "REC-CLIM-03"
+observacion = ""
+
+[[recomendaciones]]
+recomendacion_id = "REC-CONG-01"
+observacion = "De haber acumulación en congeladores se recomienda mantener labores de mantenimiento apropiado"
+
+[[recomendaciones]]
+recomendacion_id = "REC-CONG-02"
+observacion = ""
+
+[[recomendaciones]]
+recomendacion_id = "REC-CONG-03"
+observacion = ""
+
+[[recomendaciones]]
+recomendacion_id = "REC-PROD-01"
+observacion = "Equipos de gestión ofimática entre otros componentes electrónicos"
+
+[[recomendaciones]]
+recomendacion_id = "REC-ERNC-01"
+observacion = "Cuenta con equipamiento limitado, pero con potencial de ampliar cobertura."
+
+[[recomendaciones]]
+recomendacion_id = "REC-GEST-01"
+observacion = "Se recomienda gestionar activamente los equipos de refrigeración haciendo seguimiento de funcionamiento, puntos de operación, y esquema de mantenimiento."
+
+[[recomendaciones]]
+recomendacion_id = "REC-GEST-02"
+observacion = "Requiere un mejoramiento en el seguimiento de los gastos energéticos y funcionamiento de los mismos."
+
+[[recomendaciones]]
+recomendacion_id = "REC-GEST-03"
+observacion = ""
+
+[[recomendaciones]]
+recomendacion_id = "REC-KB-GESTO-01"
+observacion = ""
+
+[[recomendaciones]]
+recomendacion_id = "REC-ILUM-02"
+observacion = "Se encuentra optimizado a grande rasgos, pero podría haber un mejoramiento por zonificación."
+
+[[recomendaciones]]
+recomendacion_id = "REC-ILUM-03"
+observacion = ""
+
+[[recomendaciones]]
+recomendacion_id = "REC-REFR-01"
+observacion = ""
+
+[[recomendaciones]]
+recomendacion_id = "REC-REFR-02"
+observacion = ""
+
+[[recomendaciones]]
+recomendacion_id = "REC-REFR-04"
+observacion = ""
+
+[[recomendaciones]]
+recomendacion_id = "REC-REFR-06"
+observacion = "Los espacios en el establecimiento son acotados, pero se recomienda dejar espacios que permitan la correcto flujo de ventilación."
