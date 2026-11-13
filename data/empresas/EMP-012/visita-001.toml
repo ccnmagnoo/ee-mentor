@@ -12,7 +12,7 @@ schema_version = 1
 id = "VIS-001"
 empresa_id = "EMP-012"
 created_at = "2026-11-10T15:12:25.882Z"
-updated_at = "2026-11-10T15:39:53.668Z"
+updated_at = "2026-11-13T15:30:15.045Z"
 
 [[energeticos]]
 tipo = "electricidad"
@@ -115,10 +115,10 @@ combustible = "electricidad"
 
 [secciones.motores]
 puntaje = 4
-observaciones = ""
-tipo = ""
-estado = "no_evaluado"
-mantencion = "no_evaluado"
+observaciones = "Cuenta con equipamiento que funciona en óptimas condiciones, estos cuentan con un chequeo y mantenimiento regular no documentado. Se recomienda implementar medidas para continuidad de su funcionamiento en el mediano plazo y enfocados en el mantenimiento preventivo."
+tipo = "fitradora, llenadora"
+estado = "bueno"
+mantencion = "ocasional"
 
 [secciones.envolvente]
 puntaje = 3
@@ -136,6 +136,6 @@ monitoreo = true
 responsable = "Tipanie Tepano"
 
 [secciones.tarifas]
-puntaje = 0
-observaciones = ""
-tarifa_actual = ""
+puntaje = 3
+observaciones = "Corresponde al nivel de consumo energético del establecimiento,"
+tarifa_actual = "Tarifa domiciliaria"

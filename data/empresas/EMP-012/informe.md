@@ -11,7 +11,7 @@ comuna: Hanga Roa
 region: Valparaíso
 rubro: Otro
 version: 1
-generado: 2026-11-10T15:39:53.749Z
+generado: 2026-11-13T15:30:15.707Z
 puntaje_global: 2.8
 clasificacion: Aceptable
 hallazgos: 0
@@ -19,6 +19,16 @@ recomendaciones: 0
 tags:
   - eficiencia-energetica
   - otro
+latitud: -27.1578755
+longitud: -109.4174176
+mapa_url: https://www.google.com/maps/place/27%C2%B009'28.2%22S+109%C2%B024'59.0%22W/@-27.1578755,-109.4174176,252m/data=!3m1!1e3!4m7!1m2!2m1!1siglesia!3m3!8m2!3d-27.1578333!4d-109.4163889?entry=ttu&g_ep=EgoyMDI2MTEwNC4wIKXMDSoASAFQAw%3D%3D
+fotovoltaica:
+  estado: planificado
+  proveedor: ""
+  paneles: 0
+  potencia_kwp: 0
+  potencia_kwp_min: 0
+  potencia_kwp_max: 0
 ---
 
 # Informe Técnico de Eficiencia Energética
@@ -27,13 +37,15 @@ tags:
 
 **Visita:** VIS-001 · **Fecha:** 10 de noviembre de 2026 · **Asesor:** Carlos Campos
 
-Rubro: Otro · Comuna: Hanga Roa · Región: Valparaíso
+Rubro: Otro · Comuna: Hanga Roa · Región: Valparaíso · Superficie: 800 m² · Trabajadores: 7
+
+**Coordenadas:** -27.15788, -109.41742 (WGS84) · **Ubicación:** [Ver en mapa](https://www.google.com/maps/place/27%C2%B009'28.2%22S+109%C2%B024'59.0%22W/@-27.1578755,-109.4174176,252m/data=!3m1!1e3!4m7!1m2!2m1!1siglesia!3m3!8m2!3d-27.1578333!4d-109.4163889?entry=ttu&g_ep=EgoyMDI2MTEwNC4wIKXMDSoASAFQAw%3D%3D)
 
 ---
 
 ## Resumen ejecutivo
 
-El presente informe resume el diagnóstico energético realizado a **Vai Tea Aguas** el 10 de noviembre de 2026. La evaluación abarca 5 de 10 dimensiones del desempeño energético y entrega una hoja de ruta priorizada para reducir consumos y costos operacionales.
+El presente informe resume el diagnóstico energético realizado a **Vai Tea Aguas** el 10 de noviembre de 2026. La evaluación abarca 6 de 10 dimensiones del desempeño energético y entrega una hoja de ruta priorizada para reducir consumos y costos operacionales.
 
 El **puntaje global de desempeño es 2.8/5**, clasificado como **Aceptable**. Cumple lo básico, pero persisten oportunidades de optimización.
 
@@ -82,12 +94,33 @@ En conjunto, constituye un ejemplo de integración entre gestión hídrica, efic
 | Motores y equipos productivos | 4/5 | Bueno |
 | Envolvente e infiltraciones | 3/5 | Aceptable |
 | Gestión energética | 1/5 | Crítico |
-| Tarifas y potencia | No evaluado | No evaluado |
+| Tarifas y potencia | 3/5 | Aceptable |
 | **Puntaje global** | **2.8/5** | **Aceptable** |
 
 **Fortalezas observadas:** Motores y equipos productivos (4/5).
 
 **Brechas prioritarias:** Gestión energética (1/5, crítico).
+
+### 1.5 Análisis de energías renovables
+
+#### Estado actual
+
+El establecimiento cuenta con un proyecto fotovoltaico en estado **planificado**: 0 paneles · potencia no informada · conexión no definido.
+
+#### Evaluación del sistema fotovoltaico
+
+No se registraron los parámetros mínimos para estimar la generación y el aporte a la demanda. Completa la evaluación fotovoltaica de la visita para generar los indicadores.
+
+#### Oportunidades de optimización y seguimiento
+
+- Realizar una prefactibilidad de energías renovables para el establecimiento, considerando consumo eléctrico, superficie disponible y usos finales.
+
+#### Indicadores de seguimiento
+
+- Registrar el avance de las medidas ERNC identificadas y las cotizaciones recibidas.
+- Medir el consumo y la generación antes y después de la implementación.
+- Documentar supuestos, costos de inversión y ahorros verificados.
+- Revisar los requisitos normativos y de conexión aplicables antes de la instalación.
 
 ## 2. Principales falencias detectadas
 
@@ -120,6 +153,7 @@ Los siguientes recursos públicos pueden apoyar la implementación de las medida
 - **Sello de Eficiencia Energética (Sello EE).** Programa gratuito para MiPyMEs que reconoce la gestión energética y entrega una hoja de ruta de mejora continua. [https://plataforma.selloee.cl/](https://plataforma.selloee.cl/)
 - **Buscador de instaladores certificados SEC.** Listado oficial de instaladores eléctricos y de gas certificados para regularizaciones, proyectos y modificaciones. [https://www.sec.cl/area-ciudadana/nuevo-buscador-de-instaladores-e-instaladoras/](https://www.sec.cl/area-ciudadana/nuevo-buscador-de-instaladores-e-instaladoras/)
 - **Registro de Consultores Energéticos.** Plataforma para contactar profesionales y empresas que prestan servicios de eficiencia energética y energías renovables. [https://consultores.registroenergetico.cl/](https://consultores.registroenergetico.cl/)
+- **Manual para Equipos de Refrigeración Comercial.** Manual de buenas prácticas de operación y mantenimiento de equipos de refrigeración comercial dirigido para administradores, encargados de locales comerciales, personal de mantención y operadores. Aplicable a equipos tipo Visi coolers, refrigeradores comerciales, congeladores horizontales y verticales, vitrinas refrigeradas. [https://crcamposn.notion.site/Manual-para-equipos-de-refrigeraci-n-416938ab020580039dddf3a96b2ee238?pvs=74](https://crcamposn.notion.site/Manual-para-equipos-de-refrigeraci-n-416938ab020580039dddf3a96b2ee238?pvs=74)
 
 ### Agencia de Sostenibilidad Energética
 
@@ -175,7 +209,7 @@ Los siguientes recursos públicos pueden apoyar la implementación de las medida
 | 3,6 – 4,5 | Bueno |
 | 4,6 – 5,0 | Destacado |
 
-El puntaje global se calcula como el promedio simple de las 5 dimensiones evaluadas. Las secciones con puntaje 0 se excluyen del promedio.
+El puntaje global se calcula como el promedio simple de las 6 dimensiones evaluadas. Las secciones con puntaje 0 se excluyen del promedio.
 
 ### Alcance del diagnóstico
 
@@ -190,7 +224,7 @@ El puntaje global se calcula como el promedio simple de las 5 dimensiones evalua
 - **Asesor:** Carlos Campos
 - **Grado de consumo:** Moderado
 - **Clasificación global:** Aceptable
-- **Generado:** 10-11-2026, 12:39:53 p. m.
+- **Generado:** 13-11-2026, 12:30:15 p. m.
 
 ---
 
