@@ -1,5 +1,6 @@
 import type { Empresa, Visita } from '../schemas';
 import { CATEGORIAS, IMPACTOS, PRIORIDADES } from '../schemas';
+import { CATEGORIA_EMOJIS } from '../iconografia';
 import { empresas, visitas, catalogos } from '../repositories';
 import { clasificarPuntaje, evaluarSecciones, redondear } from '../scoring';
 
@@ -98,7 +99,7 @@ export async function getDashboardData(): Promise<DashboardData> {
         titulo: item?.titulo ?? id,
         codigo: item?.codigo ?? id,
         count,
-        detalle: item ? `${IMPACTOS[item.impacto]} · ${CATEGORIAS[item.categoria]}` : 'Fuera del catálogo',
+        detalle: item ? `${CATEGORIA_EMOJIS[item.categoria]} ${IMPACTOS[item.impacto]} · ${CATEGORIAS[item.categoria]}` : 'Fuera del catálogo',
       };
     })
     .sort((a, b) => b.count - a.count)
@@ -112,7 +113,7 @@ export async function getDashboardData(): Promise<DashboardData> {
         titulo: item?.titulo ?? id,
         codigo: item?.codigo ?? id,
         count,
-        detalle: item ? `${PRIORIDADES[item.prioridad]} · ${item.ahorro_estimado || 'Ahorro por cuantificar'}` : 'Fuera del catálogo',
+        detalle: item ? `${CATEGORIA_EMOJIS[item.categoria]} ${PRIORIDADES[item.prioridad]} · ${item.ahorro_estimado || 'Ahorro por cuantificar'}` : 'Fuera del catálogo',
       };
     })
     .sort((a, b) => b.count - a.count)

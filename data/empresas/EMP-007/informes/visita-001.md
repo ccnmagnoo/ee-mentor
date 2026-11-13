@@ -11,7 +11,7 @@ comuna: Hanga Roa
 region: Valparaíso
 rubro: Taller
 version: 1
-generado: 2026-11-06T15:01:13.031Z
+generado: 2026-11-13T18:01:43.763Z
 puntaje_global: 2.6
 clasificacion: Aceptable
 hallazgos: 0
@@ -57,7 +57,7 @@ El perfil energético de la empresa Revive Gourmet se caracteriza por un consumo
 | Electricidad | No informado | $100.000 | cuenta dividida con remarcadores |
 | GLP | 15 kg/mes | $40.000 | balón de 45kg dura 3 meses |
 
-**Principales usos finales:** Iluminación, Refrigeración y congelación, Cocción, Equipos productivos.
+**Principales usos finales:** 💡 Iluminación, 🧊 Refrigeración y congelación, 🔥 Cocción, 🏭 Equipos productivos.
 
 **Observaciones de la empresa:** Revive Gourmet es una empresa dedicada a la elaboración de alimentos de alta calidad y a la prestación de servicios gastronómicos, incluyendo cafetería, almuerzos ejecutivos y una línea de productos envasados al vacío, tales como sándwiches, quiches y ensaladas, entre otros. Con cerca de cuatro años de trayectoria, la empresa surgió a finales del período de pandemia, teniendo inicialmente como actividad principal el reciclaje de botellas de vidrio. Su fundadora, de profesión chef, ha desarrollado un modelo de negocio centrado en la sostenibilidad alimentaria, integrando principios de economía circular y gestión responsable de los recursos. Esta visión se refleja en diversas prácticas orientadas al reciclaje, la reutilización y la reducción de residuos, elementos que forman parte de la identidad y propuesta de valor de la empresa. Bajo el lema “Para celebrar no es necesario contaminar”, Revive Gourmet promueve una oferta gastronómica que busca compatibilizar la calidad de sus productos con el cuidado del medio ambiente.
 
@@ -75,19 +75,19 @@ El perfil energético de la empresa Revive Gourmet se caracteriza por un consumo
 
 | Dimensión | Puntaje | Clasificación |
 | --- | :---: | --- |
-| Iluminación | 3/5 | Aceptable |
-| Refrigeración | 2/5 | Deficiente |
-| Congelación | 3/5 | Aceptable |
-| Climatización y A/C | 3/5 | Aceptable |
-| Agua caliente sanitaria | No evaluado | No evaluado |
-| Cocción | 3/5 | Aceptable |
-| Motores y equipos productivos | No evaluado | No evaluado |
-| Envolvente e infiltraciones | 3/5 | Aceptable |
-| Gestión energética | 1/5 | Crítico |
-| Tarifas y potencia | 3/5 | Aceptable |
+| 💡 Iluminación | 3/5 | Aceptable |
+| 🧊 Refrigeración | 2/5 | Deficiente |
+| ❄️ Congelación | 3/5 | Aceptable |
+| 🌡️ Climatización y A/C | 3/5 | Aceptable |
+| 💧 Agua caliente sanitaria | No evaluado | No evaluado |
+| 🔥 Cocción | 3/5 | Aceptable |
+| ⚙️ Motores y equipos productivos | No evaluado | No evaluado |
+| 🏠 Envolvente e infiltraciones | 3/5 | Aceptable |
+| 🎯 Gestión energética | 1/5 | Crítico |
+| 🧾 Tarifas y potencia | 3/5 | Aceptable |
 | **Puntaje global** | **2.6/5** | **Aceptable** |
 
-**Brechas prioritarias:** Refrigeración (2/5, deficiente); Gestión energética (1/5, crítico).
+**Brechas prioritarias:** 🧊 Refrigeración (2/5, deficiente); 🎯 Gestión energética (1/5, crítico).
 
 **Observaciones generales de la visita:** Tiene una buena base de trabajo para implementar un sistema de gestión, se vuelve necesario coordinar en conjunto que acciones son posibles concordar para mejorar la propuesta de valor comercial, usando herramientas como la gestión eficiencia de la energía.
 
@@ -126,6 +126,7 @@ Los siguientes recursos públicos pueden apoyar la implementación de las medida
 - **Sello de Eficiencia Energética (Sello EE).** Programa gratuito para MiPyMEs que reconoce la gestión energética y entrega una hoja de ruta de mejora continua. [https://plataforma.selloee.cl/](https://plataforma.selloee.cl/)
 - **Buscador de instaladores certificados SEC.** Listado oficial de instaladores eléctricos y de gas certificados para regularizaciones, proyectos y modificaciones. [https://www.sec.cl/area-ciudadana/nuevo-buscador-de-instaladores-e-instaladoras/](https://www.sec.cl/area-ciudadana/nuevo-buscador-de-instaladores-e-instaladoras/)
 - **Registro de Consultores Energéticos.** Plataforma para contactar profesionales y empresas que prestan servicios de eficiencia energética y energías renovables. [https://consultores.registroenergetico.cl/](https://consultores.registroenergetico.cl/)
+- **Manual para Equipos de Refrigeración Comercial.** Manual de buenas prácticas de operación y mantenimiento de equipos de refrigeración comercial dirigido para administradores, encargados de locales comerciales, personal de mantención y operadores. Aplicable a equipos tipo Visi coolers, refrigeradores comerciales, congeladores horizontales y verticales, vitrinas refrigeradas. [https://crcamposn.notion.site/Manual-para-equipos-de-refrigeraci-n-416938ab020580039dddf3a96b2ee238?pvs=74](https://crcamposn.notion.site/Manual-para-equipos-de-refrigeraci-n-416938ab020580039dddf3a96b2ee238?pvs=74)
 
 ### Agencia de Sostenibilidad Energética
 
@@ -196,7 +197,7 @@ El puntaje global se calcula como el promedio simple de las 8 dimensiones evalua
 - **Asesor:** Carlos Campos
 - **Grado de consumo:** Ligero
 - **Clasificación global:** Aceptable
-- **Generado:** 06-11-2026, 12:01:13 p. m.
+- **Generado:** 13-11-2026, 3:01:43 p. m.
 
 ---
 

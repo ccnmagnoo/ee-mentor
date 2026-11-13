@@ -29,6 +29,11 @@ import {
   oportunidadesFotovoltaicas,
   type ResultadoFotovoltaico,
 } from './fotovoltaica';
+import {
+  CATEGORIA_EMOJIS,
+  SECCION_EMOJIS,
+  USO_FINAL_EMOJIS,
+} from './iconografia';
 
 export interface ReportInput {
   empresa: Empresa;
@@ -103,8 +108,20 @@ function etiquetaCategoria(value: string): string {
   return CATEGORIAS[value as Categoria] ?? value;
 }
 
+function etiquetaCategoriaEmoji(value: string): string {
+  const categoria = value as Categoria;
+  const emoji = CATEGORIA_EMOJIS[categoria];
+  return emoji ? `${emoji} ${etiquetaCategoria(value)}` : etiquetaCategoria(value);
+}
+
 function etiquetaUsoFinal(value: string): string {
   return USOS_FINALES[value as UsoFinal] ?? value;
+}
+
+function etiquetaUsoFinalEmoji(value: string): string {
+  const uso = value as UsoFinal;
+  const emoji = USO_FINAL_EMOJIS[uso];
+  return emoji ? `${emoji} ${etiquetaUsoFinal(value)}` : etiquetaUsoFinal(value);
 }
 
 function usoFinalDeCategoria(categoria: Categoria): UsoFinal {
@@ -389,7 +406,7 @@ function seccionEnergiasRenovables(input: ReportInput): string {
         const justificacion =
           seleccion?.justificacion?.trim() || hallazgo.justificacion;
         lineas.push(
-          `- **${hallazgo.codigo} · ${oneLine(hallazgo.titulo)}** — Impacto ${IMPACTOS[hallazgo.impacto].toLowerCase()} · ${etiquetaCategoria(hallazgo.categoria)}. ${oneLine(hallazgo.descripcion)}${justificacion ? ` **Evidencia:** ${oneLine(justificacion)}` : ''}`,
+          `- **${CATEGORIA_EMOJIS[hallazgo.categoria]} ${hallazgo.codigo} · ${oneLine(hallazgo.titulo)}** — Impacto ${IMPACTOS[hallazgo.impacto].toLowerCase()} · ${etiquetaCategoria(hallazgo.categoria)}. ${oneLine(hallazgo.descripcion)}${justificacion ? ` **Evidencia:** ${oneLine(justificacion)}` : ''}`,
         );
       }
       lineas.push('');
@@ -399,7 +416,7 @@ function seccionEnergiasRenovables(input: ReportInput): string {
       lineas.push('**Recomendaciones**', '');
       for (const item of recomendacionesErnc) {
         lineas.push(
-          `- **${item.reco.codigo} · ${oneLine(item.reco.titulo)}** — Prioridad ${PRIORIDADES[item.prioridad].toLowerCase()} · Inversión: ${INVERSIONES[item.reco.inversion].toLowerCase()} · Plazo: ${item.reco.plazo}. ${oneLine(item.reco.descripcion)}${item.reco.ahorro_estimado ? ` **Ahorro estimado:** ${oneLine(item.reco.ahorro_estimado)}.` : ''}${item.observacion ? ` **Observación:** ${oneLine(item.observacion)}` : ''}`,
+          `- **${CATEGORIA_EMOJIS[item.reco.categoria]} ${item.reco.codigo} · ${oneLine(item.reco.titulo)}** — Prioridad ${PRIORIDADES[item.prioridad].toLowerCase()} · Inversión: ${INVERSIONES[item.reco.inversion].toLowerCase()} · Plazo: ${item.reco.plazo}. ${oneLine(item.reco.descripcion)}${item.reco.ahorro_estimado ? ` **Ahorro estimado:** ${oneLine(item.reco.ahorro_estimado)}.` : ''}${item.observacion ? ` **Observación:** ${oneLine(item.observacion)}` : ''}`,
         );
       }
       lineas.push('');
@@ -550,7 +567,7 @@ function tablaEvaluacion(input: ReportInput): string {
   const evaluacion = evaluarSecciones(input.visita.secciones);
   const filas = evaluacion.secciones.map(
     (s) =>
-      `| ${cell(s.nombre)} | ${s.aplica ? `${s.puntaje}/5` : 'No evaluado'} | ${cell(s.clasificacion.etiqueta)} |`,
+      `| ${cell(`${SECCION_EMOJIS[s.key]} ${s.nombre}`)} | ${s.aplica ? `${s.puntaje}/5` : 'No evaluado'} | ${cell(s.clasificacion.etiqueta)} |`,
   );
   const global = evaluacion.puntajeGlobal;
   return [
@@ -569,14 +586,14 @@ function fortalezasYBrechas(input: ReportInput): string {
   if (fortalezas.length) {
     lineas.push(
       `**Fortalezas observadas:** ${fortalezas
-        .map((s) => `${s.nombre} (${s.puntaje}/5)`)
+        .map((s) => `${SECCION_EMOJIS[s.key]} ${s.nombre} (${s.puntaje}/5)`)
         .join('; ')}.`,
     );
   }
   if (brechas.length) {
     lineas.push(
       `**Brechas prioritarias:** ${brechas
-        .map((s) => `${s.nombre} (${s.puntaje}/5, ${s.clasificacion.etiqueta.toLowerCase()})`)
+        .map((s) => `${SECCION_EMOJIS[s.key]} ${s.nombre} (${s.puntaje}/5, ${s.clasificacion.etiqueta.toLowerCase()})`)
         .join('; ')}.`,
     );
   }
@@ -618,14 +635,15 @@ function seccionHallazgos(input: ReportInput): string {
   for (const grupo of GRUPOS_FALENCIAS) {
     const items = hallazgos.filter((h) => grupo.categorias.includes(h.categoria));
     if (!items.length) continue;
-    lineas.push(`### ${grupo.titulo}`, '');
+    const emojiGrupo = CATEGORIA_EMOJIS[grupo.categorias[0] ?? 'otros'];
+    lineas.push(`### ${emojiGrupo} ${grupo.titulo}`, '');
     for (const hallazgo of items) {
       const seleccion = input.visita.hallazgos.find((h) => h.hallazgo_id === hallazgo.id);
       const justificacion = seleccion?.justificacion?.trim() || hallazgo.justificacion;
       lineas.push(
-        `#### ${hallazgo.codigo} · ${oneLine(hallazgo.titulo)}`,
+        `#### ${CATEGORIA_EMOJIS[hallazgo.categoria]} ${hallazgo.codigo} · ${oneLine(hallazgo.titulo)}`,
         '',
-        `**Impacto:** ${IMPACTOS[hallazgo.impacto]} · **Energético:** ${etiquetaEnergia(hallazgo.energetico)} · **Categoría:** ${etiquetaCategoria(hallazgo.categoria)}`,
+        `**Impacto:** ${IMPACTOS[hallazgo.impacto]} · **Energético:** ${etiquetaEnergia(hallazgo.energetico)} · **Categoría:** ${etiquetaCategoriaEmoji(hallazgo.categoria)}`,
         '',
         oneLine(hallazgo.descripcion),
         '',
@@ -649,7 +667,7 @@ function detalleRecomendacion(item: RecoSeleccionada, input: ReportInput): strin
     .filter((h): h is Hallazgo => Boolean(h) && h!.recomendacion_id === reco.id)
     .map((h) => h.codigo);
   const lineas = [
-    `#### ${reco.codigo} · ${oneLine(reco.titulo)}`,
+    `#### ${CATEGORIA_EMOJIS[reco.categoria]} ${reco.codigo} · ${oneLine(reco.titulo)}`,
     '',
     `**Prioridad:** ${PRIORIDADES[item.prioridad]} · **Inversión:** ${INVERSIONES[reco.inversion]} · **Complejidad:** ${DIFICULTADES[reco.dificultad]} · **Ahorro estimado:** ${reco.ahorro_estimado || 'Por cuantificar'} · **Plazo:** ${reco.plazo}`,
     '',
@@ -702,7 +720,7 @@ function seccionRecomendaciones(input: ReportInput, recomendaciones: RecoSelecci
         ? 'Media'
         : 'Baja';
     lineas.push(
-      `| ${cell(etiquetaUsoFinal(uso))} | ${cell(items.map((i) => i.reco.titulo).join('; '))} | ${inversion} |`,
+      `| ${cell(etiquetaUsoFinalEmoji(uso))} | ${cell(items.map((i) => `${CATEGORIA_EMOJIS[i.reco.categoria]} ${i.reco.titulo}`).join('; '))} | ${inversion} |`,
     );
   }
   return lineas.join('\n').trim();
@@ -729,7 +747,7 @@ function seccionPlan(input: ReportInput, recomendaciones: RecoSeleccionada[]): s
     );
     for (const item of ordenadas) {
       lineas.push(
-        `| ${cell(PRIORIDADES[item.prioridad])} | ${cell(item.reco.titulo)} | ${cell(INVERSIONES[item.reco.inversion])} | ${cell(plazoNormalizado(item.reco))} | ${cell(item.reco.ahorro_estimado || 'Por cuantificar')} |`,
+        `| ${cell(PRIORIDADES[item.prioridad])} | ${cell(`${CATEGORIA_EMOJIS[item.reco.categoria]} ${item.reco.titulo}`)} | ${cell(INVERSIONES[item.reco.inversion])} | ${cell(plazoNormalizado(item.reco))} | ${cell(item.reco.ahorro_estimado || 'Por cuantificar')} |`,
       );
     }
     lineas.push('');
@@ -937,7 +955,7 @@ export function generarMarkdown(input: ReportInput): string {
   lines.push(tablaEnergia(visita), '');
   if (visita.usos_finales.length) {
     lines.push(
-      `**Principales usos finales:** ${visita.usos_finales.map((u) => etiquetaUsoFinal(u)).join(', ')}.`,
+      `**Principales usos finales:** ${visita.usos_finales.map((u) => etiquetaUsoFinalEmoji(u)).join(', ')}.`,
       '',
     );
   }
@@ -989,7 +1007,7 @@ export function resumenSeccion(input: ReportInput): Array<{
 }> {
   return evaluarSecciones(input.visita.secciones).secciones.map((s) => ({
     key: s.key,
-    nombre: SECCIONES[s.key],
+    nombre: `${SECCION_EMOJIS[s.key]} ${SECCIONES[s.key]}`,
     puntaje: s.puntaje,
     clasificacion: clasificarPuntaje(s.aplica ? s.puntaje : null).etiqueta,
   }));

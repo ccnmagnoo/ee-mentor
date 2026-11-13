@@ -11,7 +11,7 @@ comuna: Hanga Roa
 region: Valparaíso
 rubro: Otro
 version: 1
-generado: 2026-11-13T15:30:15.707Z
+generado: 2026-11-13T18:01:43.941Z
 puntaje_global: 2.8
 clasificacion: Aceptable
 hallazgos: 0
@@ -23,12 +23,12 @@ latitud: -27.1578755
 longitud: -109.4174176
 mapa_url: https://www.google.com/maps/place/27%C2%B009'28.2%22S+109%C2%B024'59.0%22W/@-27.1578755,-109.4174176,252m/data=!3m1!1e3!4m7!1m2!2m1!1siglesia!3m3!8m2!3d-27.1578333!4d-109.4163889?entry=ttu&g_ep=EgoyMDI2MTEwNC4wIKXMDSoASAFQAw%3D%3D
 fotovoltaica:
-  estado: planificado
-  proveedor: ""
-  paneles: 0
-  potencia_kwp: 0
-  potencia_kwp_min: 0
-  potencia_kwp_max: 0
+  estado: en_evaluacion
+  proveedor: n/e
+  paneles: 14
+  potencia_kwp: 9.24
+  potencia_kwp_min: 5
+  potencia_kwp_max: 10
 ---
 
 # Informe Técnico de Eficiencia Energética
@@ -68,7 +68,7 @@ En conjunto, constituye un ejemplo de integración entre gestión hídrica, efic
 | Electricidad | 775 kWh/mes | $439.000 | — |
 | Diésel | 180 lt/mes | $80.000 | para transporte a clientes |
 
-**Principales usos finales:** Iluminación, Refrigeración y congelación, Agua caliente sanitaria, Fuerza motriz, Equipos productivos, Otros usos.
+**Principales usos finales:** 💡 Iluminación, 🧊 Refrigeración y congelación, 💧 Agua caliente sanitaria, ⚙️ Fuerza motriz, 🏭 Equipos productivos, ✨ Otros usos.
 
 **Observaciones de la empresa:** Vai Tea Agua Purificada es una micro y pequeña empresa (MiPyME) de Rapa Nui dedicada a la producción y comercialización de agua purificada para el consumo humano. Su actividad contribuye al abastecimiento local de agua de calidad para hogares, comercios, emprendimientos turísticos y servicios de la isla, promoviendo soluciones seguras y sostenibles en un territorio donde los recursos hídricos son especialmente valiosos.
 
@@ -85,27 +85,29 @@ En conjunto, constituye un ejemplo de integración entre gestión hídrica, efic
 
 | Dimensión | Puntaje | Clasificación |
 | --- | :---: | --- |
-| Iluminación | 3/5 | Aceptable |
-| Refrigeración | 3/5 | Aceptable |
-| Congelación | No evaluado | No evaluado |
-| Climatización y A/C | No evaluado | No evaluado |
-| Agua caliente sanitaria | No evaluado | No evaluado |
-| Cocción | No evaluado | No evaluado |
-| Motores y equipos productivos | 4/5 | Bueno |
-| Envolvente e infiltraciones | 3/5 | Aceptable |
-| Gestión energética | 1/5 | Crítico |
-| Tarifas y potencia | 3/5 | Aceptable |
+| 💡 Iluminación | 3/5 | Aceptable |
+| 🧊 Refrigeración | 3/5 | Aceptable |
+| ❄️ Congelación | No evaluado | No evaluado |
+| 🌡️ Climatización y A/C | No evaluado | No evaluado |
+| 💧 Agua caliente sanitaria | No evaluado | No evaluado |
+| 🔥 Cocción | No evaluado | No evaluado |
+| ⚙️ Motores y equipos productivos | 4/5 | Bueno |
+| 🏠 Envolvente e infiltraciones | 3/5 | Aceptable |
+| 🎯 Gestión energética | 1/5 | Crítico |
+| 🧾 Tarifas y potencia | 3/5 | Aceptable |
 | **Puntaje global** | **2.8/5** | **Aceptable** |
 
-**Fortalezas observadas:** Motores y equipos productivos (4/5).
+**Fortalezas observadas:** ⚙️ Motores y equipos productivos (4/5).
 
-**Brechas prioritarias:** Gestión energética (1/5, crítico).
+**Brechas prioritarias:** 🎯 Gestión energética (1/5, crítico).
 
 ### 1.5 Análisis de energías renovables
 
 #### Estado actual
 
-El establecimiento cuenta con un proyecto fotovoltaico en estado **planificado**: 0 paneles · potencia no informada · conexión no definido.
+El establecimiento cuenta con un proyecto fotovoltaico en estado **evaluación**: 14 paneles · 5–10 kWp · instalador n/e · conexión híbrido con almacenamiento.
+
+Evaluación de sistema fotovoltaico en formato híbrido para reducción de huella de carbono para el procesamiento y comercialización de agua embotellada para consumo humano.
 
 #### Evaluación del sistema fotovoltaico
 
@@ -224,7 +226,7 @@ El puntaje global se calcula como el promedio simple de las 6 dimensiones evalua
 - **Asesor:** Carlos Campos
 - **Grado de consumo:** Moderado
 - **Clasificación global:** Aceptable
-- **Generado:** 13-11-2026, 12:30:15 p. m.
+- **Generado:** 13-11-2026, 3:01:43 p. m.
 
 ---
 

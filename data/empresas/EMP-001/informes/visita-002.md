@@ -11,7 +11,7 @@ comuna: Viña del Mar
 region: Valparaíso
 rubro: Cafetería
 version: 1
-generado: 2026-11-06T11:56:46.460Z
+generado: 2026-11-13T18:01:43.471Z
 puntaje_global: 2.7
 clasificacion: Aceptable
 hallazgos: 3
@@ -60,7 +60,7 @@ Visita de seguimiento. La empresa implementó el recambio de luminarias en sala 
 | Electricidad | 648 kWh/mes | $104.000 | Reducción preliminar de 9% respecto de la línea base. |
 | GLP | 42 kg/mes | $66.000 | Sin cambios relevantes. |
 
-**Principales usos finales:** Iluminación, Refrigeración y congelación, Cocción, Climatización y ventilación.
+**Principales usos finales:** 💡 Iluminación, 🧊 Refrigeración y congelación, 🔥 Cocción, 🌡️ Climatización y ventilación.
 
 **Observaciones de la empresa:** Local arrendado en galería comercial. Operación de lunes a sábado de 08:00 a 20:00 horas, con peak de demanda entre 09:00 y 12:00.
 
@@ -77,21 +77,21 @@ Visita de seguimiento. La empresa implementó el recambio de luminarias en sala 
 
 | Dimensión | Puntaje | Clasificación |
 | --- | :---: | --- |
-| Iluminación | 4/5 | Bueno |
-| Refrigeración | 3/5 | Aceptable |
-| Congelación | 3/5 | Aceptable |
-| Climatización y A/C | 2/5 | Deficiente |
-| Agua caliente sanitaria | 2/5 | Deficiente |
-| Cocción | 3/5 | Aceptable |
-| Motores y equipos productivos | 3/5 | Aceptable |
-| Envolvente e infiltraciones | 3/5 | Aceptable |
-| Gestión energética | 2/5 | Deficiente |
-| Tarifas y potencia | 2/5 | Deficiente |
+| 💡 Iluminación | 4/5 | Bueno |
+| 🧊 Refrigeración | 3/5 | Aceptable |
+| ❄️ Congelación | 3/5 | Aceptable |
+| 🌡️ Climatización y A/C | 2/5 | Deficiente |
+| 💧 Agua caliente sanitaria | 2/5 | Deficiente |
+| 🔥 Cocción | 3/5 | Aceptable |
+| ⚙️ Motores y equipos productivos | 3/5 | Aceptable |
+| 🏠 Envolvente e infiltraciones | 3/5 | Aceptable |
+| 🎯 Gestión energética | 2/5 | Deficiente |
+| 🧾 Tarifas y potencia | 2/5 | Deficiente |
 | **Puntaje global** | **2.7/5** | **Aceptable** |
 
-**Fortalezas observadas:** Iluminación (4/5).
+**Fortalezas observadas:** 💡 Iluminación (4/5).
 
-**Brechas prioritarias:** Climatización y A/C (2/5, deficiente); Agua caliente sanitaria (2/5, deficiente); Gestión energética (2/5, deficiente); Tarifas y potencia (2/5, deficiente).
+**Brechas prioritarias:** 🌡️ Climatización y A/C (2/5, deficiente); 💧 Agua caliente sanitaria (2/5, deficiente); 🎯 Gestión energética (2/5, deficiente); 🧾 Tarifas y potencia (2/5, deficiente).
 
 **Observaciones generales de la visita:** Se refuerza la importancia de separar el consumo de cocina y refrigeración.
 
@@ -105,11 +105,11 @@ Se identificaron 3 hallazgos. La distribución por impacto es: crítico: 0, alto
 | --- | ---: |
 | Electricidad | 3 |
 
-### Refrigeración y congelación
+### 🧊 Refrigeración y congelación
 
-#### REFR-01 · Uso de vitrinas de exhibición como almacenamiento prolongado
+#### 🧊 REFR-01 · Uso de vitrinas de exhibición como almacenamiento prolongado
 
-**Impacto:** Alto · **Energético:** Electricidad · **Categoría:** Refrigeración
+**Impacto:** Alto · **Energético:** Electricidad · **Categoría:** 🧊 Refrigeración
 
 Se utilizan vitrinas refrigeradas, mesones refrigerados o equipos de exhibición para almacenar alimentos durante períodos prolongados, cuando están diseñados para apoyo operativo de corto plazo. Esto implica aperturas frecuentes, mayor intercambio térmico y menor hermeticidad.
 
@@ -117,11 +117,11 @@ Se utilizan vitrinas refrigeradas, mesones refrigerados o equipos de exhibición
 
 **Recomendación asociada:** REC-REFR-01
 
-### Climatización y ventilación
+### 🌡️ Climatización y ventilación
 
-#### CLIM-01 · Calefacción con equipos individuales ineficientes
+#### 🌡️ CLIM-01 · Calefacción con equipos individuales ineficientes
 
-**Impacto:** Alto · **Energético:** Electricidad · **Categoría:** Climatización
+**Impacto:** Alto · **Energético:** Electricidad · **Categoría:** 🌡️ Climatización
 
 Se utilizan calefactores eléctricos portátiles, halógenos o de resistencia como estrategia principal de climatización, en ocasiones con varias unidades operando en paralelo para cubrir un mismo espacio.
 
@@ -129,11 +129,11 @@ Se utilizan calefactores eléctricos portátiles, halógenos o de resistencia co
 
 **Recomendación asociada:** REC-CLIM-01
 
-### Gestión, tarifas y potencia contratada
+### 🎯 Gestión, tarifas y potencia contratada
 
-#### GEST-02 · Falta de medición y monitoreo de consumos
+#### 🎯 GEST-02 · Falta de medición y monitoreo de consumos
 
-**Impacto:** Alto · **Energético:** Electricidad · **Categoría:** Gestión energética
+**Impacto:** Alto · **Energético:** Electricidad · **Categoría:** 🎯 Gestión energética
 
 Se dispone solo de la facturación mensual o de remarcadores sin registro sistemático. No se separan consumos por área, proceso o equipo, ni se comparan mes a mes.
 
@@ -147,7 +147,7 @@ Las 4 medidas propuestas se ordenan por nivel de inversión. La prioridad consid
 
 ### Bajo costo
 
-#### REC-REFR-01 · Gestión diferenciada de equipos de refrigeración
+#### 🧊 REC-REFR-01 · Gestión diferenciada de equipos de refrigeración
 
 **Prioridad:** Alta · **Inversión:** Bajo costo · **Complejidad:** Baja · **Ahorro estimado:** 10-25% del consumo de refrigeración · **Plazo:** Inmediato (0-30 días)
 
@@ -159,7 +159,7 @@ Definir que vitrinas y mesones refrigerados se usen para exhibición y apoyo de 
 
 **Atiende hallazgos:** REFR-01
 
-#### REC-GEST-02 · Medición y monitoreo de consumos
+#### 🎯 REC-GEST-02 · Medición y monitoreo de consumos
 
 **Prioridad:** Media · **Inversión:** Bajo costo · **Complejidad:** Media · **Ahorro estimado:** 5-10% del consumo total · **Plazo:** Corto plazo (1-3 meses)
 
@@ -171,7 +171,7 @@ Registrar mensualmente la facturación y, si es posible, instalar remarcadores o
 
 **Atiende hallazgos:** GEST-02
 
-#### REC-ENV-02 · Sellamiento de infiltraciones en la envolvente
+#### 🏠 REC-ENV-02 · Sellamiento de infiltraciones en la envolvente
 
 **Prioridad:** Media · **Inversión:** Bajo costo · **Complejidad:** Baja · **Ahorro estimado:** 5-15% del consumo de climatización · **Plazo:** Corto plazo (1-3 meses)
 
@@ -183,7 +183,7 @@ Instalar burletes en puertas y ventanas, ajustar cierrapuertas y sellar pasos de
 
 ### Alto costo
 
-#### REC-CLIM-01 · Reemplazo de calefactores por bomba de calor
+#### 🌡️ REC-CLIM-01 · Reemplazo de calefactores por bomba de calor
 
 **Prioridad:** Alta · **Inversión:** Alto costo · **Complejidad:** Alta · **Ahorro estimado:** 30-60% del consumo de calefacción · **Plazo:** Largo plazo (6-12 meses)
 
@@ -199,9 +199,9 @@ Evaluar la instalación de equipos inverter tipo split o bomba de calor de alta 
 
 | Uso final | Recomendaciones | Inversión predominante |
 | --- | --- | --- |
-| Refrigeración y congelación | Gestión diferenciada de equipos de refrigeración | Baja |
-| Climatización y ventilación | Reemplazo de calefactores por bomba de calor | Alta |
-| Otros usos | Medición y monitoreo de consumos; Sellamiento de infiltraciones en la envolvente | Baja |
+| 🧊 Refrigeración y congelación | 🧊 Gestión diferenciada de equipos de refrigeración | Baja |
+| 🌡️ Climatización y ventilación | 🌡️ Reemplazo de calefactores por bomba de calor | Alta |
+| ✨ Otros usos | 🎯 Medición y monitoreo de consumos; 🏠 Sellamiento de infiltraciones en la envolvente | Baja |
 
 ## 4. Plan de acción sugerido
 
@@ -209,10 +209,10 @@ El siguiente plan ordena las medidas según horizonte de implementación. Se sug
 
 | Prioridad | Acción | Inversión | Plazo | Ahorro referencial |
 | --- | --- | --- | --- | --- |
-| Alta | Gestión diferenciada de equipos de refrigeración | Bajo costo | Inmediato (0-30 días) | 10-25% del consumo de refrigeración |
-| Media | Medición y monitoreo de consumos | Bajo costo | Corto plazo (1-3 meses) | 5-10% del consumo total |
-| Media | Sellamiento de infiltraciones en la envolvente | Bajo costo | Corto plazo (1-3 meses) | 5-15% del consumo de climatización |
-| Alta | Reemplazo de calefactores por bomba de calor | Alto costo | Largo plazo (6-12 meses) | 30-60% del consumo de calefacción |
+| Alta | 🧊 Gestión diferenciada de equipos de refrigeración | Bajo costo | Inmediato (0-30 días) | 10-25% del consumo de refrigeración |
+| Media | 🎯 Medición y monitoreo de consumos | Bajo costo | Corto plazo (1-3 meses) | 5-10% del consumo total |
+| Media | 🏠 Sellamiento de infiltraciones en la envolvente | Bajo costo | Corto plazo (1-3 meses) | 5-15% del consumo de climatización |
+| Alta | 🌡️ Reemplazo de calefactores por bomba de calor | Alto costo | Largo plazo (6-12 meses) | 30-60% del consumo de calefacción |
 
 ### Metas y seguimiento recomendado
 
@@ -238,6 +238,7 @@ Los siguientes recursos públicos pueden apoyar la implementación de las medida
 - **Sello de Eficiencia Energética (Sello EE).** Programa gratuito para MiPyMEs que reconoce la gestión energética y entrega una hoja de ruta de mejora continua. [https://plataforma.selloee.cl/](https://plataforma.selloee.cl/)
 - **Buscador de instaladores certificados SEC.** Listado oficial de instaladores eléctricos y de gas certificados para regularizaciones, proyectos y modificaciones. [https://www.sec.cl/area-ciudadana/nuevo-buscador-de-instaladores-e-instaladoras/](https://www.sec.cl/area-ciudadana/nuevo-buscador-de-instaladores-e-instaladoras/)
 - **Registro de Consultores Energéticos.** Plataforma para contactar profesionales y empresas que prestan servicios de eficiencia energética y energías renovables. [https://consultores.registroenergetico.cl/](https://consultores.registroenergetico.cl/)
+- **Manual para Equipos de Refrigeración Comercial.** Manual de buenas prácticas de operación y mantenimiento de equipos de refrigeración comercial dirigido para administradores, encargados de locales comerciales, personal de mantención y operadores. Aplicable a equipos tipo Visi coolers, refrigeradores comerciales, congeladores horizontales y verticales, vitrinas refrigeradas. [https://crcamposn.notion.site/Manual-para-equipos-de-refrigeraci-n-416938ab020580039dddf3a96b2ee238?pvs=74](https://crcamposn.notion.site/Manual-para-equipos-de-refrigeraci-n-416938ab020580039dddf3a96b2ee238?pvs=74)
 
 ### Agencia de Sostenibilidad Energética
 
@@ -308,7 +309,7 @@ El puntaje global se calcula como el promedio simple de las 10 dimensiones evalu
 - **Asesor:** Carlos Campos N.
 - **Grado de consumo:** Moderado
 - **Clasificación global:** Aceptable
-- **Generado:** 06-11-2026, 8:56:46 a. m.
+- **Generado:** 13-11-2026, 3:01:43 p. m.
 
 ---
 

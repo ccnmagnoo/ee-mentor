@@ -11,7 +11,7 @@ comuna: Hanga Roa
 region: Valparaíso
 rubro: Almacén / minimarket
 version: 1
-generado: 2026-11-10T18:21:06.086Z
+generado: 2026-11-13T18:01:43.617Z
 puntaje_global: 2
 clasificacion: Deficiente
 hallazgos: 0
@@ -78,7 +78,7 @@ En términos generales, la empresa evidencia interés por mejorar su desempeño 
 | --- | ---: | ---: | --- |
 | Electricidad | 6.550 kWh/mes | $3.000.000 | consumo kWh estimado |
 
-**Principales usos finales:** Iluminación, Refrigeración y congelación, Climatización y ventilación.
+**Principales usos finales:** 💡 Iluminación, 🧊 Refrigeración y congelación, 🌡️ Climatización y ventilación.
 
 **Observaciones de la empresa:** Tiene inicio de actividades en el servicio de SII y patentes al día. Venta de abarrotes, artículos de aseo, líquidos, cigarros, venta de congelados carne, hamburguesas, 4 congeladores, 6 visi cooler. Cuenta con 2 contenedores para almacenamiento. Constantemente a realizado mantenimiento e instalaciones eléctricos, son en términos parciales y aprecia que es de una calidad regular, se mantiene funcional. Tiene dificultades logística de suministro , se menciona perdidas $50 millones por vencimiento en buque. Tiene instalado led en todo el establecimiento, realiza mantenimiento preventivo de los equipos de frío, coordina con especialista de la Armada para mantenimiento, por confianza y certezas del servicio.
 
@@ -95,19 +95,19 @@ En términos generales, la empresa evidencia interés por mejorar su desempeño 
 
 | Dimensión | Puntaje | Clasificación |
 | --- | :---: | --- |
-| Iluminación | 2/5 | Deficiente |
-| Refrigeración | 2/5 | Deficiente |
-| Congelación | No evaluado | No evaluado |
-| Climatización y A/C | No evaluado | No evaluado |
-| Agua caliente sanitaria | No evaluado | No evaluado |
-| Cocción | No evaluado | No evaluado |
-| Motores y equipos productivos | No evaluado | No evaluado |
-| Envolvente e infiltraciones | No evaluado | No evaluado |
-| Gestión energética | No evaluado | No evaluado |
-| Tarifas y potencia | No evaluado | No evaluado |
+| 💡 Iluminación | 2/5 | Deficiente |
+| 🧊 Refrigeración | 2/5 | Deficiente |
+| ❄️ Congelación | No evaluado | No evaluado |
+| 🌡️ Climatización y A/C | No evaluado | No evaluado |
+| 💧 Agua caliente sanitaria | No evaluado | No evaluado |
+| 🔥 Cocción | No evaluado | No evaluado |
+| ⚙️ Motores y equipos productivos | No evaluado | No evaluado |
+| 🏠 Envolvente e infiltraciones | No evaluado | No evaluado |
+| 🎯 Gestión energética | No evaluado | No evaluado |
+| 🧾 Tarifas y potencia | No evaluado | No evaluado |
 | **Puntaje global** | **2.0/5** | **Deficiente** |
 
-**Brechas prioritarias:** Iluminación (2/5, deficiente); Refrigeración (2/5, deficiente).
+**Brechas prioritarias:** 💡 Iluminación (2/5, deficiente); 🧊 Refrigeración (2/5, deficiente).
 
 ### 1.5 Análisis de energías renovables
 
@@ -192,6 +192,7 @@ Los siguientes recursos públicos pueden apoyar la implementación de las medida
 - **Sello de Eficiencia Energética (Sello EE).** Programa gratuito para MiPyMEs que reconoce la gestión energética y entrega una hoja de ruta de mejora continua. [https://plataforma.selloee.cl/](https://plataforma.selloee.cl/)
 - **Buscador de instaladores certificados SEC.** Listado oficial de instaladores eléctricos y de gas certificados para regularizaciones, proyectos y modificaciones. [https://www.sec.cl/area-ciudadana/nuevo-buscador-de-instaladores-e-instaladoras/](https://www.sec.cl/area-ciudadana/nuevo-buscador-de-instaladores-e-instaladoras/)
 - **Registro de Consultores Energéticos.** Plataforma para contactar profesionales y empresas que prestan servicios de eficiencia energética y energías renovables. [https://consultores.registroenergetico.cl/](https://consultores.registroenergetico.cl/)
+- **Manual para Equipos de Refrigeración Comercial.** Manual de buenas prácticas de operación y mantenimiento de equipos de refrigeración comercial dirigido para administradores, encargados de locales comerciales, personal de mantención y operadores. Aplicable a equipos tipo Visi coolers, refrigeradores comerciales, congeladores horizontales y verticales, vitrinas refrigeradas. [https://crcamposn.notion.site/Manual-para-equipos-de-refrigeraci-n-416938ab020580039dddf3a96b2ee238?pvs=74](https://crcamposn.notion.site/Manual-para-equipos-de-refrigeraci-n-416938ab020580039dddf3a96b2ee238?pvs=74)
 
 ### Agencia de Sostenibilidad Energética
 
@@ -262,7 +263,7 @@ El puntaje global se calcula como el promedio simple de las 2 dimensiones evalua
 - **Asesor:** Carlos Campos
 - **Grado de consumo:** Relevante
 - **Clasificación global:** Deficiente
-- **Generado:** 10-11-2026, 3:21:06 p. m.
+- **Generado:** 13-11-2026, 3:01:43 p. m.
 
 ---
 

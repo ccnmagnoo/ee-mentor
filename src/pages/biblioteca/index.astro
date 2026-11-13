@@ -6,6 +6,7 @@ import EmptyState from '@/components/ui/EmptyState.astro';
 import StatCard from '@/components/ui/StatCard.astro';
 import { conocimiento } from '@/lib/repositories';
 import { CATEGORIAS, IMPACTOS, INVERSIONES } from '@/lib/schemas';
+import { CATEGORIA_ICONS } from '@/lib/iconografia';
 import { formatFechaCorta, nowISO } from '@/lib/config';
 
 const estadoParam = Astro.url.searchParams.get('estado');
@@ -162,7 +163,10 @@ const importadoReciente = fuentes[0]?.imported_at ?? '';
                     <span class:list={['badge', candidato.tipo === 'hallazgo' ? 'badge-amber' : 'badge-sky']}>
                       {candidato.tipo === 'hallazgo' ? 'Hallazgo' : 'Recomendación'}
                     </span>
-                    <span class="badge-neutral">{CATEGORIAS[candidato.categoria]}</span>
+                    <span class="badge-neutral">
+                      <Icon name={CATEGORIA_ICONS[candidato.categoria]} size={11} />
+                      {CATEGORIAS[candidato.categoria]}
+                    </span>
                     {candidato.tipo === 'hallazgo' ? (
                       <span class="badge-neutral">Impacto {IMPACTOS[candidato.impacto]}</span>
                     ) : (

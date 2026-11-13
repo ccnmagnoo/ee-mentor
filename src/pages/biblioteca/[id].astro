@@ -6,6 +6,7 @@ import { conocimiento } from '@/lib/repositories';
 import { readFuenteMarkdown } from '@/lib/storage/conocimiento';
 import { renderMarkdown } from '@/lib/markdown';
 import { CATEGORIAS, IMPACTOS, INVERSIONES } from '@/lib/schemas';
+import { CATEGORIA_ICONS } from '@/lib/iconografia';
 import { formatFechaCorta } from '@/lib/config';
 
 const { id } = Astro.params;
@@ -94,7 +95,10 @@ const html = markdown ? renderMarkdown(markdown) : '';
                 <span class:list={['badge', candidato.tipo === 'hallazgo' ? 'badge-amber' : 'badge-sky']}>
                   {candidato.tipo === 'hallazgo' ? 'Hallazgo' : 'Recomendación'}
                 </span>
-                <span class="badge-neutral">{CATEGORIAS[candidato.categoria]}</span>
+                <span class="badge-neutral">
+                  <Icon name={CATEGORIA_ICONS[candidato.categoria]} size={11} />
+                  {CATEGORIAS[candidato.categoria]}
+                </span>
               </div>
               <p class="mt-1.5 text-sm font-medium text-slate-800">{candidato.titulo}</p>
               <p class="mt-1 line-clamp-3 text-xs leading-relaxed text-slate-500">{candidato.descripcion}</p>

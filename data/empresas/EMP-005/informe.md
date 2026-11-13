@@ -11,7 +11,7 @@ comuna: Hanga Roa
 region: Valparaíso
 rubro: Restaurante
 version: 1
-generado: 2026-11-11T12:15:39.203Z
+generado: 2026-11-13T18:01:43.666Z
 puntaje_global: 2.5
 clasificacion: Deficiente
 hallazgos: 0
@@ -86,7 +86,7 @@ Complementariamente, el Restaurant Neptuno mantiene una política de mantenimien
 | Electricidad | 1.061 kWh/mes | $407.000 | con boleta |
 | GLP | 8 Balones 45kg / mes | $1.000.000 | en temporada baja se consumen 3 a 4 balones por mes |
 
-**Principales usos finales:** Iluminación, Refrigeración y congelación, Cocción, Agua caliente sanitaria.
+**Principales usos finales:** 💡 Iluminación, 🧊 Refrigeración y congelación, 🔥 Cocción, 💧 Agua caliente sanitaria.
 
 **Observaciones de la empresa:** Restaurant Neptuno es una micro y pequeña empresa turística ubicada en , , dedicada a la prestación de servicios de alimentación y bar en un entorno privilegiado de borde costero. Su propuesta gastronómica está orientada tanto a visitantes nacionales e internacionales como a operadores turísticos, manteniendo una estrecha vinculación con agencias de turismo locales y extranjeras que derivan clientes de manera permanente. A lo largo de su trayectoria, el negocio ha demostrado una importante capacidad de adaptación y resiliencia. Uno de los principales desafíos que ha enfrentado ha sido la necesidad de trasladar sus operaciones en múltiples ocasiones. A la fecha, el restaurante ha experimentado ocho reubicaciones, situación que ha implicado la habilitación completa de nuevas instalaciones en cada oportunidad, incluyendo adecuaciones de infraestructura, equipamiento y sistemas energéticos. Esta condición ha generado costos significativos y una constante necesidad de ajustar consumos y requerimientos eléctricos para mantener la continuidad operacional. Durante la pandemia de COVID-19, el restaurante debió suspender temporalmente sus actividades debido a la caída total de ingresos asociada a la paralización del turismo, principal motor económico de la isla. Pese a este escenario adverso, la empresa logró retomar sus operaciones y actualmente continúa desarrollando sus actividades, enfrentando además costos fijos relevantes, entre ellos un gasto mensual de aproximadamente $1.500.000 en arriendo.
 
@@ -98,19 +98,19 @@ _No se registró un inventario detallado de equipos._
 
 | Dimensión | Puntaje | Clasificación |
 | --- | :---: | --- |
-| Iluminación | 3/5 | Aceptable |
-| Refrigeración | No evaluado | No evaluado |
-| Congelación | No evaluado | No evaluado |
-| Climatización y A/C | No evaluado | No evaluado |
-| Agua caliente sanitaria | No evaluado | No evaluado |
-| Cocción | No evaluado | No evaluado |
-| Motores y equipos productivos | No evaluado | No evaluado |
-| Envolvente e infiltraciones | No evaluado | No evaluado |
-| Gestión energética | 2/5 | Deficiente |
-| Tarifas y potencia | No evaluado | No evaluado |
+| 💡 Iluminación | 3/5 | Aceptable |
+| 🧊 Refrigeración | No evaluado | No evaluado |
+| ❄️ Congelación | No evaluado | No evaluado |
+| 🌡️ Climatización y A/C | No evaluado | No evaluado |
+| 💧 Agua caliente sanitaria | No evaluado | No evaluado |
+| 🔥 Cocción | No evaluado | No evaluado |
+| ⚙️ Motores y equipos productivos | No evaluado | No evaluado |
+| 🏠 Envolvente e infiltraciones | No evaluado | No evaluado |
+| 🎯 Gestión energética | 2/5 | Deficiente |
+| 🧾 Tarifas y potencia | No evaluado | No evaluado |
 | **Puntaje global** | **2.5/5** | **Deficiente** |
 
-**Brechas prioritarias:** Gestión energética (2/5, deficiente).
+**Brechas prioritarias:** 🎯 Gestión energética (2/5, deficiente).
 
 ### 1.5 Análisis de energías renovables
 
@@ -197,6 +197,7 @@ Los siguientes recursos públicos pueden apoyar la implementación de las medida
 - **Sello de Eficiencia Energética (Sello EE).** Programa gratuito para MiPyMEs que reconoce la gestión energética y entrega una hoja de ruta de mejora continua. [https://plataforma.selloee.cl/](https://plataforma.selloee.cl/)
 - **Buscador de instaladores certificados SEC.** Listado oficial de instaladores eléctricos y de gas certificados para regularizaciones, proyectos y modificaciones. [https://www.sec.cl/area-ciudadana/nuevo-buscador-de-instaladores-e-instaladoras/](https://www.sec.cl/area-ciudadana/nuevo-buscador-de-instaladores-e-instaladoras/)
 - **Registro de Consultores Energéticos.** Plataforma para contactar profesionales y empresas que prestan servicios de eficiencia energética y energías renovables. [https://consultores.registroenergetico.cl/](https://consultores.registroenergetico.cl/)
+- **Manual para Equipos de Refrigeración Comercial.** Manual de buenas prácticas de operación y mantenimiento de equipos de refrigeración comercial dirigido para administradores, encargados de locales comerciales, personal de mantención y operadores. Aplicable a equipos tipo Visi coolers, refrigeradores comerciales, congeladores horizontales y verticales, vitrinas refrigeradas. [https://crcamposn.notion.site/Manual-para-equipos-de-refrigeraci-n-416938ab020580039dddf3a96b2ee238?pvs=74](https://crcamposn.notion.site/Manual-para-equipos-de-refrigeraci-n-416938ab020580039dddf3a96b2ee238?pvs=74)
 
 ### Agencia de Sostenibilidad Energética
 
@@ -267,7 +268,7 @@ El puntaje global se calcula como el promedio simple de las 2 dimensiones evalua
 - **Asesor:** Carlos Campos
 - **Grado de consumo:** Moderado
 - **Clasificación global:** Deficiente
-- **Generado:** 11-11-2026, 9:15:39 a. m.
+- **Generado:** 13-11-2026, 3:01:43 p. m.
 
 ---
 

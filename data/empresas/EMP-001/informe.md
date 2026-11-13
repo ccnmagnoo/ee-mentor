@@ -4,18 +4,18 @@ tipo: informe_diagnostico_energetico
 empresa_id: EMP-001
 empresa: Café Aurora
 rut: 76.482.193-5
-visita_id: VIS-001
-fecha_visita: 2026-06-17
+visita_id: VIS-002
+fecha_visita: 2026-10-10
 asesor: Carlos Campos N.
 comuna: Viña del Mar
 region: Valparaíso
 rubro: Cafetería
 version: 1
-generado: 2026-11-06T11:58:20.728Z
-puntaje_global: 1.8
-clasificacion: Deficiente
-hallazgos: 5
-recomendaciones: 6
+generado: 2026-11-13T18:01:43.471Z
+puntaje_global: 2.7
+clasificacion: Aceptable
+hallazgos: 3
+recomendaciones: 4
 tags:
   - eficiencia-energetica
   - cafetería
@@ -25,7 +25,7 @@ tags:
 
 ## Café Aurora
 
-**Visita:** VIS-001 · **Fecha:** 17 de junio de 2026 · **Asesor:** Carlos Campos N.
+**Visita:** VIS-002 · **Fecha:** 10 de octubre de 2026 · **Asesor:** Carlos Campos N.
 
 Rubro: Cafetería · Comuna: Viña del Mar · Región: Valparaíso · Superficie: 72 m² · Trabajadores: 5
 
@@ -35,15 +35,15 @@ Rubro: Cafetería · Comuna: Viña del Mar · Región: Valparaíso · Superficie
 
 ## Resumen ejecutivo
 
-El presente informe resume el diagnóstico energético realizado a **Café Aurora** el 17 de junio de 2026. La evaluación abarca 10 de 10 dimensiones del desempeño energético y entrega una hoja de ruta priorizada para reducir consumos y costos operacionales.
+El presente informe resume el diagnóstico energético realizado a **Café Aurora** el 10 de octubre de 2026. La evaluación abarca 10 de 10 dimensiones del desempeño energético y entrega una hoja de ruta priorizada para reducir consumos y costos operacionales.
 
-El **puntaje global de desempeño es 1.8/5**, clasificado como **Deficiente**. El desempeño está por debajo de lo esperado; se recomienda un plan de mejora.
+El **puntaje global de desempeño es 2.7/5**, clasificado como **Aceptable**. Cumple lo básico, pero persisten oportunidades de optimización.
 
-Se identificaron **5 hallazgos** y **6 recomendaciones** de mejora. De ellos, 3 hallazgos presentan impacto alto o crítico y deberían abordarse en el corto plazo.
+Se identificaron **3 hallazgos** y **4 recomendaciones** de mejora. De ellos, 3 hallazgos presentan impacto alto o crítico y deberían abordarse en el corto plazo.
 
-Un total de **4 medidas son de bajo costo** y pueden implementarse principalmente mediante ajustes operacionales, mantención y capacitación, sin comprometer inversiones relevantes.
+Un total de **3 medidas son de bajo costo** y pueden implementarse principalmente mediante ajustes operacionales, mantención y capacitación, sin comprometer inversiones relevantes.
 
-Las acciones prioritarias sugeridas son: **Gestión diferenciada de equipos de refrigeración**; **Implementar un sistema simple de gestión energética**; **Migración progresiva a tecnología LED**.
+Las acciones prioritarias sugeridas son: **Gestión diferenciada de equipos de refrigeración**; **Reemplazo de calefactores por bomba de calor**; **Medición y monitoreo de consumos**.
 
 Las estimaciones de ahorro incluidas son referenciales, no son aditivas entre sí y deben validarse con mediciones y cotizaciones antes de su implementación.
 
@@ -51,16 +51,16 @@ Las estimaciones de ahorro incluidas son referenciales, no son aditivas entre s�
 
 ### 1.1 Contexto del negocio
 
-Café Aurora es una cafetería de pequeña escala ubicada en una galería comercial de Viña del Mar. La electricidad es el energético principal y se destina a máquinas de café, horno de convección, refrigeración e iluminación. El GLP se utiliza en la plancha y en la cocina. El mayor consumo se concentra en la preparación de alimentos y en los equipos de frío que operan de forma continua. La iluminación permanece encendida durante toda la jornada y la climatización se apoya en un calefactor portátil en invierno.
+Visita de seguimiento. La empresa implementó el recambio de luminarias en sala de atención y el sellamiento de la puerta principal. Se mantiene el uso de la vitrina como almacén y los calefactores individuales. Se observa una reducción del consumo eléctrico respecto de la visita anterior, aunque no se dispone de medición separada por área.
 
 ### 1.2 Energéticos utilizados
 
 | Energético | Consumo declarado | Costo mensual | Observación |
 | --- | ---: | ---: | --- |
-| Electricidad | 712 kWh/mes | $112.000 | Consumo promedio últimos 6 meses. Tarifa BT1. |
-| GLP | 45 kg/mes | $68.000 | Suministro en cilindro de 45 kg. |
+| Electricidad | 648 kWh/mes | $104.000 | Reducción preliminar de 9% respecto de la línea base. |
+| GLP | 42 kg/mes | $66.000 | Sin cambios relevantes. |
 
-**Principales usos finales:** Iluminación, Refrigeración y congelación, Cocción, Climatización y ventilación.
+**Principales usos finales:** 💡 Iluminación, 🧊 Refrigeración y congelación, 🔥 Cocción, 🌡️ Climatización y ventilación.
 
 **Observaciones de la empresa:** Local arrendado en galería comercial. Operación de lunes a sábado de 08:00 a 20:00 horas, con peak de demanda entre 09:00 y 12:00.
 
@@ -68,109 +68,86 @@ Café Aurora es una cafetería de pequeña escala ubicada en una galería comerc
 
 | Equipo | Cantidad | Potencia | Uso diario | Estado | Observación |
 | --- | ---: | ---: | ---: | --- | --- |
-| Máquina de espresso doble grupo | 1 | 3.200 W | 10 h/día | regular | Opera desde la apertura; incluye caldera. |
-| Horno de convección | 1 | 2.800 W | 6 h/día | regular | Uso discontinuo con aperturas frecuentes. |
-| Vitrina refrigerada de exhibición | 2 | 450 W | 24 h/día | regular | Una se usa como almacén prolongado. |
-| Congelador vertical | 1 | 380 W | 24 h/día | deficiente | Escarcha visible en evaporador. |
-| Calefactor portátil | 2 | 2.000 W | 5 h/día | deficiente | Uso en invierno. |
+| Máquina de espresso doble grupo | 1 | 3.200 W | 10 h/día | regular | Sin cambios. |
+| Horno de convección | 1 | 2.800 W | 6 h/día | regular | Se incorporó planificación de tandas. |
+| Vitrina refrigerada de exhibición | 2 | 450 W | 24 h/día | regular | Persiste uso como almacén en una unidad. |
+| Congelador vertical | 1 | 380 W | 24 h/día | regular | Se realizó descongelación y limpieza. |
 
 ### 1.4 Evaluación energética global
 
 | Dimensión | Puntaje | Clasificación |
 | --- | :---: | --- |
-| Iluminación | 2/5 | Deficiente |
-| Refrigeración | 2/5 | Deficiente |
-| Congelación | 2/5 | Deficiente |
-| Climatización y A/C | 1/5 | Crítico |
-| Agua caliente sanitaria | 2/5 | Deficiente |
-| Cocción | 2/5 | Deficiente |
-| Motores y equipos productivos | 3/5 | Aceptable |
-| Envolvente e infiltraciones | 1/5 | Crítico |
-| Gestión energética | 1/5 | Crítico |
-| Tarifas y potencia | 2/5 | Deficiente |
-| **Puntaje global** | **1.8/5** | **Deficiente** |
+| 💡 Iluminación | 4/5 | Bueno |
+| 🧊 Refrigeración | 3/5 | Aceptable |
+| ❄️ Congelación | 3/5 | Aceptable |
+| 🌡️ Climatización y A/C | 2/5 | Deficiente |
+| 💧 Agua caliente sanitaria | 2/5 | Deficiente |
+| 🔥 Cocción | 3/5 | Aceptable |
+| ⚙️ Motores y equipos productivos | 3/5 | Aceptable |
+| 🏠 Envolvente e infiltraciones | 3/5 | Aceptable |
+| 🎯 Gestión energética | 2/5 | Deficiente |
+| 🧾 Tarifas y potencia | 2/5 | Deficiente |
+| **Puntaje global** | **2.7/5** | **Aceptable** |
 
-**Brechas prioritarias:** Iluminación (2/5, deficiente); Refrigeración (2/5, deficiente); Congelación (2/5, deficiente); Climatización y A/C (1/5, crítico); Agua caliente sanitaria (2/5, deficiente); Cocción (2/5, deficiente); Envolvente e infiltraciones (1/5, crítico); Gestión energética (1/5, crítico); Tarifas y potencia (2/5, deficiente).
+**Fortalezas observadas:** 💡 Iluminación (4/5).
 
-**Observaciones generales de la visita:** Se entrega listado de instaladores certificados y recursos públicos de apoyo.
+**Brechas prioritarias:** 🌡️ Climatización y A/C (2/5, deficiente); 💧 Agua caliente sanitaria (2/5, deficiente); 🎯 Gestión energética (2/5, deficiente); 🧾 Tarifas y potencia (2/5, deficiente).
+
+**Observaciones generales de la visita:** Se refuerza la importancia de separar el consumo de cocina y refrigeración.
 
 ## 2. Principales falencias detectadas
 
-Se identificaron 5 hallazgos. La distribución por impacto es: crítico: 0, alto: 3, medio: 2, bajo: 0.
+Se identificaron 3 hallazgos. La distribución por impacto es: crítico: 0, alto: 3, medio: 0, bajo: 0.
 
 ### Distribución por energético
 
 | Energético | Hallazgos |
 | --- | ---: |
-| Electricidad | 5 |
+| Electricidad | 3 |
 
-### Iluminación
+### 🧊 Refrigeración y congelación
 
-#### ILUM-01 · Uso de iluminación fluorescente
+#### 🧊 REFR-01 · Uso de vitrinas de exhibición como almacenamiento prolongado
 
-**Impacto:** Medio · **Energético:** Electricidad · **Categoría:** Iluminación
-
-Se observan luminarias fluorescentes, incluidos tubos T8/T5 y ampolletas compactas, con tecnología de menor eficacia luminosa que la disponible actualmente en el mercado. Su reemplazo progresivo por LED permite reducir el consumo manteniendo o mejorando los niveles de iluminación.
-
-**Justificación técnica:** Se contabilizaron 18 tubos fluorescentes en sala, bodega y baño, con 12 horas diarias de uso.
-
-**Recomendación asociada:** REC-ILUM-01
-
-### Refrigeración y congelación
-
-#### REFR-01 · Uso de vitrinas de exhibición como almacenamiento prolongado
-
-**Impacto:** Alto · **Energético:** Electricidad · **Categoría:** Refrigeración
+**Impacto:** Alto · **Energético:** Electricidad · **Categoría:** 🧊 Refrigeración
 
 Se utilizan vitrinas refrigeradas, mesones refrigerados o equipos de exhibición para almacenar alimentos durante períodos prolongados, cuando están diseñados para apoyo operativo de corto plazo. Esto implica aperturas frecuentes, mayor intercambio térmico y menor hermeticidad.
 
-**Justificación técnica:** Una vitrina de exhibición se utiliza para almacenar productos durante la noche.
+**Justificación técnica:** Una de las dos vitrinas continúa usándose como almacén nocturno.
 
 **Recomendación asociada:** REC-REFR-01
 
-### Climatización y ventilación
+### 🌡️ Climatización y ventilación
 
-#### CLIM-01 · Calefacción con equipos individuales ineficientes
+#### 🌡️ CLIM-01 · Calefacción con equipos individuales ineficientes
 
-**Impacto:** Alto · **Energético:** Electricidad · **Categoría:** Climatización
+**Impacto:** Alto · **Energético:** Electricidad · **Categoría:** 🌡️ Climatización
 
 Se utilizan calefactores eléctricos portátiles, halógenos o de resistencia como estrategia principal de climatización, en ocasiones con varias unidades operando en paralelo para cubrir un mismo espacio.
 
-**Justificación técnica:** Dos calefactores de 2 kW se utilizan en paralelo durante el invierno.
+**Justificación técnica:** Los calefactores portátiles siguen siendo la única fuente de calefacción.
 
 **Recomendación asociada:** REC-CLIM-01
 
-### Envolvente e infiltraciones
+### 🎯 Gestión, tarifas y potencia contratada
 
-#### ENV-02 · Infiltraciones de aire en puertas y ventanas
+#### 🎯 GEST-02 · Falta de medición y monitoreo de consumos
 
-**Impacto:** Medio · **Energético:** Electricidad · **Categoría:** Envolvente térmica
+**Impacto:** Alto · **Energético:** Electricidad · **Categoría:** 🎯 Gestión energética
 
-Se detectan corrientes de aire, holguras y falta de burletes en puertas y ventanas. Las puertas de acceso permanecen abiertas durante la operación y no existen cortinas de aire.
+Se dispone solo de la facturación mensual o de remarcadores sin registro sistemático. No se separan consumos por área, proceso o equipo, ni se comparan mes a mes.
 
-**Justificación técnica:** Se perciben corrientes de aire en la puerta de acceso y en la ventana lateral.
+**Justificación técnica:** El registro es manual y no se separan consumos por área.
 
-**Recomendación asociada:** REC-ENV-02
-
-### Gestión, tarifas y potencia contratada
-
-#### GEST-01 · Ausencia de un sistema formal de gestión energética
-
-**Impacto:** Alto · **Energético:** Electricidad · **Categoría:** Gestión energética
-
-No existe un responsable designado, una línea base de consumo, indicadores clave ni un procedimiento de revisión periódica. Las acciones energéticas son reactivas y no se documentan.
-
-**Justificación técnica:** No se registran consumos ni existe un responsable energético designado.
-
-**Recomendación asociada:** REC-GEST-01
+**Recomendación asociada:** REC-GEST-02
 
 ## 3. Recomendaciones de mejora energética
 
-Las 6 medidas propuestas se ordenan por nivel de inversión. La prioridad considera el impacto potencial, el costo y la facilidad de implementación.
+Las 4 medidas propuestas se ordenan por nivel de inversión. La prioridad considera el impacto potencial, el costo y la facilidad de implementación.
 
 ### Bajo costo
 
-#### REC-REFR-01 · Gestión diferenciada de equipos de refrigeración
+#### 🧊 REC-REFR-01 · Gestión diferenciada de equipos de refrigeración
 
 **Prioridad:** Alta · **Inversión:** Bajo costo · **Complejidad:** Baja · **Ahorro estimado:** 10-25% del consumo de refrigeración · **Plazo:** Inmediato (0-30 días)
 
@@ -178,61 +155,35 @@ Definir que vitrinas y mesones refrigerados se usen para exhibición y apoyo de 
 
 **Beneficio esperado:** Reduce el consumo base de refrigeración, mejora la conservación de alimentos y prolonga la vida útil de los equipos de exhibición.
 
-**Observación del consultor:** Rotular vitrinas y habilitar espacio de almacenamiento.
+**Observación del consultor:** Completar la diferenciación de usos en ambas vitrinas.
 
 **Atiende hallazgos:** REFR-01
 
-#### REC-GEST-01 · Implementar un sistema simple de gestión energética
+#### 🎯 REC-GEST-02 · Medición y monitoreo de consumos
 
-**Prioridad:** Alta · **Inversión:** Bajo costo · **Complejidad:** Media · **Ahorro estimado:** 5-15% del consumo total · **Plazo:** Mediano plazo (3-6 meses)
+**Prioridad:** Media · **Inversión:** Bajo costo · **Complejidad:** Media · **Ahorro estimado:** 5-10% del consumo total · **Plazo:** Corto plazo (1-3 meses)
 
-Designar un responsable, establecer una línea base de consumo, definir indicadores simples (kWh/mes, costo por venta o por m²) y realizar revisiones mensuales con metas de mejora.
+Registrar mensualmente la facturación y, si es posible, instalar remarcadores o medidores por área. Mantener una planilla con consumos, costos, producción y observaciones.
 
-**Beneficio esperado:** Sostiene los ahorros en el tiempo, permite detectar desviaciones y prepara a la empresa para programas como el Sello de Eficiencia Energética.
+**Beneficio esperado:** Permite verificar el impacto de las medidas, comparar períodos y priorizar nuevas acciones con información confiable.
 
-**Observación del consultor:** Comenzar con registro mensual de facturas.
+**Observación del consultor:** Evaluar remarcador para área de cocina.
 
-**Atiende hallazgos:** GEST-01
+**Atiende hallazgos:** GEST-02
 
-#### REC-ENV-02 · Sellamiento de infiltraciones en la envolvente
+#### 🏠 REC-ENV-02 · Sellamiento de infiltraciones en la envolvente
 
-**Prioridad:** Alta · **Inversión:** Bajo costo · **Complejidad:** Baja · **Ahorro estimado:** 5-15% del consumo de climatización · **Plazo:** Corto plazo (1-3 meses)
+**Prioridad:** Media · **Inversión:** Bajo costo · **Complejidad:** Baja · **Ahorro estimado:** 5-15% del consumo de climatización · **Plazo:** Corto plazo (1-3 meses)
 
 Instalar burletes en puertas y ventanas, ajustar cierrapuertas y sellar pasos de instalaciones. Evaluar cortinas de aire en accesos de alta circulación.
 
 **Beneficio esperado:** Reduce las pérdidas por infiltración, mejora el confort y disminuye la carga de climatización con inversión mínima.
 
-**Observación del consultor:** Instalar burletes y cierrapuertas.
-
-**Atiende hallazgos:** ENV-02
-
-#### REC-COCC-01 · Programación eficiente de hornos y tandas de cocción
-
-**Prioridad:** Media · **Inversión:** Bajo costo · **Complejidad:** Baja · **Ahorro estimado:** 5-15% del consumo de cocción · **Plazo:** Inmediato (0-30 días)
-
-Planificar la producción en tandas que aprovechen la capacidad del horno, respetar los tiempos de precalentamiento del fabricante y reducir las aperturas de puerta.
-
-**Beneficio esperado:** Reduce el consumo por unidad producida, mejora la consistencia del producto y disminuye la carga térmica en el local.
-
-**Observación del consultor:** Agrupar la producción de masas en tandas.
-
-### Costo medio
-
-#### REC-ILUM-01 · Migración progresiva a tecnología LED
-
-**Prioridad:** Alta · **Inversión:** Costo medio · **Complejidad:** Baja · **Ahorro estimado:** 40-60% del consumo de iluminación · **Plazo:** Corto plazo (1-3 meses)
-
-Reemplazar progresivamente luminarias fluorescentes, halógenas e incandescentes por soluciones LED de alta eficacia, priorizando los sectores con mayor número de horas de uso: atención, vitrinas, cocina y fachada.
-
-**Beneficio esperado:** Menor consumo eléctrico, mayor vida útil, menor carga térmica y mejor calidad de iluminación. La inversión se recupera habitualmente en menos de dos años.
-
-**Observación del consultor:** Priorizar sala de atención y bodega.
-
-**Atiende hallazgos:** ILUM-01
+**Observación del consultor:** Completar sellos en ventana lateral.
 
 ### Alto costo
 
-#### REC-CLIM-01 · Reemplazo de calefactores por bomba de calor
+#### 🌡️ REC-CLIM-01 · Reemplazo de calefactores por bomba de calor
 
 **Prioridad:** Alta · **Inversión:** Alto costo · **Complejidad:** Alta · **Ahorro estimado:** 30-60% del consumo de calefacción · **Plazo:** Largo plazo (6-12 meses)
 
@@ -240,7 +191,7 @@ Evaluar la instalación de equipos inverter tipo split o bomba de calor de alta 
 
 **Beneficio esperado:** Mayor eficiencia por unidad de electricidad, mejor distribución del calor y control de temperatura. Requiere evaluación técnica y cotización.
 
-**Observación del consultor:** Evaluar split inverter de 12.000 BTU.
+**Observación del consultor:** Solicitar cotización de bomba de calor.
 
 **Atiende hallazgos:** CLIM-01
 
@@ -248,11 +199,9 @@ Evaluar la instalación de equipos inverter tipo split o bomba de calor de alta 
 
 | Uso final | Recomendaciones | Inversión predominante |
 | --- | --- | --- |
-| Refrigeración y congelación | Gestión diferenciada de equipos de refrigeración | Baja |
-| Otros usos | Implementar un sistema simple de gestión energética; Sellamiento de infiltraciones en la envolvente | Baja |
-| Iluminación | Migración progresiva a tecnología LED | Media |
-| Climatización y ventilación | Reemplazo de calefactores por bomba de calor | Alta |
-| Cocción | Programación eficiente de hornos y tandas de cocción | Baja |
+| 🧊 Refrigeración y congelación | 🧊 Gestión diferenciada de equipos de refrigeración | Baja |
+| 🌡️ Climatización y ventilación | 🌡️ Reemplazo de calefactores por bomba de calor | Alta |
+| ✨ Otros usos | 🎯 Medición y monitoreo de consumos; 🏠 Sellamiento de infiltraciones en la envolvente | Baja |
 
 ## 4. Plan de acción sugerido
 
@@ -260,12 +209,10 @@ El siguiente plan ordena las medidas según horizonte de implementación. Se sug
 
 | Prioridad | Acción | Inversión | Plazo | Ahorro referencial |
 | --- | --- | --- | --- | --- |
-| Alta | Gestión diferenciada de equipos de refrigeración | Bajo costo | Inmediato (0-30 días) | 10-25% del consumo de refrigeración |
-| Media | Programación eficiente de hornos y tandas de cocción | Bajo costo | Inmediato (0-30 días) | 5-15% del consumo de cocción |
-| Alta | Migración progresiva a tecnología LED | Costo medio | Corto plazo (1-3 meses) | 40-60% del consumo de iluminación |
-| Alta | Sellamiento de infiltraciones en la envolvente | Bajo costo | Corto plazo (1-3 meses) | 5-15% del consumo de climatización |
-| Alta | Implementar un sistema simple de gestión energética | Bajo costo | Mediano plazo (3-6 meses) | 5-15% del consumo total |
-| Alta | Reemplazo de calefactores por bomba de calor | Alto costo | Largo plazo (6-12 meses) | 30-60% del consumo de calefacción |
+| Alta | 🧊 Gestión diferenciada de equipos de refrigeración | Bajo costo | Inmediato (0-30 días) | 10-25% del consumo de refrigeración |
+| Media | 🎯 Medición y monitoreo de consumos | Bajo costo | Corto plazo (1-3 meses) | 5-10% del consumo total |
+| Media | 🏠 Sellamiento de infiltraciones en la envolvente | Bajo costo | Corto plazo (1-3 meses) | 5-15% del consumo de climatización |
+| Alta | 🌡️ Reemplazo de calefactores por bomba de calor | Alto costo | Largo plazo (6-12 meses) | 30-60% del consumo de calefacción |
 
 ### Metas y seguimiento recomendado
 
@@ -277,10 +224,10 @@ El siguiente plan ordena las medidas según horizonte de implementación. Se sug
 
 ### Acuerdos y próximos pasos
 
-- El consultor apoyará el registro mensual de consumos durante los próximos tres meses.
-- La empresa solicitará cotización de luminarias LED y sellos para puertas y ventanas.
+- Mantener el registro mensual y compartir los datos en la próxima visita.
+- Cotizar dos alternativas de climatización eficiente antes de diciembre.
 
-**Próxima visita sugerida:** 15 de noviembre de 2026
+**Próxima visita sugerida:** 20 de enero de 2027
 
 ## 5. Información complementaria
 
@@ -291,6 +238,7 @@ Los siguientes recursos públicos pueden apoyar la implementación de las medida
 - **Sello de Eficiencia Energética (Sello EE).** Programa gratuito para MiPyMEs que reconoce la gestión energética y entrega una hoja de ruta de mejora continua. [https://plataforma.selloee.cl/](https://plataforma.selloee.cl/)
 - **Buscador de instaladores certificados SEC.** Listado oficial de instaladores eléctricos y de gas certificados para regularizaciones, proyectos y modificaciones. [https://www.sec.cl/area-ciudadana/nuevo-buscador-de-instaladores-e-instaladoras/](https://www.sec.cl/area-ciudadana/nuevo-buscador-de-instaladores-e-instaladoras/)
 - **Registro de Consultores Energéticos.** Plataforma para contactar profesionales y empresas que prestan servicios de eficiencia energética y energías renovables. [https://consultores.registroenergetico.cl/](https://consultores.registroenergetico.cl/)
+- **Manual para Equipos de Refrigeración Comercial.** Manual de buenas prácticas de operación y mantenimiento de equipos de refrigeración comercial dirigido para administradores, encargados de locales comerciales, personal de mantención y operadores. Aplicable a equipos tipo Visi coolers, refrigeradores comerciales, congeladores horizontales y verticales, vitrinas refrigeradas. [https://crcamposn.notion.site/Manual-para-equipos-de-refrigeraci-n-416938ab020580039dddf3a96b2ee238?pvs=74](https://crcamposn.notion.site/Manual-para-equipos-de-refrigeraci-n-416938ab020580039dddf3a96b2ee238?pvs=74)
 
 ### Agencia de Sostenibilidad Energética
 
@@ -357,11 +305,11 @@ El puntaje global se calcula como el promedio simple de las 10 dimensiones evalu
 
 ### Antecedentes de la visita
 
-- **Fecha:** 17 de junio de 2026
+- **Fecha:** 10 de octubre de 2026
 - **Asesor:** Carlos Campos N.
 - **Grado de consumo:** Moderado
-- **Clasificación global:** Deficiente
-- **Generado:** 06-11-2026, 8:58:20 a. m.
+- **Clasificación global:** Aceptable
+- **Generado:** 13-11-2026, 3:01:43 p. m.
 
 ---
 

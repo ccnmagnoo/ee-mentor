@@ -11,7 +11,7 @@ comuna: Quilpué
 region: Valparaíso
 rubro: Pequeña fábrica de alimentos
 version: 1
-generado: 2026-11-06T11:57:42.300Z
+generado: 2026-11-13T18:01:43.521Z
 puntaje_global: 1.8
 clasificacion: Deficiente
 hallazgos: 8
@@ -60,7 +60,7 @@ Pastelería Los Aromos es una pequeña fábrica de alimentos con punto de venta.
 | Electricidad | 2.209 kWh/mes | $385.000 | Tarifa BT1A con 2.209 kWh/mes. |
 | GLP | 120 kg/mes | $176.000 | Cocina y calefón. |
 
-**Principales usos finales:** Cocción, Refrigeración y congelación, Iluminación, Agua caliente sanitaria.
+**Principales usos finales:** 🔥 Cocción, 🧊 Refrigeración y congelación, 💡 Iluminación, 💧 Agua caliente sanitaria.
 
 **Observaciones de la empresa:** Fábrica y punto de venta. Produce tortas y masas durante la madrugada; cuenta con dos cámaras de frío y tres hornos eléctricos.
 
@@ -77,19 +77,19 @@ Pastelería Los Aromos es una pequeña fábrica de alimentos con punto de venta.
 
 | Dimensión | Puntaje | Clasificación |
 | --- | :---: | --- |
-| Iluminación | 2/5 | Deficiente |
-| Refrigeración | 2/5 | Deficiente |
-| Congelación | 2/5 | Deficiente |
-| Climatización y A/C | No evaluado | No evaluado |
-| Agua caliente sanitaria | 2/5 | Deficiente |
-| Cocción | 2/5 | Deficiente |
-| Motores y equipos productivos | 2/5 | Deficiente |
-| Envolvente e infiltraciones | 2/5 | Deficiente |
-| Gestión energética | 1/5 | Crítico |
-| Tarifas y potencia | 1/5 | Crítico |
+| 💡 Iluminación | 2/5 | Deficiente |
+| 🧊 Refrigeración | 2/5 | Deficiente |
+| ❄️ Congelación | 2/5 | Deficiente |
+| 🌡️ Climatización y A/C | No evaluado | No evaluado |
+| 💧 Agua caliente sanitaria | 2/5 | Deficiente |
+| 🔥 Cocción | 2/5 | Deficiente |
+| ⚙️ Motores y equipos productivos | 2/5 | Deficiente |
+| 🏠 Envolvente e infiltraciones | 2/5 | Deficiente |
+| 🎯 Gestión energética | 1/5 | Crítico |
+| 🧾 Tarifas y potencia | 1/5 | Crítico |
 | **Puntaje global** | **1.8/5** | **Deficiente** |
 
-**Brechas prioritarias:** Iluminación (2/5, deficiente); Refrigeración (2/5, deficiente); Congelación (2/5, deficiente); Agua caliente sanitaria (2/5, deficiente); Cocción (2/5, deficiente); Motores y equipos productivos (2/5, deficiente); Envolvente e infiltraciones (2/5, deficiente); Gestión energética (1/5, crítico); Tarifas y potencia (1/5, crítico).
+**Brechas prioritarias:** 💡 Iluminación (2/5, deficiente); 🧊 Refrigeración (2/5, deficiente); ❄️ Congelación (2/5, deficiente); 💧 Agua caliente sanitaria (2/5, deficiente); 🔥 Cocción (2/5, deficiente); ⚙️ Motores y equipos productivos (2/5, deficiente); 🏠 Envolvente e infiltraciones (2/5, deficiente); 🎯 Gestión energética (1/5, crítico); 🧾 Tarifas y potencia (1/5, crítico).
 
 **Observaciones generales de la visita:** La empresa cuenta con 12 meses de facturación disponibles para el análisis.
 
@@ -104,11 +104,11 @@ Se identificaron 8 hallazgos. La distribución por impacto es: crítico: 0, alto
 | Electricidad | 7 |
 | GLP | 1 |
 
-### Iluminación
+### 💡 Iluminación
 
-#### ILUM-01 · Uso de iluminación fluorescente
+#### 💡 ILUM-01 · Uso de iluminación fluorescente
 
-**Impacto:** Medio · **Energético:** Electricidad · **Categoría:** Iluminación
+**Impacto:** Medio · **Energético:** Electricidad · **Categoría:** 💡 Iluminación
 
 Se observan luminarias fluorescentes, incluidos tubos T8/T5 y ampolletas compactas, con tecnología de menor eficacia luminosa que la disponible actualmente en el mercado. Su reemplazo progresivo por LED permite reducir el consumo manteniendo o mejorando los niveles de iluminación.
 
@@ -116,11 +116,11 @@ Se observan luminarias fluorescentes, incluidos tubos T8/T5 y ampolletas compact
 
 **Recomendación asociada:** REC-ILUM-01
 
-### Refrigeración y congelación
+### 🧊 Refrigeración y congelación
 
-#### CONG-01 · Acumulación de escarcha en evaporadores
+#### ❄️ CONG-01 · Acumulación de escarcha en evaporadores
 
-**Impacto:** Medio · **Energético:** Electricidad · **Categoría:** Congelación
+**Impacto:** Medio · **Energético:** Electricidad · **Categoría:** ❄️ Congelación
 
 Se observa escarcha o hielo acumulado en evaporadores, paredes o puertas de congeladores. El ciclo de descongelación no se realiza de forma programada o no se registra.
 
@@ -128,11 +128,11 @@ Se observa escarcha o hielo acumulado en evaporadores, paredes o puertas de cong
 
 **Recomendación asociada:** REC-CONG-01
 
-### Cocción
+### 🔥 Cocción
 
-#### COCC-01 · Hornos operados con baja carga o aperturas frecuentes
+#### 🔥 COCC-01 · Hornos operados con baja carga o aperturas frecuentes
 
-**Impacto:** Alto · **Energético:** Electricidad · **Categoría:** Cocción
+**Impacto:** Alto · **Energético:** Electricidad · **Categoría:** 🔥 Cocción
 
 Los hornos se encienden antes de la producción, operan en vacío o con carga baja y su puerta se abre con frecuencia para verificar la cocción. No se observa una planificación de tandas.
 
@@ -140,11 +140,11 @@ Los hornos se encienden antes de la producción, operan en vacío o con carga ba
 
 **Recomendación asociada:** REC-COCC-01
 
-### Agua caliente sanitaria
+### 💧 Agua caliente sanitaria
 
-#### ACS-02 · Tuberías de agua caliente sin aislación
+#### 💧 ACS-02 · Tuberías de agua caliente sin aislación
 
-**Impacto:** Bajo · **Energético:** GLP · **Categoría:** Agua caliente sanitaria
+**Impacto:** Bajo · **Energético:** GLP · **Categoría:** 💧 Agua caliente sanitaria
 
 Se observan tramos de tubería de agua caliente sin aislación térmica, especialmente en recorridos largos entre el equipo y los puntos de consumo. También se detectan filtraciones menores.
 
@@ -152,11 +152,11 @@ Se observan tramos de tubería de agua caliente sin aislación térmica, especia
 
 **Recomendación asociada:** REC-ACS-02
 
-### Gestión, tarifas y potencia contratada
+### 🎯 Gestión, tarifas y potencia contratada
 
-#### TAR-01 · Tarifa eléctrica inadecuada para el perfil de consumo
+#### 🧾 TAR-01 · Tarifa eléctrica inadecuada para el perfil de consumo
 
-**Impacto:** Alto · **Energético:** Electricidad · **Categoría:** Tarifas eléctricas
+**Impacto:** Alto · **Energético:** Electricidad · **Categoría:** 🧾 Tarifas eléctricas
 
 El negocio mantiene una tarifa de tipo residencial o sin discriminación horaria pese a tener un consumo productivo relevante. No se ha analizado el historial de facturación ni la curva de carga.
 
@@ -164,9 +164,9 @@ El negocio mantiene una tarifa de tipo residencial o sin discriminación horaria
 
 **Recomendación asociada:** REC-TAR-01
 
-#### TAR-02 · Bajo factor de potencia con penalización económica
+#### 🧾 TAR-02 · Bajo factor de potencia con penalización económica
 
-**Impacto:** Medio · **Energético:** Electricidad · **Categoría:** Tarifas eléctricas
+**Impacto:** Medio · **Energético:** Electricidad · **Categoría:** 🧾 Tarifas eléctricas
 
 La facturación registra energía reactiva o cargos por bajo factor de potencia, asociados a motores, compresores y equipos inductivos. No se monitorea este indicador.
 
@@ -174,9 +174,9 @@ La facturación registra energía reactiva o cargos por bajo factor de potencia,
 
 **Recomendación asociada:** REC-TAR-02
 
-#### GEST-01 · Ausencia de un sistema formal de gestión energética
+#### 🎯 GEST-01 · Ausencia de un sistema formal de gestión energética
 
-**Impacto:** Alto · **Energético:** Electricidad · **Categoría:** Gestión energética
+**Impacto:** Alto · **Energético:** Electricidad · **Categoría:** 🎯 Gestión energética
 
 No existe un responsable designado, una línea base de consumo, indicadores clave ni un procedimiento de revisión periódica. Las acciones energéticas son reactivas y no se documentan.
 
@@ -184,9 +184,9 @@ No existe un responsable designado, una línea base de consumo, indicadores clav
 
 **Recomendación asociada:** REC-GEST-01
 
-#### GEST-02 · Falta de medición y monitoreo de consumos
+#### 🎯 GEST-02 · Falta de medición y monitoreo de consumos
 
-**Impacto:** Alto · **Energético:** Electricidad · **Categoría:** Gestión energética
+**Impacto:** Alto · **Energético:** Electricidad · **Categoría:** 🎯 Gestión energética
 
 Se dispone solo de la facturación mensual o de remarcadores sin registro sistemático. No se separan consumos por área, proceso o equipo, ni se comparan mes a mes.
 
@@ -200,7 +200,7 @@ Las 8 medidas propuestas se ordenan por nivel de inversión. La prioridad consid
 
 ### Bajo costo
 
-#### REC-TAR-01 · Análisis y cambio de tarifa eléctrica
+#### 🧾 REC-TAR-01 · Análisis y cambio de tarifa eléctrica
 
 **Prioridad:** Alta · **Inversión:** Bajo costo · **Complejidad:** Media · **Ahorro estimado:** 5-20% de la factura eléctrica · **Plazo:** Corto plazo (1-3 meses)
 
@@ -212,7 +212,7 @@ Analizar al menos 12 meses de facturación y la curva de carga, y evaluar con un
 
 **Atiende hallazgos:** TAR-01
 
-#### REC-CONG-01 · Descongelación y control de escarcha
+#### ❄️ REC-CONG-01 · Descongelación y control de escarcha
 
 **Prioridad:** Alta · **Inversión:** Bajo costo · **Complejidad:** Baja · **Ahorro estimado:** 5-15% del consumo de congelación · **Plazo:** Inmediato (0-30 días)
 
@@ -224,7 +224,7 @@ Establecer un calendario de descongelación según las instrucciones del fabrica
 
 **Atiende hallazgos:** CONG-01
 
-#### REC-GEST-01 · Implementar un sistema simple de gestión energética
+#### 🎯 REC-GEST-01 · Implementar un sistema simple de gestión energética
 
 **Prioridad:** Alta · **Inversión:** Bajo costo · **Complejidad:** Media · **Ahorro estimado:** 5-15% del consumo total · **Plazo:** Mediano plazo (3-6 meses)
 
@@ -236,7 +236,7 @@ Designar un responsable, establecer una línea base de consumo, definir indicado
 
 **Atiende hallazgos:** GEST-01
 
-#### REC-GEST-02 · Medición y monitoreo de consumos
+#### 🎯 REC-GEST-02 · Medición y monitoreo de consumos
 
 **Prioridad:** Alta · **Inversión:** Bajo costo · **Complejidad:** Media · **Ahorro estimado:** 5-10% del consumo total · **Plazo:** Corto plazo (1-3 meses)
 
@@ -248,7 +248,7 @@ Registrar mensualmente la facturación y, si es posible, instalar remarcadores o
 
 **Atiende hallazgos:** GEST-02
 
-#### REC-COCC-01 · Programación eficiente de hornos y tandas de cocción
+#### 🔥 REC-COCC-01 · Programación eficiente de hornos y tandas de cocción
 
 **Prioridad:** Alta · **Inversión:** Bajo costo · **Complejidad:** Baja · **Ahorro estimado:** 5-15% del consumo de cocción · **Plazo:** Inmediato (0-30 días)
 
@@ -260,7 +260,7 @@ Planificar la producción en tandas que aprovechen la capacidad del horno, respe
 
 **Atiende hallazgos:** COCC-01
 
-#### REC-ACS-02 · Aislación térmica de tuberías de agua caliente
+#### 💧 REC-ACS-02 · Aislación térmica de tuberías de agua caliente
 
 **Prioridad:** Media · **Inversión:** Bajo costo · **Complejidad:** Baja · **Ahorro estimado:** 3-8% del consumo de ACS · **Plazo:** Corto plazo (1-3 meses)
 
@@ -274,7 +274,7 @@ Aislar los tramos accesibles de tubería de agua caliente, reparar filtraciones 
 
 ### Costo medio
 
-#### REC-TAR-02 · Compensación de energía reactiva
+#### 🧾 REC-TAR-02 · Compensación de energía reactiva
 
 **Prioridad:** Alta · **Inversión:** Costo medio · **Complejidad:** Media · **Ahorro estimado:** 3-8% de la factura eléctrica · **Plazo:** Mediano plazo (3-6 meses)
 
@@ -286,7 +286,7 @@ Dimensionar e instalar un banco de condensadores o filtro activo para elevar el 
 
 **Atiende hallazgos:** TAR-02
 
-#### REC-ILUM-01 · Migración progresiva a tecnología LED
+#### 💡 REC-ILUM-01 · Migración progresiva a tecnología LED
 
 **Prioridad:** Media · **Inversión:** Costo medio · **Complejidad:** Baja · **Ahorro estimado:** 40-60% del consumo de iluminación · **Plazo:** Corto plazo (1-3 meses)
 
@@ -302,11 +302,11 @@ Reemplazar progresivamente luminarias fluorescentes, halógenas e incandescentes
 
 | Uso final | Recomendaciones | Inversión predominante |
 | --- | --- | --- |
-| Otros usos | Análisis y cambio de tarifa eléctrica; Compensación de energía reactiva; Implementar un sistema simple de gestión energética; Medición y monitoreo de consumos | Media |
-| Refrigeración y congelación | Descongelación y control de escarcha | Baja |
-| Cocción | Programación eficiente de hornos y tandas de cocción | Baja |
-| Agua caliente sanitaria | Aislación térmica de tuberías de agua caliente | Baja |
-| Iluminación | Migración progresiva a tecnología LED | Media |
+| ✨ Otros usos | 🧾 Análisis y cambio de tarifa eléctrica; 🧾 Compensación de energía reactiva; 🎯 Implementar un sistema simple de gestión energética; 🎯 Medición y monitoreo de consumos | Media |
+| 🧊 Refrigeración y congelación | ❄️ Descongelación y control de escarcha | Baja |
+| 🔥 Cocción | 🔥 Programación eficiente de hornos y tandas de cocción | Baja |
+| 💧 Agua caliente sanitaria | 💧 Aislación térmica de tuberías de agua caliente | Baja |
+| 💡 Iluminación | 💡 Migración progresiva a tecnología LED | Media |
 
 ## 4. Plan de acción sugerido
 
@@ -314,14 +314,14 @@ El siguiente plan ordena las medidas según horizonte de implementación. Se sug
 
 | Prioridad | Acción | Inversión | Plazo | Ahorro referencial |
 | --- | --- | --- | --- | --- |
-| Alta | Descongelación y control de escarcha | Bajo costo | Inmediato (0-30 días) | 5-15% del consumo de congelación |
-| Alta | Programación eficiente de hornos y tandas de cocción | Bajo costo | Inmediato (0-30 días) | 5-15% del consumo de cocción |
-| Alta | Análisis y cambio de tarifa eléctrica | Bajo costo | Corto plazo (1-3 meses) | 5-20% de la factura eléctrica |
-| Alta | Medición y monitoreo de consumos | Bajo costo | Corto plazo (1-3 meses) | 5-10% del consumo total |
-| Media | Aislación térmica de tuberías de agua caliente | Bajo costo | Corto plazo (1-3 meses) | 3-8% del consumo de ACS |
-| Media | Migración progresiva a tecnología LED | Costo medio | Corto plazo (1-3 meses) | 40-60% del consumo de iluminación |
-| Alta | Compensación de energía reactiva | Costo medio | Mediano plazo (3-6 meses) | 3-8% de la factura eléctrica |
-| Alta | Implementar un sistema simple de gestión energética | Bajo costo | Mediano plazo (3-6 meses) | 5-15% del consumo total |
+| Alta | ❄️ Descongelación y control de escarcha | Bajo costo | Inmediato (0-30 días) | 5-15% del consumo de congelación |
+| Alta | 🔥 Programación eficiente de hornos y tandas de cocción | Bajo costo | Inmediato (0-30 días) | 5-15% del consumo de cocción |
+| Alta | 🧾 Análisis y cambio de tarifa eléctrica | Bajo costo | Corto plazo (1-3 meses) | 5-20% de la factura eléctrica |
+| Alta | 🎯 Medición y monitoreo de consumos | Bajo costo | Corto plazo (1-3 meses) | 5-10% del consumo total |
+| Media | 💧 Aislación térmica de tuberías de agua caliente | Bajo costo | Corto plazo (1-3 meses) | 3-8% del consumo de ACS |
+| Media | 💡 Migración progresiva a tecnología LED | Costo medio | Corto plazo (1-3 meses) | 40-60% del consumo de iluminación |
+| Alta | 🧾 Compensación de energía reactiva | Costo medio | Mediano plazo (3-6 meses) | 3-8% de la factura eléctrica |
+| Alta | 🎯 Implementar un sistema simple de gestión energética | Bajo costo | Mediano plazo (3-6 meses) | 5-15% del consumo total |
 
 ### Metas y seguimiento recomendado
 
@@ -347,6 +347,7 @@ Los siguientes recursos públicos pueden apoyar la implementación de las medida
 - **Sello de Eficiencia Energética (Sello EE).** Programa gratuito para MiPyMEs que reconoce la gestión energética y entrega una hoja de ruta de mejora continua. [https://plataforma.selloee.cl/](https://plataforma.selloee.cl/)
 - **Buscador de instaladores certificados SEC.** Listado oficial de instaladores eléctricos y de gas certificados para regularizaciones, proyectos y modificaciones. [https://www.sec.cl/area-ciudadana/nuevo-buscador-de-instaladores-e-instaladoras/](https://www.sec.cl/area-ciudadana/nuevo-buscador-de-instaladores-e-instaladoras/)
 - **Registro de Consultores Energéticos.** Plataforma para contactar profesionales y empresas que prestan servicios de eficiencia energética y energías renovables. [https://consultores.registroenergetico.cl/](https://consultores.registroenergetico.cl/)
+- **Manual para Equipos de Refrigeración Comercial.** Manual de buenas prácticas de operación y mantenimiento de equipos de refrigeración comercial dirigido para administradores, encargados de locales comerciales, personal de mantención y operadores. Aplicable a equipos tipo Visi coolers, refrigeradores comerciales, congeladores horizontales y verticales, vitrinas refrigeradas. [https://crcamposn.notion.site/Manual-para-equipos-de-refrigeraci-n-416938ab020580039dddf3a96b2ee238?pvs=74](https://crcamposn.notion.site/Manual-para-equipos-de-refrigeraci-n-416938ab020580039dddf3a96b2ee238?pvs=74)
 
 ### Agencia de Sostenibilidad Energética
 
@@ -417,7 +418,7 @@ El puntaje global se calcula como el promedio simple de las 9 dimensiones evalua
 - **Asesor:** Carlos Campos N.
 - **Grado de consumo:** Intensivo
 - **Clasificación global:** Deficiente
-- **Generado:** 06-11-2026, 8:57:42 a. m.
+- **Generado:** 13-11-2026, 3:01:43 p. m.
 
 ---
 

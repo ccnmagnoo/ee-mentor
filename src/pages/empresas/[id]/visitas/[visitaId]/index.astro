@@ -6,6 +6,7 @@ import ClasificacionBadge from '@/components/ui/ClasificacionBadge.astro';
 import { catalogos, empresas, informes, visitas } from '@/lib/repositories';
 import { evaluarSecciones, redondear } from '@/lib/scoring';
 import {
+  CATEGORIAS,
   ENERGOS,
   ESTADOS_SISTEMA_FV,
   GRADOS_CONSUMO,
@@ -14,6 +15,7 @@ import {
   PRIORIDADES,
   TIPOS_CONEXION_FV,
 } from '@/lib/schemas';
+import { CATEGORIA_ICONS, SECCION_ICONS } from '@/lib/iconografia';
 import { formatCLP, formatFecha, formatNumero } from '@/lib/config';
 import { stripFrontmatter } from '@/lib/markdown';
 import {
@@ -279,7 +281,12 @@ const oportunidadesFv = evaluacionFv
         <tbody>
           {evaluacion.secciones.map((seccion) => (
             <tr>
-              <td class="font-medium text-slate-800">{seccion.nombre}</td>
+              <td class="font-medium text-slate-800">
+                <span class="inline-flex items-center gap-1.5">
+                  <Icon name={SECCION_ICONS[seccion.key]} size={14} class="text-brand-600" />
+                  {seccion.nombre}
+                </span>
+              </td>
               <td class="text-center">{seccion.aplica ? `${seccion.puntaje}/5` : '—'}</td>
               <td><ClasificacionBadge etiqueta={seccion.clasificacion.etiqueta} tono={seccion.clasificacion.tono} /></td>
               <td class="text-slate-600">{visita.secciones[seccion.key].observaciones || '—'}</td>
@@ -304,6 +311,10 @@ const oportunidadesFv = evaluacionFv
               <span class="font-mono text-[10px] font-semibold text-slate-400">{hallazgo!.codigo}</span>
               <span class:list={['badge', hallazgo!.impacto === 'critico' ? 'badge-rose' : hallazgo!.impacto === 'alto' ? 'badge-orange' : 'badge-amber']}>
                 {IMPACTOS[hallazgo!.impacto]}
+              </span>
+              <span class="badge-neutral">
+                <Icon name={CATEGORIA_ICONS[hallazgo!.categoria]} size={12} />
+                {CATEGORIAS[hallazgo!.categoria]}
               </span>
             </div>
             <p class="mt-1 text-sm font-semibold text-slate-800">{hallazgo!.titulo}</p>
@@ -330,6 +341,10 @@ const oportunidadesFv = evaluacionFv
             <div class="flex flex-wrap items-center gap-2">
               <span class="font-mono text-[10px] font-semibold text-slate-400">{reco!.codigo}</span>
               <span class="badge-brand">Prioridad {PRIORIDADES[seleccion.prioridad ?? reco!.prioridad]}</span>
+              <span class="badge-neutral">
+                <Icon name={CATEGORIA_ICONS[reco!.categoria]} size={12} />
+                {CATEGORIAS[reco!.categoria]}
+              </span>
               <span class="badge-neutral">{INVERSIONES[reco!.inversion]}</span>
             </div>
             <p class="mt-1 text-sm font-semibold text-slate-800">{reco!.titulo}</p>

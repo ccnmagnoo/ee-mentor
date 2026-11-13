@@ -11,7 +11,7 @@ comuna: Hanga Roa
 region: Valparaíso
 rubro: Almacén / minimarket
 version: 1
-generado: 2026-11-13T12:33:58.428Z
+generado: 2026-11-13T18:01:43.897Z
 puntaje_global: 3
 clasificacion: Aceptable
 hallazgos: 11
@@ -84,7 +84,7 @@ Las estimaciones de ahorro incluidas son referenciales, no son aditivas entre s�
 | --- | ---: | ---: | --- |
 | Electricidad | 960 kWh/mes | $450.000 | normalizado |
 
-**Principales usos finales:** Iluminación, Refrigeración y congelación, Climatización y ventilación, Equipos productivos, Otros usos.
+**Principales usos finales:** 💡 Iluminación, 🧊 Refrigeración y congelación, 🌡️ Climatización y ventilación, 🏭 Equipos productivos, ✨ Otros usos.
 
 **Observaciones de la empresa:** Maurea Supermarket es un minimarket y supermercado local ubicado en Rapa Nui (Isla de Pascua), orientado a la venta minorista de alimentos, bebidas y productos de primera necesidad para residentes y visitantes de la isla. La empresa opera bajo la razón social MAUREA SPA, con actividades comerciales vinculadas principalmente al comercio de alimentos en formato de almacén y minimarket
 
@@ -100,21 +100,21 @@ Las estimaciones de ahorro incluidas son referenciales, no son aditivas entre s�
 
 | Dimensión | Puntaje | Clasificación |
 | --- | :---: | --- |
-| Iluminación | 4/5 | Bueno |
-| Refrigeración | 3/5 | Aceptable |
-| Congelación | 3/5 | Aceptable |
-| Climatización y A/C | 3/5 | Aceptable |
-| Agua caliente sanitaria | No evaluado | No evaluado |
-| Cocción | No evaluado | No evaluado |
-| Motores y equipos productivos | No evaluado | No evaluado |
-| Envolvente e infiltraciones | 3/5 | Aceptable |
-| Gestión energética | 2/5 | Deficiente |
-| Tarifas y potencia | 3/5 | Aceptable |
+| 💡 Iluminación | 4/5 | Bueno |
+| 🧊 Refrigeración | 3/5 | Aceptable |
+| ❄️ Congelación | 3/5 | Aceptable |
+| 🌡️ Climatización y A/C | 3/5 | Aceptable |
+| 💧 Agua caliente sanitaria | No evaluado | No evaluado |
+| 🔥 Cocción | No evaluado | No evaluado |
+| ⚙️ Motores y equipos productivos | No evaluado | No evaluado |
+| 🏠 Envolvente e infiltraciones | 3/5 | Aceptable |
+| 🎯 Gestión energética | 2/5 | Deficiente |
+| 🧾 Tarifas y potencia | 3/5 | Aceptable |
 | **Puntaje global** | **3.0/5** | **Aceptable** |
 
-**Fortalezas observadas:** Iluminación (4/5).
+**Fortalezas observadas:** 💡 Iluminación (4/5).
 
-**Brechas prioritarias:** Gestión energética (2/5, deficiente).
+**Brechas prioritarias:** 🎯 Gestión energética (2/5, deficiente).
 
 **Observaciones generales de la visita:** Se realizado observaciones y recorrido virtual en el establecimiento,. el establecimiento es relativamente nuevo, cuenta con una construcción con buenas terminaciones y buena ventilación.
 
@@ -164,11 +164,11 @@ Los indicadores se calculan con la generación medida y, cuando no existe medici
 
 **Hallazgos**
 
-- **ERNC-01 · Sin evaluación de autoconsumo con energías renovables** — Impacto medio · Energías renovables. No se ha evaluado la incorporación de generación solar fotovoltaica u otra fuente renovable para autoconsumo, pese a disponer de cubierta o superficie útil y de un consumo eléctrico diurno relevante. **Evidencia:** Existe equipo renovable pero limitado a suministrar energía a equipamiento ventas. Se puede evaluar considerando ampliar el aporte energético para suplir parcialmente la demanda de energía del establecimiento.
+- **🌿 ERNC-01 · Sin evaluación de autoconsumo con energías renovables** — Impacto medio · Energías renovables. No se ha evaluado la incorporación de generación solar fotovoltaica u otra fuente renovable para autoconsumo, pese a disponer de cubierta o superficie útil y de un consumo eléctrico diurno relevante. **Evidencia:** Existe equipo renovable pero limitado a suministrar energía a equipamiento ventas. Se puede evaluar considerando ampliar el aporte energético para suplir parcialmente la demanda de energía del establecimiento.
 
 **Recomendaciones**
 
-- **REC-ERNC-01 · Estudio e instalación de autoconsumo solar fotovoltaico** — Prioridad media · Inversión: alto costo · Plazo: Largo plazo (6-12 meses). Realizar una prefactibilidad técnica y económica considerando cubierta disponible, curva de consumo y normativa de generación distribuida. Dimensionar el sistema para maximizar el autoconsumo. **Ahorro estimado:** 20-50% del consumo eléctrico diurno. **Observación:** Cuenta con equipamiento limitado, pero con potencial de ampliar cobertura.
+- **🌿 REC-ERNC-01 · Estudio e instalación de autoconsumo solar fotovoltaico** — Prioridad media · Inversión: alto costo · Plazo: Largo plazo (6-12 meses). Realizar una prefactibilidad técnica y económica considerando cubierta disponible, curva de consumo y normativa de generación distribuida. Dimensionar el sistema para maximizar el autoconsumo. **Ahorro estimado:** 20-50% del consumo eléctrico diurno. **Observación:** Cuenta con equipamiento limitado, pero con potencial de ampliar cobertura.
 
 #### Oportunidades de optimización y seguimiento
 
@@ -196,11 +196,11 @@ Se identificaron 11 hallazgos. La distribución por impacto es: crítico: 0, alt
 | --- | ---: |
 | Electricidad | 11 |
 
-### Iluminación
+### 💡 Iluminación
 
-#### ILUM-03 · Iluminación sin zonificación ni control de presencia
+#### 💡 ILUM-03 · Iluminación sin zonificación ni control de presencia
 
-**Impacto:** Medio · **Energético:** Electricidad · **Categoría:** Iluminación
+**Impacto:** Medio · **Energético:** Electricidad · **Categoría:** 💡 Iluminación
 
 La iluminación permanece encendida de forma homogénea durante toda la jornada, incluso en sectores sin ocupación como bodegas, baños, vitrinas o áreas de preparación cerradas. No se observan sensores, temporizadores ni circuitos independientes.
 
@@ -208,11 +208,11 @@ La iluminación permanece encendida de forma homogénea durante toda la jornada,
 
 **Recomendación asociada:** REC-ILUM-02
 
-### Refrigeración y congelación
+### 🧊 Refrigeración y congelación
 
-#### CONG-02 · Aperturas frecuentes y falta de cortinas en congelación
+#### ❄️ CONG-02 · Aperturas frecuentes y falta de cortinas en congelación
 
-**Impacto:** Medio · **Energético:** Electricidad · **Categoría:** Congelación
+**Impacto:** Medio · **Energético:** Electricidad · **Categoría:** ❄️ Congelación
 
 Las puertas de congeladores y cámaras se abren con frecuencia durante la jornada, o permanecen abiertas mientras se retiran productos. No se utilizan cortinas de tiras ni se ha definido un protocolo de acceso.
 
@@ -220,9 +220,9 @@ Las puertas de congeladores y cámaras se abren con frecuencia durante la jornad
 
 **Recomendación asociada:** REC-CONG-02
 
-#### CONG-03 · Cadena de frío sin control documentado
+#### ❄️ CONG-03 · Cadena de frío sin control documentado
 
-**Impacto:** Medio · **Energético:** Electricidad · **Categoría:** Congelación
+**Impacto:** Medio · **Energético:** Electricidad · **Categoría:** ❄️ Congelación
 
 La operación de equipos de congelación se basa en la experiencia del personal, sin registros formales de temperatura, setpoints, ciclos de descongelación ni mantenciones. No se identifican termómetros calibrados en todos los equipos.
 
@@ -230,9 +230,9 @@ La operación de equipos de congelación se basa en la experiencia del personal,
 
 **Recomendación asociada:** REC-CONG-03
 
-#### REFR-04 · Temperaturas de consigna más bajas de lo necesario
+#### 🧊 REFR-04 · Temperaturas de consigna más bajas de lo necesario
 
-**Impacto:** Medio · **Energético:** Electricidad · **Categoría:** Refrigeración
+**Impacto:** Medio · **Energético:** Electricidad · **Categoría:** 🧊 Refrigeración
 
 Se observan equipos configurados con temperaturas inferiores a las requeridas para la conservación de los productos, o sin termómetro visible para verificar el punto de operación. La regulación se realiza por percepción del personal.
 
@@ -240,9 +240,9 @@ Se observan equipos configurados con temperaturas inferiores a las requeridas pa
 
 **Recomendación asociada:** REC-REFR-04
 
-#### REFR-06 · Equipos de frío próximos a fuentes de calor o sin ventilación
+#### 🧊 REFR-06 · Equipos de frío próximos a fuentes de calor o sin ventilación
 
-**Impacto:** Medio · **Energético:** Electricidad · **Categoría:** Refrigeración
+**Impacto:** Medio · **Energético:** Electricidad · **Categoría:** 🧊 Refrigeración
 
 Refrigeradores, congeladores o vitrinas se encuentran junto a hornos, planchas, exposición solar directa o en espacios sin ventilación suficiente, con las rejillas posteriores obstruidas.
 
@@ -250,11 +250,11 @@ Refrigeradores, congeladores o vitrinas se encuentran junto a hornos, planchas, 
 
 **Recomendación asociada:** REC-REFR-06
 
-### Climatización y ventilación
+### 🌡️ Climatización y ventilación
 
-#### CLIM-03 · Setpoints y horarios de climatización inadecuados
+#### 🌡️ CLIM-03 · Setpoints y horarios de climatización inadecuados
 
-**Impacto:** Medio · **Energético:** Electricidad · **Categoría:** Climatización
+**Impacto:** Medio · **Energético:** Electricidad · **Categoría:** 🌡️ Climatización
 
 Los equipos de climatización operan con temperaturas de consigna extremas, sin programación horaria y en algunos casos durante toda la noche o con el local cerrado.
 
@@ -262,11 +262,11 @@ Los equipos de climatización operan con temperaturas de consigna extremas, sin 
 
 **Recomendación asociada:** REC-CLIM-03
 
-### Fuerza motriz y equipos productivos
+### ⚙️ Fuerza motriz y equipos productivos
 
-#### PROD-01 · Equipos productivos en standby fuera de horario
+#### 🏭 PROD-01 · Equipos productivos en standby fuera de horario
 
-**Impacto:** Medio · **Energético:** Electricidad · **Categoría:** Equipos productivos
+**Impacto:** Medio · **Energético:** Electricidad · **Categoría:** 🏭 Equipos productivos
 
 Máquinas, vitrinas, computadores, impresoras y equipos auxiliares permanecen en modo standby o encendidos fuera del horario de operación, sin un protocolo de cierre.
 
@@ -274,11 +274,11 @@ Máquinas, vitrinas, computadores, impresoras y equipos auxiliares permanecen en
 
 **Recomendación asociada:** REC-PROD-01
 
-### Gestión, tarifas y potencia contratada
+### 🎯 Gestión, tarifas y potencia contratada
 
-#### GEST-01 · Ausencia de un sistema formal de gestión energética
+#### 🎯 GEST-01 · Ausencia de un sistema formal de gestión energética
 
-**Impacto:** Alto · **Energético:** Electricidad · **Categoría:** Gestión energética
+**Impacto:** Alto · **Energético:** Electricidad · **Categoría:** 🎯 Gestión energética
 
 No existe un responsable designado, una línea base de consumo, indicadores clave ni un procedimiento de revisión periódica. Las acciones energéticas son reactivas y no se documentan.
 
@@ -286,9 +286,9 @@ No existe un responsable designado, una línea base de consumo, indicadores clav
 
 **Recomendación asociada:** REC-GEST-01
 
-#### GEST-02 · Falta de medición y monitoreo de consumos
+#### 🎯 GEST-02 · Falta de medición y monitoreo de consumos
 
-**Impacto:** Alto · **Energético:** Electricidad · **Categoría:** Gestión energética
+**Impacto:** Alto · **Energético:** Electricidad · **Categoría:** 🎯 Gestión energética
 
 Se dispone solo de la facturación mensual o de remarcadores sin registro sistemático. No se separan consumos por área, proceso o equipo, ni se comparan mes a mes.
 
@@ -296,9 +296,9 @@ Se dispone solo de la facturación mensual o de remarcadores sin registro sistem
 
 **Recomendación asociada:** REC-GEST-02
 
-#### GEST-03 · Personal sin capacitación en buenas prácticas energéticas
+#### 📋 GEST-03 · Personal sin capacitación en buenas prácticas energéticas
 
-**Impacto:** Medio · **Energético:** Electricidad · **Categoría:** Gestión operacional
+**Impacto:** Medio · **Energético:** Electricidad · **Categoría:** 📋 Gestión operacional
 
 El personal no ha recibido orientación sobre el uso eficiente de equipos, apagado de luces, manejo de puertas de frío o control de temperaturas. Las prácticas dependen de cada turno.
 
@@ -306,11 +306,11 @@ El personal no ha recibido orientación sobre el uso eficiente de equipos, apaga
 
 **Recomendación asociada:** REC-GEST-03
 
-### Energías renovables
+### 🌿 Energías renovables
 
-#### ERNC-01 · Sin evaluación de autoconsumo con energías renovables
+#### 🌿 ERNC-01 · Sin evaluación de autoconsumo con energías renovables
 
-**Impacto:** Medio · **Energético:** Electricidad · **Categoría:** Energías renovables
+**Impacto:** Medio · **Energético:** Electricidad · **Categoría:** 🌿 Energías renovables
 
 No se ha evaluado la incorporación de generación solar fotovoltaica u otra fuente renovable para autoconsumo, pese a disponer de cubierta o superficie útil y de un consumo eléctrico diurno relevante.
 
@@ -324,7 +324,7 @@ Las 16 medidas propuestas se ordenan por nivel de inversión. La prioridad consi
 
 ### Bajo costo
 
-#### REC-REFR-04 · Ajuste de setpoints y control de temperaturas
+#### 🧊 REC-REFR-04 · Ajuste de setpoints y control de temperaturas
 
 **Prioridad:** Alta · **Inversión:** Bajo costo · **Complejidad:** Baja · **Ahorro estimado:** 5-15% del consumo de refrigeración · **Plazo:** Inmediato (0-30 días)
 
@@ -334,7 +334,7 @@ Ajustar las temperaturas de consigna a los requisitos sanitarios y de conservaci
 
 **Atiende hallazgos:** REFR-04
 
-#### REC-CONG-01 · Descongelación y control de escarcha
+#### ❄️ REC-CONG-01 · Descongelación y control de escarcha
 
 **Prioridad:** Alta · **Inversión:** Bajo costo · **Complejidad:** Baja · **Ahorro estimado:** 5-15% del consumo de congelación · **Plazo:** Inmediato (0-30 días)
 
@@ -344,7 +344,7 @@ Establecer un calendario de descongelación según las instrucciones del fabrica
 
 **Observación del consultor:** De haber acumulación en congeladores se recomienda mantener labores de mantenimiento apropiado
 
-#### REC-PROD-01 · Gestión de standby y apagado programado
+#### 🏭 REC-PROD-01 · Gestión de standby y apagado programado
 
 **Prioridad:** Alta · **Inversión:** Bajo costo · **Complejidad:** Baja · **Ahorro estimado:** 3-8% del consumo eléctrico · **Plazo:** Inmediato (0-30 días)
 
@@ -356,7 +356,7 @@ Identificar equipos con consumo permanente, incorporar temporizadores o regletas
 
 **Atiende hallazgos:** PROD-01
 
-#### REC-REFR-01 · Gestión diferenciada de equipos de refrigeración
+#### 🧊 REC-REFR-01 · Gestión diferenciada de equipos de refrigeración
 
 **Prioridad:** Alta · **Inversión:** Bajo costo · **Complejidad:** Baja · **Ahorro estimado:** 10-25% del consumo de refrigeración · **Plazo:** Inmediato (0-30 días)
 
@@ -364,7 +364,7 @@ Definir que vitrinas y mesones refrigerados se usen para exhibición y apoyo de 
 
 **Beneficio esperado:** Reduce el consumo base de refrigeración, mejora la conservación de alimentos y prolonga la vida útil de los equipos de exhibición.
 
-#### REC-GEST-01 · Implementar un sistema simple de gestión energética
+#### 🎯 REC-GEST-01 · Implementar un sistema simple de gestión energética
 
 **Prioridad:** Alta · **Inversión:** Bajo costo · **Complejidad:** Media · **Ahorro estimado:** 5-15% del consumo total · **Plazo:** Mediano plazo (3-6 meses)
 
@@ -376,7 +376,7 @@ Designar un responsable, establecer una línea base de consumo, definir indicado
 
 **Atiende hallazgos:** GEST-01
 
-#### REC-REFR-02 · Limpieza programada de condensadores y serpentines
+#### 🧊 REC-REFR-02 · Limpieza programada de condensadores y serpentines
 
 **Prioridad:** Alta · **Inversión:** Bajo costo · **Complejidad:** Baja · **Ahorro estimado:** 5-15% del consumo de refrigeración · **Plazo:** Inmediato (0-30 días)
 
@@ -384,7 +384,7 @@ Incorporar la limpieza de condensadores, serpentines y rejillas en un plan trime
 
 **Beneficio esperado:** Mejora la transferencia de calor, reduce el tiempo de operación del compresor y disminuye el riesgo de fallas.
 
-#### REC-GEST-02 · Medición y monitoreo de consumos
+#### 🎯 REC-GEST-02 · Medición y monitoreo de consumos
 
 **Prioridad:** Alta · **Inversión:** Bajo costo · **Complejidad:** Media · **Ahorro estimado:** 5-10% del consumo total · **Plazo:** Corto plazo (1-3 meses)
 
@@ -396,13 +396,13 @@ Registrar mensualmente la facturación y, si es posible, instalar remarcadores o
 
 **Atiende hallazgos:** GEST-02
 
-#### REC-KB-GESTO-01 · Buenas prácticas complementarias y capacitación
+#### 📋 REC-KB-GESTO-01 · Buenas prácticas complementarias y capacitación
 
 **Prioridad:** Media · **Inversión:** Bajo costo · **Complejidad:** Media · **Ahorro estimado:** Por cuantificar · **Plazo:** Corto plazo (1-3 meses)
 
 Capacitación sistemática a personal de atención para minimizar aperturas innecesarias o prolongadas de equipos de refrigeración. Evitar sobrecarga de productos que obstruyan la circulación de aire frío. Mantener una adecuada organización de los productos (rotación FIFO) para mejorar la distribución de la carga de frío. Realizar mantenciones periódicas (limpieza de serpentines, revisión de termostatos).
 
-#### REC-GEST-03 · Capacitación y cultura energética
+#### 📋 REC-GEST-03 · Capacitación y cultura energética
 
 **Prioridad:** Media · **Inversión:** Bajo costo · **Complejidad:** Baja · **Ahorro estimado:** 3-8% del consumo total · **Plazo:** Corto plazo (1-3 meses)
 
@@ -412,7 +412,7 @@ Realizar charlas breves al personal, entregar procedimientos escritos y asignar 
 
 **Atiende hallazgos:** GEST-03
 
-#### REC-CLIM-03 · Gestión de setpoints y horarios de climatización
+#### 🌡️ REC-CLIM-03 · Gestión de setpoints y horarios de climatización
 
 **Prioridad:** Media · **Inversión:** Bajo costo · **Complejidad:** Baja · **Ahorro estimado:** 10-20% del consumo de climatización · **Plazo:** Inmediato (0-30 días)
 
@@ -422,7 +422,7 @@ Fijar consignas de 20-22 °C en invierno y 24-26 °C en verano, programar el apa
 
 **Atiende hallazgos:** CLIM-03
 
-#### REC-ILUM-03 · Plan de mantención y limpieza de luminarias
+#### 💡 REC-ILUM-03 · Plan de mantención y limpieza de luminarias
 
 **Prioridad:** Media · **Inversión:** Bajo costo · **Complejidad:** Baja · **Ahorro estimado:** 5-15% del consumo de iluminación · **Plazo:** Inmediato (0-30 días)
 
@@ -430,7 +430,7 @@ Establecer una pauta semestral de limpieza de luminarias y difusores, revisión 
 
 **Beneficio esperado:** Recupera los niveles de iluminación diseñados, evita sobredimensionar la potencia instalada y prolonga la vida útil de los equipos.
 
-#### REC-CONG-02 · Protocolo de apertura y cortinas para congelación
+#### ❄️ REC-CONG-02 · Protocolo de apertura y cortinas para congelación
 
 **Prioridad:** Media · **Inversión:** Bajo costo · **Complejidad:** Baja · **Ahorro estimado:** 3-8% del consumo de congelación · **Plazo:** Corto plazo (1-3 meses)
 
@@ -440,7 +440,7 @@ Definir horarios y responsables para el retiro de productos, incorporar cortinas
 
 **Atiende hallazgos:** CONG-02
 
-#### REC-CONG-03 · Registro y control documentado de la cadena de frío
+#### ❄️ REC-CONG-03 · Registro y control documentado de la cadena de frío
 
 **Prioridad:** Media · **Inversión:** Bajo costo · **Complejidad:** Media · **Ahorro estimado:** 5-10% del consumo de congelación · **Plazo:** Corto plazo (1-3 meses)
 
@@ -450,7 +450,7 @@ Implementar una planilla simple o aplicación para registrar temperaturas, setpo
 
 **Atiende hallazgos:** CONG-03
 
-#### REC-REFR-06 · Reubicación y ventilación de equipos de frío
+#### 🧊 REC-REFR-06 · Reubicación y ventilación de equipos de frío
 
 **Prioridad:** Media · **Inversión:** Bajo costo · **Complejidad:** Baja · **Ahorro estimado:** 5-10% del consumo de refrigeración · **Plazo:** Corto plazo (1-3 meses)
 
@@ -462,7 +462,7 @@ Separar los equipos de frío de hornos, planchas y exposición solar directa, de
 
 **Atiende hallazgos:** REFR-06
 
-#### REC-ILUM-02 · Zonificación y control automático de iluminación
+#### 💡 REC-ILUM-02 · Zonificación y control automático de iluminación
 
 **Prioridad:** Media · **Inversión:** Bajo costo · **Complejidad:** Baja · **Ahorro estimado:** 10-25% del consumo de iluminación · **Plazo:** Corto plazo (1-3 meses)
 
@@ -476,7 +476,7 @@ Separar circuitos por zona funcional e incorporar sensores de presencia en baño
 
 ### Alto costo
 
-#### REC-ERNC-01 · Estudio e instalación de autoconsumo solar fotovoltaico
+#### 🌿 REC-ERNC-01 · Estudio e instalación de autoconsumo solar fotovoltaico
 
 **Prioridad:** Media · **Inversión:** Alto costo · **Complejidad:** Alta · **Ahorro estimado:** 20-50% del consumo eléctrico diurno · **Plazo:** Largo plazo (6-12 meses)
 
@@ -492,11 +492,11 @@ Realizar una prefactibilidad técnica y económica considerando cubierta disponi
 
 | Uso final | Recomendaciones | Inversión predominante |
 | --- | --- | --- |
-| Refrigeración y congelación | Ajuste de setpoints y control de temperaturas; Descongelación y control de escarcha; Gestión diferenciada de equipos de refrigeración; Limpieza programada de condensadores y serpentines; Protocolo de apertura y cortinas para congelación; Registro y control documentado de la cadena de frío; Reubicación y ventilación de equipos de frío | Baja |
-| Equipos productivos | Gestión de standby y apagado programado | Baja |
-| Otros usos | Implementar un sistema simple de gestión energética; Medición y monitoreo de consumos; Buenas prácticas complementarias y capacitación; Capacitación y cultura energética; Estudio e instalación de autoconsumo solar fotovoltaico | Alta |
-| Climatización y ventilación | Gestión de setpoints y horarios de climatización | Baja |
-| Iluminación | Plan de mantención y limpieza de luminarias; Zonificación y control automático de iluminación | Baja |
+| 🧊 Refrigeración y congelación | 🧊 Ajuste de setpoints y control de temperaturas; ❄️ Descongelación y control de escarcha; 🧊 Gestión diferenciada de equipos de refrigeración; 🧊 Limpieza programada de condensadores y serpentines; ❄️ Protocolo de apertura y cortinas para congelación; ❄️ Registro y control documentado de la cadena de frío; 🧊 Reubicación y ventilación de equipos de frío | Baja |
+| 🏭 Equipos productivos | 🏭 Gestión de standby y apagado programado | Baja |
+| ✨ Otros usos | 🎯 Implementar un sistema simple de gestión energética; 🎯 Medición y monitoreo de consumos; 📋 Buenas prácticas complementarias y capacitación; 📋 Capacitación y cultura energética; 🌿 Estudio e instalación de autoconsumo solar fotovoltaico | Alta |
+| 🌡️ Climatización y ventilación | 🌡️ Gestión de setpoints y horarios de climatización | Baja |
+| 💡 Iluminación | 💡 Plan de mantención y limpieza de luminarias; 💡 Zonificación y control automático de iluminación | Baja |
 
 ## 4. Plan de acción sugerido
 
@@ -504,22 +504,22 @@ El siguiente plan ordena las medidas según horizonte de implementación. Se sug
 
 | Prioridad | Acción | Inversión | Plazo | Ahorro referencial |
 | --- | --- | --- | --- | --- |
-| Alta | Ajuste de setpoints y control de temperaturas | Bajo costo | Inmediato (0-30 días) | 5-15% del consumo de refrigeración |
-| Alta | Descongelación y control de escarcha | Bajo costo | Inmediato (0-30 días) | 5-15% del consumo de congelación |
-| Alta | Gestión de standby y apagado programado | Bajo costo | Inmediato (0-30 días) | 3-8% del consumo eléctrico |
-| Alta | Gestión diferenciada de equipos de refrigeración | Bajo costo | Inmediato (0-30 días) | 10-25% del consumo de refrigeración |
-| Alta | Limpieza programada de condensadores y serpentines | Bajo costo | Inmediato (0-30 días) | 5-15% del consumo de refrigeración |
-| Media | Gestión de setpoints y horarios de climatización | Bajo costo | Inmediato (0-30 días) | 10-20% del consumo de climatización |
-| Media | Plan de mantención y limpieza de luminarias | Bajo costo | Inmediato (0-30 días) | 5-15% del consumo de iluminación |
-| Alta | Medición y monitoreo de consumos | Bajo costo | Corto plazo (1-3 meses) | 5-10% del consumo total |
-| Media | Buenas prácticas complementarias y capacitación | Bajo costo | Corto plazo (1-3 meses) | Por cuantificar |
-| Media | Capacitación y cultura energética | Bajo costo | Corto plazo (1-3 meses) | 3-8% del consumo total |
-| Media | Protocolo de apertura y cortinas para congelación | Bajo costo | Corto plazo (1-3 meses) | 3-8% del consumo de congelación |
-| Media | Registro y control documentado de la cadena de frío | Bajo costo | Corto plazo (1-3 meses) | 5-10% del consumo de congelación |
-| Media | Reubicación y ventilación de equipos de frío | Bajo costo | Corto plazo (1-3 meses) | 5-10% del consumo de refrigeración |
-| Media | Zonificación y control automático de iluminación | Bajo costo | Corto plazo (1-3 meses) | 10-25% del consumo de iluminación |
-| Alta | Implementar un sistema simple de gestión energética | Bajo costo | Mediano plazo (3-6 meses) | 5-15% del consumo total |
-| Media | Estudio e instalación de autoconsumo solar fotovoltaico | Alto costo | Largo plazo (6-12 meses) | 20-50% del consumo eléctrico diurno |
+| Alta | 🧊 Ajuste de setpoints y control de temperaturas | Bajo costo | Inmediato (0-30 días) | 5-15% del consumo de refrigeración |
+| Alta | ❄️ Descongelación y control de escarcha | Bajo costo | Inmediato (0-30 días) | 5-15% del consumo de congelación |
+| Alta | 🏭 Gestión de standby y apagado programado | Bajo costo | Inmediato (0-30 días) | 3-8% del consumo eléctrico |
+| Alta | 🧊 Gestión diferenciada de equipos de refrigeración | Bajo costo | Inmediato (0-30 días) | 10-25% del consumo de refrigeración |
+| Alta | 🧊 Limpieza programada de condensadores y serpentines | Bajo costo | Inmediato (0-30 días) | 5-15% del consumo de refrigeración |
+| Media | 🌡️ Gestión de setpoints y horarios de climatización | Bajo costo | Inmediato (0-30 días) | 10-20% del consumo de climatización |
+| Media | 💡 Plan de mantención y limpieza de luminarias | Bajo costo | Inmediato (0-30 días) | 5-15% del consumo de iluminación |
+| Alta | 🎯 Medición y monitoreo de consumos | Bajo costo | Corto plazo (1-3 meses) | 5-10% del consumo total |
+| Media | 📋 Buenas prácticas complementarias y capacitación | Bajo costo | Corto plazo (1-3 meses) | Por cuantificar |
+| Media | 📋 Capacitación y cultura energética | Bajo costo | Corto plazo (1-3 meses) | 3-8% del consumo total |
+| Media | ❄️ Protocolo de apertura y cortinas para congelación | Bajo costo | Corto plazo (1-3 meses) | 3-8% del consumo de congelación |
+| Media | ❄️ Registro y control documentado de la cadena de frío | Bajo costo | Corto plazo (1-3 meses) | 5-10% del consumo de congelación |
+| Media | 🧊 Reubicación y ventilación de equipos de frío | Bajo costo | Corto plazo (1-3 meses) | 5-10% del consumo de refrigeración |
+| Media | 💡 Zonificación y control automático de iluminación | Bajo costo | Corto plazo (1-3 meses) | 10-25% del consumo de iluminación |
+| Alta | 🎯 Implementar un sistema simple de gestión energética | Bajo costo | Mediano plazo (3-6 meses) | 5-15% del consumo total |
+| Media | 🌿 Estudio e instalación de autoconsumo solar fotovoltaico | Alto costo | Largo plazo (6-12 meses) | 20-50% del consumo eléctrico diurno |
 
 ### Metas y seguimiento recomendado
 
@@ -615,7 +615,7 @@ El puntaje global se calcula como el promedio simple de las 7 dimensiones evalua
 - **Asesor:** Carlos Campos
 - **Grado de consumo:** Moderado
 - **Clasificación global:** Aceptable
-- **Generado:** 13-11-2026, 9:33:58 a. m.
+- **Generado:** 13-11-2026, 3:01:43 p. m.
 
 ---
 

@@ -1,5 +1,8 @@
 ---
+import Icon from '@/components/ui/Icon.astro';
 import { ESCALA_PUNTAJE } from '@/lib/scoring';
+import { SECCION_ICONS } from '@/lib/iconografia';
+import type { SeccionKey } from '@/lib/schemas';
 
 interface Props {
   numero: string;
@@ -10,6 +13,7 @@ interface Props {
   observaciones: string;
 }
 const { numero, seccionKey, titulo, descripcion, puntaje, observaciones } = Astro.props;
+const icono = SECCION_ICONS[seccionKey as SeccionKey] ?? 'target';
 ---
 
 <section class="card overflow-hidden" id={`seccion-${seccionKey}`}>
@@ -17,7 +21,10 @@ const { numero, seccionKey, titulo, descripcion, puntaje, observaciones } = Astr
     <div class="flex items-center gap-3">
       <span class="step-number">{numero}</span>
       <div>
-        <h2 class="fieldset-title">{titulo}</h2>
+        <h2 class="fieldset-title flex items-center gap-1.5">
+          <Icon name={icono} size={14} class="text-brand-600" />
+          {titulo}
+        </h2>
         <p class="text-xs text-slate-500">{descripcion}</p>
       </div>
     </div>

@@ -11,7 +11,7 @@ comuna: Hanga Roa
 region: Valparaíso
 rubro: Almacén / minimarket
 version: 1
-generado: 2026-11-10T13:01:55.162Z
+generado: 2026-11-13T18:01:43.713Z
 puntaje_global: 2
 clasificacion: Deficiente
 hallazgos: 13
@@ -84,7 +84,7 @@ En términos de gestión energética, el negocio no cuenta actualmente con un si
 | Electricidad | 2.000 kWh/mes | $420.000 | cuenta con 2 medidores |
 | GLP | 22 kg / mes | $65.000 | dura 2 meses el balón de 45 kg |
 
-**Principales usos finales:** Iluminación, Refrigeración y congelación, Climatización y ventilación, Cocción.
+**Principales usos finales:** 💡 Iluminación, 🧊 Refrigeración y congelación, 🌡️ Climatización y ventilación, 🔥 Cocción.
 
 **Observaciones de la empresa:** Descripción del negocio para reporte energético La empresa inició sus operaciones en agosto de 2020 como un emprendimiento familiar, surgido a partir de la experiencia previa de sus propietarios en el rubro gastronómico. Su modelo de negocio se orienta a la comercialización de productos de primera necesidad, incluyendo abarrotes, alimentos, bebidas, cigarrillos y otros artículos de consumo habitual, privilegiando la oferta de productos provenientes de productores locales. Si bien cuenta con una trayectoria relativamente reciente en el formato de minimarket, ha logrado consolidar una propuesta diferenciadora mediante la elaboración y venta de alimentos preparados en sus propias instalaciones, tales como sándwiches, café y otros productos alimenticios. Asimismo, participa en iniciativas de apoyo comunitario asociadas al programa municipal “Pro-Empleo”, ofreciendo alimentos a precios accesibles, en muchos casos cercanos a los $1.000 o a valores de bajo costo. Como parte de su identidad comercial, el establecimiento ha optado por no comercializar bebidas alcohólicas, considerando su ubicación frente a un entorno deportivo y familiar. Esta decisión constituye un elemento distintivo de su propuesta de valor y refleja su compromiso con el bienestar de la comunidad. En materia de responsabilidad social empresarial, el negocio mantiene una participación activa en actividades comunitarias, promoviendo y apoyando eventos deportivos, familiares y de vida saludable, fortaleciendo así su vínculo con el entorno local y contribuyendo al desarrollo de hábitos saludables entre sus clientes y vecinos.
 
@@ -99,19 +99,19 @@ En términos de gestión energética, el negocio no cuenta actualmente con un si
 
 | Dimensión | Puntaje | Clasificación |
 | --- | :---: | --- |
-| Iluminación | 3/5 | Aceptable |
-| Refrigeración | 2/5 | Deficiente |
-| Congelación | 2/5 | Deficiente |
-| Climatización y A/C | 1/5 | Crítico |
-| Agua caliente sanitaria | No evaluado | No evaluado |
-| Cocción | No evaluado | No evaluado |
-| Motores y equipos productivos | No evaluado | No evaluado |
-| Envolvente e infiltraciones | 1/5 | Crítico |
-| Gestión energética | 2/5 | Deficiente |
-| Tarifas y potencia | 3/5 | Aceptable |
+| 💡 Iluminación | 3/5 | Aceptable |
+| 🧊 Refrigeración | 2/5 | Deficiente |
+| ❄️ Congelación | 2/5 | Deficiente |
+| 🌡️ Climatización y A/C | 1/5 | Crítico |
+| 💧 Agua caliente sanitaria | No evaluado | No evaluado |
+| 🔥 Cocción | No evaluado | No evaluado |
+| ⚙️ Motores y equipos productivos | No evaluado | No evaluado |
+| 🏠 Envolvente e infiltraciones | 1/5 | Crítico |
+| 🎯 Gestión energética | 2/5 | Deficiente |
+| 🧾 Tarifas y potencia | 3/5 | Aceptable |
 | **Puntaje global** | **2.0/5** | **Deficiente** |
 
-**Brechas prioritarias:** Refrigeración (2/5, deficiente); Congelación (2/5, deficiente); Climatización y A/C (1/5, crítico); Envolvente e infiltraciones (1/5, crítico); Gestión energética (2/5, deficiente).
+**Brechas prioritarias:** 🧊 Refrigeración (2/5, deficiente); ❄️ Congelación (2/5, deficiente); 🌡️ Climatización y A/C (1/5, crítico); 🏠 Envolvente e infiltraciones (1/5, crítico); 🎯 Gestión energética (2/5, deficiente).
 
 **Observaciones generales de la visita:** urante la actividad se recopilaron antecedentes sobre los consumos energéticos, equipamiento existente y prácticas operacionales relacionadas con el uso de la energía. La evaluación se basó en la información proporcionada por el cliente, observaciones realizadas de forma remota y evidencia visual compartida durante la conexión. Si bien esta modalidad permitió identificar oportunidades de mejora energética relevantes, algunas verificaciones técnicas y mediciones específicas requerirían una visita presencial para obtener un nivel de detalle y precisión superior.
 
@@ -127,11 +127,11 @@ La visita identificó **1 hallazgo** y **1 recomendación** en materia de energ�
 
 **Hallazgos**
 
-- **ERNC-01 · Sin evaluación de autoconsumo con energías renovables** — Impacto medio · Energías renovables. No se ha evaluado la incorporación de generación solar fotovoltaica u otra fuente renovable para autoconsumo, pese a disponer de cubierta o superficie útil y de un consumo eléctrico diurno relevante. **Evidencia:** Hay interés y algunas prospecciones básicas de sistemas de autoconsumo, pero estos no cuentan con un dimensionamiento.
+- **🌿 ERNC-01 · Sin evaluación de autoconsumo con energías renovables** — Impacto medio · Energías renovables. No se ha evaluado la incorporación de generación solar fotovoltaica u otra fuente renovable para autoconsumo, pese a disponer de cubierta o superficie útil y de un consumo eléctrico diurno relevante. **Evidencia:** Hay interés y algunas prospecciones básicas de sistemas de autoconsumo, pero estos no cuentan con un dimensionamiento.
 
 **Recomendaciones**
 
-- **REC-ERNC-01 · Estudio e instalación de autoconsumo solar fotovoltaico** — Prioridad media · Inversión: alto costo · Plazo: Largo plazo (6-12 meses). Realizar una prefactibilidad técnica y económica considerando cubierta disponible, curva de consumo y normativa de generación distribuida. Dimensionar el sistema para maximizar el autoconsumo. **Ahorro estimado:** 20-50% del consumo eléctrico diurno.
+- **🌿 REC-ERNC-01 · Estudio e instalación de autoconsumo solar fotovoltaico** — Prioridad media · Inversión: alto costo · Plazo: Largo plazo (6-12 meses). Realizar una prefactibilidad técnica y económica considerando cubierta disponible, curva de consumo y normativa de generación distribuida. Dimensionar el sistema para maximizar el autoconsumo. **Ahorro estimado:** 20-50% del consumo eléctrico diurno.
 
 #### Oportunidades de optimización y seguimiento
 
@@ -155,11 +155,11 @@ Se identificaron 13 hallazgos. La distribución por impacto es: crítico: 0, alt
 | --- | ---: |
 | Electricidad | 13 |
 
-### Iluminación
+### 💡 Iluminación
 
-#### ILUM-03 · Iluminación sin zonificación ni control de presencia
+#### 💡 ILUM-03 · Iluminación sin zonificación ni control de presencia
 
-**Impacto:** Medio · **Energético:** Electricidad · **Categoría:** Iluminación
+**Impacto:** Medio · **Energético:** Electricidad · **Categoría:** 💡 Iluminación
 
 La iluminación permanece encendida de forma homogénea durante toda la jornada, incluso en sectores sin ocupación como bodegas, baños, vitrinas o áreas de preparación cerradas. No se observan sensores, temporizadores ni circuitos independientes.
 
@@ -167,11 +167,11 @@ La iluminación permanece encendida de forma homogénea durante toda la jornada,
 
 **Recomendación asociada:** REC-ILUM-02
 
-### Refrigeración y congelación
+### 🧊 Refrigeración y congelación
 
-#### CONG-01 · Acumulación de escarcha en evaporadores
+#### ❄️ CONG-01 · Acumulación de escarcha en evaporadores
 
-**Impacto:** Medio · **Energético:** Electricidad · **Categoría:** Congelación
+**Impacto:** Medio · **Energético:** Electricidad · **Categoría:** ❄️ Congelación
 
 Se observa escarcha o hielo acumulado en evaporadores, paredes o puertas de congeladores. El ciclo de descongelación no se realiza de forma programada o no se registra.
 
@@ -179,9 +179,9 @@ Se observa escarcha o hielo acumulado en evaporadores, paredes o puertas de cong
 
 **Recomendación asociada:** REC-CONG-01
 
-#### CONG-03 · Cadena de frío sin control documentado
+#### ❄️ CONG-03 · Cadena de frío sin control documentado
 
-**Impacto:** Medio · **Energético:** Electricidad · **Categoría:** Congelación
+**Impacto:** Medio · **Energético:** Electricidad · **Categoría:** ❄️ Congelación
 
 La operación de equipos de congelación se basa en la experiencia del personal, sin registros formales de temperatura, setpoints, ciclos de descongelación ni mantenciones. No se identifican termómetros calibrados en todos los equipos.
 
@@ -189,9 +189,9 @@ La operación de equipos de congelación se basa en la experiencia del personal,
 
 **Recomendación asociada:** REC-CONG-03
 
-#### REFR-06 · Equipos de frío próximos a fuentes de calor o sin ventilación
+#### 🧊 REFR-06 · Equipos de frío próximos a fuentes de calor o sin ventilación
 
-**Impacto:** Medio · **Energético:** Electricidad · **Categoría:** Refrigeración
+**Impacto:** Medio · **Energético:** Electricidad · **Categoría:** 🧊 Refrigeración
 
 Refrigeradores, congeladores o vitrinas se encuentran junto a hornos, planchas, exposición solar directa o en espacios sin ventilación suficiente, con las rejillas posteriores obstruidas.
 
@@ -199,11 +199,11 @@ Refrigeradores, congeladores o vitrinas se encuentran junto a hornos, planchas, 
 
 **Recomendación asociada:** REC-REFR-06
 
-### Climatización y ventilación
+### 🌡️ Climatización y ventilación
 
-#### CLIM-02 · Equipos de climatización sin mantención periódica
+#### 🌡️ CLIM-02 · Equipos de climatización sin mantención periódica
 
-**Impacto:** Medio · **Energético:** Electricidad · **Categoría:** Climatización
+**Impacto:** Medio · **Energético:** Electricidad · **Categoría:** 🌡️ Climatización
 
 Se observan equipos split o de aire acondicionado con filtros sucios, unidades exteriores obstruidas o sin registro de mantención. En algunos casos se desconoce la fecha de la última limpieza.
 
@@ -211,9 +211,9 @@ Se observan equipos split o de aire acondicionado con filtros sucios, unidades e
 
 **Recomendación asociada:** REC-CLIM-02
 
-#### CLIM-05 · Uso inapropiado de equipamiento
+#### 🌡️ CLIM-05 · Uso inapropiado de equipamiento
 
-**Impacto:** Alto · **Energético:** Electricidad · **Categoría:** Climatización
+**Impacto:** Alto · **Energético:** Electricidad · **Categoría:** 🌡️ Climatización
 
 Aire acondicionado se encuentra operando para usos que no corresponden al confort térmico. Esta práctica genera un consumo energético innecesario, ya que el espacio no requiere mantener condiciones estrictas de confort térmico ni control ambiental continuo. Además, la operación prolongada del equipo incrementa los costos de electricidad y acelera el desgaste de los componentes del sistema de climatización. Considerando el alto consumo de este tipo de equipamiento , esta situación representa una oportunidad relevante de mejora mediante la redefinición de los criterios de uso del equipo. Se estima que la reducción o eliminación de este uso innecesario puede generar ahorros energéticos directos sin afectar la calidad ni las condiciones de almacenamiento de los productos.
 
@@ -221,11 +221,11 @@ Aire acondicionado se encuentra operando para usos que no corresponden al confor
 
 **Recomendación asociada:** REC-CLIM-05
 
-### Envolvente e infiltraciones
+### 🏠 Envolvente e infiltraciones
 
-#### ENV-02 · Infiltraciones de aire en puertas y ventanas
+#### 🏠 ENV-02 · Infiltraciones de aire en puertas y ventanas
 
-**Impacto:** Medio · **Energético:** Electricidad · **Categoría:** Envolvente térmica
+**Impacto:** Medio · **Energético:** Electricidad · **Categoría:** 🏠 Envolvente térmica
 
 Se detectan corrientes de aire, holguras y falta de burletes en puertas y ventanas. Las puertas de acceso permanecen abiertas durante la operación y no existen cortinas de aire.
 
@@ -233,9 +233,9 @@ Se detectan corrientes de aire, holguras y falta de burletes en puertas y ventan
 
 **Recomendación asociada:** REC-ENV-02
 
-#### KB-ENV-01 · Falta de aislamiento térmico de accesos y ventanales
+#### 🏠 KB-ENV-01 · Falta de aislamiento térmico de accesos y ventanales
 
-**Impacto:** Medio · **Energético:** Electricidad · **Categoría:** Envolvente térmica
+**Impacto:** Medio · **Energético:** Electricidad · **Categoría:** 🏠 Envolvente térmica
 
 La falta de aislamiento térmico en accesos y ventanales genera importantes pérdidas energéticas y puede afectar el confort interior, por lo que implementar mejoras pasivas permitiría reducir el consumo energético y mejorar la experiencia de los usuarios.
 
@@ -243,11 +243,11 @@ La falta de aislamiento térmico en accesos y ventanales genera importantes pér
 
 **Recomendación asociada:** REC-ENV-02
 
-### Gestión, tarifas y potencia contratada
+### 🎯 Gestión, tarifas y potencia contratada
 
-#### GEST-01 · Ausencia de un sistema formal de gestión energética
+#### 🎯 GEST-01 · Ausencia de un sistema formal de gestión energética
 
-**Impacto:** Alto · **Energético:** Electricidad · **Categoría:** Gestión energética
+**Impacto:** Alto · **Energético:** Electricidad · **Categoría:** 🎯 Gestión energética
 
 No existe un responsable designado, una línea base de consumo, indicadores clave ni un procedimiento de revisión periódica. Las acciones energéticas son reactivas y no se documentan.
 
@@ -255,9 +255,9 @@ No existe un responsable designado, una línea base de consumo, indicadores clav
 
 **Recomendación asociada:** REC-GEST-01
 
-#### GEST-02 · Falta de medición y monitoreo de consumos
+#### 🎯 GEST-02 · Falta de medición y monitoreo de consumos
 
-**Impacto:** Alto · **Energético:** Electricidad · **Categoría:** Gestión energética
+**Impacto:** Alto · **Energético:** Electricidad · **Categoría:** 🎯 Gestión energética
 
 Se dispone solo de la facturación mensual o de remarcadores sin registro sistemático. No se separan consumos por área, proceso o equipo, ni se comparan mes a mes.
 
@@ -265,9 +265,9 @@ Se dispone solo de la facturación mensual o de remarcadores sin registro sistem
 
 **Recomendación asociada:** REC-GEST-02
 
-#### GEST-03 · Personal sin capacitación en buenas prácticas energéticas
+#### 📋 GEST-03 · Personal sin capacitación en buenas prácticas energéticas
 
-**Impacto:** Medio · **Energético:** Electricidad · **Categoría:** Gestión operacional
+**Impacto:** Medio · **Energético:** Electricidad · **Categoría:** 📋 Gestión operacional
 
 El personal no ha recibido orientación sobre el uso eficiente de equipos, apagado de luces, manejo de puertas de frío o control de temperaturas. Las prácticas dependen de cada turno.
 
@@ -275,9 +275,9 @@ El personal no ha recibido orientación sobre el uso eficiente de equipos, apaga
 
 **Recomendación asociada:** REC-GEST-03
 
-#### GEST-04 · Operación de equipos fuera del horario de atención
+#### 📋 GEST-04 · Operación de equipos fuera del horario de atención
 
-**Impacto:** Medio · **Energético:** Electricidad · **Categoría:** Gestión operacional
+**Impacto:** Medio · **Energético:** Electricidad · **Categoría:** 📋 Gestión operacional
 
 Luces, climatización, equipos de cocción y letreros permanecen encendidos después del cierre o antes de la apertura. No existe una lista de verificación de cierre.
 
@@ -285,11 +285,11 @@ Luces, climatización, equipos de cocción y letreros permanecen encendidos desp
 
 **Recomendación asociada:** REC-GEST-04
 
-### Energías renovables
+### 🌿 Energías renovables
 
-#### ERNC-01 · Sin evaluación de autoconsumo con energías renovables
+#### 🌿 ERNC-01 · Sin evaluación de autoconsumo con energías renovables
 
-**Impacto:** Medio · **Energético:** Electricidad · **Categoría:** Energías renovables
+**Impacto:** Medio · **Energético:** Electricidad · **Categoría:** 🌿 Energías renovables
 
 No se ha evaluado la incorporación de generación solar fotovoltaica u otra fuente renovable para autoconsumo, pese a disponer de cubierta o superficie útil y de un consumo eléctrico diurno relevante.
 
@@ -303,7 +303,7 @@ Las 12 medidas propuestas se ordenan por nivel de inversión. La prioridad consi
 
 ### Bajo costo
 
-#### REC-CONG-01 · Descongelación y control de escarcha
+#### ❄️ REC-CONG-01 · Descongelación y control de escarcha
 
 **Prioridad:** Alta · **Inversión:** Bajo costo · **Complejidad:** Baja · **Ahorro estimado:** 5-15% del consumo de congelación · **Plazo:** Inmediato (0-30 días)
 
@@ -313,7 +313,7 @@ Establecer un calendario de descongelación según las instrucciones del fabrica
 
 **Atiende hallazgos:** CONG-01
 
-#### REC-GEST-01 · Implementar un sistema simple de gestión energética
+#### 🎯 REC-GEST-01 · Implementar un sistema simple de gestión energética
 
 **Prioridad:** Alta · **Inversión:** Bajo costo · **Complejidad:** Media · **Ahorro estimado:** 5-15% del consumo total · **Plazo:** Mediano plazo (3-6 meses)
 
@@ -323,7 +323,7 @@ Designar un responsable, establecer una línea base de consumo, definir indicado
 
 **Atiende hallazgos:** GEST-01
 
-#### REC-CLIM-02 · Mantención periódica de equipos de climatización
+#### 🌡️ REC-CLIM-02 · Mantención periódica de equipos de climatización
 
 **Prioridad:** Alta · **Inversión:** Bajo costo · **Complejidad:** Baja · **Ahorro estimado:** 5-15% del consumo de climatización · **Plazo:** Corto plazo (1-3 meses)
 
@@ -333,7 +333,7 @@ Programar limpieza de filtros y serpentines al menos una vez al año, verificar 
 
 **Atiende hallazgos:** CLIM-02
 
-#### REC-GEST-02 · Medición y monitoreo de consumos
+#### 🎯 REC-GEST-02 · Medición y monitoreo de consumos
 
 **Prioridad:** Alta · **Inversión:** Bajo costo · **Complejidad:** Media · **Ahorro estimado:** 5-10% del consumo total · **Plazo:** Corto plazo (1-3 meses)
 
@@ -343,7 +343,7 @@ Registrar mensualmente la facturación y, si es posible, instalar remarcadores o
 
 **Atiende hallazgos:** GEST-02
 
-#### REC-GEST-04 · Protocolo de cierre y control de horarios
+#### 📋 REC-GEST-04 · Protocolo de cierre y control de horarios
 
 **Prioridad:** Alta · **Inversión:** Bajo costo · **Complejidad:** Baja · **Ahorro estimado:** 3-10% del consumo total · **Plazo:** Inmediato (0-30 días)
 
@@ -353,7 +353,7 @@ Crear una lista de verificación de cierre que incluya luces, climatización, eq
 
 **Atiende hallazgos:** GEST-04
 
-#### REC-ENV-02 · Sellamiento de infiltraciones en la envolvente
+#### 🏠 REC-ENV-02 · Sellamiento de infiltraciones en la envolvente
 
 **Prioridad:** Alta · **Inversión:** Bajo costo · **Complejidad:** Baja · **Ahorro estimado:** 5-15% del consumo de climatización · **Plazo:** Corto plazo (1-3 meses)
 
@@ -363,7 +363,7 @@ Instalar burletes en puertas y ventanas, ajustar cierrapuertas y sellar pasos de
 
 **Atiende hallazgos:** ENV-02, KB-ENV-01
 
-#### REC-GEST-03 · Capacitación y cultura energética
+#### 📋 REC-GEST-03 · Capacitación y cultura energética
 
 **Prioridad:** Media · **Inversión:** Bajo costo · **Complejidad:** Baja · **Ahorro estimado:** 3-8% del consumo total · **Plazo:** Corto plazo (1-3 meses)
 
@@ -373,7 +373,7 @@ Realizar charlas breves al personal, entregar procedimientos escritos y asignar 
 
 **Atiende hallazgos:** GEST-03
 
-#### REC-CONG-03 · Registro y control documentado de la cadena de frío
+#### ❄️ REC-CONG-03 · Registro y control documentado de la cadena de frío
 
 **Prioridad:** Media · **Inversión:** Bajo costo · **Complejidad:** Media · **Ahorro estimado:** 5-10% del consumo de congelación · **Plazo:** Corto plazo (1-3 meses)
 
@@ -383,7 +383,7 @@ Implementar una planilla simple o aplicación para registrar temperaturas, setpo
 
 **Atiende hallazgos:** CONG-03
 
-#### REC-REFR-06 · Reubicación y ventilación de equipos de frío
+#### 🧊 REC-REFR-06 · Reubicación y ventilación de equipos de frío
 
 **Prioridad:** Media · **Inversión:** Bajo costo · **Complejidad:** Baja · **Ahorro estimado:** 5-10% del consumo de refrigeración · **Plazo:** Corto plazo (1-3 meses)
 
@@ -393,7 +393,7 @@ Separar los equipos de frío de hornos, planchas y exposición solar directa, de
 
 **Atiende hallazgos:** REFR-06
 
-#### REC-ILUM-02 · Zonificación y control automático de iluminación
+#### 💡 REC-ILUM-02 · Zonificación y control automático de iluminación
 
 **Prioridad:** Media · **Inversión:** Bajo costo · **Complejidad:** Baja · **Ahorro estimado:** 10-25% del consumo de iluminación · **Plazo:** Corto plazo (1-3 meses)
 
@@ -405,7 +405,7 @@ Separar circuitos por zona funcional e incorporar sensores de presencia en baño
 
 ### Alto costo
 
-#### REC-ERNC-01 · Estudio e instalación de autoconsumo solar fotovoltaico
+#### 🌿 REC-ERNC-01 · Estudio e instalación de autoconsumo solar fotovoltaico
 
 **Prioridad:** Media · **Inversión:** Alto costo · **Complejidad:** Alta · **Ahorro estimado:** 20-50% del consumo eléctrico diurno · **Plazo:** Largo plazo (6-12 meses)
 
@@ -415,7 +415,7 @@ Realizar una prefactibilidad técnica y económica considerando cubierta disponi
 
 **Atiende hallazgos:** ERNC-01
 
-#### REC-CLIM-05 · Reemplazo por equipamiento adecuado
+#### 🌡️ REC-CLIM-05 · Reemplazo por equipamiento adecuado
 
 **Prioridad:** Media · **Inversión:** Alto costo · **Complejidad:** Media · **Ahorro estimado:** entre 8-15% consumos eléctricos para climatización · **Plazo:** Largo plazo (6-12 meses)
 
@@ -429,10 +429,10 @@ Revisar y optimizar el uso de los equipos de climatización por otros que sean a
 
 | Uso final | Recomendaciones | Inversión predominante |
 | --- | --- | --- |
-| Refrigeración y congelación | Descongelación y control de escarcha; Registro y control documentado de la cadena de frío; Reubicación y ventilación de equipos de frío | Baja |
-| Otros usos | Implementar un sistema simple de gestión energética; Medición y monitoreo de consumos; Protocolo de cierre y control de horarios; Sellamiento de infiltraciones en la envolvente; Capacitación y cultura energética; Estudio e instalación de autoconsumo solar fotovoltaico | Alta |
-| Climatización y ventilación | Mantención periódica de equipos de climatización; Reemplazo por equipamiento adecuado | Alta |
-| Iluminación | Zonificación y control automático de iluminación | Baja |
+| 🧊 Refrigeración y congelación | ❄️ Descongelación y control de escarcha; ❄️ Registro y control documentado de la cadena de frío; 🧊 Reubicación y ventilación de equipos de frío | Baja |
+| ✨ Otros usos | 🎯 Implementar un sistema simple de gestión energética; 🎯 Medición y monitoreo de consumos; 📋 Protocolo de cierre y control de horarios; 🏠 Sellamiento de infiltraciones en la envolvente; 📋 Capacitación y cultura energética; 🌿 Estudio e instalación de autoconsumo solar fotovoltaico | Alta |
+| 🌡️ Climatización y ventilación | 🌡️ Mantención periódica de equipos de climatización; 🌡️ Reemplazo por equipamiento adecuado | Alta |
+| 💡 Iluminación | 💡 Zonificación y control automático de iluminación | Baja |
 
 ## 4. Plan de acción sugerido
 
@@ -440,18 +440,18 @@ El siguiente plan ordena las medidas según horizonte de implementación. Se sug
 
 | Prioridad | Acción | Inversión | Plazo | Ahorro referencial |
 | --- | --- | --- | --- | --- |
-| Alta | Descongelación y control de escarcha | Bajo costo | Inmediato (0-30 días) | 5-15% del consumo de congelación |
-| Alta | Protocolo de cierre y control de horarios | Bajo costo | Inmediato (0-30 días) | 3-10% del consumo total |
-| Alta | Mantención periódica de equipos de climatización | Bajo costo | Corto plazo (1-3 meses) | 5-15% del consumo de climatización |
-| Alta | Medición y monitoreo de consumos | Bajo costo | Corto plazo (1-3 meses) | 5-10% del consumo total |
-| Alta | Sellamiento de infiltraciones en la envolvente | Bajo costo | Corto plazo (1-3 meses) | 5-15% del consumo de climatización |
-| Media | Capacitación y cultura energética | Bajo costo | Corto plazo (1-3 meses) | 3-8% del consumo total |
-| Media | Registro y control documentado de la cadena de frío | Bajo costo | Corto plazo (1-3 meses) | 5-10% del consumo de congelación |
-| Media | Reubicación y ventilación de equipos de frío | Bajo costo | Corto plazo (1-3 meses) | 5-10% del consumo de refrigeración |
-| Media | Zonificación y control automático de iluminación | Bajo costo | Corto plazo (1-3 meses) | 10-25% del consumo de iluminación |
-| Alta | Implementar un sistema simple de gestión energética | Bajo costo | Mediano plazo (3-6 meses) | 5-15% del consumo total |
-| Media | Estudio e instalación de autoconsumo solar fotovoltaico | Alto costo | Largo plazo (6-12 meses) | 20-50% del consumo eléctrico diurno |
-| Media | Reemplazo por equipamiento adecuado | Alto costo | Largo plazo (6-12 meses) | entre 8-15% consumos eléctricos para climatización |
+| Alta | ❄️ Descongelación y control de escarcha | Bajo costo | Inmediato (0-30 días) | 5-15% del consumo de congelación |
+| Alta | 📋 Protocolo de cierre y control de horarios | Bajo costo | Inmediato (0-30 días) | 3-10% del consumo total |
+| Alta | 🌡️ Mantención periódica de equipos de climatización | Bajo costo | Corto plazo (1-3 meses) | 5-15% del consumo de climatización |
+| Alta | 🎯 Medición y monitoreo de consumos | Bajo costo | Corto plazo (1-3 meses) | 5-10% del consumo total |
+| Alta | 🏠 Sellamiento de infiltraciones en la envolvente | Bajo costo | Corto plazo (1-3 meses) | 5-15% del consumo de climatización |
+| Media | 📋 Capacitación y cultura energética | Bajo costo | Corto plazo (1-3 meses) | 3-8% del consumo total |
+| Media | ❄️ Registro y control documentado de la cadena de frío | Bajo costo | Corto plazo (1-3 meses) | 5-10% del consumo de congelación |
+| Media | 🧊 Reubicación y ventilación de equipos de frío | Bajo costo | Corto plazo (1-3 meses) | 5-10% del consumo de refrigeración |
+| Media | 💡 Zonificación y control automático de iluminación | Bajo costo | Corto plazo (1-3 meses) | 10-25% del consumo de iluminación |
+| Alta | 🎯 Implementar un sistema simple de gestión energética | Bajo costo | Mediano plazo (3-6 meses) | 5-15% del consumo total |
+| Media | 🌿 Estudio e instalación de autoconsumo solar fotovoltaico | Alto costo | Largo plazo (6-12 meses) | 20-50% del consumo eléctrico diurno |
+| Media | 🌡️ Reemplazo por equipamiento adecuado | Alto costo | Largo plazo (6-12 meses) | entre 8-15% consumos eléctricos para climatización |
 
 ### Metas y seguimiento recomendado
 
@@ -476,6 +476,7 @@ Los siguientes recursos públicos pueden apoyar la implementación de las medida
 - **Sello de Eficiencia Energética (Sello EE).** Programa gratuito para MiPyMEs que reconoce la gestión energética y entrega una hoja de ruta de mejora continua. [https://plataforma.selloee.cl/](https://plataforma.selloee.cl/)
 - **Buscador de instaladores certificados SEC.** Listado oficial de instaladores eléctricos y de gas certificados para regularizaciones, proyectos y modificaciones. [https://www.sec.cl/area-ciudadana/nuevo-buscador-de-instaladores-e-instaladoras/](https://www.sec.cl/area-ciudadana/nuevo-buscador-de-instaladores-e-instaladoras/)
 - **Registro de Consultores Energéticos.** Plataforma para contactar profesionales y empresas que prestan servicios de eficiencia energética y energías renovables. [https://consultores.registroenergetico.cl/](https://consultores.registroenergetico.cl/)
+- **Manual para Equipos de Refrigeración Comercial.** Manual de buenas prácticas de operación y mantenimiento de equipos de refrigeración comercial dirigido para administradores, encargados de locales comerciales, personal de mantención y operadores. Aplicable a equipos tipo Visi coolers, refrigeradores comerciales, congeladores horizontales y verticales, vitrinas refrigeradas. [https://crcamposn.notion.site/Manual-para-equipos-de-refrigeraci-n-416938ab020580039dddf3a96b2ee238?pvs=74](https://crcamposn.notion.site/Manual-para-equipos-de-refrigeraci-n-416938ab020580039dddf3a96b2ee238?pvs=74)
 
 ### Agencia de Sostenibilidad Energética
 
@@ -546,7 +547,7 @@ El puntaje global se calcula como el promedio simple de las 7 dimensiones evalua
 - **Asesor:** Carlos Campos
 - **Grado de consumo:** Moderado
 - **Clasificación global:** Deficiente
-- **Generado:** 10-11-2026, 10:01:55 a. m.
+- **Generado:** 13-11-2026, 3:01:43 p. m.
 
 ---
 

@@ -35,6 +35,10 @@ Páginas / API  →  Servicios  →  Repositorios  →  Storage (archivos)
 
 La lógica de presentación vive en `src/lib/ubicacion.ts`: resuelve el enlace configurado, genera uno de Google Maps cuando solo hay coordenadas y formatea el par para la ficha y el informe. `report.ts` copia `latitud`, `longitud` y `mapa_url` al frontmatter del Markdown para permitir procesos de georreferenciación posteriores.
 
+## Iconografía
+
+`src/lib/iconografia.ts` centraliza la correspondencia entre categorías, secciones y usos finales con sus iconos SVG y emojis. Los mapeos usan `satisfies Record<...>` para que TypeScript exija cobertura completa. La interfaz usa `Icon.astro`; los informes Markdown usan el emoji junto a la etiqueta escrita para mantener la legibilidad en texto plano y PDF.
+
 ## Análisis de energías renovables
 
 `Empresa` puede incluir un bloque `sistema_fotovoltaico` (estado, proveedor, paneles, potencia y fecha) y cada visita un bloque `evaluacion_fotovoltaica` con los supuestos y datos medidos. El cálculo vive en `src/lib/fotovoltaica.ts` y no persiste resultados: se recalcula en cada lectura para evitar datos obsoletos.

@@ -11,7 +11,7 @@ comuna: Hanga Roa
 region: Valparaíso
 rubro: Restaurante
 version: 1
-generado: 2026-11-09T15:30:41.459Z
+generado: 2026-11-13T18:01:43.804Z
 puntaje_global: 2.7
 clasificacion: Aceptable
 hallazgos: 0
@@ -58,7 +58,7 @@ Se observa además consumo asociado a iluminación interior y exterior, equipami
 | Electricidad | No informado | $1.300.000 | arriendo |
 | GLP | 225 kg/mes | $625.000 | 5 balones de 45 kg/mes |
 
-**Principales usos finales:** Iluminación, Refrigeración y congelación, Climatización y ventilación, Cocción, Agua caliente sanitaria, Equipos productivos, Otros usos.
+**Principales usos finales:** 💡 Iluminación, 🧊 Refrigeración y congelación, 🌡️ Climatización y ventilación, 🔥 Cocción, 💧 Agua caliente sanitaria, 🏭 Equipos productivos, ✨ Otros usos.
 
 **Observaciones de la empresa:** Microempresa gastronómica ubicada en Hanga Roa, en , orientada a la elaboración y venta de comida rápida con identidad local e influencia de productos marinos de la isla. Su oferta se centra en preparaciones de rápida atención, destacando empanadas fritas, frituras, ceviches, snacks y bebidas, tanto para residentes como para turistas que visitan el territorio.
 
@@ -73,19 +73,19 @@ Se observa además consumo asociado a iluminación interior y exterior, equipami
 
 | Dimensión | Puntaje | Clasificación |
 | --- | :---: | --- |
-| Iluminación | No evaluado | No evaluado |
-| Refrigeración | 3/5 | Aceptable |
-| Congelación | 3/5 | Aceptable |
-| Climatización y A/C | 3/5 | Aceptable |
-| Agua caliente sanitaria | 3/5 | Aceptable |
-| Cocción | 2/5 | Deficiente |
-| Motores y equipos productivos | No evaluado | No evaluado |
-| Envolvente e infiltraciones | No evaluado | No evaluado |
-| Gestión energética | 2/5 | Deficiente |
-| Tarifas y potencia | 3/5 | Aceptable |
+| 💡 Iluminación | No evaluado | No evaluado |
+| 🧊 Refrigeración | 3/5 | Aceptable |
+| ❄️ Congelación | 3/5 | Aceptable |
+| 🌡️ Climatización y A/C | 3/5 | Aceptable |
+| 💧 Agua caliente sanitaria | 3/5 | Aceptable |
+| 🔥 Cocción | 2/5 | Deficiente |
+| ⚙️ Motores y equipos productivos | No evaluado | No evaluado |
+| 🏠 Envolvente e infiltraciones | No evaluado | No evaluado |
+| 🎯 Gestión energética | 2/5 | Deficiente |
+| 🧾 Tarifas y potencia | 3/5 | Aceptable |
 | **Puntaje global** | **2.7/5** | **Aceptable** |
 
-**Brechas prioritarias:** Cocción (2/5, deficiente); Gestión energética (2/5, deficiente).
+**Brechas prioritarias:** 🔥 Cocción (2/5, deficiente); 🎯 Gestión energética (2/5, deficiente).
 
 **Observaciones generales de la visita:** Le Frits cuenta con equipamiento de energías renovables, pero no hay conocimiento de sus características técnicas y no se percibe ahorro en la cuenta de la luz. Requiere revisión.
 
@@ -120,6 +120,7 @@ Los siguientes recursos públicos pueden apoyar la implementación de las medida
 - **Sello de Eficiencia Energética (Sello EE).** Programa gratuito para MiPyMEs que reconoce la gestión energética y entrega una hoja de ruta de mejora continua. [https://plataforma.selloee.cl/](https://plataforma.selloee.cl/)
 - **Buscador de instaladores certificados SEC.** Listado oficial de instaladores eléctricos y de gas certificados para regularizaciones, proyectos y modificaciones. [https://www.sec.cl/area-ciudadana/nuevo-buscador-de-instaladores-e-instaladoras/](https://www.sec.cl/area-ciudadana/nuevo-buscador-de-instaladores-e-instaladoras/)
 - **Registro de Consultores Energéticos.** Plataforma para contactar profesionales y empresas que prestan servicios de eficiencia energética y energías renovables. [https://consultores.registroenergetico.cl/](https://consultores.registroenergetico.cl/)
+- **Manual para Equipos de Refrigeración Comercial.** Manual de buenas prácticas de operación y mantenimiento de equipos de refrigeración comercial dirigido para administradores, encargados de locales comerciales, personal de mantención y operadores. Aplicable a equipos tipo Visi coolers, refrigeradores comerciales, congeladores horizontales y verticales, vitrinas refrigeradas. [https://crcamposn.notion.site/Manual-para-equipos-de-refrigeraci-n-416938ab020580039dddf3a96b2ee238?pvs=74](https://crcamposn.notion.site/Manual-para-equipos-de-refrigeraci-n-416938ab020580039dddf3a96b2ee238?pvs=74)
 
 ### Agencia de Sostenibilidad Energética
 
@@ -190,7 +191,7 @@ El puntaje global se calcula como el promedio simple de las 7 dimensiones evalua
 - **Asesor:** Carlos Campos
 - **Grado de consumo:** Moderado
 - **Clasificación global:** Aceptable
-- **Generado:** 09-11-2026, 12:30:41 p. m.
+- **Generado:** 13-11-2026, 3:01:43 p. m.
 
 ---
 

@@ -11,6 +11,7 @@ import {
   type Hallazgo,
   type Recomendacion,
 } from '@/lib/schemas';
+import { CATEGORIA_EMOJIS, CATEGORIA_ICONS } from '@/lib/iconografia';
 
 interface Props {
   tipo: 'hallazgo' | 'recomendacion';
@@ -151,10 +152,15 @@ const plazos = [
         <p class="help">Se normaliza automáticamente para construir el identificador del archivo.</p>
       </div>
       <div>
-        <label class="label" for="categoria">Tipo de uso tecnológico *</label>
+        <label class="label flex items-center gap-1.5" for="categoria">
+          <Icon name={CATEGORIA_ICONS[categoria]} size={14} class="text-brand-600" />
+          Tipo de uso tecnológico *
+        </label>
         <select id="categoria" name="categoria" class="input" required>
           {Object.entries(CATEGORIAS).map(([key, label]) => (
-            <option value={key} selected={categoria === key}>{label}</option>
+            <option value={key} selected={categoria === key}>
+              {CATEGORIA_EMOJIS[key as Categoria]} {label}
+            </option>
           ))}
         </select>
         <p class="help">Agrupa el hallazgo por tecnología o uso final y guía la recomendación sugerida.</p>
@@ -304,7 +310,10 @@ const plazos = [
                           <span class:list={['badge-brand', !esSugerida && 'hidden']} data-reco-suggested>
                             <Icon name="sparkles" size={11} /> Sugerida
                           </span>
-                          <span class="badge-neutral">{CATEGORIAS[reco.categoria]}</span>
+                          <span class="badge-neutral">
+                            <Icon name={CATEGORIA_ICONS[reco.categoria]} size={11} />
+                            {CATEGORIAS[reco.categoria]}
+                          </span>
                           <span class="badge-neutral">{ENERGOS[reco.energetico]}</span>
                           <span class="badge-neutral">{INVERSIONES[reco.inversion]}</span>
                           {!reco.activo && <span class="badge-rose">Inactiva</span>}
@@ -467,7 +476,10 @@ const plazos = [
                           <span class:list={['badge-brand', !esSugerido && 'hidden']} data-hallazgo-suggested>
                             <Icon name="sparkles" size={11} /> Sugerido
                           </span>
-                          <span class="badge-neutral">{CATEGORIAS[hallazgo.categoria]}</span>
+                          <span class="badge-neutral">
+                            <Icon name={CATEGORIA_ICONS[hallazgo.categoria]} size={11} />
+                            {CATEGORIAS[hallazgo.categoria]}
+                          </span>
                           <span class="badge-neutral">{ENERGOS[hallazgo.energetico]}</span>
                           {!hallazgo.activo && <span class="badge-rose">Inactivo</span>}
                           <span class="ml-auto font-mono text-[10px] font-semibold text-slate-400">{hallazgo.codigo}</span>

@@ -4,6 +4,7 @@ import Icon from '@/components/ui/Icon.astro';
 import PageHeader from '@/components/ui/PageHeader.astro';
 import { catalogos } from '@/lib/repositories';
 import { CATEGORIAS, IMPACTOS, INVERSIONES, PRIORIDADES, RECURSO_CATEGORIAS } from '@/lib/schemas';
+import { CATEGORIA_ICONS } from '@/lib/iconografia';
 
 const tabParam = Astro.url.searchParams.get('tab');
 const tab = tabParam === 'recomendaciones' || tabParam === 'recursos' ? tabParam : 'hallazgos';
@@ -101,12 +102,20 @@ const hallazgosPorId = new Map(hallazgos.map((item) => [item.id, item]));
                     <p class="font-medium text-slate-800">{hallazgo.titulo}</p>
                     <p class="line-clamp-2 max-w-xl text-xs text-slate-500">{hallazgo.descripcion}</p>
                   </td>
-                  <td class="whitespace-nowrap text-xs text-slate-600">{CATEGORIAS[hallazgo.categoria]}</td>
+                  <td class="whitespace-nowrap text-xs text-slate-600">
+                    <span class="inline-flex items-center gap-1.5">
+                      <Icon name={CATEGORIA_ICONS[hallazgo.categoria]} size={14} class="text-brand-600" />
+                      {CATEGORIAS[hallazgo.categoria]}
+                    </span>
+                  </td>
                   <td><span class:list={['badge', hallazgo.impacto === 'critico' ? 'badge-rose' : hallazgo.impacto === 'alto' ? 'badge-orange' : hallazgo.impacto === 'medio' ? 'badge-amber' : 'badge-neutral']}>{IMPACTOS[hallazgo.impacto]}</span></td>
                   <td class="min-w-48">
                     {recoVinculada ? (
                       <a href={`/catalogos/recomendaciones/${recoVinculada.id}/editar`} class="group block">
-                        <span class="block text-xs font-medium text-slate-700 group-hover:text-brand-700">{recoVinculada.titulo}</span>
+                        <span class="flex items-center gap-1 text-xs font-medium text-slate-700 group-hover:text-brand-700">
+                          <Icon name={CATEGORIA_ICONS[recoVinculada.categoria]} size={12} class="text-brand-600" />
+                          {recoVinculada.titulo}
+                        </span>
                         <span class="font-mono text-[10px] text-slate-400">{recoVinculada.codigo}</span>
                       </a>
                     ) : hallazgo.recomendacion_id ? (
@@ -186,7 +195,12 @@ const hallazgosPorId = new Map(hallazgos.map((item) => [item.id, item]));
                     </p>
                   )}
                 </td>
-                <td class="whitespace-nowrap text-xs text-slate-600">{CATEGORIAS[reco.categoria]}</td>
+                <td class="whitespace-nowrap text-xs text-slate-600">
+                  <span class="inline-flex items-center gap-1.5">
+                    <Icon name={CATEGORIA_ICONS[reco.categoria]} size={14} class="text-brand-600" />
+                    {CATEGORIAS[reco.categoria]}
+                  </span>
+                </td>
                 <td class="whitespace-nowrap text-xs text-slate-600">{INVERSIONES[reco.inversion]}</td>
                 <td><span class:list={['badge', reco.prioridad === 'alta' ? 'badge-rose' : reco.prioridad === 'media' ? 'badge-amber' : 'badge-neutral']}>{PRIORIDADES[reco.prioridad]}</span></td>
                 <td class="text-xs text-slate-600">{reco.ahorro_estimado || 'Por cuantificar'}</td>

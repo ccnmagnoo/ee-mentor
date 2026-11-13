@@ -174,6 +174,10 @@ La ficha de empresa puede registrar un sistema fotovoltaico planificado u operat
 
 La sección **1.5 Análisis de energías renovables** del informe aparece cuando existe un sistema fotovoltaico registrado o cuando la visita incluye hallazgos o recomendaciones de la categoría ERNC. En ese caso reúne el estado actual, la evaluación fotovoltaica, las oportunidades ERNC seleccionadas en el catálogo y los indicadores de seguimiento. Los resultados son referenciales y el informe muestra los supuestos utilizados.
 
+## Iconografía
+
+Los usos tecnológicos, las dimensiones de evaluación y los usos finales tienen iconos SVG en la interfaz y emojis equivalentes en los informes Markdown. El mapeo vive en `src/lib/iconografia.ts` y siempre acompaña al texto de la categoría, por lo que el icono es un refuerzo visual y no la única fuente de información. Se usa en catálogos, formularios de visita, fichas, biblioteca, dashboard y reportes.
+
 ## Biblioteca de conocimiento
 
 1. Coloca los HTML exportados de las mentorías en `casos/` (o `EE_KNOWLEDGE_DIR`).

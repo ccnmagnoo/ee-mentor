@@ -11,7 +11,7 @@ comuna: Concón
 region: Valparaíso
 rubro: Hostal
 version: 1
-generado: 2026-11-10T13:01:55.100Z
+generado: 2026-11-13T18:01:43.570Z
 puntaje_global: 2.1
 clasificacion: Deficiente
 hallazgos: 6
@@ -67,7 +67,7 @@ Hostal Brisa Marina es un establecimiento de 9 habitaciones con desayuno incluid
 | Electricidad | 1.800 kWh/mes | $310.000 | Mayor consumo en temporada estival. |
 | GLP | 80 kg/mes | $118.000 | Cocina y calefón. |
 
-**Principales usos finales:** Agua caliente sanitaria, Iluminación, Climatización y ventilación, Refrigeración y congelación.
+**Principales usos finales:** 💧 Agua caliente sanitaria, 💡 Iluminación, 🌡️ Climatización y ventilación, 🧊 Refrigeración y congelación.
 
 **Observaciones de la empresa:** Hostal de 9 habitaciones con desayuno incluido. Mayor ocupación entre diciembre y marzo; calefacción con equipos individuales.
 
@@ -84,19 +84,19 @@ Hostal Brisa Marina es un establecimiento de 9 habitaciones con desayuno incluid
 
 | Dimensión | Puntaje | Clasificación |
 | --- | :---: | --- |
-| Iluminación | 2/5 | Deficiente |
-| Refrigeración | 3/5 | Aceptable |
-| Congelación | No evaluado | No evaluado |
-| Climatización y A/C | 1/5 | Crítico |
-| Agua caliente sanitaria | 2/5 | Deficiente |
-| Cocción | 3/5 | Aceptable |
-| Motores y equipos productivos | 3/5 | Aceptable |
-| Envolvente e infiltraciones | 2/5 | Deficiente |
-| Gestión energética | 1/5 | Crítico |
-| Tarifas y potencia | 2/5 | Deficiente |
+| 💡 Iluminación | 2/5 | Deficiente |
+| 🧊 Refrigeración | 3/5 | Aceptable |
+| ❄️ Congelación | No evaluado | No evaluado |
+| 🌡️ Climatización y A/C | 1/5 | Crítico |
+| 💧 Agua caliente sanitaria | 2/5 | Deficiente |
+| 🔥 Cocción | 3/5 | Aceptable |
+| ⚙️ Motores y equipos productivos | 3/5 | Aceptable |
+| 🏠 Envolvente e infiltraciones | 2/5 | Deficiente |
+| 🎯 Gestión energética | 1/5 | Crítico |
+| 🧾 Tarifas y potencia | 2/5 | Deficiente |
 | **Puntaje global** | **2.1/5** | **Deficiente** |
 
-**Brechas prioritarias:** Iluminación (2/5, deficiente); Climatización y A/C (1/5, crítico); Agua caliente sanitaria (2/5, deficiente); Envolvente e infiltraciones (2/5, deficiente); Gestión energética (1/5, crítico); Tarifas y potencia (2/5, deficiente).
+**Brechas prioritarias:** 💡 Iluminación (2/5, deficiente); 🌡️ Climatización y A/C (1/5, crítico); 💧 Agua caliente sanitaria (2/5, deficiente); 🏠 Envolvente e infiltraciones (2/5, deficiente); 🎯 Gestión energética (1/5, crítico); 🧾 Tarifas y potencia (2/5, deficiente).
 
 **Observaciones generales de la visita:** Se recomienda priorizar medidas de bajo costo antes de la temporada alta.
 
@@ -112,11 +112,11 @@ La visita identificó **1 hallazgo** y **1 recomendación** en materia de energ�
 
 **Hallazgos**
 
-- **ERNC-01 · Sin evaluación de autoconsumo con energías renovables** — Impacto medio · Energías renovables. No se ha evaluado la incorporación de generación solar fotovoltaica u otra fuente renovable para autoconsumo, pese a disponer de cubierta o superficie útil y de un consumo eléctrico diurno relevante. **Evidencia:** Cubierta disponible sin evaluación de autoconsumo solar.
+- **🌿 ERNC-01 · Sin evaluación de autoconsumo con energías renovables** — Impacto medio · Energías renovables. No se ha evaluado la incorporación de generación solar fotovoltaica u otra fuente renovable para autoconsumo, pese a disponer de cubierta o superficie útil y de un consumo eléctrico diurno relevante. **Evidencia:** Cubierta disponible sin evaluación de autoconsumo solar.
 
 **Recomendaciones**
 
-- **REC-ERNC-01 · Estudio e instalación de autoconsumo solar fotovoltaico** — Prioridad media · Inversión: alto costo · Plazo: Largo plazo (6-12 meses). Realizar una prefactibilidad técnica y económica considerando cubierta disponible, curva de consumo y normativa de generación distribuida. Dimensionar el sistema para maximizar el autoconsumo. **Ahorro estimado:** 20-50% del consumo eléctrico diurno. **Observación:** Solicitar prefactibilidad solar para cubierta.
+- **🌿 REC-ERNC-01 · Estudio e instalación de autoconsumo solar fotovoltaico** — Prioridad media · Inversión: alto costo · Plazo: Largo plazo (6-12 meses). Realizar una prefactibilidad técnica y económica considerando cubierta disponible, curva de consumo y normativa de generación distribuida. Dimensionar el sistema para maximizar el autoconsumo. **Ahorro estimado:** 20-50% del consumo eléctrico diurno. **Observación:** Solicitar prefactibilidad solar para cubierta.
 
 #### Oportunidades de optimización y seguimiento
 
@@ -141,11 +141,11 @@ Se identificaron 6 hallazgos. La distribución por impacto es: crítico: 0, alto
 | Electricidad | 5 |
 | GLP | 1 |
 
-### Climatización y ventilación
+### 🌡️ Climatización y ventilación
 
-#### CLIM-01 · Calefacción con equipos individuales ineficientes
+#### 🌡️ CLIM-01 · Calefacción con equipos individuales ineficientes
 
-**Impacto:** Alto · **Energético:** Electricidad · **Categoría:** Climatización
+**Impacto:** Alto · **Energético:** Electricidad · **Categoría:** 🌡️ Climatización
 
 Se utilizan calefactores eléctricos portátiles, halógenos o de resistencia como estrategia principal de climatización, en ocasiones con varias unidades operando en paralelo para cubrir un mismo espacio.
 
@@ -153,11 +153,11 @@ Se utilizan calefactores eléctricos portátiles, halógenos o de resistencia co
 
 **Recomendación asociada:** REC-CLIM-01
 
-### Agua caliente sanitaria
+### 💧 Agua caliente sanitaria
 
-#### ACS-01 · Calefón o termo eléctrico ineficiente y sobredimensionado
+#### 💧 ACS-01 · Calefón o termo eléctrico ineficiente y sobredimensionado
 
-**Impacto:** Alto · **Energético:** GLP · **Categoría:** Agua caliente sanitaria
+**Impacto:** Alto · **Energético:** GLP · **Categoría:** 💧 Agua caliente sanitaria
 
 El sistema de agua caliente sanitaria está compuesto por calefones o termos eléctricos de tecnología antigua, con capacidad superior a la demanda real y sin aislación adicional.
 
@@ -165,11 +165,11 @@ El sistema de agua caliente sanitaria está compuesto por calefones o termos el�
 
 **Recomendación asociada:** REC-ACS-01
 
-### Envolvente e infiltraciones
+### 🏠 Envolvente e infiltraciones
 
-#### ENV-01 · Ventanas con vidrio simple y sin control solar
+#### 🏠 ENV-01 · Ventanas con vidrio simple y sin control solar
 
-**Impacto:** Medio · **Energético:** Electricidad · **Categoría:** Envolvente térmica
+**Impacto:** Medio · **Energético:** Electricidad · **Categoría:** 🏠 Envolvente térmica
 
 Se observan ventanales de vidrio simple o sin doble vidriado hermético, con exposición solar directa en horarios de mayor radiación. No hay láminas de control solar, aleros ni cortinas térmicas.
 
@@ -177,9 +177,9 @@ Se observan ventanales de vidrio simple o sin doble vidriado hermético, con exp
 
 **Recomendación asociada:** REC-ENV-01
 
-#### ENV-02 · Infiltraciones de aire en puertas y ventanas
+#### 🏠 ENV-02 · Infiltraciones de aire en puertas y ventanas
 
-**Impacto:** Medio · **Energético:** Electricidad · **Categoría:** Envolvente térmica
+**Impacto:** Medio · **Energético:** Electricidad · **Categoría:** 🏠 Envolvente térmica
 
 Se detectan corrientes de aire, holguras y falta de burletes en puertas y ventanas. Las puertas de acceso permanecen abiertas durante la operación y no existen cortinas de aire.
 
@@ -187,11 +187,11 @@ Se detectan corrientes de aire, holguras y falta de burletes en puertas y ventan
 
 **Recomendación asociada:** REC-ENV-02
 
-### Gestión, tarifas y potencia contratada
+### 🎯 Gestión, tarifas y potencia contratada
 
-#### GEST-01 · Ausencia de un sistema formal de gestión energética
+#### 🎯 GEST-01 · Ausencia de un sistema formal de gestión energética
 
-**Impacto:** Alto · **Energético:** Electricidad · **Categoría:** Gestión energética
+**Impacto:** Alto · **Energético:** Electricidad · **Categoría:** 🎯 Gestión energética
 
 No existe un responsable designado, una línea base de consumo, indicadores clave ni un procedimiento de revisión periódica. Las acciones energéticas son reactivas y no se documentan.
 
@@ -199,11 +199,11 @@ No existe un responsable designado, una línea base de consumo, indicadores clav
 
 **Recomendación asociada:** REC-GEST-01
 
-### Energías renovables
+### 🌿 Energías renovables
 
-#### ERNC-01 · Sin evaluación de autoconsumo con energías renovables
+#### 🌿 ERNC-01 · Sin evaluación de autoconsumo con energías renovables
 
-**Impacto:** Medio · **Energético:** Electricidad · **Categoría:** Energías renovables
+**Impacto:** Medio · **Energético:** Electricidad · **Categoría:** 🌿 Energías renovables
 
 No se ha evaluado la incorporación de generación solar fotovoltaica u otra fuente renovable para autoconsumo, pese a disponer de cubierta o superficie útil y de un consumo eléctrico diurno relevante.
 
@@ -217,7 +217,7 @@ Las 6 medidas propuestas se ordenan por nivel de inversión. La prioridad consid
 
 ### Bajo costo
 
-#### REC-GEST-01 · Implementar un sistema simple de gestión energética
+#### 🎯 REC-GEST-01 · Implementar un sistema simple de gestión energética
 
 **Prioridad:** Alta · **Inversión:** Bajo costo · **Complejidad:** Media · **Ahorro estimado:** 5-15% del consumo total · **Plazo:** Mediano plazo (3-6 meses)
 
@@ -229,7 +229,7 @@ Designar un responsable, establecer una línea base de consumo, definir indicado
 
 **Atiende hallazgos:** GEST-01
 
-#### REC-ENV-02 · Sellamiento de infiltraciones en la envolvente
+#### 🏠 REC-ENV-02 · Sellamiento de infiltraciones en la envolvente
 
 **Prioridad:** Alta · **Inversión:** Bajo costo · **Complejidad:** Baja · **Ahorro estimado:** 5-15% del consumo de climatización · **Plazo:** Corto plazo (1-3 meses)
 
@@ -243,7 +243,7 @@ Instalar burletes en puertas y ventanas, ajustar cierrapuertas y sellar pasos de
 
 ### Costo medio
 
-#### REC-ACS-01 · Renovación de equipos de agua caliente sanitaria
+#### 💧 REC-ACS-01 · Renovación de equipos de agua caliente sanitaria
 
 **Prioridad:** Media · **Inversión:** Costo medio · **Complejidad:** Media · **Ahorro estimado:** 20-40% del consumo de ACS · **Plazo:** Mediano plazo (3-6 meses)
 
@@ -257,7 +257,7 @@ Evaluar el recambio de calefones o termos por equipos de mayor eficiencia, corre
 
 ### Alto costo
 
-#### REC-CLIM-01 · Reemplazo de calefactores por bomba de calor
+#### 🌡️ REC-CLIM-01 · Reemplazo de calefactores por bomba de calor
 
 **Prioridad:** Alta · **Inversión:** Alto costo · **Complejidad:** Alta · **Ahorro estimado:** 30-60% del consumo de calefacción · **Plazo:** Largo plazo (6-12 meses)
 
@@ -269,7 +269,7 @@ Evaluar la instalación de equipos inverter tipo split o bomba de calor de alta 
 
 **Atiende hallazgos:** CLIM-01
 
-#### REC-ERNC-01 · Estudio e instalación de autoconsumo solar fotovoltaico
+#### 🌿 REC-ERNC-01 · Estudio e instalación de autoconsumo solar fotovoltaico
 
 **Prioridad:** Media · **Inversión:** Alto costo · **Complejidad:** Alta · **Ahorro estimado:** 20-50% del consumo eléctrico diurno · **Plazo:** Largo plazo (6-12 meses)
 
@@ -281,7 +281,7 @@ Realizar una prefactibilidad técnica y económica considerando cubierta disponi
 
 **Atiende hallazgos:** ERNC-01
 
-#### REC-ENV-01 · Mejoramiento de vidrios y control solar
+#### 🏠 REC-ENV-01 · Mejoramiento de vidrios y control solar
 
 **Prioridad:** Media · **Inversión:** Alto costo · **Complejidad:** Alta · **Ahorro estimado:** 10-25% del consumo de climatización · **Plazo:** Largo plazo (6-12 meses)
 
@@ -297,9 +297,9 @@ Evaluar doble vidriado hermético, láminas de control solar, aleros o persianas
 
 | Uso final | Recomendaciones | Inversión predominante |
 | --- | --- | --- |
-| Otros usos | Implementar un sistema simple de gestión energética; Sellamiento de infiltraciones en la envolvente; Estudio e instalación de autoconsumo solar fotovoltaico; Mejoramiento de vidrios y control solar | Alta |
-| Climatización y ventilación | Reemplazo de calefactores por bomba de calor | Alta |
-| Agua caliente sanitaria | Renovación de equipos de agua caliente sanitaria | Media |
+| ✨ Otros usos | 🎯 Implementar un sistema simple de gestión energética; 🏠 Sellamiento de infiltraciones en la envolvente; 🌿 Estudio e instalación de autoconsumo solar fotovoltaico; 🏠 Mejoramiento de vidrios y control solar | Alta |
+| 🌡️ Climatización y ventilación | 🌡️ Reemplazo de calefactores por bomba de calor | Alta |
+| 💧 Agua caliente sanitaria | 💧 Renovación de equipos de agua caliente sanitaria | Media |
 
 ## 4. Plan de acción sugerido
 
@@ -307,12 +307,12 @@ El siguiente plan ordena las medidas según horizonte de implementación. Se sug
 
 | Prioridad | Acción | Inversión | Plazo | Ahorro referencial |
 | --- | --- | --- | --- | --- |
-| Alta | Sellamiento de infiltraciones en la envolvente | Bajo costo | Corto plazo (1-3 meses) | 5-15% del consumo de climatización |
-| Alta | Implementar un sistema simple de gestión energética | Bajo costo | Mediano plazo (3-6 meses) | 5-15% del consumo total |
-| Media | Renovación de equipos de agua caliente sanitaria | Costo medio | Mediano plazo (3-6 meses) | 20-40% del consumo de ACS |
-| Alta | Reemplazo de calefactores por bomba de calor | Alto costo | Largo plazo (6-12 meses) | 30-60% del consumo de calefacción |
-| Media | Estudio e instalación de autoconsumo solar fotovoltaico | Alto costo | Largo plazo (6-12 meses) | 20-50% del consumo eléctrico diurno |
-| Media | Mejoramiento de vidrios y control solar | Alto costo | Largo plazo (6-12 meses) | 10-25% del consumo de climatización |
+| Alta | 🏠 Sellamiento de infiltraciones en la envolvente | Bajo costo | Corto plazo (1-3 meses) | 5-15% del consumo de climatización |
+| Alta | 🎯 Implementar un sistema simple de gestión energética | Bajo costo | Mediano plazo (3-6 meses) | 5-15% del consumo total |
+| Media | 💧 Renovación de equipos de agua caliente sanitaria | Costo medio | Mediano plazo (3-6 meses) | 20-40% del consumo de ACS |
+| Alta | 🌡️ Reemplazo de calefactores por bomba de calor | Alto costo | Largo plazo (6-12 meses) | 30-60% del consumo de calefacción |
+| Media | 🌿 Estudio e instalación de autoconsumo solar fotovoltaico | Alto costo | Largo plazo (6-12 meses) | 20-50% del consumo eléctrico diurno |
+| Media | 🏠 Mejoramiento de vidrios y control solar | Alto costo | Largo plazo (6-12 meses) | 10-25% del consumo de climatización |
 
 ### Metas y seguimiento recomendado
 
@@ -338,6 +338,7 @@ Los siguientes recursos públicos pueden apoyar la implementación de las medida
 - **Sello de Eficiencia Energética (Sello EE).** Programa gratuito para MiPyMEs que reconoce la gestión energética y entrega una hoja de ruta de mejora continua. [https://plataforma.selloee.cl/](https://plataforma.selloee.cl/)
 - **Buscador de instaladores certificados SEC.** Listado oficial de instaladores eléctricos y de gas certificados para regularizaciones, proyectos y modificaciones. [https://www.sec.cl/area-ciudadana/nuevo-buscador-de-instaladores-e-instaladoras/](https://www.sec.cl/area-ciudadana/nuevo-buscador-de-instaladores-e-instaladoras/)
 - **Registro de Consultores Energéticos.** Plataforma para contactar profesionales y empresas que prestan servicios de eficiencia energética y energías renovables. [https://consultores.registroenergetico.cl/](https://consultores.registroenergetico.cl/)
+- **Manual para Equipos de Refrigeración Comercial.** Manual de buenas prácticas de operación y mantenimiento de equipos de refrigeración comercial dirigido para administradores, encargados de locales comerciales, personal de mantención y operadores. Aplicable a equipos tipo Visi coolers, refrigeradores comerciales, congeladores horizontales y verticales, vitrinas refrigeradas. [https://crcamposn.notion.site/Manual-para-equipos-de-refrigeraci-n-416938ab020580039dddf3a96b2ee238?pvs=74](https://crcamposn.notion.site/Manual-para-equipos-de-refrigeraci-n-416938ab020580039dddf3a96b2ee238?pvs=74)
 
 ### Agencia de Sostenibilidad Energética
 
@@ -408,7 +409,7 @@ El puntaje global se calcula como el promedio simple de las 9 dimensiones evalua
 - **Asesor:** Carlos Campos N.
 - **Grado de consumo:** Relevante
 - **Clasificación global:** Deficiente
-- **Generado:** 10-11-2026, 10:01:55 a. m.
+- **Generado:** 13-11-2026, 3:01:43 p. m.
 
 ---
 

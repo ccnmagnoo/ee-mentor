@@ -11,7 +11,7 @@ comuna: Hanga Roa
 region: Valparaíso
 rubro: Hostal
 version: 1
-generado: 2026-11-10T12:30:10.087Z
+generado: 2026-11-13T18:01:43.853Z
 puntaje_global: 2.8
 clasificacion: Aceptable
 hallazgos: 4
@@ -63,7 +63,7 @@ Las estimaciones de ahorro incluidas son referenciales, no son aditivas entre s�
 | Electricidad | 530 kWh/mes | $250.000 | Variable durante el año, no cuenta separado los consumos. |
 | GLP | No informado | $0 | — |
 
-**Principales usos finales:** Iluminación, Refrigeración y congelación, Climatización y ventilación, Agua caliente sanitaria.
+**Principales usos finales:** 💡 Iluminación, 🧊 Refrigeración y congelación, 🌡️ Climatización y ventilación, 💧 Agua caliente sanitaria.
 
 **Observaciones de la empresa:** Tokarau Cabañas, ubicado en Hanga Roa, Valparaíso, corresponde a un establecimiento turístico tipo hostal compuesto por 4 cabañas de aproximadamente 50 m² cada una, con capacidad total para 24 personas y una dotación de 5 trabajadores. La gestión está orientada a la sostenibilidad ambiental, y actual desempeño energético de la instalación resulta de especial importancia, donde se busca permanentemente oportunidades de mejora orientadas a reducir consumos, optimizar costos operacionales y fortalecer la sostenibilidad del servicio turístico.
 
@@ -75,19 +75,19 @@ _No se registró un inventario detallado de equipos._
 
 | Dimensión | Puntaje | Clasificación |
 | --- | :---: | --- |
-| Iluminación | 3/5 | Aceptable |
-| Refrigeración | 3/5 | Aceptable |
-| Congelación | No evaluado | No evaluado |
-| Climatización y A/C | 3/5 | Aceptable |
-| Agua caliente sanitaria | 3/5 | Aceptable |
-| Cocción | 3/5 | Aceptable |
-| Motores y equipos productivos | No evaluado | No evaluado |
-| Envolvente e infiltraciones | 2/5 | Deficiente |
-| Gestión energética | 2/5 | Deficiente |
-| Tarifas y potencia | 3/5 | Aceptable |
+| 💡 Iluminación | 3/5 | Aceptable |
+| 🧊 Refrigeración | 3/5 | Aceptable |
+| ❄️ Congelación | No evaluado | No evaluado |
+| 🌡️ Climatización y A/C | 3/5 | Aceptable |
+| 💧 Agua caliente sanitaria | 3/5 | Aceptable |
+| 🔥 Cocción | 3/5 | Aceptable |
+| ⚙️ Motores y equipos productivos | No evaluado | No evaluado |
+| 🏠 Envolvente e infiltraciones | 2/5 | Deficiente |
+| 🎯 Gestión energética | 2/5 | Deficiente |
+| 🧾 Tarifas y potencia | 3/5 | Aceptable |
 | **Puntaje global** | **2.8/5** | **Aceptable** |
 
-**Brechas prioritarias:** Envolvente e infiltraciones (2/5, deficiente); Gestión energética (2/5, deficiente).
+**Brechas prioritarias:** 🏠 Envolvente e infiltraciones (2/5, deficiente); 🎯 Gestión energética (2/5, deficiente).
 
 **Observaciones generales de la visita:** El establecimiento se encuentra próximo a incorporar un sistema de generación fotovoltaica compuesto por 18 paneles solares, con una potencia nominal estimada entre 10 y 12 kWp, cuya instalación está programada para finales de noviembre por la empresa Solari Energía. Esta iniciativa representa un avance significativo en la incorporación de energías renovables y en la reducción de los costos operacionales asociados al consumo eléctrico. En este contexto, se acuerda realizar un dimensionamiento y evaluación del desempeño energético del sistema, con el objetivo de estimar su aporte a la demanda eléctrica del establecimiento, determinar porcentajes de autoconsumo, identificar oportunidades de optimización y establecer indicadores de seguimiento que permitan evaluar los beneficios económicos y energéticos de la inversión una vez que el sistema entre en operación.
 
@@ -101,11 +101,11 @@ Se identificaron 4 hallazgos. La distribución por impacto es: crítico: 0, alto
 | --- | ---: |
 | Electricidad | 4 |
 
-### Iluminación
+### 💡 Iluminación
 
-#### ILUM-03 · Iluminación sin zonificación ni control de presencia
+#### 💡 ILUM-03 · Iluminación sin zonificación ni control de presencia
 
-**Impacto:** Medio · **Energético:** Electricidad · **Categoría:** Iluminación
+**Impacto:** Medio · **Energético:** Electricidad · **Categoría:** 💡 Iluminación
 
 La iluminación permanece encendida de forma homogénea durante toda la jornada, incluso en sectores sin ocupación como bodegas, baños, vitrinas o áreas de preparación cerradas. No se observan sensores, temporizadores ni circuitos independientes.
 
@@ -113,9 +113,9 @@ La iluminación permanece encendida de forma homogénea durante toda la jornada,
 
 **Recomendación asociada:** REC-ILUM-02
 
-#### ILUM-04 · Falta de mantención y limpieza de luminarias
+#### 💡 ILUM-04 · Falta de mantención y limpieza de luminarias
 
-**Impacto:** Bajo · **Energético:** Electricidad · **Categoría:** Iluminación
+**Impacto:** Bajo · **Energético:** Electricidad · **Categoría:** 💡 Iluminación
 
 Se observan luminarias, difusores y pantallas con acumulación de polvo, grasa o insectos, especialmente en cocinas y sectores de atención. Algunas luminarias presentan además parpadeo o baja intensidad.
 
@@ -123,11 +123,11 @@ Se observan luminarias, difusores y pantallas con acumulación de polvo, grasa o
 
 **Recomendación asociada:** REC-ILUM-03
 
-### Gestión, tarifas y potencia contratada
+### 🎯 Gestión, tarifas y potencia contratada
 
-#### GEST-01 · Ausencia de un sistema formal de gestión energética
+#### 🎯 GEST-01 · Ausencia de un sistema formal de gestión energética
 
-**Impacto:** Alto · **Energético:** Electricidad · **Categoría:** Gestión energética
+**Impacto:** Alto · **Energético:** Electricidad · **Categoría:** 🎯 Gestión energética
 
 No existe un responsable designado, una línea base de consumo, indicadores clave ni un procedimiento de revisión periódica. Las acciones energéticas son reactivas y no se documentan.
 
@@ -135,9 +135,9 @@ No existe un responsable designado, una línea base de consumo, indicadores clav
 
 **Recomendación asociada:** REC-GEST-01
 
-#### GEST-02 · Falta de medición y monitoreo de consumos
+#### 🎯 GEST-02 · Falta de medición y monitoreo de consumos
 
-**Impacto:** Alto · **Energético:** Electricidad · **Categoría:** Gestión energética
+**Impacto:** Alto · **Energético:** Electricidad · **Categoría:** 🎯 Gestión energética
 
 Se dispone solo de la facturación mensual o de remarcadores sin registro sistemático. No se separan consumos por área, proceso o equipo, ni se comparan mes a mes.
 
@@ -151,7 +151,7 @@ Las 4 medidas propuestas se ordenan por nivel de inversión. La prioridad consid
 
 ### Bajo costo
 
-#### REC-GEST-01 · Implementar un sistema simple de gestión energética
+#### 🎯 REC-GEST-01 · Implementar un sistema simple de gestión energética
 
 **Prioridad:** Alta · **Inversión:** Bajo costo · **Complejidad:** Media · **Ahorro estimado:** 5-15% del consumo total · **Plazo:** Mediano plazo (3-6 meses)
 
@@ -161,7 +161,7 @@ Designar un responsable, establecer una línea base de consumo, definir indicado
 
 **Atiende hallazgos:** GEST-01
 
-#### REC-GEST-02 · Medición y monitoreo de consumos
+#### 🎯 REC-GEST-02 · Medición y monitoreo de consumos
 
 **Prioridad:** Alta · **Inversión:** Bajo costo · **Complejidad:** Media · **Ahorro estimado:** 5-10% del consumo total · **Plazo:** Corto plazo (1-3 meses)
 
@@ -171,7 +171,7 @@ Registrar mensualmente la facturación y, si es posible, instalar remarcadores o
 
 **Atiende hallazgos:** GEST-02
 
-#### REC-ILUM-03 · Plan de mantención y limpieza de luminarias
+#### 💡 REC-ILUM-03 · Plan de mantención y limpieza de luminarias
 
 **Prioridad:** Media · **Inversión:** Bajo costo · **Complejidad:** Baja · **Ahorro estimado:** 5-15% del consumo de iluminación · **Plazo:** Inmediato (0-30 días)
 
@@ -181,7 +181,7 @@ Establecer una pauta semestral de limpieza de luminarias y difusores, revisión 
 
 **Atiende hallazgos:** ILUM-04
 
-#### REC-ILUM-02 · Zonificación y control automático de iluminación
+#### 💡 REC-ILUM-02 · Zonificación y control automático de iluminación
 
 **Prioridad:** Media · **Inversión:** Bajo costo · **Complejidad:** Baja · **Ahorro estimado:** 10-25% del consumo de iluminación · **Plazo:** Corto plazo (1-3 meses)
 
@@ -195,8 +195,8 @@ Separar circuitos por zona funcional e incorporar sensores de presencia en baño
 
 | Uso final | Recomendaciones | Inversión predominante |
 | --- | --- | --- |
-| Otros usos | Implementar un sistema simple de gestión energética; Medición y monitoreo de consumos | Baja |
-| Iluminación | Plan de mantención y limpieza de luminarias; Zonificación y control automático de iluminación | Baja |
+| ✨ Otros usos | 🎯 Implementar un sistema simple de gestión energética; 🎯 Medición y monitoreo de consumos | Baja |
+| 💡 Iluminación | 💡 Plan de mantención y limpieza de luminarias; 💡 Zonificación y control automático de iluminación | Baja |
 
 ## 4. Plan de acción sugerido
 
@@ -204,10 +204,10 @@ El siguiente plan ordena las medidas según horizonte de implementación. Se sug
 
 | Prioridad | Acción | Inversión | Plazo | Ahorro referencial |
 | --- | --- | --- | --- | --- |
-| Media | Plan de mantención y limpieza de luminarias | Bajo costo | Inmediato (0-30 días) | 5-15% del consumo de iluminación |
-| Alta | Medición y monitoreo de consumos | Bajo costo | Corto plazo (1-3 meses) | 5-10% del consumo total |
-| Media | Zonificación y control automático de iluminación | Bajo costo | Corto plazo (1-3 meses) | 10-25% del consumo de iluminación |
-| Alta | Implementar un sistema simple de gestión energética | Bajo costo | Mediano plazo (3-6 meses) | 5-15% del consumo total |
+| Media | 💡 Plan de mantención y limpieza de luminarias | Bajo costo | Inmediato (0-30 días) | 5-15% del consumo de iluminación |
+| Alta | 🎯 Medición y monitoreo de consumos | Bajo costo | Corto plazo (1-3 meses) | 5-10% del consumo total |
+| Media | 💡 Zonificación y control automático de iluminación | Bajo costo | Corto plazo (1-3 meses) | 10-25% del consumo de iluminación |
+| Alta | 🎯 Implementar un sistema simple de gestión energética | Bajo costo | Mediano plazo (3-6 meses) | 5-15% del consumo total |
 
 ### Metas y seguimiento recomendado
 
@@ -232,6 +232,7 @@ Los siguientes recursos públicos pueden apoyar la implementación de las medida
 - **Sello de Eficiencia Energética (Sello EE).** Programa gratuito para MiPyMEs que reconoce la gestión energética y entrega una hoja de ruta de mejora continua. [https://plataforma.selloee.cl/](https://plataforma.selloee.cl/)
 - **Buscador de instaladores certificados SEC.** Listado oficial de instaladores eléctricos y de gas certificados para regularizaciones, proyectos y modificaciones. [https://www.sec.cl/area-ciudadana/nuevo-buscador-de-instaladores-e-instaladoras/](https://www.sec.cl/area-ciudadana/nuevo-buscador-de-instaladores-e-instaladoras/)
 - **Registro de Consultores Energéticos.** Plataforma para contactar profesionales y empresas que prestan servicios de eficiencia energética y energías renovables. [https://consultores.registroenergetico.cl/](https://consultores.registroenergetico.cl/)
+- **Manual para Equipos de Refrigeración Comercial.** Manual de buenas prácticas de operación y mantenimiento de equipos de refrigeración comercial dirigido para administradores, encargados de locales comerciales, personal de mantención y operadores. Aplicable a equipos tipo Visi coolers, refrigeradores comerciales, congeladores horizontales y verticales, vitrinas refrigeradas. [https://crcamposn.notion.site/Manual-para-equipos-de-refrigeraci-n-416938ab020580039dddf3a96b2ee238?pvs=74](https://crcamposn.notion.site/Manual-para-equipos-de-refrigeraci-n-416938ab020580039dddf3a96b2ee238?pvs=74)
 
 ### Agencia de Sostenibilidad Energética
 
@@ -302,7 +303,7 @@ El puntaje global se calcula como el promedio simple de las 8 dimensiones evalua
 - **Asesor:** Carlos Campos
 - **Grado de consumo:** Moderado
 - **Clasificación global:** Aceptable
-- **Generado:** 10-11-2026, 9:30:10 a. m.
+- **Generado:** 13-11-2026, 3:01:43 p. m.
 
 ---
 
