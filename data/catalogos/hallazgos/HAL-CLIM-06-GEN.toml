@@ -1,0 +1,15 @@
+schema_version = 1
+id = "HAL-CLIM-06-GEN"
+codigo = "CLIM-06-GEN"
+titulo = "Climatización de habitaciones desocupadas o con ventanas abiertas"
+categoria = "climatizacion"
+descripcion = "Equipos de aire acondicionado o calefacción funcionan en habitaciones sin huéspedes, con ventanas o puertas de balcón abiertas, o sin control centralizado al momento del check-out."
+justificacion = "Cada habitación climatizada innecesariamente consume energía y demanda potencia. El control por tarjeta, los sensores de ventana y las consignas por estado de ocupación evitan ese gasto sin afectar el confort."
+impacto = "alto"
+energetico = "electricidad"
+recomendacion_id = "REC-CLIM-06-GEN"
+tags = [ "climatizacion", "habitaciones", "ocupacion", "termostato", "gen" ]
+activo = true
+origen = "catalogo_gen"
+created_at = "2026-11-13T12:00:00.000Z"
+updated_at = "2026-11-13T12:00:00.000Z"

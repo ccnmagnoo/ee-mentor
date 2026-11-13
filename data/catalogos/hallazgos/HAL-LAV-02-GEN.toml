@@ -1,0 +1,15 @@
+schema_version = 1
+id = "HAL-LAV-02-GEN"
+codigo = "LAV-02-GEN"
+titulo = "Secado mecánico de ropa existiendo alternativa natural o calor residual"
+categoria = "lavanderia"
+descripcion = "Se utiliza secadora eléctrica o a gas para toda la ropa, aunque existan espacios techados, terrazas o calor residual de otros procesos disponibles para el secado natural."
+justificacion = "El secado es la etapa más intensiva de la lavandería. Combinar secado natural y usar la secadora solo para completar reduce de forma significativa el consumo."
+impacto = "medio"
+energetico = "electricidad"
+recomendacion_id = "REC-LAV-02-GEN"
+tags = [ "lavanderia", "secado", "ropa", "calor_residual", "gen" ]
+activo = true
+origen = "catalogo_gen"
+created_at = "2026-11-13T12:00:00.000Z"
+updated_at = "2026-11-13T12:00:00.000Z"

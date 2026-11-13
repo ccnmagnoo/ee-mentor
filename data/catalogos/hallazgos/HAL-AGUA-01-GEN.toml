@@ -1,0 +1,15 @@
+schema_version = 1
+id = "HAL-AGUA-01-GEN"
+codigo = "AGUA-01-GEN"
+titulo = "Fugas y pérdidas de agua caliente en la red interna"
+categoria = "agua"
+descripcion = "Se detectan goteos en griferías, descargas de inodoros, uniones y tuberías, además de pérdidas no medidas que obligan a calentar y bombear agua que no se utiliza."
+justificacion = "El agua caliente pérdida se paga dos veces: como agua y como energía de calentamiento. Un programa de detección y reparación de fugas es de bajo costo y alto retorno."
+impacto = "alto"
+energetico = "electricidad"
+recomendacion_id = "REC-AGUA-01-GEN"
+tags = [ "agua", "fugas", "acs", "mantenimiento", "gen" ]
+activo = true
+origen = "catalogo_gen"
+created_at = "2026-11-13T12:00:00.000Z"
+updated_at = "2026-11-13T12:00:00.000Z"

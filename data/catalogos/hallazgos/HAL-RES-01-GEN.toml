@@ -1,0 +1,15 @@
+schema_version = 1
+id = "HAL-RES-01-GEN"
+codigo = "RES-01-GEN"
+titulo = "Desperdicio alimentario y residuos orgánicos sin segregación"
+categoria = "residuos"
+descripcion = "Se generan excedentes de alimentos y residuos orgánicos sin registro ni segregación, especialmente en bufets y servicios a la carta, sin aprovechamiento ni compostaje."
+justificacion = "El desperdicio alimentario representa energía, agua y materias primas incorporadas. Medir y reducir los excedentes disminuye compras, refrigeración y transporte de residuos."
+impacto = "medio"
+energetico = "electricidad"
+recomendacion_id = "REC-RES-01-GEN"
+tags = [ "residuos", "alimentos", "desperdicio", "segregacion", "gen" ]
+activo = true
+origen = "catalogo_gen"
+created_at = "2026-11-13T12:00:00.000Z"
+updated_at = "2026-11-13T12:00:00.000Z"

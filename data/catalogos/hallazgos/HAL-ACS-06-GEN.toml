@@ -1,0 +1,15 @@
+schema_version = 1
+id = "HAL-ACS-06-GEN"
+codigo = "ACS-06-GEN"
+titulo = "Griferías y duchas de alto caudal sin restrictoras de consumo"
+categoria = "acs"
+descripcion = "Duchas, lavamanos y griferías de cocina tienen caudales elevados y carecen de aireadores o restrictoras, generando un mayor consumo de agua caliente y de energía para calentarla."
+justificacion = "El consumo de ACS depende directamente del volumen utilizado. Reducir el caudal sin perder confort disminuye agua, gas o electricidad y la carga sobre el sistema de calentamiento."
+impacto = "medio"
+energetico = "glp"
+recomendacion_id = "REC-ACS-06-GEN"
+tags = [ "acs", "griferia", "duchas", "caudal", "gen" ]
+activo = true
+origen = "catalogo_gen"
+created_at = "2026-11-13T12:00:00.000Z"
+updated_at = "2026-11-13T12:00:00.000Z"

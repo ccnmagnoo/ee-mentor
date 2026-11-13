@@ -1,0 +1,15 @@
+schema_version = 1
+id = "HAL-ERNC-02-GEN"
+codigo = "ERNC-02-GEN"
+titulo = "Sin evaluación de solar térmica para agua caliente sanitaria"
+categoria = "ernc"
+descripcion = "A pesar de disponer de cubierta y de una demanda estable de ACS en duchas, cocina y lavandería, no se ha evaluado la instalación de colectores solares térmicos."
+justificacion = "La solar térmica puede cubrir una parte importante de la demanda de ACS en alojamientos y restaurantes, reduciendo el consumo de GLP o electricidad con una tecnología madura."
+impacto = "medio"
+energetico = "glp"
+recomendacion_id = "REC-ERNC-02-GEN"
+tags = [ "ernc", "solar_termica", "acs", "renovables", "gen" ]
+activo = true
+origen = "catalogo_gen"
+created_at = "2026-11-13T12:00:00.000Z"
+updated_at = "2026-11-13T12:00:00.000Z"

@@ -1,0 +1,15 @@
+schema_version = 1
+id = "HAL-LAV-01-GEN"
+codigo = "LAV-01-GEN"
+titulo = "Lavadoras y secadoras operando con cargas parciales"
+categoria = "lavanderia"
+descripcion = "La lavandería del alojamiento opera lavadoras y secadoras con cargas inferiores a su capacidad, con programas largos y sin agrupar la ropa por tipo de tejido."
+justificacion = "Cada ciclo consume agua, detergente y energía independientemente de la carga. Completar cargas y elegir programas adecuados reduce el número de ciclos y el consumo por kilo de ropa."
+impacto = "alto"
+energetico = "electricidad"
+recomendacion_id = "REC-LAV-01-GEN"
+tags = [ "lavanderia", "lavadoras", "secadoras", "cargas", "gen" ]
+activo = true
+origen = "catalogo_gen"
+created_at = "2026-11-13T12:00:00.000Z"
+updated_at = "2026-11-13T12:00:00.000Z"

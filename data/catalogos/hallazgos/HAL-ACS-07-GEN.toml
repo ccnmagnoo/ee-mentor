@@ -1,0 +1,15 @@
+schema_version = 1
+id = "HAL-ACS-07-GEN"
+codigo = "ACS-07-GEN"
+titulo = "Lavavajillas y lavadoras con agua caliente a temperatura excesiva"
+categoria = "acs"
+descripcion = "Los equipos de lavado reciben agua a una temperatura superior a la requerida o calientan internamente agua que ya ingresa caliente, generando doble calentamiento y ciclos más largos."
+justificacion = "Ajustar la temperatura de suministro y los programas de lavado evita calentamiento redundante. En restaurantes y lavanderías el ACS de lavado es un uso concentrado y relevante."
+impacto = "medio"
+energetico = "glp"
+recomendacion_id = "REC-ACS-07-GEN"
+tags = [ "acs", "lavavajillas", "lavanderia", "temperatura", "gen" ]
+activo = true
+origen = "catalogo_gen"
+created_at = "2026-11-13T12:00:00.000Z"
+updated_at = "2026-11-13T12:00:00.000Z"

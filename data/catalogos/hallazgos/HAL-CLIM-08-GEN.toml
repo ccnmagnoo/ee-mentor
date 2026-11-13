@@ -1,0 +1,15 @@
+schema_version = 1
+id = "HAL-CLIM-08-GEN"
+codigo = "CLIM-08-GEN"
+titulo = "Falta de ventilación natural y enfriamiento nocturno en comedores"
+categoria = "climatizacion"
+descripcion = "Comedores, terrazas y zonas comunes con alta carga de personas y calor no utilizan ventilación cruzada ni enfriamiento nocturno, compensando la falta de ventilación con equipos de aire acondicionado."
+justificacion = "Aprovechar el aire exterior en las horas frescas reduce la necesidad de refrigeración antes de invertir en equipos. Es una medida pasiva de bajo costo y alta durabilidad."
+impacto = "medio"
+energetico = "electricidad"
+recomendacion_id = "REC-CLIM-08-GEN"
+tags = [ "climatizacion", "ventilacion", "comedores", "pasivo", "gen" ]
+activo = true
+origen = "catalogo_gen"
+created_at = "2026-11-13T12:00:00.000Z"
+updated_at = "2026-11-13T12:00:00.000Z"

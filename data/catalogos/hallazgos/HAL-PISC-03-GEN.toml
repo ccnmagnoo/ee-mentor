@@ -1,0 +1,15 @@
+schema_version = 1
+id = "HAL-PISC-03-GEN"
+codigo = "PISC-03-GEN"
+titulo = "Jacuzzi o spa mantenido a temperatura durante horas sin uso"
+categoria = "piscina"
+descripcion = "El jacuzzi, tinaja o spa se mantiene caliente y con las bombas de hidromasaje encendidas durante toda la jornada, aunque no tenga usuarios."
+justificacion = "Mantener una masa de agua caliente sin uso genera pérdidas permanentes. Programar el calentamiento según las reservas y cubrir el agua reduce el consumo sin afectar la experiencia."
+impacto = "medio"
+energetico = "electricidad"
+recomendacion_id = "REC-PISC-03-GEN"
+tags = [ "piscina", "jacuzzi", "spa", "ocupacion", "gen" ]
+activo = true
+origen = "catalogo_gen"
+created_at = "2026-11-13T12:00:00.000Z"
+updated_at = "2026-11-13T12:00:00.000Z"

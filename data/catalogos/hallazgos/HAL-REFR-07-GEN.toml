@@ -1,0 +1,15 @@
+schema_version = 1
+id = "HAL-REFR-07-GEN"
+codigo = "REFR-07-GEN"
+titulo = "Minibares y frigoríficos de habitaciones vacíos o sobredimensionados"
+categoria = "refrigeracion"
+descripcion = "Las habitaciones cuentan con minibares o frigoríficos pequeños funcionando de forma permanente, incluso en habitaciones desocupadas y con equipos antiguos o sobredimensionados."
+justificacion = "Un minibar por habitación multiplica el consumo base del alojamiento. Apagarlos en habitaciones sin uso y renovar los equipos ineficientes reduce ese consumo acumulado."
+impacto = "medio"
+energetico = "electricidad"
+recomendacion_id = "REC-REFR-07-GEN"
+tags = [ "refrigeracion", "minibar", "habitaciones", "gen" ]
+activo = true
+origen = "catalogo_gen"
+created_at = "2026-11-13T12:00:00.000Z"
+updated_at = "2026-11-13T12:00:00.000Z"

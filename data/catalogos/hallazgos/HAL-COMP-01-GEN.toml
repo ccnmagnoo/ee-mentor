@@ -1,0 +1,15 @@
+schema_version = 1
+id = "HAL-COMP-01-GEN"
+codigo = "COMP-01-GEN"
+titulo = "Compras de equipos y amenities sin criterios de eficiencia"
+categoria = "compras"
+descripcion = "La adquisición de electrodomésticos, equipos de cocina, iluminación y amenities no considera el consumo energético, el etiquetado, el tamaño adecuado ni el costo de operación durante la vida útil."
+justificacion = "La decisión de compra determina el consumo por años. Incorporar criterios de eficiencia y dimensionamiento evita adquirir equipos que encarecen la operación desde el primer día."
+impacto = "medio"
+energetico = "electricidad"
+recomendacion_id = "REC-COMP-01-GEN"
+tags = [ "compras", "eficiencia", "etiquetado", "equipos", "gen" ]
+activo = true
+origen = "catalogo_gen"
+created_at = "2026-11-13T12:00:00.000Z"
+updated_at = "2026-11-13T12:00:00.000Z"

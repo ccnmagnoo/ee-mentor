@@ -1,0 +1,15 @@
+schema_version = 1
+id = "HAL-TAR-05-GEN"
+codigo = "TAR-05-GEN"
+titulo = "Tarifa residencial en alojamiento turístico con uso comercial"
+categoria = "tarifas"
+descripcion = "Cabañas, hostales o restaurantes mantienen contratos y tarifas de tipo residencial pese a desarrollar una actividad comercial con un consumo y una demanda propios del giro."
+justificacion = "La clasificación tarifaria debe reflejar el uso real. Regularizar el suministro y analizar la tarifa comercial puede evitar cobros indebidos y acceder a opciones más convenientes."
+impacto = "alto"
+energetico = "electricidad"
+recomendacion_id = "REC-TAR-05-GEN"
+tags = [ "tarifas", "alojamiento", "regularizacion", "facturacion", "gen" ]
+activo = true
+origen = "catalogo_gen"
+created_at = "2026-11-13T12:00:00.000Z"
+updated_at = "2026-11-13T12:00:00.000Z"

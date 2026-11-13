@@ -1,0 +1,15 @@
+schema_version = 1
+id = "HAL-ILUM-05-GEN"
+codigo = "ILUM-05-GEN"
+titulo = "Iluminación exterior, jardines y fachada sin control horario"
+categoria = "iluminacion"
+descripcion = "La iluminación de fachada, jardines, terrazas, estacionamientos y señalética permanece encendida durante toda la noche e incluso en horas de luz natural, sin fotocélula, temporizador ni programación por temporada."
+justificacion = "En alojamientos y restaurantes la iluminación exterior puede representar una parte relevante del consumo de iluminación. El control astronómico y la reducción de horarios mantienen la seguridad y la estética con menor consumo."
+impacto = "alto"
+energetico = "electricidad"
+recomendacion_id = "REC-ILUM-05-GEN"
+tags = [ "iluminacion", "exterior", "fotocelula", "temporizador", "gen" ]
+activo = true
+origen = "catalogo_gen"
+created_at = "2026-11-13T12:00:00.000Z"
+updated_at = "2026-11-13T12:00:00.000Z"

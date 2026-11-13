@@ -1,0 +1,15 @@
+schema_version = 1
+id = "HAL-CLIM-07-GEN"
+codigo = "CLIM-07-GEN"
+titulo = "Calefacción eléctrica fija sin control por zonas en cabañas"
+categoria = "climatizacion"
+descripcion = "Cabañas y departamentos turísticos cuentan con calefactores eléctricos individuales de resistencia, sin termostato, sin sectorización y encendidos de forma permanente durante la temporada."
+justificacion = "La calefacción eléctrica directa es una de las opciones más costosas por kWh. Zonificar, termostatizar y complementar con aislación reduce el consumo y evita el sobrecalentamiento de recintos vacíos."
+impacto = "alto"
+energetico = "electricidad"
+recomendacion_id = "REC-CLIM-07-GEN"
+tags = [ "climatizacion", "cabanas", "calefaccion", "zonificacion", "gen" ]
+activo = true
+origen = "catalogo_gen"
+created_at = "2026-11-13T12:00:00.000Z"
+updated_at = "2026-11-13T12:00:00.000Z"

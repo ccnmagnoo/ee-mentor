@@ -1,0 +1,15 @@
+schema_version = 1
+id = "HAL-ILUM-06-GEN"
+codigo = "ILUM-06-GEN"
+titulo = "Iluminación de habitaciones y cabañas sin control de ocupación"
+categoria = "iluminacion"
+descripcion = "Las luces de habitaciones, baños, pasillos y cabañas quedan encendidas cuando los recintos están desocupados, sin llave de tarjeta, sensores de presencia ni apagado centralizado."
+justificacion = "La iluminación de habitaciones desocupadas es un consumo evitable que se repite todos los días del año. Llaves de tarjeta, sensores y luminarias LED reducen las horas de encendido sin afectar la experiencia del huésped."
+impacto = "medio"
+energetico = "electricidad"
+recomendacion_id = "REC-ILUM-06-GEN"
+tags = [ "iluminacion", "habitaciones", "ocupacion", "sensores", "gen" ]
+activo = true
+origen = "catalogo_gen"
+created_at = "2026-11-13T12:00:00.000Z"
+updated_at = "2026-11-13T12:00:00.000Z"

@@ -1,0 +1,15 @@
+schema_version = 1
+id = "HAL-REFR-09-GEN"
+codigo = "REFR-09-GEN"
+titulo = "Cámaras y vitrinas abiertas durante el servicio"
+categoria = "refrigeracion"
+descripcion = "Durante la preparación y el servicio, las puertas de cámaras frigoríficas y vitrinas se mantienen abiertas por periodos prolongados, sin cortinas ni protocolos de cierre."
+justificacion = "Cada apertura prolongada introduce calor y humedad, obligando al equipo a trabajar más. Cortinas, puertas de cierre automático y protocolos reducen la carga térmica y el consumo."
+impacto = "alto"
+energetico = "electricidad"
+recomendacion_id = "REC-REFR-09-GEN"
+tags = [ "refrigeracion", "camaras", "vitrinas", "aperturas", "gen" ]
+activo = true
+origen = "catalogo_gen"
+created_at = "2026-11-13T12:00:00.000Z"
+updated_at = "2026-11-13T12:00:00.000Z"

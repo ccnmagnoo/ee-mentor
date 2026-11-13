@@ -1,0 +1,15 @@
+schema_version = 1
+id = "HAL-COCC-04-GEN"
+codigo = "COCC-04-GEN"
+titulo = "Campanas extractoras de cocina operando fuera del horario de servicio"
+categoria = "coccion"
+descripcion = "Las campanas y extractores de la cocina permanecen encendidos antes de abrir, después del cierre y durante la limpieza, sin control por demanda ni sensores de humo o temperatura."
+justificacion = "Los extractores de cocina mueven grandes volúmenes de aire y arrastran aire climatizado. Operarlos solo cuando hay cocción reduce la electricidad de ventilación y las pérdidas de climatización."
+impacto = "alto"
+energetico = "electricidad"
+recomendacion_id = "REC-COCC-04-GEN"
+tags = [ "coccion", "campanas", "ventilacion", "horario", "gen" ]
+activo = true
+origen = "catalogo_gen"
+created_at = "2026-11-13T12:00:00.000Z"
+updated_at = "2026-11-13T12:00:00.000Z"

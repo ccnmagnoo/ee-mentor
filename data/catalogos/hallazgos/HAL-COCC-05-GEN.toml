@@ -1,0 +1,15 @@
+schema_version = 1
+id = "HAL-COCC-05-GEN"
+codigo = "COCC-05-GEN"
+titulo = "Baño maría y equipos de mantención de calor encendidos sin producto"
+categoria = "coccion"
+descripcion = "Bufets y servicios mantienen baño maría, lámparas de calor y exhibidores calientes encendidos antes y después del servicio, incluso cuando están vacíos o con poca carga."
+justificacion = "Los equipos de mantención de calor tienen alta potencia y se usan muchas horas. Encenderlos cerca del servicio y apagarlos al terminar reduce el consumo sin afectar la temperatura de los alimentos."
+impacto = "medio"
+energetico = "electricidad"
+recomendacion_id = "REC-COCC-05-GEN"
+tags = [ "coccion", "bufet", "bano_maria", "horario", "gen" ]
+activo = true
+origen = "catalogo_gen"
+created_at = "2026-11-13T12:00:00.000Z"
+updated_at = "2026-11-13T12:00:00.000Z"

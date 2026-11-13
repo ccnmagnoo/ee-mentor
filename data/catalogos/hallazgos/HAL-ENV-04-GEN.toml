@@ -1,0 +1,15 @@
+schema_version = 1
+id = "HAL-ENV-04-GEN"
+codigo = "ENV-04-GEN"
+titulo = "Puertas y ventanas de acceso abiertas en recintos climatizados"
+categoria = "envolvente"
+descripcion = "Puertas de acceso, ventanales y puertas de terrazas permanecen abiertas mientras la climatización está en funcionamiento, especialmente en recepciones, restaurantes y habitaciones."
+justificacion = "La infiltración permanente de aire exterior anula el efecto de la climatización. Cierrapuertas, burletes y señalización son medidas de bajo costo con impacto inmediato."
+impacto = "alto"
+energetico = "electricidad"
+recomendacion_id = "REC-ENV-04-GEN"
+tags = [ "envolvente", "infiltracion", "accesos", "climatizacion", "gen" ]
+activo = true
+origen = "catalogo_gen"
+created_at = "2026-11-13T12:00:00.000Z"
+updated_at = "2026-11-13T12:00:00.000Z"

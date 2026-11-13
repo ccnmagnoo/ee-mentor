@@ -1,0 +1,15 @@
+schema_version = 1
+id = "HAL-PISC-02-GEN"
+codigo = "PISC-02-GEN"
+titulo = "Bomba de piscina operando las 24 horas sin programación"
+categoria = "piscina"
+descripcion = "La bomba de filtración de la piscina funciona de forma continua las 24 horas, sin programación por horarios de uso ni variación de velocidad."
+justificacion = "El filtrado continuo no es necesario cuando la piscina está sin uso. Programar las horas de filtración y usar una bomba de velocidad variable reduce el consumo eléctrico sin afectar la calidad del agua."
+impacto = "alto"
+energetico = "electricidad"
+recomendacion_id = "REC-PISC-02-GEN"
+tags = [ "piscina", "bomba", "filtracion", "motores", "gen" ]
+activo = true
+origen = "catalogo_gen"
+created_at = "2026-11-13T12:00:00.000Z"
+updated_at = "2026-11-13T12:00:00.000Z"

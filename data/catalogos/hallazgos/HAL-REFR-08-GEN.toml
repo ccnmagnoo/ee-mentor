@@ -1,0 +1,15 @@
+schema_version = 1
+id = "HAL-REFR-08-GEN"
+codigo = "REFR-08-GEN"
+titulo = "Máquinas de hielo y enfriadores de bebidas sin control de demanda"
+categoria = "refrigeracion"
+descripcion = "Las máquinas de hielo, los enfriadores de botellas y las cámaras de bebidas funcionan a plena capacidad durante todo el día y la noche, sin ajustar la producción a la ocupación real."
+justificacion = "La producción de hielo y el enfriamiento de bebidas son cargas continuas en bares y restaurantes. Ajustar la producción a la ocupación y mantener los condensadores limpios reduce el consumo."
+impacto = "alto"
+energetico = "electricidad"
+recomendacion_id = "REC-REFR-08-GEN"
+tags = [ "refrigeracion", "hielo", "bebidas", "bar", "gen" ]
+activo = true
+origen = "catalogo_gen"
+created_at = "2026-11-13T12:00:00.000Z"
+updated_at = "2026-11-13T12:00:00.000Z"

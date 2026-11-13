@@ -1,0 +1,15 @@
+schema_version = 1
+id = "HAL-GEST-05-GEN"
+codigo = "GEST-05-GEN"
+titulo = "Ausencia de mantenimiento preventivo planificado"
+categoria = "gestion_operacional"
+descripcion = "No existe un plan de mantenimiento preventivo para equipos de frío, climatización, calderas, bombas y cocina; las intervenciones se realizan solo ante fallas."
+justificacion = "La falta de mantención degrada la eficiencia y acorta la vida útil. Un plan simple con responsables y registros evita pérdidas progresivas y fallas en temporada alta."
+impacto = "alto"
+energetico = "electricidad"
+recomendacion_id = "REC-GEST-05-GEN"
+tags = [ "gestion_operacional", "mantenimiento", "preventivo", "equipos", "gen" ]
+activo = true
+origen = "catalogo_gen"
+created_at = "2026-11-13T12:00:00.000Z"
+updated_at = "2026-11-13T12:00:00.000Z"

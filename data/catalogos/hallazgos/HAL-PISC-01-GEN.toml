@@ -1,0 +1,15 @@
+schema_version = 1
+id = "HAL-PISC-01-GEN"
+codigo = "PISC-01-GEN"
+titulo = "Piscina climatizada sin cubierta ni control de temperatura"
+categoria = "piscina"
+descripcion = "La piscina climatizada o temperada mantiene el agua caliente durante todo el día y la noche sin cubierta, sin control de temperatura y sin considerar la ocupación real."
+justificacion = "La evaporación y la pérdida de calor superficial son las principales pérdidas de una piscina climatizada. Una cubierta y una consigna adecuada reducen la energía de calentamiento de forma importante."
+impacto = "alto"
+energetico = "electricidad"
+recomendacion_id = "REC-PISC-01-GEN"
+tags = [ "piscina", "climatizacion", "cubierta", "agua", "gen" ]
+activo = true
+origen = "catalogo_gen"
+created_at = "2026-11-13T12:00:00.000Z"
+updated_at = "2026-11-13T12:00:00.000Z"

@@ -1,0 +1,15 @@
+schema_version = 1
+id = "HAL-LAV-03-GEN"
+codigo = "LAV-03-GEN"
+titulo = "Planchado y calandrias encendidas fuera del horario de lavandería"
+categoria = "lavanderia"
+descripcion = "Planchas, calandrias y equipos de acabado permanecen encendidos o en temperatura durante toda la jornada, incluso cuando no hay ropa para procesar."
+justificacion = "Los equipos de planchado tienen alta potencia y largos periodos de espera. Encenderlos por demanda y apagarlos en los valles reduce el consumo sin afectar la entrega de ropa."
+impacto = "medio"
+energetico = "electricidad"
+recomendacion_id = "REC-LAV-03-GEN"
+tags = [ "lavanderia", "planchado", "calandria", "horario", "gen" ]
+activo = true
+origen = "catalogo_gen"
+created_at = "2026-11-13T12:00:00.000Z"
+updated_at = "2026-11-13T12:00:00.000Z"

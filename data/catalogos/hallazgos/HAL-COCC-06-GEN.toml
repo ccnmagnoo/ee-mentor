@@ -1,0 +1,15 @@
+schema_version = 1
+id = "HAL-COCC-06-GEN"
+codigo = "COCC-06-GEN"
+titulo = "Máquina de café y equipos de bar encendidos permanentemente"
+categoria = "coccion"
+descripcion = "La máquina de espresso, los molinos, los calentadores de tazas, los exhibidores y otros equipos de bar permanecen encendidos las 24 horas, incluso con el local cerrado o sin servicio."
+justificacion = "En cafeterías y bares estos equipos concentran el consumo base nocturno. Programar el encendido y apagado y usar modo eco reduce las horas de operación sin afectar la disponibilidad."
+impacto = "alto"
+energetico = "electricidad"
+recomendacion_id = "REC-COCC-06-GEN"
+tags = [ "cafe", "bar", "espresso", "standby", "gen" ]
+activo = true
+origen = "catalogo_gen"
+created_at = "2026-11-13T12:00:00.000Z"
+updated_at = "2026-11-13T12:00:00.000Z"

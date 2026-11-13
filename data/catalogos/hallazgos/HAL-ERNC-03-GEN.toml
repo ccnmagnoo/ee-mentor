@@ -1,0 +1,15 @@
+schema_version = 1
+id = "HAL-ERNC-03-GEN"
+codigo = "ERNC-03-GEN"
+titulo = "Sin evaluación de fotovoltaica para bombeo, riego o piscina"
+categoria = "ernc"
+descripcion = "No se ha evaluado el autoconsumo fotovoltaico para cargas diurnas como bombas de piscina, riego, climatización o iluminación, pese a la superficie disponible y a la coincidencia con el horario solar."
+justificacion = "Las cargas diurnas de un recinto turístico coinciden con la generación solar. Un estudio de prefactibilidad permite dimensionar la potencia y evaluar el retorno antes de invertir."
+impacto = "medio"
+energetico = "electricidad"
+recomendacion_id = "REC-ERNC-03-GEN"
+tags = [ "ernc", "solar", "fotovoltaica", "autoconsumo", "gen" ]
+activo = true
+origen = "catalogo_gen"
+created_at = "2026-11-13T12:00:00.000Z"
+updated_at = "2026-11-13T12:00:00.000Z"

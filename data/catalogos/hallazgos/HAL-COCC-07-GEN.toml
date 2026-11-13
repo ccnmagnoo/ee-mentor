@@ -1,0 +1,15 @@
+schema_version = 1
+id = "HAL-COCC-07-GEN"
+codigo = "COCC-07-GEN"
+titulo = "Cocción sin tapas y sin aprovechamiento de calor residual"
+categoria = "coccion"
+descripcion = "Se cocina con ollas destapadas, quemadores de mayor tamaño que el fondo de la olla y sin aprovechar el calor residual para mantener alimentos o calentar agua."
+justificacion = "Tapar, ajustar el quemador al diámetro de la olla y apagar antes de finalizar reduce el consumo de gas o electricidad. Son prácticas de costo nulo aplicables en cocinas pequeñas."
+impacto = "medio"
+energetico = "glp"
+recomendacion_id = "REC-COCC-07-GEN"
+tags = [ "coccion", "tapas", "calor_residual", "buenas_practicas", "gen" ]
+activo = true
+origen = "catalogo_gen"
+created_at = "2026-11-13T12:00:00.000Z"
+updated_at = "2026-11-13T12:00:00.000Z"

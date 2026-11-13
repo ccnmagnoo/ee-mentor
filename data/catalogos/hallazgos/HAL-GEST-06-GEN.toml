@@ -1,0 +1,15 @@
+schema_version = 1
+id = "HAL-GEST-06-GEN"
+codigo = "GEST-06-GEN"
+titulo = "Operación indiferenciada entre temporada alta y baja"
+categoria = "gestion_operacional"
+descripcion = "El establecimiento mantiene encendidos todos los sectores, equipos y servicios durante la temporada baja, sin ajustar la operación a la ocupación real ni a la demanda de cada periodo."
+justificacion = "La ocupación turística varia fuertemente durante el año. Ajustar sectores, temperaturas, horarios y equipos a la temporada baja evita consumos fijos innecesarios."
+impacto = "alto"
+energetico = "electricidad"
+recomendacion_id = "REC-GEST-06-GEN"
+tags = [ "gestion_operacional", "temporada", "ocupacion", "operacion", "gen" ]
+activo = true
+origen = "catalogo_gen"
+created_at = "2026-11-13T12:00:00.000Z"
+updated_at = "2026-11-13T12:00:00.000Z"
